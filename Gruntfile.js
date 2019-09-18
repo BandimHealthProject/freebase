@@ -1,6 +1,7 @@
 'use strict';
 var LIVERELOAD_PORT = 35729;
 var SERVER_PORT = 8000;
+
 var lrSnippet = require('connect-livereload')({port: LIVERELOAD_PORT});
 var mountFolder = function (connect, dir) {
     return connect.static(
@@ -94,16 +95,16 @@ var postHandler = function(req, res, next) {
 // 'test/spec/{,*/}*.js'
 // use this if you want to match all subfolders:
 // 'test/spec/**/*.js'
+// Prefix your expression with ! to have it negated (ie. have matching files excluded):
+// '!test/spec/**/ */*.tmp'
 // templateFramework: 'lodash'
 
 module.exports = function (grunt) {
+    
     // show elapsed time at the end
     require('time-grunt')(grunt);
     // load all grunt tasks
     require('load-grunt-tasks')(grunt);
-
-    // passing in port as input
-    SERVER_PORT = grunt.option('port') || 8000;
 
     // We do not want the default behavior of serving only the app folder.
     // Instead we want to serve the base repo directory, as this will give us
@@ -120,11 +121,9 @@ module.exports = function (grunt) {
         deviceMount: '/sdcard/opendatakit',
         // The mount point of the device for odk collect forms.
         formMount: '/sdcard/odk/forms',
-        assetsDir: 'app/config/assets',
         // The directory where the 'tables' directory containing the tableId
         // directories lives.
         tablesDir: 'app/config/tables',
-        dataDir: 'app/data',
         // Where the templates for a new tableId folder lives. i.e. if you want
         // to add a table, the contents of this directory would be copied to
         // tablesDir/tableId.
@@ -183,13 +182,37 @@ module.exports = function (grunt) {
                     return 'adb shell ' + str;
                 }
             },
+            adbinstall: {
+                cmd: function(str) {
+                    return 'adb install ' + str;
+                }
+            },
+            adbdevices: {
+                cmd: function(str) {
+                    return 'adb devices';
+                }
+            },
 			macGenConvert: {
 				cmd: function(str, formDefFile) {
 					return 'node macGenConverter.js ' + str + ' > ' + formDefFile; 
 				}
 			}
         },
-
+        wait: {
+            options: {
+              delay: 15000
+            },
+            pause: {
+                options: {
+                  before : function(options) {
+                    console.log('pausing %dms', options.delay);
+                  },
+                  after: function() {                      
+                    console.log('pause end');
+                  }
+                }
+              },
+        },
         tables: tablesConfig,
         watch: {
             options: {
@@ -266,6 +289,8 @@ module.exports = function (grunt) {
         },
     });
 
+    grunt.loadNpmTasks('grunt-wait');
+
     // We need grunt-exec to run adb commands from within grunt.
     grunt.loadNpmTasks('grunt-exec');
 
@@ -279,7 +304,7 @@ module.exports = function (grunt) {
     grunt.registerTask(
         'adbpush',
         'Perform all the adbpush tasks',
-        ["adbpull-props", "remove-folders", 'adbpush-collect', 'adbpush-default-app', "adbpush-props"]);
+        ['eqm-copy-custom', 'adbpull-props', 'remove-folders', 'adbpush-collect', 'adbpush-default-app', 'adbpush-props', 'start-survey', 'wait', 'eqm-push-sysscripts']);
 
     grunt.registerTask(
         'clean',
@@ -321,6 +346,73 @@ module.exports = function (grunt) {
             grunt.task.run('exec:adbpull:' + src + ':' + dest);
         });
 
+    
+    // customPromptTypes are needed for each form cf. https://forum.opendatakit.org/t/odk-survey-counting-repeat-sections/4165/2
+    // so until a global customPromptTypes.js becomes available, we copy the one from assets/custom folder to each form folder
+    grunt.registerTask(
+        'eqm-convert-all',
+        'Copies customPromptTypes and customScreenTypes to forms, then runs xlsx-convert-all',
+        function() {            
+            grunt.task.run('eqm-copy-custom');
+            grunt.task.run('xlsx-convert-all');
+        }
+    );
+    
+    grunt.registerTask(
+        'eqm-copy-custom',
+        'Copies custom*.js files from framework folder to each form',
+        function() {
+            var platform = require('os').platform();
+			var isWindows = (platform.search('win') >= 0 &&
+                             platform.search('darwin') < 0);
+							 
+            var dirs = grunt.file.expand(
+                {filter: function(path) {
+ 						if ( !path.endsWith(".xlsx") ) {
+							return false;
+						}
+						var cells = path.split((isWindows ? "\\" : "/"));
+						return (cells.length >= 6) &&
+						  ( cells[cells.length-1] === cells[cells.length-2] + ".xlsx" ); 
+					},
+                 cwd: 'app' },
+				'**/*.xlsx',
+                '!**/~$*.xlsx'
+				);
+
+            
+            //var srcDir = 'app/config/assets/framework/forms/framework/';
+            var srcDir = 'app/config/assets/custom/';
+            var filesToDisseminate = ['customPromptTypes.js', 'customScreenTypes.js'];
+            dirs.forEach(function(fileName) {
+                //if (fileName == 'config/assets/framework/forms/framework/framework.xlsx') return; //i.e. continue
+                filesToDisseminate.forEach(fname => {
+                    var dest = 'app/' + fileName.substr(0,fileName.lastIndexOf('/')) + '/' + fname;
+                    var src = srcDir + fname;
+                    //console.log(jsFile);
+                    grunt.log.writeln('file copy ' + src + ' ' + dest);
+                    grunt.file.copy(src, dest);
+                });
+                
+            });
+        }
+    );
+
+    grunt.registerTask(
+        'eqm-push-sysscripts',
+        'updates scripts in system/survey/js',
+        function() {
+            // Copy system-files
+            var sysFilesToCopy = ['app/system/survey/js/adateHelpers.js', 'app/system/survey/js/formulaFunctions.js'];
+            var sysDest = '/sdcard/opendatakit/default/system/survey/js';
+            sysFilesToCopy.forEach(fileName => {
+                var src = fileName;
+                var dest = sysDest + fileName.substr(fileName.lastIndexOf('/'));
+                //console.log(src, dest);
+                grunt.task.run('exec:adbpush:' + src + ':' + dest);
+            });
+        }
+    );
 
     grunt.registerTask(
         'xlsx-convert-all',
@@ -359,7 +451,7 @@ module.exports = function (grunt) {
             });
         });
 
-var zipAllFiles = function( destZipFile, filesList, completionFn ) {
+    var zipAllFiles = function( destZipFile, filesList, completionFn ) {
 			// create a file to stream archive data to. 
 			var fs = require('fs');
 			var archiver = require('archiver');
@@ -395,7 +487,7 @@ var zipAllFiles = function( destZipFile, filesList, completionFn ) {
 			});
 			// finalize the archive (ie we are done appending files but streams have to finish yet) 
 			archive.finalize();
-};
+    };
 
     grunt.registerTask(
         'build-zips',
@@ -405,8 +497,10 @@ var zipAllFiles = function( destZipFile, filesList, completionFn ) {
 			
 			var buildDir = 'build' +
 				'/zips';
-			 
-			grunt.file.delete(buildDir + '/');
+             
+            if (grunt.file.exists(buildDir)) {
+                grunt.file.delete(buildDir + '/');
+            }
 			
 			grunt.file.mkdir(buildDir);
 			grunt.file.mkdir(buildDir + '/survey/');
@@ -541,7 +635,7 @@ var zipAllFiles = function( destZipFile, filesList, completionFn ) {
                 '**',
                 '!system/**',
 				'!data/**',
-                '!output/**',
+				'!output/**',
                 '!**/~$*.xlsx');
 
             // Now push these files to the phone.
@@ -608,107 +702,6 @@ var zipAllFiles = function( destZipFile, filesList, completionFn ) {
             // only the files used in the Tables demo follows the convention
             // required by the adbpush-collect task, that is ok.
             grunt.task.run('adbpush-collect');
-
-        });
-
-    grunt.registerTask(
-        'adbpush-tables-demo-alpha2',
-        'Push everything for tables demo to the device',
-        function() {
-            // In the alpha demo we want Tables and Survey. For the alpha2,
-			// it had needed a push of the system files, but we won't do that
-			// here. We only want a subset of the app/tables files,
-            // however. So, we are going to get everything except that
-            // directory and then add back in the ones that we want.
-            // The first parameter is an options object where we specify that
-            // we only want files--this is important because otherwise when
-            // we get directory names adb will push everything in the directory
-            // name, effectively pushing everything twice.  We also specify that we
-            // want everything returned to be relative to 'app' by using 'cwd'.
-            var dirs = grunt.file.expand(
-                {filter: 'isFile',
-                 cwd: 'app' },
-				'.nomedia',
-                '**',
-				'!system/**',
-				'!data/**',
-				'!output/**',
-                '!config/tables/**',
-                'config/tables/geotagger/**',
-                'config/tables/Tea_houses/**',
-                'config/tables/Tea_types/**',
-                'config/tables/Tea_inventory/**',
-                'config/tables/Tea_houses_editable/**',
-                'config/tables/household/**',
-                'config/tables/household_member/**');
-
-            // Now push these files to the phone.
-            dirs.forEach(function(fileName) {
-                //  Have to add app back into the file name for the adb push
-                var src = tablesConfig.appDir + '/' + fileName;
-                var dest =
-                    tablesConfig.deviceMount +
-                    '/' +
-                    tablesConfig.appName +
-                    '/' +
-                    fileName;
-                grunt.log.writeln('adb push ' + src + ' ' + dest);
-                grunt.task.run('exec:adbpush:' + src + ':' + dest);
-            });
-
-            // And then we want to put the collect forms in the right place.
-            // This will push the collect forms for ALL the tables, but since
-            // only the files used in the Tables demo follows the convention
-            // required by the adbpush-collect task, that is ok.
-            grunt.task.run('adbpush-collect');
-
-        });
-
-    grunt.registerTask(
-        'adbpush-tables-demo-JGI',
-        'Push everything for tables JGI demo to the device',
-        function() {
-            // In the alpha demo we want Tables and Survey. For this demo,
-			// it had needed a push of the system files, but we won't do that
-			// here. We only want a subset of the app/tables files,
-            // however. So, we are going to get everything except that
-            // directory and then add back in the ones that we want.
-            // The first parameter is an options object where we specify that
-            // we only want files--this is important because otherwise when
-            // we get directory names adb will push everything in the directory
-            // name, effectively pushing everything twice.  We also specify that we
-            // want everything returned to be relative to 'app' by using 'cwd'.
-            var dirs = grunt.file.expand(
-                {filter: 'isFile',
-                 cwd: 'app' },
-				'.nomedia',
-                '**',
-				'!system/**',
-				'!data/**',
-				'!output/**',
-                '!config/tables/**',
-                'config/tables/follow/**',
-                'config/tables/follow_arrival/**',
-                'config/tables/follow_map_position/**',
-                'config/tables/follow_map_time/**',
-                'config/tables/food_bout/**',
-                'config/tables/groom_bout/**',
-                'config/tables/mating_event/**',
-                'config/tables/other_species/**');
-
-            // Now push these files to the phone.
-            dirs.forEach(function(fileName) {
-                //  Have to add app back into the file name for the adb push
-                var src = tablesConfig.appDir + '/' + fileName;
-                var dest =
-                    tablesConfig.deviceMount +
-                    '/' +
-                    tablesConfig.appName +
-                    '/' +
-                    fileName;
-                grunt.log.writeln('adb push ' + src + ' ' + dest);
-                grunt.task.run('exec:adbpush:' + src + ':' + dest);
-            });
 
         });
 
@@ -888,7 +881,8 @@ var zipAllFiles = function( destZipFile, filesList, completionFn ) {
 			'!config/tables/**',
 			'config/assets/**',
             'config/tables/large_dataset/**',
-            'config/tables/testRun/**');
+            'config/tables/testRun/**',
+            '!**/~$*.xlsx');
 
 		return dirs;
 	};
@@ -914,574 +908,7 @@ var zipAllFiles = function( destZipFile, filesList, completionFn ) {
             dirs.forEach(infixRenameAdbPusher(".largeDataSet3000", tablesConfig.appDir));
         }
     );
-
-	var gatesDemoFiles072216 = function(grunt) {
-        // We only want a subset of the app/tables files,
-		// however. So, we are going to get everything except that
-		// directory and then add back in the ones that we want.
-		// The first parameter is an options object where we specify that
-		// we only want files--this is important because otherwise when
-		// we get directory names adb will push everything in the directory
-		// name, effectively pushing everything twice.  We also specify that we
-		// want everything returned to be relative to 'app' by using 'cwd'.
-		var dirs = grunt.file.expand(
-			{filter: 'isFile',
-			 cwd: 'app' },
-			'.nomedia',
-			'**',
-			'!system/**',
-			'!data/**',
-			'!output/**',
-			'!config/tables/**',
-			'config/assets/**',
-			'config/tables/child_coverage/**',
-			'config/tables/femaleClients/**',
-            'config/tables/follow/**',
-            'config/tables/follow_arrival/**',
-            'config/tables/follow_map_position/**',
-            'config/tables/follow_map_time/**',
-            'config/tables/food_bout/**',
-            'config/tables/graphExample/**',
-            'config/tables/gridScreen/**',
-            'config/tables/geopoints/**',
-            'config/tables/geotagger/**',
-            'config/tables/groom_bout/**',
-            'config/tables/household/**',
-            'config/tables/household_member/**',
-            'config/tables/maleClients/**',
-            'config/tables/mating_event/**',
-            'config/tables/other_species/**',
-            'config/tables/plot/**',
-            'config/tables/Tea_houses/**',
-            'config/tables/Tea_houses_editable/**',
-            'config/tables/Tea_inventory/**',
-            'config/tables/Tea_types/**',
-            'config/tables/visit/**');
-
-		return dirs;
-	};
-
-    grunt.registerTask(
-        'adbpush-gatesDemo072216',
-        'Push everything for Gates Demo 07-22-16 to the device',
-        function() {
-            var dirs = gatesDemoFiles072216(grunt);
-
-            // Now push these files to the phone.
-            dirs.forEach(infixRenameAdbPusher(".gatesDemo072216", tablesConfig.appDir));
-        });
-
-
-    grunt.registerTask(
-        'create-tables-gatesDemo072216',
-        'Create the Gates Demo 07-22-2016 application designer package under build/gatesDemo072216/',
-        function() {
-            var dirs = gatesDemoFiles072216(grunt);
-
-			var buildDir = 'build/gatesDemo072216';
-
-			grunt.file.delete(buildDir + '/');
-			grunt.file.mkdir(buildDir);
-			grunt.file.mkdir(buildDir + '/' + tablesConfig.appDir);
-
-            // Now push these files to the phone.
-            dirs.forEach(infixRenameCopier(".gatesDemo072216", tablesConfig.appDir));
-
-			var otherFiles = grunt.file.expand(
-				{filter: 'isFile',
-				 cwd: '.' },
-				'**',
-				'!.git/**',
-				'!build/**',
-				'!app/**',
-				'app/system/**',
-				'app/data/tables/geotagger/**',
-				'app/output/**');
-
-            otherFiles.forEach(infixRenameCopier(".gatesDemo072216", ""));
-        });
-
-	var simpleDemoFiles = function(grunt) {
-		// In the alpha demo we want Tables and Survey. For this demo,
-		// it had needed a push of the system files, but we won't do that
-		// here. We only want a subset of the app/tables files,
-		// however. So, we are going to get everything except that
-		// directory and then add back in the ones that we want.
-		// The first parameter is an options object where we specify that
-		// we only want files--this is important because otherwise when
-		// we get directory names adb will push everything in the directory
-		// name, effectively pushing everything twice.  We also specify that we
-		// want everything returned to be relative to 'app' by using 'cwd'.
-		var dirs = grunt.file.expand(
-			{filter: 'isFile',
-			 cwd: 'app' },
-			'.nomedia',
-			'**',
-			'!system/**',
-			'!data/**',
-			'!output/**',
-			'!config/assets/**',
-			'!config/tables/**',
-			'config/**/*.simpledemo.*',
-			'config/assets/framework/forms/framework.simpledemo/**',
-			'config/assets/css/odk-survey.css',
-			'config/assets/img/advance.png',
-			'config/assets/img/backup.png',
-			'config/assets/img/form_logo.png',
-			'config/assets/img/little_arrow.png',
-			'config/assets/img/play.png',
-			'config/assets/libs/**',
-			'config/assets/ratchet/**',
-			'config/assets/css/demo-chooser.css',
-			'config/assets/img/spaceNeedle_CCLicense_goCardUSA.jpg',
-			'config/assets/js/simpleDemo.js',
-			'config/assets/csv/geotagger.updated.csv',
-			'config/assets/csv/geotagger/**',
-			'config/tables/geotagger/**');
-
-		return dirs;
-	};
-
-    grunt.registerTask(
-        'adbpush-tables-simpledemo',
-        'Push everything for tables opendatakit-simpledemo to the device',
-        function() {
-            var dirs = simpleDemoFiles(grunt);
-
-            // Now push these files to the phone.
-            dirs.forEach(infixRenameAdbPusher(".simpledemo", tablesConfig.appDir));
-        });
-
-
-    grunt.registerTask(
-        'create-tables-simpledemo',
-        'creat the simpledemo application designer package under build/simpledemo/',
-        function() {
-            var dirs = simpleDemoFiles(grunt);
-
-			var buildDir = 'build/simpledemo';
-
-			grunt.file.delete(buildDir + '/');
-			grunt.file.mkdir(buildDir);
-			grunt.file.mkdir(buildDir + '/' + tablesConfig.appDir);
-
-            // Now push these files to the phone.
-            dirs.forEach(infixRenameCopier(".simpledemo", tablesConfig.appDir));
-
-			var otherFiles = grunt.file.expand(
-				{filter: 'isFile',
-				 cwd: '.' },
-				'**',
-				'!.git/**',
-				'!build/**',
-				'!app/**',
-				'app/system/**',
-				'app/data/tables/geotagger/**',
-				'app/output/**');
-
-            otherFiles.forEach(infixRenameCopier(".simpledemo", ""));
-        });
-
-	var rowLevelAccessDemoFiles = function(grunt) {
-		// The row level access demo is based upon the geoweather and
-		// geoweather_conditions table.
-		var dirs = grunt.file.expand(
-			{filter: 'isFile',
-			 cwd: 'app' },
-			'.nomedia',
-			'**',
-			'!system/**',
-			'!data/**',
-			'!output/**',
-			'!config/assets/**',
-			'!config/tables/**',
-			'config/**/*.rowlevelaccessdemo.*',
-			'config/assets/changeAccessFilters.html',
-			'config/assets/framework/forms/framework.rowlevelaccessdemo/**',
-			'config/assets/css/odk-survey.css',
-			'config/assets/img/advance.png',
-			'config/assets/img/backup.png',
-			'config/assets/img/form_logo.png',
-			'config/assets/img/little_arrow.png',
-			'config/assets/img/play.png',
-			'config/assets/libs/**',
-			'config/assets/ratchet/**',
-			'config/assets/css/demo-chooser.css',
-			'config/assets/css/changeAccessFilters.css',
-			'config/assets/img/noaa_weather_nssl0010.jpg',
-			'config/assets/img/20160902_sky.jpg',
-			'config/assets/js/rowLevelAccessDemo.js',
-			'config/assets/js/changeAccessFilters.js',
-			'config/tables/geoweather_conditions/**',
-			'config/tables/geoweather/**',
-			'config/assets/csv/geoweather.updated.csv',
-			'config/assets/csv/geoweather_conditions.updated.csv');
-
-		return dirs;
-	};
-
-    grunt.registerTask(
-        'adbpush-tables-rowlevelaccessdemo',
-        'Push everything for tables opendatakit-rowlevelaccessdemo to the device',
-        function() {
-            var dirs = rowLevelAccessDemoFiles(grunt);
-
-            // Now push these files to the phone.
-            dirs.forEach(infixRenameAdbPusher(".rowlevelaccessdemo", tablesConfig.appDir));
-        });
-
-
-    grunt.registerTask(
-        'create-tables-rowlevelaccessdemo',
-        'creat the rowlevelaccessdemo application designer package under build/rowaccessdemo/',
-        function() {
-            var dirs = rowLevelAccessDemoFiles(grunt);
-
-			var buildDir = 'build/rowlevelaccessdemo';
-
-			grunt.file.delete(buildDir + '/');
-			grunt.file.mkdir(buildDir);
-			grunt.file.mkdir(buildDir + '/' + tablesConfig.appDir);
-
-            // Now push these files to the phone.
-            dirs.forEach(infixRenameCopier(".rowlevelaccessdemo", tablesConfig.appDir));
-
-			var otherFiles = grunt.file.expand(
-				{filter: 'isFile',
-				 cwd: '.' },
-				'**',
-				'!.git/**',
-				'!build/**',
-				'!app/**',
-				'app/system/**',
-				'app/data/tables/geoweather/**',
-				'app/data/tables/geoweather_conditions/**',
-				'app/output/**');
-
-            otherFiles.forEach(infixRenameCopier(".rowlevelaccessdemo", ""));
-        });
-
-	var georowlevelaccessdemo = function(grunt) {
-		// The row level access demo is based upon the geoweather and
-		// geoweather_conditions table plus the geotagger demo.
-		var dirs = grunt.file.expand(
-			{filter: 'isFile',
-			 cwd: 'app' },
-			'.nomedia',
-			'**',
-			'!system/**',
-			'!data/**',
-			'!output/**',
-			'!config/assets/**',
-			'!config/tables/**',
-			'config/**/*.georowlevelaccessdemo.*',
-			'config/assets/changeAccessFilters.html',
-			'config/assets/framework/forms/framework.georowlevelaccessdemo/**',
-			'config/assets/css/odk-survey.css',
-			'config/assets/img/advance.png',
-			'config/assets/img/backup.png',
-			'config/assets/img/form_logo.png',
-			'config/assets/img/little_arrow.png',
-			'config/assets/img/play.png',
-			'config/assets/libs/**',
-			'config/assets/ratchet/**',
-			'config/assets/css/demo-chooser.css',
-			'config/assets/css/changeAccessFilters.css',
-			'config/assets/img/noaa_weather_nssl0010.jpg',
-			'config/assets/img/20160902_sky.jpg',
-			'config/assets/js/georowLevelAccessDemo.js',
-			'config/assets/js/changeAccessFilters.js',
-			'config/tables/geoweather_conditions/**',
-			'config/tables/geoweather/**',
-			'config/tables/geotagger/**',
-			'config/assets/csv/geoweather.updated.csv',
-			'config/assets/csv/geoweather_conditions.updated.csv',
-			'config/assets/csv/geotagger.updated.csv',
-			'config/assets/csv/geotagger/**');
-
-		return dirs;
-	};
-
-    grunt.registerTask(
-        'adbpush-tables-georowlevelaccessdemo',
-        'Push everything for tables opendatakit-georowlevelaccessdemo to the device',
-        function() {
-            var dirs = georowlevelaccessdemo(grunt);
-
-            // Now push these files to the phone.
-            dirs.forEach(infixRenameAdbPusher(".georowlevelaccessdemo", tablesConfig.appDir));
-        });
-
-
-    grunt.registerTask(
-        'create-tables-georowlevelaccessdemo',
-        'creat the georowlevelaccessdemo application designer package under build/georowlevelaccessdemo/',
-        function() {
-            var dirs = georowlevelaccessdemo(grunt);
-
-			var buildDir = 'build/georowlevelaccessdemo';
-
-			grunt.file.delete(buildDir + '/');
-			grunt.file.mkdir(buildDir);
-			grunt.file.mkdir(buildDir + '/' + tablesConfig.appDir);
-
-            // Now push these files to the phone.
-            dirs.forEach(infixRenameCopier(".georowlevelaccessdemo", tablesConfig.appDir));
-
-			var otherFiles = grunt.file.expand(
-				{filter: 'isFile',
-				 cwd: '.' },
-				'**',
-				'!.git/**',
-				'!build/**',
-				'!app/**',
-				'app/system/**',
-				'app/data/tables/geotagger/**',
-				'app/data/tables/geoweather/**',
-				'app/data/tables/geoweather_conditions/**',
-				'app/output/**');
-
-            otherFiles.forEach(infixRenameCopier(".georowlevelaccessdemo", ""));
-        });
-
-	var tablesDemoFiles = function(grunt) {
-		// In the alpha demo we want Tables and Survey. For this demo,
-		// it had needed a push of the system files, but we won't do that
-		// here. We only want a subset of the app/tables files,
-		// however. So, we are going to get everything except that
-		// directory and then add back in the ones that we want.
-		// The first parameter is an options object where we specify that
-		// we only want files--this is important because otherwise when
-		// we get directory names adb will push everything in the directory
-		// name, effectively pushing everything twice.  We also specify that we
-		// want everything returned to be relative to 'app' by using 'cwd'.
-		var dirs = grunt.file.expand(
-			{filter: 'isFile',
-			 cwd: 'app' },
-			'.nomedia',
-			'**',
-			'!system/**',
-			'!data/**',
-			'!output/**',
-			'!config/assets/**',
-			'!config/tables/**',
-			'config/**/*.tablesdemo.*',
-			'config/assets/framework/forms/framework.tablesdemo/**',
-			'config/assets/css/odk-survey.css',
-			'config/assets/img/advance.png',
-			'config/assets/img/backup.png',
-			'config/assets/img/form_logo.png',
-			'config/assets/img/little_arrow.png',
-			'config/assets/img/play.png',
-			'config/assets/libs/**',
-			'config/assets/fonts/**',
-
-			// demo chooser index page...
-			'config/assets/index.html',
-			'config/assets/js/demoChooser.js',
-			'config/assets/css/demo-chooser.css',
-			'config/assets/img/teaBackground.jpg',
-			'config/assets/img/hopePic.JPG',
-			'config/assets/img/Agriculture_in_Malawi_by_Joachim_Huber_CClicense.jpg',
-			'config/assets/img/spaceNeedle_CCLicense_goCardUSA.jpg',
-			'config/assets/img/chimp.png',
-			'config/assets/tables.init',
-
-			// hope study example
-			'config/assets/css/hope-homescreen.css',
-			'config/assets/hope.html',
-			// referenced within table html files
-			'config/assets/css/clients_list.css',
-			// MISSING: 'config/assets/clients_not_found_list.html',
-			'config/assets/img/little_arrow.png',
-			'config/assets/css/geopoints_list.css',
-			'config/assets/css/clients_detail.css',
-
-			'config/assets/csv/femaleClients.allfields.csv',
-			'config/tables/femaleClients/**',
-			'config/assets/csv/maleClients.allfields.csv',
-			'config/tables/maleClients/**',
-			'config/assets/csv/geopoints.allfields.csv',
-			'config/tables/geopoints/**',
-
-			// jgi example
-			// config/assets/ratchet/**
-			// config/assets/js/bootstrap.js
-			// config/assets/js/ratchet.js
-			'config/assets/jgiIndex.html',
-			'config/assets/js/jgiHomeScreen.js',
-			'config/assets/js/jgiFollowScreen.js',
-			'config/assets/css/gatesHomeScreen.css',
-			'config/assets/newFollow.html',
-			'config/assets/css/jgi-follow.css',
-			'config/assets/followScreen.html',
-			'config/assets/img/chimp.png',
-			'config/assets/img/little_arrow.png',
-			'config/assets/js/jgiNewFollow.js',
-			'config/assets/js/util.js',
-
-			'config/assets/csv/follow.updated.csv',
-			'config/tables/follow/**',
-			'config/tables/follow_arrival/**',
-			'config/tables/follow_map_position/**',
-			'config/tables/follow_map_time/**',
-			'config/tables/food_bout/**',
-			'config/tables/groom_bout/**',
-			'config/tables/mating_event/**',
-			'config/tables/other_species/**',
-
-			// geotagger example
-			'config/assets/csv/geotagger.updated.csv',
-			'config/assets/csv/geotagger/**',
-			'config/tables/geotagger/**',
-
-			// plot example
-			// config/assets/ratchet/**
-			'config/assets/css/homeScreen.css',
-			'config/assets/css/plot-homescreen.css',
-			'config/assets/css/plot-list.css',
-			'config/assets/css/plot-detail.css',
-			'config/assets/css/plot-graph.css',
-			'config/assets/css/plot-report.css',
-			'config/assets/css/plot-view.css',
-			'config/assets/css/visit-list.css',
-			'config/assets/css/visit-detail.css',
-			'config/assets/plotter.html',
-			'config/assets/plotter-*.html',
-			'config/assets/js/util.js',
-			'config/assets/js/plotter-*.js',
-			'config/assets/img/Agriculture_in_Malawi_by_Joachim_Huber_CClicense.jpg',
-			'config/assets/csv/plot.example.csv',
-			'config/tables/plot/**',
-			'config/assets/csv/visit.example.csv',
-			'config/tables/visit/**',
-
-			// teatime example
-			// config/assets/ratchet/**
-			'config/assets/css/homeScreen.css',
-			'config/assets/css/detail.css',
-			'config/assets/css/list.css',
-			'config/assets/teatime.html',
-			'config/assets/js/teatime.js',
-			'config/assets/img/teaBackground.jpg',
-			'config/assets/csv/Tea_houses.updated.csv',
-			'config/tables/Tea_houses/**',
-			'config/assets/csv/Tea_inventory.updated.csv',
-			'config/tables/Tea_inventory/**',
-			'config/assets/csv/Tea_types.updated.csv',
-			'config/tables/Tea_types/**',
-			'config/assets/csv/Tea_houses_editable.updated.csv',
-			'config/tables/Tea_houses_editable/**'
-			);
-
-		return dirs;
-	};
-
-    grunt.registerTask(
-        'adbpush-tables-tablesdemo',
-        'Push everything for tables opendatakit-tablesdemo to the device',
-        function() {
-            var dirs = tablesDemoFiles(grunt);
-
-			dirs.forEach(infixRenameAdbPusher(".tablesdemo", tablesConfig.appDir));
-        });
-
-    grunt.registerTask(
-        'create-tables-tablesdemo',
-        'creat the tablesdemo application designer package under build/tablesdemo/',
-        function() {
-            var dirs = tablesDemoFiles(grunt);
-
-			var buildDir = 'build/tablesdemo';
-
-			grunt.file.delete(buildDir + '/');
-			grunt.file.mkdir(buildDir);
-			grunt.file.mkdir(buildDir + '/' + tablesConfig.appDir);
-
-            // Now push these files to the phone.
-            dirs.forEach(infixRenameCopier(".tablesdemo", tablesConfig.appDir));
-
-			var otherFiles = grunt.file.expand(
-				{filter: 'isFile',
-				 cwd: '.' },
-				'**',
-				'!.git/**',
-				'!build/**',
-				'!app/**',
-				'app/system/**',
-				'app/data/tables/geotagger/**',
-				'app/output/**');
-
-            otherFiles.forEach(infixRenameCopier(".tablesdemo", ""));
-        });
-
-	var opendatakit2DemoFiles = function(grunt) {
-		// This only pushes the definitions of the opendatakit-2.appspot.com forms.
-		var dirs = grunt.file.expand(
-			{filter: 'isFile',
-			 cwd: 'app' },
-			'.nomedia',
-			'**',
-			'!system/**',
-			'!data/**',
-			'!output/**',
-			'!config/assets/**',
-			'!config/tables/**',
-			'config/**/*.opendatakit-2.*',
-			'config/assets/framework/forms/framework.opendatakit-2/**',
-			'config/assets/css/odk-survey.css',
-			'config/assets/img/advance.png',
-			'config/assets/img/backup.png',
-			'config/assets/img/form_logo.png',
-			'config/assets/img/little_arrow.png',
-			'config/assets/img/play.png',
-			'config/assets/libs/**',
-			'config/tables/exampleForm/**',
-			'config/tables/household/**',
-			'config/tables/household_member/**',
-			'config/tables/selects/**',
-			'config/tables/gridScreen/**');
-
-		return dirs;
-	};
-
-    grunt.registerTask(
-        'adbpush-tables-opendatakit-2',
-        'Push everything for survey opendatakit-2 site to the device',
-        function() {
-            var dirs = opendatakit2DemoFiles(grunt);
-
-			dirs.forEach(infixRenameAdbPusher(".opendatakit-2", tablesConfig.appDir));
-        });
-
-    grunt.registerTask(
-        'create-tables-opendatakit-2',
-        'create the opendatakit-2 application designer package under build/opendatakit-2/',
-        function() {
-            var dirs = opendatakit2DemoFiles(grunt);
-
-			var buildDir = 'build/opendatakit-2';
-
-			grunt.file.delete(buildDir + '/');
-			grunt.file.mkdir(buildDir);
-			grunt.file.mkdir(buildDir + '/' + tablesConfig.appDir);
-
-            // Now push these files to the phone.
-            dirs.forEach(infixRenameCopier(".opendatakit-2", tablesConfig.appDir));
-
-			var otherFiles = grunt.file.expand(
-				{filter: 'isFile',
-				 cwd: '.' },
-				'**',
-				'!.git/**',
-				'!build/**',
-				'!app/**',
-				'app/system/**',
-				'app/output/**');
-
-            otherFiles.forEach(infixRenameCopier(".opendatakit-2", ""));
-        });
-
+	
     grunt.registerTask(
         'adbpush-survey',
         'Push everything for survey to the device',
@@ -1499,283 +926,8 @@ var zipAllFiles = function( destZipFile, filesList, completionFn ) {
                 '**',
                 '!system/**',
 				'!data/**',
-                '!output/**',
+				'!output/**',
                 '!**/~$*.xlsx');
-
-            // Now push these files to the phone.
-            dirs.forEach(function(fileName) {
-                //  Have to add app back into the file name for the adb push
-                var src = surveyConfig.appDir + '/' + fileName;
-                var dest =
-                    surveyConfig.deviceMount +
-                    '/' +
-                    surveyConfig.appName +
-                    '/' +
-                    fileName;
-                grunt.log.writeln('adb push ' + src + ' ' + dest);
-                grunt.task.run('exec:adbpush:' + src + ':' + dest);
-            });
-
-        });
-
-    grunt.registerTask(
-        'adbpush-survey-demo-beta2',
-        'Push everything for survey to the device',
-        function() {
-            // In the beta demo we only want Survey; do not push any
-			// system or output files. We only want a subset of the
-			// app/config/tables files. So, we are going to get everything except
-            // that directory and then add back in the ones that we want.
-            // The first parameter is an options object where we specify that
-            // we only want files--this is important because otherwise when
-            // we get directory names adb will push everything in the directory
-            // name, effectively pushing everything twice.  We also specify that we
-            // want everything returned to be relative to 'app' by using 'cwd'.
-            var dirs = grunt.file.expand(
-                {filter: 'isFile',
-                 cwd: 'app' },
-				'.nomedia',
-                '**',
-                '!system/**',
-				'!data/**',
-				'!output/**',
-                '!config/tables/**',
-                'config/tables/exampleForm/**',
-                'config/tables/household/**',
-                'config/tables/household_member/**',
-                'config/tables/selects/**',
-                'config/tables/gridScreen/**');
-
-            // Now push these files to the phone.
-            dirs.forEach(function(fileName) {
-                //  Have to add app back into the file name for the adb push
-                var src = surveyConfig.appDir + '/' + fileName;
-                var dest =
-                    surveyConfig.deviceMount +
-                    '/' +
-                    surveyConfig.appName +
-                    '/' +
-                    fileName;
-                grunt.log.writeln('adb push ' + src + ' ' + dest);
-                grunt.task.run('exec:adbpush:' + src + ':' + dest);
-            });
-
-        });
-
-    grunt.registerTask(
-        'adbpush-survey-demo-bmg05152014',
-        'Push everything for survey demo to the device',
-        function() {
-            // In the demo we only want Survey. Do not push the system or
-			// output files.  We only want a subset of the app/config/tables files,
-            // however. So, we are going to get everything except that
-            // directory and then add back in the ones that we want.
-            // The first parameter is an options object where we specify that
-            // we only want files--this is important because otherwise when
-            // we get directory names adb will push everything in the directory
-            // name, effectively pushing everything twice.  We also specify that we
-            // want everything returned to be relative to 'app' by using 'cwd'.
-            var dirs = grunt.file.expand(
-                {filter: 'isFile',
-                 cwd: 'app' },
-				'.nomedia',
-                '**',
-                '!system/**',
-				'!data/**',
-				'!output/**',
-                '!config/tables/**',
-                'config/tables/household/**',
-                'config/tables/household_member/**',
-                'config/tables/selects/**',
-                'config/tables/gridScreen/**');
-
-            // Now push these files to the phone.
-            dirs.forEach(function(fileName) {
-                //  Have to add app back into the file name for the adb push
-                var src = surveyConfig.appDir + '/' + fileName;
-                var dest =
-                    surveyConfig.deviceMount +
-                    '/' +
-                    surveyConfig.appName +
-                    '/' +
-                    fileName;
-                grunt.log.writeln('adb push ' + src + ' ' + dest);
-                grunt.task.run('exec:adbpush:' + src + ':' + dest);
-            });
-
-        });
-
-    grunt.registerTask(
-        'adbpush-survey-demo-bmg10092014',
-        'Push everything for survey demo to the device',
-        function() {
-            // In the demo we only want Survey. Do not push the system or
-			// output files. We only want a subset of the app/config/tables files,
-            // however. So, we are going to get everything except that
-            // directory and then add back in the ones that we want.
-            // The first parameter is an options object where we specify that
-            // we only want files--this is important because otherwise when
-            // we get directory names adb will push everything in the directory
-            // name, effectively pushing everything twice.  We also specify that we
-            // want everything returned to be relative to 'app' by using 'cwd'.
-            //
-            // For this demo selects had to be modified due to select_one_with_other
-            // and the media player not working for video
-            var dirs = grunt.file.expand(
-                {filter: 'isFile',
-                 cwd: 'app' },
-				'.nomedia',
-                '**',
-				'!system/**',
-				'!data/**',
-				'!output/**',
-                '!config/assets/**',
-                'config/assets/csv/**',
-                'config/assets/tables.init',
-                '!config/tables/**',
-                'config/tables/plot/**',
-                'config/tables/visit/**',
-                'config/tables/selects_demo/**',
-                'config/tables/geotagger/**',
-                'config/tables/agriculture/**');
-
-            // Now push these files to the phone.
-            dirs.forEach(function(fileName) {
-                //  Have to add app back into the file name for the adb push
-                var src = tablesConfig.appDir + '/' + fileName;
-                var dest =
-                    tablesConfig.deviceMount +
-                    '/' +
-                    tablesConfig.appName +
-                    '/' +
-                    fileName;
-                grunt.log.writeln('adb push ' + src + ' ' + dest);
-                grunt.task.run('exec:adbpush:' + src + ':' + dest);
-            });
-
-        });
-
-    grunt.registerTask(
-        'adbpush-survey-demo-techCon2014',
-        'Push everything for survey demo to the device',
-        function() {
-            // In the demo we only want Survey. Do not push the system or
-			// output files. We only want a subset of the app/config/tables files,
-            // however. So, we are going to get everything except that
-            // directory and then add back in the ones that we want.
-            // The first parameter is an options object where we specify that
-            // we only want files--this is important because otherwise when
-            // we get directory names adb will push everything in the directory
-            // name, effectively pushing everything twice.  We also specify that we
-            // want everything returned to be relative to 'app' by using 'cwd'.
-            //
-            // For this demo selects had to be modified due to select_one_with_other
-            // and the media player not working for video
-            var dirs = grunt.file.expand(
-                {filter: 'isFile',
-                 cwd: 'app' },
-				'.nomedia',
-                '**',
-                '!system/**',
-				'!data/**',
-                '!output/**',
-                '!config/assets/**',
-                'config/assets/csv/**',
-                'config/assets/tables.init',
-                '!config/tables/**',
-                'config/tables/plot/**',
-                'config/tables/visit/**',
-                'config/tables/selects_demo/**',
-                'config/tables/geotagger/**',
-                'config/tables/agriculture/**',
-                'config/tables/temperatureSensor/**');
-
-            // Now push these files to the phone.
-            dirs.forEach(function(fileName) {
-                //  Have to add app back into the file name for the adb push
-                var src = tablesConfig.appDir + '/' + fileName;
-                var dest =
-                    tablesConfig.deviceMount +
-                    '/' +
-                    tablesConfig.appName +
-                    '/' +
-                    fileName;
-                grunt.log.writeln('adb push ' + src + ' ' + dest);
-                grunt.task.run('exec:adbpush:' + src + ':' + dest);
-            });
-
-        });
-
-    grunt.registerTask(
-        'adbpush-survey-demo-beta3',
-        'Push everything for survey to the device',
-        function() {
-            // In the beta demo we only want Survey. Do not push the system
-			// or output files. We only want a subset of the app/config/tables files,
-            // however. So, we are going to get everything except that
-            // directory and then add back in the ones that we want.
-            // The first parameter is an options object where we specify that
-            // we only want files--this is important because otherwise when
-            // we get directory names adb will push everything in the directory
-            // name, effectively pushing everything twice.  We also specify that we
-            // want everything returned to be relative to 'app' by using 'cwd'.
-            var dirs = grunt.file.expand(
-                {filter: 'isFile',
-                 cwd: 'app' },
-				'.nomedia',
-                '**',
-                '!system/**',
-				'!data/**',
-                '!output/**',
-                '!config/assets/**',
-                '!config/tables/**',
-                'config/tables/exampleForm/**',
-                'config/tables/household/**',
-                'config/tables/household_member/**',
-                'config/tables/selects/**',
-                'config/tables/gridScreen/**');
-
-            // Now push these files to the phone.
-            dirs.forEach(function(fileName) {
-                //  Have to add app back into the file name for the adb push
-                var src = surveyConfig.appDir + '/' + fileName;
-                var dest =
-                    surveyConfig.deviceMount +
-                    '/' +
-                    surveyConfig.appName +
-                    '/' +
-                    fileName;
-                grunt.log.writeln('adb push ' + src + ' ' + dest);
-                grunt.task.run('exec:adbpush:' + src + ':' + dest);
-            });
-
-        });
-
-
-    grunt.registerTask(
-        'adbpush-survey-beta3-opendatakit-surveydemo',
-        'Push everything for the opendatakit-surveydemo.appspot.com site to the device',
-        function() {
-            // These are the files that are uploaded to the opendatakit-surveydemo
-			// appspot instance. We only want a subset of the app/tables files,
-            // however. So, we are going to get everything except that
-            // directory and then add back in the ones that we want.
-            // The first parameter is an options object where we specify that
-            // we only want files--this is important because otherwise when
-            // we get directory names adb will push everything in the directory
-            // name, effectively pushing everything twice.  We also specify that we
-            // want everything returned to be relative to 'app' by using 'cwd'.
-            var dirs = grunt.file.expand(
-                {filter: 'isFile',
-                 cwd: 'app' },
-				'.nomedia',
-                '**',
-                '!config/assets/**',
-                '!system/**',
-				'!data/**',
-                '!output/**',
-                '!config/tables/**',
-                'config/tables/geoweather/**');
 
             // Now push these files to the phone.
             dirs.forEach(function(fileName) {
@@ -2019,6 +1171,22 @@ var zipAllFiles = function( destZipFile, filesList, completionFn ) {
             }
 
         });
+
+    grunt.registerTask('eqm-init',
+    'Initializes a phressh Lenovo E7 tablet',
+    function eqmInit() {
+        grunt.log.writeln("Initializing phresh Lenovo E7 tablet.")
+        //grunt.task.run("exec:adbshell:am force-stop org.opendatakit.".concat(apps[i]));
+        grunt.task.run("exec:adbinstall:./Tablet_Install/ODK-X_Services_v2.1.4.apk");
+        grunt.task.run("exec:adbinstall:./Tablet_Install/ODK-X_Survey_v2.1.4.apk");
+        grunt.task.run("exec:adbinstall:./Tablet_Install/ODK-X_Tables_v2.1.4.apk");
+        grunt.task.run("exec:adbinstall:./Tablet_Install/OIFilemanager.apk");
+        //grunt.task.run('adbpush-collect');
+        grunt.task.run('adbpush-default-app');        
+        grunt.task.run('setup');
+        
+    });    
+
     grunt.registerTask(
         "adbpull-props",
         "Copies the properties from the device",
@@ -2071,9 +1239,17 @@ var zipAllFiles = function( destZipFile, filesList, completionFn ) {
         "setup",
         "Launch the login and sync screen",
         function() {
+            //console.log("exec:adbshell:am start -a android.intent.action.MAIN -n org.opendatakit.services/.sync.actions.activities.SyncActivity --es appName "+tablesConfig.appName+" --es showLogin true");
             grunt.task.run("exec:adbshell:am start -a android.intent.action.MAIN -n org.opendatakit.services/.sync.actions.activities.SyncActivity --es appName "+tablesConfig.appName+" --es showLogin true");
         }
     )
+    grunt.registerTask(
+        'start-survey',
+        'Starts survey app',
+        function() {
+            grunt.task.run("exec:adbshell:am start -a android.intent.action.MAIN -n org.opendatakit.survey/.activities.SplashScreenActivity");
+        }
+    );
     // https://stackoverflow.com/questions/16612495/continue-certain-tasks-in-grunt-even-if-one-fails
     var previous_force_state = grunt.option("force");
     grunt.registerTask("force",function(set){
@@ -2081,97 +1257,4 @@ var zipAllFiles = function( destZipFile, filesList, completionFn ) {
         if (set === "off") grunt.option("force", false);
         if (set === "restore") grunt.option("force", previous_force_state);
     });
-
-    function deleteFilesList(grunt, workingDir, toBeDeleted) {
-        toBeDeleted.forEach(function (fileName) {
-            var dirToUse = workingDir;
-            if (!dirToUse.endsWith('/')) {
-                dirToUse = dirToUse + '/';
-            }
-
-            var src = dirToUse + fileName;
-            grunt.log.writeln('deleteTopLevel: deleting ' + src);
-            grunt.file.delete(src, {force: true});
-        });
-    }
-
-    var deleteTopLevel = function(grunt, dirToDelete) {
-        var toBeDeleted = grunt.file.expand(
-            {cwd: dirToDelete },
-            '*');
-        deleteFilesList(grunt, dirToDelete, toBeDeleted);
-    };
-
-    grunt.registerTask(
-        'empty',
-        'Remove unnecessary files to make an empty app-designer',
-        function() {
-
-            deleteTopLevel(grunt, tablesConfig.tablesDir);
-            deleteTopLevel(grunt, tablesConfig.assetsDir + '/csv');
-            deleteTopLevel(grunt, tablesConfig.dataDir);
-            deleteTopLevel(grunt, tablesConfig.appDir + '/' + tablesConfig.outputCsvDir);
-            deleteTopLevel(grunt, tablesConfig.appDir + '/' + tablesConfig.outputDbDir);
-            deleteTopLevel(grunt, tablesConfig.appDir + '/' + tablesConfig.outputDebugDir);
-            deleteTopLevel(grunt, tablesConfig.appDir + '/' + tablesConfig.outputPropsDir);
-
-            var assetFilesToDelete = grunt.file.expand(
-                {filter: 'isFile',
-                    cwd: tablesConfig.assetsDir },
-                '*.*',
-                '!favicon.ico',
-                'css/**',
-                '!css/odk-survey.css',
-                'csv/**',
-                'framework/**',
-                '!**/*.clean.*',
-                '!framework/forms/framework.clean/**',
-                'img/**',
-                '!img/play.png',
-                '!img/form_logo.png',
-                '!img/backup.png',
-                '!img/advance.png',
-                '!img/little_arrow.png',
-                'js/**',
-                '!js/util.js',
-                '!libs/**',
-                '!commonDefinitions.js',
-                '!index.html',
-                '!framework/forms/framework/formDef.json',
-                '!framework/forms/framework/framework.xlsx',
-                '!framework/frameworkDefinitions.js'
-            );
-
-            // Delete unnecessary files
-            deleteFilesList(grunt, tablesConfig.assetsDir, assetFilesToDelete);
-
-            // Find all instances of things with .clean in it
-            var cleanFilesToDelete = grunt.file.expand(
-                { cwd: tablesConfig.assetsDir,
-                    filter: 'isFile'},
-                '**/*.clean.*',
-                '**/*.clean/**'
-            );
-
-            // Copy *.clean files over to the correct directory
-            cleanFilesToDelete.forEach(function(fileName) {
-                var src = tablesConfig.assetsDir + '/' + fileName;
-                var dest = src;
-                var dest = dest.replace(new RegExp('.clean', 'g'), '');
-                grunt.log.writeln('copy ' + src + ' to ' + dest);
-                grunt.file.copy(src, dest);
-            });
-
-            // Delete all of the .clean files now
-            deleteFilesList(grunt, tablesConfig.assetsDir, cleanFilesToDelete);
-
-            // Delete all of the other framework directories
-            var assetsDirToDelete = grunt.file.expand(
-                {cwd: tablesConfig.assetsDir + '/framework/forms'},
-                '*',
-                '*.*',
-                '!framework/**');
-
-            deleteFilesList(grunt, tablesConfig.assetsDir + '/framework/forms', assetsDirToDelete);
-        });
 };
