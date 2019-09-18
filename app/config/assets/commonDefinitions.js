@@ -8,49 +8,31 @@ window.odkCommonDefinitions = {
         "display": {
           "locale": {
             "text": {
-              "en": "English",
-              "hi": "अंग्रेज़ी",
-              "es": "Inglés",
-              "default": "English"
+              "english": "Portuguese",
+              "default": "Português"
+            }
+          }
+        },
+        "_row_num": 6,
+        "name": "default"
+      },
+      {
+        "display": {
+          "locale": {
+            "text": {
+              "english": "English",
+              "default": "Inglês"
             }
           }
         },
         "_row_num": 7,
-        "name": "en"
-      },
-      {
-        "display": {
-          "locale": {
-            "text": {
-              "en": "Hindi",
-              "hi": "हिंदी",
-              "es": "Hindi",
-              "default": "Hindi"
-            }
-          }
-        },
-        "_row_num": 8,
-        "name": "hi"
-      },
-      {
-        "display": {
-          "locale": {
-            "text": {
-              "en": "Spanish",
-              "hi": "स्पेनिश",
-              "es": "Español",
-              "default": "Spanish"
-            }
-          }
-        },
-        "_row_num": 9,
-        "name": "es"
+        "name": "english"
       }
     ]
   },
   "_default_locale": {
     "setting_name": "_default_locale",
     "_row_num": 5,
-    "value": "en"
+    "value": "default"
   }
 }

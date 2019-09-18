@@ -1,0 +1,13 @@
+_element_key,_element_name,_element_type,_list_child_element_keys
+CABA,CABA,string,[]
+GERADOR,GERADOR,string,[]
+PREGID,PREGID,string,[]
+RADIO,RADIO,string,[]
+REGID,REGID,string,[]
+REGIDC,REGIDC,string,[]
+SESDATA,SESDATA,string,[]
+SES_ESTADO,SES_ESTADO,integer,[]
+TECTO,TECTO,string,[]
+TELEMOVEL,TELEMOVEL,string,[]
+TELENUMERO,TELENUMERO,integer,[]
+VISITIDC,VISITIDC,string,[]

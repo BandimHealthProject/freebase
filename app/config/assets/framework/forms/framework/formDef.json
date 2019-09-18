@@ -6,18 +6,207 @@
         "_row_num": 2
       }
     ],
+    "settings": [
+      {
+        "setting_name": "table_id",
+        "value": "framework",
+        "_row_num": 2
+      },
+      {
+        "setting_name": "form_id",
+        "value": "framework",
+        "_row_num": 3
+      },
+      {
+        "setting_name": "form_version",
+        "value": 20190521,
+        "_row_num": 4
+      },
+      {
+        "setting_name": "survey",
+        "display": {
+          "title": {
+            "text": {
+              "english": "Options",
+              "default": "Opções"
+            }
+          }
+        },
+        "_row_num": 5
+      },
+      {
+        "setting_name": "default",
+        "display": {
+          "locale": {
+            "text": {
+              "english": "Portuguese",
+              "default": "Português"
+            }
+          }
+        },
+        "_row_num": 6
+      },
+      {
+        "setting_name": "english",
+        "display": {
+          "locale": {
+            "text": {
+              "english": "English",
+              "default": "Inglês"
+            }
+          }
+        },
+        "_row_num": 7
+      },
+      {
+        "setting_name": "framework_variant",
+        "_row_num": 8
+      }
+    ],
+    "choices": [
+      {
+        "choice_list_name": "forms",
+        "data_value": "MIF",
+        "display": {
+          "title": {
+            "text": {
+              "english": "Woman in the fertile age",
+              "default": "Mulher na idade fertil"
+            }
+          }
+        },
+        "_row_num": 2
+      },
+      {
+        "choice_list_name": "forms",
+        "data_value": "MIF_VISIT",
+        "display": {
+          "title": {
+            "text": {
+              "english": "Woman in the fertile age - visit",
+              "default": "Mulher na idade fertil - visita"
+            }
+          }
+        },
+        "_row_num": 3
+      },
+      {
+        "choice_list_name": "forms",
+        "data_value": "VAC",
+        "display": {
+          "title": {
+            "text": {
+              "english": "Vaccine",
+              "default": "Mulher na idade fertil - visitas"
+            }
+          }
+        },
+        "_row_num": 4
+      },
+      {
+        "choice_list_name": "forms",
+        "data_value": "SCAR",
+        "display": {
+          "title": {
+            "text": {
+              "english": "Scars",
+              "default": "Cicatrizes"
+            }
+          }
+        },
+        "_row_num": 5
+      },
+      {
+        "choice_list_name": "forms",
+        "data_value": "SES",
+        "display": {
+          "title": {
+            "text": {
+              "english": "SES",
+              "default": "SES"
+            }
+          }
+        },
+        "_row_num": 6
+      },
+      {
+        "choice_list_name": "forms",
+        "data_value": "GRAVIDA",
+        "display": {
+          "title": {
+            "text": {
+              "english": "Pregnant",
+              "default": "Grávidas"
+            }
+          }
+        },
+        "_row_num": 7
+      },
+      {
+        "choice_list_name": "forms",
+        "data_value": "GRAVIDA_VISIT",
+        "display": {
+          "title": {
+            "text": {
+              "english": "Pregnants_visits",
+              "default": "Grávidas_visitas"
+            }
+          }
+        },
+        "_row_num": 8
+      },
+      {
+        "choice_list_name": "forms",
+        "data_value": "TEST",
+        "display": {
+          "title": {
+            "text": {
+              "english": "Test form",
+              "default": "Test Formulario"
+            }
+          }
+        },
+        "_row_num": 9
+      },
+      {
+        "choice_list_name": "forms",
+        "data_value": "CRIANCA_VISIT",
+        "display": {
+          "title": {
+            "text": {
+              "english": "Child Visit",
+              "default": "Crianca_visitas"
+            }
+          }
+        },
+        "_row_num": 10
+      },
+      {
+        "choice_list_name": "forms",
+        "data_value": "CRIANCA",
+        "display": {
+          "title": {
+            "text": {
+              "english": "Child",
+              "default": "Crianca"
+            }
+          }
+        },
+        "_row_num": 11
+      }
+    ],
     "survey": [
       {
         "clause": "if",
-        "condition": "opendatakit.getPlatformInfo().container == \"Chrome\"",
+        "condition": "opendatakit.getPlatformInfo().container==\"Chrome\"",
         "_row_num": 2
       },
       {
         "type": "user_branch",
-        "values_list": "test_forms",
+        "values_list": "forms",
         "display": {
           "prompt": {
-            "text": "Choose a test form (there are many)"
+            "text": "Choose a form"
           }
         },
         "_row_num": 3
@@ -30,10 +219,7 @@
         "type": "note",
         "display": {
           "prompt": {
-            "text": "This is the default form."
-          },
-          "hint": {
-            "text": "Set your url hash to #formPath=[relative path to form directory]/ to change forms."
+            "text": "This is the default form"
           }
         },
         "_row_num": 5
@@ -47,11 +233,11 @@
         "_row_num": 7
       },
       {
-        "branch_label": "agriculture",
+        "branch_label": "MIF",
         "_row_num": 8
       },
       {
-        "url": "'?' + odkSurvey.getHashString('agriculture')",
+        "url": "'?' + odkSurvey.getHashString('MIF')",
         "type": "external_link",
         "display": {
           "prompt": {
@@ -65,11 +251,11 @@
         "_row_num": 10
       },
       {
-        "branch_label": "geotagger",
+        "branch_label": "MIF_VISIT",
         "_row_num": 11
       },
       {
-        "url": "'?' + odkSurvey.getHashString('geotagger')",
+        "url": "'?' + odkSurvey.getHashString('MIF_VISIT')",
         "type": "external_link",
         "display": {
           "prompt": {
@@ -83,11 +269,11 @@
         "_row_num": 13
       },
       {
-        "branch_label": "breathcounter",
+        "branch_label": "VAC",
         "_row_num": 14
       },
       {
-        "url": "'?' + odkSurvey.getHashString('breathcounter')",
+        "url": "'?' + odkSurvey.getHashString('VAC')",
         "type": "external_link",
         "display": {
           "prompt": {
@@ -101,11 +287,11 @@
         "_row_num": 16
       },
       {
-        "branch_label": "complex_validate_test",
+        "branch_label": "SCAR",
         "_row_num": 17
       },
       {
-        "url": "'?' + odkSurvey.getHashString('complex_validate_test')",
+        "url": "'?' + odkSurvey.getHashString('SCAR')",
         "type": "external_link",
         "display": {
           "prompt": {
@@ -119,11 +305,11 @@
         "_row_num": 19
       },
       {
-        "branch_label": "customAppearance",
+        "branch_label": "CRIANCA",
         "_row_num": 20
       },
       {
-        "url": "'?' + odkSurvey.getHashString('customAppearance')",
+        "url": "'?' + odkSurvey.getHashString('CRIANCA')",
         "type": "external_link",
         "display": {
           "prompt": {
@@ -137,11 +323,11 @@
         "_row_num": 22
       },
       {
-        "branch_label": "exampleForm",
+        "branch_label": "GRAVIDA",
         "_row_num": 23
       },
       {
-        "url": "'?' + odkSurvey.getHashString('exampleForm')",
+        "url": "'?' + odkSurvey.getHashString('GRAVIDA')",
         "type": "external_link",
         "display": {
           "prompt": {
@@ -155,11 +341,11 @@
         "_row_num": 25
       },
       {
-        "branch_label": "household",
+        "branch_label": "GRAVIDA_VISIT",
         "_row_num": 26
       },
       {
-        "url": "'?' + odkSurvey.getHashString('household')",
+        "url": "'?' + odkSurvey.getHashString('GRAVIDA_VISIT')",
         "type": "external_link",
         "display": {
           "prompt": {
@@ -173,11 +359,11 @@
         "_row_num": 28
       },
       {
-        "branch_label": "imnci_test",
+        "branch_label": "TEST",
         "_row_num": 29
       },
       {
-        "url": "'?' + odkSurvey.getHashString('imnci','imnci_test')",
+        "url": "'?' + odkSurvey.getHashString('TEST')",
         "type": "external_link",
         "display": {
           "prompt": {
@@ -191,11 +377,11 @@
         "_row_num": 31
       },
       {
-        "branch_label": "refrigerators_init",
+        "branch_label": "CRIANCA_VISIT",
         "_row_num": 32
       },
       {
-        "url": "'?' +  odkSurvey.getHashString('refrigerators','refrigerators_init')",
+        "url": "'?' + odkSurvey.getHashString('CRIANCA_VISIT')",
         "type": "external_link",
         "display": {
           "prompt": {
@@ -209,11 +395,11 @@
         "_row_num": 34
       },
       {
-        "branch_label": "refrigerators_update",
+        "branch_label": "SES",
         "_row_num": 35
       },
       {
-        "url": "'?' +  odkSurvey.getHashString('refrigerators','refrigerators_update')",
+        "url": "'?' + odkSurvey.getHashString('SES')",
         "type": "external_link",
         "display": {
           "prompt": {
@@ -225,1132 +411,464 @@
       {
         "clause": "exit section",
         "_row_num": 37
-      },
-      {
-        "branch_label": "section_test",
-        "_row_num": 38
-      },
-      {
-        "url": "'?' +  odkSurvey.getHashString('section_test')",
-        "type": "external_link",
-        "display": {
-          "prompt": {
-            "text": "Open form"
-          }
-        },
-        "_row_num": 39
-      },
-      {
-        "clause": "exit section",
-        "_row_num": 40
-      },
-      {
-        "branch_label": "selects",
-        "_row_num": 41
-      },
-      {
-        "url": "'?' +  odkSurvey.getHashString('selects')",
-        "type": "external_link",
-        "display": {
-          "prompt": {
-            "text": "Open form"
-          }
-        },
-        "_row_num": 42
-      },
-      {
-        "clause": "exit section",
-        "_row_num": 43
-      },
-      {
-        "branch_label": "twoColumn",
-        "_row_num": 44
-      },
-      {
-        "url": "'?' +  odkSurvey.getHashString('twoColumn')",
-        "type": "external_link",
-        "display": {
-          "prompt": {
-            "text": "Open form"
-          }
-        },
-        "_row_num": 45
-      },
-      {
-        "clause": "exit section",
-        "_row_num": 46
-      },
-      {
-        "branch_label": "gridScreen",
-        "_row_num": 47
-      },
-      {
-        "url": "'?' +  odkSurvey.getHashString('gridScreen')",
-        "type": "external_link",
-        "display": {
-          "prompt": {
-            "text": "Open form"
-          }
-        },
-        "_row_num": 48
-      },
-      {
-        "clause": "exit section",
-        "_row_num": 49
-      },
-      {
-        "branch_label": "adult_coverage",
-        "_row_num": 50
-      },
-      {
-        "url": "'?' +  odkSurvey.getHashString('adult_coverage')",
-        "type": "external_link",
-        "display": {
-          "prompt": {
-            "text": "Open form"
-          }
-        },
-        "_row_num": 51
-      },
-      {
-        "clause": "exit section",
-        "_row_num": 52
-      },
-      {
-        "branch_label": "child_coverage",
-        "_row_num": 53
-      },
-      {
-        "url": "'?' +  odkSurvey.getHashString('child_coverage')",
-        "type": "external_link",
-        "display": {
-          "prompt": {
-            "text": "Open form"
-          }
-        },
-        "_row_num": 54
-      },
-      {
-        "clause": "exit section",
-        "_row_num": 55
-      },
-      {
-        "branch_label": "graphExample",
-        "_row_num": 56
-      },
-      {
-        "url": "'?' +  odkSurvey.getHashString('graphExample')",
-        "type": "external_link",
-        "display": {
-          "prompt": {
-            "text": "Open form"
-          }
-        },
-        "_row_num": 57
-      },
-      {
-        "clause": "exit section",
-        "_row_num": 58
-      },
-      {
-        "branch_label": "visit",
-        "_row_num": 59
-      },
-      {
-        "url": "'?' +  odkSurvey.getHashString('visit')",
-        "type": "external_link",
-        "display": {
-          "prompt": {
-            "text": "Open form"
-          }
-        },
-        "_row_num": 60
-      },
-      {
-        "clause": "exit section",
-        "_row_num": 61
-      },
-      {
-        "branch_label": "plot",
-        "_row_num": 62
-      },
-      {
-        "url": "'?' +  odkSurvey.getHashString('plot')",
-        "type": "external_link",
-        "display": {
-          "prompt": {
-            "text": "Open form"
-          }
-        },
-        "_row_num": 63
-      },
-      {
-        "clause": "exit section",
-        "_row_num": 64
-      },
-      {
-        "branch_label": "geoweather",
-        "_row_num": 65
-      },
-      {
-        "url": "'?' +  odkSurvey.getHashString('geoweather')",
-        "type": "external_link",
-        "display": {
-          "prompt": {
-            "text": "Open form"
-          }
-        },
-        "_row_num": 66
-      },
-      {
-        "clause": "exit section",
-        "_row_num": 67
-      },
-      {
-        "branch_label": "send_sms",
-        "_row_num": 68
-      },
-      {
-        "url": "'?' +  odkSurvey.getHashString('send_sms')",
-        "type": "external_link",
-        "display": {
-          "prompt": {
-            "text": "Open form"
-          }
-        },
-        "_row_num": 69
-      },
-      {
-        "clause": "exit section",
-        "_row_num": 70
-      },
-      {
-        "branch_label": "eonasdan",
-        "_row_num": 71
-      },
-      {
-        "url": "'?' + odkSurvey.getHashString('eonasdan')",
-        "type": "external_link",
-        "display": {
-          "prompt": {
-            "text": "Open form"
-          }
-        },
-        "_row_num": 72
-      },
-      {
-        "clause": "exit section",
-        "_row_num": 73
-      },
-      {
-        "branch_label": "screenClient",
-        "_row_num": 74
-      },
-      {
-        "url": "'?' +  odkSurvey.getHashString('femaleClients', 'screenClient')",
-        "type": "external_link",
-        "display": {
-          "prompt": {
-            "text": "Open form"
-          }
-        },
-        "_row_num": 75
-      },
-      {
-        "clause": "exit section",
-        "_row_num": 76
-      },
-      {
-        "branch_label": "client6Week",
-        "_row_num": 77
-      },
-      {
-        "url": "'?' +  odkSurvey.getHashString('femaleClients','client6Week')",
-        "type": "external_link",
-        "display": {
-          "prompt": {
-            "text": "Open form"
-          }
-        },
-        "_row_num": 78
-      },
-      {
-        "clause": "exit section",
-        "_row_num": 79
-      },
-      {
-        "branch_label": "client6Month",
-        "_row_num": 80
-      },
-      {
-        "url": "'?' +  odkSurvey.getHashString('femaleClients', 'client6Month')",
-        "type": "external_link",
-        "display": {
-          "prompt": {
-            "text": "Open form"
-          }
-        },
-        "_row_num": 81
-      },
-      {
-        "clause": "exit section",
-        "_row_num": 82
-      },
-      {
-        "branch_label": "screenPartner",
-        "_row_num": 83
-      },
-      {
-        "url": "'?' +  odkSurvey.getHashString('maleClients', 'screenPartner')",
-        "type": "external_link",
-        "display": {
-          "prompt": {
-            "text": "Open form"
-          }
-        },
-        "_row_num": 84
-      },
-      {
-        "clause": "exit section",
-        "_row_num": 85
-      },
-      {
-        "branch_label": "partner6Month",
-        "_row_num": 86
-      },
-      {
-        "url": "'?' +  odkSurvey.getHashString('maleClients','partner6Month')",
-        "type": "external_link",
-        "display": {
-          "prompt": {
-            "text": "Open form"
-          }
-        },
-        "_row_num": 87
-      },
-      {
-        "clause": "exit section",
-        "_row_num": 88
-      }
-    ],
-    "settings": [
-      {
-        "setting_name": "table_id",
-        "value": "framework",
-        "_row_num": 2
-      },
-      {
-        "setting_name": "form_id",
-        "value": "framework",
-        "comments": "The unique form id.",
-        "_row_num": 3
-      },
-      {
-        "setting_name": "form_version",
-        "value": 20130828,
-        "comments": "The version of this form",
-        "_row_num": 4
-      },
-      {
-        "setting_name": "survey",
-        "display": {
-          "title": {
-            "text": {
-              "en": "Common Javascript Framework",
-              "hi": "सामान्य जावास्क्रिप्ट फ़्रेमवर्क",
-              "es": "Marco común de Javascript",
-              "default": "Common Javascript Framework"
-            }
-          }
-        },
-        "comments": "The title of the 'survey' section (a.k.a. form title)",
-        "showContents": false,
-        "_row_num": 5
-      },
-      {
-        "setting_name": "en",
-        "display": {
-          "locale": {
-            "text": {
-              "en": "English",
-              "hi": "अंग्रेज़ी",
-              "es": "Inglés",
-              "default": "English"
-            }
-          }
-        },
-        "_row_num": 7
-      },
-      {
-        "setting_name": "hi",
-        "display": {
-          "locale": {
-            "text": {
-              "en": "Hindi",
-              "hi": "हिंदी",
-              "es": "Hindi",
-              "default": "Hindi"
-            }
-          }
-        },
-        "_row_num": 8
-      },
-      {
-        "setting_name": "es",
-        "display": {
-          "locale": {
-            "text": {
-              "en": "Spanish",
-              "hi": "स्पेनिश",
-              "es": "Español",
-              "default": "Spanish"
-            }
-          }
-        },
-        "_row_num": 9
-      }
-    ],
-    "choices": [
-      {
-        "choice_list_name": "test_forms",
-        "data_value": "geotagger",
-        "display": {
-          "title": {
-            "text": "Geotagger"
-          }
-        },
-        "_row_num": 2
-      },
-      {
-        "choice_list_name": "test_forms",
-        "data_value": "breathcounter",
-        "display": {
-          "title": {
-            "text": "breathcounter"
-          }
-        },
-        "_row_num": 3
-      },
-      {
-        "choice_list_name": "test_forms",
-        "data_value": "complex_validate_test",
-        "display": {
-          "title": {
-            "text": "complex_validate_test"
-          }
-        },
-        "_row_num": 4
-      },
-      {
-        "choice_list_name": "test_forms",
-        "data_value": "customAppearance",
-        "display": {
-          "title": {
-            "text": "customAppearance"
-          }
-        },
-        "_row_num": 5
-      },
-      {
-        "choice_list_name": "test_forms",
-        "data_value": "exampleForm",
-        "display": {
-          "title": {
-            "text": "exampleForm"
-          }
-        },
-        "_row_num": 6
-      },
-      {
-        "choice_list_name": "test_forms",
-        "data_value": "household",
-        "display": {
-          "title": {
-            "text": "household"
-          }
-        },
-        "_row_num": 7
-      },
-      {
-        "choice_list_name": "test_forms",
-        "data_value": "imnci_test",
-        "display": {
-          "title": {
-            "text": "imnci_test"
-          }
-        },
-        "_row_num": 8
-      },
-      {
-        "choice_list_name": "test_forms",
-        "data_value": "refrigerators_init",
-        "display": {
-          "title": {
-            "text": "refrigerators_init"
-          }
-        },
-        "_row_num": 9
-      },
-      {
-        "choice_list_name": "test_forms",
-        "data_value": "refrigerators_update",
-        "display": {
-          "title": {
-            "text": "refrigerators_update"
-          }
-        },
-        "_row_num": 10
-      },
-      {
-        "choice_list_name": "test_forms",
-        "data_value": "section_test",
-        "display": {
-          "title": {
-            "text": "section_test"
-          }
-        },
-        "_row_num": 11
-      },
-      {
-        "choice_list_name": "test_forms",
-        "data_value": "selects",
-        "display": {
-          "title": {
-            "text": "selects"
-          }
-        },
-        "_row_num": 12
-      },
-      {
-        "choice_list_name": "test_forms",
-        "data_value": "twoColumn",
-        "display": {
-          "title": {
-            "text": "twoColumn"
-          }
-        },
-        "_row_num": 13
-      },
-      {
-        "choice_list_name": "test_forms",
-        "data_value": "gridScreen",
-        "display": {
-          "title": {
-            "text": "gridScreen"
-          }
-        },
-        "_row_num": 14
-      },
-      {
-        "choice_list_name": "test_forms",
-        "data_value": "child_coverage",
-        "display": {
-          "title": {
-            "text": "Child Coverage Immunizations"
-          }
-        },
-        "_row_num": 15
-      },
-      {
-        "choice_list_name": "test_forms",
-        "data_value": "adult_coverage",
-        "display": {
-          "title": {
-            "text": "Adult Coverage Immunizations"
-          }
-        },
-        "_row_num": 16
-      },
-      {
-        "choice_list_name": "test_forms",
-        "data_value": "graphExample",
-        "display": {
-          "title": {
-            "text": "Graph Examples"
-          }
-        },
-        "_row_num": 17
-      },
-      {
-        "choice_list_name": "test_forms",
-        "data_value": "visit",
-        "display": {
-          "title": {
-            "text": "Visit"
-          }
-        },
-        "_row_num": 18
-      },
-      {
-        "choice_list_name": "test_forms",
-        "data_value": "plot",
-        "display": {
-          "title": {
-            "text": "Plot"
-          }
-        },
-        "_row_num": 19
-      },
-      {
-        "choice_list_name": "test_forms",
-        "data_value": "agriculture",
-        "display": {
-          "title": {
-            "text": "Agriculture"
-          }
-        },
-        "_row_num": 20
-      },
-      {
-        "choice_list_name": "test_forms",
-        "data_value": "geoweather",
-        "display": {
-          "title": {
-            "text": "geoweather"
-          }
-        },
-        "_row_num": 21
-      },
-      {
-        "choice_list_name": "test_forms",
-        "data_value": "send_sms",
-        "display": {
-          "title": {
-            "text": "Send SMS"
-          }
-        },
-        "_row_num": 22
-      },
-      {
-        "choice_list_name": "test_forms",
-        "data_value": "eonasdan",
-        "display": {
-          "title": {
-            "text": "DateTime Picker"
-          }
-        },
-        "_row_num": 23
-      },
-      {
-        "choice_list_name": "test_forms",
-        "data_value": "screenClient",
-        "display": {
-          "title": {
-            "text": "Screen Female Client"
-          }
-        },
-        "_row_num": 24
-      },
-      {
-        "choice_list_name": "test_forms",
-        "data_value": "client6Week",
-        "display": {
-          "title": {
-            "text": "Client 6 Week"
-          }
-        },
-        "_row_num": 25
-      },
-      {
-        "choice_list_name": "test_forms",
-        "data_value": "client6Month",
-        "display": {
-          "title": {
-            "text": "Client 6 Month"
-          }
-        },
-        "_row_num": 26
-      },
-      {
-        "choice_list_name": "test_forms",
-        "data_value": "screenPartner",
-        "display": {
-          "title": {
-            "text": "Screen Partner"
-          }
-        },
-        "_row_num": 27
-      },
-      {
-        "choice_list_name": "test_forms",
-        "data_value": "partner6Month",
-        "display": {
-          "title": {
-            "text": "Partner 6 Month"
-          }
-        },
-        "_row_num": 28
       }
     ],
     "framework_translations": [
       {
         "string_token": "constraint_message",
         "text": {
-          "default": "Constraint violated.",
-          "es": "Restricción incumplida"
+          "english": "Constraint violated.",
+          "default": "Restrição da váriavél violada."
         },
         "_row_num": 2
       },
       {
         "string_token": "invalid_value_message",
         "text": {
-          "default": "Invalid value.",
-          "es": "Valor no válido."
+          "english": "Invalid value.",
+          "default": "Valor inválido."
         },
         "_row_num": 3
       },
       {
         "string_token": "required_message",
         "text": {
-          "default": "Required value not provided.",
-          "es": "Dato requerido no proporcionado"
+          "english": "Required value not provided.",
+          "default": "Valor requerido não fornecido."
         },
         "_row_num": 4
       },
       {
         "string_token": "required_exception_message",
         "text": {
-          "default": "Exception while evaluating required() expression. See console log.",
-          "es": "Excepción al evaluar la expresión requerido(). Ver consola de registro"
+          "english": "Exception while evaluating required() expression. See console log.",
+          "default": "Missing"
         },
         "_row_num": 5
       },
       {
         "string_token": "constraint_exception_message",
         "text": {
-          "default": "Exception while evaluating constraint() expression. See console log.",
-          "es": "Excepción al evaluar la expresión restricción(). Ver consola de registro"
+          "english": "Exception while evaluating constraint() expression. See console log.",
+          "default": "Missing"
         },
         "_row_num": 6
       },
       {
         "string_token": "acknLabel",
         "text": {
-          "default": "Acknowledge",
-          "hi": "स्वीकार करना",
-          "es": "Admitir"
+          "english": "Acknowledge",
+          "default": "Missing"
         },
         "_row_num": 7
       },
       {
         "string_token": "back_button_label",
         "text": {
-          "default": "Back",
-          "hi": "लौटना",
-          "es": "Atrás"
+          "english": "Back",
+          "default": "Atrás"
         },
         "_row_num": 8
       },
       {
         "string_token": "next_button_label",
         "text": {
-          "default": "Next",
-          "hi": "आगामी",
-          "es": "Siguiente"
+          "english": "Next",
+          "default": "Seguinte"
         },
         "_row_num": 9
       },
       {
         "string_token": "continue_button_label",
         "text": {
-          "default": "Continue",
-          "hi": "जारी रहना",
-          "es": "Continuar"
+          "english": "Continue",
+          "default": "Continuar"
         },
         "_row_num": 10
       },
       {
         "string_token": "select_one_dropdown_label",
         "text": {
-          "default": "Choose Option",
-          "es": "Elige una opción"
+          "english": "Choose Option",
+          "default": "Escolher a opção"
         },
         "_row_num": 11
       },
       {
         "string_token": "requiredValueErr",
         "text": {
-          "default": "Required value was not provided.",
-          "es": "Dato requerido no proporcionado"
+          "english": "Required value was not provided.",
+          "default": "Valor requerido não fornecido."
         },
         "_row_num": 12
       },
       {
         "string_token": "geopoint_button_label",
         "text": {
-          "default": "Record Location",
-          "es": "Grabar ubicación"
+          "english": "Record Location",
+          "default": "Missing"
         },
         "_row_num": 13
       },
       {
         "string_token": "geopoint_latitude_component",
         "text": {
-          "default": "Latitude: {{value.latitude}}",
-          "es": "Latitud: {{value.latitude}}"
+          "english": "Latitude: {{value.latitude}}",
+          "default": "Missing"
         },
         "_row_num": 14
       },
       {
         "string_token": "geopoint_longitude_component",
         "text": {
-          "default": "Longitude: {{value.longitude}}",
-          "es": "Longitud: {{value.longitude}}"
+          "english": "Longitude: {{value.longitude}}",
+          "default": "Missing"
         },
         "_row_num": 15
       },
       {
         "string_token": "geopoint_altitude_component",
         "text": {
-          "default": "Altitude: {{value.altitude}}",
-          "es": "Altitud: {{value.altitude}}"
+          "english": "Altitude: {{value.altitude}}",
+          "default": "Missing"
         },
         "_row_num": 16
       },
       {
         "string_token": "geopoint_accuracy_component",
         "text": {
-          "default": "Accuracy: {{value.accuracy}}",
-          "es": "Precisión: {{value.accuracy}}"
+          "english": "Accuracy: {{value.accuracy}}",
+          "default": "Missing"
         },
         "_row_num": 17
       },
       {
         "string_token": "waiting_text",
         "text": {
-          "default": "Please wait…",
-          "es": "Por favor, espere…"
+          "english": "Please wait…",
+          "default": "Por favor, aguardar…"
         },
         "_row_num": 18
       },
       {
         "string_token": "take_video_button_label",
         "text": {
-          "default": "Take Video",
-          "es": "Graba un vídeo"
+          "english": "Take Video",
+          "default": "Fazer video"
         },
         "_row_num": 19
       },
       {
         "string_token": "choose_video_button_label",
         "text": {
-          "default": "Choose Video",
-          "es": "Elige un vídeo"
+          "english": "Choose Video",
+          "default": "Escolher video"
         },
         "_row_num": 20
       },
       {
         "string_token": "video_control_not_supported",
         "text": {
-          "default": "Video controls are not supported.",
-          "es": "Controles de vídeo no son compatibles."
+          "english": "Video controls are not supported.",
+          "default": "O controlo de video não suportado"
         },
         "_row_num": 21
       },
       {
         "string_token": "take_audio_button_label",
         "text": {
-          "default": "Capture Audio",
-          "es": "Captura audio"
+          "english": "Capture Audio",
+          "default": "Gravar som"
         },
         "_row_num": 22
       },
       {
         "string_token": "choose_audio_button_label",
         "text": {
-          "default": "Choose Audio",
-          "es": "Elige audio"
+          "english": "Choose Audio",
+          "default": "Escolher som"
         },
         "_row_num": 23
       },
       {
         "string_token": "audio_control_not_supported",
         "text": {
-          "default": "Audio controls are not supported.",
-          "es": "Controles de audio no son compatibles."
+          "english": "Audio controls are not supported.",
+          "default": "O controlo de som não suportado"
         },
         "_row_num": 24
       },
       {
         "string_token": "confirm_action_no_label",
         "text": {
-          "default": "NO",
-          "es": "NO"
+          "english": "NO",
+          "default": "NÃO"
         },
         "_row_num": 25
       },
       {
         "string_token": "confirm_action_yes_label",
         "text": {
-          "default": "YES",
-          "es": "SI"
+          "english": "YES",
+          "default": "SIM"
         },
         "_row_num": 26
       },
       {
         "string_token": "external_link_button_label",
         "text": {
-          "default": "Follow link",
-          "es": "Sigue el enlace"
+          "english": "Follow link",
+          "default": "Seguir este link(endereço eletronico)"
         },
         "_row_num": 27
       },
       {
         "string_token": "survey_form_identification",
-        "text": {
-          "default": "<div><center>ODK Survey</center><hr></div><div><p>Form name: {{localizeText form_title}}</p>{{#if form_version}}<p>Form version: {{form_version}}</p>{{/if}}<hr></div>",
-          "es": "<div><center>ODK Survey</center><hr></div><div><p>Nombre del Formulario: {{localizeText form_title}}</p>{{#if form_version}}<p>Version de Formulario: {{form_version}}</p>{{/if}}<hr></div>"
-        },
         "_row_num": 28
       },
       {
         "string_token": "finalize_survey_instance_detail",
         "text": {
-          "default": "<p>You are at the end of instance: </p><p>\"{{display_field}}\"</p><hr>",
-          "es": "<p>Está en el final de la instancia: </p><p>\"{{display_field}}\"</p><hr>"
+          "english": "<p>You are at the end of the questionaire: </p><p>\"{{display_field}}\"</p><hr>",
+          "default": "<p>Você finalizou o questionário por esta criança: </p><p>\"{{display_field}}\"</p><hr>"
         },
         "_row_num": 29
       },
       {
         "string_token": "finalize_survey_button_label",
         "text": {
-          "default": "Finalize",
-          "es": "Finalizar"
+          "english": "Finalize",
+          "default": "Finalizar"
         },
         "_row_num": 30
       },
       {
         "string_token": "save_as_incomplete_survey_button_label",
         "text": {
-          "default": "Incomplete",
-          "es": "Incompleto"
+          "english": "Incomplete",
+          "default": "Incompleto"
         },
         "_row_num": 31
       },
       {
         "string_token": "take_image_button_label",
         "text": {
-          "default": "Take Photo",
-          "es": "Tomé una foto"
+          "english": "Take Photo",
+          "default": "Fazer foto"
         },
-        "_row_num": 33
+        "_row_num": 32
       },
       {
         "string_token": "choose_image_button_label",
         "text": {
-          "default": "Choose Image",
-          "es": "Elige una imagen"
+          "english": "Choose Image",
+          "default": "Escolher foto"
         },
-        "_row_num": 34
+        "_row_num": 33
       },
       {
         "string_token": "launch_intent_button_label",
         "text": {
-          "default": "Launch Intent",
-          "es": "Lanzamiento de intención"
+          "english": "Launch Intent",
+          "default": "Missing"
         },
-        "_row_num": 35
+        "_row_num": 34
       },
       {
         "string_token": "opening_survey_instance_detail",
-        "text": {
-          "default": "{{#if display_field}}\n        <p>You are at the start of instance: </p>\n        <p>\"{{display_field}}\"</p> \n  {{else}}\n        <p>You are at the start of a new instance.</p>\n  {{/if}}\n        <hr>\n        {{#if last_save_date}}\n            <p>Last saved:</p> \n            <p>{{last_save_date}}</p>\n        {{/if}}\n        <hr>",
-          "es": "{{#if display_field}}\n        <p>estás en el inicio de la instancia: </p>\n        <p>\"{{display_field}}\"</p> \n  {{else}}\n        <p>estás en el inicio de una nueva instancia.</p>\n  {{/if}}\n        <hr>\n        {{#if last_save_date}}\n            <p>guardado por última vez:</p> \n            <p>{{last_save_date}}</p>\n        {{/if}}\n        <hr>"
-        },
-        "_row_num": 36
+        "_row_num": 35
       },
       {
         "string_token": "opening_survey_next_button_label",
         "text": {
-          "default": "Go to next prompt",
-          "es": "Ir al siguiente"
+          "english": "Begin new questionaire",
+          "default": "Iniciar um novo questionário"
         },
-        "_row_num": 37
+        "_row_num": 36
       },
       {
         "string_token": "options_popup_language_heading",
         "text": {
-          "default": "Language",
-          "es": "Idioma"
+          "english": "Language",
+          "default": "Lingua"
         },
-        "_row_num": 38
+        "_row_num": 37
       },
       {
         "string_token": "options_popup_contents_heading",
         "text": {
-          "default": "Contents",
-          "es": "Contenido"
+          "english": "Contents",
+          "default": "Conteúdo"
         },
-        "_row_num": 39
+        "_row_num": 38
       },
       {
         "string_token": "options_popup_ignore_changes_heading",
         "text": {
-          "default": "Ignore Changes + Exit",
-          "es": "Ignorar cambios y salir"
+          "english": "Ignore changes + Exit",
+          "default": "Ingnorar alterações + Sair"
         },
-        "_row_num": 40
+        "_row_num": 39
       },
       {
         "string_token": "options_popup_save_changes_heading",
         "text": {
-          "default": "Save Changes + Exit",
-          "es": "Guardar cambios y salir"
+          "english": "Save changes + Exit",
+          "default": "Salvar alterações + Sair"
         },
-        "_row_num": 41
+        "_row_num": 40
       },
       {
         "string_token": "options_popup_finalize_changes_heading",
         "text": {
-          "default": "Finalize Changes + Exit",
-          "es": "Finalizar cambios y salir"
+          "english": "Finalize changes + Exit",
+          "default": "Finalizar altrações + Sair"
         },
-        "_row_num": 42
+        "_row_num": 41
       },
       {
         "string_token": "screen_popup_ok_button_label",
         "text": {
-          "default": "OK",
-          "es": "Confirmar"
+          "english": "OK",
+          "default": "Está bem"
         },
-        "_row_num": 43
+        "_row_num": 42
       },
       {
         "string_token": "select_with_other_other_label",
         "text": {
-          "default": "Other:",
-          "es": "Otro:"
+          "english": "Other:",
+          "default": "Outra:"
         },
-        "_row_num": 44
+        "_row_num": 43
       },
       {
         "string_token": "select_deselect_label",
         "text": {
-          "default": "Deselect",
-          "hi": "अचयनित",
-          "es": "Deseleccioanr"
+          "english": "Deselect",
+          "default": "Desfazer a seleção"
         },
-        "_row_num": 45
+        "_row_num": 44
       },
       {
         "string_token": "take_signature_button_label",
         "text": {
-          "default": "Get Signature",
-          "es": "Obtener firma"
+          "english": "Get Signature",
+          "default": "Tomar assinatura"
         },
-        "_row_num": 46
+        "_row_num": 45
       },
       {
         "string_token": "instances_survey_create_button_label",
         "text": {
-          "default": "Create new instance",
-          "es": "Crear nueva instancia"
+          "english": "Create new questionaire",
+          "default": "Criar um novo questionário"
         },
-        "_row_num": 47
+        "_row_num": 46
       },
       {
         "string_token": "instances_no_saved_instances_label",
         "text": {
-          "default": "No saved instances.",
-          "es": "Instancias no guardadas"
+          "english": "No saved questionaires.",
+          "default": "Não salvar a entrevista"
         },
-        "_row_num": 48
+        "_row_num": 47
       },
       {
         "string_token": "instances_last_save_date_label",
         "text": {
-          "default": "<p><strong>Last Save Date:</strong></p>",
-          "es": "<p><strong>Última fecha guardada:</strong></p>"
+          "english": "<p><strong>Last save date:</strong></p>",
+          "default": "<p><strong>Última data guardada:</strong></p>"
         },
-        "_row_num": 49
+        "_row_num": 48
       },
       {
         "string_token": "instances_previously_created_instances_label",
         "text": {
-          "default": "<p>Previously created instances:</p>",
-          "es": "<p>Instancias creadas previamente:</p>"
+          "english": "<p>Previously created questionaires:</p>",
+          "default": "<p>Questionários criados anteriormente:</p>"
         },
-        "_row_num": 50
+        "_row_num": 49
       },
       {
         "string_token": "savepoint_type_finalized_text_label",
         "text": {
-          "default": "Finalized",
-          "es": "Finalizado"
+          "english": "Finalized",
+          "default": "Finalizado"
         },
-        "_row_num": 51
+        "_row_num": 50
       },
       {
         "string_token": "savepoint_type_incomplete_text_label",
         "text": {
-          "default": "Incomplete",
-          "es": "Incompleto"
+          "english": "Incomplete",
+          "default": "Incompleto"
         },
-        "_row_num": 52
+        "_row_num": 51
       },
       {
         "string_token": "savepoint_type_checkpoint_text_label",
         "text": {
-          "default": "Checkpoint",
-          "es": "Cambios no guardados"
+          "english": "Checkpoint",
+          "default": "Ponto de verificação"
         },
-        "_row_num": 53
+        "_row_num": 52
       },
       {
         "string_token": "linked_table_new_instance_label",
         "text": {
-          "default": "Create new instance",
-          "es": "Crear nueva instancia"
+          "english": "Create new questionaire",
+          "default": "Criar um  novo questionário"
         },
-        "_row_num": 54
+        "_row_num": 53
       },
       {
         "string_token": "barcode_button_label",
         "text": {
-          "default": "Scan Barcode",
-          "es": "Escanear Código de Barras"
+          "english": "Scan barcode",
+          "default": "Capturar Codigo de barra"
         },
-        "_row_num": 55
+        "_row_num": 54
       },
       {
         "string_token": "invalid_numeric_message",
         "text": {
-          "default": "Numeric value expected",
-          "es": "Valor numérico esperado"
+          "english": "Numeric value expected",
+          "default": "Valor numérico esperado"
         },
-        "_row_num": 56
+        "_row_num": 55
       },
       {
         "string_token": "invalid_integer_message",
         "text": {
-          "default": "Integer value expected",
-          "es": "Valor entero esperado"
+          "english": "Integer value expected",
+          "default": "Valor número inteiro esperado"
         },
-        "_row_num": 57
+        "_row_num": 56
       },
       {
         "string_token": "confirm_exit_label",
         "text": {
-          "default": "Exit",
-          "es": "Salir"
+          "english": "Exit",
+          "default": "Sair"
         },
-        "_row_num": 58
+        "_row_num": 57
       },
       {
         "string_token": "confirm_cancel_label",
         "text": {
-          "default": "Cancel",
-          "es": "Cancelar"
+          "english": "Cancel",
+          "default": "Cancelar"
         },
-        "_row_num": 59
+        "_row_num": 58
       },
       {
         "string_token": "confirm_message",
         "text": {
-          "default": "Are you sure you want to exit and lose all changes?",
-          "es": "¿Estás seguro de que quieres salir y perder todos los cambios?"
+          "english": "Are you sure you want to exit and lose all changes?",
+          "default": "Você está que quer sair e sem gravar as alterações ?"
         },
-        "_row_num": 60
+        "_row_num": 59
       }
     ]
   },
@@ -1379,13 +897,11 @@
       "form_id": {
         "setting_name": "form_id",
         "value": "framework",
-        "comments": "The unique form id.",
         "_row_num": 3
       },
       "form_version": {
         "setting_name": "form_version",
-        "value": 20130828,
-        "comments": "The version of this form",
+        "value": 20190521,
         "_row_num": 4
       },
       "survey": {
@@ -1393,58 +909,40 @@
         "display": {
           "title": {
             "text": {
-              "en": "Common Javascript Framework",
-              "hi": "सामान्य जावास्क्रिप्ट फ़्रेमवर्क",
-              "es": "Marco común de Javascript",
-              "default": "Common Javascript Framework"
+              "english": "Options",
+              "default": "Opções"
             }
           }
         },
-        "comments": "The title of the 'survey' section (a.k.a. form title)",
-        "showContents": false,
         "_row_num": 5
       },
-      "en": {
-        "setting_name": "en",
+      "default": {
+        "setting_name": "default",
         "display": {
           "locale": {
             "text": {
-              "en": "English",
-              "hi": "अंग्रेज़ी",
-              "es": "Inglés",
-              "default": "English"
+              "english": "Portuguese",
+              "default": "Português"
+            }
+          }
+        },
+        "_row_num": 6
+      },
+      "english": {
+        "setting_name": "english",
+        "display": {
+          "locale": {
+            "text": {
+              "english": "English",
+              "default": "Inglês"
             }
           }
         },
         "_row_num": 7
       },
-      "hi": {
-        "setting_name": "hi",
-        "display": {
-          "locale": {
-            "text": {
-              "en": "Hindi",
-              "hi": "हिंदी",
-              "es": "Hindi",
-              "default": "Hindi"
-            }
-          }
-        },
+      "framework_variant": {
+        "setting_name": "framework_variant",
         "_row_num": 8
-      },
-      "es": {
-        "setting_name": "es",
-        "display": {
-          "locale": {
-            "text": {
-              "en": "Spanish",
-              "hi": "स्पेनिश",
-              "es": "Español",
-              "default": "Spanish"
-            }
-          }
-        },
-        "_row_num": 9
       },
       "_locales": {
         "setting_name": "_locales",
@@ -1454,339 +952,177 @@
             "display": {
               "locale": {
                 "text": {
-                  "en": "English",
-                  "hi": "अंग्रेज़ी",
-                  "es": "Inglés",
-                  "default": "English"
+                  "english": "Portuguese",
+                  "default": "Português"
+                }
+              }
+            },
+            "_row_num": 6,
+            "name": "default"
+          },
+          {
+            "display": {
+              "locale": {
+                "text": {
+                  "english": "English",
+                  "default": "Inglês"
                 }
               }
             },
             "_row_num": 7,
-            "name": "en"
-          },
-          {
-            "display": {
-              "locale": {
-                "text": {
-                  "en": "Hindi",
-                  "hi": "हिंदी",
-                  "es": "Hindi",
-                  "default": "Hindi"
-                }
-              }
-            },
-            "_row_num": 8,
-            "name": "hi"
-          },
-          {
-            "display": {
-              "locale": {
-                "text": {
-                  "en": "Spanish",
-                  "hi": "स्पेनिश",
-                  "es": "Español",
-                  "default": "Spanish"
-                }
-              }
-            },
-            "_row_num": 9,
-            "name": "es"
+            "name": "english"
           }
         ]
       },
       "_default_locale": {
         "setting_name": "_default_locale",
         "_row_num": 5,
-        "value": "en"
+        "value": "default"
       },
       "initial": {
         "setting_name": "survey",
         "display": {
           "title": {
             "text": {
-              "en": "Common Javascript Framework",
-              "hi": "सामान्य जावास्क्रिप्ट फ़्रेमवर्क",
-              "es": "Marco común de Javascript",
-              "default": "Common Javascript Framework"
+              "english": "Options",
+              "default": "Opções"
             }
           }
         },
-        "comments": "The title of the 'survey' section (a.k.a. form title)",
-        "showContents": false,
         "_row_num": 5
       }
     },
     "choices": {
-      "test_forms": [
+      "forms": [
         {
-          "choice_list_name": "test_forms",
-          "data_value": "geotagger",
+          "choice_list_name": "forms",
+          "data_value": "MIF",
           "display": {
             "title": {
-              "text": "Geotagger"
+              "text": {
+                "english": "Woman in the fertile age",
+                "default": "Mulher na idade fertil"
+              }
             }
           },
           "_row_num": 2
         },
         {
-          "choice_list_name": "test_forms",
-          "data_value": "breathcounter",
+          "choice_list_name": "forms",
+          "data_value": "MIF_VISIT",
           "display": {
             "title": {
-              "text": "breathcounter"
+              "text": {
+                "english": "Woman in the fertile age - visit",
+                "default": "Mulher na idade fertil - visita"
+              }
             }
           },
           "_row_num": 3
         },
         {
-          "choice_list_name": "test_forms",
-          "data_value": "complex_validate_test",
+          "choice_list_name": "forms",
+          "data_value": "VAC",
           "display": {
             "title": {
-              "text": "complex_validate_test"
+              "text": {
+                "english": "Vaccine",
+                "default": "Mulher na idade fertil - visitas"
+              }
             }
           },
           "_row_num": 4
         },
         {
-          "choice_list_name": "test_forms",
-          "data_value": "customAppearance",
+          "choice_list_name": "forms",
+          "data_value": "SCAR",
           "display": {
             "title": {
-              "text": "customAppearance"
+              "text": {
+                "english": "Scars",
+                "default": "Cicatrizes"
+              }
             }
           },
           "_row_num": 5
         },
         {
-          "choice_list_name": "test_forms",
-          "data_value": "exampleForm",
+          "choice_list_name": "forms",
+          "data_value": "SES",
           "display": {
             "title": {
-              "text": "exampleForm"
+              "text": {
+                "english": "SES",
+                "default": "SES"
+              }
             }
           },
           "_row_num": 6
         },
         {
-          "choice_list_name": "test_forms",
-          "data_value": "household",
+          "choice_list_name": "forms",
+          "data_value": "GRAVIDA",
           "display": {
             "title": {
-              "text": "household"
+              "text": {
+                "english": "Pregnant",
+                "default": "Grávidas"
+              }
             }
           },
           "_row_num": 7
         },
         {
-          "choice_list_name": "test_forms",
-          "data_value": "imnci_test",
+          "choice_list_name": "forms",
+          "data_value": "GRAVIDA_VISIT",
           "display": {
             "title": {
-              "text": "imnci_test"
+              "text": {
+                "english": "Pregnants_visits",
+                "default": "Grávidas_visitas"
+              }
             }
           },
           "_row_num": 8
         },
         {
-          "choice_list_name": "test_forms",
-          "data_value": "refrigerators_init",
+          "choice_list_name": "forms",
+          "data_value": "TEST",
           "display": {
             "title": {
-              "text": "refrigerators_init"
+              "text": {
+                "english": "Test form",
+                "default": "Test Formulario"
+              }
             }
           },
           "_row_num": 9
         },
         {
-          "choice_list_name": "test_forms",
-          "data_value": "refrigerators_update",
+          "choice_list_name": "forms",
+          "data_value": "CRIANCA_VISIT",
           "display": {
             "title": {
-              "text": "refrigerators_update"
+              "text": {
+                "english": "Child Visit",
+                "default": "Crianca_visitas"
+              }
             }
           },
           "_row_num": 10
         },
         {
-          "choice_list_name": "test_forms",
-          "data_value": "section_test",
+          "choice_list_name": "forms",
+          "data_value": "CRIANCA",
           "display": {
             "title": {
-              "text": "section_test"
+              "text": {
+                "english": "Child",
+                "default": "Crianca"
+              }
             }
           },
           "_row_num": 11
-        },
-        {
-          "choice_list_name": "test_forms",
-          "data_value": "selects",
-          "display": {
-            "title": {
-              "text": "selects"
-            }
-          },
-          "_row_num": 12
-        },
-        {
-          "choice_list_name": "test_forms",
-          "data_value": "twoColumn",
-          "display": {
-            "title": {
-              "text": "twoColumn"
-            }
-          },
-          "_row_num": 13
-        },
-        {
-          "choice_list_name": "test_forms",
-          "data_value": "gridScreen",
-          "display": {
-            "title": {
-              "text": "gridScreen"
-            }
-          },
-          "_row_num": 14
-        },
-        {
-          "choice_list_name": "test_forms",
-          "data_value": "child_coverage",
-          "display": {
-            "title": {
-              "text": "Child Coverage Immunizations"
-            }
-          },
-          "_row_num": 15
-        },
-        {
-          "choice_list_name": "test_forms",
-          "data_value": "adult_coverage",
-          "display": {
-            "title": {
-              "text": "Adult Coverage Immunizations"
-            }
-          },
-          "_row_num": 16
-        },
-        {
-          "choice_list_name": "test_forms",
-          "data_value": "graphExample",
-          "display": {
-            "title": {
-              "text": "Graph Examples"
-            }
-          },
-          "_row_num": 17
-        },
-        {
-          "choice_list_name": "test_forms",
-          "data_value": "visit",
-          "display": {
-            "title": {
-              "text": "Visit"
-            }
-          },
-          "_row_num": 18
-        },
-        {
-          "choice_list_name": "test_forms",
-          "data_value": "plot",
-          "display": {
-            "title": {
-              "text": "Plot"
-            }
-          },
-          "_row_num": 19
-        },
-        {
-          "choice_list_name": "test_forms",
-          "data_value": "agriculture",
-          "display": {
-            "title": {
-              "text": "Agriculture"
-            }
-          },
-          "_row_num": 20
-        },
-        {
-          "choice_list_name": "test_forms",
-          "data_value": "geoweather",
-          "display": {
-            "title": {
-              "text": "geoweather"
-            }
-          },
-          "_row_num": 21
-        },
-        {
-          "choice_list_name": "test_forms",
-          "data_value": "send_sms",
-          "display": {
-            "title": {
-              "text": "Send SMS"
-            }
-          },
-          "_row_num": 22
-        },
-        {
-          "choice_list_name": "test_forms",
-          "data_value": "eonasdan",
-          "display": {
-            "title": {
-              "text": "DateTime Picker"
-            }
-          },
-          "_row_num": 23
-        },
-        {
-          "choice_list_name": "test_forms",
-          "data_value": "screenClient",
-          "display": {
-            "title": {
-              "text": "Screen Female Client"
-            }
-          },
-          "_row_num": 24
-        },
-        {
-          "choice_list_name": "test_forms",
-          "data_value": "client6Week",
-          "display": {
-            "title": {
-              "text": "Client 6 Week"
-            }
-          },
-          "_row_num": 25
-        },
-        {
-          "choice_list_name": "test_forms",
-          "data_value": "client6Month",
-          "display": {
-            "title": {
-              "text": "Client 6 Month"
-            }
-          },
-          "_row_num": 26
-        },
-        {
-          "choice_list_name": "test_forms",
-          "data_value": "screenPartner",
-          "display": {
-            "title": {
-              "text": "Screen Partner"
-            }
-          },
-          "_row_num": 27
-        },
-        {
-          "choice_list_name": "test_forms",
-          "data_value": "partner6Month",
-          "display": {
-            "title": {
-              "text": "Partner 6 Month"
-            }
-          },
-          "_row_num": 28
         }
       ]
     },
@@ -1795,471 +1131,458 @@
         "constraint_message": {
           "string_token": "constraint_message",
           "text": {
-            "default": "Constraint violated.",
-            "es": "Restricción incumplida"
+            "english": "Constraint violated.",
+            "default": "Restrição da váriavél violada."
           },
           "_row_num": 2
         },
         "invalid_value_message": {
           "string_token": "invalid_value_message",
           "text": {
-            "default": "Invalid value.",
-            "es": "Valor no válido."
+            "english": "Invalid value.",
+            "default": "Valor inválido."
           },
           "_row_num": 3
         },
         "required_message": {
           "string_token": "required_message",
           "text": {
-            "default": "Required value not provided.",
-            "es": "Dato requerido no proporcionado"
+            "english": "Required value not provided.",
+            "default": "Valor requerido não fornecido."
           },
           "_row_num": 4
         },
         "required_exception_message": {
           "string_token": "required_exception_message",
           "text": {
-            "default": "Exception while evaluating required() expression. See console log.",
-            "es": "Excepción al evaluar la expresión requerido(). Ver consola de registro"
+            "english": "Exception while evaluating required() expression. See console log.",
+            "default": "Missing"
           },
           "_row_num": 5
         },
         "constraint_exception_message": {
           "string_token": "constraint_exception_message",
           "text": {
-            "default": "Exception while evaluating constraint() expression. See console log.",
-            "es": "Excepción al evaluar la expresión restricción(). Ver consola de registro"
+            "english": "Exception while evaluating constraint() expression. See console log.",
+            "default": "Missing"
           },
           "_row_num": 6
         },
         "acknLabel": {
           "string_token": "acknLabel",
           "text": {
-            "default": "Acknowledge",
-            "hi": "स्वीकार करना",
-            "es": "Admitir"
+            "english": "Acknowledge",
+            "default": "Missing"
           },
           "_row_num": 7
         },
         "back_button_label": {
           "string_token": "back_button_label",
           "text": {
-            "default": "Back",
-            "hi": "लौटना",
-            "es": "Atrás"
+            "english": "Back",
+            "default": "Atrás"
           },
           "_row_num": 8
         },
         "next_button_label": {
           "string_token": "next_button_label",
           "text": {
-            "default": "Next",
-            "hi": "आगामी",
-            "es": "Siguiente"
+            "english": "Next",
+            "default": "Seguinte"
           },
           "_row_num": 9
         },
         "continue_button_label": {
           "string_token": "continue_button_label",
           "text": {
-            "default": "Continue",
-            "hi": "जारी रहना",
-            "es": "Continuar"
+            "english": "Continue",
+            "default": "Continuar"
           },
           "_row_num": 10
         },
         "select_one_dropdown_label": {
           "string_token": "select_one_dropdown_label",
           "text": {
-            "default": "Choose Option",
-            "es": "Elige una opción"
+            "english": "Choose Option",
+            "default": "Escolher a opção"
           },
           "_row_num": 11
         },
         "requiredValueErr": {
           "string_token": "requiredValueErr",
           "text": {
-            "default": "Required value was not provided.",
-            "es": "Dato requerido no proporcionado"
+            "english": "Required value was not provided.",
+            "default": "Valor requerido não fornecido."
           },
           "_row_num": 12
         },
         "geopoint_button_label": {
           "string_token": "geopoint_button_label",
           "text": {
-            "default": "Record Location",
-            "es": "Grabar ubicación"
+            "english": "Record Location",
+            "default": "Missing"
           },
           "_row_num": 13
         },
         "geopoint_latitude_component": {
           "string_token": "geopoint_latitude_component",
           "text": {
-            "default": "Latitude: {{value.latitude}}",
-            "es": "Latitud: {{value.latitude}}"
+            "english": "Latitude: {{value.latitude}}",
+            "default": "Missing"
           },
           "_row_num": 14
         },
         "geopoint_longitude_component": {
           "string_token": "geopoint_longitude_component",
           "text": {
-            "default": "Longitude: {{value.longitude}}",
-            "es": "Longitud: {{value.longitude}}"
+            "english": "Longitude: {{value.longitude}}",
+            "default": "Missing"
           },
           "_row_num": 15
         },
         "geopoint_altitude_component": {
           "string_token": "geopoint_altitude_component",
           "text": {
-            "default": "Altitude: {{value.altitude}}",
-            "es": "Altitud: {{value.altitude}}"
+            "english": "Altitude: {{value.altitude}}",
+            "default": "Missing"
           },
           "_row_num": 16
         },
         "geopoint_accuracy_component": {
           "string_token": "geopoint_accuracy_component",
           "text": {
-            "default": "Accuracy: {{value.accuracy}}",
-            "es": "Precisión: {{value.accuracy}}"
+            "english": "Accuracy: {{value.accuracy}}",
+            "default": "Missing"
           },
           "_row_num": 17
         },
         "waiting_text": {
           "string_token": "waiting_text",
           "text": {
-            "default": "Please wait…",
-            "es": "Por favor, espere…"
+            "english": "Please wait…",
+            "default": "Por favor, aguardar…"
           },
           "_row_num": 18
         },
         "take_video_button_label": {
           "string_token": "take_video_button_label",
           "text": {
-            "default": "Take Video",
-            "es": "Graba un vídeo"
+            "english": "Take Video",
+            "default": "Fazer video"
           },
           "_row_num": 19
         },
         "choose_video_button_label": {
           "string_token": "choose_video_button_label",
           "text": {
-            "default": "Choose Video",
-            "es": "Elige un vídeo"
+            "english": "Choose Video",
+            "default": "Escolher video"
           },
           "_row_num": 20
         },
         "video_control_not_supported": {
           "string_token": "video_control_not_supported",
           "text": {
-            "default": "Video controls are not supported.",
-            "es": "Controles de vídeo no son compatibles."
+            "english": "Video controls are not supported.",
+            "default": "O controlo de video não suportado"
           },
           "_row_num": 21
         },
         "take_audio_button_label": {
           "string_token": "take_audio_button_label",
           "text": {
-            "default": "Capture Audio",
-            "es": "Captura audio"
+            "english": "Capture Audio",
+            "default": "Gravar som"
           },
           "_row_num": 22
         },
         "choose_audio_button_label": {
           "string_token": "choose_audio_button_label",
           "text": {
-            "default": "Choose Audio",
-            "es": "Elige audio"
+            "english": "Choose Audio",
+            "default": "Escolher som"
           },
           "_row_num": 23
         },
         "audio_control_not_supported": {
           "string_token": "audio_control_not_supported",
           "text": {
-            "default": "Audio controls are not supported.",
-            "es": "Controles de audio no son compatibles."
+            "english": "Audio controls are not supported.",
+            "default": "O controlo de som não suportado"
           },
           "_row_num": 24
         },
         "confirm_action_no_label": {
           "string_token": "confirm_action_no_label",
           "text": {
-            "default": "NO",
-            "es": "NO"
+            "english": "NO",
+            "default": "NÃO"
           },
           "_row_num": 25
         },
         "confirm_action_yes_label": {
           "string_token": "confirm_action_yes_label",
           "text": {
-            "default": "YES",
-            "es": "SI"
+            "english": "YES",
+            "default": "SIM"
           },
           "_row_num": 26
         },
         "external_link_button_label": {
           "string_token": "external_link_button_label",
           "text": {
-            "default": "Follow link",
-            "es": "Sigue el enlace"
+            "english": "Follow link",
+            "default": "Seguir este link(endereço eletronico)"
           },
           "_row_num": 27
         },
         "survey_form_identification": {
           "string_token": "survey_form_identification",
-          "text": {
-            "default": "<div><center>ODK Survey</center><hr></div><div><p>Form name: {{localizeText form_title}}</p>{{#if form_version}}<p>Form version: {{form_version}}</p>{{/if}}<hr></div>",
-            "es": "<div><center>ODK Survey</center><hr></div><div><p>Nombre del Formulario: {{localizeText form_title}}</p>{{#if form_version}}<p>Version de Formulario: {{form_version}}</p>{{/if}}<hr></div>"
-          },
           "_row_num": 28
         },
         "finalize_survey_instance_detail": {
           "string_token": "finalize_survey_instance_detail",
           "text": {
-            "default": "<p>You are at the end of instance: </p><p>\"{{display_field}}\"</p><hr>",
-            "es": "<p>Está en el final de la instancia: </p><p>\"{{display_field}}\"</p><hr>"
+            "english": "<p>You are at the end of the questionaire: </p><p>\"{{display_field}}\"</p><hr>",
+            "default": "<p>Você finalizou o questionário por esta criança: </p><p>\"{{display_field}}\"</p><hr>"
           },
           "_row_num": 29
         },
         "finalize_survey_button_label": {
           "string_token": "finalize_survey_button_label",
           "text": {
-            "default": "Finalize",
-            "es": "Finalizar"
+            "english": "Finalize",
+            "default": "Finalizar"
           },
           "_row_num": 30
         },
         "save_as_incomplete_survey_button_label": {
           "string_token": "save_as_incomplete_survey_button_label",
           "text": {
-            "default": "Incomplete",
-            "es": "Incompleto"
+            "english": "Incomplete",
+            "default": "Incompleto"
           },
           "_row_num": 31
         },
         "take_image_button_label": {
           "string_token": "take_image_button_label",
           "text": {
-            "default": "Take Photo",
-            "es": "Tomé una foto"
+            "english": "Take Photo",
+            "default": "Fazer foto"
           },
-          "_row_num": 33
+          "_row_num": 32
         },
         "choose_image_button_label": {
           "string_token": "choose_image_button_label",
           "text": {
-            "default": "Choose Image",
-            "es": "Elige una imagen"
+            "english": "Choose Image",
+            "default": "Escolher foto"
           },
-          "_row_num": 34
+          "_row_num": 33
         },
         "launch_intent_button_label": {
           "string_token": "launch_intent_button_label",
           "text": {
-            "default": "Launch Intent",
-            "es": "Lanzamiento de intención"
+            "english": "Launch Intent",
+            "default": "Missing"
           },
-          "_row_num": 35
+          "_row_num": 34
         },
         "opening_survey_instance_detail": {
           "string_token": "opening_survey_instance_detail",
-          "text": {
-            "default": "{{#if display_field}}\n        <p>You are at the start of instance: </p>\n        <p>\"{{display_field}}\"</p> \n  {{else}}\n        <p>You are at the start of a new instance.</p>\n  {{/if}}\n        <hr>\n        {{#if last_save_date}}\n            <p>Last saved:</p> \n            <p>{{last_save_date}}</p>\n        {{/if}}\n        <hr>",
-            "es": "{{#if display_field}}\n        <p>estás en el inicio de la instancia: </p>\n        <p>\"{{display_field}}\"</p> \n  {{else}}\n        <p>estás en el inicio de una nueva instancia.</p>\n  {{/if}}\n        <hr>\n        {{#if last_save_date}}\n            <p>guardado por última vez:</p> \n            <p>{{last_save_date}}</p>\n        {{/if}}\n        <hr>"
-          },
-          "_row_num": 36
+          "_row_num": 35
         },
         "opening_survey_next_button_label": {
           "string_token": "opening_survey_next_button_label",
           "text": {
-            "default": "Go to next prompt",
-            "es": "Ir al siguiente"
+            "english": "Begin new questionaire",
+            "default": "Iniciar um novo questionário"
           },
-          "_row_num": 37
+          "_row_num": 36
         },
         "options_popup_language_heading": {
           "string_token": "options_popup_language_heading",
           "text": {
-            "default": "Language",
-            "es": "Idioma"
+            "english": "Language",
+            "default": "Lingua"
           },
-          "_row_num": 38
+          "_row_num": 37
         },
         "options_popup_contents_heading": {
           "string_token": "options_popup_contents_heading",
           "text": {
-            "default": "Contents",
-            "es": "Contenido"
+            "english": "Contents",
+            "default": "Conteúdo"
           },
-          "_row_num": 39
+          "_row_num": 38
         },
         "options_popup_ignore_changes_heading": {
           "string_token": "options_popup_ignore_changes_heading",
           "text": {
-            "default": "Ignore Changes + Exit",
-            "es": "Ignorar cambios y salir"
+            "english": "Ignore changes + Exit",
+            "default": "Ingnorar alterações + Sair"
           },
-          "_row_num": 40
+          "_row_num": 39
         },
         "options_popup_save_changes_heading": {
           "string_token": "options_popup_save_changes_heading",
           "text": {
-            "default": "Save Changes + Exit",
-            "es": "Guardar cambios y salir"
+            "english": "Save changes + Exit",
+            "default": "Salvar alterações + Sair"
           },
-          "_row_num": 41
+          "_row_num": 40
         },
         "options_popup_finalize_changes_heading": {
           "string_token": "options_popup_finalize_changes_heading",
           "text": {
-            "default": "Finalize Changes + Exit",
-            "es": "Finalizar cambios y salir"
+            "english": "Finalize changes + Exit",
+            "default": "Finalizar altrações + Sair"
           },
-          "_row_num": 42
+          "_row_num": 41
         },
         "screen_popup_ok_button_label": {
           "string_token": "screen_popup_ok_button_label",
           "text": {
-            "default": "OK",
-            "es": "Confirmar"
+            "english": "OK",
+            "default": "Está bem"
           },
-          "_row_num": 43
+          "_row_num": 42
         },
         "select_with_other_other_label": {
           "string_token": "select_with_other_other_label",
           "text": {
-            "default": "Other:",
-            "es": "Otro:"
+            "english": "Other:",
+            "default": "Outra:"
           },
-          "_row_num": 44
+          "_row_num": 43
         },
         "select_deselect_label": {
           "string_token": "select_deselect_label",
           "text": {
-            "default": "Deselect",
-            "hi": "अचयनित",
-            "es": "Deseleccioanr"
+            "english": "Deselect",
+            "default": "Desfazer a seleção"
           },
-          "_row_num": 45
+          "_row_num": 44
         },
         "take_signature_button_label": {
           "string_token": "take_signature_button_label",
           "text": {
-            "default": "Get Signature",
-            "es": "Obtener firma"
+            "english": "Get Signature",
+            "default": "Tomar assinatura"
           },
-          "_row_num": 46
+          "_row_num": 45
         },
         "instances_survey_create_button_label": {
           "string_token": "instances_survey_create_button_label",
           "text": {
-            "default": "Create new instance",
-            "es": "Crear nueva instancia"
+            "english": "Create new questionaire",
+            "default": "Criar um novo questionário"
           },
-          "_row_num": 47
+          "_row_num": 46
         },
         "instances_no_saved_instances_label": {
           "string_token": "instances_no_saved_instances_label",
           "text": {
-            "default": "No saved instances.",
-            "es": "Instancias no guardadas"
+            "english": "No saved questionaires.",
+            "default": "Não salvar a entrevista"
           },
-          "_row_num": 48
+          "_row_num": 47
         },
         "instances_last_save_date_label": {
           "string_token": "instances_last_save_date_label",
           "text": {
-            "default": "<p><strong>Last Save Date:</strong></p>",
-            "es": "<p><strong>Última fecha guardada:</strong></p>"
+            "english": "<p><strong>Last save date:</strong></p>",
+            "default": "<p><strong>Última data guardada:</strong></p>"
           },
-          "_row_num": 49
+          "_row_num": 48
         },
         "instances_previously_created_instances_label": {
           "string_token": "instances_previously_created_instances_label",
           "text": {
-            "default": "<p>Previously created instances:</p>",
-            "es": "<p>Instancias creadas previamente:</p>"
+            "english": "<p>Previously created questionaires:</p>",
+            "default": "<p>Questionários criados anteriormente:</p>"
           },
-          "_row_num": 50
+          "_row_num": 49
         },
         "savepoint_type_finalized_text_label": {
           "string_token": "savepoint_type_finalized_text_label",
           "text": {
-            "default": "Finalized",
-            "es": "Finalizado"
+            "english": "Finalized",
+            "default": "Finalizado"
           },
-          "_row_num": 51
+          "_row_num": 50
         },
         "savepoint_type_incomplete_text_label": {
           "string_token": "savepoint_type_incomplete_text_label",
           "text": {
-            "default": "Incomplete",
-            "es": "Incompleto"
+            "english": "Incomplete",
+            "default": "Incompleto"
           },
-          "_row_num": 52
+          "_row_num": 51
         },
         "savepoint_type_checkpoint_text_label": {
           "string_token": "savepoint_type_checkpoint_text_label",
           "text": {
-            "default": "Checkpoint",
-            "es": "Cambios no guardados"
+            "english": "Checkpoint",
+            "default": "Ponto de verificação"
           },
-          "_row_num": 53
+          "_row_num": 52
         },
         "linked_table_new_instance_label": {
           "string_token": "linked_table_new_instance_label",
           "text": {
-            "default": "Create new instance",
-            "es": "Crear nueva instancia"
+            "english": "Create new questionaire",
+            "default": "Criar um  novo questionário"
           },
-          "_row_num": 54
+          "_row_num": 53
         },
         "barcode_button_label": {
           "string_token": "barcode_button_label",
           "text": {
-            "default": "Scan Barcode",
-            "es": "Escanear Código de Barras"
+            "english": "Scan barcode",
+            "default": "Capturar Codigo de barra"
           },
-          "_row_num": 55
+          "_row_num": 54
         },
         "invalid_numeric_message": {
           "string_token": "invalid_numeric_message",
           "text": {
-            "default": "Numeric value expected",
-            "es": "Valor numérico esperado"
+            "english": "Numeric value expected",
+            "default": "Valor numérico esperado"
           },
-          "_row_num": 56
+          "_row_num": 55
         },
         "invalid_integer_message": {
           "string_token": "invalid_integer_message",
           "text": {
-            "default": "Integer value expected",
-            "es": "Valor entero esperado"
+            "english": "Integer value expected",
+            "default": "Valor número inteiro esperado"
           },
-          "_row_num": 57
+          "_row_num": 56
         },
         "confirm_exit_label": {
           "string_token": "confirm_exit_label",
           "text": {
-            "default": "Exit",
-            "es": "Salir"
+            "english": "Exit",
+            "default": "Sair"
           },
-          "_row_num": 58
+          "_row_num": 57
         },
         "confirm_cancel_label": {
           "string_token": "confirm_cancel_label",
           "text": {
-            "default": "Cancel",
-            "es": "Cancelar"
+            "english": "Cancel",
+            "default": "Cancelar"
           },
-          "_row_num": 59
+          "_row_num": 58
         },
         "confirm_message": {
           "string_token": "confirm_message",
           "text": {
-            "default": "Are you sure you want to exit and lose all changes?",
-            "es": "¿Estás seguro de que quieres salir y perder todos los cambios?"
+            "english": "Are you sure you want to exit and lose all changes?",
+            "default": "Você está que quer sair e sem gravar as alterações ?"
           },
-          "_row_num": 60
+          "_row_num": 59
         }
       }
     },
@@ -2273,50 +1596,32 @@
             "display": {
               "locale": {
                 "text": {
-                  "en": "English",
-                  "hi": "अंग्रेज़ी",
-                  "es": "Inglés",
-                  "default": "English"
+                  "english": "Portuguese",
+                  "default": "Português"
+                }
+              }
+            },
+            "_row_num": 6,
+            "name": "default"
+          },
+          {
+            "display": {
+              "locale": {
+                "text": {
+                  "english": "English",
+                  "default": "Inglês"
                 }
               }
             },
             "_row_num": 7,
-            "name": "en"
-          },
-          {
-            "display": {
-              "locale": {
-                "text": {
-                  "en": "Hindi",
-                  "hi": "हिंदी",
-                  "es": "Hindi",
-                  "default": "Hindi"
-                }
-              }
-            },
-            "_row_num": 8,
-            "name": "hi"
-          },
-          {
-            "display": {
-              "locale": {
-                "text": {
-                  "en": "Spanish",
-                  "hi": "स्पेनिश",
-                  "es": "Español",
-                  "default": "Spanish"
-                }
-              }
-            },
-            "_row_num": 9,
-            "name": "es"
+            "name": "english"
           }
         ]
       },
       "_default_locale": {
         "setting_name": "_default_locale",
         "_row_num": 5,
-        "value": "en"
+        "value": "default"
       }
     },
     "queries": {},
@@ -2347,10 +1652,8 @@
             "display": {
               "title": {
                 "text": {
-                  "en": "Common Javascript Framework",
-                  "hi": "सामान्य जावास्क्रिप्ट फ़्रेमवर्क",
-                  "es": "Marco común de Javascript",
-                  "default": "Common Javascript Framework"
+                  "english": "Options",
+                  "default": "Opções"
                 }
               }
             },
@@ -2438,10 +1741,10 @@
         "prompts": [
           {
             "type": "user_branch",
-            "values_list": "test_forms",
+            "values_list": "forms",
             "display": {
               "prompt": {
-                "text": "Choose a test form (there are many)"
+                "text": "Choose a form"
               }
             },
             "_row_num": 3,
@@ -2455,10 +1758,7 @@
             "type": "note",
             "display": {
               "prompt": {
-                "text": "This is the default form."
-              },
-              "hint": {
-                "text": "Set your url hash to #formPath=[relative path to form directory]/ to change forms."
+                "text": "This is the default form"
               }
             },
             "_row_num": 5,
@@ -2469,7 +1769,7 @@
             "promptIdx": 1
           },
           {
-            "url": "'?' + odkSurvey.getHashString('agriculture')",
+            "url": "'?' + odkSurvey.getHashString('MIF')",
             "type": "external_link",
             "display": {
               "prompt": {
@@ -2484,7 +1784,7 @@
             "promptIdx": 2
           },
           {
-            "url": "'?' + odkSurvey.getHashString('geotagger')",
+            "url": "'?' + odkSurvey.getHashString('MIF_VISIT')",
             "type": "external_link",
             "display": {
               "prompt": {
@@ -2499,7 +1799,7 @@
             "promptIdx": 3
           },
           {
-            "url": "'?' + odkSurvey.getHashString('breathcounter')",
+            "url": "'?' + odkSurvey.getHashString('VAC')",
             "type": "external_link",
             "display": {
               "prompt": {
@@ -2514,7 +1814,7 @@
             "promptIdx": 4
           },
           {
-            "url": "'?' + odkSurvey.getHashString('complex_validate_test')",
+            "url": "'?' + odkSurvey.getHashString('SCAR')",
             "type": "external_link",
             "display": {
               "prompt": {
@@ -2529,7 +1829,7 @@
             "promptIdx": 5
           },
           {
-            "url": "'?' + odkSurvey.getHashString('customAppearance')",
+            "url": "'?' + odkSurvey.getHashString('CRIANCA')",
             "type": "external_link",
             "display": {
               "prompt": {
@@ -2544,7 +1844,7 @@
             "promptIdx": 6
           },
           {
-            "url": "'?' + odkSurvey.getHashString('exampleForm')",
+            "url": "'?' + odkSurvey.getHashString('GRAVIDA')",
             "type": "external_link",
             "display": {
               "prompt": {
@@ -2559,7 +1859,7 @@
             "promptIdx": 7
           },
           {
-            "url": "'?' + odkSurvey.getHashString('household')",
+            "url": "'?' + odkSurvey.getHashString('GRAVIDA_VISIT')",
             "type": "external_link",
             "display": {
               "prompt": {
@@ -2574,7 +1874,7 @@
             "promptIdx": 8
           },
           {
-            "url": "'?' + odkSurvey.getHashString('imnci','imnci_test')",
+            "url": "'?' + odkSurvey.getHashString('TEST')",
             "type": "external_link",
             "display": {
               "prompt": {
@@ -2589,7 +1889,7 @@
             "promptIdx": 9
           },
           {
-            "url": "'?' +  odkSurvey.getHashString('refrigerators','refrigerators_init')",
+            "url": "'?' + odkSurvey.getHashString('CRIANCA_VISIT')",
             "type": "external_link",
             "display": {
               "prompt": {
@@ -2604,7 +1904,7 @@
             "promptIdx": 10
           },
           {
-            "url": "'?' +  odkSurvey.getHashString('refrigerators','refrigerators_update')",
+            "url": "'?' + odkSurvey.getHashString('SES')",
             "type": "external_link",
             "display": {
               "prompt": {
@@ -2619,267 +1919,12 @@
             "promptIdx": 11
           },
           {
-            "url": "'?' +  odkSurvey.getHashString('section_test')",
-            "type": "external_link",
-            "display": {
-              "prompt": {
-                "text": "Open form"
-              }
-            },
-            "_row_num": 39,
-            "__rowNum__": 38,
-            "_token_type": "prompt",
-            "_type": "external_link",
-            "_branch_label_enclosing_screen": "survey/_screen39",
-            "promptIdx": 12
-          },
-          {
-            "url": "'?' +  odkSurvey.getHashString('selects')",
-            "type": "external_link",
-            "display": {
-              "prompt": {
-                "text": "Open form"
-              }
-            },
-            "_row_num": 42,
-            "__rowNum__": 41,
-            "_token_type": "prompt",
-            "_type": "external_link",
-            "_branch_label_enclosing_screen": "survey/_screen42",
-            "promptIdx": 13
-          },
-          {
-            "url": "'?' +  odkSurvey.getHashString('twoColumn')",
-            "type": "external_link",
-            "display": {
-              "prompt": {
-                "text": "Open form"
-              }
-            },
-            "_row_num": 45,
-            "__rowNum__": 44,
-            "_token_type": "prompt",
-            "_type": "external_link",
-            "_branch_label_enclosing_screen": "survey/_screen45",
-            "promptIdx": 14
-          },
-          {
-            "url": "'?' +  odkSurvey.getHashString('gridScreen')",
-            "type": "external_link",
-            "display": {
-              "prompt": {
-                "text": "Open form"
-              }
-            },
-            "_row_num": 48,
-            "__rowNum__": 47,
-            "_token_type": "prompt",
-            "_type": "external_link",
-            "_branch_label_enclosing_screen": "survey/_screen48",
-            "promptIdx": 15
-          },
-          {
-            "url": "'?' +  odkSurvey.getHashString('adult_coverage')",
-            "type": "external_link",
-            "display": {
-              "prompt": {
-                "text": "Open form"
-              }
-            },
-            "_row_num": 51,
-            "__rowNum__": 50,
-            "_token_type": "prompt",
-            "_type": "external_link",
-            "_branch_label_enclosing_screen": "survey/_screen51",
-            "promptIdx": 16
-          },
-          {
-            "url": "'?' +  odkSurvey.getHashString('child_coverage')",
-            "type": "external_link",
-            "display": {
-              "prompt": {
-                "text": "Open form"
-              }
-            },
-            "_row_num": 54,
-            "__rowNum__": 53,
-            "_token_type": "prompt",
-            "_type": "external_link",
-            "_branch_label_enclosing_screen": "survey/_screen54",
-            "promptIdx": 17
-          },
-          {
-            "url": "'?' +  odkSurvey.getHashString('graphExample')",
-            "type": "external_link",
-            "display": {
-              "prompt": {
-                "text": "Open form"
-              }
-            },
-            "_row_num": 57,
-            "__rowNum__": 56,
-            "_token_type": "prompt",
-            "_type": "external_link",
-            "_branch_label_enclosing_screen": "survey/_screen57",
-            "promptIdx": 18
-          },
-          {
-            "url": "'?' +  odkSurvey.getHashString('visit')",
-            "type": "external_link",
-            "display": {
-              "prompt": {
-                "text": "Open form"
-              }
-            },
-            "_row_num": 60,
-            "__rowNum__": 59,
-            "_token_type": "prompt",
-            "_type": "external_link",
-            "_branch_label_enclosing_screen": "survey/_screen60",
-            "promptIdx": 19
-          },
-          {
-            "url": "'?' +  odkSurvey.getHashString('plot')",
-            "type": "external_link",
-            "display": {
-              "prompt": {
-                "text": "Open form"
-              }
-            },
-            "_row_num": 63,
-            "__rowNum__": 62,
-            "_token_type": "prompt",
-            "_type": "external_link",
-            "_branch_label_enclosing_screen": "survey/_screen63",
-            "promptIdx": 20
-          },
-          {
-            "url": "'?' +  odkSurvey.getHashString('geoweather')",
-            "type": "external_link",
-            "display": {
-              "prompt": {
-                "text": "Open form"
-              }
-            },
-            "_row_num": 66,
-            "__rowNum__": 65,
-            "_token_type": "prompt",
-            "_type": "external_link",
-            "_branch_label_enclosing_screen": "survey/_screen66",
-            "promptIdx": 21
-          },
-          {
-            "url": "'?' +  odkSurvey.getHashString('send_sms')",
-            "type": "external_link",
-            "display": {
-              "prompt": {
-                "text": "Open form"
-              }
-            },
-            "_row_num": 69,
-            "__rowNum__": 68,
-            "_token_type": "prompt",
-            "_type": "external_link",
-            "_branch_label_enclosing_screen": "survey/_screen69",
-            "promptIdx": 22
-          },
-          {
-            "url": "'?' + odkSurvey.getHashString('eonasdan')",
-            "type": "external_link",
-            "display": {
-              "prompt": {
-                "text": "Open form"
-              }
-            },
-            "_row_num": 72,
-            "__rowNum__": 71,
-            "_token_type": "prompt",
-            "_type": "external_link",
-            "_branch_label_enclosing_screen": "survey/_screen72",
-            "promptIdx": 23
-          },
-          {
-            "url": "'?' +  odkSurvey.getHashString('femaleClients', 'screenClient')",
-            "type": "external_link",
-            "display": {
-              "prompt": {
-                "text": "Open form"
-              }
-            },
-            "_row_num": 75,
-            "__rowNum__": 74,
-            "_token_type": "prompt",
-            "_type": "external_link",
-            "_branch_label_enclosing_screen": "survey/_screen75",
-            "promptIdx": 24
-          },
-          {
-            "url": "'?' +  odkSurvey.getHashString('femaleClients','client6Week')",
-            "type": "external_link",
-            "display": {
-              "prompt": {
-                "text": "Open form"
-              }
-            },
-            "_row_num": 78,
-            "__rowNum__": 77,
-            "_token_type": "prompt",
-            "_type": "external_link",
-            "_branch_label_enclosing_screen": "survey/_screen78",
-            "promptIdx": 25
-          },
-          {
-            "url": "'?' +  odkSurvey.getHashString('femaleClients', 'client6Month')",
-            "type": "external_link",
-            "display": {
-              "prompt": {
-                "text": "Open form"
-              }
-            },
-            "_row_num": 81,
-            "__rowNum__": 80,
-            "_token_type": "prompt",
-            "_type": "external_link",
-            "_branch_label_enclosing_screen": "survey/_screen81",
-            "promptIdx": 26
-          },
-          {
-            "url": "'?' +  odkSurvey.getHashString('maleClients', 'screenPartner')",
-            "type": "external_link",
-            "display": {
-              "prompt": {
-                "text": "Open form"
-              }
-            },
-            "_row_num": 84,
-            "__rowNum__": 83,
-            "_token_type": "prompt",
-            "_type": "external_link",
-            "_branch_label_enclosing_screen": "survey/_screen84",
-            "promptIdx": 27
-          },
-          {
-            "url": "'?' +  odkSurvey.getHashString('maleClients','partner6Month')",
-            "type": "external_link",
-            "display": {
-              "prompt": {
-                "text": "Open form"
-              }
-            },
-            "_row_num": 87,
-            "__rowNum__": 86,
-            "_token_type": "prompt",
-            "_type": "external_link",
-            "_branch_label_enclosing_screen": "survey/_screen87",
-            "promptIdx": 28
-          },
-          {
             "_token_type": "prompt",
             "type": "contents",
             "_type": "contents",
-            "_row_num": 89,
-            "_branch_label_enclosing_screen": "survey/_screen89",
-            "promptIdx": 29
+            "_row_num": 38,
+            "_branch_label_enclosing_screen": "survey/_screen38",
+            "promptIdx": 12
           }
         ],
         "validation_tag_map": {
@@ -2888,7 +1933,7 @@
         "operations": [
           {
             "clause": "if",
-            "condition": "opendatakit.getPlatformInfo().container == \"Chrome\"",
+            "condition": "opendatakit.getPlatformInfo().container==\"Chrome\"",
             "_row_num": 2,
             "__rowNum__": 1,
             "_token_type": "goto_label",
@@ -3059,246 +2104,25 @@
             "operationIdx": 25
           },
           {
-            "_row_num": 39,
-            "_token_type": "begin_screen",
-            "_screen_block": "function() {var activePromptIndicies = [];\nactivePromptIndicies.push(12);\n\nreturn activePromptIndicies;\n}\n",
+            "_token_type": "exit_section",
+            "clause": "exit section",
+            "_row_num": 38,
             "operationIdx": 26
           },
           {
-            "clause": "exit section",
-            "_row_num": 40,
-            "__rowNum__": 39,
-            "_token_type": "exit_section",
-            "operationIdx": 27
-          },
-          {
-            "_row_num": 42,
+            "_row_num": 38,
             "_token_type": "begin_screen",
-            "_screen_block": "function() {var activePromptIndicies = [];\nactivePromptIndicies.push(13);\n\nreturn activePromptIndicies;\n}\n",
-            "operationIdx": 28
-          },
-          {
-            "clause": "exit section",
-            "_row_num": 43,
-            "__rowNum__": 42,
-            "_token_type": "exit_section",
-            "operationIdx": 29
-          },
-          {
-            "_row_num": 45,
-            "_token_type": "begin_screen",
-            "_screen_block": "function() {var activePromptIndicies = [];\nactivePromptIndicies.push(14);\n\nreturn activePromptIndicies;\n}\n",
-            "operationIdx": 30
-          },
-          {
-            "clause": "exit section",
-            "_row_num": 46,
-            "__rowNum__": 45,
-            "_token_type": "exit_section",
-            "operationIdx": 31
-          },
-          {
-            "_row_num": 48,
-            "_token_type": "begin_screen",
-            "_screen_block": "function() {var activePromptIndicies = [];\nactivePromptIndicies.push(15);\n\nreturn activePromptIndicies;\n}\n",
-            "operationIdx": 32
-          },
-          {
-            "clause": "exit section",
-            "_row_num": 49,
-            "__rowNum__": 48,
-            "_token_type": "exit_section",
-            "operationIdx": 33
-          },
-          {
-            "_row_num": 51,
-            "_token_type": "begin_screen",
-            "_screen_block": "function() {var activePromptIndicies = [];\nactivePromptIndicies.push(16);\n\nreturn activePromptIndicies;\n}\n",
-            "operationIdx": 34
-          },
-          {
-            "clause": "exit section",
-            "_row_num": 52,
-            "__rowNum__": 51,
-            "_token_type": "exit_section",
-            "operationIdx": 35
-          },
-          {
-            "_row_num": 54,
-            "_token_type": "begin_screen",
-            "_screen_block": "function() {var activePromptIndicies = [];\nactivePromptIndicies.push(17);\n\nreturn activePromptIndicies;\n}\n",
-            "operationIdx": 36
-          },
-          {
-            "clause": "exit section",
-            "_row_num": 55,
-            "__rowNum__": 54,
-            "_token_type": "exit_section",
-            "operationIdx": 37
-          },
-          {
-            "_row_num": 57,
-            "_token_type": "begin_screen",
-            "_screen_block": "function() {var activePromptIndicies = [];\nactivePromptIndicies.push(18);\n\nreturn activePromptIndicies;\n}\n",
-            "operationIdx": 38
-          },
-          {
-            "clause": "exit section",
-            "_row_num": 58,
-            "__rowNum__": 57,
-            "_token_type": "exit_section",
-            "operationIdx": 39
-          },
-          {
-            "_row_num": 60,
-            "_token_type": "begin_screen",
-            "_screen_block": "function() {var activePromptIndicies = [];\nactivePromptIndicies.push(19);\n\nreturn activePromptIndicies;\n}\n",
-            "operationIdx": 40
-          },
-          {
-            "clause": "exit section",
-            "_row_num": 61,
-            "__rowNum__": 60,
-            "_token_type": "exit_section",
-            "operationIdx": 41
-          },
-          {
-            "_row_num": 63,
-            "_token_type": "begin_screen",
-            "_screen_block": "function() {var activePromptIndicies = [];\nactivePromptIndicies.push(20);\n\nreturn activePromptIndicies;\n}\n",
-            "operationIdx": 42
-          },
-          {
-            "clause": "exit section",
-            "_row_num": 64,
-            "__rowNum__": 63,
-            "_token_type": "exit_section",
-            "operationIdx": 43
-          },
-          {
-            "_row_num": 66,
-            "_token_type": "begin_screen",
-            "_screen_block": "function() {var activePromptIndicies = [];\nactivePromptIndicies.push(21);\n\nreturn activePromptIndicies;\n}\n",
-            "operationIdx": 44
-          },
-          {
-            "clause": "exit section",
-            "_row_num": 67,
-            "__rowNum__": 66,
-            "_token_type": "exit_section",
-            "operationIdx": 45
-          },
-          {
-            "_row_num": 69,
-            "_token_type": "begin_screen",
-            "_screen_block": "function() {var activePromptIndicies = [];\nactivePromptIndicies.push(22);\n\nreturn activePromptIndicies;\n}\n",
-            "operationIdx": 46
-          },
-          {
-            "clause": "exit section",
-            "_row_num": 70,
-            "__rowNum__": 69,
-            "_token_type": "exit_section",
-            "operationIdx": 47
-          },
-          {
-            "_row_num": 72,
-            "_token_type": "begin_screen",
-            "_screen_block": "function() {var activePromptIndicies = [];\nactivePromptIndicies.push(23);\n\nreturn activePromptIndicies;\n}\n",
-            "operationIdx": 48
-          },
-          {
-            "clause": "exit section",
-            "_row_num": 73,
-            "__rowNum__": 72,
-            "_token_type": "exit_section",
-            "operationIdx": 49
-          },
-          {
-            "_row_num": 75,
-            "_token_type": "begin_screen",
-            "_screen_block": "function() {var activePromptIndicies = [];\nactivePromptIndicies.push(24);\n\nreturn activePromptIndicies;\n}\n",
-            "operationIdx": 50
-          },
-          {
-            "clause": "exit section",
-            "_row_num": 76,
-            "__rowNum__": 75,
-            "_token_type": "exit_section",
-            "operationIdx": 51
-          },
-          {
-            "_row_num": 78,
-            "_token_type": "begin_screen",
-            "_screen_block": "function() {var activePromptIndicies = [];\nactivePromptIndicies.push(25);\n\nreturn activePromptIndicies;\n}\n",
-            "operationIdx": 52
-          },
-          {
-            "clause": "exit section",
-            "_row_num": 79,
-            "__rowNum__": 78,
-            "_token_type": "exit_section",
-            "operationIdx": 53
-          },
-          {
-            "_row_num": 81,
-            "_token_type": "begin_screen",
-            "_screen_block": "function() {var activePromptIndicies = [];\nactivePromptIndicies.push(26);\n\nreturn activePromptIndicies;\n}\n",
-            "operationIdx": 54
-          },
-          {
-            "clause": "exit section",
-            "_row_num": 82,
-            "__rowNum__": 81,
-            "_token_type": "exit_section",
-            "operationIdx": 55
-          },
-          {
-            "_row_num": 84,
-            "_token_type": "begin_screen",
-            "_screen_block": "function() {var activePromptIndicies = [];\nactivePromptIndicies.push(27);\n\nreturn activePromptIndicies;\n}\n",
-            "operationIdx": 56
-          },
-          {
-            "clause": "exit section",
-            "_row_num": 85,
-            "__rowNum__": 84,
-            "_token_type": "exit_section",
-            "operationIdx": 57
-          },
-          {
-            "_row_num": 87,
-            "_token_type": "begin_screen",
-            "_screen_block": "function() {var activePromptIndicies = [];\nactivePromptIndicies.push(28);\n\nreturn activePromptIndicies;\n}\n",
-            "operationIdx": 58
-          },
-          {
-            "clause": "exit section",
-            "_row_num": 88,
-            "__rowNum__": 87,
-            "_token_type": "exit_section",
-            "operationIdx": 59
-          },
-          {
-            "_token_type": "exit_section",
-            "clause": "exit section",
-            "_row_num": 89,
-            "operationIdx": 60
-          },
-          {
-            "_row_num": 89,
-            "_token_type": "begin_screen",
-            "_screen_block": "function() {var activePromptIndicies = [];\nactivePromptIndicies.push(29);\n\nreturn activePromptIndicies;\n}\n",
+            "_screen_block": "function() {var activePromptIndicies = [];\nactivePromptIndicies.push(12);\n\nreturn activePromptIndicies;\n}\n",
             "screen": {
               "hideInBackHistory": true
             },
-            "operationIdx": 61
+            "operationIdx": 27
           },
           {
             "_token_type": "resume",
             "clause": "resume",
-            "_row_num": 89,
-            "operationIdx": 62
+            "_row_num": 38,
+            "operationIdx": 28
           }
         ],
         "branch_label_map": {
@@ -3307,62 +2131,28 @@
           "_else4": 4,
           "_screen5": 4,
           "_endif6": 5,
-          "agriculture": 6,
+          "MIF": 6,
           "_screen9": 6,
-          "geotagger": 8,
+          "MIF_VISIT": 8,
           "_screen12": 8,
-          "breathcounter": 10,
+          "VAC": 10,
           "_screen15": 10,
-          "complex_validate_test": 12,
+          "SCAR": 12,
           "_screen18": 12,
-          "customAppearance": 14,
+          "CRIANCA": 14,
           "_screen21": 14,
-          "exampleForm": 16,
+          "GRAVIDA": 16,
           "_screen24": 16,
-          "household": 18,
+          "GRAVIDA_VISIT": 18,
           "_screen27": 18,
-          "imnci_test": 20,
+          "TEST": 20,
           "_screen30": 20,
-          "refrigerators_init": 22,
+          "CRIANCA_VISIT": 22,
           "_screen33": 22,
-          "refrigerators_update": 24,
+          "SES": 24,
           "_screen36": 24,
-          "section_test": 26,
-          "_screen39": 26,
-          "selects": 28,
-          "_screen42": 28,
-          "twoColumn": 30,
-          "_screen45": 30,
-          "gridScreen": 32,
-          "_screen48": 32,
-          "adult_coverage": 34,
-          "_screen51": 34,
-          "child_coverage": 36,
-          "_screen54": 36,
-          "graphExample": 38,
-          "_screen57": 38,
-          "visit": 40,
-          "_screen60": 40,
-          "plot": 42,
-          "_screen63": 42,
-          "geoweather": 44,
-          "_screen66": 44,
-          "send_sms": 46,
-          "_screen69": 46,
-          "eonasdan": 48,
-          "_screen72": 48,
-          "screenClient": 50,
-          "_screen75": 50,
-          "client6Week": 52,
-          "_screen78": 52,
-          "client6Month": 54,
-          "_screen81": 54,
-          "screenPartner": 56,
-          "_screen84": 56,
-          "partner6Month": 58,
-          "_screen87": 58,
-          "_contents": 61,
-          "_screen89": 61
+          "_contents": 27,
+          "_screen38": 27
         }
       }
     },
@@ -3394,7 +2184,7 @@
         "_aspect": "default",
         "_key": "displayName",
         "_type": "object",
-        "_value": "{\"text\":{\"en\":\"Common Javascript Framework\",\"hi\":\"सामान्य जावास्क्रिप्ट फ़्रेमवर्क\",\"es\":\"Marco común de Javascript\",\"default\":\"Common Javascript Framework\"}}"
+        "_value": "{\"text\":{\"english\":\"Options\",\"default\":\"Opções\"}}"
       }
     ]
   }
