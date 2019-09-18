@@ -304,11 +304,7 @@ module.exports = function (grunt) {
     grunt.registerTask(
         'adbpush',
         'Perform all the adbpush tasks',
-<<<<<<< HEAD
-        ['eqm-copy-custom', 'adbpull-props', 'remove-folders', 'adbpush-collect', 'adbpush-default-app', 'adbpush-props', 'eqm-push-sysscripts']);
-=======
         ['eqm-copy-custom', 'adbpull-props', 'remove-folders', 'adbpush-collect', 'adbpush-default-app', 'adbpush-props', 'start-survey', 'wait', 'eqm-push-sysscripts']);
->>>>>>> develop
 
     grunt.registerTask(
         'clean',
