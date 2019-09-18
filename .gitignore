@@ -4,3 +4,5 @@ app/output/props/*
 app/config/assets/csv/*
 tempZipDir
 .idea/*
+app/config/assets/csv/CRIANCA.bio19.csv
+app/config/assets/csv/MIF.bio19.csv
