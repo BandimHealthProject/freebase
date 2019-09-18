@@ -351,7 +351,7 @@ module.exports = function (grunt) {
     // so until a global customPromptTypes.js becomes available, we copy the one from assets/custom folder to each form folder
     grunt.registerTask(
         'eqm-convert-all',
-        'Copies customPromptTypes and customScreenTypes to forms, then runs xlsx-convert-all',
+        'Copies customPromptTypes to forms, then runs xlsx-convert-all',
         function() {            
             grunt.task.run('eqm-copy-custom');
             grunt.task.run('xlsx-convert-all');
@@ -383,7 +383,7 @@ module.exports = function (grunt) {
             
             //var srcDir = 'app/config/assets/framework/forms/framework/';
             var srcDir = 'app/config/assets/custom/';
-            var filesToDisseminate = ['customPromptTypes.js', 'customScreenTypes.js'];
+            var filesToDisseminate = ['customPromptTypes.js'] //, 'customScreenTypes.js'];
             dirs.forEach(function(fileName) {
                 //if (fileName == 'config/assets/framework/forms/framework/framework.xlsx') return; //i.e. continue
                 filesToDisseminate.forEach(fname => {
