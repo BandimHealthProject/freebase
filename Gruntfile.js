@@ -198,7 +198,21 @@ module.exports = function (grunt) {
 				}
 			}
         },
-
+        wait: {
+            options: {
+              delay: 15000
+            },
+            pause: {
+                options: {
+                  before : function(options) {
+                    console.log('pausing %dms', options.delay);
+                  },
+                  after: function() {                      
+                    console.log('pause end');
+                  }
+                }
+              },
+        },
         tables: tablesConfig,
         watch: {
             options: {
@@ -275,6 +289,8 @@ module.exports = function (grunt) {
         },
     });
 
+    grunt.loadNpmTasks('grunt-wait');
+
     // We need grunt-exec to run adb commands from within grunt.
     grunt.loadNpmTasks('grunt-exec');
 
@@ -288,7 +304,11 @@ module.exports = function (grunt) {
     grunt.registerTask(
         'adbpush',
         'Perform all the adbpush tasks',
+<<<<<<< HEAD
         ['eqm-copy-custom', 'adbpull-props', 'remove-folders', 'adbpush-collect', 'adbpush-default-app', 'adbpush-props', 'eqm-push-sysscripts']);
+=======
+        ['eqm-copy-custom', 'adbpull-props', 'remove-folders', 'adbpush-collect', 'adbpush-default-app', 'adbpush-props', 'start-survey', 'wait', 'eqm-push-sysscripts']);
+>>>>>>> develop
 
     grunt.registerTask(
         'clean',
@@ -1223,9 +1243,17 @@ module.exports = function (grunt) {
         "setup",
         "Launch the login and sync screen",
         function() {
+            //console.log("exec:adbshell:am start -a android.intent.action.MAIN -n org.opendatakit.services/.sync.actions.activities.SyncActivity --es appName "+tablesConfig.appName+" --es showLogin true");
             grunt.task.run("exec:adbshell:am start -a android.intent.action.MAIN -n org.opendatakit.services/.sync.actions.activities.SyncActivity --es appName "+tablesConfig.appName+" --es showLogin true");
         }
     )
+    grunt.registerTask(
+        'start-survey',
+        'Starts survey app',
+        function() {
+            grunt.task.run("exec:adbshell:am start -a android.intent.action.MAIN -n org.opendatakit.survey/.activities.SplashScreenActivity");
+        }
+    );
     // https://stackoverflow.com/questions/16612495/continue-certain-tasks-in-grunt-even-if-one-fails
     var previous_force_state = grunt.option("force");
     grunt.registerTask("force",function(set){
