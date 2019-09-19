@@ -425,7 +425,7 @@
       {
         "clause": "if",
         "condition": "data('etn1') == 'OU'",
-        "undefined": "If other than the list",
+        "__EMPTY_7": "If other than the list",
         "_row_num": 46
       },
       {
@@ -440,7 +440,7 @@
             }
           }
         },
-        "undefined": "off",
+        "__EMPTY_6": "off",
         "_row_num": 47
       },
       {
@@ -450,7 +450,7 @@
       {
         "clause": "if",
         "condition": "data('etn1') == 'OU'",
-        "undefined": "If from list etn2",
+        "__EMPTY_7": "If from list etn2",
         "_row_num": 49
       },
       {
@@ -461,7 +461,7 @@
       },
       {
         "clause": "else",
-        "undefined": "If from list etn1",
+        "__EMPTY_7": "If from list etn1",
         "_row_num": 51
       },
       {
@@ -21015,7 +21015,7 @@
                 }
               }
             },
-            "undefined": "off",
+            "__EMPTY_6": "off",
             "_row_num": 47,
             "__rowNum__": 46,
             "_token_type": "prompt",
