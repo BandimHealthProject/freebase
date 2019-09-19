@@ -167,8 +167,13 @@
         "_row_num": 11
       },
       {
-        "clause": "begin screen",
+        "clause": "if",
+        "condition": "data('PREGID') == null",
         "_row_num": 12
+      },
+      {
+        "clause": "begin screen",
+        "_row_num": 13
       },
       {
         "type": "select_one_dropdown",
@@ -182,7 +187,7 @@
             }
           }
         },
-        "_row_num": 13
+        "_row_num": 14
       },
       {
         "type": "select_one_dropdown",
@@ -197,7 +202,7 @@
           }
         },
         "choice_filter": "choice_item.REG === data('REG')",
-        "_row_num": 14
+        "_row_num": 15
       },
       {
         "type": "integer",
@@ -210,15 +215,77 @@
             }
           }
         },
-        "_row_num": 15
-      },
-      {
-        "clause": "end screen",
         "_row_num": 16
       },
       {
-        "clause": "begin screen",
+        "clause": "end screen",
         "_row_num": 17
+      },
+      {
+        "clause": "end if",
+        "_row_num": 18
+      },
+      {
+        "clause": "if",
+        "condition": "data('REGID') != null",
+        "_row_num": 19
+      },
+      {
+        "clause": "begin screen",
+        "_row_num": 20
+      },
+      {
+        "type": "select_one",
+        "values_list": "YesNoU",
+        "name": "MOMA",
+        "display": {
+          "prompt": {
+            "text": {
+              "english": "Is/was the child living with their mother?",
+              "default": "Is/was the child living with their mother?"
+            }
+          }
+        },
+        "_row_num": 21
+      },
+      {
+        "clause": "if",
+        "condition": "data('MOMA') == '1'",
+        "_row_num": 22
+      },
+      {
+        "type": "assign",
+        "name": "MOR",
+        "calculation": "data('mor')",
+        "_row_num": 23
+      },
+      {
+        "type": "assign",
+        "name": "CASA",
+        "calculation": "data('casa')",
+        "_row_num": 24
+      },
+      {
+        "type": "assign",
+        "name": "FOGAO",
+        "calculation": "data('fogao')",
+        "_row_num": 25
+      },
+      {
+        "clause": "end if",
+        "_row_num": 26
+      },
+      {
+        "clause": "end screen",
+        "_row_num": 27
+      },
+      {
+        "clause": "end if",
+        "_row_num": 28
+      },
+      {
+        "clause": "begin screen",
+        "_row_num": 29
       },
       {
         "type": "integer",
@@ -231,7 +298,7 @@
             }
           }
         },
-        "_row_num": 18
+        "_row_num": 30
       },
       {
         "type": "integer",
@@ -244,7 +311,7 @@
             }
           }
         },
-        "_row_num": 19
+        "_row_num": 31
       },
       {
         "type": "integer",
@@ -257,15 +324,15 @@
             }
           }
         },
-        "_row_num": 20
+        "_row_num": 32
       },
       {
         "clause": "end screen",
-        "_row_num": 21
+        "_row_num": 33
       },
       {
         "clause": "begin screen",
-        "_row_num": 22
+        "_row_num": 34
       },
       {
         "type": "text",
@@ -278,15 +345,15 @@
             }
           }
         },
-        "_row_num": 23
+        "_row_num": 35
       },
       {
         "clause": "end screen",
-        "_row_num": 24
+        "_row_num": 36
       },
       {
         "clause": "begin screen",
-        "_row_num": 25
+        "_row_num": 37
       },
       {
         "type": "select_one",
@@ -300,12 +367,12 @@
             }
           }
         },
-        "_row_num": 26
+        "_row_num": 38
       },
       {
         "clause": "if",
         "condition": "data('MALFORM') == '1'",
-        "_row_num": 27
+        "_row_num": 39
       },
       {
         "type": "text",
@@ -318,32 +385,32 @@
             }
           }
         },
-        "_row_num": 28
+        "_row_num": 40
       },
       {
         "clause": "end if",
-        "_row_num": 29
+        "_row_num": 41
       },
       {
         "clause": "end screen",
-        "_row_num": 30
+        "_row_num": 42
       },
       {
         "clause": "if",
         "condition": "data('PREGID') == null",
-        "_row_num": 31
+        "_row_num": 43
       },
       {
         "clause": "do section parto",
-        "_row_num": 32
+        "_row_num": 44
       },
       {
         "clause": "end if",
-        "_row_num": 33
+        "_row_num": 45
       },
       {
         "clause": "do section visit",
-        "_row_num": 34
+        "_row_num": 46
       }
     ],
     "parto": [
@@ -7374,6 +7441,24 @@
         "type": "text",
         "isSessionVariable": false,
         "_row_num": 218
+      },
+      {
+        "name": "mor",
+        "type": "integer",
+        "isSessionVariable": true,
+        "_row_num": 220
+      },
+      {
+        "name": "casa",
+        "type": "integer",
+        "isSessionVariable": true,
+        "_row_num": 221
+      },
+      {
+        "name": "fogau",
+        "type": "integer",
+        "isSessionVariable": true,
+        "_row_num": 222
       }
     ]
   },
@@ -9026,7 +9111,7 @@
         "valuesList": "region_csv",
         "_defn": [
           {
-            "_row_num": 13,
+            "_row_num": 14,
             "section_name": "reg"
           },
           {
@@ -9042,7 +9127,7 @@
         "valuesList": "tabanca_csv",
         "_defn": [
           {
-            "_row_num": 14,
+            "_row_num": 15,
             "section_name": "reg"
           },
           {
@@ -9057,7 +9142,7 @@
         "type": "integer",
         "_defn": [
           {
-            "_row_num": 15,
+            "_row_num": 16,
             "section_name": "reg"
           },
           {
@@ -9072,7 +9157,7 @@
         "type": "integer",
         "_defn": [
           {
-            "_row_num": 18,
+            "_row_num": 30,
             "section_name": "reg"
           },
           {
@@ -9087,7 +9172,7 @@
         "type": "integer",
         "_defn": [
           {
-            "_row_num": 19,
+            "_row_num": 31,
             "section_name": "reg"
           },
           {
@@ -9102,7 +9187,7 @@
         "type": "integer",
         "_defn": [
           {
-            "_row_num": 20,
+            "_row_num": 32,
             "section_name": "reg"
           },
           {
@@ -9117,7 +9202,7 @@
         "type": "string",
         "_defn": [
           {
-            "_row_num": 23,
+            "_row_num": 35,
             "section_name": "reg"
           },
           {
@@ -9736,6 +9821,10 @@
         "type": "string",
         "valuesList": "YesNoU",
         "_defn": [
+          {
+            "_row_num": 21,
+            "section_name": "reg"
+          },
           {
             "_row_num": 50,
             "section_name": "visit"
@@ -12499,10 +12588,43 @@
         "isSessionVariable": false,
         "elementKey": "VISITIDC"
       },
+      "mor": {
+        "type": "integer",
+        "_defn": [
+          {
+            "_row_num": 220,
+            "section_name": "model"
+          }
+        ],
+        "isSessionVariable": true,
+        "elementKey": "mor"
+      },
+      "casa": {
+        "type": "integer",
+        "_defn": [
+          {
+            "_row_num": 221,
+            "section_name": "model"
+          }
+        ],
+        "isSessionVariable": true,
+        "elementKey": "casa"
+      },
+      "fogau": {
+        "type": "integer",
+        "_defn": [
+          {
+            "_row_num": 222,
+            "section_name": "model"
+          }
+        ],
+        "isSessionVariable": true,
+        "elementKey": "fogau"
+      },
       "MALFORM": {
         "_defn": [
           {
-            "_row_num": 26,
+            "_row_num": 38,
             "section_name": "reg"
           }
         ],
@@ -12513,7 +12635,7 @@
       "MALFORM_TYPE": {
         "_defn": [
           {
-            "_row_num": 28,
+            "_row_num": 40,
             "section_name": "reg"
           }
         ],
@@ -12762,11 +12884,11 @@
                 }
               }
             },
-            "_row_num": 13,
-            "__rowNum__": 12,
+            "_row_num": 14,
+            "__rowNum__": 13,
             "_token_type": "prompt",
             "_type": "select_one_dropdown",
-            "_branch_label_enclosing_screen": "reg/_screen12",
+            "_branch_label_enclosing_screen": "reg/_screen13",
             "promptIdx": 4
           },
           {
@@ -12782,11 +12904,11 @@
               }
             },
             "choice_filter": "choice_item.REG === data('REG')",
-            "_row_num": 14,
-            "__rowNum__": 13,
+            "_row_num": 15,
+            "__rowNum__": 14,
             "_token_type": "prompt",
             "_type": "select_one_dropdown",
-            "_branch_label_enclosing_screen": "reg/_screen12",
+            "_branch_label_enclosing_screen": "reg/_screen13",
             "promptIdx": 5
           },
           {
@@ -12800,12 +12922,31 @@
                 }
               }
             },
-            "_row_num": 15,
-            "__rowNum__": 14,
+            "_row_num": 16,
+            "__rowNum__": 15,
             "_token_type": "prompt",
             "_type": "integer",
-            "_branch_label_enclosing_screen": "reg/_screen12",
+            "_branch_label_enclosing_screen": "reg/_screen13",
             "promptIdx": 6
+          },
+          {
+            "type": "select_one",
+            "values_list": "YesNoU",
+            "name": "MOMA",
+            "display": {
+              "prompt": {
+                "text": {
+                  "english": "Is/was the child living with their mother?",
+                  "default": "Is/was the child living with their mother?"
+                }
+              }
+            },
+            "_row_num": 21,
+            "__rowNum__": 20,
+            "_token_type": "prompt",
+            "_type": "select_one",
+            "_branch_label_enclosing_screen": "reg/_screen20",
+            "promptIdx": 7
           },
           {
             "type": "integer",
@@ -12818,12 +12959,12 @@
                 }
               }
             },
-            "_row_num": 18,
-            "__rowNum__": 17,
+            "_row_num": 30,
+            "__rowNum__": 29,
             "_token_type": "prompt",
             "_type": "integer",
-            "_branch_label_enclosing_screen": "reg/_screen17",
-            "promptIdx": 7
+            "_branch_label_enclosing_screen": "reg/_screen29",
+            "promptIdx": 8
           },
           {
             "type": "integer",
@@ -12836,12 +12977,12 @@
                 }
               }
             },
-            "_row_num": 19,
-            "__rowNum__": 18,
+            "_row_num": 31,
+            "__rowNum__": 30,
             "_token_type": "prompt",
             "_type": "integer",
-            "_branch_label_enclosing_screen": "reg/_screen17",
-            "promptIdx": 8
+            "_branch_label_enclosing_screen": "reg/_screen29",
+            "promptIdx": 9
           },
           {
             "type": "integer",
@@ -12854,12 +12995,12 @@
                 }
               }
             },
-            "_row_num": 20,
-            "__rowNum__": 19,
+            "_row_num": 32,
+            "__rowNum__": 31,
             "_token_type": "prompt",
             "_type": "integer",
-            "_branch_label_enclosing_screen": "reg/_screen17",
-            "promptIdx": 9
+            "_branch_label_enclosing_screen": "reg/_screen29",
+            "promptIdx": 10
           },
           {
             "type": "text",
@@ -12872,12 +13013,12 @@
                 }
               }
             },
-            "_row_num": 23,
-            "__rowNum__": 22,
+            "_row_num": 35,
+            "__rowNum__": 34,
             "_token_type": "prompt",
             "_type": "text",
-            "_branch_label_enclosing_screen": "reg/_screen22",
-            "promptIdx": 10
+            "_branch_label_enclosing_screen": "reg/_screen34",
+            "promptIdx": 11
           },
           {
             "type": "select_one",
@@ -12891,12 +13032,12 @@
                 }
               }
             },
-            "_row_num": 26,
-            "__rowNum__": 25,
+            "_row_num": 38,
+            "__rowNum__": 37,
             "_token_type": "prompt",
             "_type": "select_one",
-            "_branch_label_enclosing_screen": "reg/_screen25",
-            "promptIdx": 11
+            "_branch_label_enclosing_screen": "reg/_screen37",
+            "promptIdx": 12
           },
           {
             "type": "text",
@@ -12909,21 +13050,21 @@
                 }
               }
             },
-            "_row_num": 28,
-            "__rowNum__": 27,
+            "_row_num": 40,
+            "__rowNum__": 39,
             "_token_type": "prompt",
             "_type": "text",
-            "_branch_label_enclosing_screen": "reg/_screen25",
-            "promptIdx": 12
+            "_branch_label_enclosing_screen": "reg/_screen37",
+            "promptIdx": 13
           },
           {
             "clause": "do section parto",
-            "_row_num": 32,
-            "__rowNum__": 31,
+            "_row_num": 44,
+            "__rowNum__": 43,
             "_token_type": "prompt",
             "_do_section_name": "parto",
             "_type": "_section",
-            "promptIdx": 13,
+            "promptIdx": 14,
             "display": {
               "title": {
                 "text": {
@@ -12936,12 +13077,12 @@
           },
           {
             "clause": "do section visit",
-            "_row_num": 34,
-            "__rowNum__": 33,
+            "_row_num": 46,
+            "__rowNum__": 45,
             "_token_type": "prompt",
             "_do_section_name": "visit",
             "_type": "_section",
-            "promptIdx": 14,
+            "promptIdx": 15,
             "display": {
               "title": {
                 "text": {
@@ -12956,9 +13097,9 @@
             "_token_type": "prompt",
             "type": "contents",
             "_type": "contents",
-            "_row_num": 35,
-            "_branch_label_enclosing_screen": "reg/_screen35",
-            "promptIdx": 15
+            "_row_num": 47,
+            "_branch_label_enclosing_screen": "reg/_screen47",
+            "promptIdx": 16
           }
         ],
         "validation_tag_map": {
@@ -13017,120 +13158,180 @@
             "operationIdx": 4
           },
           {
-            "clause": "begin screen",
+            "clause": "if",
+            "condition": "data('PREGID') == null",
             "_row_num": 12,
             "__rowNum__": 11,
-            "_token_type": "begin_screen",
-            "_end_screen_clause": {
-              "clause": "end screen",
-              "_row_num": 16,
-              "__rowNum__": 15,
-              "_token_type": "end_screen"
-            },
-            "_screen_block": "function() {var activePromptIndicies = [];\nactivePromptIndicies.push(4);\nactivePromptIndicies.push(5);\nactivePromptIndicies.push(6);\n\nreturn activePromptIndicies;\n}\n",
+            "_token_type": "goto_label",
+            "_branch_label": "_then12",
             "operationIdx": 5
           },
           {
-            "clause": "begin screen",
-            "_row_num": 17,
-            "__rowNum__": 16,
-            "_token_type": "begin_screen",
-            "_end_screen_clause": {
-              "clause": "end screen",
-              "_row_num": 21,
-              "__rowNum__": 20,
-              "_token_type": "end_screen"
-            },
-            "_screen_block": "function() {var activePromptIndicies = [];\nactivePromptIndicies.push(7);\nactivePromptIndicies.push(8);\nactivePromptIndicies.push(9);\n\nreturn activePromptIndicies;\n}\n",
+            "clause": "end if",
+            "_token_type": "goto_label",
+            "_branch_label": "_else18",
+            "_row_num": 18,
             "operationIdx": 6
           },
           {
             "clause": "begin screen",
-            "_row_num": 22,
-            "__rowNum__": 21,
+            "_row_num": 13,
+            "__rowNum__": 12,
             "_token_type": "begin_screen",
             "_end_screen_clause": {
               "clause": "end screen",
-              "_row_num": 24,
-              "__rowNum__": 23,
+              "_row_num": 17,
+              "__rowNum__": 16,
               "_token_type": "end_screen"
             },
-            "_screen_block": "function() {var activePromptIndicies = [];\nactivePromptIndicies.push(10);\n\nreturn activePromptIndicies;\n}\n",
+            "_screen_block": "function() {var activePromptIndicies = [];\nactivePromptIndicies.push(4);\nactivePromptIndicies.push(5);\nactivePromptIndicies.push(6);\n\nreturn activePromptIndicies;\n}\n",
             "operationIdx": 7
           },
           {
-            "clause": "begin screen",
-            "_row_num": 25,
-            "__rowNum__": 24,
-            "_token_type": "begin_screen",
-            "_end_screen_clause": {
-              "clause": "end screen",
-              "_row_num": 30,
-              "__rowNum__": 29,
-              "_token_type": "end_screen"
-            },
-            "_screen_block": "function() {var activePromptIndicies = [];\nactivePromptIndicies.push(11);\nif (data('MALFORM') == '1') {\nactivePromptIndicies.push(12);\n}\n\nreturn activePromptIndicies;\n}\n",
+            "clause": "end if",
+            "_token_type": "goto_label",
+            "_branch_label": "_endif18",
+            "_row_num": 18,
             "operationIdx": 8
           },
           {
             "clause": "if",
-            "condition": "data('PREGID') == null",
-            "_row_num": 31,
-            "__rowNum__": 30,
+            "condition": "data('REGID') != null",
+            "_row_num": 19,
+            "__rowNum__": 18,
             "_token_type": "goto_label",
-            "_branch_label": "_then31",
+            "_branch_label": "_then19",
             "operationIdx": 9
           },
           {
             "clause": "end if",
             "_token_type": "goto_label",
-            "_branch_label": "_else33",
-            "_row_num": 33,
+            "_branch_label": "_else28",
+            "_row_num": 28,
             "operationIdx": 10
           },
           {
-            "clause": "do section parto",
-            "_row_num": 32,
-            "__rowNum__": 31,
-            "_token_type": "do_section",
-            "_do_section_name": "parto",
+            "clause": "begin screen",
+            "_row_num": 20,
+            "__rowNum__": 19,
+            "_token_type": "begin_screen",
+            "_end_screen_clause": {
+              "clause": "end screen",
+              "_row_num": 27,
+              "__rowNum__": 26,
+              "_token_type": "end_screen"
+            },
+            "_screen_block": "function() {var activePromptIndicies = [];\nactivePromptIndicies.push(7);\nif (data('MOMA') == '1') {\nassign('MOR', data('mor'));\nassign('CASA', data('casa'));\nassign('FOGAO', data('fogao'));\n}\n\nreturn activePromptIndicies;\n}\n",
             "operationIdx": 11
           },
           {
             "clause": "end if",
             "_token_type": "goto_label",
-            "_branch_label": "_endif33",
-            "_row_num": 33,
+            "_branch_label": "_endif28",
+            "_row_num": 28,
             "operationIdx": 12
           },
           {
-            "clause": "do section visit",
+            "clause": "begin screen",
+            "_row_num": 29,
+            "__rowNum__": 28,
+            "_token_type": "begin_screen",
+            "_end_screen_clause": {
+              "clause": "end screen",
+              "_row_num": 33,
+              "__rowNum__": 32,
+              "_token_type": "end_screen"
+            },
+            "_screen_block": "function() {var activePromptIndicies = [];\nactivePromptIndicies.push(8);\nactivePromptIndicies.push(9);\nactivePromptIndicies.push(10);\n\nreturn activePromptIndicies;\n}\n",
+            "operationIdx": 13
+          },
+          {
+            "clause": "begin screen",
             "_row_num": 34,
             "__rowNum__": 33,
+            "_token_type": "begin_screen",
+            "_end_screen_clause": {
+              "clause": "end screen",
+              "_row_num": 36,
+              "__rowNum__": 35,
+              "_token_type": "end_screen"
+            },
+            "_screen_block": "function() {var activePromptIndicies = [];\nactivePromptIndicies.push(11);\n\nreturn activePromptIndicies;\n}\n",
+            "operationIdx": 14
+          },
+          {
+            "clause": "begin screen",
+            "_row_num": 37,
+            "__rowNum__": 36,
+            "_token_type": "begin_screen",
+            "_end_screen_clause": {
+              "clause": "end screen",
+              "_row_num": 42,
+              "__rowNum__": 41,
+              "_token_type": "end_screen"
+            },
+            "_screen_block": "function() {var activePromptIndicies = [];\nactivePromptIndicies.push(12);\nif (data('MALFORM') == '1') {\nactivePromptIndicies.push(13);\n}\n\nreturn activePromptIndicies;\n}\n",
+            "operationIdx": 15
+          },
+          {
+            "clause": "if",
+            "condition": "data('PREGID') == null",
+            "_row_num": 43,
+            "__rowNum__": 42,
+            "_token_type": "goto_label",
+            "_branch_label": "_then43",
+            "operationIdx": 16
+          },
+          {
+            "clause": "end if",
+            "_token_type": "goto_label",
+            "_branch_label": "_else45",
+            "_row_num": 45,
+            "operationIdx": 17
+          },
+          {
+            "clause": "do section parto",
+            "_row_num": 44,
+            "__rowNum__": 43,
+            "_token_type": "do_section",
+            "_do_section_name": "parto",
+            "operationIdx": 18
+          },
+          {
+            "clause": "end if",
+            "_token_type": "goto_label",
+            "_branch_label": "_endif45",
+            "_row_num": 45,
+            "operationIdx": 19
+          },
+          {
+            "clause": "do section visit",
+            "_row_num": 46,
+            "__rowNum__": 45,
             "_token_type": "do_section",
             "_do_section_name": "visit",
-            "operationIdx": 13
+            "operationIdx": 20
           },
           {
             "_token_type": "exit_section",
             "clause": "exit section",
-            "_row_num": 35,
-            "operationIdx": 14
+            "_row_num": 47,
+            "operationIdx": 21
           },
           {
-            "_row_num": 35,
+            "_row_num": 47,
             "_token_type": "begin_screen",
-            "_screen_block": "function() {var activePromptIndicies = [];\nactivePromptIndicies.push(15);\n\nreturn activePromptIndicies;\n}\n",
+            "_screen_block": "function() {var activePromptIndicies = [];\nactivePromptIndicies.push(16);\n\nreturn activePromptIndicies;\n}\n",
             "screen": {
               "hideInBackHistory": true
             },
-            "operationIdx": 15
+            "operationIdx": 22
           },
           {
             "_token_type": "resume",
             "clause": "resume",
-            "_row_num": 35,
-            "operationIdx": 16
+            "_row_num": 47,
+            "operationIdx": 23
           }
         ],
         "branch_label_map": {
@@ -13139,15 +13340,22 @@
           "_else6": 4,
           "_endif6": 4,
           "_screen7": 4,
-          "_screen12": 5,
-          "_screen17": 6,
-          "_screen22": 7,
-          "_screen25": 8,
-          "_then31": 11,
-          "_else33": 13,
-          "_endif33": 13,
-          "_contents": 15,
-          "_screen35": 15
+          "_then12": 7,
+          "_screen13": 7,
+          "_else18": 9,
+          "_endif18": 9,
+          "_then19": 11,
+          "_screen20": 11,
+          "_else28": 13,
+          "_endif28": 13,
+          "_screen29": 13,
+          "_screen34": 14,
+          "_screen37": 15,
+          "_then43": 18,
+          "_else45": 20,
+          "_endif45": 20,
+          "_contents": 22,
+          "_screen47": 22
         }
       },
       "parto": {
@@ -18608,7 +18816,7 @@
         "valuesList": "region_csv",
         "_defn": [
           {
-            "_row_num": 13,
+            "_row_num": 14,
             "section_name": "reg"
           },
           {
@@ -18627,7 +18835,7 @@
         "valuesList": "tabanca_csv",
         "_defn": [
           {
-            "_row_num": 14,
+            "_row_num": 15,
             "section_name": "reg"
           },
           {
@@ -18645,7 +18853,7 @@
         "type": "integer",
         "_defn": [
           {
-            "_row_num": 15,
+            "_row_num": 16,
             "section_name": "reg"
           },
           {
@@ -18663,7 +18871,7 @@
         "type": "integer",
         "_defn": [
           {
-            "_row_num": 18,
+            "_row_num": 30,
             "section_name": "reg"
           },
           {
@@ -18681,7 +18889,7 @@
         "type": "integer",
         "_defn": [
           {
-            "_row_num": 19,
+            "_row_num": 31,
             "section_name": "reg"
           },
           {
@@ -18699,7 +18907,7 @@
         "type": "integer",
         "_defn": [
           {
-            "_row_num": 20,
+            "_row_num": 32,
             "section_name": "reg"
           },
           {
@@ -18717,7 +18925,7 @@
         "type": "string",
         "_defn": [
           {
-            "_row_num": 23,
+            "_row_num": 35,
             "section_name": "reg"
           },
           {
@@ -19456,6 +19664,10 @@
         "type": "string",
         "valuesList": "YesNoU",
         "_defn": [
+          {
+            "_row_num": 21,
+            "section_name": "reg"
+          },
           {
             "_row_num": 50,
             "section_name": "visit"
@@ -22834,10 +23046,52 @@
         "elementSet": "data",
         "elementPath": "VISITIDC"
       },
+      "mor": {
+        "type": "integer",
+        "_defn": [
+          {
+            "_row_num": 220,
+            "section_name": "model"
+          }
+        ],
+        "isSessionVariable": true,
+        "elementKey": "mor",
+        "elementName": "mor",
+        "elementSet": "data",
+        "elementPath": "mor"
+      },
+      "casa": {
+        "type": "integer",
+        "_defn": [
+          {
+            "_row_num": 221,
+            "section_name": "model"
+          }
+        ],
+        "isSessionVariable": true,
+        "elementKey": "casa",
+        "elementName": "casa",
+        "elementSet": "data",
+        "elementPath": "casa"
+      },
+      "fogau": {
+        "type": "integer",
+        "_defn": [
+          {
+            "_row_num": 222,
+            "section_name": "model"
+          }
+        ],
+        "isSessionVariable": true,
+        "elementKey": "fogau",
+        "elementName": "fogau",
+        "elementSet": "data",
+        "elementPath": "fogau"
+      },
       "MALFORM": {
         "_defn": [
           {
-            "_row_num": 26,
+            "_row_num": 38,
             "section_name": "reg"
           }
         ],
@@ -22851,7 +23105,7 @@
       "MALFORM_TYPE": {
         "_defn": [
           {
-            "_row_num": 28,
+            "_row_num": 40,
             "section_name": "reg"
           }
         ],
