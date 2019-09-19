@@ -403,7 +403,7 @@ module.exports = function (grunt) {
         'updates scripts in system/survey/js',
         function() {
             // Copy system-files
-            var sysFilesToCopy = ['app/system/survey/js/adateHelpers.js', 'app/system/survey/js/formulaFunctions.js'];
+            var sysFilesToCopy = ['app/system/survey/js/adateHelpers.js', 'app/system/survey/js/freebaseHelpers.js', 'app/system/survey/js/formulaFunctions.js'];
             var sysDest = '/sdcard/opendatakit/default/system/survey/js';
             sysFilesToCopy.forEach(fileName => {
                 var src = fileName;
