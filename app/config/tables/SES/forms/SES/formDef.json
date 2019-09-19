@@ -155,7 +155,7 @@
         "_row_num": 11
       },
       {
-        "type": "integer",
+        "type": "text",
         "name": "TELENUMERO",
         "display": {
           "prompt": {
@@ -164,6 +164,9 @@
               "default": "Número de telemovel da mãe ou outro"
             }
           }
+        },
+        "inputAttributes": {
+          "type": "number"
         },
         "_row_num": 12
       },
@@ -391,7 +394,7 @@
       },
       {
         "name": "TELENUMERO",
-        "type": "integer",
+        "type": "text",
         "isSessionVariable": false,
         "_row_num": 8
       },
@@ -815,7 +818,7 @@
         "elementKey": "TELEMOVEL"
       },
       "TELENUMERO": {
-        "type": "integer",
+        "type": "string",
         "_defn": [
           {
             "_row_num": 12,
@@ -996,7 +999,7 @@
             "promptIdx": 4
           },
           {
-            "type": "integer",
+            "type": "text",
             "name": "TELENUMERO",
             "display": {
               "prompt": {
@@ -1006,10 +1009,13 @@
                 }
               }
             },
+            "inputAttributes": {
+              "type": "number"
+            },
             "_row_num": 12,
             "__rowNum__": 11,
             "_token_type": "prompt",
-            "_type": "integer",
+            "_type": "text",
             "_branch_label_enclosing_screen": "survey/_screen10",
             "promptIdx": 5
           },
@@ -1390,7 +1396,7 @@
         "elementPath": "TELEMOVEL"
       },
       "TELENUMERO": {
-        "type": "integer",
+        "type": "string",
         "_defn": [
           {
             "_row_num": 12,
