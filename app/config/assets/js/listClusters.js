@@ -1,5 +1,5 @@
 /**
- * Responsible for rendering the select region/sector/tabanca screen.
+ * Responsible for rendering the select list of cluster (morancas) screen.
  */
 'use strict';
 /* global odkTables, util, odkCommon, odkData */
@@ -14,10 +14,10 @@ function display() {
     var body = $('#main');
     body.css('background-image', 'url(img/bafata.jpg)');
 
-    loadClusters();
+    loadPersons();
 }
 
-function loadClusters() {
+function loadPersons() {
     // Todo - look up in db => callback: populateView;
     clusters = [
         { id: 1, group: 1, name: 'cluster 1', visited: true},
@@ -27,6 +27,16 @@ function loadClusters() {
         { id: 5, group: 3, name: 'cluster 5'}
     ];
     populateView();
+}
+
+function populateView() {
+    console.log(clusters);
+    var ul = $('#clusters');
+    $.each(clusters, function() {
+        console.log(this);
+        var visited = this.visited ? 'visited' : '';
+        ul.append($("<li />").append($("<button />").attr('onclick','go(' + this.id + ');').attr('class',visited + ' btn group' + this.group).text(this.name)));
+    });
 }
 
 function go(clusterId) {
@@ -39,14 +49,4 @@ function go(clusterId) {
     var queryParams = util.setQuerystringParams(region, tabanca, assistant, visitType, clusterId);
         if (util.DEBUG) top.location = 'listPersons.html' + queryParams;
         odkTables.launchHTML(null,  'config/assets/listPersons.html' + queryParams);
-}
-
-function populateView() {
-    console.log(clusters);
-    var ul = $('#clusters');
-    $.each(clusters, function() {
-        console.log(this);
-        var visited = this.visited ? 'visited' : '';
-        ul.append($("<li />").append($("<button />").attr('onclick','go(' + this.id + ');').attr('class',visited + ' btn group' + this.group).text(this.name)));
-    });
 }

@@ -5,7 +5,7 @@
 'use strict';
 
 var util = {};
-util.DEBUG = true;
+util.DEBUG = false;
 /**
  * Get a string to append to a url that will contain information the date and
  * time. The values can then be retrieved using getQueryParameter.

@@ -14,7 +14,11 @@
         
         <script type="text/javascript" src="js/util.js"></script>
         <script type="text/javascript" src="js/index.js"></script>
-
+        <style>
+        .form-group {
+            margin:30px 0;
+        }
+        </style>
     </head>
 
     <body onload="display();">
@@ -25,13 +29,11 @@
                 <select id="selAssistant" placeholder="Assistente" class="form-control">
                 </select>
             </div>
-            <hr/>    
             <div class="form-group">
                 <label for="selRegion">Região</label>
                 <select id="selRegion" placeholder="Região" class="form-control">
                 </select>
             </div>
-            <hr/>
             <div class="form-group">
                 <label for="selTabanca">Tabanca</label>
                 <select id="selTabanca" placeholder="Tabanca" class="form-control">
@@ -40,11 +42,10 @@
             <hr/>
             <div id="wrapper">
                 <div class="form-group">
-                    <button id="btnRoutine">Rutina</button> 
+                    <button id="btnRoutine" class="btn">Rutina</button> 
                 </div>
-                <hr/>
                 <div class="form-group">
-                    <button id="btnControl">Controlo</button>
+                    <button id="btnControl" class="btn">Controlo</button>
                 </div>
             </div>
         </div>
