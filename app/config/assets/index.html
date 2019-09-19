@@ -3,6 +3,7 @@
 <!--Menu-->
     <head>
         <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <link href="libs/bootstrap-3.3.7-dist/css/bootstrap.css" type="text/css" rel="stylesheet" />
         <link href="css/homescreen.css" type="text/css" rel="stylesheet" />
         <script type="text/javascript" src="commonDefinitions.js"></script>
         <script type="text/javascript" src="libs/jquery-3.2.1.js"></script>
@@ -10,30 +11,41 @@
         <script type="text/javascript" src="../../system/js/odkCommon.js"></script>
         <script type="text/javascript" src="../../system/js/odkData.js"></script>
         <script type="text/javascript" src="../../system/tables/js/odkTables.js"></script>
-        <script type="text/javascript">
-
-        // Displays homescreen
-        function display() {
-
-            /*    Screen new client option that launches new client list view */
-            var EqM = document.createElement("button");
-            EqM.setAttribute("id", "button1");
-            EqM.innerHTML = "Rutina";
-            EqM.onclick = function() {
-            	odkTables.openTableToListView(null,
-                    'MIF',
-                    null,
-                    null,
-            		'config/tables/MIF/html/MIF.html');
-            }
-            document.getElementById("wrapper").appendChild(EqM);    
-        }
         
-        </script>
+        <script type="text/javascript" src="js/util.js"></script>
+        <script type="text/javascript" src="js/index.js"></script>
     </head>
 
     <body onload="display();">
-        <h1>Equipa Movel</h1>
-        <div id="wrapper"></div>
+        <div id="main" class="container">
+            <h1>Equipa Movel</h1>
+            <div class="form-group">
+                <label for="selAssistant">Assistente</label>
+                <select id="selAssistant" placeholder="Assistente" class="form-control">
+                </select>
+            </div>
+            <hr/>    
+            <div class="form-group">
+                <label for="selRegion">Região</label>
+                <select id="selRegion" placeholder="Região" class="form-control">
+                </select>
+            </div>
+            <hr/>
+            <div class="form-group">
+                <label for="selTabanca">Tabanca</label>
+                <select id="selTabanca" placeholder="Tabanca" class="form-control">
+                </select>
+            </div>
+            <hr/>
+            <div id="wrapper">
+                <div class="form-group">
+                    <button id="btnRoutine">Rutina</button> 
+                </div>
+                <hr/>
+                <div class="form-group">
+                    <button id="btnControl">Controlo</button>
+                </div>
+            </div>
+        </div>
     </body>
 </html>
