@@ -5,12 +5,12 @@
 'use strict';
 
 var util = {};
-
+util.DEBUG = true;
 /**
  * Get a string to append to a url that will contain information the date and
  * time. The values can then be retrieved using getQueryParameter.
  */
-util.setQuerystringParams = function(region, tabanca, assistant) {
+util.setQuerystringParams = function(region, tabanca, assistant, visitType, cluster) {
 
     var that = this;
     var first = true;
@@ -18,17 +18,26 @@ util.setQuerystringParams = function(region, tabanca, assistant) {
     var adaptProps = {};
 
     // Initialize the properties object
-    if (region !== null && region !== undefined && region.length !== 0) {
-        adaptProps[that.region] = region;
+    if (region) {
+        adaptProps['region'] = region;
     }  
     
-    if (tabanca !== null && tabanca !== undefined && tabanca.length !== 0) {
-        adaptProps[that.tabanca] = tabanca;
+    if (tabanca) {
+        adaptProps['tabanca'] = tabanca;
     }
 
-    if (assistant !== null && assistant !== undefined && assistant.length !== 0) {
-        adaptProps[that.assistant] = assistant;
+    if (assistant) {
+        adaptProps['assistant'] = assistant;
     }  
+
+    if (visitType) {
+        adaptProps['visitType'] = visitType;
+    }  
+
+    if (cluster) {
+        adaptProps['cluster'] = cluster;
+    }
+
 
     for (var prop in adaptProps) {
         if (adaptProps[prop] !== null && adaptProps[prop] !== undefined) {
