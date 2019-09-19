@@ -334,8 +334,22 @@
         "_row_num": 31
       },
       {
-        "clause": "begin screen",
+        "clause": "do section parto",
         "_row_num": 32
+      },
+      {
+        "clause": "end if",
+        "_row_num": 33
+      },
+      {
+        "clause": "do section visit",
+        "_row_num": 34
+      }
+    ],
+    "parto": [
+      {
+        "clause": "begin screen",
+        "_row_num": 2
       },
       {
         "type": "select_one",
@@ -349,12 +363,12 @@
             }
           }
         },
-        "_row_num": 33
+        "_row_num": 3
       },
       {
         "clause": "if",
         "condition": "data('inf1') == '2'",
-        "_row_num": 34
+        "_row_num": 4
       },
       {
         "type": "select_one",
@@ -368,44 +382,44 @@
             }
           }
         },
-        "_row_num": 35
+        "_row_num": 5
       },
       {
         "clause": "end if",
-        "_row_num": 36
+        "_row_num": 6
       },
       {
         "clause": "if",
         "condition": "data('inf1') == '2'",
-        "_row_num": 37
+        "_row_num": 7
       },
       {
         "type": "assign",
         "name": "GRINFOS",
         "calculation": "data('inf2')",
-        "_row_num": 38
+        "_row_num": 8
       },
       {
         "clause": "else",
-        "_row_num": 39
+        "_row_num": 9
       },
       {
         "type": "assign",
         "name": "GRINFOS",
         "calculation": "data('inf1')",
-        "_row_num": 40
+        "_row_num": 10
       },
       {
         "clause": "end if",
-        "_row_num": 41
+        "_row_num": 11
       },
       {
         "clause": "end screen",
-        "_row_num": 42
+        "_row_num": 12
       },
       {
         "clause": "begin screen",
-        "_row_num": 43
+        "_row_num": 13
       },
       {
         "type": "integer",
@@ -418,15 +432,15 @@
             }
           }
         },
-        "_row_num": 44
+        "_row_num": 14
       },
       {
         "clause": "end screen",
-        "_row_num": 45
+        "_row_num": 15
       },
       {
         "clause": "begin screen",
-        "_row_num": 46
+        "_row_num": 16
       },
       {
         "type": "select_one",
@@ -440,6 +454,231 @@
             }
           }
         },
+        "_row_num": 17
+      },
+      {
+        "clause": "end screen",
+        "_row_num": 18
+      },
+      {
+        "clause": "begin screen",
+        "_row_num": 19
+      },
+      {
+        "type": "select_one",
+        "values_list": "vpcard",
+        "name": "CART_ANC",
+        "display": {
+          "prompt": {
+            "text": {
+              "english": "Card",
+              "default": "Card"
+            }
+          }
+        },
+        "_row_num": 20
+      },
+      {
+        "clause": "end screen",
+        "_row_num": 21
+      },
+      {
+        "clause": "begin screen",
+        "_row_num": 22
+      },
+      {
+        "type": "select_one",
+        "values_list": "YesNoU",
+        "name": "GRVAC",
+        "display": {
+          "prompt": {
+            "text": "Vacina anti-tetánica durante esta gravidez?"
+          }
+        },
+        "_row_num": 23
+      },
+      {
+        "clause": "if",
+        "condition": "data('GRVAC') == '1'",
+        "_row_num": 24
+      },
+      {
+        "type": "integer",
+        "name": "VACTTHI",
+        "display": {
+          "prompt": {
+            "text": {
+              "english": "vac. Hist",
+              "default": "vac. Hist"
+            }
+          }
+        },
+        "_row_num": 25
+      },
+      {
+        "clause": "end if",
+        "_row_num": 26
+      },
+      {
+        "clause": "end screen",
+        "_row_num": 27
+      },
+      {
+        "clause": "begin screen",
+        "_row_num": 28
+      },
+      {
+        "type": "note",
+        "display": {
+          "prompt": {
+            "text": {
+              "english": "How many prenatal consultations?",
+              "default": "Quantas consultas pré-natais durante esta gravidez?"
+            }
+          }
+        },
+        "_row_num": 29
+      },
+      {
+        "type": "integer",
+        "name": "CDG_M",
+        "display": {
+          "prompt": {
+            "text": {
+              "english": "Woman",
+              "default": "Mulher"
+            }
+          }
+        },
+        "_row_num": 30
+      },
+      {
+        "clause": "if",
+        "condition": "data('CART_ANC') == 'VIC'",
+        "_row_num": 31
+      },
+      {
+        "type": "integer",
+        "name": "CDG_C",
+        "display": {
+          "prompt": {
+            "text": {
+              "english": "Card",
+              "default": "Cartão"
+            }
+          }
+        },
+        "_row_num": 32
+      },
+      {
+        "clause": "end if",
+        "_row_num": 33
+      },
+      {
+        "clause": "end screen",
+        "_row_num": 34
+      },
+      {
+        "clause": "begin screen",
+        "_row_num": 35
+      },
+      {
+        "type": "note",
+        "display": {
+          "prompt": {
+            "text": {
+              "english": "Number of times received iron/FA",
+              "default": "A grávida recebeu comprimidos com ferro quantas vezes?"
+            }
+          }
+        },
+        "_row_num": 36
+      },
+      {
+        "type": "integer",
+        "name": "FEDEP_M",
+        "display": {
+          "prompt": {
+            "text": {
+              "english": "Woman",
+              "default": "Mulher"
+            }
+          }
+        },
+        "_row_num": 37
+      },
+      {
+        "clause": "if",
+        "condition": "data('CART_ANC') == 'VIC'",
+        "_row_num": 38
+      },
+      {
+        "type": "integer",
+        "name": "FEDEP_C",
+        "display": {
+          "prompt": {
+            "text": {
+              "english": "Card",
+              "default": "Cartão"
+            }
+          }
+        },
+        "_row_num": 39
+      },
+      {
+        "clause": "end if",
+        "_row_num": 40
+      },
+      {
+        "clause": "end screen",
+        "_row_num": 41
+      },
+      {
+        "clause": "begin screen",
+        "_row_num": 42
+      },
+      {
+        "type": "note",
+        "display": {
+          "prompt": {
+            "text": "A grávida recebeu fansidar (TPI, SP) quantas vezes?"
+          }
+        },
+        "_row_num": 43
+      },
+      {
+        "type": "integer",
+        "name": "QVFANSI_M",
+        "display": {
+          "prompt": {
+            "text": {
+              "english": "Woman",
+              "default": "Mulher"
+            }
+          }
+        },
+        "_row_num": 44
+      },
+      {
+        "clause": "if",
+        "condition": "data('CART_ANC') == 'VIC'",
+        "_row_num": 45
+      },
+      {
+        "type": "integer",
+        "name": "QVFANSI_C",
+        "display": {
+          "prompt": {
+            "text": {
+              "english": "Card",
+              "default": "Cartão"
+            }
+          }
+        },
+        "_row_num": 46
+      },
+      {
+        "clause": "end if",
         "_row_num": 47
       },
       {
@@ -452,13 +691,13 @@
       },
       {
         "type": "select_one",
-        "values_list": "vpcard",
-        "name": "CART_ANC",
+        "values_list": "YesNoU",
+        "name": "TABPART",
         "display": {
           "prompt": {
             "text": {
-              "english": "Card",
-              "default": "Card"
+              "english": "Did the woman give birth in the village?",
+              "default": "Did the woman give birth in the village?"
             }
           }
         },
@@ -474,231 +713,6 @@
       },
       {
         "type": "select_one",
-        "values_list": "YesNoU",
-        "name": "GRVAC",
-        "display": {
-          "prompt": {
-            "text": "Vacina anti-tetánica durante esta gravidez?"
-          }
-        },
-        "_row_num": 53
-      },
-      {
-        "clause": "if",
-        "condition": "data('GRVAC') == '1'",
-        "_row_num": 54
-      },
-      {
-        "type": "integer",
-        "name": "VACTTHI",
-        "display": {
-          "prompt": {
-            "text": {
-              "english": "vac. Hist",
-              "default": "vac. Hist"
-            }
-          }
-        },
-        "_row_num": 55
-      },
-      {
-        "clause": "end if",
-        "_row_num": 56
-      },
-      {
-        "clause": "end screen",
-        "_row_num": 57
-      },
-      {
-        "clause": "begin screen",
-        "_row_num": 58
-      },
-      {
-        "type": "note",
-        "display": {
-          "prompt": {
-            "text": {
-              "english": "How many prenatal consultations?",
-              "default": "Quantas consultas pré-natais durante esta gravidez?"
-            }
-          }
-        },
-        "_row_num": 59
-      },
-      {
-        "type": "integer",
-        "name": "CDG_M",
-        "display": {
-          "prompt": {
-            "text": {
-              "english": "Woman",
-              "default": "Mulher"
-            }
-          }
-        },
-        "_row_num": 60
-      },
-      {
-        "clause": "if",
-        "condition": "data('CART_ANC') == 'VIC'",
-        "_row_num": 61
-      },
-      {
-        "type": "integer",
-        "name": "CDG_C",
-        "display": {
-          "prompt": {
-            "text": {
-              "english": "Card",
-              "default": "Cartão"
-            }
-          }
-        },
-        "_row_num": 62
-      },
-      {
-        "clause": "end if",
-        "_row_num": 63
-      },
-      {
-        "clause": "end screen",
-        "_row_num": 64
-      },
-      {
-        "clause": "begin screen",
-        "_row_num": 65
-      },
-      {
-        "type": "note",
-        "display": {
-          "prompt": {
-            "text": {
-              "english": "Number of times received iron/FA",
-              "default": "A grávida recebeu comprimidos com ferro quantas vezes?"
-            }
-          }
-        },
-        "_row_num": 66
-      },
-      {
-        "type": "integer",
-        "name": "FEDEP_M",
-        "display": {
-          "prompt": {
-            "text": {
-              "english": "Woman",
-              "default": "Mulher"
-            }
-          }
-        },
-        "_row_num": 67
-      },
-      {
-        "clause": "if",
-        "condition": "data('CART_ANC') == 'VIC'",
-        "_row_num": 68
-      },
-      {
-        "type": "integer",
-        "name": "FEDEP_C",
-        "display": {
-          "prompt": {
-            "text": {
-              "english": "Card",
-              "default": "Cartão"
-            }
-          }
-        },
-        "_row_num": 69
-      },
-      {
-        "clause": "end if",
-        "_row_num": 70
-      },
-      {
-        "clause": "end screen",
-        "_row_num": 71
-      },
-      {
-        "clause": "begin screen",
-        "_row_num": 72
-      },
-      {
-        "type": "note",
-        "display": {
-          "prompt": {
-            "text": "A grávida recebeu fansidar (TPI, SP) quantas vezes?"
-          }
-        },
-        "_row_num": 73
-      },
-      {
-        "type": "integer",
-        "name": "QVFANSI_M",
-        "display": {
-          "prompt": {
-            "text": {
-              "english": "Woman",
-              "default": "Mulher"
-            }
-          }
-        },
-        "_row_num": 74
-      },
-      {
-        "clause": "if",
-        "condition": "data('CART_ANC') == 'VIC'",
-        "_row_num": 75
-      },
-      {
-        "type": "integer",
-        "name": "QVFANSI_C",
-        "display": {
-          "prompt": {
-            "text": {
-              "english": "Card",
-              "default": "Cartão"
-            }
-          }
-        },
-        "_row_num": 76
-      },
-      {
-        "clause": "end if",
-        "_row_num": 77
-      },
-      {
-        "clause": "end screen",
-        "_row_num": 78
-      },
-      {
-        "clause": "begin screen",
-        "_row_num": 79
-      },
-      {
-        "type": "select_one",
-        "values_list": "YesNoU",
-        "name": "TABPART",
-        "display": {
-          "prompt": {
-            "text": {
-              "english": "Did the woman give birth in the village?",
-              "default": "Did the woman give birth in the village?"
-            }
-          }
-        },
-        "_row_num": 80
-      },
-      {
-        "clause": "end screen",
-        "_row_num": 81
-      },
-      {
-        "clause": "begin screen",
-        "_row_num": 82
-      },
-      {
-        "type": "select_one",
         "values_list": "facility",
         "name": "LOCPAR",
         "display": {
@@ -709,15 +723,15 @@
             }
           }
         },
-        "_row_num": 83
+        "_row_num": 53
       },
       {
         "clause": "end screen",
-        "_row_num": 84
+        "_row_num": 54
       },
       {
         "clause": "begin screen",
-        "_row_num": 85
+        "_row_num": 55
       },
       {
         "type": "select_one",
@@ -731,15 +745,11 @@
             }
           }
         },
-        "_row_num": 86
+        "_row_num": 56
       },
       {
         "clause": "end screen",
-        "_row_num": 87
-      },
-      {
-        "clause": "end if",
-        "_row_num": 88
+        "_row_num": 57
       }
     ],
     "visit": [
@@ -2278,19 +2288,19 @@
       },
       {
         "type": "select_multiple",
-        "values_list": "notgiven",
+        "values_list": "notgivensamep1",
         "name": "polio1ng",
         "_row_num": 58
       },
       {
         "clause": "if",
-        "condition": "data('polio1ng') != null",
+        "condition": "data('polio1ng') == \"1\"",
         "_row_num": 59
       },
       {
         "type": "assign",
         "name": "POLIO1",
-        "calculation": "\"D:2,M:2,Y:1922\"",
+        "calculation": "data('PENTA1')",
         "_row_num": 60
       },
       {
@@ -2298,8 +2308,23 @@
         "_row_num": 61
       },
       {
-        "clause": "else",
+        "clause": "if",
+        "condition": "data('polio1ng') == \"2\"",
         "_row_num": 62
+      },
+      {
+        "type": "assign",
+        "name": "POLIO1",
+        "calculation": "\"D:2,M:2,Y:1922\"",
+        "_row_num": 63
+      },
+      {
+        "clause": "end if",
+        "_row_num": 64
+      },
+      {
+        "clause": "else",
+        "_row_num": 65
       },
       {
         "type": "select_one",
@@ -2313,40 +2338,40 @@
             }
           }
         },
-        "_row_num": 63
+        "_row_num": 66
       },
       {
         "clause": "if",
         "condition": "data('POLIO1CHECK') == '2'",
-        "_row_num": 64
+        "_row_num": 67
       },
       {
         "type": "adate",
         "name": "POLIO1",
-        "_row_num": 65
+        "_row_num": 68
       },
       {
         "clause": "else",
-        "_row_num": 66
+        "_row_num": 69
       },
       {
         "type": "assign",
         "name": "POLIO1",
         "calculation": "data('polio1')",
-        "_row_num": 67
+        "_row_num": 70
       },
       {
         "clause": "end if",
-        "_row_num": 68
+        "_row_num": 71
       },
       {
         "clause": "end if",
-        "_row_num": 69
+        "_row_num": 72
       },
       {
         "clause": "if",
         "condition": "data('pcv1') == null",
-        "_row_num": 70
+        "_row_num": 73
       },
       {
         "type": "adate",
@@ -2359,32 +2384,47 @@
             }
           }
         },
-        "_row_num": 71
+        "_row_num": 74
       },
       {
         "type": "select_multiple",
-        "values_list": "notgiven",
+        "values_list": "notgivensamep1",
         "name": "pcv1ng",
-        "_row_num": 72
+        "_row_num": 75
       },
       {
         "clause": "if",
-        "condition": "data('pcv1ng') != null",
-        "_row_num": 73
+        "condition": "data('pcv1ng') == '1'",
+        "_row_num": 76
+      },
+      {
+        "type": "assign",
+        "name": "PCV1",
+        "calculation": "data('PENTA1')",
+        "_row_num": 77
+      },
+      {
+        "clause": "end if",
+        "_row_num": 78
+      },
+      {
+        "clause": "if",
+        "condition": "data('pcv1ng') == '2'",
+        "_row_num": 79
       },
       {
         "type": "assign",
         "name": "PCV1",
         "calculation": "\"D:2,M:2,Y:1922\"",
-        "_row_num": 74
+        "_row_num": 80
       },
       {
         "clause": "end if",
-        "_row_num": 75
+        "_row_num": 81
       },
       {
         "clause": "else",
-        "_row_num": 76
+        "_row_num": 82
       },
       {
         "type": "select_one",
@@ -2398,40 +2438,40 @@
             }
           }
         },
-        "_row_num": 77
+        "_row_num": 83
       },
       {
         "clause": "if",
         "condition": "data('PCV1CHECK') == '2'",
-        "_row_num": 78
+        "_row_num": 84
       },
       {
         "type": "adate",
         "name": "PCV1",
-        "_row_num": 79
+        "_row_num": 85
       },
       {
         "clause": "else",
-        "_row_num": 80
+        "_row_num": 86
       },
       {
         "type": "assign",
         "name": "PCV1",
         "calculation": "data('pcv1')",
-        "_row_num": 81
+        "_row_num": 87
       },
       {
         "clause": "end if",
-        "_row_num": 82
+        "_row_num": 88
       },
       {
         "clause": "end if",
-        "_row_num": 83
+        "_row_num": 89
       },
       {
         "clause": "if",
         "condition": "data('rox1') == null",
-        "_row_num": 84
+        "_row_num": 90
       },
       {
         "type": "adate",
@@ -2444,32 +2484,47 @@
             }
           }
         },
-        "_row_num": 85
+        "_row_num": 91
       },
       {
         "type": "select_multiple",
-        "values_list": "notgiven",
+        "values_list": "notgivensamep1",
         "name": "rox1ng",
-        "_row_num": 86
+        "_row_num": 92
       },
       {
         "clause": "if",
-        "condition": "data('rox1ng') != null",
-        "_row_num": 87
+        "condition": "data('rox1ng') == '1'",
+        "_row_num": 93
+      },
+      {
+        "type": "assign",
+        "name": "ROX1",
+        "calculation": "data('PENTA1')",
+        "_row_num": 94
+      },
+      {
+        "clause": "end if",
+        "_row_num": 95
+      },
+      {
+        "clause": "if",
+        "condition": "data('rox1ng') == '2'",
+        "_row_num": 96
       },
       {
         "type": "assign",
         "name": "ROX1",
         "calculation": "\"D:2,M:2,Y:1922\"",
-        "_row_num": 88
+        "_row_num": 97
       },
       {
         "clause": "end if",
-        "_row_num": 89
+        "_row_num": 98
       },
       {
         "clause": "else",
-        "_row_num": 90
+        "_row_num": 99
       },
       {
         "type": "select_one",
@@ -2483,72 +2538,72 @@
             }
           }
         },
-        "_row_num": 91
+        "_row_num": 100
       },
       {
         "clause": "if",
         "condition": "data('ROX1CHECK') == '2'",
-        "_row_num": 92
+        "_row_num": 101
       },
       {
         "type": "adate",
         "name": "ROX1",
-        "_row_num": 93
+        "_row_num": 102
       },
       {
         "clause": "else",
-        "_row_num": 94
+        "_row_num": 103
       },
       {
         "type": "assign",
         "name": "ROX1",
         "calculation": "data('rox1')",
-        "_row_num": 95
+        "_row_num": 104
       },
       {
         "clause": "end if",
-        "_row_num": 96
+        "_row_num": 105
       },
       {
         "clause": "end if",
-        "_row_num": 97
+        "_row_num": 106
       },
       {
         "type": "async_assign_date",
         "values_list": "linked_penta2",
         "name": "penta2",
-        "_row_num": 98
+        "_row_num": 107
       },
       {
         "type": "async_assign_date",
         "values_list": "linked_polio2",
         "name": "polio2",
-        "_row_num": 99
+        "_row_num": 108
       },
       {
         "type": "async_assign_date",
         "values_list": "linked_pcv2",
         "name": "pcv2",
-        "_row_num": 100
+        "_row_num": 109
       },
       {
         "type": "async_assign_date",
         "values_list": "linked_rox2",
         "name": "rox2",
-        "_row_num": 101
+        "_row_num": 110
       },
       {
         "clause": "end screen",
-        "_row_num": 102
+        "_row_num": 111
       },
       {
         "clause": "begin screen",
-        "_row_num": 103
+        "_row_num": 112
       },
       {
         "clause": "if",
         "condition": "data('penta2') == null",
-        "_row_num": 104
+        "_row_num": 113
       },
       {
         "type": "adate",
@@ -2561,32 +2616,32 @@
             }
           }
         },
-        "_row_num": 105
+        "_row_num": 114
       },
       {
         "type": "select_multiple",
         "values_list": "notgiven",
         "name": "penta2ng",
-        "_row_num": 106
+        "_row_num": 115
       },
       {
         "clause": "if",
         "condition": "data('penta2ng') != null",
-        "_row_num": 107
+        "_row_num": 116
       },
       {
         "type": "assign",
         "name": "PENTA2",
         "calculation": "\"D:2,M:2,Y:1922\"",
-        "_row_num": 108
+        "_row_num": 117
       },
       {
         "clause": "end if",
-        "_row_num": 109
+        "_row_num": 118
       },
       {
         "clause": "else",
-        "_row_num": 110
+        "_row_num": 119
       },
       {
         "type": "select_one",
@@ -2600,40 +2655,40 @@
             }
           }
         },
-        "_row_num": 111
+        "_row_num": 120
       },
       {
         "clause": "if",
         "condition": "data('PENTA2CHECK') == '2'",
-        "_row_num": 112
+        "_row_num": 121
       },
       {
         "type": "adate",
         "name": "PENTA2",
-        "_row_num": 113
+        "_row_num": 122
       },
       {
         "clause": "else",
-        "_row_num": 114
+        "_row_num": 123
       },
       {
         "type": "assign",
         "name": "PENTA2",
         "calculation": "data('penta2')",
-        "_row_num": 115
+        "_row_num": 124
       },
       {
         "clause": "end if",
-        "_row_num": 116
+        "_row_num": 125
       },
       {
         "clause": "end if",
-        "_row_num": 117
+        "_row_num": 126
       },
       {
         "clause": "if",
         "condition": "data('polio2') == null",
-        "_row_num": 118
+        "_row_num": 127
       },
       {
         "type": "adate",
@@ -2646,32 +2701,47 @@
             }
           }
         },
-        "_row_num": 119
+        "_row_num": 128
       },
       {
         "type": "select_multiple",
-        "values_list": "notgiven",
+        "values_list": "notgivensamep2",
         "name": "polio2ng",
-        "_row_num": 120
+        "_row_num": 129
       },
       {
         "clause": "if",
-        "condition": "data('polio2ng') != null",
-        "_row_num": 121
+        "condition": "data('polio2ng') == '1'",
+        "_row_num": 130
+      },
+      {
+        "type": "assign",
+        "name": "POLIO2",
+        "calculation": "data('PENTA2')",
+        "_row_num": 131
+      },
+      {
+        "clause": "end if",
+        "_row_num": 132
+      },
+      {
+        "clause": "if",
+        "condition": "data('polio2ng') == '2'",
+        "_row_num": 133
       },
       {
         "type": "assign",
         "name": "POLIO2",
         "calculation": "\"D:2,M:2,Y:1922\"",
-        "_row_num": 122
+        "_row_num": 134
       },
       {
         "clause": "end if",
-        "_row_num": 123
+        "_row_num": 135
       },
       {
         "clause": "else",
-        "_row_num": 124
+        "_row_num": 136
       },
       {
         "type": "select_one",
@@ -2685,40 +2755,40 @@
             }
           }
         },
-        "_row_num": 125
+        "_row_num": 137
       },
       {
         "clause": "if",
         "condition": "data('POLIO2CHECK') == '2'",
-        "_row_num": 126
+        "_row_num": 138
       },
       {
         "type": "adate",
         "name": "POLIO2",
-        "_row_num": 127
+        "_row_num": 139
       },
       {
         "clause": "else",
-        "_row_num": 128
+        "_row_num": 140
       },
       {
         "type": "assign",
         "name": "POLIO2",
         "calculation": "data('polio2')",
-        "_row_num": 129
+        "_row_num": 141
       },
       {
         "clause": "end if",
-        "_row_num": 130
+        "_row_num": 142
       },
       {
         "clause": "end if",
-        "_row_num": 131
+        "_row_num": 143
       },
       {
         "clause": "if",
         "condition": "data('pcv2') == null",
-        "_row_num": 132
+        "_row_num": 144
       },
       {
         "type": "adate",
@@ -2731,32 +2801,47 @@
             }
           }
         },
-        "_row_num": 133
+        "_row_num": 145
       },
       {
         "type": "select_multiple",
-        "values_list": "notgiven",
+        "values_list": "notgivensamep2",
         "name": "pcv2ng",
-        "_row_num": 134
+        "_row_num": 146
       },
       {
         "clause": "if",
-        "condition": "data('pcv2ng') != null",
-        "_row_num": 135
+        "condition": "data('pcv2ng') == '1'",
+        "_row_num": 147
+      },
+      {
+        "type": "assign",
+        "name": "PCV2",
+        "calculation": "data('PENTA2')",
+        "_row_num": 148
+      },
+      {
+        "clause": "end if",
+        "_row_num": 149
+      },
+      {
+        "clause": "if",
+        "condition": "data('pcv2ng') == '2'",
+        "_row_num": 150
       },
       {
         "type": "assign",
         "name": "PCV2",
         "calculation": "\"D:2,M:2,Y:1922\"",
-        "_row_num": 136
+        "_row_num": 151
       },
       {
         "clause": "end if",
-        "_row_num": 137
+        "_row_num": 152
       },
       {
         "clause": "else",
-        "_row_num": 138
+        "_row_num": 153
       },
       {
         "type": "select_one",
@@ -2770,40 +2855,40 @@
             }
           }
         },
-        "_row_num": 139
+        "_row_num": 154
       },
       {
         "clause": "if",
         "condition": "data('PCV2CHECK') == '2'",
-        "_row_num": 140
+        "_row_num": 155
       },
       {
         "type": "adate",
         "name": "PCV2",
-        "_row_num": 141
+        "_row_num": 156
       },
       {
         "clause": "else",
-        "_row_num": 142
+        "_row_num": 157
       },
       {
         "type": "assign",
         "name": "PCV2",
         "calculation": "data('pcv2')",
-        "_row_num": 143
+        "_row_num": 158
       },
       {
         "clause": "end if",
-        "_row_num": 144
+        "_row_num": 159
       },
       {
         "clause": "end if",
-        "_row_num": 145
+        "_row_num": 160
       },
       {
         "clause": "if",
         "condition": "data('rox2') == null",
-        "_row_num": 146
+        "_row_num": 161
       },
       {
         "type": "adate",
@@ -2816,32 +2901,47 @@
             }
           }
         },
-        "_row_num": 147
+        "_row_num": 162
       },
       {
         "type": "select_multiple",
-        "values_list": "notgiven",
+        "values_list": "notgivensamep2",
         "name": "rox2ng",
-        "_row_num": 148
+        "_row_num": 163
       },
       {
         "clause": "if",
-        "condition": "data('rox2ng') != null",
-        "_row_num": 149
+        "condition": "data('rox2ng') == '1'",
+        "_row_num": 164
+      },
+      {
+        "type": "assign",
+        "name": "ROX2",
+        "calculation": "data('PENTA2')",
+        "_row_num": 165
+      },
+      {
+        "clause": "end if",
+        "_row_num": 166
+      },
+      {
+        "clause": "if",
+        "condition": "data('rox2ng') == '2'",
+        "_row_num": 167
       },
       {
         "type": "assign",
         "name": "ROX2",
         "calculation": "\"D:2,M:2,Y:1922\"",
-        "_row_num": 150
+        "_row_num": 168
       },
       {
         "clause": "end if",
-        "_row_num": 151
+        "_row_num": 169
       },
       {
         "clause": "else",
-        "_row_num": 152
+        "_row_num": 170
       },
       {
         "type": "select_one",
@@ -2855,72 +2955,72 @@
             }
           }
         },
-        "_row_num": 153
+        "_row_num": 171
       },
       {
         "clause": "if",
         "condition": "data('ROX2CHECK') == '2'",
-        "_row_num": 154
+        "_row_num": 172
       },
       {
         "type": "adate",
         "name": "ROX2",
-        "_row_num": 155
+        "_row_num": 173
       },
       {
         "clause": "else",
-        "_row_num": 156
+        "_row_num": 174
       },
       {
         "type": "assign",
         "name": "ROX2",
         "calculation": "data('rox2')",
-        "_row_num": 157
+        "_row_num": 175
       },
       {
         "clause": "end if",
-        "_row_num": 158
+        "_row_num": 176
       },
       {
         "clause": "end if",
-        "_row_num": 159
+        "_row_num": 177
       },
       {
         "type": "async_assign_date",
         "values_list": "linked_penta3",
         "name": "penta3",
-        "_row_num": 160
+        "_row_num": 178
       },
       {
         "type": "async_assign_date",
         "values_list": "linked_polio3",
         "name": "polio3",
-        "_row_num": 161
+        "_row_num": 179
       },
       {
         "type": "async_assign_date",
         "values_list": "linked_pcv3",
         "name": "pcv3",
-        "_row_num": 162
+        "_row_num": 180
       },
       {
         "type": "async_assign_date",
         "values_list": "linked_vpi",
         "name": "vpi",
-        "_row_num": 163
+        "_row_num": 181
       },
       {
         "clause": "end screen",
-        "_row_num": 164
+        "_row_num": 182
       },
       {
         "clause": "begin screen",
-        "_row_num": 165
+        "_row_num": 183
       },
       {
         "clause": "if",
         "condition": "data('penta3') == null",
-        "_row_num": 166
+        "_row_num": 184
       },
       {
         "type": "adate",
@@ -2933,32 +3033,32 @@
             }
           }
         },
-        "_row_num": 167
+        "_row_num": 185
       },
       {
         "type": "select_multiple",
         "values_list": "notgiven",
         "name": "penta3ng",
-        "_row_num": 168
+        "_row_num": 186
       },
       {
         "clause": "if",
         "condition": "data('penta3ng') != null",
-        "_row_num": 169
+        "_row_num": 187
       },
       {
         "type": "assign",
         "name": "PENTA3",
         "calculation": "\"D:2,M:2,Y:1922\"",
-        "_row_num": 170
+        "_row_num": 188
       },
       {
         "clause": "end if",
-        "_row_num": 171
+        "_row_num": 189
       },
       {
         "clause": "else",
-        "_row_num": 172
+        "_row_num": 190
       },
       {
         "type": "select_one",
@@ -2972,40 +3072,40 @@
             }
           }
         },
-        "_row_num": 173
+        "_row_num": 191
       },
       {
         "clause": "if",
         "condition": "data('PENTA3CHECK') == '2'",
-        "_row_num": 174
+        "_row_num": 192
       },
       {
         "type": "adate",
         "name": "PENTA3",
-        "_row_num": 175
+        "_row_num": 193
       },
       {
         "clause": "else",
-        "_row_num": 176
+        "_row_num": 194
       },
       {
         "type": "assign",
         "name": "PENTA3",
         "calculation": "data('penta3')",
-        "_row_num": 177
+        "_row_num": 195
       },
       {
         "clause": "end if",
-        "_row_num": 178
+        "_row_num": 196
       },
       {
         "clause": "end if",
-        "_row_num": 179
+        "_row_num": 197
       },
       {
         "clause": "if",
         "condition": "data('polio3') == null",
-        "_row_num": 180
+        "_row_num": 198
       },
       {
         "type": "adate",
@@ -3018,32 +3118,47 @@
             }
           }
         },
-        "_row_num": 181
+        "_row_num": 199
       },
       {
         "type": "select_multiple",
-        "values_list": "notgiven",
+        "values_list": "notgivensamep3",
         "name": "polio3ng",
-        "_row_num": 182
+        "_row_num": 200
       },
       {
         "clause": "if",
-        "condition": "data('polio3ng') != null",
-        "_row_num": 183
+        "condition": "data('polio3ng') == '1'",
+        "_row_num": 201
+      },
+      {
+        "type": "assign",
+        "name": "POLIO3",
+        "calculation": "data('PENTA3')",
+        "_row_num": 202
+      },
+      {
+        "clause": "end if",
+        "_row_num": 203
+      },
+      {
+        "clause": "if",
+        "condition": "data('polio3ng') == '2'",
+        "_row_num": 204
       },
       {
         "type": "assign",
         "name": "POLIO3",
         "calculation": "\"D:2,M:2,Y:1922\"",
-        "_row_num": 184
+        "_row_num": 205
       },
       {
         "clause": "end if",
-        "_row_num": 185
+        "_row_num": 206
       },
       {
         "clause": "else",
-        "_row_num": 186
+        "_row_num": 207
       },
       {
         "type": "select_one",
@@ -3057,40 +3172,40 @@
             }
           }
         },
-        "_row_num": 187
+        "_row_num": 208
       },
       {
         "clause": "if",
         "condition": "data('POLIO3CHECK') == '2'",
-        "_row_num": 188
+        "_row_num": 209
       },
       {
         "type": "adate",
         "name": "POLIO3",
-        "_row_num": 189
+        "_row_num": 210
       },
       {
         "clause": "else",
-        "_row_num": 190
+        "_row_num": 211
       },
       {
         "type": "assign",
         "name": "POLIO3",
         "calculation": "data('polio3')",
-        "_row_num": 191
+        "_row_num": 212
       },
       {
         "clause": "end if",
-        "_row_num": 192
+        "_row_num": 213
       },
       {
         "clause": "end if",
-        "_row_num": 193
+        "_row_num": 214
       },
       {
         "clause": "if",
         "condition": "data('pcv3') == null",
-        "_row_num": 194
+        "_row_num": 215
       },
       {
         "type": "adate",
@@ -3103,32 +3218,47 @@
             }
           }
         },
-        "_row_num": 195
+        "_row_num": 216
       },
       {
         "type": "select_multiple",
-        "values_list": "notgiven",
+        "values_list": "notgivensamep3",
         "name": "pcv3ng",
-        "_row_num": 196
+        "_row_num": 217
       },
       {
         "clause": "if",
-        "condition": "data('pcv3ng') != null",
-        "_row_num": 197
+        "condition": "data('pcv3ng') == '1'",
+        "_row_num": 218
+      },
+      {
+        "type": "assign",
+        "name": "PCV3",
+        "calculation": "data('PENTA3')",
+        "_row_num": 219
+      },
+      {
+        "clause": "end if",
+        "_row_num": 220
+      },
+      {
+        "clause": "if",
+        "condition": "data('pcv3ng') == '2'",
+        "_row_num": 221
       },
       {
         "type": "assign",
         "name": "PCV3",
         "calculation": "\"D:2,M:2,Y:1922\"",
-        "_row_num": 198
+        "_row_num": 222
       },
       {
         "clause": "end if",
-        "_row_num": 199
+        "_row_num": 223
       },
       {
         "clause": "else",
-        "_row_num": 200
+        "_row_num": 224
       },
       {
         "type": "select_one",
@@ -3142,40 +3272,40 @@
             }
           }
         },
-        "_row_num": 201
+        "_row_num": 225
       },
       {
         "clause": "if",
         "condition": "data('PCV3CHECK') == '2'",
-        "_row_num": 202
+        "_row_num": 226
       },
       {
         "type": "adate",
         "name": "PCV3",
-        "_row_num": 203
+        "_row_num": 227
       },
       {
         "clause": "else",
-        "_row_num": 204
+        "_row_num": 228
       },
       {
         "type": "assign",
         "name": "PCV3",
         "calculation": "data('pcv3')",
-        "_row_num": 205
+        "_row_num": 229
       },
       {
         "clause": "end if",
-        "_row_num": 206
+        "_row_num": 230
       },
       {
         "clause": "end if",
-        "_row_num": 207
+        "_row_num": 231
       },
       {
         "clause": "if",
         "condition": "data('vpi') == null",
-        "_row_num": 208
+        "_row_num": 232
       },
       {
         "type": "adate",
@@ -3188,32 +3318,47 @@
             }
           }
         },
-        "_row_num": 209
+        "_row_num": 233
       },
       {
         "type": "select_multiple",
-        "values_list": "notgiven",
+        "values_list": "notgivensamep3",
         "name": "vping",
-        "_row_num": 210
+        "_row_num": 234
       },
       {
         "clause": "if",
-        "condition": "data('vping') != null",
-        "_row_num": 211
+        "condition": "data('vping') == '1'",
+        "_row_num": 235
+      },
+      {
+        "type": "assign",
+        "name": "VPI",
+        "calculation": "data('PENTA3')",
+        "_row_num": 236
+      },
+      {
+        "clause": "end if",
+        "_row_num": 237
+      },
+      {
+        "clause": "if",
+        "condition": "data('vping') == '2'",
+        "_row_num": 238
       },
       {
         "type": "assign",
         "name": "VPI",
         "calculation": "\"D:2,M:2,Y:1922\"",
-        "_row_num": 212
+        "_row_num": 239
       },
       {
         "clause": "end if",
-        "_row_num": 213
+        "_row_num": 240
       },
       {
         "clause": "else",
-        "_row_num": 214
+        "_row_num": 241
       },
       {
         "type": "select_one",
@@ -3227,60 +3372,60 @@
             }
           }
         },
-        "_row_num": 215
+        "_row_num": 242
       },
       {
         "clause": "if",
         "condition": "data('VPICHECK') == '2'",
-        "_row_num": 216
+        "_row_num": 243
       },
       {
         "type": "adate",
         "name": "VPI",
-        "_row_num": 217
+        "_row_num": 244
       },
       {
         "clause": "else",
-        "_row_num": 218
+        "_row_num": 245
       },
       {
         "type": "assign",
         "name": "VPI",
         "calculation": "data('vpi')",
-        "_row_num": 219
+        "_row_num": 246
       },
       {
         "clause": "end if",
-        "_row_num": 220
+        "_row_num": 247
       },
       {
         "clause": "end if",
-        "_row_num": 221
+        "_row_num": 248
       },
       {
         "type": "async_assign_date",
         "values_list": "linked_sarampo",
         "name": "sarampo1",
-        "_row_num": 222
+        "_row_num": 249
       },
       {
         "type": "async_assign_date",
         "values_list": "linked_febamarel",
         "name": "febamarel",
-        "_row_num": 223
+        "_row_num": 250
       },
       {
         "clause": "end screen",
-        "_row_num": 224
+        "_row_num": 251
       },
       {
         "clause": "begin screen",
-        "_row_num": 225
+        "_row_num": 252
       },
       {
         "clause": "if",
         "condition": "data('sarampo1') == null",
-        "_row_num": 226
+        "_row_num": 253
       },
       {
         "type": "adate",
@@ -3293,32 +3438,32 @@
             }
           }
         },
-        "_row_num": 227
+        "_row_num": 254
       },
       {
         "type": "select_multiple",
         "values_list": "notgiven",
         "name": "sarampo1ng",
-        "_row_num": 228
+        "_row_num": 255
       },
       {
         "clause": "if",
         "condition": "data('sarampo1ng') != null",
-        "_row_num": 229
+        "_row_num": 256
       },
       {
         "type": "assign",
         "name": "SARAMPO1",
         "calculation": "\"D:2,M:2,Y:1922\"",
-        "_row_num": 230
+        "_row_num": 257
       },
       {
         "clause": "end if",
-        "_row_num": 231
+        "_row_num": 258
       },
       {
         "clause": "else",
-        "_row_num": 232
+        "_row_num": 259
       },
       {
         "type": "select_one",
@@ -3332,40 +3477,40 @@
             }
           }
         },
-        "_row_num": 233
+        "_row_num": 260
       },
       {
         "clause": "if",
         "condition": "data('SARAMPO1CHECK') == '2'",
-        "_row_num": 234
+        "_row_num": 261
       },
       {
         "type": "adate",
         "name": "SARAMPO1",
-        "_row_num": 235
+        "_row_num": 262
       },
       {
         "clause": "else",
-        "_row_num": 236
+        "_row_num": 263
       },
       {
         "type": "assign",
         "name": "SARAMPO1",
         "calculation": "data('sarampo1')",
-        "_row_num": 237
+        "_row_num": 264
       },
       {
         "clause": "end if",
-        "_row_num": 238
+        "_row_num": 265
       },
       {
         "clause": "end if",
-        "_row_num": 239
+        "_row_num": 266
       },
       {
         "clause": "if",
         "condition": "data('febamarel') == null",
-        "_row_num": 240
+        "_row_num": 267
       },
       {
         "type": "adate",
@@ -3378,32 +3523,32 @@
             }
           }
         },
-        "_row_num": 241
+        "_row_num": 268
       },
       {
         "type": "select_multiple",
         "values_list": "notgiven",
         "name": "febamarelng",
-        "_row_num": 242
+        "_row_num": 269
       },
       {
         "clause": "if",
         "condition": "data('febamarelng') != null",
-        "_row_num": 243
+        "_row_num": 270
       },
       {
         "type": "assign",
         "name": "FEBAMAREL",
         "calculation": "\"D:2,M:2,Y:1922\"",
-        "_row_num": 244
+        "_row_num": 271
       },
       {
         "clause": "end if",
-        "_row_num": 245
+        "_row_num": 272
       },
       {
         "clause": "else",
-        "_row_num": 246
+        "_row_num": 273
       },
       {
         "type": "select_one",
@@ -3417,39 +3562,39 @@
             }
           }
         },
-        "_row_num": 247
+        "_row_num": 274
       },
       {
         "clause": "if",
         "condition": "data('FEBAMARELCHECK') == '2'",
-        "_row_num": 248
+        "_row_num": 275
       },
       {
         "type": "adate",
         "name": "FEBAMAREL",
-        "_row_num": 249
+        "_row_num": 276
       },
       {
         "clause": "else",
-        "_row_num": 250
+        "_row_num": 277
       },
       {
         "type": "assign",
         "name": "FEBAMAREL",
         "calculation": "data('febamarel')",
-        "_row_num": 251
+        "_row_num": 278
       },
       {
         "clause": "end if",
-        "_row_num": 252
+        "_row_num": 279
       },
       {
         "clause": "end if",
-        "_row_num": 253
+        "_row_num": 280
       },
       {
         "clause": "end screen",
-        "_row_num": 254
+        "_row_num": 281
       }
     ],
     "fal": [
@@ -5773,6 +5918,84 @@
         "_row_num": 74
       },
       {
+        "choice_list_name": "notgivensamep1",
+        "data_value": "1",
+        "display": {
+          "title": {
+            "text": {
+              "english": "Same as PENTA1",
+              "default": "Same as PENTA1"
+            }
+          }
+        },
+        "_row_num": 75
+      },
+      {
+        "choice_list_name": "notgivensamep1",
+        "data_value": "2",
+        "display": {
+          "title": {
+            "text": {
+              "english": "Not given",
+              "default": "Not given"
+            }
+          }
+        },
+        "_row_num": 76
+      },
+      {
+        "choice_list_name": "notgivensamep2",
+        "data_value": "1",
+        "display": {
+          "title": {
+            "text": {
+              "english": "Same as PENTA2",
+              "default": "Same as PENTA2"
+            }
+          }
+        },
+        "_row_num": 77
+      },
+      {
+        "choice_list_name": "notgivensamep2",
+        "data_value": "2",
+        "display": {
+          "title": {
+            "text": {
+              "english": "Not given",
+              "default": "Not given"
+            }
+          }
+        },
+        "_row_num": 78
+      },
+      {
+        "choice_list_name": "notgivensamep3",
+        "data_value": "1",
+        "display": {
+          "title": {
+            "text": {
+              "english": "Same as PENTA3",
+              "default": "Same as PENTA3"
+            }
+          }
+        },
+        "_row_num": 79
+      },
+      {
+        "choice_list_name": "notgivensamep3",
+        "data_value": "2",
+        "display": {
+          "title": {
+            "text": {
+              "english": "Not given",
+              "default": "Not given"
+            }
+          }
+        },
+        "_row_num": 80
+      },
+      {
         "choice_list_name": "healthstaff",
         "data_value": "1",
         "display": {
@@ -5783,7 +6006,7 @@
             }
           }
         },
-        "_row_num": 75
+        "_row_num": 81
       },
       {
         "choice_list_name": "healthstaff",
@@ -5796,7 +6019,7 @@
             }
           }
         },
-        "_row_num": 76
+        "_row_num": 82
       },
       {
         "choice_list_name": "healthstaff",
@@ -5809,7 +6032,7 @@
             }
           }
         },
-        "_row_num": 77
+        "_row_num": 83
       },
       {
         "choice_list_name": "healthstaff",
@@ -5822,7 +6045,7 @@
             }
           }
         },
-        "_row_num": 78
+        "_row_num": 84
       },
       {
         "choice_list_name": "healthstaff",
@@ -5835,7 +6058,7 @@
             }
           }
         },
-        "_row_num": 79
+        "_row_num": 85
       },
       {
         "choice_list_name": "healthstaff",
@@ -5848,7 +6071,7 @@
             }
           }
         },
-        "_row_num": 80
+        "_row_num": 86
       },
       {
         "choice_list_name": "Facility",
@@ -5861,7 +6084,7 @@
             }
           }
         },
-        "_row_num": 81
+        "_row_num": 87
       },
       {
         "choice_list_name": "Facility",
@@ -5874,7 +6097,7 @@
             }
           }
         },
-        "_row_num": 82
+        "_row_num": 88
       },
       {
         "choice_list_name": "Facility",
@@ -5887,7 +6110,7 @@
             }
           }
         },
-        "_row_num": 83
+        "_row_num": 89
       },
       {
         "choice_list_name": "Facility",
@@ -5900,7 +6123,7 @@
             }
           }
         },
-        "_row_num": 84
+        "_row_num": 90
       }
     ],
     "model": [
@@ -7289,6 +7512,16 @@
           }
         }
       },
+      "parto": {
+        "display": {
+          "title": {
+            "text": {
+              "english": "Children",
+              "default": "Criancas"
+            }
+          }
+        }
+      },
       "reg": {
         "display": {
           "title": {
@@ -7746,7 +7979,7 @@
               }
             }
           },
-          "_row_num": 75
+          "_row_num": 81
         },
         {
           "choice_list_name": "healthstaff",
@@ -7759,7 +7992,7 @@
               }
             }
           },
-          "_row_num": 76
+          "_row_num": 82
         },
         {
           "choice_list_name": "healthstaff",
@@ -7772,7 +8005,7 @@
               }
             }
           },
-          "_row_num": 77
+          "_row_num": 83
         },
         {
           "choice_list_name": "healthstaff",
@@ -7785,7 +8018,7 @@
               }
             }
           },
-          "_row_num": 78
+          "_row_num": 84
         },
         {
           "choice_list_name": "healthstaff",
@@ -7798,7 +8031,7 @@
               }
             }
           },
-          "_row_num": 79
+          "_row_num": 85
         },
         {
           "choice_list_name": "healthstaff",
@@ -7811,7 +8044,7 @@
               }
             }
           },
-          "_row_num": 80
+          "_row_num": 86
         }
       ],
       "vpcard": [
@@ -8382,6 +8615,90 @@
           "_row_num": 74
         }
       ],
+      "notgivensamep1": [
+        {
+          "choice_list_name": "notgivensamep1",
+          "data_value": "1",
+          "display": {
+            "title": {
+              "text": {
+                "english": "Same as PENTA1",
+                "default": "Same as PENTA1"
+              }
+            }
+          },
+          "_row_num": 75
+        },
+        {
+          "choice_list_name": "notgivensamep1",
+          "data_value": "2",
+          "display": {
+            "title": {
+              "text": {
+                "english": "Not given",
+                "default": "Not given"
+              }
+            }
+          },
+          "_row_num": 76
+        }
+      ],
+      "notgivensamep2": [
+        {
+          "choice_list_name": "notgivensamep2",
+          "data_value": "1",
+          "display": {
+            "title": {
+              "text": {
+                "english": "Same as PENTA2",
+                "default": "Same as PENTA2"
+              }
+            }
+          },
+          "_row_num": 77
+        },
+        {
+          "choice_list_name": "notgivensamep2",
+          "data_value": "2",
+          "display": {
+            "title": {
+              "text": {
+                "english": "Not given",
+                "default": "Not given"
+              }
+            }
+          },
+          "_row_num": 78
+        }
+      ],
+      "notgivensamep3": [
+        {
+          "choice_list_name": "notgivensamep3",
+          "data_value": "1",
+          "display": {
+            "title": {
+              "text": {
+                "english": "Same as PENTA3",
+                "default": "Same as PENTA3"
+              }
+            }
+          },
+          "_row_num": 79
+        },
+        {
+          "choice_list_name": "notgivensamep3",
+          "data_value": "2",
+          "display": {
+            "title": {
+              "text": {
+                "english": "Not given",
+                "default": "Not given"
+              }
+            }
+          },
+          "_row_num": 80
+        }
+      ],
       "Facility": [
         {
           "choice_list_name": "Facility",
@@ -8394,7 +8711,7 @@
               }
             }
           },
-          "_row_num": 81
+          "_row_num": 87
         },
         {
           "choice_list_name": "Facility",
@@ -8407,7 +8724,7 @@
               }
             }
           },
-          "_row_num": 82
+          "_row_num": 88
         },
         {
           "choice_list_name": "Facility",
@@ -8420,7 +8737,7 @@
               }
             }
           },
-          "_row_num": 83
+          "_row_num": 89
         },
         {
           "choice_list_name": "Facility",
@@ -8433,7 +8750,7 @@
               }
             }
           },
-          "_row_num": 84
+          "_row_num": 90
         }
       ]
     },
@@ -8901,8 +9218,8 @@
         "valuesList": "healthstaff",
         "_defn": [
           {
-            "_row_num": 86,
-            "section_name": "reg"
+            "_row_num": 56,
+            "section_name": "parto"
           },
           {
             "_row_num": 20,
@@ -8917,8 +9234,8 @@
         "valuesList": "vpcard",
         "_defn": [
           {
-            "_row_num": 50,
-            "section_name": "reg"
+            "_row_num": 20,
+            "section_name": "parto"
           },
           {
             "_row_num": 21,
@@ -8932,8 +9249,8 @@
         "type": "integer",
         "_defn": [
           {
-            "_row_num": 62,
-            "section_name": "reg"
+            "_row_num": 32,
+            "section_name": "parto"
           },
           {
             "_row_num": 22,
@@ -8947,8 +9264,8 @@
         "type": "integer",
         "_defn": [
           {
-            "_row_num": 60,
-            "section_name": "reg"
+            "_row_num": 30,
+            "section_name": "parto"
           },
           {
             "_row_num": 23,
@@ -8962,8 +9279,8 @@
         "type": "integer",
         "_defn": [
           {
-            "_row_num": 69,
-            "section_name": "reg"
+            "_row_num": 39,
+            "section_name": "parto"
           },
           {
             "_row_num": 24,
@@ -8977,8 +9294,8 @@
         "type": "integer",
         "_defn": [
           {
-            "_row_num": 67,
-            "section_name": "reg"
+            "_row_num": 37,
+            "section_name": "parto"
           },
           {
             "_row_num": 25,
@@ -8993,8 +9310,8 @@
         "valuesList": "YesNoU",
         "_defn": [
           {
-            "_row_num": 47,
-            "section_name": "reg"
+            "_row_num": 17,
+            "section_name": "parto"
           },
           {
             "_row_num": 26,
@@ -9020,8 +9337,8 @@
         "valuesList": "YesNoU",
         "_defn": [
           {
-            "_row_num": 53,
-            "section_name": "reg"
+            "_row_num": 23,
+            "section_name": "parto"
           },
           {
             "_row_num": 28,
@@ -9036,8 +9353,8 @@
         "valuesList": "inf1",
         "_defn": [
           {
-            "_row_num": 33,
-            "section_name": "reg"
+            "_row_num": 3,
+            "section_name": "parto"
           },
           {
             "_row_num": 29,
@@ -9052,8 +9369,8 @@
         "valuesList": "inf2",
         "_defn": [
           {
-            "_row_num": 35,
-            "section_name": "reg"
+            "_row_num": 5,
+            "section_name": "parto"
           },
           {
             "_row_num": 30,
@@ -9067,8 +9384,8 @@
         "type": "integer",
         "_defn": [
           {
-            "_row_num": 44,
-            "section_name": "reg"
+            "_row_num": 14,
+            "section_name": "parto"
           },
           {
             "_row_num": 31,
@@ -9083,8 +9400,8 @@
         "valuesList": "facility",
         "_defn": [
           {
-            "_row_num": 83,
-            "section_name": "reg"
+            "_row_num": 53,
+            "section_name": "parto"
           },
           {
             "_row_num": 32,
@@ -9098,8 +9415,8 @@
         "type": "integer",
         "_defn": [
           {
-            "_row_num": 76,
-            "section_name": "reg"
+            "_row_num": 46,
+            "section_name": "parto"
           },
           {
             "_row_num": 33,
@@ -9113,8 +9430,8 @@
         "type": "integer",
         "_defn": [
           {
-            "_row_num": 74,
-            "section_name": "reg"
+            "_row_num": 44,
+            "section_name": "parto"
           },
           {
             "_row_num": 34,
@@ -9129,8 +9446,8 @@
         "valuesList": "YesNoU",
         "_defn": [
           {
-            "_row_num": 80,
-            "section_name": "reg"
+            "_row_num": 50,
+            "section_name": "parto"
           },
           {
             "_row_num": 35,
@@ -9144,8 +9461,8 @@
         "type": "integer",
         "_defn": [
           {
-            "_row_num": 55,
-            "section_name": "reg"
+            "_row_num": 25,
+            "section_name": "parto"
           },
           {
             "_row_num": 36,
@@ -10115,11 +10432,11 @@
         "__rowNum__": 1,
         "_defn": [
           {
-            "_row_num": 241,
+            "_row_num": 268,
             "section_name": "vac"
           },
           {
-            "_row_num": 249,
+            "_row_num": 276,
             "section_name": "vac"
           },
           {
@@ -10138,7 +10455,7 @@
         "__rowNum__": 2,
         "_defn": [
           {
-            "_row_num": 223,
+            "_row_num": 250,
             "section_name": "vac"
           },
           {
@@ -10154,7 +10471,7 @@
         "valuesList": "vaccheck",
         "_defn": [
           {
-            "_row_num": 247,
+            "_row_num": 274,
             "section_name": "vac"
           },
           {
@@ -10174,7 +10491,7 @@
         "valuesList": "notgiven",
         "_defn": [
           {
-            "_row_num": 242,
+            "_row_num": 269,
             "section_name": "vac"
           },
           {
@@ -10194,11 +10511,11 @@
         "__rowNum__": 1,
         "_defn": [
           {
-            "_row_num": 71,
+            "_row_num": 74,
             "section_name": "vac"
           },
           {
-            "_row_num": 79,
+            "_row_num": 85,
             "section_name": "vac"
           },
           {
@@ -10233,7 +10550,7 @@
         "valuesList": "vaccheck",
         "_defn": [
           {
-            "_row_num": 77,
+            "_row_num": 83,
             "section_name": "vac"
           },
           {
@@ -10250,10 +10567,10 @@
           "type": "string",
           "elementKey": "pcv1ng_items"
         },
-        "valuesList": "notgiven",
+        "valuesList": "notgivensamep1",
         "_defn": [
           {
-            "_row_num": 72,
+            "_row_num": 75,
             "section_name": "vac"
           },
           {
@@ -10273,11 +10590,11 @@
         "__rowNum__": 1,
         "_defn": [
           {
-            "_row_num": 133,
+            "_row_num": 145,
             "section_name": "vac"
           },
           {
-            "_row_num": 141,
+            "_row_num": 156,
             "section_name": "vac"
           },
           {
@@ -10296,7 +10613,7 @@
         "__rowNum__": 2,
         "_defn": [
           {
-            "_row_num": 100,
+            "_row_num": 109,
             "section_name": "vac"
           },
           {
@@ -10312,7 +10629,7 @@
         "valuesList": "vaccheck",
         "_defn": [
           {
-            "_row_num": 139,
+            "_row_num": 154,
             "section_name": "vac"
           },
           {
@@ -10329,10 +10646,10 @@
           "type": "string",
           "elementKey": "pcv2ng_items"
         },
-        "valuesList": "notgiven",
+        "valuesList": "notgivensamep2",
         "_defn": [
           {
-            "_row_num": 134,
+            "_row_num": 146,
             "section_name": "vac"
           },
           {
@@ -10352,11 +10669,11 @@
         "__rowNum__": 1,
         "_defn": [
           {
-            "_row_num": 195,
+            "_row_num": 216,
             "section_name": "vac"
           },
           {
-            "_row_num": 203,
+            "_row_num": 227,
             "section_name": "vac"
           },
           {
@@ -10375,7 +10692,7 @@
         "__rowNum__": 2,
         "_defn": [
           {
-            "_row_num": 162,
+            "_row_num": 180,
             "section_name": "vac"
           },
           {
@@ -10391,7 +10708,7 @@
         "valuesList": "vaccheck",
         "_defn": [
           {
-            "_row_num": 201,
+            "_row_num": 225,
             "section_name": "vac"
           },
           {
@@ -10408,10 +10725,10 @@
           "type": "string",
           "elementKey": "pcv3ng_items"
         },
-        "valuesList": "notgiven",
+        "valuesList": "notgivensamep3",
         "_defn": [
           {
-            "_row_num": 196,
+            "_row_num": 217,
             "section_name": "vac"
           },
           {
@@ -10510,11 +10827,11 @@
         "__rowNum__": 1,
         "_defn": [
           {
-            "_row_num": 105,
+            "_row_num": 114,
             "section_name": "vac"
           },
           {
-            "_row_num": 113,
+            "_row_num": 122,
             "section_name": "vac"
           },
           {
@@ -10533,7 +10850,7 @@
         "__rowNum__": 2,
         "_defn": [
           {
-            "_row_num": 98,
+            "_row_num": 107,
             "section_name": "vac"
           },
           {
@@ -10549,7 +10866,7 @@
         "valuesList": "vaccheck",
         "_defn": [
           {
-            "_row_num": 111,
+            "_row_num": 120,
             "section_name": "vac"
           },
           {
@@ -10569,7 +10886,7 @@
         "valuesList": "notgiven",
         "_defn": [
           {
-            "_row_num": 106,
+            "_row_num": 115,
             "section_name": "vac"
           },
           {
@@ -10589,11 +10906,11 @@
         "__rowNum__": 1,
         "_defn": [
           {
-            "_row_num": 167,
+            "_row_num": 185,
             "section_name": "vac"
           },
           {
-            "_row_num": 175,
+            "_row_num": 193,
             "section_name": "vac"
           },
           {
@@ -10612,7 +10929,7 @@
         "__rowNum__": 2,
         "_defn": [
           {
-            "_row_num": 160,
+            "_row_num": 178,
             "section_name": "vac"
           },
           {
@@ -10628,7 +10945,7 @@
         "valuesList": "vaccheck",
         "_defn": [
           {
-            "_row_num": 173,
+            "_row_num": 191,
             "section_name": "vac"
           },
           {
@@ -10648,7 +10965,7 @@
         "valuesList": "notgiven",
         "_defn": [
           {
-            "_row_num": 168,
+            "_row_num": 186,
             "section_name": "vac"
           },
           {
@@ -10672,7 +10989,7 @@
             "section_name": "vac"
           },
           {
-            "_row_num": 65,
+            "_row_num": 68,
             "section_name": "vac"
           },
           {
@@ -10707,7 +11024,7 @@
         "valuesList": "vaccheck",
         "_defn": [
           {
-            "_row_num": 63,
+            "_row_num": 66,
             "section_name": "vac"
           },
           {
@@ -10724,7 +11041,7 @@
           "type": "string",
           "elementKey": "polio1ng_items"
         },
-        "valuesList": "notgiven",
+        "valuesList": "notgivensamep1",
         "_defn": [
           {
             "_row_num": 58,
@@ -10747,11 +11064,11 @@
         "__rowNum__": 1,
         "_defn": [
           {
-            "_row_num": 119,
+            "_row_num": 128,
             "section_name": "vac"
           },
           {
-            "_row_num": 127,
+            "_row_num": 139,
             "section_name": "vac"
           },
           {
@@ -10770,7 +11087,7 @@
         "__rowNum__": 2,
         "_defn": [
           {
-            "_row_num": 99,
+            "_row_num": 108,
             "section_name": "vac"
           },
           {
@@ -10786,7 +11103,7 @@
         "valuesList": "vaccheck",
         "_defn": [
           {
-            "_row_num": 125,
+            "_row_num": 137,
             "section_name": "vac"
           },
           {
@@ -10803,10 +11120,10 @@
           "type": "string",
           "elementKey": "polio2ng_items"
         },
-        "valuesList": "notgiven",
+        "valuesList": "notgivensamep2",
         "_defn": [
           {
-            "_row_num": 120,
+            "_row_num": 129,
             "section_name": "vac"
           },
           {
@@ -10826,11 +11143,11 @@
         "__rowNum__": 1,
         "_defn": [
           {
-            "_row_num": 181,
+            "_row_num": 199,
             "section_name": "vac"
           },
           {
-            "_row_num": 189,
+            "_row_num": 210,
             "section_name": "vac"
           },
           {
@@ -10849,7 +11166,7 @@
         "__rowNum__": 2,
         "_defn": [
           {
-            "_row_num": 161,
+            "_row_num": 179,
             "section_name": "vac"
           },
           {
@@ -10865,7 +11182,7 @@
         "valuesList": "vaccheck",
         "_defn": [
           {
-            "_row_num": 187,
+            "_row_num": 208,
             "section_name": "vac"
           },
           {
@@ -10882,10 +11199,10 @@
           "type": "string",
           "elementKey": "polio3ng_items"
         },
-        "valuesList": "notgiven",
+        "valuesList": "notgivensamep3",
         "_defn": [
           {
-            "_row_num": 182,
+            "_row_num": 200,
             "section_name": "vac"
           },
           {
@@ -10984,11 +11301,11 @@
         "__rowNum__": 1,
         "_defn": [
           {
-            "_row_num": 85,
+            "_row_num": 91,
             "section_name": "vac"
           },
           {
-            "_row_num": 93,
+            "_row_num": 102,
             "section_name": "vac"
           },
           {
@@ -11023,7 +11340,7 @@
         "valuesList": "vaccheck",
         "_defn": [
           {
-            "_row_num": 91,
+            "_row_num": 100,
             "section_name": "vac"
           },
           {
@@ -11040,10 +11357,10 @@
           "type": "string",
           "elementKey": "rox1ng_items"
         },
-        "valuesList": "notgiven",
+        "valuesList": "notgivensamep1",
         "_defn": [
           {
-            "_row_num": 86,
+            "_row_num": 92,
             "section_name": "vac"
           },
           {
@@ -11063,11 +11380,11 @@
         "__rowNum__": 1,
         "_defn": [
           {
-            "_row_num": 147,
+            "_row_num": 162,
             "section_name": "vac"
           },
           {
-            "_row_num": 155,
+            "_row_num": 173,
             "section_name": "vac"
           },
           {
@@ -11086,7 +11403,7 @@
         "__rowNum__": 2,
         "_defn": [
           {
-            "_row_num": 101,
+            "_row_num": 110,
             "section_name": "vac"
           },
           {
@@ -11102,7 +11419,7 @@
         "valuesList": "vaccheck",
         "_defn": [
           {
-            "_row_num": 153,
+            "_row_num": 171,
             "section_name": "vac"
           },
           {
@@ -11119,10 +11436,10 @@
           "type": "string",
           "elementKey": "rox2ng_items"
         },
-        "valuesList": "notgiven",
+        "valuesList": "notgivensamep2",
         "_defn": [
           {
-            "_row_num": 148,
+            "_row_num": 163,
             "section_name": "vac"
           },
           {
@@ -11142,11 +11459,11 @@
         "__rowNum__": 1,
         "_defn": [
           {
-            "_row_num": 227,
+            "_row_num": 254,
             "section_name": "vac"
           },
           {
-            "_row_num": 235,
+            "_row_num": 262,
             "section_name": "vac"
           },
           {
@@ -11165,7 +11482,7 @@
         "__rowNum__": 2,
         "_defn": [
           {
-            "_row_num": 222,
+            "_row_num": 249,
             "section_name": "vac"
           },
           {
@@ -11181,7 +11498,7 @@
         "valuesList": "vaccheck",
         "_defn": [
           {
-            "_row_num": 233,
+            "_row_num": 260,
             "section_name": "vac"
           },
           {
@@ -11201,7 +11518,7 @@
         "valuesList": "notgiven",
         "_defn": [
           {
-            "_row_num": 228,
+            "_row_num": 255,
             "section_name": "vac"
           },
           {
@@ -11221,11 +11538,11 @@
         "__rowNum__": 1,
         "_defn": [
           {
-            "_row_num": 209,
+            "_row_num": 233,
             "section_name": "vac"
           },
           {
-            "_row_num": 217,
+            "_row_num": 244,
             "section_name": "vac"
           },
           {
@@ -11244,7 +11561,7 @@
         "__rowNum__": 2,
         "_defn": [
           {
-            "_row_num": 163,
+            "_row_num": 181,
             "section_name": "vac"
           },
           {
@@ -11260,7 +11577,7 @@
         "valuesList": "vaccheck",
         "_defn": [
           {
-            "_row_num": 215,
+            "_row_num": 242,
             "section_name": "vac"
           },
           {
@@ -11277,10 +11594,10 @@
           "type": "string",
           "elementKey": "vping_items"
         },
-        "valuesList": "notgiven",
+        "valuesList": "notgivensamep3",
         "_defn": [
           {
-            "_row_num": 210,
+            "_row_num": 234,
             "section_name": "vac"
           },
           {
@@ -12207,6 +12524,7 @@
     "section_names": [
       "fal",
       "initial",
+      "parto",
       "reg",
       "survey",
       "vac",
@@ -12221,6 +12539,7 @@
         },
         "reachable_sections": {
           "reg": true,
+          "parto": true,
           "visit": true,
           "vac": true,
           "fal": true
@@ -12346,8 +12665,16 @@
       },
       "reg": {
         "section_name": "reg",
-        "nested_sections": {},
-        "reachable_sections": {},
+        "nested_sections": {
+          "parto": true,
+          "visit": true
+        },
+        "reachable_sections": {
+          "parto": true,
+          "visit": true,
+          "vac": true,
+          "fal": true
+        },
         "prompts": [
           {
             "type": "select_one",
@@ -12590,353 +12917,48 @@
             "promptIdx": 12
           },
           {
-            "type": "select_one",
-            "values_list": "inf1",
-            "name": "inf1",
+            "clause": "do section parto",
+            "_row_num": 32,
+            "__rowNum__": 31,
+            "_token_type": "prompt",
+            "_do_section_name": "parto",
+            "_type": "_section",
+            "promptIdx": 13,
             "display": {
-              "prompt": {
+              "title": {
                 "text": {
-                  "english": "Informant",
-                  "default": "Informador"
+                  "english": "Children",
+                  "default": "Criancas"
                 }
               }
             },
-            "_row_num": 33,
-            "__rowNum__": 32,
-            "_token_type": "prompt",
-            "_type": "select_one",
-            "_branch_label_enclosing_screen": "reg/_screen32",
-            "promptIdx": 13
+            "_branch_label_enclosing_screen": "parto/0"
           },
           {
-            "type": "select_one",
-            "values_list": "inf2",
-            "name": "inf2",
+            "clause": "do section visit",
+            "_row_num": 34,
+            "__rowNum__": 33,
+            "_token_type": "prompt",
+            "_do_section_name": "visit",
+            "_type": "_section",
+            "promptIdx": 14,
             "display": {
-              "prompt": {
+              "title": {
                 "text": {
-                  "english": "Other informant",
-                  "default": "Outro informador"
+                  "english": "Children",
+                  "default": "Criancas"
                 }
               }
             },
-            "_row_num": 35,
-            "__rowNum__": 34,
-            "_token_type": "prompt",
-            "_type": "select_one",
-            "_branch_label_enclosing_screen": "reg/_screen32",
-            "promptIdx": 14
-          },
-          {
-            "type": "integer",
-            "name": "LITTERSIZE",
-            "display": {
-              "prompt": {
-                "text": {
-                  "english": "Number of children born",
-                  "default": "Number of children born"
-                }
-              }
-            },
-            "_row_num": 44,
-            "__rowNum__": 43,
-            "_token_type": "prompt",
-            "_type": "integer",
-            "_branch_label_enclosing_screen": "reg/_screen43",
-            "promptIdx": 15
-          },
-          {
-            "type": "select_one",
-            "values_list": "YesNoU",
-            "name": "GRCONS",
-            "display": {
-              "prompt": {
-                "text": {
-                  "english": "Did the woman seek consultations during pregnancy?",
-                  "default": "Did the woman seek consultations during pregnancy?"
-                }
-              }
-            },
-            "_row_num": 47,
-            "__rowNum__": 46,
-            "_token_type": "prompt",
-            "_type": "select_one",
-            "_branch_label_enclosing_screen": "reg/_screen46",
-            "promptIdx": 16
-          },
-          {
-            "type": "select_one",
-            "values_list": "vpcard",
-            "name": "CART_ANC",
-            "display": {
-              "prompt": {
-                "text": {
-                  "english": "Card",
-                  "default": "Card"
-                }
-              }
-            },
-            "_row_num": 50,
-            "__rowNum__": 49,
-            "_token_type": "prompt",
-            "_type": "select_one",
-            "_branch_label_enclosing_screen": "reg/_screen49",
-            "promptIdx": 17
-          },
-          {
-            "type": "select_one",
-            "values_list": "YesNoU",
-            "name": "GRVAC",
-            "display": {
-              "prompt": {
-                "text": "Vacina anti-tetánica durante esta gravidez?"
-              }
-            },
-            "_row_num": 53,
-            "__rowNum__": 52,
-            "_token_type": "prompt",
-            "_type": "select_one",
-            "_branch_label_enclosing_screen": "reg/_screen52",
-            "promptIdx": 18
-          },
-          {
-            "type": "integer",
-            "name": "VACTTHI",
-            "display": {
-              "prompt": {
-                "text": {
-                  "english": "vac. Hist",
-                  "default": "vac. Hist"
-                }
-              }
-            },
-            "_row_num": 55,
-            "__rowNum__": 54,
-            "_token_type": "prompt",
-            "_type": "integer",
-            "_branch_label_enclosing_screen": "reg/_screen52",
-            "promptIdx": 19
-          },
-          {
-            "type": "note",
-            "display": {
-              "prompt": {
-                "text": {
-                  "english": "How many prenatal consultations?",
-                  "default": "Quantas consultas pré-natais durante esta gravidez?"
-                }
-              }
-            },
-            "_row_num": 59,
-            "__rowNum__": 58,
-            "_token_type": "prompt",
-            "_type": "note",
-            "_branch_label_enclosing_screen": "reg/_screen58",
-            "promptIdx": 20
-          },
-          {
-            "type": "integer",
-            "name": "CDG_M",
-            "display": {
-              "prompt": {
-                "text": {
-                  "english": "Woman",
-                  "default": "Mulher"
-                }
-              }
-            },
-            "_row_num": 60,
-            "__rowNum__": 59,
-            "_token_type": "prompt",
-            "_type": "integer",
-            "_branch_label_enclosing_screen": "reg/_screen58",
-            "promptIdx": 21
-          },
-          {
-            "type": "integer",
-            "name": "CDG_C",
-            "display": {
-              "prompt": {
-                "text": {
-                  "english": "Card",
-                  "default": "Cartão"
-                }
-              }
-            },
-            "_row_num": 62,
-            "__rowNum__": 61,
-            "_token_type": "prompt",
-            "_type": "integer",
-            "_branch_label_enclosing_screen": "reg/_screen58",
-            "promptIdx": 22
-          },
-          {
-            "type": "note",
-            "display": {
-              "prompt": {
-                "text": {
-                  "english": "Number of times received iron/FA",
-                  "default": "A grávida recebeu comprimidos com ferro quantas vezes?"
-                }
-              }
-            },
-            "_row_num": 66,
-            "__rowNum__": 65,
-            "_token_type": "prompt",
-            "_type": "note",
-            "_branch_label_enclosing_screen": "reg/_screen65",
-            "promptIdx": 23
-          },
-          {
-            "type": "integer",
-            "name": "FEDEP_M",
-            "display": {
-              "prompt": {
-                "text": {
-                  "english": "Woman",
-                  "default": "Mulher"
-                }
-              }
-            },
-            "_row_num": 67,
-            "__rowNum__": 66,
-            "_token_type": "prompt",
-            "_type": "integer",
-            "_branch_label_enclosing_screen": "reg/_screen65",
-            "promptIdx": 24
-          },
-          {
-            "type": "integer",
-            "name": "FEDEP_C",
-            "display": {
-              "prompt": {
-                "text": {
-                  "english": "Card",
-                  "default": "Cartão"
-                }
-              }
-            },
-            "_row_num": 69,
-            "__rowNum__": 68,
-            "_token_type": "prompt",
-            "_type": "integer",
-            "_branch_label_enclosing_screen": "reg/_screen65",
-            "promptIdx": 25
-          },
-          {
-            "type": "note",
-            "display": {
-              "prompt": {
-                "text": "A grávida recebeu fansidar (TPI, SP) quantas vezes?"
-              }
-            },
-            "_row_num": 73,
-            "__rowNum__": 72,
-            "_token_type": "prompt",
-            "_type": "note",
-            "_branch_label_enclosing_screen": "reg/_screen72",
-            "promptIdx": 26
-          },
-          {
-            "type": "integer",
-            "name": "QVFANSI_M",
-            "display": {
-              "prompt": {
-                "text": {
-                  "english": "Woman",
-                  "default": "Mulher"
-                }
-              }
-            },
-            "_row_num": 74,
-            "__rowNum__": 73,
-            "_token_type": "prompt",
-            "_type": "integer",
-            "_branch_label_enclosing_screen": "reg/_screen72",
-            "promptIdx": 27
-          },
-          {
-            "type": "integer",
-            "name": "QVFANSI_C",
-            "display": {
-              "prompt": {
-                "text": {
-                  "english": "Card",
-                  "default": "Cartão"
-                }
-              }
-            },
-            "_row_num": 76,
-            "__rowNum__": 75,
-            "_token_type": "prompt",
-            "_type": "integer",
-            "_branch_label_enclosing_screen": "reg/_screen72",
-            "promptIdx": 28
-          },
-          {
-            "type": "select_one",
-            "values_list": "YesNoU",
-            "name": "TABPART",
-            "display": {
-              "prompt": {
-                "text": {
-                  "english": "Did the woman give birth in the village?",
-                  "default": "Did the woman give birth in the village?"
-                }
-              }
-            },
-            "_row_num": 80,
-            "__rowNum__": 79,
-            "_token_type": "prompt",
-            "_type": "select_one",
-            "_branch_label_enclosing_screen": "reg/_screen79",
-            "promptIdx": 29
-          },
-          {
-            "type": "select_one",
-            "values_list": "facility",
-            "name": "LOCPAR",
-            "display": {
-              "prompt": {
-                "text": {
-                  "english": "Where did the woman give birth?",
-                  "default": "Where did the woman give birth?"
-                }
-              }
-            },
-            "_row_num": 83,
-            "__rowNum__": 82,
-            "_token_type": "prompt",
-            "_type": "select_one",
-            "_branch_label_enclosing_screen": "reg/_screen82",
-            "promptIdx": 30
-          },
-          {
-            "type": "select_one",
-            "values_list": "healthstaff",
-            "name": "ASSISTPART",
-            "display": {
-              "prompt": {
-                "text": {
-                  "english": "Who assisted the birth?",
-                  "default": "Who assisted the birth?"
-                }
-              }
-            },
-            "_row_num": 86,
-            "__rowNum__": 85,
-            "_token_type": "prompt",
-            "_type": "select_one",
-            "_branch_label_enclosing_screen": "reg/_screen85",
-            "promptIdx": 31
+            "_branch_label_enclosing_screen": "visit/0"
           },
           {
             "_token_type": "prompt",
             "type": "contents",
             "_type": "contents",
-            "_row_num": 89,
-            "_branch_label_enclosing_screen": "reg/_screen89",
-            "promptIdx": 32
+            "_row_num": 35,
+            "_branch_label_enclosing_screen": "reg/_screen35",
+            "promptIdx": 15
           }
         ],
         "validation_tag_map": {
@@ -13062,191 +13084,53 @@
           {
             "clause": "end if",
             "_token_type": "goto_label",
-            "_branch_label": "_else88",
-            "_row_num": 88,
+            "_branch_label": "_else33",
+            "_row_num": 33,
             "operationIdx": 10
           },
           {
-            "clause": "begin screen",
+            "clause": "do section parto",
             "_row_num": 32,
             "__rowNum__": 31,
-            "_token_type": "begin_screen",
-            "_end_screen_clause": {
-              "clause": "end screen",
-              "_row_num": 42,
-              "__rowNum__": 41,
-              "_token_type": "end_screen"
-            },
-            "_screen_block": "function() {var activePromptIndicies = [];\nactivePromptIndicies.push(13);\nif (data('inf1') == '2') {\nactivePromptIndicies.push(14);\n}\nif (data('inf1') == '2') {\nassign('GRINFOS', data('inf2'));\n}\nelse {\nassign('GRINFOS', data('inf1'));\n}\n\nreturn activePromptIndicies;\n}\n",
+            "_token_type": "do_section",
+            "_do_section_name": "parto",
             "operationIdx": 11
-          },
-          {
-            "clause": "begin screen",
-            "_row_num": 43,
-            "__rowNum__": 42,
-            "_token_type": "begin_screen",
-            "_end_screen_clause": {
-              "clause": "end screen",
-              "_row_num": 45,
-              "__rowNum__": 44,
-              "_token_type": "end_screen"
-            },
-            "_screen_block": "function() {var activePromptIndicies = [];\nactivePromptIndicies.push(15);\n\nreturn activePromptIndicies;\n}\n",
-            "operationIdx": 12
-          },
-          {
-            "clause": "begin screen",
-            "_row_num": 46,
-            "__rowNum__": 45,
-            "_token_type": "begin_screen",
-            "_end_screen_clause": {
-              "clause": "end screen",
-              "_row_num": 48,
-              "__rowNum__": 47,
-              "_token_type": "end_screen"
-            },
-            "_screen_block": "function() {var activePromptIndicies = [];\nactivePromptIndicies.push(16);\n\nreturn activePromptIndicies;\n}\n",
-            "operationIdx": 13
-          },
-          {
-            "clause": "begin screen",
-            "_row_num": 49,
-            "__rowNum__": 48,
-            "_token_type": "begin_screen",
-            "_end_screen_clause": {
-              "clause": "end screen",
-              "_row_num": 51,
-              "__rowNum__": 50,
-              "_token_type": "end_screen"
-            },
-            "_screen_block": "function() {var activePromptIndicies = [];\nactivePromptIndicies.push(17);\n\nreturn activePromptIndicies;\n}\n",
-            "operationIdx": 14
-          },
-          {
-            "clause": "begin screen",
-            "_row_num": 52,
-            "__rowNum__": 51,
-            "_token_type": "begin_screen",
-            "_end_screen_clause": {
-              "clause": "end screen",
-              "_row_num": 57,
-              "__rowNum__": 56,
-              "_token_type": "end_screen"
-            },
-            "_screen_block": "function() {var activePromptIndicies = [];\nactivePromptIndicies.push(18);\nif (data('GRVAC') == '1') {\nactivePromptIndicies.push(19);\n}\n\nreturn activePromptIndicies;\n}\n",
-            "operationIdx": 15
-          },
-          {
-            "clause": "begin screen",
-            "_row_num": 58,
-            "__rowNum__": 57,
-            "_token_type": "begin_screen",
-            "_end_screen_clause": {
-              "clause": "end screen",
-              "_row_num": 64,
-              "__rowNum__": 63,
-              "_token_type": "end_screen"
-            },
-            "_screen_block": "function() {var activePromptIndicies = [];\nactivePromptIndicies.push(20);\nactivePromptIndicies.push(21);\nif (data('CART_ANC') == 'VIC') {\nactivePromptIndicies.push(22);\n}\n\nreturn activePromptIndicies;\n}\n",
-            "operationIdx": 16
-          },
-          {
-            "clause": "begin screen",
-            "_row_num": 65,
-            "__rowNum__": 64,
-            "_token_type": "begin_screen",
-            "_end_screen_clause": {
-              "clause": "end screen",
-              "_row_num": 71,
-              "__rowNum__": 70,
-              "_token_type": "end_screen"
-            },
-            "_screen_block": "function() {var activePromptIndicies = [];\nactivePromptIndicies.push(23);\nactivePromptIndicies.push(24);\nif (data('CART_ANC') == 'VIC') {\nactivePromptIndicies.push(25);\n}\n\nreturn activePromptIndicies;\n}\n",
-            "operationIdx": 17
-          },
-          {
-            "clause": "begin screen",
-            "_row_num": 72,
-            "__rowNum__": 71,
-            "_token_type": "begin_screen",
-            "_end_screen_clause": {
-              "clause": "end screen",
-              "_row_num": 78,
-              "__rowNum__": 77,
-              "_token_type": "end_screen"
-            },
-            "_screen_block": "function() {var activePromptIndicies = [];\nactivePromptIndicies.push(26);\nactivePromptIndicies.push(27);\nif (data('CART_ANC') == 'VIC') {\nactivePromptIndicies.push(28);\n}\n\nreturn activePromptIndicies;\n}\n",
-            "operationIdx": 18
-          },
-          {
-            "clause": "begin screen",
-            "_row_num": 79,
-            "__rowNum__": 78,
-            "_token_type": "begin_screen",
-            "_end_screen_clause": {
-              "clause": "end screen",
-              "_row_num": 81,
-              "__rowNum__": 80,
-              "_token_type": "end_screen"
-            },
-            "_screen_block": "function() {var activePromptIndicies = [];\nactivePromptIndicies.push(29);\n\nreturn activePromptIndicies;\n}\n",
-            "operationIdx": 19
-          },
-          {
-            "clause": "begin screen",
-            "_row_num": 82,
-            "__rowNum__": 81,
-            "_token_type": "begin_screen",
-            "_end_screen_clause": {
-              "clause": "end screen",
-              "_row_num": 84,
-              "__rowNum__": 83,
-              "_token_type": "end_screen"
-            },
-            "_screen_block": "function() {var activePromptIndicies = [];\nactivePromptIndicies.push(30);\n\nreturn activePromptIndicies;\n}\n",
-            "operationIdx": 20
-          },
-          {
-            "clause": "begin screen",
-            "_row_num": 85,
-            "__rowNum__": 84,
-            "_token_type": "begin_screen",
-            "_end_screen_clause": {
-              "clause": "end screen",
-              "_row_num": 87,
-              "__rowNum__": 86,
-              "_token_type": "end_screen"
-            },
-            "_screen_block": "function() {var activePromptIndicies = [];\nactivePromptIndicies.push(31);\n\nreturn activePromptIndicies;\n}\n",
-            "operationIdx": 21
           },
           {
             "clause": "end if",
             "_token_type": "goto_label",
-            "_branch_label": "_endif88",
-            "_row_num": 88,
-            "operationIdx": 22
+            "_branch_label": "_endif33",
+            "_row_num": 33,
+            "operationIdx": 12
+          },
+          {
+            "clause": "do section visit",
+            "_row_num": 34,
+            "__rowNum__": 33,
+            "_token_type": "do_section",
+            "_do_section_name": "visit",
+            "operationIdx": 13
           },
           {
             "_token_type": "exit_section",
             "clause": "exit section",
-            "_row_num": 89,
-            "operationIdx": 23
+            "_row_num": 35,
+            "operationIdx": 14
           },
           {
-            "_row_num": 89,
+            "_row_num": 35,
             "_token_type": "begin_screen",
-            "_screen_block": "function() {var activePromptIndicies = [];\nactivePromptIndicies.push(32);\n\nreturn activePromptIndicies;\n}\n",
+            "_screen_block": "function() {var activePromptIndicies = [];\nactivePromptIndicies.push(15);\n\nreturn activePromptIndicies;\n}\n",
             "screen": {
               "hideInBackHistory": true
             },
-            "operationIdx": 24
+            "operationIdx": 15
           },
           {
             "_token_type": "resume",
             "clause": "resume",
-            "_row_num": 89,
-            "operationIdx": 25
+            "_row_num": 35,
+            "operationIdx": 16
           }
         ],
         "branch_label_map": {
@@ -13260,21 +13144,561 @@
           "_screen22": 7,
           "_screen25": 8,
           "_then31": 11,
-          "_screen32": 11,
-          "_screen43": 12,
-          "_screen46": 13,
-          "_screen49": 14,
-          "_screen52": 15,
-          "_screen58": 16,
-          "_screen65": 17,
-          "_screen72": 18,
-          "_screen79": 19,
-          "_screen82": 20,
-          "_screen85": 21,
-          "_else88": 23,
-          "_endif88": 23,
-          "_contents": 24,
-          "_screen89": 24
+          "_else33": 13,
+          "_endif33": 13,
+          "_contents": 15,
+          "_screen35": 15
+        }
+      },
+      "parto": {
+        "section_name": "parto",
+        "nested_sections": {},
+        "reachable_sections": {},
+        "prompts": [
+          {
+            "type": "select_one",
+            "values_list": "inf1",
+            "name": "inf1",
+            "display": {
+              "prompt": {
+                "text": {
+                  "english": "Informant",
+                  "default": "Informador"
+                }
+              }
+            },
+            "_row_num": 3,
+            "__rowNum__": 2,
+            "_token_type": "prompt",
+            "_type": "select_one",
+            "_branch_label_enclosing_screen": "parto/_screen2",
+            "promptIdx": 0
+          },
+          {
+            "type": "select_one",
+            "values_list": "inf2",
+            "name": "inf2",
+            "display": {
+              "prompt": {
+                "text": {
+                  "english": "Other informant",
+                  "default": "Outro informador"
+                }
+              }
+            },
+            "_row_num": 5,
+            "__rowNum__": 4,
+            "_token_type": "prompt",
+            "_type": "select_one",
+            "_branch_label_enclosing_screen": "parto/_screen2",
+            "promptIdx": 1
+          },
+          {
+            "type": "integer",
+            "name": "LITTERSIZE",
+            "display": {
+              "prompt": {
+                "text": {
+                  "english": "Number of children born",
+                  "default": "Number of children born"
+                }
+              }
+            },
+            "_row_num": 14,
+            "__rowNum__": 13,
+            "_token_type": "prompt",
+            "_type": "integer",
+            "_branch_label_enclosing_screen": "parto/_screen13",
+            "promptIdx": 2
+          },
+          {
+            "type": "select_one",
+            "values_list": "YesNoU",
+            "name": "GRCONS",
+            "display": {
+              "prompt": {
+                "text": {
+                  "english": "Did the woman seek consultations during pregnancy?",
+                  "default": "Did the woman seek consultations during pregnancy?"
+                }
+              }
+            },
+            "_row_num": 17,
+            "__rowNum__": 16,
+            "_token_type": "prompt",
+            "_type": "select_one",
+            "_branch_label_enclosing_screen": "parto/_screen16",
+            "promptIdx": 3
+          },
+          {
+            "type": "select_one",
+            "values_list": "vpcard",
+            "name": "CART_ANC",
+            "display": {
+              "prompt": {
+                "text": {
+                  "english": "Card",
+                  "default": "Card"
+                }
+              }
+            },
+            "_row_num": 20,
+            "__rowNum__": 19,
+            "_token_type": "prompt",
+            "_type": "select_one",
+            "_branch_label_enclosing_screen": "parto/_screen19",
+            "promptIdx": 4
+          },
+          {
+            "type": "select_one",
+            "values_list": "YesNoU",
+            "name": "GRVAC",
+            "display": {
+              "prompt": {
+                "text": "Vacina anti-tetánica durante esta gravidez?"
+              }
+            },
+            "_row_num": 23,
+            "__rowNum__": 22,
+            "_token_type": "prompt",
+            "_type": "select_one",
+            "_branch_label_enclosing_screen": "parto/_screen22",
+            "promptIdx": 5
+          },
+          {
+            "type": "integer",
+            "name": "VACTTHI",
+            "display": {
+              "prompt": {
+                "text": {
+                  "english": "vac. Hist",
+                  "default": "vac. Hist"
+                }
+              }
+            },
+            "_row_num": 25,
+            "__rowNum__": 24,
+            "_token_type": "prompt",
+            "_type": "integer",
+            "_branch_label_enclosing_screen": "parto/_screen22",
+            "promptIdx": 6
+          },
+          {
+            "type": "note",
+            "display": {
+              "prompt": {
+                "text": {
+                  "english": "How many prenatal consultations?",
+                  "default": "Quantas consultas pré-natais durante esta gravidez?"
+                }
+              }
+            },
+            "_row_num": 29,
+            "__rowNum__": 28,
+            "_token_type": "prompt",
+            "_type": "note",
+            "_branch_label_enclosing_screen": "parto/_screen28",
+            "promptIdx": 7
+          },
+          {
+            "type": "integer",
+            "name": "CDG_M",
+            "display": {
+              "prompt": {
+                "text": {
+                  "english": "Woman",
+                  "default": "Mulher"
+                }
+              }
+            },
+            "_row_num": 30,
+            "__rowNum__": 29,
+            "_token_type": "prompt",
+            "_type": "integer",
+            "_branch_label_enclosing_screen": "parto/_screen28",
+            "promptIdx": 8
+          },
+          {
+            "type": "integer",
+            "name": "CDG_C",
+            "display": {
+              "prompt": {
+                "text": {
+                  "english": "Card",
+                  "default": "Cartão"
+                }
+              }
+            },
+            "_row_num": 32,
+            "__rowNum__": 31,
+            "_token_type": "prompt",
+            "_type": "integer",
+            "_branch_label_enclosing_screen": "parto/_screen28",
+            "promptIdx": 9
+          },
+          {
+            "type": "note",
+            "display": {
+              "prompt": {
+                "text": {
+                  "english": "Number of times received iron/FA",
+                  "default": "A grávida recebeu comprimidos com ferro quantas vezes?"
+                }
+              }
+            },
+            "_row_num": 36,
+            "__rowNum__": 35,
+            "_token_type": "prompt",
+            "_type": "note",
+            "_branch_label_enclosing_screen": "parto/_screen35",
+            "promptIdx": 10
+          },
+          {
+            "type": "integer",
+            "name": "FEDEP_M",
+            "display": {
+              "prompt": {
+                "text": {
+                  "english": "Woman",
+                  "default": "Mulher"
+                }
+              }
+            },
+            "_row_num": 37,
+            "__rowNum__": 36,
+            "_token_type": "prompt",
+            "_type": "integer",
+            "_branch_label_enclosing_screen": "parto/_screen35",
+            "promptIdx": 11
+          },
+          {
+            "type": "integer",
+            "name": "FEDEP_C",
+            "display": {
+              "prompt": {
+                "text": {
+                  "english": "Card",
+                  "default": "Cartão"
+                }
+              }
+            },
+            "_row_num": 39,
+            "__rowNum__": 38,
+            "_token_type": "prompt",
+            "_type": "integer",
+            "_branch_label_enclosing_screen": "parto/_screen35",
+            "promptIdx": 12
+          },
+          {
+            "type": "note",
+            "display": {
+              "prompt": {
+                "text": "A grávida recebeu fansidar (TPI, SP) quantas vezes?"
+              }
+            },
+            "_row_num": 43,
+            "__rowNum__": 42,
+            "_token_type": "prompt",
+            "_type": "note",
+            "_branch_label_enclosing_screen": "parto/_screen42",
+            "promptIdx": 13
+          },
+          {
+            "type": "integer",
+            "name": "QVFANSI_M",
+            "display": {
+              "prompt": {
+                "text": {
+                  "english": "Woman",
+                  "default": "Mulher"
+                }
+              }
+            },
+            "_row_num": 44,
+            "__rowNum__": 43,
+            "_token_type": "prompt",
+            "_type": "integer",
+            "_branch_label_enclosing_screen": "parto/_screen42",
+            "promptIdx": 14
+          },
+          {
+            "type": "integer",
+            "name": "QVFANSI_C",
+            "display": {
+              "prompt": {
+                "text": {
+                  "english": "Card",
+                  "default": "Cartão"
+                }
+              }
+            },
+            "_row_num": 46,
+            "__rowNum__": 45,
+            "_token_type": "prompt",
+            "_type": "integer",
+            "_branch_label_enclosing_screen": "parto/_screen42",
+            "promptIdx": 15
+          },
+          {
+            "type": "select_one",
+            "values_list": "YesNoU",
+            "name": "TABPART",
+            "display": {
+              "prompt": {
+                "text": {
+                  "english": "Did the woman give birth in the village?",
+                  "default": "Did the woman give birth in the village?"
+                }
+              }
+            },
+            "_row_num": 50,
+            "__rowNum__": 49,
+            "_token_type": "prompt",
+            "_type": "select_one",
+            "_branch_label_enclosing_screen": "parto/_screen49",
+            "promptIdx": 16
+          },
+          {
+            "type": "select_one",
+            "values_list": "facility",
+            "name": "LOCPAR",
+            "display": {
+              "prompt": {
+                "text": {
+                  "english": "Where did the woman give birth?",
+                  "default": "Where did the woman give birth?"
+                }
+              }
+            },
+            "_row_num": 53,
+            "__rowNum__": 52,
+            "_token_type": "prompt",
+            "_type": "select_one",
+            "_branch_label_enclosing_screen": "parto/_screen52",
+            "promptIdx": 17
+          },
+          {
+            "type": "select_one",
+            "values_list": "healthstaff",
+            "name": "ASSISTPART",
+            "display": {
+              "prompt": {
+                "text": {
+                  "english": "Who assisted the birth?",
+                  "default": "Who assisted the birth?"
+                }
+              }
+            },
+            "_row_num": 56,
+            "__rowNum__": 55,
+            "_token_type": "prompt",
+            "_type": "select_one",
+            "_branch_label_enclosing_screen": "parto/_screen55",
+            "promptIdx": 18
+          },
+          {
+            "_token_type": "prompt",
+            "type": "contents",
+            "_type": "contents",
+            "_row_num": 58,
+            "_branch_label_enclosing_screen": "parto/_screen58",
+            "promptIdx": 19
+          }
+        ],
+        "validation_tag_map": {
+          "finalize": []
+        },
+        "operations": [
+          {
+            "clause": "begin screen",
+            "_row_num": 2,
+            "__rowNum__": 1,
+            "_token_type": "begin_screen",
+            "_end_screen_clause": {
+              "clause": "end screen",
+              "_row_num": 12,
+              "__rowNum__": 11,
+              "_token_type": "end_screen"
+            },
+            "_screen_block": "function() {var activePromptIndicies = [];\nactivePromptIndicies.push(0);\nif (data('inf1') == '2') {\nactivePromptIndicies.push(1);\n}\nif (data('inf1') == '2') {\nassign('GRINFOS', data('inf2'));\n}\nelse {\nassign('GRINFOS', data('inf1'));\n}\n\nreturn activePromptIndicies;\n}\n",
+            "operationIdx": 0
+          },
+          {
+            "clause": "begin screen",
+            "_row_num": 13,
+            "__rowNum__": 12,
+            "_token_type": "begin_screen",
+            "_end_screen_clause": {
+              "clause": "end screen",
+              "_row_num": 15,
+              "__rowNum__": 14,
+              "_token_type": "end_screen"
+            },
+            "_screen_block": "function() {var activePromptIndicies = [];\nactivePromptIndicies.push(2);\n\nreturn activePromptIndicies;\n}\n",
+            "operationIdx": 1
+          },
+          {
+            "clause": "begin screen",
+            "_row_num": 16,
+            "__rowNum__": 15,
+            "_token_type": "begin_screen",
+            "_end_screen_clause": {
+              "clause": "end screen",
+              "_row_num": 18,
+              "__rowNum__": 17,
+              "_token_type": "end_screen"
+            },
+            "_screen_block": "function() {var activePromptIndicies = [];\nactivePromptIndicies.push(3);\n\nreturn activePromptIndicies;\n}\n",
+            "operationIdx": 2
+          },
+          {
+            "clause": "begin screen",
+            "_row_num": 19,
+            "__rowNum__": 18,
+            "_token_type": "begin_screen",
+            "_end_screen_clause": {
+              "clause": "end screen",
+              "_row_num": 21,
+              "__rowNum__": 20,
+              "_token_type": "end_screen"
+            },
+            "_screen_block": "function() {var activePromptIndicies = [];\nactivePromptIndicies.push(4);\n\nreturn activePromptIndicies;\n}\n",
+            "operationIdx": 3
+          },
+          {
+            "clause": "begin screen",
+            "_row_num": 22,
+            "__rowNum__": 21,
+            "_token_type": "begin_screen",
+            "_end_screen_clause": {
+              "clause": "end screen",
+              "_row_num": 27,
+              "__rowNum__": 26,
+              "_token_type": "end_screen"
+            },
+            "_screen_block": "function() {var activePromptIndicies = [];\nactivePromptIndicies.push(5);\nif (data('GRVAC') == '1') {\nactivePromptIndicies.push(6);\n}\n\nreturn activePromptIndicies;\n}\n",
+            "operationIdx": 4
+          },
+          {
+            "clause": "begin screen",
+            "_row_num": 28,
+            "__rowNum__": 27,
+            "_token_type": "begin_screen",
+            "_end_screen_clause": {
+              "clause": "end screen",
+              "_row_num": 34,
+              "__rowNum__": 33,
+              "_token_type": "end_screen"
+            },
+            "_screen_block": "function() {var activePromptIndicies = [];\nactivePromptIndicies.push(7);\nactivePromptIndicies.push(8);\nif (data('CART_ANC') == 'VIC') {\nactivePromptIndicies.push(9);\n}\n\nreturn activePromptIndicies;\n}\n",
+            "operationIdx": 5
+          },
+          {
+            "clause": "begin screen",
+            "_row_num": 35,
+            "__rowNum__": 34,
+            "_token_type": "begin_screen",
+            "_end_screen_clause": {
+              "clause": "end screen",
+              "_row_num": 41,
+              "__rowNum__": 40,
+              "_token_type": "end_screen"
+            },
+            "_screen_block": "function() {var activePromptIndicies = [];\nactivePromptIndicies.push(10);\nactivePromptIndicies.push(11);\nif (data('CART_ANC') == 'VIC') {\nactivePromptIndicies.push(12);\n}\n\nreturn activePromptIndicies;\n}\n",
+            "operationIdx": 6
+          },
+          {
+            "clause": "begin screen",
+            "_row_num": 42,
+            "__rowNum__": 41,
+            "_token_type": "begin_screen",
+            "_end_screen_clause": {
+              "clause": "end screen",
+              "_row_num": 48,
+              "__rowNum__": 47,
+              "_token_type": "end_screen"
+            },
+            "_screen_block": "function() {var activePromptIndicies = [];\nactivePromptIndicies.push(13);\nactivePromptIndicies.push(14);\nif (data('CART_ANC') == 'VIC') {\nactivePromptIndicies.push(15);\n}\n\nreturn activePromptIndicies;\n}\n",
+            "operationIdx": 7
+          },
+          {
+            "clause": "begin screen",
+            "_row_num": 49,
+            "__rowNum__": 48,
+            "_token_type": "begin_screen",
+            "_end_screen_clause": {
+              "clause": "end screen",
+              "_row_num": 51,
+              "__rowNum__": 50,
+              "_token_type": "end_screen"
+            },
+            "_screen_block": "function() {var activePromptIndicies = [];\nactivePromptIndicies.push(16);\n\nreturn activePromptIndicies;\n}\n",
+            "operationIdx": 8
+          },
+          {
+            "clause": "begin screen",
+            "_row_num": 52,
+            "__rowNum__": 51,
+            "_token_type": "begin_screen",
+            "_end_screen_clause": {
+              "clause": "end screen",
+              "_row_num": 54,
+              "__rowNum__": 53,
+              "_token_type": "end_screen"
+            },
+            "_screen_block": "function() {var activePromptIndicies = [];\nactivePromptIndicies.push(17);\n\nreturn activePromptIndicies;\n}\n",
+            "operationIdx": 9
+          },
+          {
+            "clause": "begin screen",
+            "_row_num": 55,
+            "__rowNum__": 54,
+            "_token_type": "begin_screen",
+            "_end_screen_clause": {
+              "clause": "end screen",
+              "_row_num": 57,
+              "__rowNum__": 56,
+              "_token_type": "end_screen"
+            },
+            "_screen_block": "function() {var activePromptIndicies = [];\nactivePromptIndicies.push(18);\n\nreturn activePromptIndicies;\n}\n",
+            "operationIdx": 10
+          },
+          {
+            "_token_type": "exit_section",
+            "clause": "exit section",
+            "_row_num": 58,
+            "operationIdx": 11
+          },
+          {
+            "_row_num": 58,
+            "_token_type": "begin_screen",
+            "_screen_block": "function() {var activePromptIndicies = [];\nactivePromptIndicies.push(19);\n\nreturn activePromptIndicies;\n}\n",
+            "screen": {
+              "hideInBackHistory": true
+            },
+            "operationIdx": 12
+          },
+          {
+            "_token_type": "resume",
+            "clause": "resume",
+            "_row_num": 58,
+            "operationIdx": 13
+          }
+        ],
+        "branch_label_map": {
+          "_screen2": 0,
+          "_screen13": 1,
+          "_screen16": 2,
+          "_screen19": 3,
+          "_screen22": 4,
+          "_screen28": 5,
+          "_screen35": 6,
+          "_screen42": 7,
+          "_screen49": 8,
+          "_screen52": 9,
+          "_screen55": 10,
+          "_contents": 12,
+          "_screen58": 12
         }
       },
       "visit": {
@@ -15423,7 +15847,7 @@
           },
           {
             "type": "select_multiple",
-            "values_list": "notgiven",
+            "values_list": "notgivensamep1",
             "name": "polio1ng",
             "_row_num": 58,
             "__rowNum__": 57,
@@ -15444,8 +15868,8 @@
                 }
               }
             },
-            "_row_num": 63,
-            "__rowNum__": 62,
+            "_row_num": 66,
+            "__rowNum__": 65,
             "_token_type": "prompt",
             "_type": "select_one",
             "_branch_label_enclosing_screen": "vac/_screen41",
@@ -15454,8 +15878,8 @@
           {
             "type": "adate",
             "name": "POLIO1",
-            "_row_num": 65,
-            "__rowNum__": 64,
+            "_row_num": 68,
+            "__rowNum__": 67,
             "_token_type": "prompt",
             "_type": "adate",
             "_branch_label_enclosing_screen": "vac/_screen41",
@@ -15472,8 +15896,8 @@
                 }
               }
             },
-            "_row_num": 71,
-            "__rowNum__": 70,
+            "_row_num": 74,
+            "__rowNum__": 73,
             "_token_type": "prompt",
             "_type": "adate",
             "_branch_label_enclosing_screen": "vac/_screen41",
@@ -15481,10 +15905,10 @@
           },
           {
             "type": "select_multiple",
-            "values_list": "notgiven",
+            "values_list": "notgivensamep1",
             "name": "pcv1ng",
-            "_row_num": 72,
-            "__rowNum__": 71,
+            "_row_num": 75,
+            "__rowNum__": 74,
             "_token_type": "prompt",
             "_type": "select_multiple",
             "_branch_label_enclosing_screen": "vac/_screen41",
@@ -15502,8 +15926,8 @@
                 }
               }
             },
-            "_row_num": 77,
-            "__rowNum__": 76,
+            "_row_num": 83,
+            "__rowNum__": 82,
             "_token_type": "prompt",
             "_type": "select_one",
             "_branch_label_enclosing_screen": "vac/_screen41",
@@ -15512,8 +15936,8 @@
           {
             "type": "adate",
             "name": "PCV1",
-            "_row_num": 79,
-            "__rowNum__": 78,
+            "_row_num": 85,
+            "__rowNum__": 84,
             "_token_type": "prompt",
             "_type": "adate",
             "_branch_label_enclosing_screen": "vac/_screen41",
@@ -15530,8 +15954,8 @@
                 }
               }
             },
-            "_row_num": 85,
-            "__rowNum__": 84,
+            "_row_num": 91,
+            "__rowNum__": 90,
             "_token_type": "prompt",
             "_type": "adate",
             "_branch_label_enclosing_screen": "vac/_screen41",
@@ -15539,10 +15963,10 @@
           },
           {
             "type": "select_multiple",
-            "values_list": "notgiven",
+            "values_list": "notgivensamep1",
             "name": "rox1ng",
-            "_row_num": 86,
-            "__rowNum__": 85,
+            "_row_num": 92,
+            "__rowNum__": 91,
             "_token_type": "prompt",
             "_type": "select_multiple",
             "_branch_label_enclosing_screen": "vac/_screen41",
@@ -15560,8 +15984,8 @@
                 }
               }
             },
-            "_row_num": 91,
-            "__rowNum__": 90,
+            "_row_num": 100,
+            "__rowNum__": 99,
             "_token_type": "prompt",
             "_type": "select_one",
             "_branch_label_enclosing_screen": "vac/_screen41",
@@ -15570,8 +15994,8 @@
           {
             "type": "adate",
             "name": "ROX1",
-            "_row_num": 93,
-            "__rowNum__": 92,
+            "_row_num": 102,
+            "__rowNum__": 101,
             "_token_type": "prompt",
             "_type": "adate",
             "_branch_label_enclosing_screen": "vac/_screen41",
@@ -15581,8 +16005,8 @@
             "type": "async_assign_date",
             "values_list": "linked_penta2",
             "name": "penta2",
-            "_row_num": 98,
-            "__rowNum__": 97,
+            "_row_num": 107,
+            "__rowNum__": 106,
             "_token_type": "prompt",
             "_type": "async_assign_date",
             "_branch_label_enclosing_screen": "vac/_screen41",
@@ -15592,8 +16016,8 @@
             "type": "async_assign_date",
             "values_list": "linked_polio2",
             "name": "polio2",
-            "_row_num": 99,
-            "__rowNum__": 98,
+            "_row_num": 108,
+            "__rowNum__": 107,
             "_token_type": "prompt",
             "_type": "async_assign_date",
             "_branch_label_enclosing_screen": "vac/_screen41",
@@ -15603,8 +16027,8 @@
             "type": "async_assign_date",
             "values_list": "linked_pcv2",
             "name": "pcv2",
-            "_row_num": 100,
-            "__rowNum__": 99,
+            "_row_num": 109,
+            "__rowNum__": 108,
             "_token_type": "prompt",
             "_type": "async_assign_date",
             "_branch_label_enclosing_screen": "vac/_screen41",
@@ -15614,8 +16038,8 @@
             "type": "async_assign_date",
             "values_list": "linked_rox2",
             "name": "rox2",
-            "_row_num": 101,
-            "__rowNum__": 100,
+            "_row_num": 110,
+            "__rowNum__": 109,
             "_token_type": "prompt",
             "_type": "async_assign_date",
             "_branch_label_enclosing_screen": "vac/_screen41",
@@ -15632,22 +16056,22 @@
                 }
               }
             },
-            "_row_num": 105,
-            "__rowNum__": 104,
+            "_row_num": 114,
+            "__rowNum__": 113,
             "_token_type": "prompt",
             "_type": "adate",
-            "_branch_label_enclosing_screen": "vac/_screen103",
+            "_branch_label_enclosing_screen": "vac/_screen112",
             "promptIdx": 35
           },
           {
             "type": "select_multiple",
             "values_list": "notgiven",
             "name": "penta2ng",
-            "_row_num": 106,
-            "__rowNum__": 105,
+            "_row_num": 115,
+            "__rowNum__": 114,
             "_token_type": "prompt",
             "_type": "select_multiple",
-            "_branch_label_enclosing_screen": "vac/_screen103",
+            "_branch_label_enclosing_screen": "vac/_screen112",
             "promptIdx": 36
           },
           {
@@ -15662,21 +16086,21 @@
                 }
               }
             },
-            "_row_num": 111,
-            "__rowNum__": 110,
+            "_row_num": 120,
+            "__rowNum__": 119,
             "_token_type": "prompt",
             "_type": "select_one",
-            "_branch_label_enclosing_screen": "vac/_screen103",
+            "_branch_label_enclosing_screen": "vac/_screen112",
             "promptIdx": 37
           },
           {
             "type": "adate",
             "name": "PENTA2",
-            "_row_num": 113,
-            "__rowNum__": 112,
+            "_row_num": 122,
+            "__rowNum__": 121,
             "_token_type": "prompt",
             "_type": "adate",
-            "_branch_label_enclosing_screen": "vac/_screen103",
+            "_branch_label_enclosing_screen": "vac/_screen112",
             "promptIdx": 38
           },
           {
@@ -15690,22 +16114,22 @@
                 }
               }
             },
-            "_row_num": 119,
-            "__rowNum__": 118,
+            "_row_num": 128,
+            "__rowNum__": 127,
             "_token_type": "prompt",
             "_type": "adate",
-            "_branch_label_enclosing_screen": "vac/_screen103",
+            "_branch_label_enclosing_screen": "vac/_screen112",
             "promptIdx": 39
           },
           {
             "type": "select_multiple",
-            "values_list": "notgiven",
+            "values_list": "notgivensamep2",
             "name": "polio2ng",
-            "_row_num": 120,
-            "__rowNum__": 119,
+            "_row_num": 129,
+            "__rowNum__": 128,
             "_token_type": "prompt",
             "_type": "select_multiple",
-            "_branch_label_enclosing_screen": "vac/_screen103",
+            "_branch_label_enclosing_screen": "vac/_screen112",
             "promptIdx": 40
           },
           {
@@ -15720,21 +16144,21 @@
                 }
               }
             },
-            "_row_num": 125,
-            "__rowNum__": 124,
+            "_row_num": 137,
+            "__rowNum__": 136,
             "_token_type": "prompt",
             "_type": "select_one",
-            "_branch_label_enclosing_screen": "vac/_screen103",
+            "_branch_label_enclosing_screen": "vac/_screen112",
             "promptIdx": 41
           },
           {
             "type": "adate",
             "name": "POLIO2",
-            "_row_num": 127,
-            "__rowNum__": 126,
+            "_row_num": 139,
+            "__rowNum__": 138,
             "_token_type": "prompt",
             "_type": "adate",
-            "_branch_label_enclosing_screen": "vac/_screen103",
+            "_branch_label_enclosing_screen": "vac/_screen112",
             "promptIdx": 42
           },
           {
@@ -15748,22 +16172,22 @@
                 }
               }
             },
-            "_row_num": 133,
-            "__rowNum__": 132,
+            "_row_num": 145,
+            "__rowNum__": 144,
             "_token_type": "prompt",
             "_type": "adate",
-            "_branch_label_enclosing_screen": "vac/_screen103",
+            "_branch_label_enclosing_screen": "vac/_screen112",
             "promptIdx": 43
           },
           {
             "type": "select_multiple",
-            "values_list": "notgiven",
+            "values_list": "notgivensamep2",
             "name": "pcv2ng",
-            "_row_num": 134,
-            "__rowNum__": 133,
+            "_row_num": 146,
+            "__rowNum__": 145,
             "_token_type": "prompt",
             "_type": "select_multiple",
-            "_branch_label_enclosing_screen": "vac/_screen103",
+            "_branch_label_enclosing_screen": "vac/_screen112",
             "promptIdx": 44
           },
           {
@@ -15778,21 +16202,21 @@
                 }
               }
             },
-            "_row_num": 139,
-            "__rowNum__": 138,
+            "_row_num": 154,
+            "__rowNum__": 153,
             "_token_type": "prompt",
             "_type": "select_one",
-            "_branch_label_enclosing_screen": "vac/_screen103",
+            "_branch_label_enclosing_screen": "vac/_screen112",
             "promptIdx": 45
           },
           {
             "type": "adate",
             "name": "PCV2",
-            "_row_num": 141,
-            "__rowNum__": 140,
+            "_row_num": 156,
+            "__rowNum__": 155,
             "_token_type": "prompt",
             "_type": "adate",
-            "_branch_label_enclosing_screen": "vac/_screen103",
+            "_branch_label_enclosing_screen": "vac/_screen112",
             "promptIdx": 46
           },
           {
@@ -15806,22 +16230,22 @@
                 }
               }
             },
-            "_row_num": 147,
-            "__rowNum__": 146,
+            "_row_num": 162,
+            "__rowNum__": 161,
             "_token_type": "prompt",
             "_type": "adate",
-            "_branch_label_enclosing_screen": "vac/_screen103",
+            "_branch_label_enclosing_screen": "vac/_screen112",
             "promptIdx": 47
           },
           {
             "type": "select_multiple",
-            "values_list": "notgiven",
+            "values_list": "notgivensamep2",
             "name": "rox2ng",
-            "_row_num": 148,
-            "__rowNum__": 147,
+            "_row_num": 163,
+            "__rowNum__": 162,
             "_token_type": "prompt",
             "_type": "select_multiple",
-            "_branch_label_enclosing_screen": "vac/_screen103",
+            "_branch_label_enclosing_screen": "vac/_screen112",
             "promptIdx": 48
           },
           {
@@ -15836,65 +16260,65 @@
                 }
               }
             },
-            "_row_num": 153,
-            "__rowNum__": 152,
+            "_row_num": 171,
+            "__rowNum__": 170,
             "_token_type": "prompt",
             "_type": "select_one",
-            "_branch_label_enclosing_screen": "vac/_screen103",
+            "_branch_label_enclosing_screen": "vac/_screen112",
             "promptIdx": 49
           },
           {
             "type": "adate",
             "name": "ROX2",
-            "_row_num": 155,
-            "__rowNum__": 154,
+            "_row_num": 173,
+            "__rowNum__": 172,
             "_token_type": "prompt",
             "_type": "adate",
-            "_branch_label_enclosing_screen": "vac/_screen103",
+            "_branch_label_enclosing_screen": "vac/_screen112",
             "promptIdx": 50
           },
           {
             "type": "async_assign_date",
             "values_list": "linked_penta3",
             "name": "penta3",
-            "_row_num": 160,
-            "__rowNum__": 159,
+            "_row_num": 178,
+            "__rowNum__": 177,
             "_token_type": "prompt",
             "_type": "async_assign_date",
-            "_branch_label_enclosing_screen": "vac/_screen103",
+            "_branch_label_enclosing_screen": "vac/_screen112",
             "promptIdx": 51
           },
           {
             "type": "async_assign_date",
             "values_list": "linked_polio3",
             "name": "polio3",
-            "_row_num": 161,
-            "__rowNum__": 160,
+            "_row_num": 179,
+            "__rowNum__": 178,
             "_token_type": "prompt",
             "_type": "async_assign_date",
-            "_branch_label_enclosing_screen": "vac/_screen103",
+            "_branch_label_enclosing_screen": "vac/_screen112",
             "promptIdx": 52
           },
           {
             "type": "async_assign_date",
             "values_list": "linked_pcv3",
             "name": "pcv3",
-            "_row_num": 162,
-            "__rowNum__": 161,
+            "_row_num": 180,
+            "__rowNum__": 179,
             "_token_type": "prompt",
             "_type": "async_assign_date",
-            "_branch_label_enclosing_screen": "vac/_screen103",
+            "_branch_label_enclosing_screen": "vac/_screen112",
             "promptIdx": 53
           },
           {
             "type": "async_assign_date",
             "values_list": "linked_vpi",
             "name": "vpi",
-            "_row_num": 163,
-            "__rowNum__": 162,
+            "_row_num": 181,
+            "__rowNum__": 180,
             "_token_type": "prompt",
             "_type": "async_assign_date",
-            "_branch_label_enclosing_screen": "vac/_screen103",
+            "_branch_label_enclosing_screen": "vac/_screen112",
             "promptIdx": 54
           },
           {
@@ -15908,22 +16332,22 @@
                 }
               }
             },
-            "_row_num": 167,
-            "__rowNum__": 166,
+            "_row_num": 185,
+            "__rowNum__": 184,
             "_token_type": "prompt",
             "_type": "adate",
-            "_branch_label_enclosing_screen": "vac/_screen165",
+            "_branch_label_enclosing_screen": "vac/_screen183",
             "promptIdx": 55
           },
           {
             "type": "select_multiple",
             "values_list": "notgiven",
             "name": "penta3ng",
-            "_row_num": 168,
-            "__rowNum__": 167,
+            "_row_num": 186,
+            "__rowNum__": 185,
             "_token_type": "prompt",
             "_type": "select_multiple",
-            "_branch_label_enclosing_screen": "vac/_screen165",
+            "_branch_label_enclosing_screen": "vac/_screen183",
             "promptIdx": 56
           },
           {
@@ -15938,21 +16362,21 @@
                 }
               }
             },
-            "_row_num": 173,
-            "__rowNum__": 172,
+            "_row_num": 191,
+            "__rowNum__": 190,
             "_token_type": "prompt",
             "_type": "select_one",
-            "_branch_label_enclosing_screen": "vac/_screen165",
+            "_branch_label_enclosing_screen": "vac/_screen183",
             "promptIdx": 57
           },
           {
             "type": "adate",
             "name": "PENTA3",
-            "_row_num": 175,
-            "__rowNum__": 174,
+            "_row_num": 193,
+            "__rowNum__": 192,
             "_token_type": "prompt",
             "_type": "adate",
-            "_branch_label_enclosing_screen": "vac/_screen165",
+            "_branch_label_enclosing_screen": "vac/_screen183",
             "promptIdx": 58
           },
           {
@@ -15966,22 +16390,22 @@
                 }
               }
             },
-            "_row_num": 181,
-            "__rowNum__": 180,
+            "_row_num": 199,
+            "__rowNum__": 198,
             "_token_type": "prompt",
             "_type": "adate",
-            "_branch_label_enclosing_screen": "vac/_screen165",
+            "_branch_label_enclosing_screen": "vac/_screen183",
             "promptIdx": 59
           },
           {
             "type": "select_multiple",
-            "values_list": "notgiven",
+            "values_list": "notgivensamep3",
             "name": "polio3ng",
-            "_row_num": 182,
-            "__rowNum__": 181,
+            "_row_num": 200,
+            "__rowNum__": 199,
             "_token_type": "prompt",
             "_type": "select_multiple",
-            "_branch_label_enclosing_screen": "vac/_screen165",
+            "_branch_label_enclosing_screen": "vac/_screen183",
             "promptIdx": 60
           },
           {
@@ -15996,21 +16420,21 @@
                 }
               }
             },
-            "_row_num": 187,
-            "__rowNum__": 186,
+            "_row_num": 208,
+            "__rowNum__": 207,
             "_token_type": "prompt",
             "_type": "select_one",
-            "_branch_label_enclosing_screen": "vac/_screen165",
+            "_branch_label_enclosing_screen": "vac/_screen183",
             "promptIdx": 61
           },
           {
             "type": "adate",
             "name": "POLIO3",
-            "_row_num": 189,
-            "__rowNum__": 188,
+            "_row_num": 210,
+            "__rowNum__": 209,
             "_token_type": "prompt",
             "_type": "adate",
-            "_branch_label_enclosing_screen": "vac/_screen165",
+            "_branch_label_enclosing_screen": "vac/_screen183",
             "promptIdx": 62
           },
           {
@@ -16024,22 +16448,22 @@
                 }
               }
             },
-            "_row_num": 195,
-            "__rowNum__": 194,
+            "_row_num": 216,
+            "__rowNum__": 215,
             "_token_type": "prompt",
             "_type": "adate",
-            "_branch_label_enclosing_screen": "vac/_screen165",
+            "_branch_label_enclosing_screen": "vac/_screen183",
             "promptIdx": 63
           },
           {
             "type": "select_multiple",
-            "values_list": "notgiven",
+            "values_list": "notgivensamep3",
             "name": "pcv3ng",
-            "_row_num": 196,
-            "__rowNum__": 195,
+            "_row_num": 217,
+            "__rowNum__": 216,
             "_token_type": "prompt",
             "_type": "select_multiple",
-            "_branch_label_enclosing_screen": "vac/_screen165",
+            "_branch_label_enclosing_screen": "vac/_screen183",
             "promptIdx": 64
           },
           {
@@ -16054,21 +16478,21 @@
                 }
               }
             },
-            "_row_num": 201,
-            "__rowNum__": 200,
+            "_row_num": 225,
+            "__rowNum__": 224,
             "_token_type": "prompt",
             "_type": "select_one",
-            "_branch_label_enclosing_screen": "vac/_screen165",
+            "_branch_label_enclosing_screen": "vac/_screen183",
             "promptIdx": 65
           },
           {
             "type": "adate",
             "name": "PCV3",
-            "_row_num": 203,
-            "__rowNum__": 202,
+            "_row_num": 227,
+            "__rowNum__": 226,
             "_token_type": "prompt",
             "_type": "adate",
-            "_branch_label_enclosing_screen": "vac/_screen165",
+            "_branch_label_enclosing_screen": "vac/_screen183",
             "promptIdx": 66
           },
           {
@@ -16082,22 +16506,22 @@
                 }
               }
             },
-            "_row_num": 209,
-            "__rowNum__": 208,
+            "_row_num": 233,
+            "__rowNum__": 232,
             "_token_type": "prompt",
             "_type": "adate",
-            "_branch_label_enclosing_screen": "vac/_screen165",
+            "_branch_label_enclosing_screen": "vac/_screen183",
             "promptIdx": 67
           },
           {
             "type": "select_multiple",
-            "values_list": "notgiven",
+            "values_list": "notgivensamep3",
             "name": "vping",
-            "_row_num": 210,
-            "__rowNum__": 209,
+            "_row_num": 234,
+            "__rowNum__": 233,
             "_token_type": "prompt",
             "_type": "select_multiple",
-            "_branch_label_enclosing_screen": "vac/_screen165",
+            "_branch_label_enclosing_screen": "vac/_screen183",
             "promptIdx": 68
           },
           {
@@ -16112,43 +16536,43 @@
                 }
               }
             },
-            "_row_num": 215,
-            "__rowNum__": 214,
+            "_row_num": 242,
+            "__rowNum__": 241,
             "_token_type": "prompt",
             "_type": "select_one",
-            "_branch_label_enclosing_screen": "vac/_screen165",
+            "_branch_label_enclosing_screen": "vac/_screen183",
             "promptIdx": 69
           },
           {
             "type": "adate",
             "name": "VPI",
-            "_row_num": 217,
-            "__rowNum__": 216,
+            "_row_num": 244,
+            "__rowNum__": 243,
             "_token_type": "prompt",
             "_type": "adate",
-            "_branch_label_enclosing_screen": "vac/_screen165",
+            "_branch_label_enclosing_screen": "vac/_screen183",
             "promptIdx": 70
           },
           {
             "type": "async_assign_date",
             "values_list": "linked_sarampo",
             "name": "sarampo1",
-            "_row_num": 222,
-            "__rowNum__": 221,
+            "_row_num": 249,
+            "__rowNum__": 248,
             "_token_type": "prompt",
             "_type": "async_assign_date",
-            "_branch_label_enclosing_screen": "vac/_screen165",
+            "_branch_label_enclosing_screen": "vac/_screen183",
             "promptIdx": 71
           },
           {
             "type": "async_assign_date",
             "values_list": "linked_febamarel",
             "name": "febamarel",
-            "_row_num": 223,
-            "__rowNum__": 222,
+            "_row_num": 250,
+            "__rowNum__": 249,
             "_token_type": "prompt",
             "_type": "async_assign_date",
-            "_branch_label_enclosing_screen": "vac/_screen165",
+            "_branch_label_enclosing_screen": "vac/_screen183",
             "promptIdx": 72
           },
           {
@@ -16162,22 +16586,22 @@
                 }
               }
             },
-            "_row_num": 227,
-            "__rowNum__": 226,
+            "_row_num": 254,
+            "__rowNum__": 253,
             "_token_type": "prompt",
             "_type": "adate",
-            "_branch_label_enclosing_screen": "vac/_screen225",
+            "_branch_label_enclosing_screen": "vac/_screen252",
             "promptIdx": 73
           },
           {
             "type": "select_multiple",
             "values_list": "notgiven",
             "name": "sarampo1ng",
-            "_row_num": 228,
-            "__rowNum__": 227,
+            "_row_num": 255,
+            "__rowNum__": 254,
             "_token_type": "prompt",
             "_type": "select_multiple",
-            "_branch_label_enclosing_screen": "vac/_screen225",
+            "_branch_label_enclosing_screen": "vac/_screen252",
             "promptIdx": 74
           },
           {
@@ -16192,21 +16616,21 @@
                 }
               }
             },
-            "_row_num": 233,
-            "__rowNum__": 232,
+            "_row_num": 260,
+            "__rowNum__": 259,
             "_token_type": "prompt",
             "_type": "select_one",
-            "_branch_label_enclosing_screen": "vac/_screen225",
+            "_branch_label_enclosing_screen": "vac/_screen252",
             "promptIdx": 75
           },
           {
             "type": "adate",
             "name": "SARAMPO1",
-            "_row_num": 235,
-            "__rowNum__": 234,
+            "_row_num": 262,
+            "__rowNum__": 261,
             "_token_type": "prompt",
             "_type": "adate",
-            "_branch_label_enclosing_screen": "vac/_screen225",
+            "_branch_label_enclosing_screen": "vac/_screen252",
             "promptIdx": 76
           },
           {
@@ -16220,22 +16644,22 @@
                 }
               }
             },
-            "_row_num": 241,
-            "__rowNum__": 240,
+            "_row_num": 268,
+            "__rowNum__": 267,
             "_token_type": "prompt",
             "_type": "adate",
-            "_branch_label_enclosing_screen": "vac/_screen225",
+            "_branch_label_enclosing_screen": "vac/_screen252",
             "promptIdx": 77
           },
           {
             "type": "select_multiple",
             "values_list": "notgiven",
             "name": "febamarelng",
-            "_row_num": 242,
-            "__rowNum__": 241,
+            "_row_num": 269,
+            "__rowNum__": 268,
             "_token_type": "prompt",
             "_type": "select_multiple",
-            "_branch_label_enclosing_screen": "vac/_screen225",
+            "_branch_label_enclosing_screen": "vac/_screen252",
             "promptIdx": 78
           },
           {
@@ -16250,29 +16674,29 @@
                 }
               }
             },
-            "_row_num": 247,
-            "__rowNum__": 246,
+            "_row_num": 274,
+            "__rowNum__": 273,
             "_token_type": "prompt",
             "_type": "select_one",
-            "_branch_label_enclosing_screen": "vac/_screen225",
+            "_branch_label_enclosing_screen": "vac/_screen252",
             "promptIdx": 79
           },
           {
             "type": "adate",
             "name": "FEBAMAREL",
-            "_row_num": 249,
-            "__rowNum__": 248,
+            "_row_num": 276,
+            "__rowNum__": 275,
             "_token_type": "prompt",
             "_type": "adate",
-            "_branch_label_enclosing_screen": "vac/_screen225",
+            "_branch_label_enclosing_screen": "vac/_screen252",
             "promptIdx": 80
           },
           {
             "_token_type": "prompt",
             "type": "contents",
             "_type": "contents",
-            "_row_num": 255,
-            "_branch_label_enclosing_screen": "vac/_screen255",
+            "_row_num": 282,
+            "_branch_label_enclosing_screen": "vac/_screen282",
             "promptIdx": 81
           }
         ],
@@ -16315,50 +16739,50 @@
             "_token_type": "begin_screen",
             "_end_screen_clause": {
               "clause": "end screen",
-              "_row_num": 102,
-              "__rowNum__": 101,
+              "_row_num": 111,
+              "__rowNum__": 110,
               "_token_type": "end_screen"
             },
-            "_screen_block": "function() {var activePromptIndicies = [];\nif (data('penta1') == null) {\nactivePromptIndicies.push(15);\nactivePromptIndicies.push(16);\nif (data('penta1ng') != null) {\nassign('PENTA1', \"D:2,M:2,Y:1922\");\n}\n}\nelse {\nactivePromptIndicies.push(17);\nif (data('PENTA1CHECK') == '2') {\nactivePromptIndicies.push(18);\n}\nelse {\nassign('PENTA1', data('penta1'));\n}\n}\nif (data('polio1') == null) {\nactivePromptIndicies.push(19);\nactivePromptIndicies.push(20);\nif (data('polio1ng') != null) {\nassign('POLIO1', \"D:2,M:2,Y:1922\");\n}\n}\nelse {\nactivePromptIndicies.push(21);\nif (data('POLIO1CHECK') == '2') {\nactivePromptIndicies.push(22);\n}\nelse {\nassign('POLIO1', data('polio1'));\n}\n}\nif (data('pcv1') == null) {\nactivePromptIndicies.push(23);\nactivePromptIndicies.push(24);\nif (data('pcv1ng') != null) {\nassign('PCV1', \"D:2,M:2,Y:1922\");\n}\n}\nelse {\nactivePromptIndicies.push(25);\nif (data('PCV1CHECK') == '2') {\nactivePromptIndicies.push(26);\n}\nelse {\nassign('PCV1', data('pcv1'));\n}\n}\nif (data('rox1') == null) {\nactivePromptIndicies.push(27);\nactivePromptIndicies.push(28);\nif (data('rox1ng') != null) {\nassign('ROX1', \"D:2,M:2,Y:1922\");\n}\n}\nelse {\nactivePromptIndicies.push(29);\nif (data('ROX1CHECK') == '2') {\nactivePromptIndicies.push(30);\n}\nelse {\nassign('ROX1', data('rox1'));\n}\n}\nactivePromptIndicies.push(31);\nactivePromptIndicies.push(32);\nactivePromptIndicies.push(33);\nactivePromptIndicies.push(34);\n\nreturn activePromptIndicies;\n}\n",
+            "_screen_block": "function() {var activePromptIndicies = [];\nif (data('penta1') == null) {\nactivePromptIndicies.push(15);\nactivePromptIndicies.push(16);\nif (data('penta1ng') != null) {\nassign('PENTA1', \"D:2,M:2,Y:1922\");\n}\n}\nelse {\nactivePromptIndicies.push(17);\nif (data('PENTA1CHECK') == '2') {\nactivePromptIndicies.push(18);\n}\nelse {\nassign('PENTA1', data('penta1'));\n}\n}\nif (data('polio1') == null) {\nactivePromptIndicies.push(19);\nactivePromptIndicies.push(20);\nif (data('polio1ng') == \"1\") {\nassign('POLIO1', data('PENTA1'));\n}\nif (data('polio1ng') == \"2\") {\nassign('POLIO1', \"D:2,M:2,Y:1922\");\n}\n}\nelse {\nactivePromptIndicies.push(21);\nif (data('POLIO1CHECK') == '2') {\nactivePromptIndicies.push(22);\n}\nelse {\nassign('POLIO1', data('polio1'));\n}\n}\nif (data('pcv1') == null) {\nactivePromptIndicies.push(23);\nactivePromptIndicies.push(24);\nif (data('pcv1ng') == '1') {\nassign('PCV1', data('PENTA1'));\n}\nif (data('pcv1ng') == '2') {\nassign('PCV1', \"D:2,M:2,Y:1922\");\n}\n}\nelse {\nactivePromptIndicies.push(25);\nif (data('PCV1CHECK') == '2') {\nactivePromptIndicies.push(26);\n}\nelse {\nassign('PCV1', data('pcv1'));\n}\n}\nif (data('rox1') == null) {\nactivePromptIndicies.push(27);\nactivePromptIndicies.push(28);\nif (data('rox1ng') == '1') {\nassign('ROX1', data('PENTA1'));\n}\nif (data('rox1ng') == '2') {\nassign('ROX1', \"D:2,M:2,Y:1922\");\n}\n}\nelse {\nactivePromptIndicies.push(29);\nif (data('ROX1CHECK') == '2') {\nactivePromptIndicies.push(30);\n}\nelse {\nassign('ROX1', data('rox1'));\n}\n}\nactivePromptIndicies.push(31);\nactivePromptIndicies.push(32);\nactivePromptIndicies.push(33);\nactivePromptIndicies.push(34);\n\nreturn activePromptIndicies;\n}\n",
             "operationIdx": 2
           },
           {
             "clause": "begin screen",
-            "_row_num": 103,
-            "__rowNum__": 102,
+            "_row_num": 112,
+            "__rowNum__": 111,
             "_token_type": "begin_screen",
             "_end_screen_clause": {
               "clause": "end screen",
-              "_row_num": 164,
-              "__rowNum__": 163,
+              "_row_num": 182,
+              "__rowNum__": 181,
               "_token_type": "end_screen"
             },
-            "_screen_block": "function() {var activePromptIndicies = [];\nif (data('penta2') == null) {\nactivePromptIndicies.push(35);\nactivePromptIndicies.push(36);\nif (data('penta2ng') != null) {\nassign('PENTA2', \"D:2,M:2,Y:1922\");\n}\n}\nelse {\nactivePromptIndicies.push(37);\nif (data('PENTA2CHECK') == '2') {\nactivePromptIndicies.push(38);\n}\nelse {\nassign('PENTA2', data('penta2'));\n}\n}\nif (data('polio2') == null) {\nactivePromptIndicies.push(39);\nactivePromptIndicies.push(40);\nif (data('polio2ng') != null) {\nassign('POLIO2', \"D:2,M:2,Y:1922\");\n}\n}\nelse {\nactivePromptIndicies.push(41);\nif (data('POLIO2CHECK') == '2') {\nactivePromptIndicies.push(42);\n}\nelse {\nassign('POLIO2', data('polio2'));\n}\n}\nif (data('pcv2') == null) {\nactivePromptIndicies.push(43);\nactivePromptIndicies.push(44);\nif (data('pcv2ng') != null) {\nassign('PCV2', \"D:2,M:2,Y:1922\");\n}\n}\nelse {\nactivePromptIndicies.push(45);\nif (data('PCV2CHECK') == '2') {\nactivePromptIndicies.push(46);\n}\nelse {\nassign('PCV2', data('pcv2'));\n}\n}\nif (data('rox2') == null) {\nactivePromptIndicies.push(47);\nactivePromptIndicies.push(48);\nif (data('rox2ng') != null) {\nassign('ROX2', \"D:2,M:2,Y:1922\");\n}\n}\nelse {\nactivePromptIndicies.push(49);\nif (data('ROX2CHECK') == '2') {\nactivePromptIndicies.push(50);\n}\nelse {\nassign('ROX2', data('rox2'));\n}\n}\nactivePromptIndicies.push(51);\nactivePromptIndicies.push(52);\nactivePromptIndicies.push(53);\nactivePromptIndicies.push(54);\n\nreturn activePromptIndicies;\n}\n",
+            "_screen_block": "function() {var activePromptIndicies = [];\nif (data('penta2') == null) {\nactivePromptIndicies.push(35);\nactivePromptIndicies.push(36);\nif (data('penta2ng') != null) {\nassign('PENTA2', \"D:2,M:2,Y:1922\");\n}\n}\nelse {\nactivePromptIndicies.push(37);\nif (data('PENTA2CHECK') == '2') {\nactivePromptIndicies.push(38);\n}\nelse {\nassign('PENTA2', data('penta2'));\n}\n}\nif (data('polio2') == null) {\nactivePromptIndicies.push(39);\nactivePromptIndicies.push(40);\nif (data('polio2ng') == '1') {\nassign('POLIO2', data('PENTA2'));\n}\nif (data('polio2ng') == '2') {\nassign('POLIO2', \"D:2,M:2,Y:1922\");\n}\n}\nelse {\nactivePromptIndicies.push(41);\nif (data('POLIO2CHECK') == '2') {\nactivePromptIndicies.push(42);\n}\nelse {\nassign('POLIO2', data('polio2'));\n}\n}\nif (data('pcv2') == null) {\nactivePromptIndicies.push(43);\nactivePromptIndicies.push(44);\nif (data('pcv2ng') == '1') {\nassign('PCV2', data('PENTA2'));\n}\nif (data('pcv2ng') == '2') {\nassign('PCV2', \"D:2,M:2,Y:1922\");\n}\n}\nelse {\nactivePromptIndicies.push(45);\nif (data('PCV2CHECK') == '2') {\nactivePromptIndicies.push(46);\n}\nelse {\nassign('PCV2', data('pcv2'));\n}\n}\nif (data('rox2') == null) {\nactivePromptIndicies.push(47);\nactivePromptIndicies.push(48);\nif (data('rox2ng') == '1') {\nassign('ROX2', data('PENTA2'));\n}\nif (data('rox2ng') == '2') {\nassign('ROX2', \"D:2,M:2,Y:1922\");\n}\n}\nelse {\nactivePromptIndicies.push(49);\nif (data('ROX2CHECK') == '2') {\nactivePromptIndicies.push(50);\n}\nelse {\nassign('ROX2', data('rox2'));\n}\n}\nactivePromptIndicies.push(51);\nactivePromptIndicies.push(52);\nactivePromptIndicies.push(53);\nactivePromptIndicies.push(54);\n\nreturn activePromptIndicies;\n}\n",
             "operationIdx": 3
           },
           {
             "clause": "begin screen",
-            "_row_num": 165,
-            "__rowNum__": 164,
+            "_row_num": 183,
+            "__rowNum__": 182,
             "_token_type": "begin_screen",
             "_end_screen_clause": {
               "clause": "end screen",
-              "_row_num": 224,
-              "__rowNum__": 223,
+              "_row_num": 251,
+              "__rowNum__": 250,
               "_token_type": "end_screen"
             },
-            "_screen_block": "function() {var activePromptIndicies = [];\nif (data('penta3') == null) {\nactivePromptIndicies.push(55);\nactivePromptIndicies.push(56);\nif (data('penta3ng') != null) {\nassign('PENTA3', \"D:2,M:2,Y:1922\");\n}\n}\nelse {\nactivePromptIndicies.push(57);\nif (data('PENTA3CHECK') == '2') {\nactivePromptIndicies.push(58);\n}\nelse {\nassign('PENTA3', data('penta3'));\n}\n}\nif (data('polio3') == null) {\nactivePromptIndicies.push(59);\nactivePromptIndicies.push(60);\nif (data('polio3ng') != null) {\nassign('POLIO3', \"D:2,M:2,Y:1922\");\n}\n}\nelse {\nactivePromptIndicies.push(61);\nif (data('POLIO3CHECK') == '2') {\nactivePromptIndicies.push(62);\n}\nelse {\nassign('POLIO3', data('polio3'));\n}\n}\nif (data('pcv3') == null) {\nactivePromptIndicies.push(63);\nactivePromptIndicies.push(64);\nif (data('pcv3ng') != null) {\nassign('PCV3', \"D:2,M:2,Y:1922\");\n}\n}\nelse {\nactivePromptIndicies.push(65);\nif (data('PCV3CHECK') == '2') {\nactivePromptIndicies.push(66);\n}\nelse {\nassign('PCV3', data('pcv3'));\n}\n}\nif (data('vpi') == null) {\nactivePromptIndicies.push(67);\nactivePromptIndicies.push(68);\nif (data('vping') != null) {\nassign('VPI', \"D:2,M:2,Y:1922\");\n}\n}\nelse {\nactivePromptIndicies.push(69);\nif (data('VPICHECK') == '2') {\nactivePromptIndicies.push(70);\n}\nelse {\nassign('VPI', data('vpi'));\n}\n}\nactivePromptIndicies.push(71);\nactivePromptIndicies.push(72);\n\nreturn activePromptIndicies;\n}\n",
+            "_screen_block": "function() {var activePromptIndicies = [];\nif (data('penta3') == null) {\nactivePromptIndicies.push(55);\nactivePromptIndicies.push(56);\nif (data('penta3ng') != null) {\nassign('PENTA3', \"D:2,M:2,Y:1922\");\n}\n}\nelse {\nactivePromptIndicies.push(57);\nif (data('PENTA3CHECK') == '2') {\nactivePromptIndicies.push(58);\n}\nelse {\nassign('PENTA3', data('penta3'));\n}\n}\nif (data('polio3') == null) {\nactivePromptIndicies.push(59);\nactivePromptIndicies.push(60);\nif (data('polio3ng') == '1') {\nassign('POLIO3', data('PENTA3'));\n}\nif (data('polio3ng') == '2') {\nassign('POLIO3', \"D:2,M:2,Y:1922\");\n}\n}\nelse {\nactivePromptIndicies.push(61);\nif (data('POLIO3CHECK') == '2') {\nactivePromptIndicies.push(62);\n}\nelse {\nassign('POLIO3', data('polio3'));\n}\n}\nif (data('pcv3') == null) {\nactivePromptIndicies.push(63);\nactivePromptIndicies.push(64);\nif (data('pcv3ng') == '1') {\nassign('PCV3', data('PENTA3'));\n}\nif (data('pcv3ng') == '2') {\nassign('PCV3', \"D:2,M:2,Y:1922\");\n}\n}\nelse {\nactivePromptIndicies.push(65);\nif (data('PCV3CHECK') == '2') {\nactivePromptIndicies.push(66);\n}\nelse {\nassign('PCV3', data('pcv3'));\n}\n}\nif (data('vpi') == null) {\nactivePromptIndicies.push(67);\nactivePromptIndicies.push(68);\nif (data('vping') == '1') {\nassign('VPI', data('PENTA3'));\n}\nif (data('vping') == '2') {\nassign('VPI', \"D:2,M:2,Y:1922\");\n}\n}\nelse {\nactivePromptIndicies.push(69);\nif (data('VPICHECK') == '2') {\nactivePromptIndicies.push(70);\n}\nelse {\nassign('VPI', data('vpi'));\n}\n}\nactivePromptIndicies.push(71);\nactivePromptIndicies.push(72);\n\nreturn activePromptIndicies;\n}\n",
             "operationIdx": 4
           },
           {
             "clause": "begin screen",
-            "_row_num": 225,
-            "__rowNum__": 224,
+            "_row_num": 252,
+            "__rowNum__": 251,
             "_token_type": "begin_screen",
             "_end_screen_clause": {
               "clause": "end screen",
-              "_row_num": 254,
-              "__rowNum__": 253,
+              "_row_num": 281,
+              "__rowNum__": 280,
               "_token_type": "end_screen"
             },
             "_screen_block": "function() {var activePromptIndicies = [];\nif (data('sarampo1') == null) {\nactivePromptIndicies.push(73);\nactivePromptIndicies.push(74);\nif (data('sarampo1ng') != null) {\nassign('SARAMPO1', \"D:2,M:2,Y:1922\");\n}\n}\nelse {\nactivePromptIndicies.push(75);\nif (data('SARAMPO1CHECK') == '2') {\nactivePromptIndicies.push(76);\n}\nelse {\nassign('SARAMPO1', data('sarampo1'));\n}\n}\nif (data('febamarel') == null) {\nactivePromptIndicies.push(77);\nactivePromptIndicies.push(78);\nif (data('febamarelng') != null) {\nassign('FEBAMAREL', \"D:2,M:2,Y:1922\");\n}\n}\nelse {\nactivePromptIndicies.push(79);\nif (data('FEBAMARELCHECK') == '2') {\nactivePromptIndicies.push(80);\n}\nelse {\nassign('FEBAMAREL', data('febamarel'));\n}\n}\n\nreturn activePromptIndicies;\n}\n",
@@ -16367,11 +16791,11 @@
           {
             "_token_type": "exit_section",
             "clause": "exit section",
-            "_row_num": 255,
+            "_row_num": 282,
             "operationIdx": 6
           },
           {
-            "_row_num": 255,
+            "_row_num": 282,
             "_token_type": "begin_screen",
             "_screen_block": "function() {var activePromptIndicies = [];\nactivePromptIndicies.push(81);\n\nreturn activePromptIndicies;\n}\n",
             "screen": {
@@ -16382,7 +16806,7 @@
           {
             "_token_type": "resume",
             "clause": "resume",
-            "_row_num": 255,
+            "_row_num": 282,
             "operationIdx": 8
           }
         ],
@@ -16390,11 +16814,11 @@
           "_screen2": 0,
           "_screen7": 1,
           "_screen41": 2,
-          "_screen103": 3,
-          "_screen165": 4,
-          "_screen225": 5,
+          "_screen112": 3,
+          "_screen183": 4,
+          "_screen252": 5,
           "_contents": 7,
-          "_screen255": 7
+          "_screen282": 7
         }
       },
       "fal": {
@@ -17963,6 +18387,7 @@
         "reachable_sections": {
           "survey": true,
           "reg": true,
+          "parto": true,
           "visit": true,
           "vac": true,
           "fal": true
@@ -18414,8 +18839,8 @@
         "valuesList": "healthstaff",
         "_defn": [
           {
-            "_row_num": 86,
-            "section_name": "reg"
+            "_row_num": 56,
+            "section_name": "parto"
           },
           {
             "_row_num": 20,
@@ -18433,8 +18858,8 @@
         "valuesList": "vpcard",
         "_defn": [
           {
-            "_row_num": 50,
-            "section_name": "reg"
+            "_row_num": 20,
+            "section_name": "parto"
           },
           {
             "_row_num": 21,
@@ -18451,8 +18876,8 @@
         "type": "integer",
         "_defn": [
           {
-            "_row_num": 62,
-            "section_name": "reg"
+            "_row_num": 32,
+            "section_name": "parto"
           },
           {
             "_row_num": 22,
@@ -18469,8 +18894,8 @@
         "type": "integer",
         "_defn": [
           {
-            "_row_num": 60,
-            "section_name": "reg"
+            "_row_num": 30,
+            "section_name": "parto"
           },
           {
             "_row_num": 23,
@@ -18487,8 +18912,8 @@
         "type": "integer",
         "_defn": [
           {
-            "_row_num": 69,
-            "section_name": "reg"
+            "_row_num": 39,
+            "section_name": "parto"
           },
           {
             "_row_num": 24,
@@ -18505,8 +18930,8 @@
         "type": "integer",
         "_defn": [
           {
-            "_row_num": 67,
-            "section_name": "reg"
+            "_row_num": 37,
+            "section_name": "parto"
           },
           {
             "_row_num": 25,
@@ -18524,8 +18949,8 @@
         "valuesList": "YesNoU",
         "_defn": [
           {
-            "_row_num": 47,
-            "section_name": "reg"
+            "_row_num": 17,
+            "section_name": "parto"
           },
           {
             "_row_num": 26,
@@ -18557,8 +18982,8 @@
         "valuesList": "YesNoU",
         "_defn": [
           {
-            "_row_num": 53,
-            "section_name": "reg"
+            "_row_num": 23,
+            "section_name": "parto"
           },
           {
             "_row_num": 28,
@@ -18576,8 +19001,8 @@
         "valuesList": "inf1",
         "_defn": [
           {
-            "_row_num": 33,
-            "section_name": "reg"
+            "_row_num": 3,
+            "section_name": "parto"
           },
           {
             "_row_num": 29,
@@ -18595,8 +19020,8 @@
         "valuesList": "inf2",
         "_defn": [
           {
-            "_row_num": 35,
-            "section_name": "reg"
+            "_row_num": 5,
+            "section_name": "parto"
           },
           {
             "_row_num": 30,
@@ -18613,8 +19038,8 @@
         "type": "integer",
         "_defn": [
           {
-            "_row_num": 44,
-            "section_name": "reg"
+            "_row_num": 14,
+            "section_name": "parto"
           },
           {
             "_row_num": 31,
@@ -18632,8 +19057,8 @@
         "valuesList": "facility",
         "_defn": [
           {
-            "_row_num": 83,
-            "section_name": "reg"
+            "_row_num": 53,
+            "section_name": "parto"
           },
           {
             "_row_num": 32,
@@ -18650,8 +19075,8 @@
         "type": "integer",
         "_defn": [
           {
-            "_row_num": 76,
-            "section_name": "reg"
+            "_row_num": 46,
+            "section_name": "parto"
           },
           {
             "_row_num": 33,
@@ -18668,8 +19093,8 @@
         "type": "integer",
         "_defn": [
           {
-            "_row_num": 74,
-            "section_name": "reg"
+            "_row_num": 44,
+            "section_name": "parto"
           },
           {
             "_row_num": 34,
@@ -18687,8 +19112,8 @@
         "valuesList": "YesNoU",
         "_defn": [
           {
-            "_row_num": 80,
-            "section_name": "reg"
+            "_row_num": 50,
+            "section_name": "parto"
           },
           {
             "_row_num": 35,
@@ -18705,8 +19130,8 @@
         "type": "integer",
         "_defn": [
           {
-            "_row_num": 55,
-            "section_name": "reg"
+            "_row_num": 25,
+            "section_name": "parto"
           },
           {
             "_row_num": 36,
@@ -19871,11 +20296,11 @@
         "__rowNum__": 1,
         "_defn": [
           {
-            "_row_num": 241,
+            "_row_num": 268,
             "section_name": "vac"
           },
           {
-            "_row_num": 249,
+            "_row_num": 276,
             "section_name": "vac"
           },
           {
@@ -19897,7 +20322,7 @@
         "__rowNum__": 2,
         "_defn": [
           {
-            "_row_num": 223,
+            "_row_num": 250,
             "section_name": "vac"
           },
           {
@@ -19916,7 +20341,7 @@
         "valuesList": "vaccheck",
         "_defn": [
           {
-            "_row_num": 247,
+            "_row_num": 274,
             "section_name": "vac"
           },
           {
@@ -19944,7 +20369,7 @@
         "valuesList": "notgiven",
         "_defn": [
           {
-            "_row_num": 242,
+            "_row_num": 269,
             "section_name": "vac"
           },
           {
@@ -19970,11 +20395,11 @@
         "__rowNum__": 1,
         "_defn": [
           {
-            "_row_num": 71,
+            "_row_num": 74,
             "section_name": "vac"
           },
           {
-            "_row_num": 79,
+            "_row_num": 85,
             "section_name": "vac"
           },
           {
@@ -20015,7 +20440,7 @@
         "valuesList": "vaccheck",
         "_defn": [
           {
-            "_row_num": 77,
+            "_row_num": 83,
             "section_name": "vac"
           },
           {
@@ -20040,10 +20465,10 @@
           "isSessionVariable": true,
           "notUnitOfRetention": true
         },
-        "valuesList": "notgiven",
+        "valuesList": "notgivensamep1",
         "_defn": [
           {
-            "_row_num": 72,
+            "_row_num": 75,
             "section_name": "vac"
           },
           {
@@ -20069,11 +20494,11 @@
         "__rowNum__": 1,
         "_defn": [
           {
-            "_row_num": 133,
+            "_row_num": 145,
             "section_name": "vac"
           },
           {
-            "_row_num": 141,
+            "_row_num": 156,
             "section_name": "vac"
           },
           {
@@ -20095,7 +20520,7 @@
         "__rowNum__": 2,
         "_defn": [
           {
-            "_row_num": 100,
+            "_row_num": 109,
             "section_name": "vac"
           },
           {
@@ -20114,7 +20539,7 @@
         "valuesList": "vaccheck",
         "_defn": [
           {
-            "_row_num": 139,
+            "_row_num": 154,
             "section_name": "vac"
           },
           {
@@ -20139,10 +20564,10 @@
           "isSessionVariable": true,
           "notUnitOfRetention": true
         },
-        "valuesList": "notgiven",
+        "valuesList": "notgivensamep2",
         "_defn": [
           {
-            "_row_num": 134,
+            "_row_num": 146,
             "section_name": "vac"
           },
           {
@@ -20168,11 +20593,11 @@
         "__rowNum__": 1,
         "_defn": [
           {
-            "_row_num": 195,
+            "_row_num": 216,
             "section_name": "vac"
           },
           {
-            "_row_num": 203,
+            "_row_num": 227,
             "section_name": "vac"
           },
           {
@@ -20194,7 +20619,7 @@
         "__rowNum__": 2,
         "_defn": [
           {
-            "_row_num": 162,
+            "_row_num": 180,
             "section_name": "vac"
           },
           {
@@ -20213,7 +20638,7 @@
         "valuesList": "vaccheck",
         "_defn": [
           {
-            "_row_num": 201,
+            "_row_num": 225,
             "section_name": "vac"
           },
           {
@@ -20238,10 +20663,10 @@
           "isSessionVariable": true,
           "notUnitOfRetention": true
         },
-        "valuesList": "notgiven",
+        "valuesList": "notgivensamep3",
         "_defn": [
           {
-            "_row_num": 196,
+            "_row_num": 217,
             "section_name": "vac"
           },
           {
@@ -20366,11 +20791,11 @@
         "__rowNum__": 1,
         "_defn": [
           {
-            "_row_num": 105,
+            "_row_num": 114,
             "section_name": "vac"
           },
           {
-            "_row_num": 113,
+            "_row_num": 122,
             "section_name": "vac"
           },
           {
@@ -20392,7 +20817,7 @@
         "__rowNum__": 2,
         "_defn": [
           {
-            "_row_num": 98,
+            "_row_num": 107,
             "section_name": "vac"
           },
           {
@@ -20411,7 +20836,7 @@
         "valuesList": "vaccheck",
         "_defn": [
           {
-            "_row_num": 111,
+            "_row_num": 120,
             "section_name": "vac"
           },
           {
@@ -20439,7 +20864,7 @@
         "valuesList": "notgiven",
         "_defn": [
           {
-            "_row_num": 106,
+            "_row_num": 115,
             "section_name": "vac"
           },
           {
@@ -20465,11 +20890,11 @@
         "__rowNum__": 1,
         "_defn": [
           {
-            "_row_num": 167,
+            "_row_num": 185,
             "section_name": "vac"
           },
           {
-            "_row_num": 175,
+            "_row_num": 193,
             "section_name": "vac"
           },
           {
@@ -20491,7 +20916,7 @@
         "__rowNum__": 2,
         "_defn": [
           {
-            "_row_num": 160,
+            "_row_num": 178,
             "section_name": "vac"
           },
           {
@@ -20510,7 +20935,7 @@
         "valuesList": "vaccheck",
         "_defn": [
           {
-            "_row_num": 173,
+            "_row_num": 191,
             "section_name": "vac"
           },
           {
@@ -20538,7 +20963,7 @@
         "valuesList": "notgiven",
         "_defn": [
           {
-            "_row_num": 168,
+            "_row_num": 186,
             "section_name": "vac"
           },
           {
@@ -20568,7 +20993,7 @@
             "section_name": "vac"
           },
           {
-            "_row_num": 65,
+            "_row_num": 68,
             "section_name": "vac"
           },
           {
@@ -20609,7 +21034,7 @@
         "valuesList": "vaccheck",
         "_defn": [
           {
-            "_row_num": 63,
+            "_row_num": 66,
             "section_name": "vac"
           },
           {
@@ -20634,7 +21059,7 @@
           "isSessionVariable": true,
           "notUnitOfRetention": true
         },
-        "valuesList": "notgiven",
+        "valuesList": "notgivensamep1",
         "_defn": [
           {
             "_row_num": 58,
@@ -20663,11 +21088,11 @@
         "__rowNum__": 1,
         "_defn": [
           {
-            "_row_num": 119,
+            "_row_num": 128,
             "section_name": "vac"
           },
           {
-            "_row_num": 127,
+            "_row_num": 139,
             "section_name": "vac"
           },
           {
@@ -20689,7 +21114,7 @@
         "__rowNum__": 2,
         "_defn": [
           {
-            "_row_num": 99,
+            "_row_num": 108,
             "section_name": "vac"
           },
           {
@@ -20708,7 +21133,7 @@
         "valuesList": "vaccheck",
         "_defn": [
           {
-            "_row_num": 125,
+            "_row_num": 137,
             "section_name": "vac"
           },
           {
@@ -20733,10 +21158,10 @@
           "isSessionVariable": true,
           "notUnitOfRetention": true
         },
-        "valuesList": "notgiven",
+        "valuesList": "notgivensamep2",
         "_defn": [
           {
-            "_row_num": 120,
+            "_row_num": 129,
             "section_name": "vac"
           },
           {
@@ -20762,11 +21187,11 @@
         "__rowNum__": 1,
         "_defn": [
           {
-            "_row_num": 181,
+            "_row_num": 199,
             "section_name": "vac"
           },
           {
-            "_row_num": 189,
+            "_row_num": 210,
             "section_name": "vac"
           },
           {
@@ -20788,7 +21213,7 @@
         "__rowNum__": 2,
         "_defn": [
           {
-            "_row_num": 161,
+            "_row_num": 179,
             "section_name": "vac"
           },
           {
@@ -20807,7 +21232,7 @@
         "valuesList": "vaccheck",
         "_defn": [
           {
-            "_row_num": 187,
+            "_row_num": 208,
             "section_name": "vac"
           },
           {
@@ -20832,10 +21257,10 @@
           "isSessionVariable": true,
           "notUnitOfRetention": true
         },
-        "valuesList": "notgiven",
+        "valuesList": "notgivensamep3",
         "_defn": [
           {
-            "_row_num": 182,
+            "_row_num": 200,
             "section_name": "vac"
           },
           {
@@ -20960,11 +21385,11 @@
         "__rowNum__": 1,
         "_defn": [
           {
-            "_row_num": 85,
+            "_row_num": 91,
             "section_name": "vac"
           },
           {
-            "_row_num": 93,
+            "_row_num": 102,
             "section_name": "vac"
           },
           {
@@ -21005,7 +21430,7 @@
         "valuesList": "vaccheck",
         "_defn": [
           {
-            "_row_num": 91,
+            "_row_num": 100,
             "section_name": "vac"
           },
           {
@@ -21030,10 +21455,10 @@
           "isSessionVariable": true,
           "notUnitOfRetention": true
         },
-        "valuesList": "notgiven",
+        "valuesList": "notgivensamep1",
         "_defn": [
           {
-            "_row_num": 86,
+            "_row_num": 92,
             "section_name": "vac"
           },
           {
@@ -21059,11 +21484,11 @@
         "__rowNum__": 1,
         "_defn": [
           {
-            "_row_num": 147,
+            "_row_num": 162,
             "section_name": "vac"
           },
           {
-            "_row_num": 155,
+            "_row_num": 173,
             "section_name": "vac"
           },
           {
@@ -21085,7 +21510,7 @@
         "__rowNum__": 2,
         "_defn": [
           {
-            "_row_num": 101,
+            "_row_num": 110,
             "section_name": "vac"
           },
           {
@@ -21104,7 +21529,7 @@
         "valuesList": "vaccheck",
         "_defn": [
           {
-            "_row_num": 153,
+            "_row_num": 171,
             "section_name": "vac"
           },
           {
@@ -21129,10 +21554,10 @@
           "isSessionVariable": true,
           "notUnitOfRetention": true
         },
-        "valuesList": "notgiven",
+        "valuesList": "notgivensamep2",
         "_defn": [
           {
-            "_row_num": 148,
+            "_row_num": 163,
             "section_name": "vac"
           },
           {
@@ -21158,11 +21583,11 @@
         "__rowNum__": 1,
         "_defn": [
           {
-            "_row_num": 227,
+            "_row_num": 254,
             "section_name": "vac"
           },
           {
-            "_row_num": 235,
+            "_row_num": 262,
             "section_name": "vac"
           },
           {
@@ -21184,7 +21609,7 @@
         "__rowNum__": 2,
         "_defn": [
           {
-            "_row_num": 222,
+            "_row_num": 249,
             "section_name": "vac"
           },
           {
@@ -21203,7 +21628,7 @@
         "valuesList": "vaccheck",
         "_defn": [
           {
-            "_row_num": 233,
+            "_row_num": 260,
             "section_name": "vac"
           },
           {
@@ -21231,7 +21656,7 @@
         "valuesList": "notgiven",
         "_defn": [
           {
-            "_row_num": 228,
+            "_row_num": 255,
             "section_name": "vac"
           },
           {
@@ -21257,11 +21682,11 @@
         "__rowNum__": 1,
         "_defn": [
           {
-            "_row_num": 209,
+            "_row_num": 233,
             "section_name": "vac"
           },
           {
-            "_row_num": 217,
+            "_row_num": 244,
             "section_name": "vac"
           },
           {
@@ -21283,7 +21708,7 @@
         "__rowNum__": 2,
         "_defn": [
           {
-            "_row_num": 163,
+            "_row_num": 181,
             "section_name": "vac"
           },
           {
@@ -21302,7 +21727,7 @@
         "valuesList": "vaccheck",
         "_defn": [
           {
-            "_row_num": 215,
+            "_row_num": 242,
             "section_name": "vac"
           },
           {
@@ -21327,10 +21752,10 @@
           "isSessionVariable": true,
           "notUnitOfRetention": true
         },
-        "valuesList": "notgiven",
+        "valuesList": "notgivensamep3",
         "_defn": [
           {
-            "_row_num": 210,
+            "_row_num": 234,
             "section_name": "vac"
           },
           {
@@ -22728,7 +23153,7 @@
         "_aspect": "ASSISTPART",
         "_key": "displayChoicesList",
         "_type": "object",
-        "_value": "[{\"choice_list_name\":\"healthstaff\",\"data_value\":\"DR\",\"display\":{\"title\":{\"text\":{\"english\":\"Doctor\",\"default\":\"Medico\"}}},\"_row_num\":23},{\"choice_list_name\":\"healthstaff\",\"data_value\":\"PA\",\"display\":{\"title\":{\"text\":{\"english\":\"Midwife\",\"default\":\"Parteira\"}}},\"_row_num\":24},{\"choice_list_name\":\"healthstaff\",\"data_value\":\"EN\",\"display\":{\"title\":{\"text\":{\"english\":\"Nurse\",\"default\":\"Enfermeira/o\"}}},\"_row_num\":25},{\"choice_list_name\":\"healthstaff\",\"data_value\":\"MA-N\",\"display\":{\"title\":{\"text\":{\"english\":\"Traditional birth attendant - no course\",\"default\":\"Matrona - sem curso\"}}},\"_row_num\":26},{\"choice_list_name\":\"healthstaff\",\"data_value\":\"MA-F\",\"display\":{\"title\":{\"text\":{\"english\":\"Traditional birth attendant - course\",\"default\":\"Matrona - formado\"}}},\"_row_num\":27},{\"choice_list_name\":\"healthstaff\",\"data_value\":\"FA\",\"display\":{\"title\":{\"text\":{\"english\":\"Family member\",\"default\":\"Familia\"}}},\"_row_num\":28},{\"choice_list_name\":\"healthstaff\",\"data_value\":\"VI\",\"display\":{\"title\":{\"text\":{\"english\":\"Neighbour\",\"default\":\"Vizinho\"}}},\"_row_num\":29},{\"choice_list_name\":\"healthstaff\",\"data_value\":\"no\",\"display\":{\"title\":{\"text\":{\"english\":\"No one\",\"default\":\"Ninguem\"}}},\"_row_num\":30},{\"choice_list_name\":\"healthstaff\",\"data_value\":\"1\",\"display\":{\"title\":{\"text\":{\"english\":\"Parteira\",\"default\":\"Parteira\"}}},\"_row_num\":75},{\"choice_list_name\":\"healthstaff\",\"data_value\":\"2\",\"display\":{\"title\":{\"text\":{\"english\":\"Médico/Técnico de Saúde\",\"default\":\"Médico/Técnico de Saúde\"}}},\"_row_num\":76},{\"choice_list_name\":\"healthstaff\",\"data_value\":\"3\",\"display\":{\"title\":{\"text\":{\"english\":\"Matrona\",\"default\":\"Matrona\"}}},\"_row_num\":77},{\"choice_list_name\":\"healthstaff\",\"data_value\":\"4\",\"display\":{\"title\":{\"text\":{\"english\":\"Mãe/Tia/Madrasta/Avó\",\"default\":\"Mãe/Tia/Madrasta/Avó\"}}},\"_row_num\":78},{\"choice_list_name\":\"healthstaff\",\"data_value\":\"5\",\"display\":{\"title\":{\"text\":{\"english\":\"Outro\",\"default\":\"Outro\"}}},\"_row_num\":79},{\"choice_list_name\":\"healthstaff\",\"data_value\":\"6\",\"display\":{\"title\":{\"text\":{\"english\":\"Não sabe\",\"default\":\"Não sabe\"}}},\"_row_num\":80}]"
+        "_value": "[{\"choice_list_name\":\"healthstaff\",\"data_value\":\"DR\",\"display\":{\"title\":{\"text\":{\"english\":\"Doctor\",\"default\":\"Medico\"}}},\"_row_num\":23},{\"choice_list_name\":\"healthstaff\",\"data_value\":\"PA\",\"display\":{\"title\":{\"text\":{\"english\":\"Midwife\",\"default\":\"Parteira\"}}},\"_row_num\":24},{\"choice_list_name\":\"healthstaff\",\"data_value\":\"EN\",\"display\":{\"title\":{\"text\":{\"english\":\"Nurse\",\"default\":\"Enfermeira/o\"}}},\"_row_num\":25},{\"choice_list_name\":\"healthstaff\",\"data_value\":\"MA-N\",\"display\":{\"title\":{\"text\":{\"english\":\"Traditional birth attendant - no course\",\"default\":\"Matrona - sem curso\"}}},\"_row_num\":26},{\"choice_list_name\":\"healthstaff\",\"data_value\":\"MA-F\",\"display\":{\"title\":{\"text\":{\"english\":\"Traditional birth attendant - course\",\"default\":\"Matrona - formado\"}}},\"_row_num\":27},{\"choice_list_name\":\"healthstaff\",\"data_value\":\"FA\",\"display\":{\"title\":{\"text\":{\"english\":\"Family member\",\"default\":\"Familia\"}}},\"_row_num\":28},{\"choice_list_name\":\"healthstaff\",\"data_value\":\"VI\",\"display\":{\"title\":{\"text\":{\"english\":\"Neighbour\",\"default\":\"Vizinho\"}}},\"_row_num\":29},{\"choice_list_name\":\"healthstaff\",\"data_value\":\"no\",\"display\":{\"title\":{\"text\":{\"english\":\"No one\",\"default\":\"Ninguem\"}}},\"_row_num\":30},{\"choice_list_name\":\"healthstaff\",\"data_value\":\"1\",\"display\":{\"title\":{\"text\":{\"english\":\"Parteira\",\"default\":\"Parteira\"}}},\"_row_num\":81},{\"choice_list_name\":\"healthstaff\",\"data_value\":\"2\",\"display\":{\"title\":{\"text\":{\"english\":\"Médico/Técnico de Saúde\",\"default\":\"Médico/Técnico de Saúde\"}}},\"_row_num\":82},{\"choice_list_name\":\"healthstaff\",\"data_value\":\"3\",\"display\":{\"title\":{\"text\":{\"english\":\"Matrona\",\"default\":\"Matrona\"}}},\"_row_num\":83},{\"choice_list_name\":\"healthstaff\",\"data_value\":\"4\",\"display\":{\"title\":{\"text\":{\"english\":\"Mãe/Tia/Madrasta/Avó\",\"default\":\"Mãe/Tia/Madrasta/Avó\"}}},\"_row_num\":84},{\"choice_list_name\":\"healthstaff\",\"data_value\":\"5\",\"display\":{\"title\":{\"text\":{\"english\":\"Outro\",\"default\":\"Outro\"}}},\"_row_num\":85},{\"choice_list_name\":\"healthstaff\",\"data_value\":\"6\",\"display\":{\"title\":{\"text\":{\"english\":\"Não sabe\",\"default\":\"Não sabe\"}}},\"_row_num\":86}]"
       },
       {
         "_partition": "Column",
@@ -22931,7 +23356,7 @@
         "_aspect": "DIAGNQUEM",
         "_key": "displayChoicesList",
         "_type": "object",
-        "_value": "[{\"choice_list_name\":\"healthstaff\",\"data_value\":\"DR\",\"display\":{\"title\":{\"text\":{\"english\":\"Doctor\",\"default\":\"Medico\"}}},\"_row_num\":23},{\"choice_list_name\":\"healthstaff\",\"data_value\":\"PA\",\"display\":{\"title\":{\"text\":{\"english\":\"Midwife\",\"default\":\"Parteira\"}}},\"_row_num\":24},{\"choice_list_name\":\"healthstaff\",\"data_value\":\"EN\",\"display\":{\"title\":{\"text\":{\"english\":\"Nurse\",\"default\":\"Enfermeira/o\"}}},\"_row_num\":25},{\"choice_list_name\":\"healthstaff\",\"data_value\":\"MA-N\",\"display\":{\"title\":{\"text\":{\"english\":\"Traditional birth attendant - no course\",\"default\":\"Matrona - sem curso\"}}},\"_row_num\":26},{\"choice_list_name\":\"healthstaff\",\"data_value\":\"MA-F\",\"display\":{\"title\":{\"text\":{\"english\":\"Traditional birth attendant - course\",\"default\":\"Matrona - formado\"}}},\"_row_num\":27},{\"choice_list_name\":\"healthstaff\",\"data_value\":\"FA\",\"display\":{\"title\":{\"text\":{\"english\":\"Family member\",\"default\":\"Familia\"}}},\"_row_num\":28},{\"choice_list_name\":\"healthstaff\",\"data_value\":\"VI\",\"display\":{\"title\":{\"text\":{\"english\":\"Neighbour\",\"default\":\"Vizinho\"}}},\"_row_num\":29},{\"choice_list_name\":\"healthstaff\",\"data_value\":\"no\",\"display\":{\"title\":{\"text\":{\"english\":\"No one\",\"default\":\"Ninguem\"}}},\"_row_num\":30},{\"choice_list_name\":\"healthstaff\",\"data_value\":\"1\",\"display\":{\"title\":{\"text\":{\"english\":\"Parteira\",\"default\":\"Parteira\"}}},\"_row_num\":75},{\"choice_list_name\":\"healthstaff\",\"data_value\":\"2\",\"display\":{\"title\":{\"text\":{\"english\":\"Médico/Técnico de Saúde\",\"default\":\"Médico/Técnico de Saúde\"}}},\"_row_num\":76},{\"choice_list_name\":\"healthstaff\",\"data_value\":\"3\",\"display\":{\"title\":{\"text\":{\"english\":\"Matrona\",\"default\":\"Matrona\"}}},\"_row_num\":77},{\"choice_list_name\":\"healthstaff\",\"data_value\":\"4\",\"display\":{\"title\":{\"text\":{\"english\":\"Mãe/Tia/Madrasta/Avó\",\"default\":\"Mãe/Tia/Madrasta/Avó\"}}},\"_row_num\":78},{\"choice_list_name\":\"healthstaff\",\"data_value\":\"5\",\"display\":{\"title\":{\"text\":{\"english\":\"Outro\",\"default\":\"Outro\"}}},\"_row_num\":79},{\"choice_list_name\":\"healthstaff\",\"data_value\":\"6\",\"display\":{\"title\":{\"text\":{\"english\":\"Não sabe\",\"default\":\"Não sabe\"}}},\"_row_num\":80}]"
+        "_value": "[{\"choice_list_name\":\"healthstaff\",\"data_value\":\"DR\",\"display\":{\"title\":{\"text\":{\"english\":\"Doctor\",\"default\":\"Medico\"}}},\"_row_num\":23},{\"choice_list_name\":\"healthstaff\",\"data_value\":\"PA\",\"display\":{\"title\":{\"text\":{\"english\":\"Midwife\",\"default\":\"Parteira\"}}},\"_row_num\":24},{\"choice_list_name\":\"healthstaff\",\"data_value\":\"EN\",\"display\":{\"title\":{\"text\":{\"english\":\"Nurse\",\"default\":\"Enfermeira/o\"}}},\"_row_num\":25},{\"choice_list_name\":\"healthstaff\",\"data_value\":\"MA-N\",\"display\":{\"title\":{\"text\":{\"english\":\"Traditional birth attendant - no course\",\"default\":\"Matrona - sem curso\"}}},\"_row_num\":26},{\"choice_list_name\":\"healthstaff\",\"data_value\":\"MA-F\",\"display\":{\"title\":{\"text\":{\"english\":\"Traditional birth attendant - course\",\"default\":\"Matrona - formado\"}}},\"_row_num\":27},{\"choice_list_name\":\"healthstaff\",\"data_value\":\"FA\",\"display\":{\"title\":{\"text\":{\"english\":\"Family member\",\"default\":\"Familia\"}}},\"_row_num\":28},{\"choice_list_name\":\"healthstaff\",\"data_value\":\"VI\",\"display\":{\"title\":{\"text\":{\"english\":\"Neighbour\",\"default\":\"Vizinho\"}}},\"_row_num\":29},{\"choice_list_name\":\"healthstaff\",\"data_value\":\"no\",\"display\":{\"title\":{\"text\":{\"english\":\"No one\",\"default\":\"Ninguem\"}}},\"_row_num\":30},{\"choice_list_name\":\"healthstaff\",\"data_value\":\"1\",\"display\":{\"title\":{\"text\":{\"english\":\"Parteira\",\"default\":\"Parteira\"}}},\"_row_num\":81},{\"choice_list_name\":\"healthstaff\",\"data_value\":\"2\",\"display\":{\"title\":{\"text\":{\"english\":\"Médico/Técnico de Saúde\",\"default\":\"Médico/Técnico de Saúde\"}}},\"_row_num\":82},{\"choice_list_name\":\"healthstaff\",\"data_value\":\"3\",\"display\":{\"title\":{\"text\":{\"english\":\"Matrona\",\"default\":\"Matrona\"}}},\"_row_num\":83},{\"choice_list_name\":\"healthstaff\",\"data_value\":\"4\",\"display\":{\"title\":{\"text\":{\"english\":\"Mãe/Tia/Madrasta/Avó\",\"default\":\"Mãe/Tia/Madrasta/Avó\"}}},\"_row_num\":84},{\"choice_list_name\":\"healthstaff\",\"data_value\":\"5\",\"display\":{\"title\":{\"text\":{\"english\":\"Outro\",\"default\":\"Outro\"}}},\"_row_num\":85},{\"choice_list_name\":\"healthstaff\",\"data_value\":\"6\",\"display\":{\"title\":{\"text\":{\"english\":\"Não sabe\",\"default\":\"Não sabe\"}}},\"_row_num\":86}]"
       },
       {
         "_partition": "Column",
@@ -23064,7 +23489,7 @@
         "_aspect": "ONDEFALEC",
         "_key": "displayChoicesList",
         "_type": "object",
-        "_value": "[{\"choice_list_name\":\"Facility\",\"data_value\":\"1\",\"display\":{\"title\":{\"text\":{\"english\":\"Home\",\"default\":\"Casa\"}}},\"_row_num\":81},{\"choice_list_name\":\"Facility\",\"data_value\":\"2\",\"display\":{\"title\":{\"text\":{\"english\":\"Centro de saúde\",\"default\":\"Centro de saúde\"}}},\"_row_num\":82},{\"choice_list_name\":\"Facility\",\"data_value\":\"3\",\"display\":{\"title\":{\"text\":{\"english\":\"Hospital\",\"default\":\"Hospital\"}}},\"_row_num\":83},{\"choice_list_name\":\"Facility\",\"data_value\":\"4\",\"display\":{\"title\":{\"text\":{\"english\":\"Other\",\"default\":\"Outro\"}}},\"_row_num\":84}]"
+        "_value": "[{\"choice_list_name\":\"Facility\",\"data_value\":\"1\",\"display\":{\"title\":{\"text\":{\"english\":\"Home\",\"default\":\"Casa\"}}},\"_row_num\":87},{\"choice_list_name\":\"Facility\",\"data_value\":\"2\",\"display\":{\"title\":{\"text\":{\"english\":\"Centro de saúde\",\"default\":\"Centro de saúde\"}}},\"_row_num\":88},{\"choice_list_name\":\"Facility\",\"data_value\":\"3\",\"display\":{\"title\":{\"text\":{\"english\":\"Hospital\",\"default\":\"Hospital\"}}},\"_row_num\":89},{\"choice_list_name\":\"Facility\",\"data_value\":\"4\",\"display\":{\"title\":{\"text\":{\"english\":\"Other\",\"default\":\"Outro\"}}},\"_row_num\":90}]"
       },
       {
         "_partition": "Column",
