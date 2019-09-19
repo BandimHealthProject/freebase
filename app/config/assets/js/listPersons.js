@@ -44,21 +44,43 @@ function populateView() {
     });
 }
 
-function openForm(type, personId) {
-    alert("Opening " + type + " form for person id: " + personId);
-    // Look up person
-    // Open form
 
-    var tableId = "mif" == type ? "MIF" : "CRIANCA";
-    var formId = "mif" == type ? "MIF" : "CRIANCA";
-    
+function getDefaultsMIF(personId) {
     var defaults = {};
     defaults['MOR'] = cluster;
     defaults['REG'] = region;
     defaults['TAB'] = tabanca;
-    defaults['REGID'] = personId;
-    defaults['VISIT_TYPE'] = type;
+    //defaults['VISIT_TYPE'] = type;
     defaults['ASSISTENTE'] = assistant;
+    defaults['REGID'] = personId;
+    return defaults;
+}
+
+function getDefaultsChild(personId) {
+    var defaults = {};
+    defaults['MOR'] = cluster;
+    defaults['REG'] = region;
+    defaults['TAB'] = tabanca;
+    //defaults['VISIT_TYPE'] = type;
+    //defaults['ASSISTENTE'] = assistant;
+    defaults['REGIDC'] = personId;
+    return defaults;
+}
+
+function openForm(type, personId) {
+    //alert("Opening " + type + " form for person id: " + personId);
+    // Look up person
+    // Open form
+    var defaults = {};
+    var tableId = "mif" == type ? "MIF" : "CRIANCA";
+    var formId = "mif" == type ? "MIF" : "CRIANCA";
+    if ("mif" == type) {
+        // It's a MIF
+        defaults = getDefaultsMIF(personId);        
+    } else {
+        // It's a child
+        defaults = getDefaultsChild(personId);
+    }
 
     odkTables.addRowWithSurvey(
             null,
