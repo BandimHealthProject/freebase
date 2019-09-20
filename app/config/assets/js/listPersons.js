@@ -7,7 +7,6 @@
 var persons, visitType, cluster, assistant, region, tabanca;
 
 function display() {
-    //visitType = util.getQueryParameter('visitType')    
     console.log("Persons list loading");
     visitType = util.getQueryParameter('visitType');
     cluster = util.getQueryParameter('cluster');
@@ -21,53 +20,128 @@ function display() {
     loadPersons();
 }
 
+
+// This handy SQL makes adates sortable: 
+// substr(CONT, instr(CONT, 'Y:')+2, 4) || substr('00'|| trim(substr(CONT, instr(CONT, 'M:')+2, 2),","), -2, 2) || substr('00'|| trim(substr(CONT, instr(CONT, 'D:')+2, 2),","), -2, 2) AS D,
+
 function loadPersons() {
+    // SQL to get women (MIF)
+    var sql = "SELECT REGID, NAME, GR,ESTADOVIS, CART, CONT, MIFDNASC FROM MIF WHERE REG = " + region + " AND TAB = " + tabanca + " AND MOR = " + cluster + " GROUP BY REGID HAVING MIN(ROWID) AND ESTADO = 1 ORDER BY substr(CONT, instr(CONT, 'Y:')+2, 4) || substr('00'|| trim(substr(CONT, instr(CONT, 'M:')+2, 2),','), -2, 2) || substr('00'|| trim(substr(CONT, instr(CONT, 'D:')+2, 2),','), -2, 2) DESC, NAME"
     // Todo - look up in db => callback: populateView;
-    persons = [
-        { id: 1, type: 'child', motherId: 1, name: 'Bebé', visited: true},
-        { id: 2, type: 'child', motherId: 1, name: 'Bullidur 2'},
-        { id: 3, type: 'mif', motherId: 0, name: 'Miffy'},
-        { id: 4, type: 'child', motherId: 2, name: 'Bebé 4'},
-        { id: 5, type: 'child', motherId: 3, name: 'Aboubacar'}
-    ];
-    populateView();
+    persons = [];
+    console.log("Querying database for MIFs...");
+    console.log(sql);
+    var successFn = function( result ) {
+        console.log("Found " + result.getCount() + " persons");
+        for (var row = 0; row < result.getCount(); row++) {
+            var REGID = result.getData(row,"REGID"); // Despite obviously bad naming, this is actually the Person ID
+            var NAME = titleCase(result.getData(row,"NAME"));
+            var GR = result.getData(row,"GR");
+            var ESTADOVIS = result.getData(row,"ESTADOVIS");
+            var CART = result.getData(row,"CART");
+            var CONT = result.getData(row,"CONT");
+            var MIFDNASC = result.getData(row,"MIFDNASC");
+            
+            var p = { type: 'mif', REGID, NAME, GR, ESTADOVIS, CART, CONT, MIFDNASC };
+            console.log(p);
+            persons.push(p);
+        }
+        loadChildren(); // Get children too!
+        return;
+    }
+    var failureFn = function( errorMsg ) {
+        console.error('Failed to get persons from database: ' + errorMsg);
+        console.error('Trying to execute the following SQL:');
+        console.error(sql);
+        alert("Program error Unable to look up persons.");
+    }
+
+    odkData.arbitraryQuery('MIF', sql, null, null, null, successFn, failureFn);
+}
+
+function loadChildren() {
+    // SQL to load children
+    var sql = "SELECT REGIDC, NAME, REGID, PRES, CARTVAC, CONT, OUTDATE FROM CRIANCA  WHERE REG = " + region + " AND TAB = " + tabanca + " AND MOR = " + cluster + " GROUP BY REGIDC HAVING MIN(ROWID) AND ESTADO = 1  ORDER BY substr(CONT, instr(CONT, 'Y:')+2, 4) || substr('00'|| trim(substr(CONT, instr(CONT, 'M:')+2, 2),','), -2, 2) || substr('00'|| trim(substr(CONT, instr(CONT, 'D:')+2, 2),','), -2, 2) DESC, NAME";
+
+    console.log("Querying database for CRIANCAs...");
+    console.log(sql);
+    var successFn = function( result ) {
+        console.log("Found " + result.getCount() + " children");
+        for (var row = 0; row < result.getCount(); row++) {
+
+            var REGIDC = result.getData(row,"REGIDC");
+            var NAME = titleCase(result.getData(row,"NAME"));
+            var REGID = result.getData(row,"REGID"); // This is now the mother's id (go figure)
+            var PRES = result.getData(row,"PRES");
+            var CARTVAC = result.getData(row,"CARTVAC");
+            var CONT = result.getData(row,"CONT");
+            var OUTDATE = result.getData(row,"OUTDATE");
+            
+            var p = { type: 'crianca', REGIDC, NAME, REGID, PRES, CARTVAC, CONT, OUTDATE };
+            console.log(p);
+            persons.push(p);
+        }
+        populateView();
+        return;
+    }
+    var failureFn = function( errorMsg ) {
+        console.error('Failed to get children from database: ' + errorMsg);
+        console.error('Trying to execute the following SQL:');
+        console.error(sql);
+        alert("Program error Unable to look up children.");
+    }
+
+    odkData.arbitraryQuery('CRIANCA', sql, null, null, null, successFn, failureFn);
 }
 
 function populateView() {
     console.log(persons);
+    window.PPP = persons; //TODO: REMOVE THIS
     var ul = $('#persons');
     $.each(persons, function() {
         console.log(this);
         var visited = this.visited ? 'visited' : '';
-        var personType = this.type;
-        ul.append($("<li />").append($("<button />").attr('onclick','openForm("' + this.type + '",' + this.id + ');').attr('class',visited + ' btn group' + this.group).text(this.name)));
+        ul.append($("<li />").append($("<button />").attr('onclick','openForm("' + this.type + '",' + this + ');').attr('class',visited + ' btn ' + this.type).text(this.NAME)));
     });
 }
 
 
-function getDefaultsMIF(personId) {
+function getDefaultsMIF(person) {
     var defaults = {};
     defaults['MOR'] = cluster;
     defaults['REG'] = region;
     defaults['TAB'] = tabanca;
-    //defaults['VISIT_TYPE'] = type;
+    //defaults['VISIT_TYPE'] = visitType;
     defaults['ASSISTENTE'] = assistant;
-    defaults['REGID'] = personId;
+    defaults['REGID'] = person.REGID;
+    defaults['NAME'] = person.NAME;
+    defaults['GR'] = person.GR;
+    
+    defaults['ESTADOVIS'] = person.ESTADOVIS;
+    defaults['CART'] = person.CART;
+    defaults['CONT'] = person.CONT;
+    defaults['MIFDNASC'] = person.MIFDNASC;
+
     return defaults;
 }
 
-function getDefaultsChild(personId) {
+function getDefaultsChild(person) {
     var defaults = {};
     defaults['MOR'] = cluster;
     defaults['REG'] = region;
     defaults['TAB'] = tabanca;
-    //defaults['VISIT_TYPE'] = type;
-    //defaults['ASSISTENTE'] = assistant;
-    defaults['REGIDC'] = personId;
+    defaults['REGIDC'] = person.REGIDC;
+    defaults['NAME'] = person.NAME;
+    defaults['REGID'] = person.REGID;
+    defaults['PRES'] = person.PRES;
+    defaults['CARTVAC'] = person.CARTVAC;
+    defaults['CONT'] = person.CONT;
+    defaults['OUTDATE'] = person.OUTDATE;
     return defaults;
 }
 
-function openForm(type, personId) {
+function openForm(type, person) {
+    var personId = person.REGID;
     //alert("Opening " + type + " form for person id: " + personId);
     // Look up person
     // Open form
@@ -76,10 +150,10 @@ function openForm(type, personId) {
     var formId = "mif" == type ? "MIF" : "CRIANCA";
     if ("mif" == type) {
         // It's a MIF
-        defaults = getDefaultsMIF(personId);        
+        defaults = getDefaultsMIF(person); 
     } else {
         // It's a child
-        defaults = getDefaultsChild(personId);
+        defaults = getDefaultsChild(person);
     }
 
     odkTables.addRowWithSurvey(
@@ -89,3 +163,10 @@ function openForm(type, personId) {
             null,
             defaults);
 }
+
+function titleCase(str) {
+    if (!str) return str;
+    return str.toLowerCase().split(' ').map(function(word) {
+      return (word.charAt(0).toUpperCase() + word.slice(1));
+    }).join(' ');
+  }
