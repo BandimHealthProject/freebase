@@ -25,10 +25,11 @@ function display() {
 // substr(CONT, instr(CONT, 'Y:')+2, 4) || substr('00'|| trim(substr(CONT, instr(CONT, 'M:')+2, 2),","), -2, 2) || substr('00'|| trim(substr(CONT, instr(CONT, 'D:')+2, 2),","), -2, 2) AS D,
 
 function loadPersons() {
+    // SQL to get women (MIF)
     var sql = "SELECT REGID, NAME, GR,ESTADOVIS, CART, CONT, MIFDNASC FROM MIF WHERE REG = " + region + " AND TAB = " + tabanca + " AND MOR = " + cluster + " GROUP BY REGID HAVING MIN(ROWID) AND ESTADO = 1 ORDER BY substr(CONT, instr(CONT, 'Y:')+2, 4) || substr('00'|| trim(substr(CONT, instr(CONT, 'M:')+2, 2),','), -2, 2) || substr('00'|| trim(substr(CONT, instr(CONT, 'D:')+2, 2),','), -2, 2) DESC, NAME"
     // Todo - look up in db => callback: populateView;
     persons = [];
-    console.log("Querying database...");
+    console.log("Querying database for MIFs...");
     console.log(sql);
     var successFn = function( result ) {
         console.log("Found " + result.getCount() + " persons");
@@ -45,7 +46,7 @@ function loadPersons() {
             console.log(p);
             persons.push(p);
         }
-        populateView(); //TODO: Get children too!
+        loadChildren(); // Get children too!
         return;
     }
     var failureFn = function( errorMsg ) {
@@ -55,21 +56,47 @@ function loadPersons() {
         alert("Program error Unable to look up persons.");
     }
 
-    /* Formatted SQL:
-    SELECT 
-    REGID, NAME, GR,ESTADOVIS,CART,CONT,MIFDNASC
-    FROM MIF
-    WHERE REG = 1 AND TAB = 1 AND MOR = 1
-    GROUP BY REGID
-    HAVING MIN(ROWID) AND ESTADO = 1
-    ORDER BY
-    substr(CONT, instr(CONT, 'Y:')+2, 4) || substr('00'|| trim(substr(CONT, instr(CONT, 'M:')+2, 2),','), -2, 2) || substr('00'|| trim(substr(CONT, instr(CONT, 'D:')+2, 2),','), -2, 2) DESC
-    */    
     odkData.arbitraryQuery('MIF', sql, null, null, null, successFn, failureFn);
+}
+
+function loadChildren() {
+    // SQL to load children
+    var sql = "SELECT REGIDC, NAME, REGID, PRES, CARTVAC, CONT, OUTDATE FROM CRIANCA  WHERE REG = " + region + " AND TAB = " + tabanca + " AND MOR = " + cluster + " GROUP BY REGIDC HAVING MIN(ROWID) AND ESTADO = 1  ORDER BY substr(CONT, instr(CONT, 'Y:')+2, 4) || substr('00'|| trim(substr(CONT, instr(CONT, 'M:')+2, 2),','), -2, 2) || substr('00'|| trim(substr(CONT, instr(CONT, 'D:')+2, 2),','), -2, 2) DESC, NAME";
+
+    console.log("Querying database for CRIANCAs...");
+    console.log(sql);
+    var successFn = function( result ) {
+        console.log("Found " + result.getCount() + " children");
+        for (var row = 0; row < result.getCount(); row++) {
+
+            var REGIDC = result.getData(row,"REGIDC");
+            var NAME = titleCase(result.getData(row,"NAME"));
+            var REGID = result.getData(row,"REGID"); // This is now the mother's id (go figure)
+            var PRES = result.getData(row,"PRES");
+            var CARTVAC = result.getData(row,"CARTVAC");
+            var CONT = result.getData(row,"CONT");
+            var OUTDATE = result.getData(row,"OUTDATE");
+            
+            var p = { type: 'crianca', REGIDC, NAME, REGID, PRES, CARTVAC, CONT, OUTDATE };
+            console.log(p);
+            persons.push(p);
+        }
+        populateView();
+        return;
+    }
+    var failureFn = function( errorMsg ) {
+        console.error('Failed to get children from database: ' + errorMsg);
+        console.error('Trying to execute the following SQL:');
+        console.error(sql);
+        alert("Program error Unable to look up children.");
+    }
+
+    odkData.arbitraryQuery('CRIANCA', sql, null, null, null, successFn, failureFn);
 }
 
 function populateView() {
     console.log(persons);
+    window.PPP = persons; //TODO: REMOVE THIS
     var ul = $('#persons');
     $.each(persons, function() {
         console.log(this);
@@ -103,9 +130,13 @@ function getDefaultsChild(person) {
     defaults['MOR'] = cluster;
     defaults['REG'] = region;
     defaults['TAB'] = tabanca;
-    //defaults['VISIT_TYPE'] = visitType;
-    //defaults['ASSISTENTE'] = assistant;
     defaults['REGIDC'] = person.REGIDC;
+    defaults['NAME'] = person.NAME;
+    defaults['REGID'] = person.REGID;
+    defaults['PRES'] = person.PRES;
+    defaults['CARTVAC'] = person.CARTVAC;
+    defaults['CONT'] = person.CONT;
+    defaults['OUTDATE'] = person.OUTDATE;
     return defaults;
 }
 
