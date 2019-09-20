@@ -7,7 +7,10 @@
 var selReg, selTab, selAss, btnControl, btnRoutine, regions;
 var t = []; // This will hold the tabancas read from database
 
-function display() {
+function display() {    
+    selReg = $('#selRegion');
+    selTab = $('#selTabanca');
+    selAss = $('#selAssistant');
     doSanityCheck();
     loadTabancas();
     initButtons();
@@ -15,6 +18,14 @@ function display() {
     // var body = $('#main');
     // body.css('background-image', 'url(img/bafata.jpg)');
     $('body').first().css('background', 'url(img/bafata.jpg) fixed');
+    
+    console.log("We got:" + ass + ", " + tab + ", "+ reg);
+    var ass = window.localStorage.getItem('ass');
+    if (ass) selAss.val(ass);
+    var tab = window.localStorage.getItem('tab');
+    if (tab) selTab.val(tab);
+    var reg = window.localStorage.getItem('reg');
+    if (reg) selReg.val(reg);
 }
 
 function loadTabancas() {
@@ -105,9 +116,7 @@ function initButtons() {
 function initDrops() {
 
     //var selReg = document.getElementById('selRegion');
-    selReg = $('#selRegion');
-    selTab = $('#selTabanca');
-    selAss = $('#selAssistant');
+    
     selAss.append($("<option />").val(-1).text(""));
     $.each(assistants, function() {
         selAss.append($("<option />").val(this.no).text(this.name));
@@ -127,10 +136,14 @@ function initDrops() {
     
     selReg.on("change", function() {
         populateTabancas(selReg.val());
+        console.log("Setting reg..");
+        window.localStorage.setItem('reg', selReg.val());
     });
 
     selTab.on("change", function() {
         // console.log("Go ahead with " + selReg.val());
+        window.localStorage.setItem('tab', selTab.val());
+        window.localStorage.setItem('ass', selAss.val());
         btnRoutine.removeAttr("disabled");
         btnControl.removeAttr("disabled");
     });
@@ -164,4 +177,3 @@ function getOption(name,valle) {
 var assistants = [];
 assistants.push({no: 1, name: 'Andy'});
 assistants.push({no: 2, name: 'Carly'});
-

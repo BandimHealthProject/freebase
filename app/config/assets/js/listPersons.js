@@ -16,8 +16,8 @@ function display() {
     tabanca = util.getQueryParameter('tabanca');
     
     // Set the background to be a picture.
-    var body = $('#main');
-    body.css('background-image', 'url(img/bafata.jpg)');
+    var body = $('body').first();
+    body.css('background-image', 'url(img/bafata.jpg) fixed');
     loadPersons();
 }
 
@@ -113,16 +113,23 @@ function populateView() {
         });
     });
 
-    // Add any remaining (orphaned) children
+    // Add any remaining (orphaned) children (to the beginning of the list - hence 'unshift')
     children.forEach(child => {
-        personsAndChildren.push(chlid);        
+        personsAndChildren.unshift(child);        
     });
 
     var ul = $('#persons');
     $.each(personsAndChildren, function() {
         console.log(this);
+        var that = this;
         var visited = this.visited ? 'visited' : '';
-        ul.append($("<li />").append($("<button />").attr('onclick','openForm("' + this.type + '",' + this + ');').attr('class',visited + ' btn ' + this.type).text(this.NOME)));
+        
+        ul.append($("<li />").append($("<button />").attr('id',this.REGID + '_' + this.REGIDC).attr('class',visited + ' btn ' + this.type).text(this.NOME)));
+        
+        var btn = ul.find('#' + this.REGID + '_' + this.REGIDC);
+        btn.on("click", function() {
+            openForm(that.type, that);
+        })
     });
 }
 
@@ -162,6 +169,7 @@ function getDefaultsChild(person) {
 }
 
 function openForm(type, person) {
+    console.log("Preparing form for ", person);
     var personId = person.REGID;
     //alert("Opening " + type + " form for person id: " + personId);
     // Look up person
@@ -176,7 +184,7 @@ function openForm(type, person) {
         // It's a child
         defaults = getDefaultsChild(person);
     }
-
+    console.log("Opening form with:", defaults);
     odkTables.addRowWithSurvey(
             null,
             tableId,
