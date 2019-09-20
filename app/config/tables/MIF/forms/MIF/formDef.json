@@ -191,7 +191,7 @@
       },
       {
         "type": "text",
-        "name": "NOMEMAE",
+        "name": "NAME",
         "display": {
           "prompt": {
             "text": {
@@ -10659,7 +10659,7 @@
         "_row_num": 34
       },
       {
-        "name": "NOMEMAE",
+        "name": "NAME",
         "type": "text",
         "isSessionVariable": false,
         "_row_num": 35
@@ -15793,7 +15793,7 @@
         "isSessionVariable": true,
         "elementKey": "nmns"
       },
-      "NOMEMAE": {
+      "NAME": {
         "type": "string",
         "_defn": [
           {
@@ -15806,7 +15806,7 @@
           }
         ],
         "isSessionVariable": false,
-        "elementKey": "NOMEMAE"
+        "elementKey": "NAME"
       },
       "PART": {
         "type": "integer",
@@ -20800,7 +20800,7 @@
           },
           {
             "type": "text",
-            "name": "NOMEMAE",
+            "name": "NAME",
             "display": {
               "prompt": {
                 "text": {
@@ -31952,7 +31952,7 @@
           "nmns_items"
         ]
       },
-      "NOMEMAE": {
+      "NAME": {
         "type": "string",
         "_defn": [
           {
@@ -31965,10 +31965,10 @@
           }
         ],
         "isSessionVariable": false,
-        "elementKey": "NOMEMAE",
-        "elementName": "NOMEMAE",
+        "elementKey": "NAME",
+        "elementName": "NAME",
         "elementSet": "data",
-        "elementPath": "NOMEMAE"
+        "elementPath": "NAME"
       },
       "PART": {
         "type": "integer",
