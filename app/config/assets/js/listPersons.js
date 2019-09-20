@@ -27,7 +27,7 @@ function display() {
 
 function loadPersons() {
     // SQL to get women (MIF)
-    var sql = "SELECT REGID, NAME, GR,ESTADOVIS, CART, CONT, MIFDNASC FROM MIF WHERE REG = " + region + " AND TAB = " + tabanca + " AND MOR = " + cluster + " GROUP BY REGID HAVING MIN(ROWID) AND ESTADO = 1 ORDER BY substr(CONT, instr(CONT, 'Y:')+2, 4) || substr('00'|| trim(substr(CONT, instr(CONT, 'M:')+2, 2),','), -2, 2) || substr('00'|| trim(substr(CONT, instr(CONT, 'D:')+2, 2),','), -2, 2) DESC, NAME"
+    var sql = "SELECT REGID, NOME, GR,ESTADOVIS, CART, CONT, MIFDNASC FROM MIF WHERE REG = " + region + " AND TAB = " + tabanca + " AND MOR = " + cluster + " GROUP BY REGID HAVING MIN(ROWID) AND ESTADO = 1 ORDER BY substr(CONT, instr(CONT, 'Y:')+2, 4) || substr('00'|| trim(substr(CONT, instr(CONT, 'M:')+2, 2),','), -2, 2) || substr('00'|| trim(substr(CONT, instr(CONT, 'D:')+2, 2),','), -2, 2) DESC, NOME"
     // Todo - look up in db => callback: populateView;
     persons = [];
     console.log("Querying database for MIFs...");
@@ -36,14 +36,14 @@ function loadPersons() {
         console.log("Found " + result.getCount() + " persons");
         for (var row = 0; row < result.getCount(); row++) {
             var REGID = result.getData(row,"REGID"); // Despite obviously bad naming, this is actually the Person ID
-            var NAME = titleCase(result.getData(row,"NAME"));
+            var NOME = titleCase(result.getData(row,"NOME"));
             var GR = result.getData(row,"GR");
             var ESTADOVIS = result.getData(row,"ESTADOVIS");
             var CART = result.getData(row,"CART");
             var CONT = result.getData(row,"CONT");
             var MIFDNASC = result.getData(row,"MIFDNASC");
             
-            var p = { type: 'mif', REGID, NAME, GR, ESTADOVIS, CART, CONT, MIFDNASC };
+            var p = { type: 'mif', REGID, NOME, GR, ESTADOVIS, CART, CONT, MIFDNASC };
             console.log(p);
             persons.push(p);
         }
@@ -62,7 +62,7 @@ function loadPersons() {
 
 function loadChildren() {
     // SQL to load children
-    var sql = "SELECT REGIDC, NAME, REGID, PRES, CARTVAC, CONT, OUTDATE FROM CRIANCA  WHERE REG = " + region + " AND TAB = " + tabanca + " AND MOR = " + cluster + " GROUP BY REGIDC HAVING MIN(ROWID) AND ESTADO = 1  ORDER BY substr(CONT, instr(CONT, 'Y:')+2, 4) || substr('00'|| trim(substr(CONT, instr(CONT, 'M:')+2, 2),','), -2, 2) || substr('00'|| trim(substr(CONT, instr(CONT, 'D:')+2, 2),','), -2, 2) DESC, NAME";
+    var sql = "SELECT REGIDC, NOME, REGID, PRES, CARTVAC, CONT, OUTDATE FROM CRIANCA  WHERE REG = " + region + " AND TAB = " + tabanca + " AND MOR = " + cluster + " GROUP BY REGIDC HAVING MIN(ROWID) AND ESTADO = 1  ORDER BY substr(CONT, instr(CONT, 'Y:')+2, 4) || substr('00'|| trim(substr(CONT, instr(CONT, 'M:')+2, 2),','), -2, 2) || substr('00'|| trim(substr(CONT, instr(CONT, 'D:')+2, 2),','), -2, 2) DESC, NOME";
     children = [];
     console.log("Querying database for CRIANCAs...");
     console.log(sql);
@@ -71,14 +71,14 @@ function loadChildren() {
         for (var row = 0; row < result.getCount(); row++) {
 
             var REGIDC = result.getData(row,"REGIDC");
-            var NAME = titleCase(result.getData(row,"NAME"));
+            var NOME = titleCase(result.getData(row,"NOME"));
             var REGID = result.getData(row,"REGID"); // This is now the mother's id (go figure)
             var PRES = result.getData(row,"PRES");
             var CARTVAC = result.getData(row,"CARTVAC");
             var CONT = result.getData(row,"CONT");
             var OUTDATE = result.getData(row,"OUTDATE");
             
-            var p = { type: 'crianca', REGIDC, NAME, REGID, PRES, CARTVAC, CONT, OUTDATE };
+            var p = { type: 'crianca', REGIDC, NOME, REGID, PRES, CARTVAC, CONT, OUTDATE };
             console.log(p);
             children.push(p);
         }
@@ -122,7 +122,7 @@ function populateView() {
     $.each(personsAndChildren, function() {
         console.log(this);
         var visited = this.visited ? 'visited' : '';
-        ul.append($("<li />").append($("<button />").attr('onclick','openForm("' + this.type + '",' + this + ');').attr('class',visited + ' btn ' + this.type).text(this.NAME)));
+        ul.append($("<li />").append($("<button />").attr('onclick','openForm("' + this.type + '",' + this + ');').attr('class',visited + ' btn ' + this.type).text(this.NOME)));
     });
 }
 
@@ -135,7 +135,7 @@ function getDefaultsMIF(person) {
     //defaults['VISIT_TYPE'] = visitType;
     defaults['ASSISTENTE'] = assistant;
     defaults['REGID'] = person.REGID;
-    defaults['NAME'] = person.NAME;
+    defaults['NOME'] = person.NOME;
     defaults['GR'] = person.GR;
     
     defaults['ESTADOVIS'] = person.ESTADOVIS;
@@ -152,7 +152,7 @@ function getDefaultsChild(person) {
     defaults['REG'] = region;
     defaults['TAB'] = tabanca;
     defaults['REGIDC'] = person.REGIDC;
-    defaults['NAME'] = person.NAME;
+    defaults['NOME'] = person.NOME;
     defaults['REGID'] = person.REGID;
     defaults['PRES'] = person.PRES;
     defaults['CARTVAC'] = person.CARTVAC;
