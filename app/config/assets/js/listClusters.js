@@ -4,33 +4,52 @@
 'use strict';
 /* global odkTables, util, odkCommon, odkData */
 
-var clusters, visitType;
+var visitType, region, tabanca;
+var clusters = [];
 
 function display() {
-    visitType = util.getQueryParameter('visitType')    
+    visitType = util.getQueryParameter('visitType');
+    region = util.getQueryParameter('region');
+    tabanca = util.getQueryParameter('tabanca');
     console.log(visitType + " visit: cluster list loading");
     
     // Set the background to be a picture.
-    var body = $('#main');
-    body.css('background-image', 'url(img/bafata.jpg)');
+    //var body = $('#main');
+    $('body').first().css('background', 'url(img/bafata.jpg) fixed');
 
     loadPersons();
 }
 
 function loadPersons() {
-    // Todo - look up in db => callback: populateView;
-    clusters = [
-        { id: 1, group: 1, name: 'cluster 1', visited: true},
-        { id: 2, group: 1, name: 'cluster 2'},
-        { id: 3, group: 2, name: 'cluster 3'},
-        { id: 4, group: 2, name: 'cluster 4'},
-        { id: 5, group: 3, name: 'cluster 5'}
-    ];
-    populateView();
+
+    // SELECT MOR, MORNOME, GRUPO FROM MORLIST WHERE REGNOME = 'Gabu' AND TAB = 1 ORDER BY GRUPO, MOR
+    console.log("Querying database...");
+    var successFn = function( result ) {
+        console.log("Found " + result.getCount() + " morancas");
+        for (var row = 0; row < result.getCount(); row++) {
+            //var id = result.getData(row,"_id"); // or _row_etag
+            var MOR = result.getData(row,"MOR");
+            var MORNOME =  result.getData(row,"MORNOME");
+            var GRUPO =  result.getData(row,"GRUPO");
+            var VISITED = false;
+            clusters.push({ id: MOR, visited: VISITED, group: GRUPO, name: GRUPO + " - " + MORNOME});
+        }        
+        populateView();
+        return;
+    }
+
+    var failureFn = function( errorMsg ) {
+        console.error('Failed to get morancas from database: ' + errorMsg);
+        alert('Failed to get morancas from database: ' + errorMsg);
+    }
+
+    var sql = "SELECT MOR, MORNOME, GRUPO FROM MORLIST WHERE REG = '" + region + "' AND TAB = " + tabanca + " ORDER BY GRUPO, MOR";
+    odkData.arbitraryQuery('MORLIST', sql, null, null, null, successFn, failureFn);
+    
 }
 
 function populateView() {
-    console.log(clusters);
+    console.log("Popuplating view with " + clusters.length + " clusters.");
     var ul = $('#clusters');
     $.each(clusters, function() {
         console.log(this);

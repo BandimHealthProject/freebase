@@ -4,19 +4,19 @@
 'use strict';
 /* global odkTables, util, odkCommon, odkData */
 
-var selReg, selTab, selAss, btnControl, btnRoutine, regNames;
+var selReg, selTab, selAss, btnControl, btnRoutine, regions;
 var t = []; // This will hold the tabancas read from database
 
 function display() {
     doSanityCheck();
+    loadTabancas();
     initButtons();
-    var body = $('#main');
     // Set the background to be a picture.
-    body.css('background-image', 'url(img/bafata.jpg)');
+    // var body = $('#main');
+    // body.css('background-image', 'url(img/bafata.jpg)');
+    $('body').first().css('background', 'url(img/bafata.jpg) fixed');
 }
 
-// SELECT REG, REGNOME, TAB, TABNOME, MOR, MORNOME, GRUPO FROM MORLIST;
-// SELECT DISTINCT REG, REGNOME, TAB, TABNOME FROM MORLIST ORDER BY REGNOME, TABNOME;
 function loadTabancas() {
     console.log("Querying database...");
     var successFn = function( result ) {
@@ -29,7 +29,16 @@ function loadTabancas() {
             var TABNOME =  result.getData(row,"TABNOME");            
             t.push({regId: REG, regName: REGNOME, tabId: TAB, tabName: TAB + ' - ' + TABNOME});
         }
-        regNames = [ ...new Set(t.map(x=>x.regName)) ];
+        var regNames = [ ...new Set(t.map(x=>x.regName)) ];
+        var regIds = [ ...new Set(t.map(x=>x.regId)) ];
+        regions = []
+        if (regNames.length != regIds.length) {
+            alert('Unable to load regions (duplicate region id with different region name?)');
+            return;
+        }
+        for (var i=0;i<regNames.length;i++) {
+            regions.push({REG: regIds[i], REGNOME: regNames[i]});
+        }
         initDrops();
         return;
     }
@@ -39,8 +48,8 @@ function loadTabancas() {
         alert('Failed to get tabancas from database: ' + errorMsg);
     }
 
-    var sql = 'SELECT DISTINCT REG, REGNOME, TAB, TABNOME FROM MORLIST ORDER BY REGNOME, TABNOME'    
-    odkData.arbitraryQuery('QPS', sql, null, null, null, successFn, failureFn);
+    var sql = 'SELECT DISTINCT REG, REGNOME, TAB, TABNOME FROM MORLIST ORDER BY REGNOME, TAB';
+    odkData.arbitraryQuery('MORLIST', sql, null, null, null, successFn, failureFn);
 }
 
 function doSanityCheck() {
@@ -56,10 +65,10 @@ function initButtons() {
             selAss.css('background-color','pink');
             return false;
         }
-        var selected_region = selReg.val();
-        var selected_tabanca = selTab.val();    
+        var region = selReg.val();
+        var tabanca = selTab.val();    
         var visitType = "routine";
-        var queryParams = util.setQuerystringParams(selected_region, selected_tabanca, assistant, visitType);
+        var queryParams = util.setQuerystringParams(region, tabanca, assistant, visitType);
         if (util.DEBUG) top.location = 'listClusters.html' + queryParams;
         odkTables.launchHTML(null,  'config/assets/listClusters.html' + queryParams);
     });
@@ -105,8 +114,10 @@ function initDrops() {
     })
 
     selReg.append($("<option />").val(-1).text(""));
-    $.each(regNames, function() {
-        selReg.append($("<option />").val(this).text(this));
+    $.each(regions, function() {
+        // console.log("REGIONS:");
+        // console.log(this);
+        selReg.append($("<option />").val(this.REG).text(this.REGNOME));
     });
 
     selTab[0].options.length = 0;
@@ -119,7 +130,7 @@ function initDrops() {
     });
 
     selTab.on("change", function() {
-        console.log("Go ahead with " + selReg.val());
+        // console.log("Go ahead with " + selReg.val());
         btnRoutine.removeAttr("disabled");
         btnControl.removeAttr("disabled");
     });
@@ -128,7 +139,7 @@ function initDrops() {
 function populateTabancas(reg) {
     selTab[0].options.length = 0;
     selTab.append($("<option />").val(-1).text(""));
-    var tabs = t.filter(x => x.regName == reg);
+    var tabs = t.filter(x => x.regId == reg);
     $.each(tabs, function() {
         selTab.append($("<option />").val(this.tabId).text(this.tabName));
     });
