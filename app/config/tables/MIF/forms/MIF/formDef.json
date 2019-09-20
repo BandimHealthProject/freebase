@@ -7074,7 +7074,7 @@
       },
       {
         "type": "text",
-        "name": "ondecod2",
+        "name": "ONDECOD2",
         "display": {
           "prompt": {
             "text": {
@@ -12153,7 +12153,7 @@
         "_row_num": 290
       },
       {
-        "name": "ondecod2",
+        "name": "ONDECOD2",
         "type": "text",
         "isSessionVariable": false,
         "_row_num": 291
@@ -20273,7 +20273,7 @@
         "isSessionVariable": false,
         "elementKey": "ONDECOD1"
       },
-      "ondecod2": {
+      "ONDECOD2": {
         "type": "string",
         "_defn": [
           {
@@ -20286,7 +20286,7 @@
           }
         ],
         "isSessionVariable": false,
-        "elementKey": "ondecod2"
+        "elementKey": "ONDECOD2"
       },
       "ONDEOUTRO": {
         "type": "string",
@@ -30152,7 +30152,7 @@
           },
           {
             "type": "text",
-            "name": "ondecod2",
+            "name": "ONDECOD2",
             "display": {
               "prompt": {
                 "text": {
@@ -37218,7 +37218,7 @@
         "elementSet": "data",
         "elementPath": "ONDECOD1"
       },
-      "ondecod2": {
+      "ONDECOD2": {
         "type": "string",
         "_defn": [
           {
@@ -37231,10 +37231,10 @@
           }
         ],
         "isSessionVariable": false,
-        "elementKey": "ondecod2",
-        "elementName": "ondecod2",
+        "elementKey": "ONDECOD2",
+        "elementName": "ONDECOD2",
         "elementSet": "data",
-        "elementPath": "ondecod2"
+        "elementPath": "ONDECOD2"
       },
       "ONDEOUTRO": {
         "type": "string",
