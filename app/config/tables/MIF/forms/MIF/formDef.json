@@ -191,7 +191,7 @@
       },
       {
         "type": "text",
-        "name": "NAME",
+        "name": "NOME",
         "display": {
           "prompt": {
             "text": {
@@ -10659,7 +10659,7 @@
         "_row_num": 34
       },
       {
-        "name": "NAME",
+        "name": "NOME",
         "type": "text",
         "isSessionVariable": false,
         "_row_num": 35
@@ -10678,7 +10678,7 @@
       },
       {
         "name": "REG",
-        "type": "select_one_dropdown",
+        "type": "integer",
         "isSessionVariable": false,
         "_row_num": 38
       },
@@ -10708,7 +10708,7 @@
       },
       {
         "name": "TAB",
-        "type": "select_one_dropdown",
+        "type": "integer",
         "isSessionVariable": false,
         "_row_num": 43
       },
@@ -15793,7 +15793,7 @@
         "isSessionVariable": true,
         "elementKey": "nmns"
       },
-      "NAME": {
+      "NOME": {
         "type": "string",
         "_defn": [
           {
@@ -15806,7 +15806,7 @@
           }
         ],
         "isSessionVariable": false,
-        "elementKey": "NAME"
+        "elementKey": "NOME"
       },
       "PART": {
         "type": "integer",
@@ -15844,7 +15844,7 @@
         "elementKey": "partns"
       },
       "REG": {
-        "type": "string",
+        "type": "integer",
         "valuesList": "region_csv",
         "_defn": [
           {
@@ -15926,7 +15926,7 @@
         "elementKey": "RELA1NOME"
       },
       "TAB": {
-        "type": "string",
+        "type": "integer",
         "valuesList": "tabanca_csv",
         "_defn": [
           {
@@ -20800,7 +20800,7 @@
           },
           {
             "type": "text",
-            "name": "NAME",
+            "name": "NOME",
             "display": {
               "prompt": {
                 "text": {
@@ -31952,7 +31952,7 @@
           "nmns_items"
         ]
       },
-      "NAME": {
+      "NOME": {
         "type": "string",
         "_defn": [
           {
@@ -31965,10 +31965,10 @@
           }
         ],
         "isSessionVariable": false,
-        "elementKey": "NAME",
-        "elementName": "NAME",
+        "elementKey": "NOME",
+        "elementName": "NOME",
         "elementSet": "data",
-        "elementPath": "NAME"
+        "elementPath": "NOME"
       },
       "PART": {
         "type": "integer",
@@ -32020,7 +32020,7 @@
         ]
       },
       "REG": {
-        "type": "string",
+        "type": "integer",
         "valuesList": "region_csv",
         "_defn": [
           {
@@ -32117,7 +32117,7 @@
         "elementPath": "RELA1NOME"
       },
       "TAB": {
-        "type": "string",
+        "type": "integer",
         "valuesList": "tabanca_csv",
         "_defn": [
           {
