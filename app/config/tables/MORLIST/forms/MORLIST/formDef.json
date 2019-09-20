@@ -74,63 +74,33 @@
         "_row_num": 4
       },
       {
-        "type": "text",
-        "name": "TABNOME",
-        "_row_num": 5
-      },
-      {
-        "type": "integer",
-        "name": "AMO",
-        "_row_num": 6
-      },
-      {
         "type": "integer",
         "name": "MOR",
-        "_row_num": 7
+        "_row_num": 5
       },
       {
         "type": "text",
         "name": "MORNOME",
-        "_row_num": 8
+        "_row_num": 6
       },
       {
         "type": "integer",
         "name": "GRUPO",
+        "_row_num": 7
+      },
+      {
+        "type": "text",
+        "name": "REGNOME",
+        "_row_num": 8
+      },
+      {
+        "type": "text",
+        "name": "TABNOME",
         "_row_num": 9
       },
       {
-        "type": "adate",
-        "name": "DATASAIDA",
-        "_row_num": 10
-      },
-      {
-        "type": "text",
-        "name": "FAMMUDONDE",
-        "_row_num": 11
-      },
-      {
-        "type": "adate",
-        "name": "REGDAIMOR",
-        "_row_num": 12
-      },
-      {
-        "type": "text",
-        "name": "COORN",
-        "_row_num": 13
-      },
-      {
-        "type": "text",
-        "name": "COORW",
-        "_row_num": 14
-      },
-      {
-        "type": "integer",
-        "name": "NOFOGAO",
-        "_row_num": 15
-      },
-      {
         "clause": "end screen",
-        "_row_num": 16
+        "_row_num": 10
       }
     ],
     "prompt_types": [
@@ -161,64 +131,28 @@
         "_row_num": 4
       },
       {
-        "name": "AMO",
+        "name": "MOR",
         "type": "integer",
         "isSessionVariable": false,
         "_row_num": 5
       },
       {
-        "name": "MOR",
-        "type": "integer",
-        "isSessionVariable": false,
-        "_row_num": 6
-      },
-      {
         "name": "MORNOME",
         "type": "text",
         "isSessionVariable": false,
-        "_row_num": 7
+        "_row_num": 6
       },
       {
         "name": "GRUPO",
         "type": "integer",
         "isSessionVariable": false,
+        "_row_num": 7
+      },
+      {
+        "name": "REGNOME",
+        "type": "text",
+        "isSessionVariable": false,
         "_row_num": 8
-      },
-      {
-        "name": "DATASAIDA",
-        "type": "adate",
-        "isSessionVariable": false,
-        "_row_num": 9
-      },
-      {
-        "name": "FAMMUDONDE",
-        "type": "text",
-        "isSessionVariable": false,
-        "_row_num": 10
-      },
-      {
-        "name": "REGDAIMOR",
-        "type": "adate",
-        "isSessionVariable": false,
-        "_row_num": 11
-      },
-      {
-        "name": "COORN",
-        "type": "text",
-        "isSessionVariable": false,
-        "_row_num": 12
-      },
-      {
-        "name": "COORW",
-        "type": "text",
-        "isSessionVariable": false,
-        "_row_num": 13
-      },
-      {
-        "name": "NOFOGAO",
-        "type": "integer",
-        "isSessionVariable": false,
-        "_row_num": 14
       }
     ]
   },
@@ -384,7 +318,7 @@
         "type": "string",
         "_defn": [
           {
-            "_row_num": 5,
+            "_row_num": 9,
             "section_name": "survey"
           },
           {
@@ -395,30 +329,15 @@
         "isSessionVariable": false,
         "elementKey": "TABNOME"
       },
-      "AMO": {
-        "type": "integer",
-        "_defn": [
-          {
-            "_row_num": 6,
-            "section_name": "survey"
-          },
-          {
-            "_row_num": 5,
-            "section_name": "model"
-          }
-        ],
-        "isSessionVariable": false,
-        "elementKey": "AMO"
-      },
       "MOR": {
         "type": "integer",
         "_defn": [
           {
-            "_row_num": 7,
+            "_row_num": 5,
             "section_name": "survey"
           },
           {
-            "_row_num": 6,
+            "_row_num": 5,
             "section_name": "model"
           }
         ],
@@ -429,11 +348,11 @@
         "type": "string",
         "_defn": [
           {
-            "_row_num": 8,
+            "_row_num": 6,
             "section_name": "survey"
           },
           {
-            "_row_num": 7,
+            "_row_num": 6,
             "section_name": "model"
           }
         ],
@@ -444,7 +363,22 @@
         "type": "integer",
         "_defn": [
           {
-            "_row_num": 9,
+            "_row_num": 7,
+            "section_name": "survey"
+          },
+          {
+            "_row_num": 7,
+            "section_name": "model"
+          }
+        ],
+        "isSessionVariable": false,
+        "elementKey": "GRUPO"
+      },
+      "REGNOME": {
+        "type": "string",
+        "_defn": [
+          {
+            "_row_num": 8,
             "section_name": "survey"
           },
           {
@@ -453,105 +387,7 @@
           }
         ],
         "isSessionVariable": false,
-        "elementKey": "GRUPO"
-      },
-      "DATASAIDA": {
-        "prompt_type_name": "adate",
-        "type": "string",
-        "elementType": "string",
-        "_row_num": 2,
-        "__rowNum__": 1,
-        "_defn": [
-          {
-            "_row_num": 10,
-            "section_name": "survey"
-          },
-          {
-            "_row_num": 9,
-            "section_name": "model"
-          }
-        ],
-        "isSessionVariable": false,
-        "elementKey": "DATASAIDA"
-      },
-      "FAMMUDONDE": {
-        "type": "string",
-        "_defn": [
-          {
-            "_row_num": 11,
-            "section_name": "survey"
-          },
-          {
-            "_row_num": 10,
-            "section_name": "model"
-          }
-        ],
-        "isSessionVariable": false,
-        "elementKey": "FAMMUDONDE"
-      },
-      "REGDAIMOR": {
-        "prompt_type_name": "adate",
-        "type": "string",
-        "elementType": "string",
-        "_row_num": 2,
-        "__rowNum__": 1,
-        "_defn": [
-          {
-            "_row_num": 12,
-            "section_name": "survey"
-          },
-          {
-            "_row_num": 11,
-            "section_name": "model"
-          }
-        ],
-        "isSessionVariable": false,
-        "elementKey": "REGDAIMOR"
-      },
-      "COORN": {
-        "type": "string",
-        "_defn": [
-          {
-            "_row_num": 13,
-            "section_name": "survey"
-          },
-          {
-            "_row_num": 12,
-            "section_name": "model"
-          }
-        ],
-        "isSessionVariable": false,
-        "elementKey": "COORN"
-      },
-      "COORW": {
-        "type": "string",
-        "_defn": [
-          {
-            "_row_num": 14,
-            "section_name": "survey"
-          },
-          {
-            "_row_num": 13,
-            "section_name": "model"
-          }
-        ],
-        "isSessionVariable": false,
-        "elementKey": "COORW"
-      },
-      "NOFOGAO": {
-        "type": "integer",
-        "_defn": [
-          {
-            "_row_num": 15,
-            "section_name": "survey"
-          },
-          {
-            "_row_num": 14,
-            "section_name": "model"
-          }
-        ],
-        "isSessionVariable": false,
-        "elementKey": "NOFOGAO"
+        "elementKey": "REGNOME"
       }
     },
     "section_names": [
@@ -585,28 +421,28 @@
             "promptIdx": 1
           },
           {
-            "type": "text",
-            "name": "TABNOME",
+            "type": "integer",
+            "name": "MOR",
             "_row_num": 5,
             "__rowNum__": 4,
             "_token_type": "prompt",
-            "_type": "text",
+            "_type": "integer",
             "_branch_label_enclosing_screen": "survey/_screen2",
             "promptIdx": 2
           },
           {
-            "type": "integer",
-            "name": "AMO",
+            "type": "text",
+            "name": "MORNOME",
             "_row_num": 6,
             "__rowNum__": 5,
             "_token_type": "prompt",
-            "_type": "integer",
+            "_type": "text",
             "_branch_label_enclosing_screen": "survey/_screen2",
             "promptIdx": 3
           },
           {
             "type": "integer",
-            "name": "MOR",
+            "name": "GRUPO",
             "_row_num": 7,
             "__rowNum__": 6,
             "_token_type": "prompt",
@@ -616,7 +452,7 @@
           },
           {
             "type": "text",
-            "name": "MORNOME",
+            "name": "REGNOME",
             "_row_num": 8,
             "__rowNum__": 7,
             "_token_type": "prompt",
@@ -625,82 +461,22 @@
             "promptIdx": 5
           },
           {
-            "type": "integer",
-            "name": "GRUPO",
+            "type": "text",
+            "name": "TABNOME",
             "_row_num": 9,
             "__rowNum__": 8,
             "_token_type": "prompt",
-            "_type": "integer",
+            "_type": "text",
             "_branch_label_enclosing_screen": "survey/_screen2",
             "promptIdx": 6
-          },
-          {
-            "type": "adate",
-            "name": "DATASAIDA",
-            "_row_num": 10,
-            "__rowNum__": 9,
-            "_token_type": "prompt",
-            "_type": "adate",
-            "_branch_label_enclosing_screen": "survey/_screen2",
-            "promptIdx": 7
-          },
-          {
-            "type": "text",
-            "name": "FAMMUDONDE",
-            "_row_num": 11,
-            "__rowNum__": 10,
-            "_token_type": "prompt",
-            "_type": "text",
-            "_branch_label_enclosing_screen": "survey/_screen2",
-            "promptIdx": 8
-          },
-          {
-            "type": "adate",
-            "name": "REGDAIMOR",
-            "_row_num": 12,
-            "__rowNum__": 11,
-            "_token_type": "prompt",
-            "_type": "adate",
-            "_branch_label_enclosing_screen": "survey/_screen2",
-            "promptIdx": 9
-          },
-          {
-            "type": "text",
-            "name": "COORN",
-            "_row_num": 13,
-            "__rowNum__": 12,
-            "_token_type": "prompt",
-            "_type": "text",
-            "_branch_label_enclosing_screen": "survey/_screen2",
-            "promptIdx": 10
-          },
-          {
-            "type": "text",
-            "name": "COORW",
-            "_row_num": 14,
-            "__rowNum__": 13,
-            "_token_type": "prompt",
-            "_type": "text",
-            "_branch_label_enclosing_screen": "survey/_screen2",
-            "promptIdx": 11
-          },
-          {
-            "type": "integer",
-            "name": "NOFOGAO",
-            "_row_num": 15,
-            "__rowNum__": 14,
-            "_token_type": "prompt",
-            "_type": "integer",
-            "_branch_label_enclosing_screen": "survey/_screen2",
-            "promptIdx": 12
           },
           {
             "_token_type": "prompt",
             "type": "contents",
             "_type": "contents",
-            "_row_num": 17,
-            "_branch_label_enclosing_screen": "survey/_screen17",
-            "promptIdx": 13
+            "_row_num": 11,
+            "_branch_label_enclosing_screen": "survey/_screen11",
+            "promptIdx": 7
           }
         ],
         "validation_tag_map": {
@@ -714,23 +490,23 @@
             "_token_type": "begin_screen",
             "_end_screen_clause": {
               "clause": "end screen",
-              "_row_num": 16,
-              "__rowNum__": 15,
+              "_row_num": 10,
+              "__rowNum__": 9,
               "_token_type": "end_screen"
             },
-            "_screen_block": "function() {var activePromptIndicies = [];\nactivePromptIndicies.push(0);\nactivePromptIndicies.push(1);\nactivePromptIndicies.push(2);\nactivePromptIndicies.push(3);\nactivePromptIndicies.push(4);\nactivePromptIndicies.push(5);\nactivePromptIndicies.push(6);\nactivePromptIndicies.push(7);\nactivePromptIndicies.push(8);\nactivePromptIndicies.push(9);\nactivePromptIndicies.push(10);\nactivePromptIndicies.push(11);\nactivePromptIndicies.push(12);\n\nreturn activePromptIndicies;\n}\n",
+            "_screen_block": "function() {var activePromptIndicies = [];\nactivePromptIndicies.push(0);\nactivePromptIndicies.push(1);\nactivePromptIndicies.push(2);\nactivePromptIndicies.push(3);\nactivePromptIndicies.push(4);\nactivePromptIndicies.push(5);\nactivePromptIndicies.push(6);\n\nreturn activePromptIndicies;\n}\n",
             "operationIdx": 0
           },
           {
             "_token_type": "exit_section",
             "clause": "exit section",
-            "_row_num": 17,
+            "_row_num": 11,
             "operationIdx": 1
           },
           {
-            "_row_num": 17,
+            "_row_num": 11,
             "_token_type": "begin_screen",
-            "_screen_block": "function() {var activePromptIndicies = [];\nactivePromptIndicies.push(13);\n\nreturn activePromptIndicies;\n}\n",
+            "_screen_block": "function() {var activePromptIndicies = [];\nactivePromptIndicies.push(7);\n\nreturn activePromptIndicies;\n}\n",
             "screen": {
               "hideInBackHistory": true
             },
@@ -739,14 +515,14 @@
           {
             "_token_type": "resume",
             "clause": "resume",
-            "_row_num": 17,
+            "_row_num": 11,
             "operationIdx": 3
           }
         ],
         "branch_label_map": {
           "_screen2": 0,
           "_contents": 2,
-          "_screen17": 2
+          "_screen11": 2
         }
       },
       "initial": {
@@ -971,7 +747,7 @@
         "type": "string",
         "_defn": [
           {
-            "_row_num": 5,
+            "_row_num": 9,
             "section_name": "survey"
           },
           {
@@ -985,33 +761,15 @@
         "elementSet": "data",
         "elementPath": "TABNOME"
       },
-      "AMO": {
-        "type": "integer",
-        "_defn": [
-          {
-            "_row_num": 6,
-            "section_name": "survey"
-          },
-          {
-            "_row_num": 5,
-            "section_name": "model"
-          }
-        ],
-        "isSessionVariable": false,
-        "elementKey": "AMO",
-        "elementName": "AMO",
-        "elementSet": "data",
-        "elementPath": "AMO"
-      },
       "MOR": {
         "type": "integer",
         "_defn": [
           {
-            "_row_num": 7,
+            "_row_num": 5,
             "section_name": "survey"
           },
           {
-            "_row_num": 6,
+            "_row_num": 5,
             "section_name": "model"
           }
         ],
@@ -1025,11 +783,11 @@
         "type": "string",
         "_defn": [
           {
-            "_row_num": 8,
+            "_row_num": 6,
             "section_name": "survey"
           },
           {
-            "_row_num": 7,
+            "_row_num": 6,
             "section_name": "model"
           }
         ],
@@ -1043,11 +801,11 @@
         "type": "integer",
         "_defn": [
           {
-            "_row_num": 9,
+            "_row_num": 7,
             "section_name": "survey"
           },
           {
-            "_row_num": 8,
+            "_row_num": 7,
             "section_name": "model"
           }
         ],
@@ -1057,121 +815,23 @@
         "elementSet": "data",
         "elementPath": "GRUPO"
       },
-      "DATASAIDA": {
-        "prompt_type_name": "adate",
-        "type": "string",
-        "elementType": "string",
-        "_row_num": 2,
-        "__rowNum__": 1,
-        "_defn": [
-          {
-            "_row_num": 10,
-            "section_name": "survey"
-          },
-          {
-            "_row_num": 9,
-            "section_name": "model"
-          }
-        ],
-        "isSessionVariable": false,
-        "elementKey": "DATASAIDA",
-        "elementName": "DATASAIDA",
-        "elementSet": "data",
-        "elementPath": "DATASAIDA"
-      },
-      "FAMMUDONDE": {
+      "REGNOME": {
         "type": "string",
         "_defn": [
           {
-            "_row_num": 11,
+            "_row_num": 8,
             "section_name": "survey"
           },
           {
-            "_row_num": 10,
+            "_row_num": 8,
             "section_name": "model"
           }
         ],
         "isSessionVariable": false,
-        "elementKey": "FAMMUDONDE",
-        "elementName": "FAMMUDONDE",
+        "elementKey": "REGNOME",
+        "elementName": "REGNOME",
         "elementSet": "data",
-        "elementPath": "FAMMUDONDE"
-      },
-      "REGDAIMOR": {
-        "prompt_type_name": "adate",
-        "type": "string",
-        "elementType": "string",
-        "_row_num": 2,
-        "__rowNum__": 1,
-        "_defn": [
-          {
-            "_row_num": 12,
-            "section_name": "survey"
-          },
-          {
-            "_row_num": 11,
-            "section_name": "model"
-          }
-        ],
-        "isSessionVariable": false,
-        "elementKey": "REGDAIMOR",
-        "elementName": "REGDAIMOR",
-        "elementSet": "data",
-        "elementPath": "REGDAIMOR"
-      },
-      "COORN": {
-        "type": "string",
-        "_defn": [
-          {
-            "_row_num": 13,
-            "section_name": "survey"
-          },
-          {
-            "_row_num": 12,
-            "section_name": "model"
-          }
-        ],
-        "isSessionVariable": false,
-        "elementKey": "COORN",
-        "elementName": "COORN",
-        "elementSet": "data",
-        "elementPath": "COORN"
-      },
-      "COORW": {
-        "type": "string",
-        "_defn": [
-          {
-            "_row_num": 14,
-            "section_name": "survey"
-          },
-          {
-            "_row_num": 13,
-            "section_name": "model"
-          }
-        ],
-        "isSessionVariable": false,
-        "elementKey": "COORW",
-        "elementName": "COORW",
-        "elementSet": "data",
-        "elementPath": "COORW"
-      },
-      "NOFOGAO": {
-        "type": "integer",
-        "_defn": [
-          {
-            "_row_num": 15,
-            "section_name": "survey"
-          },
-          {
-            "_row_num": 14,
-            "section_name": "model"
-          }
-        ],
-        "isSessionVariable": false,
-        "elementKey": "NOFOGAO",
-        "elementName": "NOFOGAO",
-        "elementSet": "data",
-        "elementPath": "NOFOGAO"
+        "elementPath": "REGNOME"
       },
       "_id": {
         "type": "string",
