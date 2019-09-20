@@ -4,7 +4,8 @@
 'use strict';
 /* global odkTables, util, odkCommon, odkData */
 
-var persons, visitType, cluster, assistant, region, tabanca;
+var persons, children, visitType, cluster, assistant, region, tabanca;
+// note that persons are the MIFs
 
 function display() {
     console.log("Persons list loading");
@@ -62,7 +63,7 @@ function loadPersons() {
 function loadChildren() {
     // SQL to load children
     var sql = "SELECT REGIDC, NAME, REGID, PRES, CARTVAC, CONT, OUTDATE FROM CRIANCA  WHERE REG = " + region + " AND TAB = " + tabanca + " AND MOR = " + cluster + " GROUP BY REGIDC HAVING MIN(ROWID) AND ESTADO = 1  ORDER BY substr(CONT, instr(CONT, 'Y:')+2, 4) || substr('00'|| trim(substr(CONT, instr(CONT, 'M:')+2, 2),','), -2, 2) || substr('00'|| trim(substr(CONT, instr(CONT, 'D:')+2, 2),','), -2, 2) DESC, NAME";
-
+    children = [];
     console.log("Querying database for CRIANCAs...");
     console.log(sql);
     var successFn = function( result ) {
@@ -79,7 +80,7 @@ function loadChildren() {
             
             var p = { type: 'crianca', REGIDC, NAME, REGID, PRES, CARTVAC, CONT, OUTDATE };
             console.log(p);
-            persons.push(p);
+            children.push(p);
         }
         populateView();
         return;
@@ -94,11 +95,31 @@ function loadChildren() {
     odkData.arbitraryQuery('CRIANCA', sql, null, null, null, successFn, failureFn);
 }
 
+
 function populateView() {
-    console.log(persons);
-    window.PPP = persons; //TODO: REMOVE THIS
+    
+    // console.log("MIFS:");
+    // console.log(persons);
+    
+    // console.log("CHILDREN:");
+    // console.log(children);
+    
+    var personsAndChildren = [];
+    persons.forEach(mif => {
+        personsAndChildren.push(mif);
+        var thisMifsChildren = children.splice(children.findIndex(child => child.REGID == mif.REGID),1); // this also removes the matched children from the children list
+        thisMifsChildren.forEach(child => {
+            personsAndChildren.push(child);
+        });
+    });
+
+    // Add any remaining (orphaned) children
+    children.forEach(child => {
+        personsAndChildren.push(chlid);        
+    });
+
     var ul = $('#persons');
-    $.each(persons, function() {
+    $.each(personsAndChildren, function() {
         console.log(this);
         var visited = this.visited ? 'visited' : '';
         ul.append($("<li />").append($("<button />").attr('onclick','openForm("' + this.type + '",' + this + ');').attr('class',visited + ' btn ' + this.type).text(this.NAME)));
