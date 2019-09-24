@@ -191,7 +191,7 @@
       },
       {
         "type": "text",
-        "name": "NAME",
+        "name": "NOME",
         "display": {
           "prompt": {
             "text": {
@@ -7074,7 +7074,7 @@
       },
       {
         "type": "text",
-        "name": "ondecod2",
+        "name": "ONDECOD2",
         "display": {
           "prompt": {
             "text": {
@@ -10659,7 +10659,7 @@
         "_row_num": 34
       },
       {
-        "name": "NAME",
+        "name": "NOME",
         "type": "text",
         "isSessionVariable": false,
         "_row_num": 35
@@ -12153,7 +12153,7 @@
         "_row_num": 290
       },
       {
-        "name": "ondecod2",
+        "name": "ONDECOD2",
         "type": "text",
         "isSessionVariable": false,
         "_row_num": 291
@@ -15793,7 +15793,7 @@
         "isSessionVariable": true,
         "elementKey": "nmns"
       },
-      "NAME": {
+      "NOME": {
         "type": "string",
         "_defn": [
           {
@@ -15806,7 +15806,7 @@
           }
         ],
         "isSessionVariable": false,
-        "elementKey": "NAME"
+        "elementKey": "NOME"
       },
       "PART": {
         "type": "integer",
@@ -20273,7 +20273,7 @@
         "isSessionVariable": false,
         "elementKey": "ONDECOD1"
       },
-      "ondecod2": {
+      "ONDECOD2": {
         "type": "string",
         "_defn": [
           {
@@ -20286,7 +20286,7 @@
           }
         ],
         "isSessionVariable": false,
-        "elementKey": "ondecod2"
+        "elementKey": "ONDECOD2"
       },
       "ONDEOUTRO": {
         "type": "string",
@@ -20800,7 +20800,7 @@
           },
           {
             "type": "text",
-            "name": "NAME",
+            "name": "NOME",
             "display": {
               "prompt": {
                 "text": {
@@ -30152,7 +30152,7 @@
           },
           {
             "type": "text",
-            "name": "ondecod2",
+            "name": "ONDECOD2",
             "display": {
               "prompt": {
                 "text": {
@@ -31952,7 +31952,7 @@
           "nmns_items"
         ]
       },
-      "NAME": {
+      "NOME": {
         "type": "string",
         "_defn": [
           {
@@ -31965,10 +31965,10 @@
           }
         ],
         "isSessionVariable": false,
-        "elementKey": "NAME",
-        "elementName": "NAME",
+        "elementKey": "NOME",
+        "elementName": "NOME",
         "elementSet": "data",
-        "elementPath": "NAME"
+        "elementPath": "NOME"
       },
       "PART": {
         "type": "integer",
@@ -37218,7 +37218,7 @@
         "elementSet": "data",
         "elementPath": "ONDECOD1"
       },
-      "ondecod2": {
+      "ONDECOD2": {
         "type": "string",
         "_defn": [
           {
@@ -37231,10 +37231,10 @@
           }
         ],
         "isSessionVariable": false,
-        "elementKey": "ondecod2",
-        "elementName": "ondecod2",
+        "elementKey": "ONDECOD2",
+        "elementName": "ONDECOD2",
         "elementSet": "data",
-        "elementPath": "ondecod2"
+        "elementPath": "ONDECOD2"
       },
       "ONDEOUTRO": {
         "type": "string",
