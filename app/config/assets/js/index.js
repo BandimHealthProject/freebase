@@ -86,16 +86,16 @@ function initButtons() {
 
     btnControl = $('#btnControl');
     btnControl.on("click", function() {
-        var selected_region = selReg.val();
-        var selected_tabanca = selTab.val();    
+        var region = selReg.val();
+        var tabanca = selTab.val();    
         var assistant = selAss.val();
         if (!assistant || assistant < 0) {
             selAss.css('background-color','pink');
             return false;
         }
         var visitType = "control";
-        var queryParams = util.setQuerystringParams(selected_region, selected_tabanca, assistant, visitType);
-        if (DEBUG) top.location = 'listClusters.html' + queryParams;
+        var queryParams = util.setQuerystringParams(region, tabanca, assistant, visitType);
+        if (util.DEBUG) top.location = 'listClusters.html' + queryParams;
         odkTables.launchHTML(null,  'config/assets/listClusters.html' + queryParams);
     });
     btnRoutine.attr("disabled","disabled");
