@@ -17026,7 +17026,7 @@
       },
       {
         "name": "CART",
-        "type": "integer",
+        "type": "select_one",
         "isSessionVariable": false,
         "_row_num": 56
       },
@@ -22434,7 +22434,7 @@
         "elementKey": "ASSISTENTE"
       },
       "CART": {
-        "type": "integer",
+        "type": "string",
         "valuesList": "YesNo",
         "_defn": [
           {
@@ -44598,7 +44598,7 @@
         "elementPath": "ASSISTENTE"
       },
       "CART": {
-        "type": "integer",
+        "type": "string",
         "valuesList": "YesNo",
         "_defn": [
           {
