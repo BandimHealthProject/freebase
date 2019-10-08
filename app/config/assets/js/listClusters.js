@@ -32,7 +32,7 @@ function loadPersons() {
             var MORNOME =  result.getData(row,"MORNOME");
             var GRUPO =  result.getData(row,"GRUPO");
             var VISITED = false;
-            clusters.push({ id: MOR, visited: VISITED, group: GRUPO, name: GRUPO + " - " + MORNOME});
+            clusters.push({ id: MOR, visited: VISITED, group: GRUPO, name: MOR + " - " + MORNOME + " (" + GRUPO + ")"});
         }        
         populateView();
         return;
