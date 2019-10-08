@@ -7788,7 +7788,7 @@
       },
       {
         "clause": "if",
-        "condition": "data('ESTADOVIS') != '2' && data('ESTADOVIS') !='3'",
+        "condition": "data('ESTADOVIS') != '2' && data('ESTADOVIS') !='3' && data('ESTADOVIS') == '6'",
         "_row_num": 36
       },
       {
@@ -16732,7 +16732,7 @@
       },
       {
         "name": "CESCO_REG",
-        "type": "select_one",
+        "type": "integer",
         "isSessionVariable": false,
         "_row_num": 6
       },
@@ -16786,7 +16786,7 @@
       },
       {
         "name": "FAN",
-        "type": "select_one",
+        "type": "integer",
         "isSessionVariable": false,
         "_row_num": 15
       },
@@ -16798,7 +16798,7 @@
       },
       {
         "name": "GEM",
-        "type": "select_one",
+        "type": "integer",
         "isSessionVariable": false,
         "_row_num": 17
       },
@@ -16870,13 +16870,13 @@
       },
       {
         "name": "mifmondens",
-        "type": "select_multiple",
+        "type": "integer",
         "isSessionVariable": true,
         "_row_num": 29
       },
       {
         "name": "MIFMORAVA",
-        "type": "select_one",
+        "type": "integer",
         "isSessionVariable": false,
         "_row_num": 30
       },
@@ -16972,7 +16972,7 @@
       },
       {
         "name": "vacnohns",
-        "type": "select_multiple",
+        "type": "integer",
         "isSessionVariable": true,
         "_row_num": 46
       },
@@ -16990,7 +16990,7 @@
       },
       {
         "name": "ABPART",
-        "type": "select_one",
+        "type": "integer",
         "isSessionVariable": false,
         "_row_num": 50
       },
@@ -17002,7 +17002,7 @@
       },
       {
         "name": "ABPARTNV",
-        "type": "select_one",
+        "type": "integer",
         "isSessionVariable": false,
         "_row_num": 52
       },
@@ -17014,7 +17014,7 @@
       },
       {
         "name": "ABPARTTIPO",
-        "type": "select_one",
+        "type": "integer",
         "isSessionVariable": false,
         "_row_num": 54
       },
@@ -17026,13 +17026,13 @@
       },
       {
         "name": "CART",
-        "type": "select_one",
+        "type": "integer",
         "isSessionVariable": false,
         "_row_num": 56
       },
       {
         "name": "CESCO",
-        "type": "select_one",
+        "type": "integer",
         "isSessionVariable": false,
         "_row_num": 57
       },
@@ -17044,19 +17044,19 @@
       },
       {
         "name": "CONSENTFOR",
-        "type": "select_one",
+        "type": "integer",
         "isSessionVariable": false,
         "_row_num": 59
       },
       {
         "name": "CONSENTSIG",
-        "type": "select_one",
+        "type": "integer",
         "isSessionVariable": false,
         "_row_num": 60
       },
       {
         "name": "CONSENTTYP",
-        "type": "select_one",
+        "type": "integer",
         "isSessionVariable": false,
         "_row_num": 61
       },
@@ -17074,25 +17074,25 @@
       },
       {
         "name": "escons",
-        "type": "select_multiple",
+        "type": "integer",
         "isSessionVariable": true,
         "_row_num": 64
       },
       {
         "name": "ESTADOVIS",
-        "type": "select_one",
+        "type": "integer",
         "isSessionVariable": false,
         "_row_num": 65
       },
       {
         "name": "EVITA",
-        "type": "select_one",
+        "type": "integer",
         "isSessionVariable": false,
         "_row_num": 66
       },
       {
         "name": "EVITA2",
-        "type": "select_multiple",
+        "type": "text",
         "isSessionVariable": false,
         "_row_num": 67
       },
@@ -17110,31 +17110,31 @@
       },
       {
         "name": "GR",
-        "type": "select_one",
+        "type": "integer",
         "isSessionVariable": false,
         "_row_num": 70
       },
       {
         "name": "PARPAD",
-        "type": "select_one",
+        "type": "integer",
         "isSessionVariable": false,
         "_row_num": 71
       },
       {
         "name": "TENDA",
-        "type": "select_one",
+        "type": "integer",
         "isSessionVariable": false,
         "_row_num": 72
       },
       {
         "name": "TENDATIPO",
-        "type": "select_one",
+        "type": "integer",
         "isSessionVariable": false,
         "_row_num": 73
       },
       {
         "name": "TENDAYN",
-        "type": "select_one",
+        "type": "integer",
         "isSessionVariable": false,
         "_row_num": 74
       },
@@ -17152,241 +17152,241 @@
       },
       {
         "name": "VAC1TIPO",
-        "type": "select_one",
+        "type": "integer",
         "isSessionVariable": false,
         "_row_num": 79
       },
       {
         "name": "VAC2TIPO",
-        "type": "select_one",
+        "type": "integer",
         "isSessionVariable": false,
         "_row_num": 80
       },
       {
         "name": "VAC3TIPO",
-        "type": "select_one",
+        "type": "integer",
         "isSessionVariable": false,
         "_row_num": 81
       },
       {
         "name": "VAC4TIPO",
-        "type": "select_one",
+        "type": "integer",
         "isSessionVariable": false,
         "_row_num": 82
       },
       {
         "name": "VAC5TIPO",
-        "type": "select_one",
+        "type": "integer",
         "isSessionVariable": false,
         "_row_num": 83
       },
       {
         "name": "VAC6TIPO",
-        "type": "select_one",
+        "type": "integer",
         "isSessionVariable": false,
         "_row_num": 84
       },
       {
         "name": "VAC7TIPO",
-        "type": "select_one",
+        "type": "integer",
         "isSessionVariable": false,
         "_row_num": 85
       },
       {
         "name": "VAC8TIPO",
-        "type": "select_one",
+        "type": "integer",
         "isSessionVariable": false,
         "_row_num": 86
       },
       {
         "name": "VAC9TIPO",
-        "type": "select_one",
+        "type": "integer",
         "isSessionVariable": false,
         "_row_num": 87
       },
       {
         "name": "VAC10TIPO",
-        "type": "select_one",
+        "type": "integer",
         "isSessionVariable": false,
         "_row_num": 88
       },
       {
         "name": "VAC11TIPO",
-        "type": "select_one",
+        "type": "integer",
         "isSessionVariable": false,
         "_row_num": 89
       },
       {
         "name": "VAC12TIPO",
-        "type": "select_one",
+        "type": "integer",
         "isSessionVariable": false,
         "_row_num": 90
       },
       {
         "name": "VAC13TIPO",
-        "type": "select_one",
+        "type": "integer",
         "isSessionVariable": false,
         "_row_num": 91
       },
       {
         "name": "VAC14TIPO",
-        "type": "select_one",
+        "type": "integer",
         "isSessionVariable": false,
         "_row_num": 92
       },
       {
         "name": "VAC15TIPO",
-        "type": "select_one",
+        "type": "integer",
         "isSessionVariable": false,
         "_row_num": 93
       },
       {
         "name": "VAC16TIPO",
-        "type": "select_one",
+        "type": "integer",
         "isSessionVariable": false,
         "_row_num": 94
       },
       {
         "name": "VAC17TIPO",
-        "type": "select_one",
+        "type": "integer",
         "isSessionVariable": false,
         "_row_num": 95
       },
       {
         "name": "VAC18TIPO",
-        "type": "select_one",
+        "type": "integer",
         "isSessionVariable": false,
         "_row_num": 96
       },
       {
         "name": "VAC19TIPO",
-        "type": "select_one",
+        "type": "integer",
         "isSessionVariable": false,
         "_row_num": 97
       },
       {
         "name": "VAC20TIPO",
-        "type": "select_one",
+        "type": "integer",
         "isSessionVariable": false,
         "_row_num": 98
       },
       {
         "name": "VAC1INF",
-        "type": "select_one",
+        "type": "integer",
         "isSessionVariable": false,
         "_row_num": 99
       },
       {
         "name": "VAC2INF",
-        "type": "select_one",
+        "type": "integer",
         "isSessionVariable": false,
         "_row_num": 100
       },
       {
         "name": "VAC3INF",
-        "type": "select_one",
+        "type": "integer",
         "isSessionVariable": false,
         "_row_num": 101
       },
       {
         "name": "VAC4INF",
-        "type": "select_one",
+        "type": "integer",
         "isSessionVariable": false,
         "_row_num": 102
       },
       {
         "name": "VAC5INF",
-        "type": "select_one",
+        "type": "integer",
         "isSessionVariable": false,
         "_row_num": 103
       },
       {
         "name": "VAC6INF",
-        "type": "select_one",
+        "type": "integer",
         "isSessionVariable": false,
         "_row_num": 104
       },
       {
         "name": "VAC7INF",
-        "type": "select_one",
+        "type": "integer",
         "isSessionVariable": false,
         "_row_num": 105
       },
       {
         "name": "VAC8INF",
-        "type": "select_one",
+        "type": "integer",
         "isSessionVariable": false,
         "_row_num": 106
       },
       {
         "name": "VAC9INF",
-        "type": "select_one",
+        "type": "integer",
         "isSessionVariable": false,
         "_row_num": 107
       },
       {
         "name": "VAC10INF",
-        "type": "select_one",
+        "type": "integer",
         "isSessionVariable": false,
         "_row_num": 108
       },
       {
         "name": "VAC11INF",
-        "type": "select_one",
+        "type": "integer",
         "isSessionVariable": false,
         "_row_num": 109
       },
       {
         "name": "VAC12INF",
-        "type": "select_one",
+        "type": "integer",
         "isSessionVariable": false,
         "_row_num": 110
       },
       {
         "name": "VAC13INF",
-        "type": "select_one",
+        "type": "integer",
         "isSessionVariable": false,
         "_row_num": 111
       },
       {
         "name": "VAC14INF",
-        "type": "select_one",
+        "type": "integer",
         "isSessionVariable": false,
         "_row_num": 112
       },
       {
         "name": "VAC15INF",
-        "type": "select_one",
+        "type": "integer",
         "isSessionVariable": false,
         "_row_num": 113
       },
       {
         "name": "VAC16INF",
-        "type": "select_one",
+        "type": "integer",
         "isSessionVariable": false,
         "_row_num": 114
       },
       {
         "name": "VAC17INF",
-        "type": "select_one",
+        "type": "integer",
         "isSessionVariable": false,
         "_row_num": 115
       },
       {
         "name": "VAC18INF",
-        "type": "select_one",
+        "type": "integer",
         "isSessionVariable": false,
         "_row_num": 116
       },
       {
         "name": "VAC19INF",
-        "type": "select_one",
+        "type": "integer",
         "isSessionVariable": false,
         "_row_num": 117
       },
       {
         "name": "VAC20INF",
-        "type": "select_one",
+        "type": "integer",
         "isSessionVariable": false,
         "_row_num": 118
       },
@@ -17512,121 +17512,121 @@
       },
       {
         "name": "VAC1CHECK",
-        "type": "select_one",
+        "type": "integer",
         "isSessionVariable": false,
         "_row_num": 139
       },
       {
         "name": "VAC2CHECK",
-        "type": "select_one",
+        "type": "integer",
         "isSessionVariable": false,
         "_row_num": 140
       },
       {
         "name": "VAC3CHECK",
-        "type": "select_one",
+        "type": "integer",
         "isSessionVariable": false,
         "_row_num": 141
       },
       {
         "name": "VAC4CHECK",
-        "type": "select_one",
+        "type": "integer",
         "isSessionVariable": false,
         "_row_num": 142
       },
       {
         "name": "VAC5CHECK",
-        "type": "select_one",
+        "type": "integer",
         "isSessionVariable": false,
         "_row_num": 143
       },
       {
         "name": "VAC6CHECK",
-        "type": "select_one",
+        "type": "integer",
         "isSessionVariable": false,
         "_row_num": 144
       },
       {
         "name": "VAC7CHECK",
-        "type": "select_one",
+        "type": "integer",
         "isSessionVariable": false,
         "_row_num": 145
       },
       {
         "name": "VAC8CHECK",
-        "type": "select_one",
+        "type": "integer",
         "isSessionVariable": false,
         "_row_num": 146
       },
       {
         "name": "VAC9CHECK",
-        "type": "select_one",
+        "type": "integer",
         "isSessionVariable": false,
         "_row_num": 147
       },
       {
         "name": "VAC10CHECK",
-        "type": "select_one",
+        "type": "integer",
         "isSessionVariable": false,
         "_row_num": 148
       },
       {
         "name": "VAC11CHECK",
-        "type": "select_one",
+        "type": "integer",
         "isSessionVariable": false,
         "_row_num": 149
       },
       {
         "name": "VAC12CHECK",
-        "type": "select_one",
+        "type": "integer",
         "isSessionVariable": false,
         "_row_num": 150
       },
       {
         "name": "VAC13CHECK",
-        "type": "select_one",
+        "type": "integer",
         "isSessionVariable": false,
         "_row_num": 151
       },
       {
         "name": "VAC14CHECK",
-        "type": "select_one",
+        "type": "integer",
         "isSessionVariable": false,
         "_row_num": 152
       },
       {
         "name": "VAC15CHECK",
-        "type": "select_one",
+        "type": "integer",
         "isSessionVariable": false,
         "_row_num": 153
       },
       {
         "name": "VAC16CHECK",
-        "type": "select_one",
+        "type": "integer",
         "isSessionVariable": false,
         "_row_num": 154
       },
       {
         "name": "VAC17CHECK",
-        "type": "select_one",
+        "type": "integer",
         "isSessionVariable": false,
         "_row_num": 155
       },
       {
         "name": "VAC18CHECK",
-        "type": "select_one",
+        "type": "integer",
         "isSessionVariable": false,
         "_row_num": 156
       },
       {
         "name": "VAC19CHECK",
-        "type": "select_one",
+        "type": "integer",
         "isSessionVariable": false,
         "_row_num": 157
       },
       {
         "name": "VAC20CHECK",
-        "type": "select_one",
+        "type": "integer",
         "isSessionVariable": false,
         "_row_num": 158
       },
@@ -17992,121 +17992,121 @@
       },
       {
         "name": "addvac1",
-        "type": "select_one",
+        "type": "integer",
         "isSessionVariable": true,
         "_row_num": 219
       },
       {
         "name": "addvac2",
-        "type": "select_one",
+        "type": "integer",
         "isSessionVariable": true,
         "_row_num": 220
       },
       {
         "name": "addvac3",
-        "type": "select_one",
+        "type": "integer",
         "isSessionVariable": true,
         "_row_num": 221
       },
       {
         "name": "addvac4",
-        "type": "select_one",
+        "type": "integer",
         "isSessionVariable": true,
         "_row_num": 222
       },
       {
         "name": "addvac5",
-        "type": "select_one",
+        "type": "integer",
         "isSessionVariable": true,
         "_row_num": 223
       },
       {
         "name": "addvac6",
-        "type": "select_one",
+        "type": "integer",
         "isSessionVariable": true,
         "_row_num": 224
       },
       {
         "name": "addvac7",
-        "type": "select_one",
+        "type": "integer",
         "isSessionVariable": true,
         "_row_num": 225
       },
       {
         "name": "addvac8",
-        "type": "select_one",
+        "type": "integer",
         "isSessionVariable": true,
         "_row_num": 226
       },
       {
         "name": "addvac9",
-        "type": "select_one",
+        "type": "integer",
         "isSessionVariable": true,
         "_row_num": 227
       },
       {
         "name": "addvac10",
-        "type": "select_one",
+        "type": "integer",
         "isSessionVariable": true,
         "_row_num": 228
       },
       {
         "name": "addvac11",
-        "type": "select_one",
+        "type": "integer",
         "isSessionVariable": true,
         "_row_num": 229
       },
       {
         "name": "addvac12",
-        "type": "select_one",
+        "type": "integer",
         "isSessionVariable": true,
         "_row_num": 230
       },
       {
         "name": "addvac13",
-        "type": "select_one",
+        "type": "integer",
         "isSessionVariable": true,
         "_row_num": 231
       },
       {
         "name": "addvac14",
-        "type": "select_one",
+        "type": "integer",
         "isSessionVariable": true,
         "_row_num": 232
       },
       {
         "name": "addvac15",
-        "type": "select_one",
+        "type": "integer",
         "isSessionVariable": true,
         "_row_num": 233
       },
       {
         "name": "addvac16",
-        "type": "select_one",
+        "type": "integer",
         "isSessionVariable": true,
         "_row_num": 234
       },
       {
         "name": "addvac17",
-        "type": "select_one",
+        "type": "integer",
         "isSessionVariable": true,
         "_row_num": 235
       },
       {
         "name": "addvac18",
-        "type": "select_one",
+        "type": "integer",
         "isSessionVariable": true,
         "_row_num": 236
       },
       {
         "name": "addvac19",
-        "type": "select_one",
+        "type": "integer",
         "isSessionVariable": true,
         "_row_num": 237
       },
       {
         "name": "addvac20",
-        "type": "select_one",
+        "type": "integer",
         "isSessionVariable": true,
         "_row_num": 238
       },
@@ -18136,19 +18136,19 @@
       },
       {
         "name": "CICA",
-        "type": "select_one",
+        "type": "integer",
         "isSessionVariable": false,
         "_row_num": 244
       },
       {
         "name": "CICA1",
-        "type": "select_one",
+        "type": "integer",
         "isSessionVariable": false,
         "_row_num": 245
       },
       {
         "name": "CICA1CERT",
-        "type": "select_one",
+        "type": "integer",
         "isSessionVariable": false,
         "_row_num": 246
       },
@@ -18160,13 +18160,13 @@
       },
       {
         "name": "CICA2",
-        "type": "select_one",
+        "type": "integer",
         "isSessionVariable": false,
         "_row_num": 248
       },
       {
         "name": "CICA2CERT",
-        "type": "select_one",
+        "type": "integer",
         "isSessionVariable": false,
         "_row_num": 249
       },
@@ -18178,13 +18178,13 @@
       },
       {
         "name": "CICA3",
-        "type": "select_one",
+        "type": "integer",
         "isSessionVariable": false,
         "_row_num": 251
       },
       {
         "name": "CICA3CERT",
-        "type": "select_one",
+        "type": "integer",
         "isSessionVariable": false,
         "_row_num": 252
       },
@@ -18196,13 +18196,13 @@
       },
       {
         "name": "CICA4",
-        "type": "select_one",
+        "type": "integer",
         "isSessionVariable": false,
         "_row_num": 254
       },
       {
         "name": "CICA4CERT",
-        "type": "select_one",
+        "type": "integer",
         "isSessionVariable": false,
         "_row_num": 255
       },
@@ -18262,7 +18262,7 @@
       },
       {
         "name": "NCICA",
-        "type": "select_one",
+        "type": "integer",
         "isSessionVariable": false,
         "_row_num": 265
       },
@@ -18280,7 +18280,7 @@
       },
       {
         "name": "ACCIDENTE",
-        "type": "select_one",
+        "type": "integer",
         "isSessionVariable": false,
         "_row_num": 271
       },
@@ -18292,13 +18292,13 @@
       },
       {
         "name": "AJUDOU",
-        "type": "select_one",
+        "type": "integer",
         "isSessionVariable": false,
         "_row_num": 273
       },
       {
         "name": "COMPPAR",
-        "type": "select_one",
+        "type": "integer",
         "isSessionVariable": false,
         "_row_num": 274
       },
@@ -18310,7 +18310,7 @@
       },
       {
         "name": "DIAG",
-        "type": "select_one",
+        "type": "integer",
         "isSessionVariable": false,
         "_row_num": 276
       },
@@ -18322,13 +18322,13 @@
       },
       {
         "name": "DIARREIA",
-        "type": "select_one",
+        "type": "integer",
         "isSessionVariable": false,
         "_row_num": 278
       },
       {
         "name": "DOENCA",
-        "type": "select_one",
+        "type": "integer",
         "isSessionVariable": false,
         "_row_num": 279
       },
@@ -18340,7 +18340,7 @@
       },
       {
         "name": "DORPE",
-        "type": "select_one",
+        "type": "integer",
         "isSessionVariable": false,
         "_row_num": 281
       },
@@ -18352,19 +18352,19 @@
       },
       {
         "name": "FALAR",
-        "type": "select_one",
+        "type": "integer",
         "isSessionVariable": false,
         "_row_num": 283
       },
       {
         "name": "FEBRE",
-        "type": "select_one",
+        "type": "integer",
         "isSessionVariable": false,
         "_row_num": 284
       },
       {
         "name": "GEM_FAL",
-        "type": "select_one",
+        "type": "integer",
         "isSessionVariable": false,
         "_row_num": 285
       },
@@ -18412,49 +18412,49 @@
       },
       {
         "name": "OUTRODUR",
-        "type": "select_one",
+        "type": "integer",
         "isSessionVariable": false,
         "_row_num": 293
       },
       {
         "name": "OUTROSIMP",
-        "type": "select_one",
+        "type": "integer",
         "isSessionVariable": false,
         "_row_num": 294
       },
       {
         "name": "PARANFAL",
-        "type": "select_one",
+        "type": "integer",
         "isSessionVariable": false,
         "_row_num": 295
       },
       {
         "name": "PERPESO",
-        "type": "select_one",
+        "type": "integer",
         "isSessionVariable": false,
         "_row_num": 296
       },
       {
         "name": "RELACAO",
-        "type": "select_one",
+        "type": "integer",
         "isSessionVariable": false,
         "_row_num": 297
       },
       {
         "name": "RELPARFAL",
-        "type": "select_one",
+        "type": "integer",
         "isSessionVariable": false,
         "_row_num": 298
       },
       {
         "name": "RELPRES",
-        "type": "select_one",
+        "type": "integer",
         "isSessionVariable": false,
         "_row_num": 299
       },
       {
         "name": "RESGRAV",
-        "type": "select_one",
+        "type": "integer",
         "isSessionVariable": false,
         "_row_num": 300
       },
@@ -18472,7 +18472,7 @@
       },
       {
         "name": "TOSSE",
-        "type": "select_one",
+        "type": "integer",
         "isSessionVariable": false,
         "_row_num": 303
       },
@@ -18508,25 +18508,25 @@
       },
       {
         "name": "change",
-        "type": "select_one",
+        "type": "integer",
         "isSessionVariable": true,
         "_row_num": 310
       },
       {
         "name": "estadovis",
-        "type": "select_one",
+        "type": "integer",
         "isSessionVariable": true,
         "_row_num": 311
       },
       {
         "name": "gr",
-        "type": "select_one",
+        "type": "integer",
         "isSessionVariable": true,
         "_row_num": 312
       },
       {
         "name": "cont",
-        "type": "select_one",
+        "type": "adate",
         "isSessionVariable": true,
         "_row_num": 313
       }
@@ -21618,7 +21618,7 @@
         "elementKey": "CASA"
       },
       "CESCO_REG": {
-        "type": "string",
+        "type": "integer",
         "valuesList": "YesNoU",
         "_defn": [
           {
@@ -21758,7 +21758,7 @@
         "elementKey": "falns"
       },
       "FAN": {
-        "type": "string",
+        "type": "integer",
         "valuesList": "YesNoU",
         "_defn": [
           {
@@ -21793,7 +21793,7 @@
         "elementKey": "FOGAO"
       },
       "GEM": {
-        "type": "string",
+        "type": "integer",
         "valuesList": "YesNoU",
         "_defn": [
           {
@@ -21991,10 +21991,9 @@
         "elementKey": "MIFMONDE"
       },
       "mifmondens": {
-        "type": "array",
+        "type": "integer",
         "items": {
-          "type": "string",
-          "elementKey": "mifmondens_items"
+          "type": "string"
         },
         "valuesList": "dontknow",
         "_defn": [
@@ -22011,7 +22010,7 @@
         "elementKey": "mifmondens"
       },
       "MIFMORAVA": {
-        "type": "string",
+        "type": "integer",
         "valuesList": "YesNoU",
         "_defn": [
           {
@@ -22282,10 +22281,9 @@
         "elementKey": "VACNOHCERTO"
       },
       "vacnohns": {
-        "type": "array",
+        "type": "integer",
         "items": {
-          "type": "string",
-          "elementKey": "vacnohns_items"
+          "type": "string"
         },
         "valuesList": "dontknowTT",
         "_defn": [
@@ -22337,7 +22335,7 @@
         "elementKey": "vivons"
       },
       "ABPART": {
-        "type": "string",
+        "type": "integer",
         "valuesList": "YesNoU",
         "_defn": [
           {
@@ -22373,7 +22371,7 @@
         "elementKey": "ABPARTDATA"
       },
       "ABPARTNV": {
-        "type": "string",
+        "type": "integer",
         "valuesList": "YesNoU",
         "_defn": [
           {
@@ -22409,7 +22407,7 @@
         "elementKey": "ABPARTNVDATA"
       },
       "ABPARTTIPO": {
-        "type": "string",
+        "type": "integer",
         "valuesList": "birthoutcome",
         "_defn": [
           {
@@ -22436,7 +22434,7 @@
         "elementKey": "ASSISTENTE"
       },
       "CART": {
-        "type": "string",
+        "type": "integer",
         "valuesList": "YesNo",
         "_defn": [
           {
@@ -22452,7 +22450,7 @@
         "elementKey": "CART"
       },
       "CESCO": {
-        "type": "string",
+        "type": "integer",
         "valuesList": "YesNoU",
         "_defn": [
           {
@@ -22488,7 +22486,7 @@
         "elementKey": "CONSENTDAT"
       },
       "CONSENTFOR": {
-        "type": "string",
+        "type": "integer",
         "valuesList": "YesNoU",
         "_defn": [
           {
@@ -22504,7 +22502,7 @@
         "elementKey": "CONSENTFOR"
       },
       "CONSENTSIG": {
-        "type": "string",
+        "type": "integer",
         "valuesList": "YesNoU",
         "_defn": [
           {
@@ -22520,7 +22518,7 @@
         "elementKey": "CONSENTSIG"
       },
       "CONSENTTYP": {
-        "type": "string",
+        "type": "integer",
         "valuesList": "signature",
         "_defn": [
           {
@@ -22571,10 +22569,9 @@
         "elementKey": "ESCO"
       },
       "escons": {
-        "type": "array",
+        "type": "integer",
         "items": {
-          "type": "string",
-          "elementKey": "escons_items"
+          "type": "string"
         },
         "valuesList": "dontknow",
         "_defn": [
@@ -22591,7 +22588,7 @@
         "elementKey": "escons"
       },
       "ESTADOVIS": {
-        "type": "string",
+        "type": "integer",
         "valuesList": "visitstatus",
         "_defn": [
           {
@@ -22607,7 +22604,7 @@
         "elementKey": "ESTADOVIS"
       },
       "EVITA": {
-        "type": "string",
+        "type": "integer",
         "valuesList": "YesNoU",
         "_defn": [
           {
@@ -22623,10 +22620,9 @@
         "elementKey": "EVITA"
       },
       "EVITA2": {
-        "type": "array",
+        "type": "string",
         "items": {
-          "type": "string",
-          "elementKey": "EVITA2_items"
+          "type": "string"
         },
         "valuesList": "contraceptive",
         "_defn": [
@@ -22678,7 +22674,7 @@
         "elementKey": "EXITMUDO"
       },
       "GR": {
-        "type": "string",
+        "type": "integer",
         "valuesList": "YesNoU",
         "_defn": [
           {
@@ -22694,7 +22690,7 @@
         "elementKey": "GR"
       },
       "PARPAD": {
-        "type": "string",
+        "type": "integer",
         "valuesList": "YesNoU",
         "_defn": [
           {
@@ -22710,7 +22706,7 @@
         "elementKey": "PARPAD"
       },
       "TENDA": {
-        "type": "string",
+        "type": "integer",
         "valuesList": "bednettime",
         "_defn": [
           {
@@ -22726,7 +22722,7 @@
         "elementKey": "TENDA"
       },
       "TENDATIPO": {
-        "type": "string",
+        "type": "integer",
         "valuesList": "bednet",
         "_defn": [
           {
@@ -22742,7 +22738,7 @@
         "elementKey": "TENDATIPO"
       },
       "TENDAYN": {
-        "type": "string",
+        "type": "integer",
         "valuesList": "YesNoU",
         "_defn": [
           {
@@ -22785,7 +22781,7 @@
         "elementKey": "LASTVISIT"
       },
       "VAC1TIPO": {
-        "type": "string",
+        "type": "integer",
         "valuesList": "vactype",
         "_defn": [
           {
@@ -22805,7 +22801,7 @@
         "elementKey": "VAC1TIPO"
       },
       "VAC2TIPO": {
-        "type": "string",
+        "type": "integer",
         "valuesList": "vactype",
         "_defn": [
           {
@@ -22825,7 +22821,7 @@
         "elementKey": "VAC2TIPO"
       },
       "VAC3TIPO": {
-        "type": "string",
+        "type": "integer",
         "valuesList": "vactype",
         "_defn": [
           {
@@ -22845,7 +22841,7 @@
         "elementKey": "VAC3TIPO"
       },
       "VAC4TIPO": {
-        "type": "string",
+        "type": "integer",
         "valuesList": "vactype",
         "_defn": [
           {
@@ -22865,7 +22861,7 @@
         "elementKey": "VAC4TIPO"
       },
       "VAC5TIPO": {
-        "type": "string",
+        "type": "integer",
         "valuesList": "vactype",
         "_defn": [
           {
@@ -22885,7 +22881,7 @@
         "elementKey": "VAC5TIPO"
       },
       "VAC6TIPO": {
-        "type": "string",
+        "type": "integer",
         "valuesList": "vactype",
         "_defn": [
           {
@@ -22905,7 +22901,7 @@
         "elementKey": "VAC6TIPO"
       },
       "VAC7TIPO": {
-        "type": "string",
+        "type": "integer",
         "valuesList": "vactype",
         "_defn": [
           {
@@ -22925,7 +22921,7 @@
         "elementKey": "VAC7TIPO"
       },
       "VAC8TIPO": {
-        "type": "string",
+        "type": "integer",
         "valuesList": "vactype",
         "_defn": [
           {
@@ -22945,7 +22941,7 @@
         "elementKey": "VAC8TIPO"
       },
       "VAC9TIPO": {
-        "type": "string",
+        "type": "integer",
         "valuesList": "vactype",
         "_defn": [
           {
@@ -22965,7 +22961,7 @@
         "elementKey": "VAC9TIPO"
       },
       "VAC10TIPO": {
-        "type": "string",
+        "type": "integer",
         "valuesList": "vactype",
         "_defn": [
           {
@@ -22985,7 +22981,7 @@
         "elementKey": "VAC10TIPO"
       },
       "VAC11TIPO": {
-        "type": "string",
+        "type": "integer",
         "valuesList": "vactype",
         "_defn": [
           {
@@ -23005,7 +23001,7 @@
         "elementKey": "VAC11TIPO"
       },
       "VAC12TIPO": {
-        "type": "string",
+        "type": "integer",
         "valuesList": "vactype",
         "_defn": [
           {
@@ -23025,7 +23021,7 @@
         "elementKey": "VAC12TIPO"
       },
       "VAC13TIPO": {
-        "type": "string",
+        "type": "integer",
         "valuesList": "vactype",
         "_defn": [
           {
@@ -23045,7 +23041,7 @@
         "elementKey": "VAC13TIPO"
       },
       "VAC14TIPO": {
-        "type": "string",
+        "type": "integer",
         "valuesList": "vactype",
         "_defn": [
           {
@@ -23065,7 +23061,7 @@
         "elementKey": "VAC14TIPO"
       },
       "VAC15TIPO": {
-        "type": "string",
+        "type": "integer",
         "valuesList": "vactype",
         "_defn": [
           {
@@ -23085,7 +23081,7 @@
         "elementKey": "VAC15TIPO"
       },
       "VAC16TIPO": {
-        "type": "string",
+        "type": "integer",
         "valuesList": "vactype",
         "_defn": [
           {
@@ -23105,7 +23101,7 @@
         "elementKey": "VAC16TIPO"
       },
       "VAC17TIPO": {
-        "type": "string",
+        "type": "integer",
         "valuesList": "vactype",
         "_defn": [
           {
@@ -23125,7 +23121,7 @@
         "elementKey": "VAC17TIPO"
       },
       "VAC18TIPO": {
-        "type": "string",
+        "type": "integer",
         "valuesList": "vactype",
         "_defn": [
           {
@@ -23145,7 +23141,7 @@
         "elementKey": "VAC18TIPO"
       },
       "VAC19TIPO": {
-        "type": "string",
+        "type": "integer",
         "valuesList": "vactype",
         "_defn": [
           {
@@ -23165,7 +23161,7 @@
         "elementKey": "VAC19TIPO"
       },
       "VAC20TIPO": {
-        "type": "string",
+        "type": "integer",
         "valuesList": "vactype",
         "_defn": [
           {
@@ -23185,7 +23181,7 @@
         "elementKey": "VAC20TIPO"
       },
       "VAC1INF": {
-        "type": "string",
+        "type": "integer",
         "valuesList": "vacinf",
         "_defn": [
           {
@@ -23205,7 +23201,7 @@
         "elementKey": "VAC1INF"
       },
       "VAC2INF": {
-        "type": "string",
+        "type": "integer",
         "valuesList": "vacinf",
         "_defn": [
           {
@@ -23225,7 +23221,7 @@
         "elementKey": "VAC2INF"
       },
       "VAC3INF": {
-        "type": "string",
+        "type": "integer",
         "valuesList": "vacinf",
         "_defn": [
           {
@@ -23245,7 +23241,7 @@
         "elementKey": "VAC3INF"
       },
       "VAC4INF": {
-        "type": "string",
+        "type": "integer",
         "valuesList": "vacinf",
         "_defn": [
           {
@@ -23265,7 +23261,7 @@
         "elementKey": "VAC4INF"
       },
       "VAC5INF": {
-        "type": "string",
+        "type": "integer",
         "valuesList": "vacinf",
         "_defn": [
           {
@@ -23285,7 +23281,7 @@
         "elementKey": "VAC5INF"
       },
       "VAC6INF": {
-        "type": "string",
+        "type": "integer",
         "valuesList": "vacinf",
         "_defn": [
           {
@@ -23305,7 +23301,7 @@
         "elementKey": "VAC6INF"
       },
       "VAC7INF": {
-        "type": "string",
+        "type": "integer",
         "valuesList": "vacinf",
         "_defn": [
           {
@@ -23325,7 +23321,7 @@
         "elementKey": "VAC7INF"
       },
       "VAC8INF": {
-        "type": "string",
+        "type": "integer",
         "valuesList": "vacinf",
         "_defn": [
           {
@@ -23345,7 +23341,7 @@
         "elementKey": "VAC8INF"
       },
       "VAC9INF": {
-        "type": "string",
+        "type": "integer",
         "valuesList": "vacinf",
         "_defn": [
           {
@@ -23365,7 +23361,7 @@
         "elementKey": "VAC9INF"
       },
       "VAC10INF": {
-        "type": "string",
+        "type": "integer",
         "valuesList": "vacinf",
         "_defn": [
           {
@@ -23385,7 +23381,7 @@
         "elementKey": "VAC10INF"
       },
       "VAC11INF": {
-        "type": "string",
+        "type": "integer",
         "valuesList": "vacinf",
         "_defn": [
           {
@@ -23405,7 +23401,7 @@
         "elementKey": "VAC11INF"
       },
       "VAC12INF": {
-        "type": "string",
+        "type": "integer",
         "valuesList": "vacinf",
         "_defn": [
           {
@@ -23425,7 +23421,7 @@
         "elementKey": "VAC12INF"
       },
       "VAC13INF": {
-        "type": "string",
+        "type": "integer",
         "valuesList": "vacinf",
         "_defn": [
           {
@@ -23445,7 +23441,7 @@
         "elementKey": "VAC13INF"
       },
       "VAC14INF": {
-        "type": "string",
+        "type": "integer",
         "valuesList": "vacinf",
         "_defn": [
           {
@@ -23465,7 +23461,7 @@
         "elementKey": "VAC14INF"
       },
       "VAC15INF": {
-        "type": "string",
+        "type": "integer",
         "valuesList": "vacinf",
         "_defn": [
           {
@@ -23485,7 +23481,7 @@
         "elementKey": "VAC15INF"
       },
       "VAC16INF": {
-        "type": "string",
+        "type": "integer",
         "valuesList": "vacinf",
         "_defn": [
           {
@@ -23505,7 +23501,7 @@
         "elementKey": "VAC16INF"
       },
       "VAC17INF": {
-        "type": "string",
+        "type": "integer",
         "valuesList": "vacinf",
         "_defn": [
           {
@@ -23525,7 +23521,7 @@
         "elementKey": "VAC17INF"
       },
       "VAC18INF": {
-        "type": "string",
+        "type": "integer",
         "valuesList": "vacinf",
         "_defn": [
           {
@@ -23545,7 +23541,7 @@
         "elementKey": "VAC18INF"
       },
       "VAC19INF": {
-        "type": "string",
+        "type": "integer",
         "valuesList": "vacinf",
         "_defn": [
           {
@@ -23565,7 +23561,7 @@
         "elementKey": "VAC19INF"
       },
       "VAC20INF": {
-        "type": "string",
+        "type": "integer",
         "valuesList": "vacinf",
         "_defn": [
           {
@@ -24065,7 +24061,7 @@
         "elementKey": "VAC20DATA"
       },
       "VAC1CHECK": {
-        "type": "string",
+        "type": "integer",
         "valuesList": "vaccheck",
         "_defn": [
           {
@@ -24081,7 +24077,7 @@
         "elementKey": "VAC1CHECK"
       },
       "VAC2CHECK": {
-        "type": "string",
+        "type": "integer",
         "valuesList": "vaccheck",
         "_defn": [
           {
@@ -24097,7 +24093,7 @@
         "elementKey": "VAC2CHECK"
       },
       "VAC3CHECK": {
-        "type": "string",
+        "type": "integer",
         "valuesList": "vaccheck",
         "_defn": [
           {
@@ -24113,7 +24109,7 @@
         "elementKey": "VAC3CHECK"
       },
       "VAC4CHECK": {
-        "type": "string",
+        "type": "integer",
         "valuesList": "vaccheck",
         "_defn": [
           {
@@ -24129,7 +24125,7 @@
         "elementKey": "VAC4CHECK"
       },
       "VAC5CHECK": {
-        "type": "string",
+        "type": "integer",
         "valuesList": "vaccheck",
         "_defn": [
           {
@@ -24145,7 +24141,7 @@
         "elementKey": "VAC5CHECK"
       },
       "VAC6CHECK": {
-        "type": "string",
+        "type": "integer",
         "valuesList": "vaccheck",
         "_defn": [
           {
@@ -24161,7 +24157,7 @@
         "elementKey": "VAC6CHECK"
       },
       "VAC7CHECK": {
-        "type": "string",
+        "type": "integer",
         "valuesList": "vaccheck",
         "_defn": [
           {
@@ -24177,7 +24173,7 @@
         "elementKey": "VAC7CHECK"
       },
       "VAC8CHECK": {
-        "type": "string",
+        "type": "integer",
         "valuesList": "vaccheck",
         "_defn": [
           {
@@ -24193,7 +24189,7 @@
         "elementKey": "VAC8CHECK"
       },
       "VAC9CHECK": {
-        "type": "string",
+        "type": "integer",
         "valuesList": "vaccheck",
         "_defn": [
           {
@@ -24209,7 +24205,7 @@
         "elementKey": "VAC9CHECK"
       },
       "VAC10CHECK": {
-        "type": "string",
+        "type": "integer",
         "valuesList": "vaccheck",
         "_defn": [
           {
@@ -24225,7 +24221,7 @@
         "elementKey": "VAC10CHECK"
       },
       "VAC11CHECK": {
-        "type": "string",
+        "type": "integer",
         "valuesList": "vaccheck",
         "_defn": [
           {
@@ -24241,7 +24237,7 @@
         "elementKey": "VAC11CHECK"
       },
       "VAC12CHECK": {
-        "type": "string",
+        "type": "integer",
         "valuesList": "vaccheck",
         "_defn": [
           {
@@ -24257,7 +24253,7 @@
         "elementKey": "VAC12CHECK"
       },
       "VAC13CHECK": {
-        "type": "string",
+        "type": "integer",
         "valuesList": "vaccheck",
         "_defn": [
           {
@@ -24273,7 +24269,7 @@
         "elementKey": "VAC13CHECK"
       },
       "VAC14CHECK": {
-        "type": "string",
+        "type": "integer",
         "valuesList": "vaccheck",
         "_defn": [
           {
@@ -24289,7 +24285,7 @@
         "elementKey": "VAC14CHECK"
       },
       "VAC15CHECK": {
-        "type": "string",
+        "type": "integer",
         "valuesList": "vaccheck",
         "_defn": [
           {
@@ -24305,7 +24301,7 @@
         "elementKey": "VAC15CHECK"
       },
       "VAC16CHECK": {
-        "type": "string",
+        "type": "integer",
         "valuesList": "vaccheck",
         "_defn": [
           {
@@ -24321,7 +24317,7 @@
         "elementKey": "VAC16CHECK"
       },
       "VAC17CHECK": {
-        "type": "string",
+        "type": "integer",
         "valuesList": "vaccheck",
         "_defn": [
           {
@@ -24337,7 +24333,7 @@
         "elementKey": "VAC17CHECK"
       },
       "VAC18CHECK": {
-        "type": "string",
+        "type": "integer",
         "valuesList": "vaccheck",
         "_defn": [
           {
@@ -24353,7 +24349,7 @@
         "elementKey": "VAC18CHECK"
       },
       "VAC19CHECK": {
-        "type": "string",
+        "type": "integer",
         "valuesList": "vaccheck",
         "_defn": [
           {
@@ -24369,7 +24365,7 @@
         "elementKey": "VAC19CHECK"
       },
       "VAC20CHECK": {
-        "type": "string",
+        "type": "integer",
         "valuesList": "vaccheck",
         "_defn": [
           {
@@ -25225,7 +25221,7 @@
         "elementKey": "vac20inf"
       },
       "addvac1": {
-        "type": "string",
+        "type": "integer",
         "valuesList": "YesNo",
         "_defn": [
           {
@@ -25241,7 +25237,7 @@
         "elementKey": "addvac1"
       },
       "addvac2": {
-        "type": "string",
+        "type": "integer",
         "valuesList": "YesNo",
         "_defn": [
           {
@@ -25257,7 +25253,7 @@
         "elementKey": "addvac2"
       },
       "addvac3": {
-        "type": "string",
+        "type": "integer",
         "valuesList": "YesNo",
         "_defn": [
           {
@@ -25273,7 +25269,7 @@
         "elementKey": "addvac3"
       },
       "addvac4": {
-        "type": "string",
+        "type": "integer",
         "valuesList": "YesNo",
         "_defn": [
           {
@@ -25289,7 +25285,7 @@
         "elementKey": "addvac4"
       },
       "addvac5": {
-        "type": "string",
+        "type": "integer",
         "valuesList": "YesNo",
         "_defn": [
           {
@@ -25305,7 +25301,7 @@
         "elementKey": "addvac5"
       },
       "addvac6": {
-        "type": "string",
+        "type": "integer",
         "valuesList": "YesNo",
         "_defn": [
           {
@@ -25321,7 +25317,7 @@
         "elementKey": "addvac6"
       },
       "addvac7": {
-        "type": "string",
+        "type": "integer",
         "valuesList": "YesNo",
         "_defn": [
           {
@@ -25337,7 +25333,7 @@
         "elementKey": "addvac7"
       },
       "addvac8": {
-        "type": "string",
+        "type": "integer",
         "valuesList": "YesNo",
         "_defn": [
           {
@@ -25353,7 +25349,7 @@
         "elementKey": "addvac8"
       },
       "addvac9": {
-        "type": "string",
+        "type": "integer",
         "valuesList": "YesNo",
         "_defn": [
           {
@@ -25369,7 +25365,7 @@
         "elementKey": "addvac9"
       },
       "addvac10": {
-        "type": "string",
+        "type": "integer",
         "valuesList": "YesNo",
         "_defn": [
           {
@@ -25385,7 +25381,7 @@
         "elementKey": "addvac10"
       },
       "addvac11": {
-        "type": "string",
+        "type": "integer",
         "valuesList": "YesNo",
         "_defn": [
           {
@@ -25401,7 +25397,7 @@
         "elementKey": "addvac11"
       },
       "addvac12": {
-        "type": "string",
+        "type": "integer",
         "valuesList": "YesNo",
         "_defn": [
           {
@@ -25417,7 +25413,7 @@
         "elementKey": "addvac12"
       },
       "addvac13": {
-        "type": "string",
+        "type": "integer",
         "valuesList": "YesNo",
         "_defn": [
           {
@@ -25433,7 +25429,7 @@
         "elementKey": "addvac13"
       },
       "addvac14": {
-        "type": "string",
+        "type": "integer",
         "valuesList": "YesNo",
         "_defn": [
           {
@@ -25449,7 +25445,7 @@
         "elementKey": "addvac14"
       },
       "addvac15": {
-        "type": "string",
+        "type": "integer",
         "valuesList": "YesNo",
         "_defn": [
           {
@@ -25465,7 +25461,7 @@
         "elementKey": "addvac15"
       },
       "addvac16": {
-        "type": "string",
+        "type": "integer",
         "valuesList": "YesNo",
         "_defn": [
           {
@@ -25481,7 +25477,7 @@
         "elementKey": "addvac16"
       },
       "addvac17": {
-        "type": "string",
+        "type": "integer",
         "valuesList": "YesNo",
         "_defn": [
           {
@@ -25497,7 +25493,7 @@
         "elementKey": "addvac17"
       },
       "addvac18": {
-        "type": "string",
+        "type": "integer",
         "valuesList": "YesNo",
         "_defn": [
           {
@@ -25513,7 +25509,7 @@
         "elementKey": "addvac18"
       },
       "addvac19": {
-        "type": "string",
+        "type": "integer",
         "valuesList": "YesNo",
         "_defn": [
           {
@@ -25529,7 +25525,7 @@
         "elementKey": "addvac19"
       },
       "addvac20": {
-        "type": "string",
+        "type": "integer",
         "valuesList": "YesNo",
         "_defn": [
           {
@@ -25605,7 +25601,7 @@
         "elementKey": "CALT4"
       },
       "CICA": {
-        "type": "string",
+        "type": "integer",
         "valuesList": "YesNoU",
         "_defn": [
           {
@@ -25621,7 +25617,7 @@
         "elementKey": "CICA"
       },
       "CICA1": {
-        "type": "string",
+        "type": "integer",
         "valuesList": "vacscar",
         "_defn": [
           {
@@ -25637,7 +25633,7 @@
         "elementKey": "CICA1"
       },
       "CICA1CERT": {
-        "type": "string",
+        "type": "integer",
         "valuesList": "YesNoU",
         "_defn": [
           {
@@ -25668,7 +25664,7 @@
         "elementKey": "CICA1OBS"
       },
       "CICA2": {
-        "type": "string",
+        "type": "integer",
         "valuesList": "vacscar",
         "_defn": [
           {
@@ -25684,7 +25680,7 @@
         "elementKey": "CICA2"
       },
       "CICA2CERT": {
-        "type": "string",
+        "type": "integer",
         "valuesList": "YesNoU",
         "_defn": [
           {
@@ -25715,7 +25711,7 @@
         "elementKey": "CICA2OBS"
       },
       "CICA3": {
-        "type": "string",
+        "type": "integer",
         "valuesList": "vacscar",
         "_defn": [
           {
@@ -25731,7 +25727,7 @@
         "elementKey": "CICA3"
       },
       "CICA3CERT": {
-        "type": "string",
+        "type": "integer",
         "valuesList": "YesNoU",
         "_defn": [
           {
@@ -25762,7 +25758,7 @@
         "elementKey": "CICA3OBS"
       },
       "CICA4": {
-        "type": "string",
+        "type": "integer",
         "valuesList": "vacscar",
         "_defn": [
           {
@@ -25778,7 +25774,7 @@
         "elementKey": "CICA4"
       },
       "CICA4CERT": {
-        "type": "string",
+        "type": "integer",
         "valuesList": "YesNoU",
         "_defn": [
           {
@@ -25929,7 +25925,7 @@
         "elementKey": "CNUM4"
       },
       "NCICA": {
-        "type": "string",
+        "type": "integer",
         "valuesList": "ncica",
         "_defn": [
           {
@@ -25967,7 +25963,7 @@
         "elementKey": "VISITID"
       },
       "ACCIDENTE": {
-        "type": "string",
+        "type": "integer",
         "valuesList": "YesNoU",
         "_defn": [
           {
@@ -25998,7 +25994,7 @@
         "elementKey": "ACCIQUAL"
       },
       "AJUDOU": {
-        "type": "string",
+        "type": "integer",
         "valuesList": "healthstaff",
         "_defn": [
           {
@@ -26014,7 +26010,7 @@
         "elementKey": "AJUDOU"
       },
       "COMPPAR": {
-        "type": "string",
+        "type": "integer",
         "valuesList": "birthcomplication",
         "_defn": [
           {
@@ -26050,7 +26046,7 @@
         "elementKey": "DATAUP"
       },
       "DIAG": {
-        "type": "string",
+        "type": "integer",
         "valuesList": "YesNoU",
         "_defn": [
           {
@@ -26081,7 +26077,7 @@
         "elementKey": "DIAGQUAL"
       },
       "DIARREIA": {
-        "type": "string",
+        "type": "integer",
         "valuesList": "YesNoU",
         "_defn": [
           {
@@ -26097,7 +26093,7 @@
         "elementKey": "DIARREIA"
       },
       "DOENCA": {
-        "type": "string",
+        "type": "integer",
         "valuesList": "YesNoU",
         "_defn": [
           {
@@ -26128,7 +26124,7 @@
         "elementKey": "DOENCAQUAL"
       },
       "DORPE": {
-        "type": "string",
+        "type": "integer",
         "valuesList": "YesNoU",
         "_defn": [
           {
@@ -26159,7 +26155,7 @@
         "elementKey": "DURDOENCA"
       },
       "FALAR": {
-        "type": "string",
+        "type": "integer",
         "valuesList": "YesNoU",
         "_defn": [
           {
@@ -26175,7 +26171,7 @@
         "elementKey": "FALAR"
       },
       "FEBRE": {
-        "type": "string",
+        "type": "integer",
         "valuesList": "YesNoU",
         "_defn": [
           {
@@ -26191,7 +26187,7 @@
         "elementKey": "FEBRE"
       },
       "GEM_FAL": {
-        "type": "string",
+        "type": "integer",
         "valuesList": "YesNoU",
         "_defn": [
           {
@@ -26313,7 +26309,7 @@
         "elementKey": "ONDEOUTRO"
       },
       "OUTRODUR": {
-        "type": "string",
+        "type": "integer",
         "valuesList": "YesNoU",
         "_defn": [
           {
@@ -26329,7 +26325,7 @@
         "elementKey": "OUTRODUR"
       },
       "OUTROSIMP": {
-        "type": "string",
+        "type": "integer",
         "valuesList": "YesNoU",
         "_defn": [
           {
@@ -26345,7 +26341,7 @@
         "elementKey": "OUTROSIMP"
       },
       "PARANFAL": {
-        "type": "string",
+        "type": "integer",
         "valuesList": "YesNoU",
         "_defn": [
           {
@@ -26361,7 +26357,7 @@
         "elementKey": "PARANFAL"
       },
       "PERPESO": {
-        "type": "string",
+        "type": "integer",
         "valuesList": "YesNoU",
         "_defn": [
           {
@@ -26377,7 +26373,7 @@
         "elementKey": "PERPESO"
       },
       "RELACAO": {
-        "type": "string",
+        "type": "integer",
         "valuesList": "inf3",
         "_defn": [
           {
@@ -26393,7 +26389,7 @@
         "elementKey": "RELACAO"
       },
       "RELPARFAL": {
-        "type": "string",
+        "type": "integer",
         "valuesList": "birthinterval",
         "_defn": [
           {
@@ -26409,7 +26405,7 @@
         "elementKey": "RELPARFAL"
       },
       "RELPRES": {
-        "type": "string",
+        "type": "integer",
         "valuesList": "YesNoU",
         "_defn": [
           {
@@ -26425,7 +26421,7 @@
         "elementKey": "RELPRES"
       },
       "RESGRAV": {
-        "type": "string",
+        "type": "integer",
         "valuesList": "birthoutcome",
         "_defn": [
           {
@@ -26471,7 +26467,7 @@
         "elementKey": "SEXOMACH"
       },
       "TOSSE": {
-        "type": "string",
+        "type": "integer",
         "valuesList": "YesNoU",
         "_defn": [
           {
@@ -26560,7 +26556,7 @@
         "elementKey": "VISITDATE"
       },
       "change": {
-        "type": "string",
+        "type": "integer",
         "valuesList": "YesNo",
         "_defn": [
           {
@@ -26576,7 +26572,7 @@
         "elementKey": "change"
       },
       "estadovis": {
-        "type": "string",
+        "type": "integer",
         "_defn": [
           {
             "_row_num": 311,
@@ -26587,7 +26583,7 @@
         "elementKey": "estadovis"
       },
       "gr": {
-        "type": "string",
+        "type": "integer",
         "_defn": [
           {
             "_row_num": 312,
@@ -26598,7 +26594,12 @@
         "elementKey": "gr"
       },
       "cont": {
+        "prompt_type_name": "adate",
         "type": "string",
+        "elementType": "string",
+        "comment": "Save only mm.dd.yyyy with support for ?? at all positions",
+        "_row_num": 2,
+        "__rowNum__": 1,
         "_defn": [
           {
             "_row_num": 313,
@@ -35327,7 +35328,7 @@
           },
           {
             "clause": "if",
-            "condition": "data('ESTADOVIS') != '2' && data('ESTADOVIS') !='3'",
+            "condition": "data('ESTADOVIS') != '2' && data('ESTADOVIS') !='3' && data('ESTADOVIS') == '6'",
             "_row_num": 36,
             "__rowNum__": 35,
             "_token_type": "goto_label",
@@ -43578,7 +43579,7 @@
         "elementPath": "CASA"
       },
       "CESCO_REG": {
-        "type": "string",
+        "type": "integer",
         "valuesList": "YesNoU",
         "_defn": [
           {
@@ -43761,7 +43762,7 @@
         ]
       },
       "FAN": {
-        "type": "string",
+        "type": "integer",
         "valuesList": "YesNoU",
         "_defn": [
           {
@@ -43802,7 +43803,7 @@
         "elementPath": "FOGAO"
       },
       "GEM": {
-        "type": "string",
+        "type": "integer",
         "valuesList": "YesNoU",
         "_defn": [
           {
@@ -44052,15 +44053,9 @@
         "elementPath": "MIFMONDE"
       },
       "mifmondens": {
-        "type": "array",
+        "type": "integer",
         "items": {
-          "type": "string",
-          "elementKey": "mifmondens_items",
-          "elementName": "items",
-          "elementSet": "data",
-          "elementPath": "mifmondens.items",
-          "isSessionVariable": true,
-          "notUnitOfRetention": true
+          "type": "string"
         },
         "valuesList": "dontknow",
         "_defn": [
@@ -44077,13 +44072,10 @@
         "elementKey": "mifmondens",
         "elementName": "mifmondens",
         "elementSet": "data",
-        "elementPath": "mifmondens",
-        "listChildElementKeys": [
-          "mifmondens_items"
-        ]
+        "elementPath": "mifmondens"
       },
       "MIFMORAVA": {
-        "type": "string",
+        "type": "integer",
         "valuesList": "YesNoU",
         "_defn": [
           {
@@ -44418,15 +44410,9 @@
         "elementPath": "VACNOHCERTO"
       },
       "vacnohns": {
-        "type": "array",
+        "type": "integer",
         "items": {
-          "type": "string",
-          "elementKey": "vacnohns_items",
-          "elementName": "items",
-          "elementSet": "data",
-          "elementPath": "vacnohns.items",
-          "isSessionVariable": true,
-          "notUnitOfRetention": true
+          "type": "string"
         },
         "valuesList": "dontknowTT",
         "_defn": [
@@ -44443,10 +44429,7 @@
         "elementKey": "vacnohns",
         "elementName": "vacnohns",
         "elementSet": "data",
-        "elementPath": "vacnohns",
-        "listChildElementKeys": [
-          "vacnohns_items"
-        ]
+        "elementPath": "vacnohns"
       },
       "VIVO": {
         "type": "integer",
@@ -44498,7 +44481,7 @@
         ]
       },
       "ABPART": {
-        "type": "string",
+        "type": "integer",
         "valuesList": "YesNoU",
         "_defn": [
           {
@@ -44540,7 +44523,7 @@
         "elementPath": "ABPARTDATA"
       },
       "ABPARTNV": {
-        "type": "string",
+        "type": "integer",
         "valuesList": "YesNoU",
         "_defn": [
           {
@@ -44582,7 +44565,7 @@
         "elementPath": "ABPARTNVDATA"
       },
       "ABPARTTIPO": {
-        "type": "string",
+        "type": "integer",
         "valuesList": "birthoutcome",
         "_defn": [
           {
@@ -44615,7 +44598,7 @@
         "elementPath": "ASSISTENTE"
       },
       "CART": {
-        "type": "string",
+        "type": "integer",
         "valuesList": "YesNo",
         "_defn": [
           {
@@ -44634,7 +44617,7 @@
         "elementPath": "CART"
       },
       "CESCO": {
-        "type": "string",
+        "type": "integer",
         "valuesList": "YesNoU",
         "_defn": [
           {
@@ -44676,7 +44659,7 @@
         "elementPath": "CONSENTDAT"
       },
       "CONSENTFOR": {
-        "type": "string",
+        "type": "integer",
         "valuesList": "YesNoU",
         "_defn": [
           {
@@ -44695,7 +44678,7 @@
         "elementPath": "CONSENTFOR"
       },
       "CONSENTSIG": {
-        "type": "string",
+        "type": "integer",
         "valuesList": "YesNoU",
         "_defn": [
           {
@@ -44714,7 +44697,7 @@
         "elementPath": "CONSENTSIG"
       },
       "CONSENTTYP": {
-        "type": "string",
+        "type": "integer",
         "valuesList": "signature",
         "_defn": [
           {
@@ -44774,15 +44757,9 @@
         "elementPath": "ESCO"
       },
       "escons": {
-        "type": "array",
+        "type": "integer",
         "items": {
-          "type": "string",
-          "elementKey": "escons_items",
-          "elementName": "items",
-          "elementSet": "data",
-          "elementPath": "escons.items",
-          "isSessionVariable": true,
-          "notUnitOfRetention": true
+          "type": "string"
         },
         "valuesList": "dontknow",
         "_defn": [
@@ -44799,13 +44776,10 @@
         "elementKey": "escons",
         "elementName": "escons",
         "elementSet": "data",
-        "elementPath": "escons",
-        "listChildElementKeys": [
-          "escons_items"
-        ]
+        "elementPath": "escons"
       },
       "ESTADOVIS": {
-        "type": "string",
+        "type": "integer",
         "valuesList": "visitstatus",
         "_defn": [
           {
@@ -44824,7 +44798,7 @@
         "elementPath": "ESTADOVIS"
       },
       "EVITA": {
-        "type": "string",
+        "type": "integer",
         "valuesList": "YesNoU",
         "_defn": [
           {
@@ -44843,14 +44817,9 @@
         "elementPath": "EVITA"
       },
       "EVITA2": {
-        "type": "array",
+        "type": "string",
         "items": {
-          "type": "string",
-          "elementKey": "EVITA2_items",
-          "elementName": "items",
-          "elementSet": "data",
-          "elementPath": "EVITA2.items",
-          "notUnitOfRetention": true
+          "type": "string"
         },
         "valuesList": "contraceptive",
         "_defn": [
@@ -44867,10 +44836,7 @@
         "elementKey": "EVITA2",
         "elementName": "EVITA2",
         "elementSet": "data",
-        "elementPath": "EVITA2",
-        "listChildElementKeys": [
-          "EVITA2_items"
-        ]
+        "elementPath": "EVITA2"
       },
       "EXITDATA": {
         "prompt_type_name": "adate",
@@ -44914,7 +44880,7 @@
         "elementPath": "EXITMUDO"
       },
       "GR": {
-        "type": "string",
+        "type": "integer",
         "valuesList": "YesNoU",
         "_defn": [
           {
@@ -44933,7 +44899,7 @@
         "elementPath": "GR"
       },
       "PARPAD": {
-        "type": "string",
+        "type": "integer",
         "valuesList": "YesNoU",
         "_defn": [
           {
@@ -44952,7 +44918,7 @@
         "elementPath": "PARPAD"
       },
       "TENDA": {
-        "type": "string",
+        "type": "integer",
         "valuesList": "bednettime",
         "_defn": [
           {
@@ -44971,7 +44937,7 @@
         "elementPath": "TENDA"
       },
       "TENDATIPO": {
-        "type": "string",
+        "type": "integer",
         "valuesList": "bednet",
         "_defn": [
           {
@@ -44990,7 +44956,7 @@
         "elementPath": "TENDATIPO"
       },
       "TENDAYN": {
-        "type": "string",
+        "type": "integer",
         "valuesList": "YesNoU",
         "_defn": [
           {
@@ -45042,7 +45008,7 @@
         "elementPath": "LASTVISIT"
       },
       "VAC1TIPO": {
-        "type": "string",
+        "type": "integer",
         "valuesList": "vactype",
         "_defn": [
           {
@@ -45065,7 +45031,7 @@
         "elementPath": "VAC1TIPO"
       },
       "VAC2TIPO": {
-        "type": "string",
+        "type": "integer",
         "valuesList": "vactype",
         "_defn": [
           {
@@ -45088,7 +45054,7 @@
         "elementPath": "VAC2TIPO"
       },
       "VAC3TIPO": {
-        "type": "string",
+        "type": "integer",
         "valuesList": "vactype",
         "_defn": [
           {
@@ -45111,7 +45077,7 @@
         "elementPath": "VAC3TIPO"
       },
       "VAC4TIPO": {
-        "type": "string",
+        "type": "integer",
         "valuesList": "vactype",
         "_defn": [
           {
@@ -45134,7 +45100,7 @@
         "elementPath": "VAC4TIPO"
       },
       "VAC5TIPO": {
-        "type": "string",
+        "type": "integer",
         "valuesList": "vactype",
         "_defn": [
           {
@@ -45157,7 +45123,7 @@
         "elementPath": "VAC5TIPO"
       },
       "VAC6TIPO": {
-        "type": "string",
+        "type": "integer",
         "valuesList": "vactype",
         "_defn": [
           {
@@ -45180,7 +45146,7 @@
         "elementPath": "VAC6TIPO"
       },
       "VAC7TIPO": {
-        "type": "string",
+        "type": "integer",
         "valuesList": "vactype",
         "_defn": [
           {
@@ -45203,7 +45169,7 @@
         "elementPath": "VAC7TIPO"
       },
       "VAC8TIPO": {
-        "type": "string",
+        "type": "integer",
         "valuesList": "vactype",
         "_defn": [
           {
@@ -45226,7 +45192,7 @@
         "elementPath": "VAC8TIPO"
       },
       "VAC9TIPO": {
-        "type": "string",
+        "type": "integer",
         "valuesList": "vactype",
         "_defn": [
           {
@@ -45249,7 +45215,7 @@
         "elementPath": "VAC9TIPO"
       },
       "VAC10TIPO": {
-        "type": "string",
+        "type": "integer",
         "valuesList": "vactype",
         "_defn": [
           {
@@ -45272,7 +45238,7 @@
         "elementPath": "VAC10TIPO"
       },
       "VAC11TIPO": {
-        "type": "string",
+        "type": "integer",
         "valuesList": "vactype",
         "_defn": [
           {
@@ -45295,7 +45261,7 @@
         "elementPath": "VAC11TIPO"
       },
       "VAC12TIPO": {
-        "type": "string",
+        "type": "integer",
         "valuesList": "vactype",
         "_defn": [
           {
@@ -45318,7 +45284,7 @@
         "elementPath": "VAC12TIPO"
       },
       "VAC13TIPO": {
-        "type": "string",
+        "type": "integer",
         "valuesList": "vactype",
         "_defn": [
           {
@@ -45341,7 +45307,7 @@
         "elementPath": "VAC13TIPO"
       },
       "VAC14TIPO": {
-        "type": "string",
+        "type": "integer",
         "valuesList": "vactype",
         "_defn": [
           {
@@ -45364,7 +45330,7 @@
         "elementPath": "VAC14TIPO"
       },
       "VAC15TIPO": {
-        "type": "string",
+        "type": "integer",
         "valuesList": "vactype",
         "_defn": [
           {
@@ -45387,7 +45353,7 @@
         "elementPath": "VAC15TIPO"
       },
       "VAC16TIPO": {
-        "type": "string",
+        "type": "integer",
         "valuesList": "vactype",
         "_defn": [
           {
@@ -45410,7 +45376,7 @@
         "elementPath": "VAC16TIPO"
       },
       "VAC17TIPO": {
-        "type": "string",
+        "type": "integer",
         "valuesList": "vactype",
         "_defn": [
           {
@@ -45433,7 +45399,7 @@
         "elementPath": "VAC17TIPO"
       },
       "VAC18TIPO": {
-        "type": "string",
+        "type": "integer",
         "valuesList": "vactype",
         "_defn": [
           {
@@ -45456,7 +45422,7 @@
         "elementPath": "VAC18TIPO"
       },
       "VAC19TIPO": {
-        "type": "string",
+        "type": "integer",
         "valuesList": "vactype",
         "_defn": [
           {
@@ -45479,7 +45445,7 @@
         "elementPath": "VAC19TIPO"
       },
       "VAC20TIPO": {
-        "type": "string",
+        "type": "integer",
         "valuesList": "vactype",
         "_defn": [
           {
@@ -45502,7 +45468,7 @@
         "elementPath": "VAC20TIPO"
       },
       "VAC1INF": {
-        "type": "string",
+        "type": "integer",
         "valuesList": "vacinf",
         "_defn": [
           {
@@ -45525,7 +45491,7 @@
         "elementPath": "VAC1INF"
       },
       "VAC2INF": {
-        "type": "string",
+        "type": "integer",
         "valuesList": "vacinf",
         "_defn": [
           {
@@ -45548,7 +45514,7 @@
         "elementPath": "VAC2INF"
       },
       "VAC3INF": {
-        "type": "string",
+        "type": "integer",
         "valuesList": "vacinf",
         "_defn": [
           {
@@ -45571,7 +45537,7 @@
         "elementPath": "VAC3INF"
       },
       "VAC4INF": {
-        "type": "string",
+        "type": "integer",
         "valuesList": "vacinf",
         "_defn": [
           {
@@ -45594,7 +45560,7 @@
         "elementPath": "VAC4INF"
       },
       "VAC5INF": {
-        "type": "string",
+        "type": "integer",
         "valuesList": "vacinf",
         "_defn": [
           {
@@ -45617,7 +45583,7 @@
         "elementPath": "VAC5INF"
       },
       "VAC6INF": {
-        "type": "string",
+        "type": "integer",
         "valuesList": "vacinf",
         "_defn": [
           {
@@ -45640,7 +45606,7 @@
         "elementPath": "VAC6INF"
       },
       "VAC7INF": {
-        "type": "string",
+        "type": "integer",
         "valuesList": "vacinf",
         "_defn": [
           {
@@ -45663,7 +45629,7 @@
         "elementPath": "VAC7INF"
       },
       "VAC8INF": {
-        "type": "string",
+        "type": "integer",
         "valuesList": "vacinf",
         "_defn": [
           {
@@ -45686,7 +45652,7 @@
         "elementPath": "VAC8INF"
       },
       "VAC9INF": {
-        "type": "string",
+        "type": "integer",
         "valuesList": "vacinf",
         "_defn": [
           {
@@ -45709,7 +45675,7 @@
         "elementPath": "VAC9INF"
       },
       "VAC10INF": {
-        "type": "string",
+        "type": "integer",
         "valuesList": "vacinf",
         "_defn": [
           {
@@ -45732,7 +45698,7 @@
         "elementPath": "VAC10INF"
       },
       "VAC11INF": {
-        "type": "string",
+        "type": "integer",
         "valuesList": "vacinf",
         "_defn": [
           {
@@ -45755,7 +45721,7 @@
         "elementPath": "VAC11INF"
       },
       "VAC12INF": {
-        "type": "string",
+        "type": "integer",
         "valuesList": "vacinf",
         "_defn": [
           {
@@ -45778,7 +45744,7 @@
         "elementPath": "VAC12INF"
       },
       "VAC13INF": {
-        "type": "string",
+        "type": "integer",
         "valuesList": "vacinf",
         "_defn": [
           {
@@ -45801,7 +45767,7 @@
         "elementPath": "VAC13INF"
       },
       "VAC14INF": {
-        "type": "string",
+        "type": "integer",
         "valuesList": "vacinf",
         "_defn": [
           {
@@ -45824,7 +45790,7 @@
         "elementPath": "VAC14INF"
       },
       "VAC15INF": {
-        "type": "string",
+        "type": "integer",
         "valuesList": "vacinf",
         "_defn": [
           {
@@ -45847,7 +45813,7 @@
         "elementPath": "VAC15INF"
       },
       "VAC16INF": {
-        "type": "string",
+        "type": "integer",
         "valuesList": "vacinf",
         "_defn": [
           {
@@ -45870,7 +45836,7 @@
         "elementPath": "VAC16INF"
       },
       "VAC17INF": {
-        "type": "string",
+        "type": "integer",
         "valuesList": "vacinf",
         "_defn": [
           {
@@ -45893,7 +45859,7 @@
         "elementPath": "VAC17INF"
       },
       "VAC18INF": {
-        "type": "string",
+        "type": "integer",
         "valuesList": "vacinf",
         "_defn": [
           {
@@ -45916,7 +45882,7 @@
         "elementPath": "VAC18INF"
       },
       "VAC19INF": {
-        "type": "string",
+        "type": "integer",
         "valuesList": "vacinf",
         "_defn": [
           {
@@ -45939,7 +45905,7 @@
         "elementPath": "VAC19INF"
       },
       "VAC20INF": {
-        "type": "string",
+        "type": "integer",
         "valuesList": "vacinf",
         "_defn": [
           {
@@ -46502,7 +46468,7 @@
         "elementPath": "VAC20DATA"
       },
       "VAC1CHECK": {
-        "type": "string",
+        "type": "integer",
         "valuesList": "vaccheck",
         "_defn": [
           {
@@ -46521,7 +46487,7 @@
         "elementPath": "VAC1CHECK"
       },
       "VAC2CHECK": {
-        "type": "string",
+        "type": "integer",
         "valuesList": "vaccheck",
         "_defn": [
           {
@@ -46540,7 +46506,7 @@
         "elementPath": "VAC2CHECK"
       },
       "VAC3CHECK": {
-        "type": "string",
+        "type": "integer",
         "valuesList": "vaccheck",
         "_defn": [
           {
@@ -46559,7 +46525,7 @@
         "elementPath": "VAC3CHECK"
       },
       "VAC4CHECK": {
-        "type": "string",
+        "type": "integer",
         "valuesList": "vaccheck",
         "_defn": [
           {
@@ -46578,7 +46544,7 @@
         "elementPath": "VAC4CHECK"
       },
       "VAC5CHECK": {
-        "type": "string",
+        "type": "integer",
         "valuesList": "vaccheck",
         "_defn": [
           {
@@ -46597,7 +46563,7 @@
         "elementPath": "VAC5CHECK"
       },
       "VAC6CHECK": {
-        "type": "string",
+        "type": "integer",
         "valuesList": "vaccheck",
         "_defn": [
           {
@@ -46616,7 +46582,7 @@
         "elementPath": "VAC6CHECK"
       },
       "VAC7CHECK": {
-        "type": "string",
+        "type": "integer",
         "valuesList": "vaccheck",
         "_defn": [
           {
@@ -46635,7 +46601,7 @@
         "elementPath": "VAC7CHECK"
       },
       "VAC8CHECK": {
-        "type": "string",
+        "type": "integer",
         "valuesList": "vaccheck",
         "_defn": [
           {
@@ -46654,7 +46620,7 @@
         "elementPath": "VAC8CHECK"
       },
       "VAC9CHECK": {
-        "type": "string",
+        "type": "integer",
         "valuesList": "vaccheck",
         "_defn": [
           {
@@ -46673,7 +46639,7 @@
         "elementPath": "VAC9CHECK"
       },
       "VAC10CHECK": {
-        "type": "string",
+        "type": "integer",
         "valuesList": "vaccheck",
         "_defn": [
           {
@@ -46692,7 +46658,7 @@
         "elementPath": "VAC10CHECK"
       },
       "VAC11CHECK": {
-        "type": "string",
+        "type": "integer",
         "valuesList": "vaccheck",
         "_defn": [
           {
@@ -46711,7 +46677,7 @@
         "elementPath": "VAC11CHECK"
       },
       "VAC12CHECK": {
-        "type": "string",
+        "type": "integer",
         "valuesList": "vaccheck",
         "_defn": [
           {
@@ -46730,7 +46696,7 @@
         "elementPath": "VAC12CHECK"
       },
       "VAC13CHECK": {
-        "type": "string",
+        "type": "integer",
         "valuesList": "vaccheck",
         "_defn": [
           {
@@ -46749,7 +46715,7 @@
         "elementPath": "VAC13CHECK"
       },
       "VAC14CHECK": {
-        "type": "string",
+        "type": "integer",
         "valuesList": "vaccheck",
         "_defn": [
           {
@@ -46768,7 +46734,7 @@
         "elementPath": "VAC14CHECK"
       },
       "VAC15CHECK": {
-        "type": "string",
+        "type": "integer",
         "valuesList": "vaccheck",
         "_defn": [
           {
@@ -46787,7 +46753,7 @@
         "elementPath": "VAC15CHECK"
       },
       "VAC16CHECK": {
-        "type": "string",
+        "type": "integer",
         "valuesList": "vaccheck",
         "_defn": [
           {
@@ -46806,7 +46772,7 @@
         "elementPath": "VAC16CHECK"
       },
       "VAC17CHECK": {
-        "type": "string",
+        "type": "integer",
         "valuesList": "vaccheck",
         "_defn": [
           {
@@ -46825,7 +46791,7 @@
         "elementPath": "VAC17CHECK"
       },
       "VAC18CHECK": {
-        "type": "string",
+        "type": "integer",
         "valuesList": "vaccheck",
         "_defn": [
           {
@@ -46844,7 +46810,7 @@
         "elementPath": "VAC18CHECK"
       },
       "VAC19CHECK": {
-        "type": "string",
+        "type": "integer",
         "valuesList": "vaccheck",
         "_defn": [
           {
@@ -46863,7 +46829,7 @@
         "elementPath": "VAC19CHECK"
       },
       "VAC20CHECK": {
-        "type": "string",
+        "type": "integer",
         "valuesList": "vaccheck",
         "_defn": [
           {
@@ -47902,7 +47868,7 @@
         "elementPath": "vac20inf"
       },
       "addvac1": {
-        "type": "string",
+        "type": "integer",
         "valuesList": "YesNo",
         "_defn": [
           {
@@ -47921,7 +47887,7 @@
         "elementPath": "addvac1"
       },
       "addvac2": {
-        "type": "string",
+        "type": "integer",
         "valuesList": "YesNo",
         "_defn": [
           {
@@ -47940,7 +47906,7 @@
         "elementPath": "addvac2"
       },
       "addvac3": {
-        "type": "string",
+        "type": "integer",
         "valuesList": "YesNo",
         "_defn": [
           {
@@ -47959,7 +47925,7 @@
         "elementPath": "addvac3"
       },
       "addvac4": {
-        "type": "string",
+        "type": "integer",
         "valuesList": "YesNo",
         "_defn": [
           {
@@ -47978,7 +47944,7 @@
         "elementPath": "addvac4"
       },
       "addvac5": {
-        "type": "string",
+        "type": "integer",
         "valuesList": "YesNo",
         "_defn": [
           {
@@ -47997,7 +47963,7 @@
         "elementPath": "addvac5"
       },
       "addvac6": {
-        "type": "string",
+        "type": "integer",
         "valuesList": "YesNo",
         "_defn": [
           {
@@ -48016,7 +47982,7 @@
         "elementPath": "addvac6"
       },
       "addvac7": {
-        "type": "string",
+        "type": "integer",
         "valuesList": "YesNo",
         "_defn": [
           {
@@ -48035,7 +48001,7 @@
         "elementPath": "addvac7"
       },
       "addvac8": {
-        "type": "string",
+        "type": "integer",
         "valuesList": "YesNo",
         "_defn": [
           {
@@ -48054,7 +48020,7 @@
         "elementPath": "addvac8"
       },
       "addvac9": {
-        "type": "string",
+        "type": "integer",
         "valuesList": "YesNo",
         "_defn": [
           {
@@ -48073,7 +48039,7 @@
         "elementPath": "addvac9"
       },
       "addvac10": {
-        "type": "string",
+        "type": "integer",
         "valuesList": "YesNo",
         "_defn": [
           {
@@ -48092,7 +48058,7 @@
         "elementPath": "addvac10"
       },
       "addvac11": {
-        "type": "string",
+        "type": "integer",
         "valuesList": "YesNo",
         "_defn": [
           {
@@ -48111,7 +48077,7 @@
         "elementPath": "addvac11"
       },
       "addvac12": {
-        "type": "string",
+        "type": "integer",
         "valuesList": "YesNo",
         "_defn": [
           {
@@ -48130,7 +48096,7 @@
         "elementPath": "addvac12"
       },
       "addvac13": {
-        "type": "string",
+        "type": "integer",
         "valuesList": "YesNo",
         "_defn": [
           {
@@ -48149,7 +48115,7 @@
         "elementPath": "addvac13"
       },
       "addvac14": {
-        "type": "string",
+        "type": "integer",
         "valuesList": "YesNo",
         "_defn": [
           {
@@ -48168,7 +48134,7 @@
         "elementPath": "addvac14"
       },
       "addvac15": {
-        "type": "string",
+        "type": "integer",
         "valuesList": "YesNo",
         "_defn": [
           {
@@ -48187,7 +48153,7 @@
         "elementPath": "addvac15"
       },
       "addvac16": {
-        "type": "string",
+        "type": "integer",
         "valuesList": "YesNo",
         "_defn": [
           {
@@ -48206,7 +48172,7 @@
         "elementPath": "addvac16"
       },
       "addvac17": {
-        "type": "string",
+        "type": "integer",
         "valuesList": "YesNo",
         "_defn": [
           {
@@ -48225,7 +48191,7 @@
         "elementPath": "addvac17"
       },
       "addvac18": {
-        "type": "string",
+        "type": "integer",
         "valuesList": "YesNo",
         "_defn": [
           {
@@ -48244,7 +48210,7 @@
         "elementPath": "addvac18"
       },
       "addvac19": {
-        "type": "string",
+        "type": "integer",
         "valuesList": "YesNo",
         "_defn": [
           {
@@ -48263,7 +48229,7 @@
         "elementPath": "addvac19"
       },
       "addvac20": {
-        "type": "string",
+        "type": "integer",
         "valuesList": "YesNo",
         "_defn": [
           {
@@ -48354,7 +48320,7 @@
         "elementPath": "CALT4"
       },
       "CICA": {
-        "type": "string",
+        "type": "integer",
         "valuesList": "YesNoU",
         "_defn": [
           {
@@ -48373,7 +48339,7 @@
         "elementPath": "CICA"
       },
       "CICA1": {
-        "type": "string",
+        "type": "integer",
         "valuesList": "vacscar",
         "_defn": [
           {
@@ -48392,7 +48358,7 @@
         "elementPath": "CICA1"
       },
       "CICA1CERT": {
-        "type": "string",
+        "type": "integer",
         "valuesList": "YesNoU",
         "_defn": [
           {
@@ -48429,7 +48395,7 @@
         "elementPath": "CICA1OBS"
       },
       "CICA2": {
-        "type": "string",
+        "type": "integer",
         "valuesList": "vacscar",
         "_defn": [
           {
@@ -48448,7 +48414,7 @@
         "elementPath": "CICA2"
       },
       "CICA2CERT": {
-        "type": "string",
+        "type": "integer",
         "valuesList": "YesNoU",
         "_defn": [
           {
@@ -48485,7 +48451,7 @@
         "elementPath": "CICA2OBS"
       },
       "CICA3": {
-        "type": "string",
+        "type": "integer",
         "valuesList": "vacscar",
         "_defn": [
           {
@@ -48504,7 +48470,7 @@
         "elementPath": "CICA3"
       },
       "CICA3CERT": {
-        "type": "string",
+        "type": "integer",
         "valuesList": "YesNoU",
         "_defn": [
           {
@@ -48541,7 +48507,7 @@
         "elementPath": "CICA3OBS"
       },
       "CICA4": {
-        "type": "string",
+        "type": "integer",
         "valuesList": "vacscar",
         "_defn": [
           {
@@ -48560,7 +48526,7 @@
         "elementPath": "CICA4"
       },
       "CICA4CERT": {
-        "type": "string",
+        "type": "integer",
         "valuesList": "YesNoU",
         "_defn": [
           {
@@ -48741,7 +48707,7 @@
         "elementPath": "CNUM4"
       },
       "NCICA": {
-        "type": "string",
+        "type": "integer",
         "valuesList": "ncica",
         "_defn": [
           {
@@ -48788,7 +48754,7 @@
         "elementPath": "VISITID"
       },
       "ACCIDENTE": {
-        "type": "string",
+        "type": "integer",
         "valuesList": "YesNoU",
         "_defn": [
           {
@@ -48825,7 +48791,7 @@
         "elementPath": "ACCIQUAL"
       },
       "AJUDOU": {
-        "type": "string",
+        "type": "integer",
         "valuesList": "healthstaff",
         "_defn": [
           {
@@ -48844,7 +48810,7 @@
         "elementPath": "AJUDOU"
       },
       "COMPPAR": {
-        "type": "string",
+        "type": "integer",
         "valuesList": "birthcomplication",
         "_defn": [
           {
@@ -48886,7 +48852,7 @@
         "elementPath": "DATAUP"
       },
       "DIAG": {
-        "type": "string",
+        "type": "integer",
         "valuesList": "YesNoU",
         "_defn": [
           {
@@ -48923,7 +48889,7 @@
         "elementPath": "DIAGQUAL"
       },
       "DIARREIA": {
-        "type": "string",
+        "type": "integer",
         "valuesList": "YesNoU",
         "_defn": [
           {
@@ -48942,7 +48908,7 @@
         "elementPath": "DIARREIA"
       },
       "DOENCA": {
-        "type": "string",
+        "type": "integer",
         "valuesList": "YesNoU",
         "_defn": [
           {
@@ -48979,7 +48945,7 @@
         "elementPath": "DOENCAQUAL"
       },
       "DORPE": {
-        "type": "string",
+        "type": "integer",
         "valuesList": "YesNoU",
         "_defn": [
           {
@@ -49016,7 +48982,7 @@
         "elementPath": "DURDOENCA"
       },
       "FALAR": {
-        "type": "string",
+        "type": "integer",
         "valuesList": "YesNoU",
         "_defn": [
           {
@@ -49035,7 +49001,7 @@
         "elementPath": "FALAR"
       },
       "FEBRE": {
-        "type": "string",
+        "type": "integer",
         "valuesList": "YesNoU",
         "_defn": [
           {
@@ -49054,7 +49020,7 @@
         "elementPath": "FEBRE"
       },
       "GEM_FAL": {
-        "type": "string",
+        "type": "integer",
         "valuesList": "YesNoU",
         "_defn": [
           {
@@ -49200,7 +49166,7 @@
         "elementPath": "ONDEOUTRO"
       },
       "OUTRODUR": {
-        "type": "string",
+        "type": "integer",
         "valuesList": "YesNoU",
         "_defn": [
           {
@@ -49219,7 +49185,7 @@
         "elementPath": "OUTRODUR"
       },
       "OUTROSIMP": {
-        "type": "string",
+        "type": "integer",
         "valuesList": "YesNoU",
         "_defn": [
           {
@@ -49238,7 +49204,7 @@
         "elementPath": "OUTROSIMP"
       },
       "PARANFAL": {
-        "type": "string",
+        "type": "integer",
         "valuesList": "YesNoU",
         "_defn": [
           {
@@ -49257,7 +49223,7 @@
         "elementPath": "PARANFAL"
       },
       "PERPESO": {
-        "type": "string",
+        "type": "integer",
         "valuesList": "YesNoU",
         "_defn": [
           {
@@ -49276,7 +49242,7 @@
         "elementPath": "PERPESO"
       },
       "RELACAO": {
-        "type": "string",
+        "type": "integer",
         "valuesList": "inf3",
         "_defn": [
           {
@@ -49295,7 +49261,7 @@
         "elementPath": "RELACAO"
       },
       "RELPARFAL": {
-        "type": "string",
+        "type": "integer",
         "valuesList": "birthinterval",
         "_defn": [
           {
@@ -49314,7 +49280,7 @@
         "elementPath": "RELPARFAL"
       },
       "RELPRES": {
-        "type": "string",
+        "type": "integer",
         "valuesList": "YesNoU",
         "_defn": [
           {
@@ -49333,7 +49299,7 @@
         "elementPath": "RELPRES"
       },
       "RESGRAV": {
-        "type": "string",
+        "type": "integer",
         "valuesList": "birthoutcome",
         "_defn": [
           {
@@ -49388,7 +49354,7 @@
         "elementPath": "SEXOMACH"
       },
       "TOSSE": {
-        "type": "string",
+        "type": "integer",
         "valuesList": "YesNoU",
         "_defn": [
           {
@@ -49495,7 +49461,7 @@
         "elementPath": "VISITDATE"
       },
       "change": {
-        "type": "string",
+        "type": "integer",
         "valuesList": "YesNo",
         "_defn": [
           {
@@ -49514,7 +49480,7 @@
         "elementPath": "change"
       },
       "estadovis": {
-        "type": "string",
+        "type": "integer",
         "_defn": [
           {
             "_row_num": 311,
@@ -49528,7 +49494,7 @@
         "elementPath": "estadovis"
       },
       "gr": {
-        "type": "string",
+        "type": "integer",
         "_defn": [
           {
             "_row_num": 312,
@@ -49542,7 +49508,12 @@
         "elementPath": "gr"
       },
       "cont": {
+        "prompt_type_name": "adate",
         "type": "string",
+        "elementType": "string",
+        "comment": "Save only mm.dd.yyyy with support for ?? at all positions",
+        "_row_num": 2,
+        "__rowNum__": 1,
         "_defn": [
           {
             "_row_num": 313,
@@ -49600,15 +49571,6 @@
         "isSessionVariable": true,
         "notUnitOfRetention": true
       },
-      "mifmondens_items": {
-        "type": "string",
-        "elementKey": "mifmondens_items",
-        "elementName": "items",
-        "elementSet": "data",
-        "elementPath": "mifmondens.items",
-        "isSessionVariable": true,
-        "notUnitOfRetention": true
-      },
       "nmns_items": {
         "type": "string",
         "elementKey": "nmns_items",
@@ -49627,15 +49589,6 @@
         "isSessionVariable": true,
         "notUnitOfRetention": true
       },
-      "vacnohns_items": {
-        "type": "string",
-        "elementKey": "vacnohns_items",
-        "elementName": "items",
-        "elementSet": "data",
-        "elementPath": "vacnohns.items",
-        "isSessionVariable": true,
-        "notUnitOfRetention": true
-      },
       "vivons_items": {
         "type": "string",
         "elementKey": "vivons_items",
@@ -49643,23 +49596,6 @@
         "elementSet": "data",
         "elementPath": "vivons.items",
         "isSessionVariable": true,
-        "notUnitOfRetention": true
-      },
-      "escons_items": {
-        "type": "string",
-        "elementKey": "escons_items",
-        "elementName": "items",
-        "elementSet": "data",
-        "elementPath": "escons.items",
-        "isSessionVariable": true,
-        "notUnitOfRetention": true
-      },
-      "EVITA2_items": {
-        "type": "string",
-        "elementKey": "EVITA2_items",
-        "elementName": "items",
-        "elementSet": "data",
-        "elementPath": "EVITA2.items",
         "notUnitOfRetention": true
       },
       "_id": {
