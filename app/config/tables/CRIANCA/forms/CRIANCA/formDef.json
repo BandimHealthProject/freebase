@@ -233,8 +233,8 @@
         "display": {
           "prompt": {
             "text": {
-              "english": "Want to change the infromation?",
-              "default": "Want to change the infromation?"
+              "english": "Want to change?",
+              "default": "Want to change?"
             }
           }
         },
@@ -6594,7 +6594,7 @@
     "model": [
       {
         "name": "ACCID",
-        "type": "integer",
+        "type": "select_one",
         "isSessionVariable": false,
         "_row_num": 2
       },
@@ -6606,7 +6606,7 @@
       },
       {
         "name": "AMARELO",
-        "type": "integer",
+        "type": "select_one",
         "isSessionVariable": false,
         "_row_num": 4
       },
@@ -6630,13 +6630,13 @@
       },
       {
         "name": "ANTIPALUD",
-        "type": "integer",
+        "type": "select_one",
         "isSessionVariable": false,
         "_row_num": 8
       },
       {
         "name": "ASSISTPART",
-        "type": "text",
+        "type": "select_one",
         "isSessionVariable": false,
         "_row_num": 9
       },
@@ -6654,7 +6654,7 @@
       },
       {
         "name": "BCGCHECK",
-        "type": "integer",
+        "type": "select_one",
         "isSessionVariable": false,
         "_row_num": 12
       },
@@ -6666,7 +6666,7 @@
       },
       {
         "name": "BICO_MATER",
-        "type": "integer",
+        "type": "select_one",
         "isSessionVariable": false,
         "_row_num": 14
       },
@@ -6678,7 +6678,7 @@
       },
       {
         "name": "BOCA_RIJA",
-        "type": "integer",
+        "type": "select_one",
         "isSessionVariable": false,
         "_row_num": 16
       },
@@ -6690,7 +6690,7 @@
       },
       {
         "name": "BSG",
-        "type": "integer",
+        "type": "select_one",
         "isSessionVariable": false,
         "_row_num": 18
       },
@@ -6720,37 +6720,37 @@
       },
       {
         "name": "C_CONDECOD",
-        "type": "text",
+        "type": "select_one",
         "isSessionVariable": false,
         "_row_num": 23
       },
       {
         "name": "C_CONDECOD2",
-        "type": "text",
+        "type": "select_one",
         "isSessionVariable": false,
         "_row_num": 24
       },
       {
         "name": "C_CONS",
-        "type": "integer",
+        "type": "select_one",
         "isSessionVariable": false,
         "_row_num": 25
       },
       {
         "name": "C_CONS2",
-        "type": "integer",
+        "type": "select_one",
         "isSessionVariable": false,
         "_row_num": 26
       },
       {
         "name": "C_DIAGNOSE",
-        "type": "integer",
+        "type": "select_one",
         "isSessionVariable": false,
         "_row_num": 27
       },
       {
         "name": "C_DIAGNOSE2",
-        "type": "integer",
+        "type": "select_one",
         "isSessionVariable": false,
         "_row_num": 28
       },
@@ -6768,19 +6768,19 @@
       },
       {
         "name": "C_DOENTE",
-        "type": "integer",
+        "type": "select_one",
         "isSessionVariable": false,
         "_row_num": 31
       },
       {
         "name": "C_LCRT",
-        "type": "integer",
+        "type": "select_one",
         "isSessionVariable": false,
         "_row_num": 32
       },
       {
         "name": "C_LCRT2",
-        "type": "integer",
+        "type": "select_one",
         "isSessionVariable": false,
         "_row_num": 33
       },
@@ -6792,13 +6792,13 @@
       },
       {
         "name": "C_TESTE",
-        "type": "integer",
+        "type": "select_one",
         "isSessionVariable": false,
         "_row_num": 35
       },
       {
         "name": "C_TESTE2",
-        "type": "integer",
+        "type": "select_one",
         "isSessionVariable": false,
         "_row_num": 36
       },
@@ -6816,25 +6816,25 @@
       },
       {
         "name": "C_VIDOC",
-        "type": "integer",
+        "type": "select_one",
         "isSessionVariable": false,
         "_row_num": 39
       },
       {
         "name": "C_VIDOC2",
-        "type": "integer",
+        "type": "select_one",
         "isSessionVariable": false,
         "_row_num": 40
       },
       {
         "name": "CART_ANC",
-        "type": "text",
+        "type": "select_one",
         "isSessionVariable": false,
         "_row_num": 41
       },
       {
         "name": "CARTVAC",
-        "type": "text",
+        "type": "select_one",
         "isSessionVariable": false,
         "_row_num": 42
       },
@@ -6870,7 +6870,7 @@
       },
       {
         "name": "CHOROU",
-        "type": "integer",
+        "type": "select_one",
         "isSessionVariable": false,
         "_row_num": 48
       },
@@ -6882,7 +6882,7 @@
       },
       {
         "name": "CICBCGN",
-        "type": "integer",
+        "type": "select_one",
         "isSessionVariable": false,
         "_row_num": 50
       },
@@ -6894,7 +6894,7 @@
       },
       {
         "name": "COMSUP",
-        "type": "integer",
+        "type": "select_one",
         "isSessionVariable": false,
         "_row_num": 52
       },
@@ -6918,7 +6918,7 @@
       },
       {
         "name": "CONVUL",
-        "type": "integer",
+        "type": "select_one",
         "isSessionVariable": false,
         "_row_num": 56
       },
@@ -6930,13 +6930,13 @@
       },
       {
         "name": "CORPO_TESO",
-        "type": "integer",
+        "type": "select_one",
         "isSessionVariable": false,
         "_row_num": 58
       },
       {
         "name": "CRES",
-        "type": "integer",
+        "type": "select_one",
         "isSessionVariable": false,
         "_row_num": 59
       },
@@ -6966,7 +6966,7 @@
       },
       {
         "name": "DEFEITO",
-        "type": "integer",
+        "type": "select_one",
         "isSessionVariable": false,
         "_row_num": 64
       },
@@ -6978,7 +6978,7 @@
       },
       {
         "name": "DIAGNOST",
-        "type": "integer",
+        "type": "select_one",
         "isSessionVariable": false,
         "_row_num": 66
       },
@@ -6990,13 +6990,13 @@
       },
       {
         "name": "DIAGNQUEM",
-        "type": "integer",
+        "type": "select_one",
         "isSessionVariable": false,
         "_row_num": 68
       },
       {
         "name": "DIARREIA",
-        "type": "integer",
+        "type": "select_one",
         "isSessionVariable": false,
         "_row_num": 69
       },
@@ -7020,13 +7020,13 @@
       },
       {
         "name": "DORMTENDA",
-        "type": "integer",
+        "type": "select_one",
         "isSessionVariable": false,
         "_row_num": 73
       },
       {
         "name": "DORMTENTI",
-        "type": "integer",
+        "type": "select_one",
         "isSessionVariable": false,
         "_row_num": 74
       },
@@ -7044,13 +7044,13 @@
       },
       {
         "name": "EXITPRECIS",
-        "type": "integer",
+        "type": "select_one",
         "isSessionVariable": false,
         "_row_num": 77
       },
       {
         "name": "FAMAR",
-        "type": "integer",
+        "type": "select_one",
         "isSessionVariable": false,
         "_row_num": 78
       },
@@ -7068,7 +7068,7 @@
       },
       {
         "name": "FEBAMARELCHECK",
-        "type": "integer",
+        "type": "select_one",
         "isSessionVariable": false,
         "_row_num": 81
       },
@@ -7080,7 +7080,7 @@
       },
       {
         "name": "FEBRE",
-        "type": "integer",
+        "type": "select_one",
         "isSessionVariable": false,
         "_row_num": 83
       },
@@ -7116,7 +7116,7 @@
       },
       {
         "name": "GRCONS",
-        "type": "integer",
+        "type": "select_one",
         "isSessionVariable": false,
         "_row_num": 89
       },
@@ -7128,7 +7128,7 @@
       },
       {
         "name": "GRVAC",
-        "type": "integer",
+        "type": "select_one",
         "isSessionVariable": false,
         "_row_num": 91
       },
@@ -7146,7 +7146,7 @@
       },
       {
         "name": "HOSP",
-        "type": "integer",
+        "type": "select_one",
         "isSessionVariable": false,
         "_row_num": 94
       },
@@ -7170,25 +7170,25 @@
       },
       {
         "name": "inf1",
-        "type": "integer",
+        "type": "select_one",
         "isSessionVariable": true,
         "_row_num": 98
       },
       {
         "name": "inf2",
-        "type": "integer",
+        "type": "select_one",
         "isSessionVariable": true,
         "_row_num": 99
       },
       {
         "name": "LINFADENOP",
-        "type": "integer",
+        "type": "select_one",
         "isSessionVariable": false,
         "_row_num": 100
       },
       {
         "name": "LINFADESUP",
-        "type": "integer",
+        "type": "select_one",
         "isSessionVariable": false,
         "_row_num": 101
       },
@@ -7200,19 +7200,19 @@
       },
       {
         "name": "LOCPAR",
-        "type": "integer",
+        "type": "select_one",
         "isSessionVariable": false,
         "_row_num": 103
       },
       {
         "name": "MAMAVA",
-        "type": "integer",
+        "type": "select_one",
         "isSessionVariable": false,
         "_row_num": 104
       },
       {
         "name": "MOMA",
-        "type": "integer",
+        "type": "select_one",
         "isSessionVariable": false,
         "_row_num": 105
       },
@@ -7236,7 +7236,7 @@
       },
       {
         "name": "MORT_ANTE",
-        "type": "integer",
+        "type": "select_one",
         "isSessionVariable": false,
         "_row_num": 109
       },
@@ -7248,13 +7248,13 @@
       },
       {
         "name": "NASCVIVA",
-        "type": "integer",
+        "type": "select_one",
         "isSessionVariable": false,
         "_row_num": 111
       },
       {
         "name": "NASESTADO",
-        "type": "integer",
+        "type": "select_one",
         "isSessionVariable": false,
         "_row_num": 112
       },
@@ -7266,7 +7266,7 @@
       },
       {
         "name": "ONDEFALEC",
-        "type": "integer",
+        "type": "select_one",
         "isSessionVariable": false,
         "_row_num": 114
       },
@@ -7308,7 +7308,7 @@
       },
       {
         "name": "PALIDEZ",
-        "type": "integer",
+        "type": "select_one",
         "isSessionVariable": false,
         "_row_num": 121
       },
@@ -7320,7 +7320,7 @@
       },
       {
         "name": "PAMA",
-        "type": "integer",
+        "type": "select_one",
         "isSessionVariable": false,
         "_row_num": 123
       },
@@ -7332,7 +7332,7 @@
       },
       {
         "name": "PASSARAMPO",
-        "type": "integer",
+        "type": "select_one",
         "isSessionVariable": false,
         "_row_num": 125
       },
@@ -7350,7 +7350,7 @@
       },
       {
         "name": "PCV1CHECK",
-        "type": "integer",
+        "type": "select_one",
         "isSessionVariable": false,
         "_row_num": 128
       },
@@ -7374,7 +7374,7 @@
       },
       {
         "name": "PCV2CHECK",
-        "type": "integer",
+        "type": "select_one",
         "isSessionVariable": false,
         "_row_num": 132
       },
@@ -7398,7 +7398,7 @@
       },
       {
         "name": "PCV3CHECK",
-        "type": "integer",
+        "type": "select_one",
         "isSessionVariable": false,
         "_row_num": 136
       },
@@ -7416,7 +7416,7 @@
       },
       {
         "name": "PENTA",
-        "type": "integer",
+        "type": "select_one",
         "isSessionVariable": false,
         "_row_num": 139
       },
@@ -7434,7 +7434,7 @@
       },
       {
         "name": "PENTA1CHECK",
-        "type": "integer",
+        "type": "select_one",
         "isSessionVariable": false,
         "_row_num": 142
       },
@@ -7458,7 +7458,7 @@
       },
       {
         "name": "PENTA2CHECK",
-        "type": "integer",
+        "type": "select_one",
         "isSessionVariable": false,
         "_row_num": 146
       },
@@ -7482,7 +7482,7 @@
       },
       {
         "name": "PENTA3CHECK",
-        "type": "integer",
+        "type": "select_one",
         "isSessionVariable": false,
         "_row_num": 150
       },
@@ -7494,7 +7494,7 @@
       },
       {
         "name": "POLIO",
-        "type": "integer",
+        "type": "select_one",
         "isSessionVariable": false,
         "_row_num": 152
       },
@@ -7512,7 +7512,7 @@
       },
       {
         "name": "POLIO1CHECK",
-        "type": "integer",
+        "type": "select_one",
         "isSessionVariable": false,
         "_row_num": 155
       },
@@ -7536,7 +7536,7 @@
       },
       {
         "name": "POLIO2CHECK",
-        "type": "integer",
+        "type": "select_one",
         "isSessionVariable": false,
         "_row_num": 159
       },
@@ -7560,7 +7560,7 @@
       },
       {
         "name": "POLIO3CHECK",
-        "type": "integer",
+        "type": "select_one",
         "isSessionVariable": false,
         "_row_num": 163
       },
@@ -7584,13 +7584,13 @@
       },
       {
         "name": "POLIONAS_FAL",
-        "type": "integer",
+        "type": "select_one",
         "isSessionVariable": false,
         "_row_num": 167
       },
       {
         "name": "POLIONASCHECK",
-        "type": "integer",
+        "type": "select_one",
         "isSessionVariable": false,
         "_row_num": 168
       },
@@ -7608,13 +7608,13 @@
       },
       {
         "name": "PORCA",
-        "type": "integer",
+        "type": "select_one",
         "isSessionVariable": false,
         "_row_num": 171
       },
       {
         "name": "PORMO",
-        "type": "integer",
+        "type": "select_one",
         "isSessionVariable": false,
         "_row_num": 172
       },
@@ -7626,7 +7626,7 @@
       },
       {
         "name": "PRES",
-        "type": "integer",
+        "type": "select_one",
         "isSessionVariable": false,
         "_row_num": 174
       },
@@ -7650,7 +7650,7 @@
       },
       {
         "name": "REG",
-        "type": "integer_dropdown",
+        "type": "select_one_dropdown",
         "isSessionVariable": false,
         "_row_num": 178
       },
@@ -7674,7 +7674,7 @@
       },
       {
         "name": "RESP",
-        "type": "integer",
+        "type": "select_one",
         "isSessionVariable": false,
         "_row_num": 182
       },
@@ -7698,7 +7698,7 @@
       },
       {
         "name": "ROX1CHECK",
-        "type": "integer",
+        "type": "select_one",
         "isSessionVariable": false,
         "_row_num": 186
       },
@@ -7722,7 +7722,7 @@
       },
       {
         "name": "ROX2CHECK",
-        "type": "integer",
+        "type": "select_one",
         "isSessionVariable": false,
         "_row_num": 190
       },
@@ -7734,7 +7734,7 @@
       },
       {
         "name": "SARAM",
-        "type": "integer",
+        "type": "select_one",
         "isSessionVariable": false,
         "_row_num": 192
       },
@@ -7752,7 +7752,7 @@
       },
       {
         "name": "SARAMPO1CHECK",
-        "type": "integer",
+        "type": "select_one",
         "isSessionVariable": false,
         "_row_num": 195
       },
@@ -7770,43 +7770,43 @@
       },
       {
         "name": "SEX",
-        "type": "integer",
+        "type": "select_one",
         "isSessionVariable": false,
         "_row_num": 198
       },
       {
         "name": "TAB",
-        "type": "integer_dropdown",
+        "type": "select_one_dropdown",
         "isSessionVariable": false,
         "_row_num": 199
       },
       {
         "name": "TABPART",
-        "type": "integer",
+        "type": "select_one",
         "isSessionVariable": false,
         "_row_num": 200
       },
       {
         "name": "TENDA",
-        "type": "integer",
+        "type": "select_one",
         "isSessionVariable": false,
         "_row_num": 201
       },
       {
         "name": "TENDATIPO",
-        "type": "integer",
+        "type": "select_one",
         "isSessionVariable": false,
         "_row_num": 202
       },
       {
         "name": "TENDAYN",
-        "type": "integer",
+        "type": "select_one",
         "isSessionVariable": false,
         "_row_num": 203
       },
       {
         "name": "TEVSAR",
-        "type": "integer",
+        "type": "select_one",
         "isSessionVariable": false,
         "_row_num": 204
       },
@@ -7848,7 +7848,7 @@
       },
       {
         "name": "VPICHECK",
-        "type": "integer",
+        "type": "select_one",
         "isSessionVariable": false,
         "_row_num": 211
       },
@@ -7872,19 +7872,19 @@
       },
       {
         "name": "change",
-        "type": "integer",
+        "type": "select_one",
         "isSessionVariable": true,
         "_row_num": 216
       },
       {
         "name": "pres",
-        "type": "integer",
+        "type": "select_one",
         "isSessionVariable": true,
         "_row_num": 217
       },
       {
         "name": "cont",
-        "type": "integer",
+        "type": "select_one",
         "isSessionVariable": true,
         "_row_num": 218
       }
@@ -9524,7 +9524,7 @@
     "calculates": {},
     "model": {
       "ACCID": {
-        "type": "integer",
+        "type": "string",
         "valuesList": "YesNoU",
         "_defn": [
           {
@@ -9555,7 +9555,7 @@
         "elementKey": "ACCIDQUAL"
       },
       "AMARELO": {
-        "type": "integer",
+        "type": "string",
         "valuesList": "YesNoU",
         "_defn": [
           {
@@ -9616,7 +9616,7 @@
         "elementKey": "AMO"
       },
       "ANTIPALUD": {
-        "type": "integer",
+        "type": "string",
         "valuesList": "YesNoU",
         "_defn": [
           {
@@ -9686,7 +9686,7 @@
         "elementKey": "bcg"
       },
       "BCGCHECK": {
-        "type": "integer",
+        "type": "string",
         "valuesList": "vaccheck",
         "_defn": [
           {
@@ -9722,7 +9722,7 @@
         "elementKey": "bcgng"
       },
       "BICO_MATER": {
-        "type": "integer",
+        "type": "string",
         "valuesList": "YesNoU",
         "_defn": [
           {
@@ -9753,7 +9753,7 @@
         "elementKey": "BICO_ONDE"
       },
       "BOCA_RIJA": {
-        "type": "integer",
+        "type": "string",
         "valuesList": "YesNoU",
         "_defn": [
           {
@@ -9784,7 +9784,7 @@
         "elementKey": "BRACOCRI"
       },
       "BSG": {
-        "type": "integer",
+        "type": "string",
         "valuesList": "YesNoU",
         "_defn": [
           {
@@ -9902,7 +9902,7 @@
         "elementKey": "C_CONDECOD2"
       },
       "C_CONS": {
-        "type": "integer",
+        "type": "string",
         "valuesList": "YesNoU",
         "_defn": [
           {
@@ -9918,7 +9918,7 @@
         "elementKey": "C_CONS"
       },
       "C_CONS2": {
-        "type": "integer",
+        "type": "string",
         "valuesList": "YesNoU",
         "_defn": [
           {
@@ -9934,7 +9934,7 @@
         "elementKey": "C_CONS2"
       },
       "C_DIAGNOSE": {
-        "type": "integer",
+        "type": "string",
         "valuesList": "YesNoU",
         "_defn": [
           {
@@ -9950,7 +9950,7 @@
         "elementKey": "C_DIAGNOSE"
       },
       "C_DIAGNOSE2": {
-        "type": "integer",
+        "type": "string",
         "valuesList": "YesNoU",
         "_defn": [
           {
@@ -9996,7 +9996,7 @@
         "elementKey": "C_DIAGNOST2"
       },
       "C_DOENTE": {
-        "type": "integer",
+        "type": "string",
         "valuesList": "YesNoU",
         "_defn": [
           {
@@ -10012,7 +10012,7 @@
         "elementKey": "C_DOENTE"
       },
       "C_LCRT": {
-        "type": "integer",
+        "type": "string",
         "valuesList": "YesNoU",
         "_defn": [
           {
@@ -10028,7 +10028,7 @@
         "elementKey": "C_LCRT"
       },
       "C_LCRT2": {
-        "type": "integer",
+        "type": "string",
         "valuesList": "YesNoU",
         "_defn": [
           {
@@ -10064,7 +10064,7 @@
         "elementKey": "C_SIMPTOMA"
       },
       "C_TESTE": {
-        "type": "integer",
+        "type": "string",
         "valuesList": "YesNoU",
         "_defn": [
           {
@@ -10080,7 +10080,7 @@
         "elementKey": "C_TESTE"
       },
       "C_TESTE2": {
-        "type": "integer",
+        "type": "string",
         "valuesList": "YesNoU",
         "_defn": [
           {
@@ -10126,7 +10126,7 @@
         "elementKey": "C_TESTERES2"
       },
       "C_VIDOC": {
-        "type": "integer",
+        "type": "string",
         "valuesList": "YesNoU",
         "_defn": [
           {
@@ -10142,7 +10142,7 @@
         "elementKey": "C_VIDOC"
       },
       "C_VIDOC2": {
-        "type": "integer",
+        "type": "string",
         "valuesList": "YesNoU",
         "_defn": [
           {
@@ -10265,7 +10265,7 @@
         "elementKey": "CDG_M"
       },
       "CHOROU": {
-        "type": "integer",
+        "type": "string",
         "valuesList": "YesNoU",
         "_defn": [
           {
@@ -10296,7 +10296,7 @@
         "elementKey": "CICBCGH"
       },
       "CICBCGN": {
-        "type": "integer",
+        "type": "string",
         "valuesList": "Scar",
         "_defn": [
           {
@@ -10327,7 +10327,7 @@
         "elementKey": "CICBCGV"
       },
       "COMSUP": {
-        "type": "integer",
+        "type": "string",
         "valuesList": "YesNoU",
         "_defn": [
           {
@@ -10379,7 +10379,7 @@
         "elementKey": "CONTROL"
       },
       "CONVUL": {
-        "type": "integer",
+        "type": "string",
         "valuesList": "YesNoU",
         "_defn": [
           {
@@ -10410,7 +10410,7 @@
         "elementKey": "CONVULTE"
       },
       "CORPO_TESO": {
-        "type": "integer",
+        "type": "string",
         "valuesList": "YesNoU",
         "_defn": [
           {
@@ -10426,7 +10426,7 @@
         "elementKey": "CORPO_TESO"
       },
       "CRES": {
-        "type": "integer",
+        "type": "string",
         "valuesList": "YesNoU",
         "_defn": [
           {
@@ -10517,7 +10517,7 @@
         "elementKey": "DASEP"
       },
       "DEFEITO": {
-        "type": "integer",
+        "type": "string",
         "valuesList": "YesNoU",
         "_defn": [
           {
@@ -10548,7 +10548,7 @@
         "elementKey": "DEFEITOQUA"
       },
       "DIAGNOST": {
-        "type": "integer",
+        "type": "string",
         "valuesList": "YesNoU",
         "_defn": [
           {
@@ -10579,7 +10579,7 @@
         "elementKey": "DIAGNOUTRO"
       },
       "DIAGNQUEM": {
-        "type": "integer",
+        "type": "string",
         "valuesList": "healthstaff",
         "_defn": [
           {
@@ -10595,7 +10595,7 @@
         "elementKey": "DIAGNQUEM"
       },
       "DIARREIA": {
-        "type": "integer",
+        "type": "string",
         "valuesList": "YesNoU",
         "_defn": [
           {
@@ -10656,7 +10656,7 @@
         "elementKey": "DIASDEVIDA"
       },
       "DORMTENDA": {
-        "type": "integer",
+        "type": "string",
         "valuesList": "YesNoU",
         "_defn": [
           {
@@ -10672,7 +10672,7 @@
         "elementKey": "DORMTENDA"
       },
       "DORMTENTI": {
-        "type": "integer",
+        "type": "string",
         "valuesList": "bednet",
         "_defn": [
           {
@@ -10723,7 +10723,7 @@
         "elementKey": "EXITMUDO"
       },
       "EXITPRECIS": {
-        "type": "integer",
+        "type": "string",
         "_defn": [
           {
             "_row_num": 77,
@@ -10734,7 +10734,7 @@
         "elementKey": "EXITPRECIS"
       },
       "FAMAR": {
-        "type": "integer",
+        "type": "string",
         "valuesList": "YesNoU",
         "_defn": [
           {
@@ -10788,7 +10788,7 @@
         "elementKey": "febamarel"
       },
       "FEBAMARELCHECK": {
-        "type": "integer",
+        "type": "string",
         "valuesList": "vaccheck",
         "_defn": [
           {
@@ -10824,7 +10824,7 @@
         "elementKey": "febamarelng"
       },
       "FEBRE": {
-        "type": "integer",
+        "type": "string",
         "valuesList": "YesNoU",
         "_defn": [
           {
@@ -10915,7 +10915,7 @@
         "elementKey": "fogau"
       },
       "GRCONS": {
-        "type": "integer",
+        "type": "string",
         "valuesList": "YesNoU",
         "_defn": [
           {
@@ -10942,7 +10942,7 @@
         "elementKey": "GRINFOS"
       },
       "GRVAC": {
-        "type": "integer",
+        "type": "string",
         "valuesList": "YesNoU",
         "_defn": [
           {
@@ -10988,7 +10988,7 @@
         "elementKey": "HISTORIA2"
       },
       "HOSP": {
-        "type": "integer",
+        "type": "string",
         "valuesList": "YesNoU",
         "_defn": [
           {
@@ -11049,7 +11049,7 @@
         "elementKey": "IDSEP"
       },
       "inf1": {
-        "type": "integer",
+        "type": "string",
         "valuesList": "inf1",
         "_defn": [
           {
@@ -11065,7 +11065,7 @@
         "elementKey": "inf1"
       },
       "inf2": {
-        "type": "integer",
+        "type": "string",
         "valuesList": "inf2",
         "_defn": [
           {
@@ -11081,7 +11081,7 @@
         "elementKey": "inf2"
       },
       "LINFADENOP": {
-        "type": "integer",
+        "type": "string",
         "valuesList": "YesNoU",
         "_defn": [
           {
@@ -11097,7 +11097,7 @@
         "elementKey": "LINFADENOP"
       },
       "LINFADESUP": {
-        "type": "integer",
+        "type": "string",
         "valuesList": "YesNoU",
         "_defn": [
           {
@@ -11128,7 +11128,7 @@
         "elementKey": "LITTERSIZE"
       },
       "LOCPAR": {
-        "type": "integer",
+        "type": "string",
         "valuesList": "facility",
         "_defn": [
           {
@@ -11144,7 +11144,7 @@
         "elementKey": "LOCPAR"
       },
       "MAMAVA": {
-        "type": "integer",
+        "type": "string",
         "valuesList": "YesNoU",
         "_defn": [
           {
@@ -11160,7 +11160,7 @@
         "elementKey": "MAMAVA"
       },
       "MOMA": {
-        "type": "integer",
+        "type": "string",
         "valuesList": "YesNoU",
         "_defn": [
           {
@@ -11221,7 +11221,7 @@
         "elementKey": "mor"
       },
       "MORT_ANTE": {
-        "type": "integer",
+        "type": "string",
         "valuesList": "YesNoU",
         "_defn": [
           {
@@ -11256,7 +11256,7 @@
         "elementKey": "NOME"
       },
       "NASCVIVA": {
-        "type": "integer",
+        "type": "string",
         "valuesList": "YesNoU",
         "_defn": [
           {
@@ -11272,7 +11272,7 @@
         "elementKey": "NASCVIVA"
       },
       "NASESTADO": {
-        "type": "integer",
+        "type": "string",
         "valuesList": "birthstatus",
         "_defn": [
           {
@@ -11303,7 +11303,7 @@
         "elementKey": "NOMEMAE"
       },
       "ONDEFALEC": {
-        "type": "integer",
+        "type": "string",
         "valuesList": "Facility",
         "_defn": [
           {
@@ -11428,7 +11428,7 @@
         "elementKey": "OUTRO2TIPO"
       },
       "PALIDEZ": {
-        "type": "integer",
+        "type": "string",
         "valuesList": "YesNoU",
         "_defn": [
           {
@@ -11459,7 +11459,7 @@
         "elementKey": "PALIDEZTE"
       },
       "PAMA": {
-        "type": "integer",
+        "type": "string",
         "valuesList": "YesNoU",
         "_defn": [
           {
@@ -11486,7 +11486,7 @@
         "elementKey": "pama"
       },
       "PASSARAMPO": {
-        "type": "integer",
+        "type": "string",
         "valuesList": "YesNoU",
         "_defn": [
           {
@@ -11540,7 +11540,7 @@
         "elementKey": "pcv1"
       },
       "PCV1CHECK": {
-        "type": "integer",
+        "type": "string",
         "valuesList": "vaccheck",
         "_defn": [
           {
@@ -11614,7 +11614,7 @@
         "elementKey": "pcv2"
       },
       "PCV2CHECK": {
-        "type": "integer",
+        "type": "string",
         "valuesList": "vaccheck",
         "_defn": [
           {
@@ -11688,7 +11688,7 @@
         "elementKey": "pcv3"
       },
       "PCV3CHECK": {
-        "type": "integer",
+        "type": "string",
         "valuesList": "vaccheck",
         "_defn": [
           {
@@ -11739,7 +11739,7 @@
         "elementKey": "PENQUANTO"
       },
       "PENTA": {
-        "type": "integer",
+        "type": "string",
         "valuesList": "YesNoU",
         "_defn": [
           {
@@ -11793,7 +11793,7 @@
         "elementKey": "penta1"
       },
       "PENTA1CHECK": {
-        "type": "integer",
+        "type": "string",
         "valuesList": "vaccheck",
         "_defn": [
           {
@@ -11867,7 +11867,7 @@
         "elementKey": "penta2"
       },
       "PENTA2CHECK": {
-        "type": "integer",
+        "type": "string",
         "valuesList": "vaccheck",
         "_defn": [
           {
@@ -11941,7 +11941,7 @@
         "elementKey": "penta3"
       },
       "PENTA3CHECK": {
-        "type": "integer",
+        "type": "string",
         "valuesList": "vaccheck",
         "_defn": [
           {
@@ -11977,7 +11977,7 @@
         "elementKey": "penta3ng"
       },
       "POLIO": {
-        "type": "integer",
+        "type": "string",
         "valuesList": "YesNoU",
         "_defn": [
           {
@@ -12031,7 +12031,7 @@
         "elementKey": "polio1"
       },
       "POLIO1CHECK": {
-        "type": "integer",
+        "type": "string",
         "valuesList": "vaccheck",
         "_defn": [
           {
@@ -12105,7 +12105,7 @@
         "elementKey": "polio2"
       },
       "POLIO2CHECK": {
-        "type": "integer",
+        "type": "string",
         "valuesList": "vaccheck",
         "_defn": [
           {
@@ -12179,7 +12179,7 @@
         "elementKey": "polio3"
       },
       "POLIO3CHECK": {
-        "type": "integer",
+        "type": "string",
         "valuesList": "vaccheck",
         "_defn": [
           {
@@ -12253,7 +12253,7 @@
         "elementKey": "polionas"
       },
       "POLIONAS_FAL": {
-        "type": "integer",
+        "type": "string",
         "valuesList": "YesNoU",
         "_defn": [
           {
@@ -12269,7 +12269,7 @@
         "elementKey": "POLIONAS_FAL"
       },
       "POLIONASCHECK": {
-        "type": "integer",
+        "type": "string",
         "valuesList": "vaccheck",
         "_defn": [
           {
@@ -12320,7 +12320,7 @@
         "elementKey": "POLQUANTO"
       },
       "PORCA": {
-        "type": "integer",
+        "type": "string",
         "valuesList": "YesNoU",
         "_defn": [
           {
@@ -12336,7 +12336,7 @@
         "elementKey": "PORCA"
       },
       "PORMO": {
-        "type": "integer",
+        "type": "string",
         "valuesList": "YesNoU",
         "_defn": [
           {
@@ -12363,7 +12363,7 @@
         "elementKey": "PREGID"
       },
       "PRES": {
-        "type": "integer",
+        "type": "string",
         "valuesList": "visitstatus",
         "_defn": [
           {
@@ -12424,7 +12424,7 @@
         "elementKey": "QVFANSI_M"
       },
       "REG": {
-        "type": "integer_dropdown",
+        "type": "string",
         "valuesList": "region_csv",
         "_defn": [
           {
@@ -12482,7 +12482,7 @@
         "elementKey": "REGIDC"
       },
       "RESP": {
-        "type": "integer",
+        "type": "string",
         "valuesList": "YesNoU",
         "_defn": [
           {
@@ -12551,7 +12551,7 @@
         "elementKey": "rox1"
       },
       "ROX1CHECK": {
-        "type": "integer",
+        "type": "string",
         "valuesList": "vaccheck",
         "_defn": [
           {
@@ -12625,7 +12625,7 @@
         "elementKey": "rox2"
       },
       "ROX2CHECK": {
-        "type": "integer",
+        "type": "string",
         "valuesList": "vaccheck",
         "_defn": [
           {
@@ -12661,7 +12661,7 @@
         "elementKey": "rox2ng"
       },
       "SARAM": {
-        "type": "integer",
+        "type": "string",
         "valuesList": "YesNoU",
         "_defn": [
           {
@@ -12715,7 +12715,7 @@
         "elementKey": "sarampo1"
       },
       "SARAMPO1CHECK": {
-        "type": "integer",
+        "type": "string",
         "valuesList": "vaccheck",
         "_defn": [
           {
@@ -12766,7 +12766,7 @@
         "elementKey": "SARQUANTO"
       },
       "SEX": {
-        "type": "integer",
+        "type": "string",
         "valuesList": "sex",
         "_defn": [
           {
@@ -12786,7 +12786,7 @@
         "elementKey": "SEX"
       },
       "TAB": {
-        "type": "integer_dropdown",
+        "type": "string",
         "valuesList": "tabanca_csv",
         "_defn": [
           {
@@ -12802,7 +12802,7 @@
         "elementKey": "TAB"
       },
       "TABPART": {
-        "type": "integer",
+        "type": "string",
         "valuesList": "YesNoU",
         "_defn": [
           {
@@ -12818,7 +12818,7 @@
         "elementKey": "TABPART"
       },
       "TENDA": {
-        "type": "integer",
+        "type": "string",
         "valuesList": "bednettime",
         "_defn": [
           {
@@ -12834,7 +12834,7 @@
         "elementKey": "TENDA"
       },
       "TENDATIPO": {
-        "type": "integer",
+        "type": "string",
         "valuesList": "bednet",
         "_defn": [
           {
@@ -12850,7 +12850,7 @@
         "elementKey": "TENDATIPO"
       },
       "TENDAYN": {
-        "type": "integer",
+        "type": "string",
         "valuesList": "YesNoU",
         "_defn": [
           {
@@ -12866,7 +12866,7 @@
         "elementKey": "TENDAYN"
       },
       "TEVSAR": {
-        "type": "integer",
+        "type": "string",
         "valuesList": "YesNoU",
         "_defn": [
           {
@@ -12977,7 +12977,7 @@
         "elementKey": "vpi"
       },
       "VPICHECK": {
-        "type": "integer",
+        "type": "string",
         "valuesList": "vaccheck",
         "_defn": [
           {
@@ -13035,7 +13035,7 @@
         "elementKey": "ESTADO"
       },
       "change": {
-        "type": "integer",
+        "type": "string",
         "valuesList": "YesNo",
         "_defn": [
           {
@@ -13051,7 +13051,7 @@
         "elementKey": "change"
       },
       "pres": {
-        "type": "integer",
+        "type": "string",
         "_defn": [
           {
             "_row_num": 217,
@@ -13062,7 +13062,7 @@
         "elementKey": "pres"
       },
       "cont": {
-        "type": "integer",
+        "type": "string",
         "_defn": [
           {
             "_row_num": 218,
@@ -13412,8 +13412,8 @@
             "display": {
               "prompt": {
                 "text": {
-                  "english": "Want to change the infromation?",
-                  "default": "Want to change the infromation?"
+                  "english": "Want to change?",
+                  "default": "Want to change?"
                 }
               }
             },
@@ -19756,7 +19756,7 @@
     },
     "dataTableModel": {
       "ACCID": {
-        "type": "integer",
+        "type": "string",
         "valuesList": "YesNoU",
         "_defn": [
           {
@@ -19793,7 +19793,7 @@
         "elementPath": "ACCIDQUAL"
       },
       "AMARELO": {
-        "type": "integer",
+        "type": "string",
         "valuesList": "YesNoU",
         "_defn": [
           {
@@ -19866,7 +19866,7 @@
         "elementPath": "AMO"
       },
       "ANTIPALUD": {
-        "type": "integer",
+        "type": "string",
         "valuesList": "YesNoU",
         "_defn": [
           {
@@ -19948,7 +19948,7 @@
         "elementPath": "bcg"
       },
       "BCGCHECK": {
-        "type": "integer",
+        "type": "string",
         "valuesList": "vaccheck",
         "_defn": [
           {
@@ -19998,7 +19998,7 @@
         ]
       },
       "BICO_MATER": {
-        "type": "integer",
+        "type": "string",
         "valuesList": "YesNoU",
         "_defn": [
           {
@@ -20035,7 +20035,7 @@
         "elementPath": "BICO_ONDE"
       },
       "BOCA_RIJA": {
-        "type": "integer",
+        "type": "string",
         "valuesList": "YesNoU",
         "_defn": [
           {
@@ -20072,7 +20072,7 @@
         "elementPath": "BRACOCRI"
       },
       "BSG": {
-        "type": "integer",
+        "type": "string",
         "valuesList": "YesNoU",
         "_defn": [
           {
@@ -20211,7 +20211,7 @@
         "elementPath": "C_CONDECOD2"
       },
       "C_CONS": {
-        "type": "integer",
+        "type": "string",
         "valuesList": "YesNoU",
         "_defn": [
           {
@@ -20230,7 +20230,7 @@
         "elementPath": "C_CONS"
       },
       "C_CONS2": {
-        "type": "integer",
+        "type": "string",
         "valuesList": "YesNoU",
         "_defn": [
           {
@@ -20249,7 +20249,7 @@
         "elementPath": "C_CONS2"
       },
       "C_DIAGNOSE": {
-        "type": "integer",
+        "type": "string",
         "valuesList": "YesNoU",
         "_defn": [
           {
@@ -20268,7 +20268,7 @@
         "elementPath": "C_DIAGNOSE"
       },
       "C_DIAGNOSE2": {
-        "type": "integer",
+        "type": "string",
         "valuesList": "YesNoU",
         "_defn": [
           {
@@ -20323,7 +20323,7 @@
         "elementPath": "C_DIAGNOST2"
       },
       "C_DOENTE": {
-        "type": "integer",
+        "type": "string",
         "valuesList": "YesNoU",
         "_defn": [
           {
@@ -20342,7 +20342,7 @@
         "elementPath": "C_DOENTE"
       },
       "C_LCRT": {
-        "type": "integer",
+        "type": "string",
         "valuesList": "YesNoU",
         "_defn": [
           {
@@ -20361,7 +20361,7 @@
         "elementPath": "C_LCRT"
       },
       "C_LCRT2": {
-        "type": "integer",
+        "type": "string",
         "valuesList": "YesNoU",
         "_defn": [
           {
@@ -20410,7 +20410,7 @@
         ]
       },
       "C_TESTE": {
-        "type": "integer",
+        "type": "string",
         "valuesList": "YesNoU",
         "_defn": [
           {
@@ -20429,7 +20429,7 @@
         "elementPath": "C_TESTE"
       },
       "C_TESTE2": {
-        "type": "integer",
+        "type": "string",
         "valuesList": "YesNoU",
         "_defn": [
           {
@@ -20484,7 +20484,7 @@
         "elementPath": "C_TESTERES2"
       },
       "C_VIDOC": {
-        "type": "integer",
+        "type": "string",
         "valuesList": "YesNoU",
         "_defn": [
           {
@@ -20503,7 +20503,7 @@
         "elementPath": "C_VIDOC"
       },
       "C_VIDOC2": {
-        "type": "integer",
+        "type": "string",
         "valuesList": "YesNoU",
         "_defn": [
           {
@@ -20650,7 +20650,7 @@
         "elementPath": "CDG_M"
       },
       "CHOROU": {
-        "type": "integer",
+        "type": "string",
         "valuesList": "YesNoU",
         "_defn": [
           {
@@ -20687,7 +20687,7 @@
         "elementPath": "CICBCGH"
       },
       "CICBCGN": {
-        "type": "integer",
+        "type": "string",
         "valuesList": "Scar",
         "_defn": [
           {
@@ -20724,7 +20724,7 @@
         "elementPath": "CICBCGV"
       },
       "COMSUP": {
-        "type": "integer",
+        "type": "string",
         "valuesList": "YesNoU",
         "_defn": [
           {
@@ -20788,7 +20788,7 @@
         "elementPath": "CONTROL"
       },
       "CONVUL": {
-        "type": "integer",
+        "type": "string",
         "valuesList": "YesNoU",
         "_defn": [
           {
@@ -20825,7 +20825,7 @@
         "elementPath": "CONVULTE"
       },
       "CORPO_TESO": {
-        "type": "integer",
+        "type": "string",
         "valuesList": "YesNoU",
         "_defn": [
           {
@@ -20844,7 +20844,7 @@
         "elementPath": "CORPO_TESO"
       },
       "CRES": {
-        "type": "integer",
+        "type": "string",
         "valuesList": "YesNoU",
         "_defn": [
           {
@@ -20950,7 +20950,7 @@
         "elementPath": "DASEP"
       },
       "DEFEITO": {
-        "type": "integer",
+        "type": "string",
         "valuesList": "YesNoU",
         "_defn": [
           {
@@ -20987,7 +20987,7 @@
         "elementPath": "DEFEITOQUA"
       },
       "DIAGNOST": {
-        "type": "integer",
+        "type": "string",
         "valuesList": "YesNoU",
         "_defn": [
           {
@@ -21024,7 +21024,7 @@
         "elementPath": "DIAGNOUTRO"
       },
       "DIAGNQUEM": {
-        "type": "integer",
+        "type": "string",
         "valuesList": "healthstaff",
         "_defn": [
           {
@@ -21043,7 +21043,7 @@
         "elementPath": "DIAGNQUEM"
       },
       "DIARREIA": {
-        "type": "integer",
+        "type": "string",
         "valuesList": "YesNoU",
         "_defn": [
           {
@@ -21116,7 +21116,7 @@
         "elementPath": "DIASDEVIDA"
       },
       "DORMTENDA": {
-        "type": "integer",
+        "type": "string",
         "valuesList": "YesNoU",
         "_defn": [
           {
@@ -21135,7 +21135,7 @@
         "elementPath": "DORMTENDA"
       },
       "DORMTENTI": {
-        "type": "integer",
+        "type": "string",
         "valuesList": "bednet",
         "_defn": [
           {
@@ -21195,7 +21195,7 @@
         "elementPath": "EXITMUDO"
       },
       "EXITPRECIS": {
-        "type": "integer",
+        "type": "string",
         "_defn": [
           {
             "_row_num": 77,
@@ -21209,7 +21209,7 @@
         "elementPath": "EXITPRECIS"
       },
       "FAMAR": {
-        "type": "integer",
+        "type": "string",
         "valuesList": "YesNoU",
         "_defn": [
           {
@@ -21272,7 +21272,7 @@
         "elementPath": "febamarel"
       },
       "FEBAMARELCHECK": {
-        "type": "integer",
+        "type": "string",
         "valuesList": "vaccheck",
         "_defn": [
           {
@@ -21322,7 +21322,7 @@
         ]
       },
       "FEBRE": {
-        "type": "integer",
+        "type": "string",
         "valuesList": "YesNoU",
         "_defn": [
           {
@@ -21431,7 +21431,7 @@
         "elementPath": "fogau"
       },
       "GRCONS": {
-        "type": "integer",
+        "type": "string",
         "valuesList": "YesNoU",
         "_defn": [
           {
@@ -21464,7 +21464,7 @@
         "elementPath": "GRINFOS"
       },
       "GRVAC": {
-        "type": "integer",
+        "type": "string",
         "valuesList": "YesNoU",
         "_defn": [
           {
@@ -21519,7 +21519,7 @@
         "elementPath": "HISTORIA2"
       },
       "HOSP": {
-        "type": "integer",
+        "type": "string",
         "valuesList": "YesNoU",
         "_defn": [
           {
@@ -21592,7 +21592,7 @@
         "elementPath": "IDSEP"
       },
       "inf1": {
-        "type": "integer",
+        "type": "string",
         "valuesList": "inf1",
         "_defn": [
           {
@@ -21611,7 +21611,7 @@
         "elementPath": "inf1"
       },
       "inf2": {
-        "type": "integer",
+        "type": "string",
         "valuesList": "inf2",
         "_defn": [
           {
@@ -21630,7 +21630,7 @@
         "elementPath": "inf2"
       },
       "LINFADENOP": {
-        "type": "integer",
+        "type": "string",
         "valuesList": "YesNoU",
         "_defn": [
           {
@@ -21649,7 +21649,7 @@
         "elementPath": "LINFADENOP"
       },
       "LINFADESUP": {
-        "type": "integer",
+        "type": "string",
         "valuesList": "YesNoU",
         "_defn": [
           {
@@ -21686,7 +21686,7 @@
         "elementPath": "LITTERSIZE"
       },
       "LOCPAR": {
-        "type": "integer",
+        "type": "string",
         "valuesList": "facility",
         "_defn": [
           {
@@ -21705,7 +21705,7 @@
         "elementPath": "LOCPAR"
       },
       "MAMAVA": {
-        "type": "integer",
+        "type": "string",
         "valuesList": "YesNoU",
         "_defn": [
           {
@@ -21724,7 +21724,7 @@
         "elementPath": "MAMAVA"
       },
       "MOMA": {
-        "type": "integer",
+        "type": "string",
         "valuesList": "YesNoU",
         "_defn": [
           {
@@ -21797,7 +21797,7 @@
         "elementPath": "mor"
       },
       "MORT_ANTE": {
-        "type": "integer",
+        "type": "string",
         "valuesList": "YesNoU",
         "_defn": [
           {
@@ -21838,7 +21838,7 @@
         "elementPath": "NOME"
       },
       "NASCVIVA": {
-        "type": "integer",
+        "type": "string",
         "valuesList": "YesNoU",
         "_defn": [
           {
@@ -21857,7 +21857,7 @@
         "elementPath": "NASCVIVA"
       },
       "NASESTADO": {
-        "type": "integer",
+        "type": "string",
         "valuesList": "birthstatus",
         "_defn": [
           {
@@ -21894,7 +21894,7 @@
         "elementPath": "NOMEMAE"
       },
       "ONDEFALEC": {
-        "type": "integer",
+        "type": "string",
         "valuesList": "Facility",
         "_defn": [
           {
@@ -22040,7 +22040,7 @@
         "elementPath": "OUTRO2TIPO"
       },
       "PALIDEZ": {
-        "type": "integer",
+        "type": "string",
         "valuesList": "YesNoU",
         "_defn": [
           {
@@ -22077,7 +22077,7 @@
         "elementPath": "PALIDEZTE"
       },
       "PAMA": {
-        "type": "integer",
+        "type": "string",
         "valuesList": "YesNoU",
         "_defn": [
           {
@@ -22110,7 +22110,7 @@
         "elementPath": "pama"
       },
       "PASSARAMPO": {
-        "type": "integer",
+        "type": "string",
         "valuesList": "YesNoU",
         "_defn": [
           {
@@ -22173,7 +22173,7 @@
         "elementPath": "pcv1"
       },
       "PCV1CHECK": {
-        "type": "integer",
+        "type": "string",
         "valuesList": "vaccheck",
         "_defn": [
           {
@@ -22267,7 +22267,7 @@
         "elementPath": "pcv2"
       },
       "PCV2CHECK": {
-        "type": "integer",
+        "type": "string",
         "valuesList": "vaccheck",
         "_defn": [
           {
@@ -22361,7 +22361,7 @@
         "elementPath": "pcv3"
       },
       "PCV3CHECK": {
-        "type": "integer",
+        "type": "string",
         "valuesList": "vaccheck",
         "_defn": [
           {
@@ -22429,7 +22429,7 @@
         "elementPath": "PENQUANTO"
       },
       "PENTA": {
-        "type": "integer",
+        "type": "string",
         "valuesList": "YesNoU",
         "_defn": [
           {
@@ -22492,7 +22492,7 @@
         "elementPath": "penta1"
       },
       "PENTA1CHECK": {
-        "type": "integer",
+        "type": "string",
         "valuesList": "vaccheck",
         "_defn": [
           {
@@ -22586,7 +22586,7 @@
         "elementPath": "penta2"
       },
       "PENTA2CHECK": {
-        "type": "integer",
+        "type": "string",
         "valuesList": "vaccheck",
         "_defn": [
           {
@@ -22680,7 +22680,7 @@
         "elementPath": "penta3"
       },
       "PENTA3CHECK": {
-        "type": "integer",
+        "type": "string",
         "valuesList": "vaccheck",
         "_defn": [
           {
@@ -22730,7 +22730,7 @@
         ]
       },
       "POLIO": {
-        "type": "integer",
+        "type": "string",
         "valuesList": "YesNoU",
         "_defn": [
           {
@@ -22793,7 +22793,7 @@
         "elementPath": "polio1"
       },
       "POLIO1CHECK": {
-        "type": "integer",
+        "type": "string",
         "valuesList": "vaccheck",
         "_defn": [
           {
@@ -22887,7 +22887,7 @@
         "elementPath": "polio2"
       },
       "POLIO2CHECK": {
-        "type": "integer",
+        "type": "string",
         "valuesList": "vaccheck",
         "_defn": [
           {
@@ -22981,7 +22981,7 @@
         "elementPath": "polio3"
       },
       "POLIO3CHECK": {
-        "type": "integer",
+        "type": "string",
         "valuesList": "vaccheck",
         "_defn": [
           {
@@ -23075,7 +23075,7 @@
         "elementPath": "polionas"
       },
       "POLIONAS_FAL": {
-        "type": "integer",
+        "type": "string",
         "valuesList": "YesNoU",
         "_defn": [
           {
@@ -23094,7 +23094,7 @@
         "elementPath": "POLIONAS_FAL"
       },
       "POLIONASCHECK": {
-        "type": "integer",
+        "type": "string",
         "valuesList": "vaccheck",
         "_defn": [
           {
@@ -23162,7 +23162,7 @@
         "elementPath": "POLQUANTO"
       },
       "PORCA": {
-        "type": "integer",
+        "type": "string",
         "valuesList": "YesNoU",
         "_defn": [
           {
@@ -23181,7 +23181,7 @@
         "elementPath": "PORCA"
       },
       "PORMO": {
-        "type": "integer",
+        "type": "string",
         "valuesList": "YesNoU",
         "_defn": [
           {
@@ -23214,7 +23214,7 @@
         "elementPath": "PREGID"
       },
       "PRES": {
-        "type": "integer",
+        "type": "string",
         "valuesList": "visitstatus",
         "_defn": [
           {
@@ -23287,7 +23287,7 @@
         "elementPath": "QVFANSI_M"
       },
       "REG": {
-        "type": "integer_dropdown",
+        "type": "string",
         "valuesList": "region_csv",
         "_defn": [
           {
@@ -23357,7 +23357,7 @@
         "elementPath": "REGIDC"
       },
       "RESP": {
-        "type": "integer",
+        "type": "string",
         "valuesList": "YesNoU",
         "_defn": [
           {
@@ -23438,7 +23438,7 @@
         "elementPath": "rox1"
       },
       "ROX1CHECK": {
-        "type": "integer",
+        "type": "string",
         "valuesList": "vaccheck",
         "_defn": [
           {
@@ -23532,7 +23532,7 @@
         "elementPath": "rox2"
       },
       "ROX2CHECK": {
-        "type": "integer",
+        "type": "string",
         "valuesList": "vaccheck",
         "_defn": [
           {
@@ -23582,7 +23582,7 @@
         ]
       },
       "SARAM": {
-        "type": "integer",
+        "type": "string",
         "valuesList": "YesNoU",
         "_defn": [
           {
@@ -23645,7 +23645,7 @@
         "elementPath": "sarampo1"
       },
       "SARAMPO1CHECK": {
-        "type": "integer",
+        "type": "string",
         "valuesList": "vaccheck",
         "_defn": [
           {
@@ -23713,7 +23713,7 @@
         "elementPath": "SARQUANTO"
       },
       "SEX": {
-        "type": "integer",
+        "type": "string",
         "valuesList": "sex",
         "_defn": [
           {
@@ -23736,7 +23736,7 @@
         "elementPath": "SEX"
       },
       "TAB": {
-        "type": "integer_dropdown",
+        "type": "string",
         "valuesList": "tabanca_csv",
         "_defn": [
           {
@@ -23755,7 +23755,7 @@
         "elementPath": "TAB"
       },
       "TABPART": {
-        "type": "integer",
+        "type": "string",
         "valuesList": "YesNoU",
         "_defn": [
           {
@@ -23774,7 +23774,7 @@
         "elementPath": "TABPART"
       },
       "TENDA": {
-        "type": "integer",
+        "type": "string",
         "valuesList": "bednettime",
         "_defn": [
           {
@@ -23793,7 +23793,7 @@
         "elementPath": "TENDA"
       },
       "TENDATIPO": {
-        "type": "integer",
+        "type": "string",
         "valuesList": "bednet",
         "_defn": [
           {
@@ -23812,7 +23812,7 @@
         "elementPath": "TENDATIPO"
       },
       "TENDAYN": {
-        "type": "integer",
+        "type": "string",
         "valuesList": "YesNoU",
         "_defn": [
           {
@@ -23831,7 +23831,7 @@
         "elementPath": "TENDAYN"
       },
       "TEVSAR": {
-        "type": "integer",
+        "type": "string",
         "valuesList": "YesNoU",
         "_defn": [
           {
@@ -23963,7 +23963,7 @@
         "elementPath": "vpi"
       },
       "VPICHECK": {
-        "type": "integer",
+        "type": "string",
         "valuesList": "vaccheck",
         "_defn": [
           {
@@ -24041,7 +24041,7 @@
         "elementPath": "ESTADO"
       },
       "change": {
-        "type": "integer",
+        "type": "string",
         "valuesList": "YesNo",
         "_defn": [
           {
@@ -24060,7 +24060,7 @@
         "elementPath": "change"
       },
       "pres": {
-        "type": "integer",
+        "type": "string",
         "_defn": [
           {
             "_row_num": 217,
@@ -24074,7 +24074,7 @@
         "elementPath": "pres"
       },
       "cont": {
-        "type": "integer",
+        "type": "string",
         "_defn": [
           {
             "_row_num": 218,
