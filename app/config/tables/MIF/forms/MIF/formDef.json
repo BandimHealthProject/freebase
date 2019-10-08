@@ -7788,7 +7788,7 @@
       },
       {
         "clause": "if",
-        "condition": "data('ESTADOVIS') != '2' && data('ESTADOVIS') !='3' && data('ESTADOVIS') == '6'",
+        "condition": "data('ESTADOVIS') != '2' && data('ESTADOVIS') !='3'",
         "_row_num": 36
       },
       {
@@ -35328,7 +35328,7 @@
           },
           {
             "clause": "if",
-            "condition": "data('ESTADOVIS') != '2' && data('ESTADOVIS') !='3' && data('ESTADOVIS') == '6'",
+            "condition": "data('ESTADOVIS') != '2' && data('ESTADOVIS') !='3'",
             "_row_num": 36,
             "__rowNum__": 35,
             "_token_type": "goto_label",

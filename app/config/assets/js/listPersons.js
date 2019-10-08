@@ -184,11 +184,11 @@ function loadChildren() {
 
 function populateView() {
     
-    // console.log("MIFS:");
-    // console.log(persons);
+    console.log("MIFS:");
+    console.log(persons);
     
-    // console.log("CHILDREN:");
-    // console.log(children);
+    console.log("CHILDREN:");
+    console.log(children);
     
     var personsAndChildren = [];
     persons.forEach(mif => {
@@ -198,6 +198,8 @@ function populateView() {
             personsAndChildren.push(child);
         });
     });
+
+    console.log(personsAndChildren);
 
     // Add any remaining (orphaned) children (to the beginning of the list - hence 'unshift')
     children.forEach(child => {
