@@ -71,7 +71,7 @@
       {
         "type": "select_one",
         "values_list": "Inf",
-        "name": "informador",
+        "name": "INFORMADOR",
         "display": {
           "prompt": {
             "text": {
@@ -89,7 +89,7 @@
       },
       {
         "type": "text",
-        "name": "infquem",
+        "name": "INFQUEM",
         "display": {
           "prompt": {
             "text": {
@@ -111,7 +111,7 @@
       },
       {
         "type": "text",
-        "name": "infporq",
+        "name": "INFPORQ",
         "display": {
           "prompt": {
             "text": {
@@ -640,19 +640,19 @@
         "_row_num": 11
       },
       {
-        "name": "informador",
+        "name": "INFORMADOR",
         "type": "select_one",
         "isSessionVariable": false,
         "_row_num": 12
       },
       {
-        "name": "infporq",
+        "name": "INFPORQ",
         "type": "text",
         "isSessionVariable": false,
         "_row_num": 13
       },
       {
-        "name": "infquem",
+        "name": "INFQUEM",
         "type": "text",
         "isSessionVariable": false,
         "_row_num": 14
@@ -1119,7 +1119,7 @@
         "isSessionVariable": false,
         "elementKey": "DURINT"
       },
-      "informador": {
+      "INFORMADOR": {
         "type": "string",
         "valuesList": "Inf",
         "_defn": [
@@ -1133,9 +1133,9 @@
           }
         ],
         "isSessionVariable": false,
-        "elementKey": "informador"
+        "elementKey": "INFORMADOR"
       },
-      "infporq": {
+      "INFPORQ": {
         "type": "string",
         "_defn": [
           {
@@ -1148,9 +1148,9 @@
           }
         ],
         "isSessionVariable": false,
-        "elementKey": "infporq"
+        "elementKey": "INFPORQ"
       },
-      "infquem": {
+      "INFQUEM": {
         "type": "string",
         "_defn": [
           {
@@ -1163,7 +1163,7 @@
           }
         ],
         "isSessionVariable": false,
-        "elementKey": "infquem"
+        "elementKey": "INFQUEM"
       },
       "ONDEINT": {
         "type": "string",
@@ -1289,7 +1289,7 @@
           {
             "type": "select_one",
             "values_list": "Inf",
-            "name": "informador",
+            "name": "INFORMADOR",
             "display": {
               "prompt": {
                 "text": {
@@ -1307,7 +1307,7 @@
           },
           {
             "type": "text",
-            "name": "infquem",
+            "name": "INFQUEM",
             "display": {
               "prompt": {
                 "text": {
@@ -1325,7 +1325,7 @@
           },
           {
             "type": "text",
-            "name": "infporq",
+            "name": "INFPORQ",
             "display": {
               "prompt": {
                 "text": {
@@ -2183,7 +2183,7 @@
         "elementSet": "data",
         "elementPath": "DURINT"
       },
-      "informador": {
+      "INFORMADOR": {
         "type": "string",
         "valuesList": "Inf",
         "_defn": [
@@ -2197,12 +2197,12 @@
           }
         ],
         "isSessionVariable": false,
-        "elementKey": "informador",
-        "elementName": "informador",
+        "elementKey": "INFORMADOR",
+        "elementName": "INFORMADOR",
         "elementSet": "data",
-        "elementPath": "informador"
+        "elementPath": "INFORMADOR"
       },
-      "infporq": {
+      "INFPORQ": {
         "type": "string",
         "_defn": [
           {
@@ -2215,12 +2215,12 @@
           }
         ],
         "isSessionVariable": false,
-        "elementKey": "infporq",
-        "elementName": "infporq",
+        "elementKey": "INFPORQ",
+        "elementName": "INFPORQ",
         "elementSet": "data",
-        "elementPath": "infporq"
+        "elementPath": "INFPORQ"
       },
-      "infquem": {
+      "INFQUEM": {
         "type": "string",
         "_defn": [
           {
@@ -2233,10 +2233,10 @@
           }
         ],
         "isSessionVariable": false,
-        "elementKey": "infquem",
-        "elementName": "infquem",
+        "elementKey": "INFQUEM",
+        "elementName": "INFQUEM",
         "elementSet": "data",
-        "elementPath": "infquem"
+        "elementPath": "INFQUEM"
       },
       "ONDEINT": {
         "type": "string",
@@ -2530,6 +2530,13 @@
       },
       {
         "_partition": "Column",
+        "_aspect": "INFORMADOR",
+        "_key": "displayChoicesList",
+        "_type": "object",
+        "_value": "[{\"choice_list_name\":\"Inf\",\"data_value\":\"1\",\"display\":{\"title\":{\"text\":{\"english\":\"Mãe\",\"default\":\"Mãe\"}}},\"_row_num\":7},{\"choice_list_name\":\"Inf\",\"data_value\":\"2\",\"display\":{\"title\":{\"text\":{\"english\":\"Otro de casa\",\"default\":\"Otro de casa\"}}},\"_row_num\":8},{\"choice_list_name\":\"Inf\",\"data_value\":\"3\",\"display\":{\"title\":{\"text\":{\"english\":\"Outro fora de casa\",\"default\":\"Outro fora de casa\"}}},\"_row_num\":9},{\"choice_list_name\":\"Inf\",\"data_value\":\"4\",\"display\":{\"title\":{\"text\":{\"english\":\"Entrevista não possivel\",\"default\":\"Entrevista não possivel\"}}},\"_row_num\":10}]"
+      },
+      {
+        "_partition": "Column",
         "_aspect": "ONDEINTC",
         "_key": "displayChoicesList",
         "_type": "object",
@@ -2541,13 +2548,6 @@
         "_key": "displayChoicesList",
         "_type": "object",
         "_value": "[{\"choice_list_name\":\"YesNoU\",\"data_value\":\"1\",\"display\":{\"title\":{\"text\":{\"english\":\"Yes\",\"default\":\"Sim\"}}},\"_row_num\":2},{\"choice_list_name\":\"YesNoU\",\"data_value\":\"2\",\"display\":{\"title\":{\"text\":{\"english\":\"No\",\"default\":\"Não\"}}},\"_row_num\":3},{\"choice_list_name\":\"YesNoU\",\"data_value\":\"3\",\"display\":{\"title\":{\"text\":{\"english\":\"Don't know\",\"default\":\"Não sabe\"}}},\"_row_num\":4}]"
-      },
-      {
-        "_partition": "Column",
-        "_aspect": "informador",
-        "_key": "displayChoicesList",
-        "_type": "object",
-        "_value": "[{\"choice_list_name\":\"Inf\",\"data_value\":\"1\",\"display\":{\"title\":{\"text\":{\"english\":\"Mãe\",\"default\":\"Mãe\"}}},\"_row_num\":7},{\"choice_list_name\":\"Inf\",\"data_value\":\"2\",\"display\":{\"title\":{\"text\":{\"english\":\"Otro de casa\",\"default\":\"Otro de casa\"}}},\"_row_num\":8},{\"choice_list_name\":\"Inf\",\"data_value\":\"3\",\"display\":{\"title\":{\"text\":{\"english\":\"Outro fora de casa\",\"default\":\"Outro fora de casa\"}}},\"_row_num\":9},{\"choice_list_name\":\"Inf\",\"data_value\":\"4\",\"display\":{\"title\":{\"text\":{\"english\":\"Entrevista não possivel\",\"default\":\"Entrevista não possivel\"}}},\"_row_num\":10}]"
       },
       {
         "_partition": "FormType",

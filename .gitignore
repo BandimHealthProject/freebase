@@ -8,3 +8,4 @@ app/config/assets/csv/CRIANCA.bio19.csv
 app/config/assets/csv/MIF.bio19.csv
 app/config/tables/CRIANCA/forms/CRIANCA/~$CRIANCA.xlsx
 app/config/tables/MIF/forms/MIF/~$MIF.xlsx
+app/config/tables/CRIANCA_HOSP/forms/CRIANCA_HOSP/~$CRIANCA_HOSP.xlsx
