@@ -13478,7 +13478,7 @@
         "linked_table_id": "GRAVIDA_VISIT",
         "selection": "REGID = ?",
         "selectionArgs": "[data('REGID')]",
-        "newRowInitialElementKeyToValueMap": "{REGID: data('REGID'), CONT: data('CONT'), MULPRESA: data('ESTADOVIS'), VISITID: opendatakit.getCurrentInstanceId()}",
+        "newRowInitialElementKeyToValueMap": "{REGID: data('REGID'), CONT: data('CONT'), MULPRESA: data('ESTADOVIS'), VISITID: opendatakit.getCurrentInstanceId(), ASSISTENTE: data('ASSISTENTE')}",
         "openRowInitialElementKeyToValueMap": "{}",
         "_row_num": 2
       },
@@ -19263,7 +19263,7 @@
         "linked_table_id": "GRAVIDA_VISIT",
         "selection": "REGID = ?",
         "selectionArgs": "[data('REGID')]",
-        "newRowInitialElementKeyToValueMap": "{REGID: data('REGID'), CONT: data('CONT'), MULPRESA: data('ESTADOVIS'), VISITID: opendatakit.getCurrentInstanceId()}",
+        "newRowInitialElementKeyToValueMap": "{REGID: data('REGID'), CONT: data('CONT'), MULPRESA: data('ESTADOVIS'), VISITID: opendatakit.getCurrentInstanceId(), ASSISTENTE: data('ASSISTENTE')}",
         "openRowInitialElementKeyToValueMap": "{}",
         "_row_num": 2
       },

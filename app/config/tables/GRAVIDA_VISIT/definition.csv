@@ -1,5 +1,6 @@
 _element_key,_element_name,_element_type,_list_child_element_keys
 ABMES,ABMES,integer,[]
+ASSISTENTE,ASSISTENTE,string,[]
 ASSISTPART,ASSISTPART,string,[]
 CARTONA,CARTONA,string,[]
 CART_ANC,CART_ANC,string,[]

@@ -2003,6 +2003,12 @@
         "type": "text",
         "isSessionVariable": false,
         "_row_num": 42
+      },
+      {
+        "name": "ASSISTENTE",
+        "type": "text",
+        "isSessionVariable": false,
+        "_row_num": 44
       }
     ]
   },
@@ -3399,6 +3405,17 @@
         ],
         "isSessionVariable": false,
         "elementKey": "VISITID"
+      },
+      "ASSISTENTE": {
+        "type": "string",
+        "_defn": [
+          {
+            "_row_num": 44,
+            "section_name": "model"
+          }
+        ],
+        "isSessionVariable": false,
+        "elementKey": "ASSISTENTE"
       }
     },
     "section_names": [
@@ -5935,6 +5952,20 @@
         "elementName": "VISITID",
         "elementSet": "data",
         "elementPath": "VISITID"
+      },
+      "ASSISTENTE": {
+        "type": "string",
+        "_defn": [
+          {
+            "_row_num": 44,
+            "section_name": "model"
+          }
+        ],
+        "isSessionVariable": false,
+        "elementKey": "ASSISTENTE",
+        "elementName": "ASSISTENTE",
+        "elementSet": "data",
+        "elementPath": "ASSISTENTE"
       },
       "muacbig_items": {
         "type": "string",
