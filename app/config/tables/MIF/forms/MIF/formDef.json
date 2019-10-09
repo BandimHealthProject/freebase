@@ -17020,7 +17020,7 @@
       },
       {
         "name": "ASSISTENTE",
-        "type": "select_one",
+        "type": "text",
         "isSessionVariable": false,
         "_row_num": 55
       },

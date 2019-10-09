@@ -108,17 +108,29 @@
         "display": {
           "prompt": {
             "text": {
-              "english": "Birthdate: {{data.OUTDATE}}",
-              "default": "Nascimento: {{data.OUTDATE}}"
+              "english": "Name: {{data.ASSISTENTE}}",
+              "default": "Nome: {{data.ASSISTENTE}}"
             }
           }
         },
         "_row_num": 4
       },
       {
+        "type": "note",
+        "display": {
+          "prompt": {
+            "text": {
+              "english": "Birthdate: {{data.OUTDATE}}",
+              "default": "Nascimento: {{data.OUTDATE}}"
+            }
+          }
+        },
+        "_row_num": 5
+      },
+      {
         "clause": "if",
         "condition": "data('SEX') =='1'",
-        "_row_num": 5
+        "_row_num": 6
       },
       {
         "type": "note",
@@ -130,16 +142,16 @@
             }
           }
         },
-        "_row_num": 6
+        "_row_num": 7
       },
       {
         "clause": "end if",
-        "_row_num": 7
+        "_row_num": 8
       },
       {
         "clause": "if",
         "condition": "data('SEX') =='2'",
-        "_row_num": 8
+        "_row_num": 9
       },
       {
         "type": "note",
@@ -151,16 +163,16 @@
             }
           }
         },
-        "_row_num": 9
+        "_row_num": 10
       },
       {
         "clause": "end if",
-        "_row_num": 10
+        "_row_num": 11
       },
       {
         "clause": "if",
         "condition": "data('SEX') =='3'",
-        "_row_num": 11
+        "_row_num": 12
       },
       {
         "type": "note",
@@ -172,11 +184,11 @@
             }
           }
         },
-        "_row_num": 12
+        "_row_num": 13
       },
       {
         "clause": "end if",
-        "_row_num": 13
+        "_row_num": 14
       },
       {
         "type": "note",
@@ -188,7 +200,7 @@
             }
           }
         },
-        "_row_num": 14
+        "_row_num": 15
       },
       {
         "type": "note",
@@ -200,7 +212,7 @@
             }
           }
         },
-        "_row_num": 15
+        "_row_num": 16
       },
       {
         "type": "note",
@@ -212,7 +224,7 @@
             }
           }
         },
-        "_row_num": 16
+        "_row_num": 17
       },
       {
         "type": "note",
@@ -224,7 +236,7 @@
             }
           }
         },
-        "_row_num": 17
+        "_row_num": 18
       },
       {
         "type": "select_one",
@@ -238,20 +250,20 @@
             }
           }
         },
-        "_row_num": 18
+        "_row_num": 19
       },
       {
         "clause": "end screen",
-        "_row_num": 19
+        "_row_num": 20
       },
       {
         "clause": "if",
         "condition": "data('change') == '1'",
-        "_row_num": 20
+        "_row_num": 21
       },
       {
         "clause": "begin screen",
-        "_row_num": 21
+        "_row_num": 22
       },
       {
         "type": "text",
@@ -264,7 +276,7 @@
             }
           }
         },
-        "_row_num": 22
+        "_row_num": 23
       },
       {
         "type": "adate",
@@ -277,7 +289,7 @@
             }
           }
         },
-        "_row_num": 23
+        "_row_num": 24
       },
       {
         "type": "select_one",
@@ -291,7 +303,7 @@
             }
           }
         },
-        "_row_num": 24
+        "_row_num": 25
       },
       {
         "type": "text",
@@ -304,7 +316,7 @@
             }
           }
         },
-        "_row_num": 25
+        "_row_num": 26
       },
       {
         "type": "integer",
@@ -317,7 +329,7 @@
             }
           }
         },
-        "_row_num": 26
+        "_row_num": 27
       },
       {
         "type": "integer",
@@ -330,7 +342,7 @@
             }
           }
         },
-        "_row_num": 27
+        "_row_num": 28
       },
       {
         "type": "integer",
@@ -343,15 +355,15 @@
             }
           }
         },
-        "_row_num": 28
-      },
-      {
-        "clause": "end screen",
         "_row_num": 29
       },
       {
-        "clause": "begin screen",
+        "clause": "end screen",
         "_row_num": 30
+      },
+      {
+        "clause": "begin screen",
+        "_row_num": 31
       },
       {
         "type": "note",
@@ -363,7 +375,7 @@
             }
           }
         },
-        "_row_num": 31
+        "_row_num": 32
       },
       {
         "type": "note",
@@ -375,7 +387,7 @@
             }
           }
         },
-        "_row_num": 32
+        "_row_num": 33
       },
       {
         "type": "note",
@@ -387,7 +399,7 @@
             }
           }
         },
-        "_row_num": 33
+        "_row_num": 34
       },
       {
         "type": "note",
@@ -399,7 +411,7 @@
             }
           }
         },
-        "_row_num": 34
+        "_row_num": 35
       },
       {
         "type": "note",
@@ -411,7 +423,7 @@
             }
           }
         },
-        "_row_num": 35
+        "_row_num": 36
       },
       {
         "type": "note",
@@ -423,7 +435,7 @@
             }
           }
         },
-        "_row_num": 36
+        "_row_num": 37
       },
       {
         "type": "note",
@@ -435,19 +447,19 @@
             }
           }
         },
-        "_row_num": 37
-      },
-      {
-        "clause": "end screen",
         "_row_num": 38
       },
       {
-        "clause": "end if",
+        "clause": "end screen",
         "_row_num": 39
       },
       {
-        "clause": "do section visit",
+        "clause": "end if",
         "_row_num": 40
+      },
+      {
+        "clause": "do section visit",
+        "_row_num": 41
       }
     ],
     "reg": [
@@ -7887,6 +7899,12 @@
         "type": "integer",
         "isSessionVariable": true,
         "_row_num": 218
+      },
+      {
+        "name": "ASSISTENTE",
+        "type": "text",
+        "isSessionVariable": false,
+        "_row_num": 220
       }
     ]
   },
@@ -10193,7 +10211,7 @@
         "type": "integer",
         "_defn": [
           {
-            "_row_num": 27,
+            "_row_num": 28,
             "section_name": "stsc"
           },
           {
@@ -10888,7 +10906,7 @@
         "type": "integer",
         "_defn": [
           {
-            "_row_num": 28,
+            "_row_num": 29,
             "section_name": "stsc"
           },
           {
@@ -11194,7 +11212,7 @@
         "type": "integer",
         "_defn": [
           {
-            "_row_num": 26,
+            "_row_num": 27,
             "section_name": "stsc"
           },
           {
@@ -11240,7 +11258,7 @@
         "type": "string",
         "_defn": [
           {
-            "_row_num": 22,
+            "_row_num": 23,
             "section_name": "stsc"
           },
           {
@@ -11291,7 +11309,7 @@
         "type": "string",
         "_defn": [
           {
-            "_row_num": 25,
+            "_row_num": 26,
             "section_name": "stsc"
           },
           {
@@ -11342,7 +11360,7 @@
         "__rowNum__": 1,
         "_defn": [
           {
-            "_row_num": 23,
+            "_row_num": 24,
             "section_name": "stsc"
           },
           {
@@ -12770,7 +12788,7 @@
         "valuesList": "sex",
         "_defn": [
           {
-            "_row_num": 24,
+            "_row_num": 25,
             "section_name": "stsc"
           },
           {
@@ -13039,7 +13057,7 @@
         "valuesList": "YesNo",
         "_defn": [
           {
-            "_row_num": 18,
+            "_row_num": 19,
             "section_name": "stsc"
           },
           {
@@ -13071,6 +13089,17 @@
         ],
         "isSessionVariable": true,
         "elementKey": "cont"
+      },
+      "ASSISTENTE": {
+        "type": "string",
+        "_defn": [
+          {
+            "_row_num": 220,
+            "section_name": "model"
+          }
+        ],
+        "isSessionVariable": false,
+        "elementKey": "ASSISTENTE"
       },
       "MALFORM": {
         "_defn": [
@@ -13274,8 +13303,8 @@
             "display": {
               "prompt": {
                 "text": {
-                  "english": "Birthdate: {{data.OUTDATE}}",
-                  "default": "Nascimento: {{data.OUTDATE}}"
+                  "english": "Name: {{data.ASSISTENTE}}",
+                  "default": "Nome: {{data.ASSISTENTE}}"
                 }
               }
             },
@@ -13291,17 +13320,34 @@
             "display": {
               "prompt": {
                 "text": {
+                  "english": "Birthdate: {{data.OUTDATE}}",
+                  "default": "Nascimento: {{data.OUTDATE}}"
+                }
+              }
+            },
+            "_row_num": 5,
+            "__rowNum__": 4,
+            "_token_type": "prompt",
+            "_type": "note",
+            "_branch_label_enclosing_screen": "stsc/_screen2",
+            "promptIdx": 2
+          },
+          {
+            "type": "note",
+            "display": {
+              "prompt": {
+                "text": {
                   "english": "Sex: Male",
                   "default": "Sexo: Macho"
                 }
               }
             },
-            "_row_num": 6,
-            "__rowNum__": 5,
+            "_row_num": 7,
+            "__rowNum__": 6,
             "_token_type": "prompt",
             "_type": "note",
             "_branch_label_enclosing_screen": "stsc/_screen2",
-            "promptIdx": 2
+            "promptIdx": 3
           },
           {
             "type": "note",
@@ -13313,12 +13359,12 @@
                 }
               }
             },
-            "_row_num": 9,
-            "__rowNum__": 8,
+            "_row_num": 10,
+            "__rowNum__": 9,
             "_token_type": "prompt",
             "_type": "note",
             "_branch_label_enclosing_screen": "stsc/_screen2",
-            "promptIdx": 3
+            "promptIdx": 4
           },
           {
             "type": "note",
@@ -13330,25 +13376,8 @@
                 }
               }
             },
-            "_row_num": 12,
-            "__rowNum__": 11,
-            "_token_type": "prompt",
-            "_type": "note",
-            "_branch_label_enclosing_screen": "stsc/_screen2",
-            "promptIdx": 4
-          },
-          {
-            "type": "note",
-            "display": {
-              "prompt": {
-                "text": {
-                  "english": "Name of mother: {{data.NOMEMAE}}",
-                  "default": "Nome de mulher: {{data.NOMEMAE}}"
-                }
-              }
-            },
-            "_row_num": 14,
-            "__rowNum__": 13,
+            "_row_num": 13,
+            "__rowNum__": 12,
             "_token_type": "prompt",
             "_type": "note",
             "_branch_label_enclosing_screen": "stsc/_screen2",
@@ -13359,8 +13388,8 @@
             "display": {
               "prompt": {
                 "text": {
-                  "english": "Morança: {{data.MOR}}",
-                  "default": "Morança: {{data.MOR}}"
+                  "english": "Name of mother: {{data.NOMEMAE}}",
+                  "default": "Nome de mulher: {{data.NOMEMAE}}"
                 }
               }
             },
@@ -13376,8 +13405,8 @@
             "display": {
               "prompt": {
                 "text": {
-                  "english": "Casa: {{data.CASA}}",
-                  "default": "Casa: {{data.CASA}}"
+                  "english": "Morança: {{data.MOR}}",
+                  "default": "Morança: {{data.MOR}}"
                 }
               }
             },
@@ -13393,8 +13422,8 @@
             "display": {
               "prompt": {
                 "text": {
-                  "english": "Fogao: {{data.FOGAO}}",
-                  "default": "Fogao: {{data.FOGAO}}"
+                  "english": "Casa: {{data.CASA}}",
+                  "default": "Casa: {{data.CASA}}"
                 }
               }
             },
@@ -13404,6 +13433,23 @@
             "_type": "note",
             "_branch_label_enclosing_screen": "stsc/_screen2",
             "promptIdx": 8
+          },
+          {
+            "type": "note",
+            "display": {
+              "prompt": {
+                "text": {
+                  "english": "Fogao: {{data.FOGAO}}",
+                  "default": "Fogao: {{data.FOGAO}}"
+                }
+              }
+            },
+            "_row_num": 18,
+            "__rowNum__": 17,
+            "_token_type": "prompt",
+            "_type": "note",
+            "_branch_label_enclosing_screen": "stsc/_screen2",
+            "promptIdx": 9
           },
           {
             "type": "select_one",
@@ -13417,12 +13463,12 @@
                 }
               }
             },
-            "_row_num": 18,
-            "__rowNum__": 17,
+            "_row_num": 19,
+            "__rowNum__": 18,
             "_token_type": "prompt",
             "_type": "select_one",
             "_branch_label_enclosing_screen": "stsc/_screen2",
-            "promptIdx": 9
+            "promptIdx": 10
           },
           {
             "type": "text",
@@ -13435,12 +13481,12 @@
                 }
               }
             },
-            "_row_num": 22,
-            "__rowNum__": 21,
+            "_row_num": 23,
+            "__rowNum__": 22,
             "_token_type": "prompt",
             "_type": "text",
-            "_branch_label_enclosing_screen": "stsc/_screen21",
-            "promptIdx": 10
+            "_branch_label_enclosing_screen": "stsc/_screen22",
+            "promptIdx": 11
           },
           {
             "type": "adate",
@@ -13453,12 +13499,12 @@
                 }
               }
             },
-            "_row_num": 23,
-            "__rowNum__": 22,
+            "_row_num": 24,
+            "__rowNum__": 23,
             "_token_type": "prompt",
             "_type": "adate",
-            "_branch_label_enclosing_screen": "stsc/_screen21",
-            "promptIdx": 11
+            "_branch_label_enclosing_screen": "stsc/_screen22",
+            "promptIdx": 12
           },
           {
             "type": "select_one",
@@ -13472,12 +13518,12 @@
                 }
               }
             },
-            "_row_num": 24,
-            "__rowNum__": 23,
+            "_row_num": 25,
+            "__rowNum__": 24,
             "_token_type": "prompt",
             "_type": "select_one",
-            "_branch_label_enclosing_screen": "stsc/_screen21",
-            "promptIdx": 12
+            "_branch_label_enclosing_screen": "stsc/_screen22",
+            "promptIdx": 13
           },
           {
             "type": "text",
@@ -13490,12 +13536,12 @@
                 }
               }
             },
-            "_row_num": 25,
-            "__rowNum__": 24,
+            "_row_num": 26,
+            "__rowNum__": 25,
             "_token_type": "prompt",
             "_type": "text",
-            "_branch_label_enclosing_screen": "stsc/_screen21",
-            "promptIdx": 13
+            "_branch_label_enclosing_screen": "stsc/_screen22",
+            "promptIdx": 14
           },
           {
             "type": "integer",
@@ -13508,12 +13554,12 @@
                 }
               }
             },
-            "_row_num": 26,
-            "__rowNum__": 25,
+            "_row_num": 27,
+            "__rowNum__": 26,
             "_token_type": "prompt",
             "_type": "integer",
-            "_branch_label_enclosing_screen": "stsc/_screen21",
-            "promptIdx": 14
+            "_branch_label_enclosing_screen": "stsc/_screen22",
+            "promptIdx": 15
           },
           {
             "type": "integer",
@@ -13526,12 +13572,12 @@
                 }
               }
             },
-            "_row_num": 27,
-            "__rowNum__": 26,
+            "_row_num": 28,
+            "__rowNum__": 27,
             "_token_type": "prompt",
             "_type": "integer",
-            "_branch_label_enclosing_screen": "stsc/_screen21",
-            "promptIdx": 15
+            "_branch_label_enclosing_screen": "stsc/_screen22",
+            "promptIdx": 16
           },
           {
             "type": "integer",
@@ -13544,12 +13590,12 @@
                 }
               }
             },
-            "_row_num": 28,
-            "__rowNum__": 27,
+            "_row_num": 29,
+            "__rowNum__": 28,
             "_token_type": "prompt",
             "_type": "integer",
-            "_branch_label_enclosing_screen": "stsc/_screen21",
-            "promptIdx": 16
+            "_branch_label_enclosing_screen": "stsc/_screen22",
+            "promptIdx": 17
           },
           {
             "type": "note",
@@ -13561,12 +13607,12 @@
                 }
               }
             },
-            "_row_num": 31,
-            "__rowNum__": 30,
+            "_row_num": 32,
+            "__rowNum__": 31,
             "_token_type": "prompt",
             "_type": "note",
-            "_branch_label_enclosing_screen": "stsc/_screen30",
-            "promptIdx": 17
+            "_branch_label_enclosing_screen": "stsc/_screen31",
+            "promptIdx": 18
           },
           {
             "type": "note",
@@ -13578,12 +13624,12 @@
                 }
               }
             },
-            "_row_num": 32,
-            "__rowNum__": 31,
+            "_row_num": 33,
+            "__rowNum__": 32,
             "_token_type": "prompt",
             "_type": "note",
-            "_branch_label_enclosing_screen": "stsc/_screen30",
-            "promptIdx": 18
+            "_branch_label_enclosing_screen": "stsc/_screen31",
+            "promptIdx": 19
           },
           {
             "type": "note",
@@ -13595,12 +13641,12 @@
                 }
               }
             },
-            "_row_num": 33,
-            "__rowNum__": 32,
+            "_row_num": 34,
+            "__rowNum__": 33,
             "_token_type": "prompt",
             "_type": "note",
-            "_branch_label_enclosing_screen": "stsc/_screen30",
-            "promptIdx": 19
+            "_branch_label_enclosing_screen": "stsc/_screen31",
+            "promptIdx": 20
           },
           {
             "type": "note",
@@ -13612,12 +13658,12 @@
                 }
               }
             },
-            "_row_num": 34,
-            "__rowNum__": 33,
+            "_row_num": 35,
+            "__rowNum__": 34,
             "_token_type": "prompt",
             "_type": "note",
-            "_branch_label_enclosing_screen": "stsc/_screen30",
-            "promptIdx": 20
+            "_branch_label_enclosing_screen": "stsc/_screen31",
+            "promptIdx": 21
           },
           {
             "type": "note",
@@ -13629,12 +13675,12 @@
                 }
               }
             },
-            "_row_num": 35,
-            "__rowNum__": 34,
+            "_row_num": 36,
+            "__rowNum__": 35,
             "_token_type": "prompt",
             "_type": "note",
-            "_branch_label_enclosing_screen": "stsc/_screen30",
-            "promptIdx": 21
+            "_branch_label_enclosing_screen": "stsc/_screen31",
+            "promptIdx": 22
           },
           {
             "type": "note",
@@ -13646,12 +13692,12 @@
                 }
               }
             },
-            "_row_num": 36,
-            "__rowNum__": 35,
+            "_row_num": 37,
+            "__rowNum__": 36,
             "_token_type": "prompt",
             "_type": "note",
-            "_branch_label_enclosing_screen": "stsc/_screen30",
-            "promptIdx": 22
+            "_branch_label_enclosing_screen": "stsc/_screen31",
+            "promptIdx": 23
           },
           {
             "type": "note",
@@ -13663,21 +13709,21 @@
                 }
               }
             },
-            "_row_num": 37,
-            "__rowNum__": 36,
+            "_row_num": 38,
+            "__rowNum__": 37,
             "_token_type": "prompt",
             "_type": "note",
-            "_branch_label_enclosing_screen": "stsc/_screen30",
-            "promptIdx": 23
+            "_branch_label_enclosing_screen": "stsc/_screen31",
+            "promptIdx": 24
           },
           {
             "clause": "do section visit",
-            "_row_num": 40,
-            "__rowNum__": 39,
+            "_row_num": 41,
+            "__rowNum__": 40,
             "_token_type": "prompt",
             "_do_section_name": "visit",
             "_type": "_section",
-            "promptIdx": 24,
+            "promptIdx": 25,
             "display": {
               "title": {
                 "text": {
@@ -13692,9 +13738,9 @@
             "_token_type": "prompt",
             "type": "contents",
             "_type": "contents",
-            "_row_num": 41,
-            "_branch_label_enclosing_screen": "stsc/_screen41",
-            "promptIdx": 25
+            "_row_num": 42,
+            "_branch_label_enclosing_screen": "stsc/_screen42",
+            "promptIdx": 26
           }
         ],
         "validation_tag_map": {
@@ -13708,68 +13754,68 @@
             "_token_type": "begin_screen",
             "_end_screen_clause": {
               "clause": "end screen",
-              "_row_num": 19,
-              "__rowNum__": 18,
+              "_row_num": 20,
+              "__rowNum__": 19,
               "_token_type": "end_screen"
             },
-            "_screen_block": "function() {var activePromptIndicies = [];\nactivePromptIndicies.push(0);\nactivePromptIndicies.push(1);\nif (data('SEX') =='1') {\nactivePromptIndicies.push(2);\n}\nif (data('SEX') =='2') {\nactivePromptIndicies.push(3);\n}\nif (data('SEX') =='3') {\nactivePromptIndicies.push(4);\n}\nactivePromptIndicies.push(5);\nactivePromptIndicies.push(6);\nactivePromptIndicies.push(7);\nactivePromptIndicies.push(8);\nactivePromptIndicies.push(9);\n\nreturn activePromptIndicies;\n}\n",
+            "_screen_block": "function() {var activePromptIndicies = [];\nactivePromptIndicies.push(0);\nactivePromptIndicies.push(1);\nactivePromptIndicies.push(2);\nif (data('SEX') =='1') {\nactivePromptIndicies.push(3);\n}\nif (data('SEX') =='2') {\nactivePromptIndicies.push(4);\n}\nif (data('SEX') =='3') {\nactivePromptIndicies.push(5);\n}\nactivePromptIndicies.push(6);\nactivePromptIndicies.push(7);\nactivePromptIndicies.push(8);\nactivePromptIndicies.push(9);\nactivePromptIndicies.push(10);\n\nreturn activePromptIndicies;\n}\n",
             "operationIdx": 0
           },
           {
             "clause": "if",
             "condition": "data('change') == '1'",
-            "_row_num": 20,
-            "__rowNum__": 19,
+            "_row_num": 21,
+            "__rowNum__": 20,
             "_token_type": "goto_label",
-            "_branch_label": "_then20",
+            "_branch_label": "_then21",
             "operationIdx": 1
           },
           {
             "clause": "end if",
             "_token_type": "goto_label",
-            "_branch_label": "_else39",
-            "_row_num": 39,
+            "_branch_label": "_else40",
+            "_row_num": 40,
             "operationIdx": 2
           },
           {
             "clause": "begin screen",
-            "_row_num": 21,
-            "__rowNum__": 20,
+            "_row_num": 22,
+            "__rowNum__": 21,
             "_token_type": "begin_screen",
             "_end_screen_clause": {
               "clause": "end screen",
-              "_row_num": 29,
-              "__rowNum__": 28,
+              "_row_num": 30,
+              "__rowNum__": 29,
               "_token_type": "end_screen"
             },
-            "_screen_block": "function() {var activePromptIndicies = [];\nactivePromptIndicies.push(10);\nactivePromptIndicies.push(11);\nactivePromptIndicies.push(12);\nactivePromptIndicies.push(13);\nactivePromptIndicies.push(14);\nactivePromptIndicies.push(15);\nactivePromptIndicies.push(16);\n\nreturn activePromptIndicies;\n}\n",
+            "_screen_block": "function() {var activePromptIndicies = [];\nactivePromptIndicies.push(11);\nactivePromptIndicies.push(12);\nactivePromptIndicies.push(13);\nactivePromptIndicies.push(14);\nactivePromptIndicies.push(15);\nactivePromptIndicies.push(16);\nactivePromptIndicies.push(17);\n\nreturn activePromptIndicies;\n}\n",
             "operationIdx": 3
           },
           {
             "clause": "begin screen",
-            "_row_num": 30,
-            "__rowNum__": 29,
+            "_row_num": 31,
+            "__rowNum__": 30,
             "_token_type": "begin_screen",
             "_end_screen_clause": {
               "clause": "end screen",
-              "_row_num": 38,
-              "__rowNum__": 37,
+              "_row_num": 39,
+              "__rowNum__": 38,
               "_token_type": "end_screen"
             },
-            "_screen_block": "function() {var activePromptIndicies = [];\nactivePromptIndicies.push(17);\nactivePromptIndicies.push(18);\nactivePromptIndicies.push(19);\nactivePromptIndicies.push(20);\nactivePromptIndicies.push(21);\nactivePromptIndicies.push(22);\nactivePromptIndicies.push(23);\n\nreturn activePromptIndicies;\n}\n",
+            "_screen_block": "function() {var activePromptIndicies = [];\nactivePromptIndicies.push(18);\nactivePromptIndicies.push(19);\nactivePromptIndicies.push(20);\nactivePromptIndicies.push(21);\nactivePromptIndicies.push(22);\nactivePromptIndicies.push(23);\nactivePromptIndicies.push(24);\n\nreturn activePromptIndicies;\n}\n",
             "operationIdx": 4
           },
           {
             "clause": "end if",
             "_token_type": "goto_label",
-            "_branch_label": "_endif39",
-            "_row_num": 39,
+            "_branch_label": "_endif40",
+            "_row_num": 40,
             "operationIdx": 5
           },
           {
             "clause": "do section visit",
-            "_row_num": 40,
-            "__rowNum__": 39,
+            "_row_num": 41,
+            "__rowNum__": 40,
             "_token_type": "do_section",
             "_do_section_name": "visit",
             "operationIdx": 6
@@ -13777,13 +13823,13 @@
           {
             "_token_type": "exit_section",
             "clause": "exit section",
-            "_row_num": 41,
+            "_row_num": 42,
             "operationIdx": 7
           },
           {
-            "_row_num": 41,
+            "_row_num": 42,
             "_token_type": "begin_screen",
-            "_screen_block": "function() {var activePromptIndicies = [];\nactivePromptIndicies.push(25);\n\nreturn activePromptIndicies;\n}\n",
+            "_screen_block": "function() {var activePromptIndicies = [];\nactivePromptIndicies.push(26);\n\nreturn activePromptIndicies;\n}\n",
             "screen": {
               "hideInBackHistory": true
             },
@@ -13792,19 +13838,19 @@
           {
             "_token_type": "resume",
             "clause": "resume",
-            "_row_num": 41,
+            "_row_num": 42,
             "operationIdx": 9
           }
         ],
         "branch_label_map": {
           "_screen2": 0,
-          "_then20": 3,
-          "_screen21": 3,
-          "_screen30": 4,
-          "_else39": 6,
-          "_endif39": 6,
+          "_then21": 3,
+          "_screen22": 3,
+          "_screen31": 4,
+          "_else40": 6,
+          "_endif40": 6,
           "_contents": 8,
-          "_screen41": 8
+          "_screen42": 8
         }
       },
       "reg": {
@@ -20563,7 +20609,7 @@
         "type": "integer",
         "_defn": [
           {
-            "_row_num": 27,
+            "_row_num": 28,
             "section_name": "stsc"
           },
           {
@@ -21398,7 +21444,7 @@
         "type": "integer",
         "_defn": [
           {
-            "_row_num": 28,
+            "_row_num": 29,
             "section_name": "stsc"
           },
           {
@@ -21764,7 +21810,7 @@
         "type": "integer",
         "_defn": [
           {
-            "_row_num": 26,
+            "_row_num": 27,
             "section_name": "stsc"
           },
           {
@@ -21819,7 +21865,7 @@
         "type": "string",
         "_defn": [
           {
-            "_row_num": 22,
+            "_row_num": 23,
             "section_name": "stsc"
           },
           {
@@ -21879,7 +21925,7 @@
         "type": "string",
         "_defn": [
           {
-            "_row_num": 25,
+            "_row_num": 26,
             "section_name": "stsc"
           },
           {
@@ -21939,7 +21985,7 @@
         "__rowNum__": 1,
         "_defn": [
           {
-            "_row_num": 23,
+            "_row_num": 24,
             "section_name": "stsc"
           },
           {
@@ -23717,7 +23763,7 @@
         "valuesList": "sex",
         "_defn": [
           {
-            "_row_num": 24,
+            "_row_num": 25,
             "section_name": "stsc"
           },
           {
@@ -24045,7 +24091,7 @@
         "valuesList": "YesNo",
         "_defn": [
           {
-            "_row_num": 18,
+            "_row_num": 19,
             "section_name": "stsc"
           },
           {
@@ -24086,6 +24132,20 @@
         "elementName": "cont",
         "elementSet": "data",
         "elementPath": "cont"
+      },
+      "ASSISTENTE": {
+        "type": "string",
+        "_defn": [
+          {
+            "_row_num": 220,
+            "section_name": "model"
+          }
+        ],
+        "isSessionVariable": false,
+        "elementKey": "ASSISTENTE",
+        "elementName": "ASSISTENTE",
+        "elementSet": "data",
+        "elementPath": "ASSISTENTE"
       },
       "MALFORM": {
         "_defn": [

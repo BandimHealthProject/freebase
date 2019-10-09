@@ -310,9 +310,12 @@ function getDefaultsChild(person) {
     defaults['MOR'] = cluster;
     defaults['REG'] = region;
     defaults['TAB'] = tabanca;
+    defaults['VISITTYPE'] = visitType;
+    defaults['ASSISTENTE'] = assistant;
     defaults['REGIDC'] = person.REGIDC;
     defaults['NOME'] = person.NOME;
     defaults['REGID'] = person.REGID;
+    
     defaults['pres'] = person.pres;
     defaults['CARTVAC'] = person.CARTVAC;
     defaults['cont'] = person.cont;

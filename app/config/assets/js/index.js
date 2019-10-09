@@ -175,5 +175,5 @@ function getOption(name,valle) {
 // ********************************** ASSISTANT LIST BELOW **********************************
 // ********************************** ASSISTANT LIST BELOW **********************************
 var assistants = [];
-assistants.push({no: 1, name: 'Andy'});
-assistants.push({no: 2, name: 'Carly'});
+assistants.push({no: 'Andy', name: 'Andy'});
+assistants.push({no: 'Carly', name: 'Carly'});
