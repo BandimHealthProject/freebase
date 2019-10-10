@@ -47,6 +47,7 @@ function loadPersons() {
             var RELA1 = result.getData(row,"RELA1");
             var RELA1NOME = result.getData(row,"RELA1NOME");
             var gr = result.getData(row,"GR");
+            
             var VAC1TIPO = result.getData(row,"VAC1TIPO");
             var VAC1DATA = result.getData(row,"VAC1DATA");
             var VAC1INF = result.getData(row,"VAC1INF");
@@ -127,7 +128,7 @@ function loadPersons() {
 
 function loadChildren() {
     // SQL to load children
-    var sql = "SELECT REGIDC, NOME, REGID, pres, CARTVAC, cont, OUTDATE, SEX, NOMEMAE, MOR, CASA, FOGAO, BCG, POLIONAS, POLIO1, PENTA1, PCV1, ROX1, POLIO2, PENTA2, PCV2, ROX2, POLIO3, PENTA3, PCV3, VPI, SARAMPO1, FEBAMAREL FROM CRIANCA  WHERE REG = " + region + " AND TAB = " + tabanca + " AND MOR = " + cluster + " GROUP BY REGIDC HAVING MIN(ROWID) AND ESTADO = 1  ORDER BY substr(CONT, instr(CONT, 'Y:')+2, 4) || substr('00'|| trim(substr(CONT, instr(CONT, 'M:')+2, 2),','), -2, 2) || substr('00'|| trim(substr(CONT, instr(CONT, 'D:')+2, 2),','), -2, 2) DESC, NOME";
+    var sql = "SELECT REGIDC, NOME, REGID, pres, CARTVAC, CONT, OUTDATE, SEX, NOMEMAE, MOR, CASA, FOGAO, BCG, POLIONAS, POLIO1, PENTA1, PCV1, ROX1, POLIO2, PENTA2, PCV2, ROX2, POLIO3, PENTA3, PCV3, VPI, SARAMPO1, FEBAMAREL FROM CRIANCA  WHERE REG = " + region + " AND TAB = " + tabanca + " AND MOR = " + cluster + " GROUP BY REGIDC HAVING MIN(ROWID) AND ESTADO = 1  ORDER BY substr(CONT, instr(CONT, 'Y:')+2, 4) || substr('00'|| trim(substr(CONT, instr(CONT, 'M:')+2, 2),','), -2, 2) || substr('00'|| trim(substr(CONT, instr(CONT, 'D:')+2, 2),','), -2, 2) DESC, NOME";
     children = [];
     console.log("Querying database for CRIANCAs...");
     console.log(sql);
@@ -140,13 +141,14 @@ function loadChildren() {
             var REGID = result.getData(row,"REGID"); // This is now the mother's id (go figure)
             var pres = result.getData(row,"PRES");
             var CARTVAC = result.getData(row,"CARTVAC");
-            var cont = result.getData(row,"CONT");
+            var CONT = result.getData(row,"CONT");
             var OUTDATE = result.getData(row,"OUTDATE");
             var SEX = result.getData(row,"SEX");
             var NOMEMAE = result.getData(row,"NOMEMAE");
             var MOR = result.getData(row,"MOR");
             var CASA = result.getData(row,"CASA");
             var FOGAO = result.getData(row,"FOGAO");
+           
             var BCG = result.getData(row,"BCG");
             var POLIONAS = result.getData(row,"POLIONAS");
             var POLIO1 = result.getData(row,"POLIO1");
@@ -164,7 +166,7 @@ function loadChildren() {
             var SARAMPO1 = result.getData(row,"SARAMPO1");
             var FEBAMAREL = result.getData(row,"FEBAMAREL");
 
-            var p = { type: 'crianca', REGIDC, NOME, REGID, pres, CARTVAC, cont, OUTDATE, SEX, NOMEMAE, MOR, CASA, FOGAO, BCG, POLIONAS, POLIO1, PENTA1, PCV1, ROX1, POLIO2, PENTA2, PCV2, ROX2, POLIO3, PENTA3, PCV3, VPI, SARAMPO1, FEBAMAREL };
+            var p = { type: 'crianca', REGIDC, NOME, REGID, pres, CARTVAC, CONT, OUTDATE, SEX, NOMEMAE, MOR, CASA, FOGAO, BCG, POLIONAS, POLIO1, PENTA1, PCV1, ROX1, POLIO2, PENTA2, PCV2, ROX2, POLIO3, PENTA3, PCV3, VPI, SARAMPO1, FEBAMAREL };
             console.log(p);
             children.push(p);
         }
@@ -318,7 +320,7 @@ function getDefaultsChild(person) {
     
     defaults['pres'] = person.pres;
     defaults['CARTVAC'] = person.CARTVAC;
-    defaults['cont'] = person.cont;
+    defaults['lastvisitdate'] = person.CONT; // date of last visit
     defaults['OUTDATE'] = person.OUTDATE;
     defaults['SEX'] = person.SEX;
     defaults['NOMEMAE'] = person.NOMEMAE;
