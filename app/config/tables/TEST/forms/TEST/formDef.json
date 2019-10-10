@@ -110,8 +110,26 @@
       },
       {
         "clause": "if",
-        "condition": "adate.ageInYears(data('ADA'))>=2",
+        "condition": "data('ADA') == null",
         "_row_num": 7
+      },
+      {
+        "type": "note",
+        "display": {
+          "prompt": {
+            "text": "{{calculates.test}}"
+          }
+        },
+        "_row_num": 8
+      },
+      {
+        "clause": "end if",
+        "_row_num": 9
+      },
+      {
+        "clause": "if",
+        "condition": "adate.ageInYears(data('ADA'))>=2",
+        "_row_num": 10
       },
       {
         "type": "note",
@@ -124,11 +142,11 @@
             }
           }
         },
-        "_row_num": 8
+        "_row_num": 11
       },
       {
         "clause": "else",
-        "_row_num": 9
+        "_row_num": 12
       },
       {
         "type": "note",
@@ -141,16 +159,16 @@
             }
           }
         },
-        "_row_num": 10
+        "_row_num": 13
       },
       {
         "clause": "end if",
-        "_row_num": 11
+        "_row_num": 14
       },
       {
         "clause": "if",
         "condition": "!adate.yearUnknown(data('ADA'))",
-        "_row_num": 12
+        "_row_num": 15
       },
       {
         "type": "note",
@@ -160,7 +178,7 @@
             "text": "Alder I hele år: <b>{{calculates.ageInYears}}</b><br/>I måneder: {{calculates.ageInMonths}}<br/>I dage: {{calculates.ageInDays}}<br/>( baseret på {{data.ADA}} )<br/>"
           }
         },
-        "_row_num": 13
+        "_row_num": 16
       },
       {
         "type": "note",
@@ -170,11 +188,11 @@
             "text": "Differencen var: {{calculates.diffInYears}} år."
           }
         },
-        "_row_num": 14
+        "_row_num": 17
       },
       {
         "clause": "else",
-        "_row_num": 15
+        "_row_num": 18
       },
       {
         "type": "note",
@@ -187,15 +205,15 @@
             }
           }
         },
-        "_row_num": 16
+        "_row_num": 19
       },
       {
         "clause": "end if",
-        "_row_num": 17
+        "_row_num": 20
       },
       {
         "clause": "end screen",
-        "_row_num": 18
+        "_row_num": 21
       }
     ],
     "calculates": [
@@ -218,6 +236,11 @@
         "calculation_name": "diffInYears",
         "calculation": "adate.diffInYears(data('ADA'), data('ADA2'))",
         "_row_num": 5
+      },
+      {
+        "calculation_name": "test",
+        "calculation": "freebase.echo('Fill in the date')",
+        "_row_num": 6
       }
     ],
     "queries": [
@@ -4037,6 +4060,11 @@
         "calculation_name": "diffInYears",
         "calculation": "adate.diffInYears(data('ADA'), data('ADA2'))",
         "_row_num": 5
+      },
+      "test": {
+        "calculation_name": "test",
+        "calculation": "freebase.echo('Fill in the date')",
+        "_row_num": 6
       }
     },
     "model": {
@@ -4133,6 +4161,20 @@
           },
           {
             "type": "note",
+            "display": {
+              "prompt": {
+                "text": "{{calculates.test}}"
+              }
+            },
+            "_row_num": 8,
+            "__rowNum__": 7,
+            "_token_type": "prompt",
+            "_type": "note",
+            "_branch_label_enclosing_screen": "survey/_screen6",
+            "promptIdx": 2
+          },
+          {
+            "type": "note",
             "name": "lblKnown",
             "display": {
               "prompt": {
@@ -4142,12 +4184,12 @@
                 }
               }
             },
-            "_row_num": 8,
-            "__rowNum__": 7,
+            "_row_num": 11,
+            "__rowNum__": 10,
             "_token_type": "prompt",
             "_type": "note",
             "_branch_label_enclosing_screen": "survey/_screen6",
-            "promptIdx": 2
+            "promptIdx": 3
           },
           {
             "type": "note",
@@ -4160,21 +4202,6 @@
                 }
               }
             },
-            "_row_num": 10,
-            "__rowNum__": 9,
-            "_token_type": "prompt",
-            "_type": "note",
-            "_branch_label_enclosing_screen": "survey/_screen6",
-            "promptIdx": 3
-          },
-          {
-            "type": "note",
-            "name": "lblbla",
-            "display": {
-              "prompt": {
-                "text": "Alder I hele år: <b>{{calculates.ageInYears}}</b><br/>I måneder: {{calculates.ageInMonths}}<br/>I dage: {{calculates.ageInDays}}<br/>( baseret på {{data.ADA}} )<br/>"
-              }
-            },
             "_row_num": 13,
             "__rowNum__": 12,
             "_token_type": "prompt",
@@ -4184,18 +4211,33 @@
           },
           {
             "type": "note",
+            "name": "lblbla",
+            "display": {
+              "prompt": {
+                "text": "Alder I hele år: <b>{{calculates.ageInYears}}</b><br/>I måneder: {{calculates.ageInMonths}}<br/>I dage: {{calculates.ageInDays}}<br/>( baseret på {{data.ADA}} )<br/>"
+              }
+            },
+            "_row_num": 16,
+            "__rowNum__": 15,
+            "_token_type": "prompt",
+            "_type": "note",
+            "_branch_label_enclosing_screen": "survey/_screen6",
+            "promptIdx": 5
+          },
+          {
+            "type": "note",
             "name": "lblblabla",
             "display": {
               "prompt": {
                 "text": "Differencen var: {{calculates.diffInYears}} år."
               }
             },
-            "_row_num": 14,
-            "__rowNum__": 13,
+            "_row_num": 17,
+            "__rowNum__": 16,
             "_token_type": "prompt",
             "_type": "note",
             "_branch_label_enclosing_screen": "survey/_screen6",
-            "promptIdx": 5
+            "promptIdx": 6
           },
           {
             "type": "note",
@@ -4208,20 +4250,20 @@
                 }
               }
             },
-            "_row_num": 16,
-            "__rowNum__": 15,
+            "_row_num": 19,
+            "__rowNum__": 18,
             "_token_type": "prompt",
             "_type": "note",
             "_branch_label_enclosing_screen": "survey/_screen6",
-            "promptIdx": 6
+            "promptIdx": 7
           },
           {
             "_token_type": "prompt",
             "type": "contents",
             "_type": "contents",
-            "_row_num": 19,
-            "_branch_label_enclosing_screen": "survey/_screen19",
-            "promptIdx": 7
+            "_row_num": 22,
+            "_branch_label_enclosing_screen": "survey/_screen22",
+            "promptIdx": 8
           }
         ],
         "validation_tag_map": {
@@ -4249,23 +4291,23 @@
             "_token_type": "begin_screen",
             "_end_screen_clause": {
               "clause": "end screen",
-              "_row_num": 18,
-              "__rowNum__": 17,
+              "_row_num": 21,
+              "__rowNum__": 20,
               "_token_type": "end_screen"
             },
-            "_screen_block": "function() {var activePromptIndicies = [];\nif (adate.ageInYears(data('ADA'))>=2) {\nactivePromptIndicies.push(2);\n}\nelse {\nactivePromptIndicies.push(3);\n}\nif (!adate.yearUnknown(data('ADA'))) {\nactivePromptIndicies.push(4);\nactivePromptIndicies.push(5);\n}\nelse {\nactivePromptIndicies.push(6);\n}\n\nreturn activePromptIndicies;\n}\n",
+            "_screen_block": "function() {var activePromptIndicies = [];\nif (data('ADA') == null) {\nactivePromptIndicies.push(2);\n}\nif (adate.ageInYears(data('ADA'))>=2) {\nactivePromptIndicies.push(3);\n}\nelse {\nactivePromptIndicies.push(4);\n}\nif (!adate.yearUnknown(data('ADA'))) {\nactivePromptIndicies.push(5);\nactivePromptIndicies.push(6);\n}\nelse {\nactivePromptIndicies.push(7);\n}\n\nreturn activePromptIndicies;\n}\n",
             "operationIdx": 1
           },
           {
             "_token_type": "exit_section",
             "clause": "exit section",
-            "_row_num": 19,
+            "_row_num": 22,
             "operationIdx": 2
           },
           {
-            "_row_num": 19,
+            "_row_num": 22,
             "_token_type": "begin_screen",
-            "_screen_block": "function() {var activePromptIndicies = [];\nactivePromptIndicies.push(7);\n\nreturn activePromptIndicies;\n}\n",
+            "_screen_block": "function() {var activePromptIndicies = [];\nactivePromptIndicies.push(8);\n\nreturn activePromptIndicies;\n}\n",
             "screen": {
               "hideInBackHistory": true
             },
@@ -4274,7 +4316,7 @@
           {
             "_token_type": "resume",
             "clause": "resume",
-            "_row_num": 19,
+            "_row_num": 22,
             "operationIdx": 4
           }
         ],
@@ -4282,7 +4324,7 @@
           "_screen2": 0,
           "_screen6": 1,
           "_contents": 3,
-          "_screen19": 3
+          "_screen22": 3
         }
       },
       "initial": {

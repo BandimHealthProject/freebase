@@ -530,7 +530,7 @@
             }
           }
         },
-        "constraint": "adate.ageInYears(data('OUTDATE'))<5 || data('lastvisit') != null",
+        "constraint": "adate.ageInYears(data('OUTDATE'))<5 || data('lastvisitdate') != null",
         "_row_num": 10
       },
       {
@@ -13057,7 +13057,7 @@
                 }
               }
             },
-            "constraint": "adate.ageInYears(data('OUTDATE'))<5 || data('lastvisit') != null",
+            "constraint": "adate.ageInYears(data('OUTDATE'))<5 || data('lastvisitdate') != null",
             "_row_num": 10,
             "__rowNum__": 9,
             "_token_type": "prompt",
