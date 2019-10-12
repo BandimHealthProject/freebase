@@ -43,7 +43,7 @@ function loadPersons() {
         alert('Failed to get morancas from database: ' + errorMsg);
     }
 
-    var sql = "SELECT MOR, MORNOME, GRUPO FROM MORLIST WHERE REG = '" + region + "' AND TAB = " + tabanca + " ORDER BY GRUPO, MOR";
+    var sql = "SELECT DISTINCT MOR, MORNOME, GRUPO FROM MORLIST WHERE REG = '" + region + "' AND TAB = " + tabanca + " ORDER BY GRUPO, MOR";
     odkData.arbitraryQuery('MORLIST', sql, null, null, null, successFn, failureFn);
     
 }
