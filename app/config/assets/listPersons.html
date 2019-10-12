@@ -2,6 +2,7 @@
 <html>
 <!--Menu-->
 <head>
+    <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link href="libs/bootstrap-3.3.7-dist/css/bootstrap.css" type="text/css" rel="stylesheet" />
     <link href="css/homescreen.css" type="text/css" rel="stylesheet" />
@@ -22,12 +23,25 @@
         ul#persons > li > button {
             margin:10px 0;
             height:40px;
+            width:100%;
+            background-size: 30px;        
         }
         button.mif {
-            margin:10px 0;
-            height:40px;
-            background-color:darkcyan;
-            color:white;
+            background-color: darkcyan;
+            color: white;
+            background-image: url(./img/woman.png);
+            text-align: left;
+            background-position: left;
+            background-repeat: no-repeat;
+            text-indent: 25px;
+        }
+        button.crianca {
+            text-align:left;
+            text-indent: 40px;
+            background-image: url(./img/baby.png);
+            background-repeat: no-repeat;
+            
+            background-position: 10px;
         }
         button.visited {
             opacity:.5;
@@ -39,8 +53,8 @@
 
 <body>
     <div id="main" class="container" style="height: 100vh;">
-        <h1>List persons</h1>
-        <ul id="persons">            
+        <h1>Pessoas</h1>
+        <ul id="persons" style="padding:0;">            
         </ul>
     </div>
     <script>
