@@ -22,6 +22,13 @@
         ul#clusters > li > button {
             margin:10px 0;
             height:40px;
+            width:100%;
+            text-align: left;
+            background-image: url(./img/cluster.png);
+            background-repeat: no-repeat;
+            background-size: 30px;
+            background-position: left;
+            text-indent: 30px;
         }
         button.visited {
             opacity:.5;
@@ -31,8 +38,8 @@
             background-color:silver;
         }
         button.group2, button.group5, button.group8, button.group11 {
-            background-color:darkblue;
-            color:white;
+            background-color:lightblue;
+            color:black;
         }
         button.group3, button.group6, button.group9, button.group12 {
             background-color:pink;
@@ -45,8 +52,7 @@
 <body>
     <div id="main" class="container" style="height: 100vh;">
         <h1>Morancas</h1>
-        <ul id="clusters">
-            
+        <ul id="clusters" style="padding:0;">
         </ul>
     </div>
     <script>
