@@ -4,13 +4,14 @@
 'use strict';
 /* global odkTables, util, odkCommon, odkData */
 
-var visitType, region, tabanca;
+var visitType, region, tabanca, date;
 var clusters = [];
 
 function display() {
     visitType = util.getQueryParameter('visitType');
     region = util.getQueryParameter('region');
     tabanca = util.getQueryParameter('tabanca');
+    date = util.getQueryParameter('date');
     console.log(visitType + " visit: cluster list loading");
     
     // Set the background to be a picture.
@@ -64,8 +65,9 @@ function go(clusterId) {
     var region = util.getQueryParameter('region');
     var tabanca = util.getQueryParameter('tabanca');
     var assistant = util.getQueryParameter('assistant');
+    var date = util.getQueryParameter('date');
 
-    var queryParams = util.setQuerystringParams(region, tabanca, assistant, visitType, clusterId);
+    var queryParams = util.setQuerystringParams(region, tabanca, assistant, visitType, date, clusterId);
         if (util.DEBUG) top.location = 'listPersons.html' + queryParams;
         odkTables.launchHTML(null,  'config/assets/listPersons.html' + queryParams);
 }
