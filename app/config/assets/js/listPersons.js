@@ -4,7 +4,7 @@
 'use strict';
 /* global odkTables, util, odkCommon, odkData */
 
-var persons, children, visitType, cluster, assistant, region, tabanca;
+var persons, children, visitType, cluster, assistant, region, tabanca, date;
 // note that persons are the MIFs
 
 function display() {
@@ -14,6 +14,7 @@ function display() {
     assistant = util.getQueryParameter('assistant');
     region = util.getQueryParameter('region');
     tabanca = util.getQueryParameter('tabanca');
+    date = util.getQueryParameter('date');
     
     // Set the background to be a picture.
     var body = $('body').first();
@@ -104,7 +105,7 @@ function loadPersons() {
             var VAC18INF = result.getData(row,"VAC18INF");
             var VAC19TIPO = result.getData(row,"VAC19TIPO");
             var VAC19DATA = result.getData(row,"VAC19DATA");
-            var VAC19INF = result.getData(row,"VACINF");
+            var VAC19INF = result.getData(row,"VAC19INF");
             var VAC20TIPO = result.getData(row,"VAC20TIPO");
             var VAC20DATA = result.getData(row,"VAC20DATA");
             var VAC20INF = result.getData(row,"VAC20INF");
@@ -183,6 +184,36 @@ function loadChildren() {
     odkData.arbitraryQuery('CRIANCA', sql, null, null, null, successFn, failureFn);
 }
 
+function loadPregnancies() {
+    // SQL to load pregnancies
+    var sql = "SELECT LMP_M, OUTSTATUS  FROM GRAVIDA_VISIT  WHERE REGID = " + REGID + " GROUP BY REGID HAVING MIN(ROWID) AND  ORDER BY substr(CONT, instr(CONT, 'Y:')+2, 4) || substr('00'|| trim(substr(CONT, instr(CONT, 'M:')+2, 2),','), -2, 2) || substr('00'|| trim(substr(CONT, instr(CONT, 'D:')+2, 2),','), -2, 2) DESC";
+    pregnancies = [];
+    console.log("Querying database for GRAVIDA_VISIT...");
+    console.log(sql);
+    var successFn = function( result ) {
+        console.log("Found " + result.getCount() + " pregnancies");
+        for (var row = 0; row < result.getCount(); row++) {
+
+            //var REGID = result.getData(row,"REGID"); // This is now the mother's id (go figure)
+            var LMP_M = result.getData(row,"LMP_M");
+            var OUTSTATUS = result.getData(row,"OUTSTATUS");
+
+            var p = { type: 'gravida', LMP_M, OUTSTATUS };
+            console.log(p);
+            pregnancies.push(p);
+        }
+        populateView();
+        return;
+    }
+    var failureFn = function( errorMsg ) {
+        console.error('Failed to get pregnancies from database: ' + errorMsg);
+        console.error('Trying to execute the following SQL:');
+        console.error(sql);
+        alert("Program error Unable to look up pregnancies.");
+    }
+
+    odkData.arbitraryQuery('GRAVIDA_VISIT', sql, null, null, null, successFn, failureFn);
+}
 
 function populateView() {
     
@@ -221,6 +252,40 @@ function populateView() {
             openForm(that.type, that);
         })
     });
+// Set values for new child/mif
+    var defaults = {};
+    defaults['MOR'] = cluster;
+    defaults['REG'] = region;
+    defaults['TAB'] = tabanca;
+    defaults['VISITTYPE'] = visitType;
+    defaults['ASSISTENTE'] = assistant;
+    defaults['CONT'] = date; // today's date
+
+// Adds button for new MIF
+    ul.append($("<li />").append($("<button />").attr('id','new' + '_' + 'mif').attr('class', ' btn ' + 'mif').text('Nova Mulher')));
+    var btn = ul.find('#' + 'new' + '_' + 'mif');
+        btn.on("click", function() {
+            odkTables.addRowWithSurvey(
+                null,
+                'MIF',
+                'MIF',
+                null,
+                defaults);
+        })
+
+// Adds buttin for new CRIANCA
+    ul.append($("<li />").append($("<button />").attr('id','new' + '_' + 'crianca').attr('class', ' btn ' + 'crianca').text('Novo Crianca')));
+    var btn = ul.find('#' + 'new' + '_' + 'crianca');
+        btn.on("click", function() {
+            odkTables.addRowWithSurvey(
+                null,
+                'CRIANCA',
+                'CRIANCA',
+                null,
+                defaults);
+        })
+    console.log("Opening form with:", defaults);
+ 
 }
 
 
@@ -231,13 +296,14 @@ function getDefaultsMIF(person) {
     defaults['TAB'] = tabanca;
     defaults['VISITTYPE'] = visitType;
     defaults['ASSISTENTE'] = assistant;
+    defaults['CONT'] = date; // today's date
     defaults['REGID'] = person.REGID;
     defaults['NOME'] = person.NOME;
     defaults['gr'] = person.gr;
     
     defaults['estadovis'] = person.estadovis;
     defaults['CART'] = person.CART;
-    defaults['cont'] = person.cont;
+    defaults['cont'] = person.cont; // date of last visit TODO: rename in form: lastvisitdate
     defaults['MIFDNASC'] = person.MIFDNASC;
     defaults['MOR'] = person.MOR;
     defaults['CASA'] = person.CASA;
@@ -249,7 +315,7 @@ function getDefaultsMIF(person) {
     defaults['VAC1INF'] = person.VAC1INF;
     defaults['VAC2TIPO'] = person.VAC2TIPO;
     defaults['VAC2DATA'] = person.VAC2DATA;
-    defaults['VAC2INF'] = person.VAC2NF;
+    defaults['VAC2INF'] = person.VAC2INF;
     defaults['VAC3TIPO'] = person.VAC3TIPO;
     defaults['VAC3DATA'] = person.VAC3DATA;
     defaults['VAC3INF'] = person.VAC3INF;
@@ -314,6 +380,7 @@ function getDefaultsChild(person) {
     defaults['TAB'] = tabanca;
     defaults['VISITTYPE'] = visitType;
     defaults['ASSISTENTE'] = assistant;
+    defaults['CONT'] = date; // today's date
     defaults['REGIDC'] = person.REGIDC;
     defaults['NOME'] = person.NOME;
     defaults['REGID'] = person.REGID;
@@ -347,6 +414,13 @@ function getDefaultsChild(person) {
     return defaults;
 }
 
+function getDefaultsPregnancy(person) {
+    var defaults = {};
+    defaults['outdate'] = person.OUTDATE;
+    defaults['outstatus'] = person.OUTSTATUS;
+    return defaults;
+}
+
 function openForm(type, person) {
     console.log("Preparing form for ", person);
     var personId = person.REGID;
@@ -354,11 +428,15 @@ function openForm(type, person) {
     // Look up person
     // Open form
     var defaults = {};
+    var pregnancy = {};
+    var mif = {};
     var tableId = "mif" == type ? "MIF" : "CRIANCA";
     var formId = "mif" == type ? "MIF" : "CRIANCA";
     if ("mif" == type) {
         // It's a MIF
-        defaults = getDefaultsMIF(person); 
+        mif = getDefaultsMIF(person);
+        pregnancy = getDefaultsPregnancy(person);
+        defaults = Object.assign({}, mif, pregnancy);
     } else {
         // It's a child
         defaults = getDefaultsChild(person);
