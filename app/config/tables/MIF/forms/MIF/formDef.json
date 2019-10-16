@@ -104,7 +104,7 @@
           "prompt": {
             "text": {
               "english": "Date of birth: {{data.MIFDNASC}}",
-              "default": "Data nascimento: {{data.MIFDNASC}}"
+              "default": "Data de nascimento: {{data.MIFDNASC}}"
             }
           }
         },
@@ -217,7 +217,7 @@
           "prompt": {
             "text": {
               "english": "Date of birth",
-              "default": "Data nascimento"
+              "default": "Data de nascimento"
             }
           }
         },
@@ -315,7 +315,7 @@
           "prompt": {
             "text": {
               "english": "Date of birth: {{data.MIFDNASC}}",
-              "default": "Data nascimento: {{data.MIFDNASC}}"
+              "default": "Data de nascimento: {{data.MIFDNASC}}"
             }
           }
         },
@@ -7808,7 +7808,7 @@
           "prompt": {
             "text": {
               "english": "Has a consent form been produced?",
-              "default": "Tem um formulário de consentimento foi produzido?"
+              "default": "Tem um formulário de consentimento que foi produzido?"
             }
           }
         },
@@ -7928,7 +7928,6 @@
       {
         "clause": "if",
         "condition": "data('GR') == '1'",
-        "comment": "data('LASTVISIT') != null",
         "_row_num": 53
       },
       {
@@ -7969,7 +7968,7 @@
           "prompt": {
             "text": {
               "english": "Birth/miscarrige since last visit?",
-              "default": "Teve parto/aborto desde ultimo visita?"
+              "default": "Teve parto/aborto desde a última visita?"
             }
           }
         },
@@ -8283,7 +8282,7 @@
           "prompt": {
             "text": {
               "english": "Card documenting vaccinations",
-              "default": "Cartão documentando vacinas"
+              "default": "Cartão que documenta vacinações"
             }
           }
         },
@@ -8407,7 +8406,7 @@
           "prompt": {
             "text": {
               "english": "Type of vaccine",
-              "default": "Typo de vacina"
+              "default": "Tipo de vacina"
             }
           }
         },
@@ -8472,7 +8471,7 @@
           "prompt": {
             "text": {
               "english": "Vaccine type: {{data.VAC1TIPO}}\nInformation: {{data.VAC1INF}}\nDate: {{data.VAC1DATA}}",
-              "default": "Typo de vacina: {{data.VAC1TIPO}}\nInformação: {{data.VAC1INF}}\nData da vacina: {{data.VAC1DATA}}"
+              "default": "Tipo de vacina: : {{data.VAC1TIPO}}\nInformação: {{data.VAC1INF}}\nData da vacina: {{data.VAC1DATA}}"
             }
           }
         },
@@ -8491,7 +8490,7 @@
           "prompt": {
             "text": {
               "english": "Type of vaccine",
-              "default": "Typo de vacina"
+              "default": "Tipo de vacina"
             }
           }
         },
@@ -8593,7 +8592,7 @@
           "prompt": {
             "text": {
               "english": "Type of vaccine",
-              "default": "Typo de vacina"
+              "default": "Tipo de vacina"
             }
           }
         },
@@ -8665,7 +8664,7 @@
           "prompt": {
             "text": {
               "english": "Vaccine type: {{data.VAC2TIPO}}\nInformation: {{data.VAC2INF}}\nDate: {{data.VAC2DATA}}",
-              "default": "Typo de vacina: {{data.VAC2TIPO}}\nInformação: {{data.VAC2INF}}\nData da vacina: {{data.VAC2DATA}}"
+              "default": "Tipo de vacina: {{data.VAC2TIPO}}\nInformação: {{data.VAC2INF}}\nData da vacina: {{data.VAC2DATA}}"
             }
           }
         },
@@ -8684,7 +8683,7 @@
           "prompt": {
             "text": {
               "english": "Type of vaccine",
-              "default": "Typo de vacina"
+              "default": "Tipo de vacina"
             }
           }
         },
@@ -8786,7 +8785,7 @@
           "prompt": {
             "text": {
               "english": "Type of vaccine",
-              "default": "Typo de vacina"
+              "default": "Tipo de vacina"
             }
           }
         },
@@ -8851,7 +8850,7 @@
           "prompt": {
             "text": {
               "english": "Vaccine type: {{data.VAC3TIPO}}\nInformation: {{data.VAC3INF}}\nDate: {{data.VAC3DATA}}",
-              "default": "Typo de vacina: {{data.VAC3TIPO}}\nInformação: {{data.VAC3INF}}\nData da vacina: {{data.VAC3DATA}}"
+              "default": "Tipo de vacina: {{data.VAC3TIPO}}\nInformação: {{data.VAC3INF}}\nData da vacina: {{data.VAC3DATA}}"
             }
           }
         },
@@ -8870,7 +8869,7 @@
           "prompt": {
             "text": {
               "english": "Type of vaccine",
-              "default": "Typo de vacina"
+              "default": "Tipo de vacina"
             }
           }
         },
@@ -8972,7 +8971,7 @@
           "prompt": {
             "text": {
               "english": "Type of vaccine",
-              "default": "Typo de vacina"
+              "default": "Tipo de vacina"
             }
           }
         },
@@ -9044,7 +9043,7 @@
           "prompt": {
             "text": {
               "english": "Vaccine type: {{data.VAC4TIPO}}\nInformation: {{data.VAC4INF}}\nDate: {{data.VAC4DATA}}",
-              "default": "Typo de vacina: {{data.VAC4TIPO}}\nInformação: {{data.VAC4INF}}\nData da vacina: {{data.VAC4DATA}}"
+              "default": "Tipo de vacina: {{data.VAC4TIPO}}\nInformação: {{data.VAC4INF}}\nData da vacina: {{data.VAC4DATA}}"
             }
           }
         },
@@ -9063,7 +9062,7 @@
           "prompt": {
             "text": {
               "english": "Type of vaccine",
-              "default": "Typo de vacina"
+              "default": "Tipo de vacina"
             }
           }
         },
@@ -9165,7 +9164,7 @@
           "prompt": {
             "text": {
               "english": "Type of vaccine",
-              "default": "Typo de vacina"
+              "default": "Tipo de vacina"
             }
           }
         },
@@ -9230,7 +9229,7 @@
           "prompt": {
             "text": {
               "english": "Vaccine type: {{data.VAC5TIPO}}\nInformation: {{data.VAC5INF}}\nDate: {{data.VAC5DATA}}",
-              "default": "Typo de vacina: {{data.VAC5TIPO}}\nInformação: {{data.VAC5INF}}\nData da vacina: {{data.VAC5DATA}}"
+              "default": "Tipo de vacina: {{data.VAC5TIPO}}\nInformação: {{data.VAC5INF}}\nData da vacina: {{data.VAC5DATA}}"
             }
           }
         },
@@ -9249,7 +9248,7 @@
           "prompt": {
             "text": {
               "english": "Type of vaccine",
-              "default": "Typo de vacina"
+              "default": "Tipo de vacina"
             }
           }
         },
@@ -9351,7 +9350,7 @@
           "prompt": {
             "text": {
               "english": "Type of vaccine",
-              "default": "Typo de vacina"
+              "default": "Tipo de vacina"
             }
           }
         },
@@ -9423,7 +9422,7 @@
           "prompt": {
             "text": {
               "english": "Vaccine type: {{data.VAC6TIPO}}\nInformation: {{data.VAC6INF}}\nDate: {{data.VAC6DATA}}",
-              "default": "Typo de vacina: {{data.VAC6TIPO}}\nInformação: {{data.VAC6INF}}\nData da vacina: {{data.VAC6DATA}}"
+              "default": "Tipo de vacina: {{data.VAC6TIPO}}\nInformação: {{data.VAC6INF}}\nData da vacina: {{data.VAC6DATA}}"
             }
           }
         },
@@ -9442,7 +9441,7 @@
           "prompt": {
             "text": {
               "english": "Type of vaccine",
-              "default": "Typo de vacina"
+              "default": "Tipo de vacina"
             }
           }
         },
@@ -9544,7 +9543,7 @@
           "prompt": {
             "text": {
               "english": "Type of vaccine",
-              "default": "Typo de vacina"
+              "default": "Tipo de vacina"
             }
           }
         },
@@ -9609,7 +9608,7 @@
           "prompt": {
             "text": {
               "english": "Vaccine type: {{data.VAC7TIPO}}\nInformation: {{data.VAC7INF}}\nDate: {{data.VAC7DATA}}",
-              "default": "Typo de vacina: {{data.VAC7TIPO}}\nInformação: {{data.VAC7INF}}\nData da vacina: {{data.VAC7DATA}}"
+              "default": "Tipo de vacina: {{data.VAC7TIPO}}\nInformação: {{data.VAC7INF}}\nData da vacina: {{data.VAC7DATA}}"
             }
           }
         },
@@ -9628,7 +9627,7 @@
           "prompt": {
             "text": {
               "english": "Type of vaccine",
-              "default": "Typo de vacina"
+              "default": "Tipo de vacina"
             }
           }
         },
@@ -9730,7 +9729,7 @@
           "prompt": {
             "text": {
               "english": "Type of vaccine",
-              "default": "Typo de vacina"
+              "default": "Tipo de vacina"
             }
           }
         },
@@ -9802,7 +9801,7 @@
           "prompt": {
             "text": {
               "english": "Vaccine type: {{data.VAC8TIPO}}\nInformation: {{data.VAC8INF}}\nDate: {{data.VAC8DATA}}",
-              "default": "Typo de vacina: {{data.VAC8TIPO}}\nInformação: {{data.VAC8INF}}\nData da vacina: {{data.VAC8DATA}}"
+              "default": "Tipo de vacina: {{data.VAC8TIPO}}\nInformação: {{data.VAC8INF}}\nData da vacina: {{data.VAC8DATA}}"
             }
           }
         },
@@ -9821,7 +9820,7 @@
           "prompt": {
             "text": {
               "english": "Type of vaccine",
-              "default": "Typo de vacina"
+              "default": "Tipo de vacina"
             }
           }
         },
@@ -9923,7 +9922,7 @@
           "prompt": {
             "text": {
               "english": "Type of vaccine",
-              "default": "Typo de vacina"
+              "default": "Tipo de vacina"
             }
           }
         },
@@ -9988,7 +9987,7 @@
           "prompt": {
             "text": {
               "english": "Vaccine type: {{data.VAC9TIPO}}\nInformation: {{data.VAC9INF}}\nDate: {{data.VAC9DATA}}",
-              "default": "Typo de vacina: {{data.VAC9TIPO}}\nInformação: {{data.VAC9INF}}\nData da vacina: {{data.VAC9DATA}}"
+              "default": "Tipo de vacina: {{data.VAC9TIPO}}\nInformação: {{data.VAC9INF}}\nData da vacina: {{data.VAC9DATA}}"
             }
           }
         },
@@ -10007,7 +10006,7 @@
           "prompt": {
             "text": {
               "english": "Type of vaccine",
-              "default": "Typo de vacina"
+              "default": "Tipo de vacina"
             }
           }
         },
@@ -10109,7 +10108,7 @@
           "prompt": {
             "text": {
               "english": "Type of vaccine",
-              "default": "Typo de vacina"
+              "default": "Tipo de vacina"
             }
           }
         },
@@ -10181,7 +10180,7 @@
           "prompt": {
             "text": {
               "english": "Vaccine type: {{data.VAC10TIPO}}\nInformation: {{data.VAC10INF}}\nDate: {{data.VAC10DATA}}",
-              "default": "Typo de vacina: {{data.VAC10TIPO}}\nInformação: {{data.VAC10INF}}\nData da vacina: {{data.VAC10DATA}}"
+              "default": "Tipo de vacina: {{data.VAC10TIPO}}\nInformação: {{data.VAC10INF}}\nData da vacina: {{data.VAC10DATA}}"
             }
           }
         },
@@ -10200,7 +10199,7 @@
           "prompt": {
             "text": {
               "english": "Type of vaccine",
-              "default": "Typo de vacina"
+              "default": "Tipo de vacina"
             }
           }
         },
@@ -10302,7 +10301,7 @@
           "prompt": {
             "text": {
               "english": "Type of vaccine",
-              "default": "Typo de vacina"
+              "default": "Tipo de vacina"
             }
           }
         },
@@ -10367,7 +10366,7 @@
           "prompt": {
             "text": {
               "english": "Vaccine type: {{data.VAC11TIPO}}\nInformation: {{data.VAC11INF}}\nDate: {{data.VAC11DATA}}",
-              "default": "Typo de vacina: {{data.VAC11TIPO}}\nInformação: {{data.VAC11INF}}\nData da vacina: {{data.VAC11DATA}}"
+              "default": "Tipo de vacina: {{data.VAC11TIPO}}\nInformação: {{data.VAC11INF}}\nData da vacina: {{data.VAC11DATA}}"
             }
           }
         },
@@ -10386,7 +10385,7 @@
           "prompt": {
             "text": {
               "english": "Type of vaccine",
-              "default": "Typo de vacina"
+              "default": "Tipo de vacina"
             }
           }
         },
@@ -10488,7 +10487,7 @@
           "prompt": {
             "text": {
               "english": "Type of vaccine",
-              "default": "Typo de vacina"
+              "default": "Tipo de vacina"
             }
           }
         },
@@ -10560,7 +10559,7 @@
           "prompt": {
             "text": {
               "english": "Vaccine type: {{data.VAC12TIPO}}\nInformation: {{data.VAC12INF}}\nDate: {{data.VAC12DATA}}",
-              "default": "Typo de vacina: {{data.VAC12TIPO}}\nInformação: {{data.VAC12INF}}\nData da vacina: {{data.VAC12DATA}}"
+              "default": "Tipo de vacina: {{data.VAC12TIPO}}\nInformação: {{data.VAC12INF}}\nData da vacina: {{data.VAC12DATA}}"
             }
           }
         },
@@ -10579,7 +10578,7 @@
           "prompt": {
             "text": {
               "english": "Type of vaccine",
-              "default": "Typo de vacina"
+              "default": "Tipo de vacina"
             }
           }
         },
@@ -10681,7 +10680,7 @@
           "prompt": {
             "text": {
               "english": "Type of vaccine",
-              "default": "Typo de vacina"
+              "default": "Tipo de vacina"
             }
           }
         },
@@ -10746,7 +10745,7 @@
           "prompt": {
             "text": {
               "english": "Vaccine type: {{data.VAC13TIPO}}\nInformation: {{data.VAC13INF}}\nDate: {{data.VAC13DATA}}",
-              "default": "Typo de vacina: {{data.VAC13TIPO}}\nInformação: {{data.VAC13INF}}\nData da vacina: {{data.VAC13DATA}}"
+              "default": "Tipo de vacina: {{data.VAC13TIPO}}\nInformação: {{data.VAC13INF}}\nData da vacina: {{data.VAC13DATA}}"
             }
           }
         },
@@ -10765,7 +10764,7 @@
           "prompt": {
             "text": {
               "english": "Type of vaccine",
-              "default": "Typo de vacina"
+              "default": "Tipo de vacina"
             }
           }
         },
@@ -10867,7 +10866,7 @@
           "prompt": {
             "text": {
               "english": "Type of vaccine",
-              "default": "Typo de vacina"
+              "default": "Tipo de vacina"
             }
           }
         },
@@ -10939,7 +10938,7 @@
           "prompt": {
             "text": {
               "english": "Vaccine type: {{data.VAC14TIPO}}\nInformation: {{data.VAC14INF}}\nDate: {{data.VAC14DATA}}",
-              "default": "Typo de vacina: {{data.VAC14TIPO}}\nInformação: {{data.VAC14INF}}\nData da vacina: {{data.VAC14DATA}}"
+              "default": "Tipo de vacina: {{data.VAC14TIPO}}\nInformação: {{data.VAC14INF}}\nData da vacina: {{data.VAC14DATA}}"
             }
           }
         },
@@ -10958,7 +10957,7 @@
           "prompt": {
             "text": {
               "english": "Type of vaccine",
-              "default": "Typo de vacina"
+              "default": "Tipo de vacina"
             }
           }
         },
@@ -11060,7 +11059,7 @@
           "prompt": {
             "text": {
               "english": "Type of vaccine",
-              "default": "Typo de vacina"
+              "default": "Tipo de vacina"
             }
           }
         },
@@ -11125,7 +11124,7 @@
           "prompt": {
             "text": {
               "english": "Vaccine type: {{data.VAC15TIPO}}\nInformation: {{data.VAC15INF}}\nDate: {{data.VAC15DATA}}",
-              "default": "Typo de vacina: {{data.VAC15TIPO}}\nInformação: {{data.VAC15INF}}\nData da vacina: {{data.VAC15DATA}}"
+              "default": "Tipo de vacina: {{data.VAC15TIPO}}\nInformação: {{data.VAC15INF}}\nData da vacina: {{data.VAC15DATA}}"
             }
           }
         },
@@ -11144,7 +11143,7 @@
           "prompt": {
             "text": {
               "english": "Type of vaccine",
-              "default": "Typo de vacina"
+              "default": "Tipo de vacina"
             }
           }
         },
@@ -11246,7 +11245,7 @@
           "prompt": {
             "text": {
               "english": "Type of vaccine",
-              "default": "Typo de vacina"
+              "default": "Tipo de vacina"
             }
           }
         },
@@ -11318,7 +11317,7 @@
           "prompt": {
             "text": {
               "english": "Vaccine type: {{data.VAC16TIPO}}\nInformation: {{data.VAC16INF}}\nDate: {{data.VAC16DATA}}",
-              "default": "Typo de vacina: {{data.VAC16TIPO}}\nInformação: {{data.VAC16INF}}\nData da vacina: {{data.VAC16DATA}}"
+              "default": "Tipo de vacina: {{data.VAC16TIPO}}\nInformação: {{data.VAC16INF}}\nData da vacina: {{data.VAC16DATA}}"
             }
           }
         },
@@ -11337,7 +11336,7 @@
           "prompt": {
             "text": {
               "english": "Type of vaccine",
-              "default": "Typo de vacina"
+              "default": "Tipo de vacina"
             }
           }
         },
@@ -11439,7 +11438,7 @@
           "prompt": {
             "text": {
               "english": "Type of vaccine",
-              "default": "Typo de vacina"
+              "default": "Tipo de vacina"
             }
           }
         },
@@ -11504,7 +11503,7 @@
           "prompt": {
             "text": {
               "english": "Vaccine type: {{data.VAC17TIPO}}\nInformation: {{data.VAC17INF}}\nDate: {{data.VAC17DATA}}",
-              "default": "Typo de vacina: {{data.VAC17TIPO}}\nInformação: {{data.VAC17INF}}\nData da vacina: {{data.VAC17DATA}}"
+              "default": "Tipo de vacina: {{data.VAC17TIPO}}\nInformação: {{data.VAC17INF}}\nData da vacina: {{data.VAC17DATA}}"
             }
           }
         },
@@ -11523,7 +11522,7 @@
           "prompt": {
             "text": {
               "english": "Type of vaccine",
-              "default": "Typo de vacina"
+              "default": "Tipo de vacina"
             }
           }
         },
@@ -11625,7 +11624,7 @@
           "prompt": {
             "text": {
               "english": "Type of vaccine",
-              "default": "Typo de vacina"
+              "default": "Tipo de vacina"
             }
           }
         },
@@ -11697,7 +11696,7 @@
           "prompt": {
             "text": {
               "english": "Vaccine type: {{data.VAC18TIPO}}\nInformation: {{data.VAC18INF}}\nDate: {{data.VAC18DATA}}",
-              "default": "Typo de vacina: {{data.VAC18TIPO}}\nInformação: {{data.VAC18INF}}\nData da vacina: {{data.VAC18DATA}}"
+              "default": "Tipo de vacina: {{data.VAC18TIPO}}\nInformação: {{data.VAC18INF}}\nData da vacina: {{data.VAC18DATA}}"
             }
           }
         },
@@ -11716,7 +11715,7 @@
           "prompt": {
             "text": {
               "english": "Type of vaccine",
-              "default": "Typo de vacina"
+              "default": "Tipo de vacina"
             }
           }
         },
@@ -11818,7 +11817,7 @@
           "prompt": {
             "text": {
               "english": "Type of vaccine",
-              "default": "Typo de vacina"
+              "default": "Tipo de vacina"
             }
           }
         },
@@ -11883,7 +11882,7 @@
           "prompt": {
             "text": {
               "english": "Vaccine type: {{data.VAC19TIPO}}\nInformation: {{data.VAC19INF}}\nDate: {{data.VAC19DATA}}",
-              "default": "Typo de vacina: {{data.VAC19TIPO}}\nInformação: {{data.VAC19INF}}\nData da vacina: {{data.VAC19DATA}}"
+              "default": "Tipo de vacina: {{data.VAC19TIPO}}\nInformação: {{data.VAC19INF}}\nData da vacina: {{data.VAC19DATA}}"
             }
           }
         },
@@ -11902,7 +11901,7 @@
           "prompt": {
             "text": {
               "english": "Type of vaccine",
-              "default": "Typo de vacina"
+              "default": "Tipo de vacina"
             }
           }
         },
@@ -12004,7 +12003,7 @@
           "prompt": {
             "text": {
               "english": "Type of vaccine",
-              "default": "Typo de vacina"
+              "default": "Tipo de vacina"
             }
           }
         },
@@ -12076,7 +12075,7 @@
           "prompt": {
             "text": {
               "english": "Vaccine type: {{data.VAC20TIPO}}\nInformation: {{data.VAC20INF}}\nDate: {{data.VAC20DATA}}",
-              "default": "Typo de vacina: {{data.VAC20TIPO}}\nInformação: {{data.VAC20INF}}\nData da vacina: {{data.VAC20DATA}}"
+              "default": "Tipo de vacina: {{data.VAC20TIPO}}\nInformação: {{data.VAC20INF}}\nData da vacina: {{data.VAC20DATA}}"
             }
           }
         },
@@ -12095,7 +12094,7 @@
           "prompt": {
             "text": {
               "english": "Type of vaccine",
-              "default": "Typo de vacina"
+              "default": "Tipo de vacina"
             }
           }
         },
@@ -12173,7 +12172,7 @@
           "prompt": {
             "text": {
               "english": "How many scars?",
-              "default": "Quantos cicatrizes?"
+              "default": "Quantas cicatrizes?"
             }
           }
         },
@@ -12216,7 +12215,7 @@
           "prompt": {
             "text": {
               "english": "Type of scar",
-              "default": "Typo de cicatriz"
+              "default": "Tipo de cicatriz"
             }
           }
         },
@@ -12354,7 +12353,7 @@
           "prompt": {
             "text": {
               "english": "Type of scar",
-              "default": "Typo de cicatriz"
+              "default": "Tipo de cicatriz"
             }
           }
         },
@@ -12492,7 +12491,7 @@
           "prompt": {
             "text": {
               "english": "Type of scar",
-              "default": "Typo de cicatriz"
+              "default": "Tipo de cicatriz"
             }
           }
         },
@@ -12618,7 +12617,7 @@
           "prompt": {
             "text": {
               "english": "Type of scar",
-              "default": "Typo de cicatriz"
+              "default": "Tipo de cicatriz"
             }
           }
         },
@@ -12885,7 +12884,7 @@
           "prompt": {
             "text": {
               "english": "Which Hospital?",
-              "default": "Quelle Hospital?"
+              "default": "Qual Hospital?"
             }
           }
         },
@@ -12959,7 +12958,7 @@
           "prompt": {
             "text": {
               "english": "Relation between delivery and death",
-              "default": "Como foi a relacão entre o parto (aborto) e a morte?"
+              "default": "Relacão entre o parto (aborto) e a morte?"
             }
           }
         },
@@ -13080,7 +13079,7 @@
           "prompt": {
             "text": {
               "english": "Number of females",
-              "default": "No de Femeas"
+              "default": "Númer de Femeas"
             }
           }
         },
@@ -13093,7 +13092,7 @@
           "prompt": {
             "text": {
               "english": "Number of males",
-              "default": "No de Machos"
+              "default": "Número de Machos"
             }
           }
         },
@@ -13181,7 +13180,7 @@
           "prompt": {
             "text": {
               "english": "What diagnosis",
-              "default": "Qual"
+              "default": "Qual?"
             }
           }
         },
@@ -13211,7 +13210,7 @@
           "prompt": {
             "text": {
               "english": "Duration of disease",
-              "default": "Duracao de Doenca"
+              "default": "Duraçao da doença"
             }
           }
         },
@@ -13231,7 +13230,7 @@
           "prompt": {
             "text": {
               "english": "Symptoms",
-              "default": "Tinha quais simptomas"
+              "default": "Tinha quais simtomas"
             }
           }
         },
@@ -13331,7 +13330,7 @@
           "prompt": {
             "text": {
               "english": "Weightloss",
-              "default": "Weightloss"
+              "default": "Emagrecimento"
             }
           }
         },
@@ -13353,7 +13352,7 @@
           "prompt": {
             "text": {
               "english": "Other pains",
-              "default": "Outres dores?"
+              "default": "Outras dores?"
             }
           }
         },
@@ -13371,7 +13370,7 @@
           "prompt": {
             "text": {
               "english": "Which pains",
-              "default": "Which pains"
+              "default": "Quais dores"
             }
           }
         },
@@ -13389,7 +13388,7 @@
           "prompt": {
             "text": {
               "english": "Other symptoms",
-              "default": "Outros simptomas?"
+              "default": "Outros simtomas?"
             }
           }
         },
@@ -13407,7 +13406,7 @@
           "prompt": {
             "text": {
               "english": "Which symptoms",
-              "default": "Which symptoms"
+              "default": "Quais simtomas"
             }
           }
         },
@@ -13437,7 +13436,7 @@
           "prompt": {
             "text": {
               "english": "Was the women involved in an accident",
-              "default": "A muhler tinha accidente"
+              "default": "A mulher tinha acidente"
             }
           }
         },
@@ -13455,7 +13454,7 @@
           "prompt": {
             "text": {
               "english": "What type af accident",
-              "default": "Qual"
+              "default": "Qual tipo de acidente"
             }
           }
         },
@@ -13836,7 +13835,7 @@
           "title": {
             "text": {
               "english": "BM - Balante mane",
-              "default": "BM - Balante mane"
+              "default": "BM - Balante-mané"
             }
           }
         },
@@ -14031,7 +14030,7 @@
           "title": {
             "text": {
               "english": "Don't know how many, but some??",
-              "default": "Don't know how many, but some??"
+              "default": "Não sei quantos, mas alguns?"
             }
           }
         },
@@ -15006,7 +15005,7 @@
           "title": {
             "text": {
               "english": "Unknown",
-              "default": "Não sabe"
+              "default": "Desconhecido/a"
             }
           }
         },
@@ -17510,7 +17509,7 @@
             "title": {
               "text": {
                 "english": "BM - Balante mane",
-                "default": "BM - Balante mane"
+                "default": "BM - Balante-mané"
               }
             }
           },
@@ -17709,7 +17708,7 @@
             "title": {
               "text": {
                 "english": "Don't know how many, but some??",
-                "default": "Don't know how many, but some??"
+                "default": "Não sei quantos, mas alguns?"
               }
             }
           },
@@ -18777,7 +18776,7 @@
             "title": {
               "text": {
                 "english": "Unknown",
-                "default": "Não sabe"
+                "default": "Desconhecido/a"
               }
             }
           },
@@ -23685,7 +23684,7 @@
               "prompt": {
                 "text": {
                   "english": "Date of birth: {{data.MIFDNASC}}",
-                  "default": "Data nascimento: {{data.MIFDNASC}}"
+                  "default": "Data de nascimento: {{data.MIFDNASC}}"
                 }
               }
             },
@@ -23825,7 +23824,7 @@
               "prompt": {
                 "text": {
                   "english": "Date of birth",
-                  "default": "Data nascimento"
+                  "default": "Data de nascimento"
                 }
               }
             },
@@ -23950,7 +23949,7 @@
               "prompt": {
                 "text": {
                   "english": "Date of birth: {{data.MIFDNASC}}",
-                  "default": "Data nascimento: {{data.MIFDNASC}}"
+                  "default": "Data de nascimento: {{data.MIFDNASC}}"
                 }
               }
             },
@@ -31710,7 +31709,7 @@
               "prompt": {
                 "text": {
                   "english": "Has a consent form been produced?",
-                  "default": "Tem um formulário de consentimento foi produzido?"
+                  "default": "Tem um formulário de consentimento que foi produzido?"
                 }
               }
             },
@@ -31840,7 +31839,7 @@
               "prompt": {
                 "text": {
                   "english": "Birth/miscarrige since last visit?",
-                  "default": "Teve parto/aborto desde ultimo visita?"
+                  "default": "Teve parto/aborto desde a última visita?"
                 }
               }
             },
@@ -32094,7 +32093,7 @@
               "prompt": {
                 "text": {
                   "english": "Card documenting vaccinations",
-                  "default": "Cartão documentando vacinas"
+                  "default": "Cartão que documenta vacinações"
                 }
               }
             },
@@ -32729,7 +32728,7 @@
               "prompt": {
                 "text": {
                   "english": "Type of vaccine",
-                  "default": "Typo de vacina"
+                  "default": "Tipo de vacina"
                 }
               }
             },
@@ -32785,7 +32784,7 @@
               "prompt": {
                 "text": {
                   "english": "Vaccine type: {{data.VAC1TIPO}}\nInformation: {{data.VAC1INF}}\nDate: {{data.VAC1DATA}}",
-                  "default": "Typo de vacina: {{data.VAC1TIPO}}\nInformação: {{data.VAC1INF}}\nData da vacina: {{data.VAC1DATA}}"
+                  "default": "Tipo de vacina: : {{data.VAC1TIPO}}\nInformação: {{data.VAC1INF}}\nData da vacina: {{data.VAC1DATA}}"
                 }
               }
             },
@@ -32804,7 +32803,7 @@
               "prompt": {
                 "text": {
                   "english": "Type of vaccine",
-                  "default": "Typo de vacina"
+                  "default": "Tipo de vacina"
                 }
               }
             },
@@ -32896,7 +32895,7 @@
               "prompt": {
                 "text": {
                   "english": "Type of vaccine",
-                  "default": "Typo de vacina"
+                  "default": "Tipo de vacina"
                 }
               }
             },
@@ -32952,7 +32951,7 @@
               "prompt": {
                 "text": {
                   "english": "Vaccine type: {{data.VAC2TIPO}}\nInformation: {{data.VAC2INF}}\nDate: {{data.VAC2DATA}}",
-                  "default": "Typo de vacina: {{data.VAC2TIPO}}\nInformação: {{data.VAC2INF}}\nData da vacina: {{data.VAC2DATA}}"
+                  "default": "Tipo de vacina: {{data.VAC2TIPO}}\nInformação: {{data.VAC2INF}}\nData da vacina: {{data.VAC2DATA}}"
                 }
               }
             },
@@ -32971,7 +32970,7 @@
               "prompt": {
                 "text": {
                   "english": "Type of vaccine",
-                  "default": "Typo de vacina"
+                  "default": "Tipo de vacina"
                 }
               }
             },
@@ -33063,7 +33062,7 @@
               "prompt": {
                 "text": {
                   "english": "Type of vaccine",
-                  "default": "Typo de vacina"
+                  "default": "Tipo de vacina"
                 }
               }
             },
@@ -33119,7 +33118,7 @@
               "prompt": {
                 "text": {
                   "english": "Vaccine type: {{data.VAC3TIPO}}\nInformation: {{data.VAC3INF}}\nDate: {{data.VAC3DATA}}",
-                  "default": "Typo de vacina: {{data.VAC3TIPO}}\nInformação: {{data.VAC3INF}}\nData da vacina: {{data.VAC3DATA}}"
+                  "default": "Tipo de vacina: {{data.VAC3TIPO}}\nInformação: {{data.VAC3INF}}\nData da vacina: {{data.VAC3DATA}}"
                 }
               }
             },
@@ -33138,7 +33137,7 @@
               "prompt": {
                 "text": {
                   "english": "Type of vaccine",
-                  "default": "Typo de vacina"
+                  "default": "Tipo de vacina"
                 }
               }
             },
@@ -33230,7 +33229,7 @@
               "prompt": {
                 "text": {
                   "english": "Type of vaccine",
-                  "default": "Typo de vacina"
+                  "default": "Tipo de vacina"
                 }
               }
             },
@@ -33286,7 +33285,7 @@
               "prompt": {
                 "text": {
                   "english": "Vaccine type: {{data.VAC4TIPO}}\nInformation: {{data.VAC4INF}}\nDate: {{data.VAC4DATA}}",
-                  "default": "Typo de vacina: {{data.VAC4TIPO}}\nInformação: {{data.VAC4INF}}\nData da vacina: {{data.VAC4DATA}}"
+                  "default": "Tipo de vacina: {{data.VAC4TIPO}}\nInformação: {{data.VAC4INF}}\nData da vacina: {{data.VAC4DATA}}"
                 }
               }
             },
@@ -33305,7 +33304,7 @@
               "prompt": {
                 "text": {
                   "english": "Type of vaccine",
-                  "default": "Typo de vacina"
+                  "default": "Tipo de vacina"
                 }
               }
             },
@@ -33397,7 +33396,7 @@
               "prompt": {
                 "text": {
                   "english": "Type of vaccine",
-                  "default": "Typo de vacina"
+                  "default": "Tipo de vacina"
                 }
               }
             },
@@ -33453,7 +33452,7 @@
               "prompt": {
                 "text": {
                   "english": "Vaccine type: {{data.VAC5TIPO}}\nInformation: {{data.VAC5INF}}\nDate: {{data.VAC5DATA}}",
-                  "default": "Typo de vacina: {{data.VAC5TIPO}}\nInformação: {{data.VAC5INF}}\nData da vacina: {{data.VAC5DATA}}"
+                  "default": "Tipo de vacina: {{data.VAC5TIPO}}\nInformação: {{data.VAC5INF}}\nData da vacina: {{data.VAC5DATA}}"
                 }
               }
             },
@@ -33472,7 +33471,7 @@
               "prompt": {
                 "text": {
                   "english": "Type of vaccine",
-                  "default": "Typo de vacina"
+                  "default": "Tipo de vacina"
                 }
               }
             },
@@ -33564,7 +33563,7 @@
               "prompt": {
                 "text": {
                   "english": "Type of vaccine",
-                  "default": "Typo de vacina"
+                  "default": "Tipo de vacina"
                 }
               }
             },
@@ -33620,7 +33619,7 @@
               "prompt": {
                 "text": {
                   "english": "Vaccine type: {{data.VAC6TIPO}}\nInformation: {{data.VAC6INF}}\nDate: {{data.VAC6DATA}}",
-                  "default": "Typo de vacina: {{data.VAC6TIPO}}\nInformação: {{data.VAC6INF}}\nData da vacina: {{data.VAC6DATA}}"
+                  "default": "Tipo de vacina: {{data.VAC6TIPO}}\nInformação: {{data.VAC6INF}}\nData da vacina: {{data.VAC6DATA}}"
                 }
               }
             },
@@ -33639,7 +33638,7 @@
               "prompt": {
                 "text": {
                   "english": "Type of vaccine",
-                  "default": "Typo de vacina"
+                  "default": "Tipo de vacina"
                 }
               }
             },
@@ -33731,7 +33730,7 @@
               "prompt": {
                 "text": {
                   "english": "Type of vaccine",
-                  "default": "Typo de vacina"
+                  "default": "Tipo de vacina"
                 }
               }
             },
@@ -33787,7 +33786,7 @@
               "prompt": {
                 "text": {
                   "english": "Vaccine type: {{data.VAC7TIPO}}\nInformation: {{data.VAC7INF}}\nDate: {{data.VAC7DATA}}",
-                  "default": "Typo de vacina: {{data.VAC7TIPO}}\nInformação: {{data.VAC7INF}}\nData da vacina: {{data.VAC7DATA}}"
+                  "default": "Tipo de vacina: {{data.VAC7TIPO}}\nInformação: {{data.VAC7INF}}\nData da vacina: {{data.VAC7DATA}}"
                 }
               }
             },
@@ -33806,7 +33805,7 @@
               "prompt": {
                 "text": {
                   "english": "Type of vaccine",
-                  "default": "Typo de vacina"
+                  "default": "Tipo de vacina"
                 }
               }
             },
@@ -33898,7 +33897,7 @@
               "prompt": {
                 "text": {
                   "english": "Type of vaccine",
-                  "default": "Typo de vacina"
+                  "default": "Tipo de vacina"
                 }
               }
             },
@@ -33954,7 +33953,7 @@
               "prompt": {
                 "text": {
                   "english": "Vaccine type: {{data.VAC8TIPO}}\nInformation: {{data.VAC8INF}}\nDate: {{data.VAC8DATA}}",
-                  "default": "Typo de vacina: {{data.VAC8TIPO}}\nInformação: {{data.VAC8INF}}\nData da vacina: {{data.VAC8DATA}}"
+                  "default": "Tipo de vacina: {{data.VAC8TIPO}}\nInformação: {{data.VAC8INF}}\nData da vacina: {{data.VAC8DATA}}"
                 }
               }
             },
@@ -33973,7 +33972,7 @@
               "prompt": {
                 "text": {
                   "english": "Type of vaccine",
-                  "default": "Typo de vacina"
+                  "default": "Tipo de vacina"
                 }
               }
             },
@@ -34065,7 +34064,7 @@
               "prompt": {
                 "text": {
                   "english": "Type of vaccine",
-                  "default": "Typo de vacina"
+                  "default": "Tipo de vacina"
                 }
               }
             },
@@ -34121,7 +34120,7 @@
               "prompt": {
                 "text": {
                   "english": "Vaccine type: {{data.VAC9TIPO}}\nInformation: {{data.VAC9INF}}\nDate: {{data.VAC9DATA}}",
-                  "default": "Typo de vacina: {{data.VAC9TIPO}}\nInformação: {{data.VAC9INF}}\nData da vacina: {{data.VAC9DATA}}"
+                  "default": "Tipo de vacina: {{data.VAC9TIPO}}\nInformação: {{data.VAC9INF}}\nData da vacina: {{data.VAC9DATA}}"
                 }
               }
             },
@@ -34140,7 +34139,7 @@
               "prompt": {
                 "text": {
                   "english": "Type of vaccine",
-                  "default": "Typo de vacina"
+                  "default": "Tipo de vacina"
                 }
               }
             },
@@ -34232,7 +34231,7 @@
               "prompt": {
                 "text": {
                   "english": "Type of vaccine",
-                  "default": "Typo de vacina"
+                  "default": "Tipo de vacina"
                 }
               }
             },
@@ -34288,7 +34287,7 @@
               "prompt": {
                 "text": {
                   "english": "Vaccine type: {{data.VAC10TIPO}}\nInformation: {{data.VAC10INF}}\nDate: {{data.VAC10DATA}}",
-                  "default": "Typo de vacina: {{data.VAC10TIPO}}\nInformação: {{data.VAC10INF}}\nData da vacina: {{data.VAC10DATA}}"
+                  "default": "Tipo de vacina: {{data.VAC10TIPO}}\nInformação: {{data.VAC10INF}}\nData da vacina: {{data.VAC10DATA}}"
                 }
               }
             },
@@ -34307,7 +34306,7 @@
               "prompt": {
                 "text": {
                   "english": "Type of vaccine",
-                  "default": "Typo de vacina"
+                  "default": "Tipo de vacina"
                 }
               }
             },
@@ -34399,7 +34398,7 @@
               "prompt": {
                 "text": {
                   "english": "Type of vaccine",
-                  "default": "Typo de vacina"
+                  "default": "Tipo de vacina"
                 }
               }
             },
@@ -34455,7 +34454,7 @@
               "prompt": {
                 "text": {
                   "english": "Vaccine type: {{data.VAC11TIPO}}\nInformation: {{data.VAC11INF}}\nDate: {{data.VAC11DATA}}",
-                  "default": "Typo de vacina: {{data.VAC11TIPO}}\nInformação: {{data.VAC11INF}}\nData da vacina: {{data.VAC11DATA}}"
+                  "default": "Tipo de vacina: {{data.VAC11TIPO}}\nInformação: {{data.VAC11INF}}\nData da vacina: {{data.VAC11DATA}}"
                 }
               }
             },
@@ -34474,7 +34473,7 @@
               "prompt": {
                 "text": {
                   "english": "Type of vaccine",
-                  "default": "Typo de vacina"
+                  "default": "Tipo de vacina"
                 }
               }
             },
@@ -34566,7 +34565,7 @@
               "prompt": {
                 "text": {
                   "english": "Type of vaccine",
-                  "default": "Typo de vacina"
+                  "default": "Tipo de vacina"
                 }
               }
             },
@@ -34622,7 +34621,7 @@
               "prompt": {
                 "text": {
                   "english": "Vaccine type: {{data.VAC12TIPO}}\nInformation: {{data.VAC12INF}}\nDate: {{data.VAC12DATA}}",
-                  "default": "Typo de vacina: {{data.VAC12TIPO}}\nInformação: {{data.VAC12INF}}\nData da vacina: {{data.VAC12DATA}}"
+                  "default": "Tipo de vacina: {{data.VAC12TIPO}}\nInformação: {{data.VAC12INF}}\nData da vacina: {{data.VAC12DATA}}"
                 }
               }
             },
@@ -34641,7 +34640,7 @@
               "prompt": {
                 "text": {
                   "english": "Type of vaccine",
-                  "default": "Typo de vacina"
+                  "default": "Tipo de vacina"
                 }
               }
             },
@@ -34733,7 +34732,7 @@
               "prompt": {
                 "text": {
                   "english": "Type of vaccine",
-                  "default": "Typo de vacina"
+                  "default": "Tipo de vacina"
                 }
               }
             },
@@ -34789,7 +34788,7 @@
               "prompt": {
                 "text": {
                   "english": "Vaccine type: {{data.VAC13TIPO}}\nInformation: {{data.VAC13INF}}\nDate: {{data.VAC13DATA}}",
-                  "default": "Typo de vacina: {{data.VAC13TIPO}}\nInformação: {{data.VAC13INF}}\nData da vacina: {{data.VAC13DATA}}"
+                  "default": "Tipo de vacina: {{data.VAC13TIPO}}\nInformação: {{data.VAC13INF}}\nData da vacina: {{data.VAC13DATA}}"
                 }
               }
             },
@@ -34808,7 +34807,7 @@
               "prompt": {
                 "text": {
                   "english": "Type of vaccine",
-                  "default": "Typo de vacina"
+                  "default": "Tipo de vacina"
                 }
               }
             },
@@ -34900,7 +34899,7 @@
               "prompt": {
                 "text": {
                   "english": "Type of vaccine",
-                  "default": "Typo de vacina"
+                  "default": "Tipo de vacina"
                 }
               }
             },
@@ -34956,7 +34955,7 @@
               "prompt": {
                 "text": {
                   "english": "Vaccine type: {{data.VAC14TIPO}}\nInformation: {{data.VAC14INF}}\nDate: {{data.VAC14DATA}}",
-                  "default": "Typo de vacina: {{data.VAC14TIPO}}\nInformação: {{data.VAC14INF}}\nData da vacina: {{data.VAC14DATA}}"
+                  "default": "Tipo de vacina: {{data.VAC14TIPO}}\nInformação: {{data.VAC14INF}}\nData da vacina: {{data.VAC14DATA}}"
                 }
               }
             },
@@ -34975,7 +34974,7 @@
               "prompt": {
                 "text": {
                   "english": "Type of vaccine",
-                  "default": "Typo de vacina"
+                  "default": "Tipo de vacina"
                 }
               }
             },
@@ -35067,7 +35066,7 @@
               "prompt": {
                 "text": {
                   "english": "Type of vaccine",
-                  "default": "Typo de vacina"
+                  "default": "Tipo de vacina"
                 }
               }
             },
@@ -35123,7 +35122,7 @@
               "prompt": {
                 "text": {
                   "english": "Vaccine type: {{data.VAC15TIPO}}\nInformation: {{data.VAC15INF}}\nDate: {{data.VAC15DATA}}",
-                  "default": "Typo de vacina: {{data.VAC15TIPO}}\nInformação: {{data.VAC15INF}}\nData da vacina: {{data.VAC15DATA}}"
+                  "default": "Tipo de vacina: {{data.VAC15TIPO}}\nInformação: {{data.VAC15INF}}\nData da vacina: {{data.VAC15DATA}}"
                 }
               }
             },
@@ -35142,7 +35141,7 @@
               "prompt": {
                 "text": {
                   "english": "Type of vaccine",
-                  "default": "Typo de vacina"
+                  "default": "Tipo de vacina"
                 }
               }
             },
@@ -35234,7 +35233,7 @@
               "prompt": {
                 "text": {
                   "english": "Type of vaccine",
-                  "default": "Typo de vacina"
+                  "default": "Tipo de vacina"
                 }
               }
             },
@@ -35290,7 +35289,7 @@
               "prompt": {
                 "text": {
                   "english": "Vaccine type: {{data.VAC16TIPO}}\nInformation: {{data.VAC16INF}}\nDate: {{data.VAC16DATA}}",
-                  "default": "Typo de vacina: {{data.VAC16TIPO}}\nInformação: {{data.VAC16INF}}\nData da vacina: {{data.VAC16DATA}}"
+                  "default": "Tipo de vacina: {{data.VAC16TIPO}}\nInformação: {{data.VAC16INF}}\nData da vacina: {{data.VAC16DATA}}"
                 }
               }
             },
@@ -35309,7 +35308,7 @@
               "prompt": {
                 "text": {
                   "english": "Type of vaccine",
-                  "default": "Typo de vacina"
+                  "default": "Tipo de vacina"
                 }
               }
             },
@@ -35401,7 +35400,7 @@
               "prompt": {
                 "text": {
                   "english": "Type of vaccine",
-                  "default": "Typo de vacina"
+                  "default": "Tipo de vacina"
                 }
               }
             },
@@ -35457,7 +35456,7 @@
               "prompt": {
                 "text": {
                   "english": "Vaccine type: {{data.VAC17TIPO}}\nInformation: {{data.VAC17INF}}\nDate: {{data.VAC17DATA}}",
-                  "default": "Typo de vacina: {{data.VAC17TIPO}}\nInformação: {{data.VAC17INF}}\nData da vacina: {{data.VAC17DATA}}"
+                  "default": "Tipo de vacina: {{data.VAC17TIPO}}\nInformação: {{data.VAC17INF}}\nData da vacina: {{data.VAC17DATA}}"
                 }
               }
             },
@@ -35476,7 +35475,7 @@
               "prompt": {
                 "text": {
                   "english": "Type of vaccine",
-                  "default": "Typo de vacina"
+                  "default": "Tipo de vacina"
                 }
               }
             },
@@ -35568,7 +35567,7 @@
               "prompt": {
                 "text": {
                   "english": "Type of vaccine",
-                  "default": "Typo de vacina"
+                  "default": "Tipo de vacina"
                 }
               }
             },
@@ -35624,7 +35623,7 @@
               "prompt": {
                 "text": {
                   "english": "Vaccine type: {{data.VAC18TIPO}}\nInformation: {{data.VAC18INF}}\nDate: {{data.VAC18DATA}}",
-                  "default": "Typo de vacina: {{data.VAC18TIPO}}\nInformação: {{data.VAC18INF}}\nData da vacina: {{data.VAC18DATA}}"
+                  "default": "Tipo de vacina: {{data.VAC18TIPO}}\nInformação: {{data.VAC18INF}}\nData da vacina: {{data.VAC18DATA}}"
                 }
               }
             },
@@ -35643,7 +35642,7 @@
               "prompt": {
                 "text": {
                   "english": "Type of vaccine",
-                  "default": "Typo de vacina"
+                  "default": "Tipo de vacina"
                 }
               }
             },
@@ -35735,7 +35734,7 @@
               "prompt": {
                 "text": {
                   "english": "Type of vaccine",
-                  "default": "Typo de vacina"
+                  "default": "Tipo de vacina"
                 }
               }
             },
@@ -35791,7 +35790,7 @@
               "prompt": {
                 "text": {
                   "english": "Vaccine type: {{data.VAC19TIPO}}\nInformation: {{data.VAC19INF}}\nDate: {{data.VAC19DATA}}",
-                  "default": "Typo de vacina: {{data.VAC19TIPO}}\nInformação: {{data.VAC19INF}}\nData da vacina: {{data.VAC19DATA}}"
+                  "default": "Tipo de vacina: {{data.VAC19TIPO}}\nInformação: {{data.VAC19INF}}\nData da vacina: {{data.VAC19DATA}}"
                 }
               }
             },
@@ -35810,7 +35809,7 @@
               "prompt": {
                 "text": {
                   "english": "Type of vaccine",
-                  "default": "Typo de vacina"
+                  "default": "Tipo de vacina"
                 }
               }
             },
@@ -35902,7 +35901,7 @@
               "prompt": {
                 "text": {
                   "english": "Type of vaccine",
-                  "default": "Typo de vacina"
+                  "default": "Tipo de vacina"
                 }
               }
             },
@@ -35958,7 +35957,7 @@
               "prompt": {
                 "text": {
                   "english": "Vaccine type: {{data.VAC20TIPO}}\nInformation: {{data.VAC20INF}}\nDate: {{data.VAC20DATA}}",
-                  "default": "Typo de vacina: {{data.VAC20TIPO}}\nInformação: {{data.VAC20INF}}\nData da vacina: {{data.VAC20DATA}}"
+                  "default": "Tipo de vacina: {{data.VAC20TIPO}}\nInformação: {{data.VAC20INF}}\nData da vacina: {{data.VAC20DATA}}"
                 }
               }
             },
@@ -35977,7 +35976,7 @@
               "prompt": {
                 "text": {
                   "english": "Type of vaccine",
-                  "default": "Typo de vacina"
+                  "default": "Tipo de vacina"
                 }
               }
             },
@@ -38267,7 +38266,7 @@
               "prompt": {
                 "text": {
                   "english": "How many scars?",
-                  "default": "Quantos cicatrizes?"
+                  "default": "Quantas cicatrizes?"
                 }
               }
             },
@@ -38303,7 +38302,7 @@
               "prompt": {
                 "text": {
                   "english": "Type of scar",
-                  "default": "Typo de cicatriz"
+                  "default": "Tipo de cicatriz"
                 }
               }
             },
@@ -38447,7 +38446,7 @@
               "prompt": {
                 "text": {
                   "english": "Type of scar",
-                  "default": "Typo de cicatriz"
+                  "default": "Tipo de cicatriz"
                 }
               }
             },
@@ -38591,7 +38590,7 @@
               "prompt": {
                 "text": {
                   "english": "Type of scar",
-                  "default": "Typo de cicatriz"
+                  "default": "Tipo de cicatriz"
                 }
               }
             },
@@ -38718,7 +38717,7 @@
               "prompt": {
                 "text": {
                   "english": "Type of scar",
-                  "default": "Typo de cicatriz"
+                  "default": "Tipo de cicatriz"
                 }
               }
             },
@@ -39275,7 +39274,7 @@
               "prompt": {
                 "text": {
                   "english": "Which Hospital?",
-                  "default": "Quelle Hospital?"
+                  "default": "Qual Hospital?"
                 }
               }
             },
@@ -39331,7 +39330,7 @@
               "prompt": {
                 "text": {
                   "english": "Relation between delivery and death",
-                  "default": "Como foi a relacão entre o parto (aborto) e a morte?"
+                  "default": "Relacão entre o parto (aborto) e a morte?"
                 }
               }
             },
@@ -39442,7 +39441,7 @@
               "prompt": {
                 "text": {
                   "english": "Number of females",
-                  "default": "No de Femeas"
+                  "default": "Númer de Femeas"
                 }
               }
             },
@@ -39460,7 +39459,7 @@
               "prompt": {
                 "text": {
                   "english": "Number of males",
-                  "default": "No de Machos"
+                  "default": "Número de Machos"
                 }
               }
             },
@@ -39534,7 +39533,7 @@
               "prompt": {
                 "text": {
                   "english": "What diagnosis",
-                  "default": "Qual"
+                  "default": "Qual?"
                 }
               }
             },
@@ -39552,7 +39551,7 @@
               "prompt": {
                 "text": {
                   "english": "Duration of disease",
-                  "default": "Duracao de Doenca"
+                  "default": "Duraçao da doença"
                 }
               }
             },
@@ -39569,7 +39568,7 @@
               "prompt": {
                 "text": {
                   "english": "Symptoms",
-                  "default": "Tinha quais simptomas"
+                  "default": "Tinha quais simtomas"
                 }
               }
             },
@@ -39683,7 +39682,7 @@
               "prompt": {
                 "text": {
                   "english": "Weightloss",
-                  "default": "Weightloss"
+                  "default": "Emagrecimento"
                 }
               }
             },
@@ -39702,7 +39701,7 @@
               "prompt": {
                 "text": {
                   "english": "Other pains",
-                  "default": "Outres dores?"
+                  "default": "Outras dores?"
                 }
               }
             },
@@ -39720,7 +39719,7 @@
               "prompt": {
                 "text": {
                   "english": "Which pains",
-                  "default": "Which pains"
+                  "default": "Quais dores"
                 }
               }
             },
@@ -39739,7 +39738,7 @@
               "prompt": {
                 "text": {
                   "english": "Other symptoms",
-                  "default": "Outros simptomas?"
+                  "default": "Outros simtomas?"
                 }
               }
             },
@@ -39757,7 +39756,7 @@
               "prompt": {
                 "text": {
                   "english": "Which symptoms",
-                  "default": "Which symptoms"
+                  "default": "Quais simtomas"
                 }
               }
             },
@@ -39776,7 +39775,7 @@
               "prompt": {
                 "text": {
                   "english": "Was the women involved in an accident",
-                  "default": "A muhler tinha accidente"
+                  "default": "A mulher tinha acidente"
                 }
               }
             },
@@ -39794,7 +39793,7 @@
               "prompt": {
                 "text": {
                   "english": "What type af accident",
-                  "default": "Qual"
+                  "default": "Qual tipo de acidente"
                 }
               }
             },
@@ -45656,7 +45655,7 @@
         "_aspect": "CICA1",
         "_key": "displayChoicesList",
         "_type": "object",
-        "_value": "[{\"choice_list_name\":\"vacscar\",\"data_value\":\"1\",\"display\":{\"title\":{\"text\":{\"english\":\"BCG\",\"default\":\"BCG\"}}},\"_row_num\":114},{\"choice_list_name\":\"vacscar\",\"data_value\":\"2\",\"display\":{\"title\":{\"text\":{\"english\":\"Variola\",\"default\":\"Variola\"}}},\"_row_num\":115},{\"choice_list_name\":\"vacscar\",\"data_value\":\"3\",\"display\":{\"title\":{\"text\":{\"english\":\"Unknown\",\"default\":\"Não sabe\"}}},\"_row_num\":116}]"
+        "_value": "[{\"choice_list_name\":\"vacscar\",\"data_value\":\"1\",\"display\":{\"title\":{\"text\":{\"english\":\"BCG\",\"default\":\"BCG\"}}},\"_row_num\":114},{\"choice_list_name\":\"vacscar\",\"data_value\":\"2\",\"display\":{\"title\":{\"text\":{\"english\":\"Variola\",\"default\":\"Variola\"}}},\"_row_num\":115},{\"choice_list_name\":\"vacscar\",\"data_value\":\"3\",\"display\":{\"title\":{\"text\":{\"english\":\"Unknown\",\"default\":\"Desconhecido/a\"}}},\"_row_num\":116}]"
       },
       {
         "_partition": "Column",
@@ -45670,7 +45669,7 @@
         "_aspect": "CICA2",
         "_key": "displayChoicesList",
         "_type": "object",
-        "_value": "[{\"choice_list_name\":\"vacscar\",\"data_value\":\"1\",\"display\":{\"title\":{\"text\":{\"english\":\"BCG\",\"default\":\"BCG\"}}},\"_row_num\":114},{\"choice_list_name\":\"vacscar\",\"data_value\":\"2\",\"display\":{\"title\":{\"text\":{\"english\":\"Variola\",\"default\":\"Variola\"}}},\"_row_num\":115},{\"choice_list_name\":\"vacscar\",\"data_value\":\"3\",\"display\":{\"title\":{\"text\":{\"english\":\"Unknown\",\"default\":\"Não sabe\"}}},\"_row_num\":116}]"
+        "_value": "[{\"choice_list_name\":\"vacscar\",\"data_value\":\"1\",\"display\":{\"title\":{\"text\":{\"english\":\"BCG\",\"default\":\"BCG\"}}},\"_row_num\":114},{\"choice_list_name\":\"vacscar\",\"data_value\":\"2\",\"display\":{\"title\":{\"text\":{\"english\":\"Variola\",\"default\":\"Variola\"}}},\"_row_num\":115},{\"choice_list_name\":\"vacscar\",\"data_value\":\"3\",\"display\":{\"title\":{\"text\":{\"english\":\"Unknown\",\"default\":\"Desconhecido/a\"}}},\"_row_num\":116}]"
       },
       {
         "_partition": "Column",
@@ -45684,7 +45683,7 @@
         "_aspect": "CICA3",
         "_key": "displayChoicesList",
         "_type": "object",
-        "_value": "[{\"choice_list_name\":\"vacscar\",\"data_value\":\"1\",\"display\":{\"title\":{\"text\":{\"english\":\"BCG\",\"default\":\"BCG\"}}},\"_row_num\":114},{\"choice_list_name\":\"vacscar\",\"data_value\":\"2\",\"display\":{\"title\":{\"text\":{\"english\":\"Variola\",\"default\":\"Variola\"}}},\"_row_num\":115},{\"choice_list_name\":\"vacscar\",\"data_value\":\"3\",\"display\":{\"title\":{\"text\":{\"english\":\"Unknown\",\"default\":\"Não sabe\"}}},\"_row_num\":116}]"
+        "_value": "[{\"choice_list_name\":\"vacscar\",\"data_value\":\"1\",\"display\":{\"title\":{\"text\":{\"english\":\"BCG\",\"default\":\"BCG\"}}},\"_row_num\":114},{\"choice_list_name\":\"vacscar\",\"data_value\":\"2\",\"display\":{\"title\":{\"text\":{\"english\":\"Variola\",\"default\":\"Variola\"}}},\"_row_num\":115},{\"choice_list_name\":\"vacscar\",\"data_value\":\"3\",\"display\":{\"title\":{\"text\":{\"english\":\"Unknown\",\"default\":\"Desconhecido/a\"}}},\"_row_num\":116}]"
       },
       {
         "_partition": "Column",
@@ -45698,7 +45697,7 @@
         "_aspect": "CICA4",
         "_key": "displayChoicesList",
         "_type": "object",
-        "_value": "[{\"choice_list_name\":\"vacscar\",\"data_value\":\"1\",\"display\":{\"title\":{\"text\":{\"english\":\"BCG\",\"default\":\"BCG\"}}},\"_row_num\":114},{\"choice_list_name\":\"vacscar\",\"data_value\":\"2\",\"display\":{\"title\":{\"text\":{\"english\":\"Variola\",\"default\":\"Variola\"}}},\"_row_num\":115},{\"choice_list_name\":\"vacscar\",\"data_value\":\"3\",\"display\":{\"title\":{\"text\":{\"english\":\"Unknown\",\"default\":\"Não sabe\"}}},\"_row_num\":116}]"
+        "_value": "[{\"choice_list_name\":\"vacscar\",\"data_value\":\"1\",\"display\":{\"title\":{\"text\":{\"english\":\"BCG\",\"default\":\"BCG\"}}},\"_row_num\":114},{\"choice_list_name\":\"vacscar\",\"data_value\":\"2\",\"display\":{\"title\":{\"text\":{\"english\":\"Variola\",\"default\":\"Variola\"}}},\"_row_num\":115},{\"choice_list_name\":\"vacscar\",\"data_value\":\"3\",\"display\":{\"title\":{\"text\":{\"english\":\"Unknown\",\"default\":\"Desconhecido/a\"}}},\"_row_num\":116}]"
       },
       {
         "_partition": "Column",

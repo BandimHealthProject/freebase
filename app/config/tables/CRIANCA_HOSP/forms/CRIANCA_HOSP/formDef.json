@@ -116,7 +116,7 @@
           "prompt": {
             "text": {
               "english": "Special information - why was the interview not possible",
-              "default": "Porque"
+              "default": "Porque não foi possível a entrevista"
             }
           }
         },
@@ -163,7 +163,7 @@
           "prompt": {
             "text": {
               "english": "Code of place of hospitalisation",
-              "default": "Code of place of hospitalisation"
+              "default": "Código de local de hospitalização"
             }
           }
         },
@@ -251,7 +251,7 @@
           "prompt": {
             "text": {
               "english": "Seen documentation of hospitalisation",
-              "default": "Viu documentacão de data de internamento?"
+              "default": "Viu documentacão da data de internamento?"
             }
           }
         },
@@ -295,7 +295,7 @@
           "prompt": {
             "text": {
               "english": "Still hospitalised",
-              "default": "a crianca ainda está internado?"
+              "default": "A crianca ainda está internado?"
             }
           }
         },
@@ -339,7 +339,7 @@
           "prompt": {
             "text": {
               "english": "Mother decided taking the child to hospital",
-              "default": "Mame decidiu levar a crianca ao hospital?"
+              "default": "A mãe decidiu levar a crianca ao hospital?"
             }
           }
         },
@@ -353,7 +353,7 @@
           "prompt": {
             "text": {
               "english": "Father decided taking the child to hospital",
-              "default": "Pape decidiu levar a crianca ao hospital?"
+              "default": "O pai decidiu levar a crianca ao hospital?"
             }
           }
         },
@@ -375,7 +375,7 @@
           "prompt": {
             "text": {
               "english": "Other decided taking the child to hospital",
-              "default": "Outro decidiu levar a crianca ao hospital?"
+              "default": "Outra pessoa decidiu levar a crianca ao hospital?"
             }
           }
         },
@@ -432,7 +432,7 @@
           "prompt": {
             "text": {
               "english": "Was is an accident",
-              "default": "Era trauma/accidente"
+              "default": "Éra trauma/accidente"
             }
           }
         },
@@ -1330,7 +1330,7 @@
               "prompt": {
                 "text": {
                   "english": "Special information - why was the interview not possible",
-                  "default": "Porque"
+                  "default": "Porque não foi possível a entrevista"
                 }
               }
             },
@@ -1367,7 +1367,7 @@
               "prompt": {
                 "text": {
                   "english": "Code of place of hospitalisation",
-                  "default": "Code of place of hospitalisation"
+                  "default": "Código de local de hospitalização"
                 }
               }
             },
@@ -1442,7 +1442,7 @@
               "prompt": {
                 "text": {
                   "english": "Seen documentation of hospitalisation",
-                  "default": "Viu documentacão de data de internamento?"
+                  "default": "Viu documentacão da data de internamento?"
                 }
               }
             },
@@ -1479,7 +1479,7 @@
               "prompt": {
                 "text": {
                   "english": "Still hospitalised",
-                  "default": "a crianca ainda está internado?"
+                  "default": "A crianca ainda está internado?"
                 }
               }
             },
@@ -1516,7 +1516,7 @@
               "prompt": {
                 "text": {
                   "english": "Mother decided taking the child to hospital",
-                  "default": "Mame decidiu levar a crianca ao hospital?"
+                  "default": "A mãe decidiu levar a crianca ao hospital?"
                 }
               }
             },
@@ -1535,7 +1535,7 @@
               "prompt": {
                 "text": {
                   "english": "Father decided taking the child to hospital",
-                  "default": "Pape decidiu levar a crianca ao hospital?"
+                  "default": "O pai decidiu levar a crianca ao hospital?"
                 }
               }
             },
@@ -1554,7 +1554,7 @@
               "prompt": {
                 "text": {
                   "english": "Other decided taking the child to hospital",
-                  "default": "Outro decidiu levar a crianca ao hospital?"
+                  "default": "Outra pessoa decidiu levar a crianca ao hospital?"
                 }
               }
             },
@@ -1609,7 +1609,7 @@
               "prompt": {
                 "text": {
                   "english": "Was is an accident",
-                  "default": "Era trauma/accidente"
+                  "default": "Éra trauma/accidente"
                 }
               }
             },

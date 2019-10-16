@@ -102,7 +102,7 @@
           "prompt": {
             "text": {
               "english": "Maternal MUAC",
-              "default": "Perimento do braco esquardo"
+              "default": "Perimetro do braço esquerdo"
             }
           }
         },
@@ -154,7 +154,7 @@
           "prompt": {
             "text": {
               "english": "Same pregnancy since last visit",
-              "default": "Same pregnancy since last visit"
+              "default": "Mesma gravidez desde a última visita"
             }
           }
         },
@@ -497,7 +497,7 @@
           "prompt": {
             "text": {
               "english": "Status of pregnancy end",
-              "default": "Status of pregnancy end"
+              "default": "Estado final da gravidez"
             }
           }
         },
@@ -518,7 +518,7 @@
           "prompt": {
             "text": {
               "english": "Date of pregnancy end",
-              "default": "Date of pregnancy end"
+              "default": "Data do fim da gravidez"
             }
           }
         },
@@ -544,7 +544,7 @@
           "prompt": {
             "text": {
               "english": "Length of pregnancy before miscariage",
-              "default": "Length of pregnancy before miscariage"
+              "default": "Duração da gravidez antes do aborto espontâneo"
             }
           }
         },
@@ -574,7 +574,7 @@
           "prompt": {
             "text": {
               "english": "Number of children born",
-              "default": "Number of children born"
+              "default": "Número do nascimento da criança"
             }
           }
         },
@@ -670,7 +670,7 @@
           "prompt": {
             "text": {
               "english": "Did the woman seek consultations during pregnancy?",
-              "default": "Did the woman seek consultations during pregnancy?"
+              "default": "A mulher procurou consultas durante a gravidez?"
             }
           }
         },
@@ -692,7 +692,7 @@
           "prompt": {
             "text": {
               "english": "Card",
-              "default": "Card"
+              "default": "Cartão"
             }
           }
         },
@@ -917,7 +917,7 @@
           "prompt": {
             "text": {
               "english": "Did the woman give birth in the village?",
-              "default": "Did the woman give birth in the village?"
+              "default": "A mulher deu à luz na aldeia?"
             }
           }
         },
@@ -939,7 +939,7 @@
           "prompt": {
             "text": {
               "english": "Where did the woman give birth?",
-              "default": "Where did the woman give birth?"
+              "default": "Onde é que a mulher deu à luz?"
             }
           }
         },
@@ -961,7 +961,7 @@
           "prompt": {
             "text": {
               "english": "Who assisted the birth?",
-              "default": "Who assisted the birth?"
+              "default": "Quem ajudou o parto?"
             }
           }
         },
@@ -1645,7 +1645,7 @@
           "title": {
             "text": {
               "english": "Elsewhere",
-              "default": "Outro"
+              "default": "Outro lugar"
             }
           }
         },
@@ -1658,7 +1658,7 @@
           "title": {
             "text": {
               "english": "Doctor",
-              "default": "Medico"
+              "default": "Médico"
             }
           }
         },
@@ -1762,7 +1762,7 @@
           "title": {
             "text": {
               "english": "More than 342 cm",
-              "default": "More than 342 cm"
+              "default": "Mais do que 342 cm"
             }
           }
         },
@@ -2629,7 +2629,7 @@
             "title": {
               "text": {
                 "english": "Elsewhere",
-                "default": "Outro"
+                "default": "Outro lugar"
               }
             }
           },
@@ -2644,7 +2644,7 @@
             "title": {
               "text": {
                 "english": "Doctor",
-                "default": "Medico"
+                "default": "Médico"
               }
             }
           },
@@ -2750,7 +2750,7 @@
             "title": {
               "text": {
                 "english": "More than 342 cm",
-                "default": "More than 342 cm"
+                "default": "Mais do que 342 cm"
               }
             }
           },
@@ -3454,7 +3454,7 @@
               "prompt": {
                 "text": {
                   "english": "Maternal MUAC",
-                  "default": "Perimento do braco esquardo"
+                  "default": "Perimetro do braço esquerdo"
                 }
               }
             },
@@ -3484,7 +3484,7 @@
               "prompt": {
                 "text": {
                   "english": "Same pregnancy since last visit",
-                  "default": "Same pregnancy since last visit"
+                  "default": "Mesma gravidez desde a última visita"
                 }
               }
             },
@@ -3782,7 +3782,7 @@
               "prompt": {
                 "text": {
                   "english": "Status of pregnancy end",
-                  "default": "Status of pregnancy end"
+                  "default": "Estado final da gravidez"
                 }
               }
             },
@@ -3800,7 +3800,7 @@
               "prompt": {
                 "text": {
                   "english": "Date of pregnancy end",
-                  "default": "Date of pregnancy end"
+                  "default": "Data do fim da gravidez"
                 }
               }
             },
@@ -3818,7 +3818,7 @@
               "prompt": {
                 "text": {
                   "english": "Length of pregnancy before miscariage",
-                  "default": "Length of pregnancy before miscariage"
+                  "default": "Duração da gravidez antes do aborto espontâneo"
                 }
               }
             },
@@ -3836,7 +3836,7 @@
               "prompt": {
                 "text": {
                   "english": "Number of children born",
-                  "default": "Number of children born"
+                  "default": "Número do nascimento da criança"
                 }
               }
             },
@@ -3893,7 +3893,7 @@
               "prompt": {
                 "text": {
                   "english": "Did the woman seek consultations during pregnancy?",
-                  "default": "Did the woman seek consultations during pregnancy?"
+                  "default": "A mulher procurou consultas durante a gravidez?"
                 }
               }
             },
@@ -3912,7 +3912,7 @@
               "prompt": {
                 "text": {
                   "english": "Card",
-                  "default": "Card"
+                  "default": "Cartão"
                 }
               }
             },
@@ -4121,7 +4121,7 @@
               "prompt": {
                 "text": {
                   "english": "Did the woman give birth in the village?",
-                  "default": "Did the woman give birth in the village?"
+                  "default": "A mulher deu à luz na aldeia?"
                 }
               }
             },
@@ -4140,7 +4140,7 @@
               "prompt": {
                 "text": {
                   "english": "Where did the woman give birth?",
-                  "default": "Where did the woman give birth?"
+                  "default": "Onde é que a mulher deu à luz?"
                 }
               }
             },
@@ -4159,7 +4159,7 @@
               "prompt": {
                 "text": {
                   "english": "Who assisted the birth?",
-                  "default": "Who assisted the birth?"
+                  "default": "Quem ajudou o parto?"
                 }
               }
             },
@@ -6095,7 +6095,7 @@
         "_aspect": "ASSISTPART",
         "_key": "displayChoicesList",
         "_type": "object",
-        "_value": "[{\"choice_list_name\":\"healthstaff\",\"data_value\":\"DR\",\"display\":{\"title\":{\"text\":{\"english\":\"Doctor\",\"default\":\"Medico\"}}},\"_row_num\":39},{\"choice_list_name\":\"healthstaff\",\"data_value\":\"PA\",\"display\":{\"title\":{\"text\":{\"english\":\"Midwife\",\"default\":\"Parteira\"}}},\"_row_num\":40},{\"choice_list_name\":\"healthstaff\",\"data_value\":\"EN\",\"display\":{\"title\":{\"text\":{\"english\":\"Nurse\",\"default\":\"Enfermeira/o\"}}},\"_row_num\":41},{\"choice_list_name\":\"healthstaff\",\"data_value\":\"MA-N\",\"display\":{\"title\":{\"text\":{\"english\":\"Traditional birth attendant - no course\",\"default\":\"Matrona - sem curso\"}}},\"_row_num\":42},{\"choice_list_name\":\"healthstaff\",\"data_value\":\"MA-F\",\"display\":{\"title\":{\"text\":{\"english\":\"Traditional birth attendant - course\",\"default\":\"Matrona - formado\"}}},\"_row_num\":43},{\"choice_list_name\":\"healthstaff\",\"data_value\":\"FA\",\"display\":{\"title\":{\"text\":{\"english\":\"Family member\",\"default\":\"Familia\"}}},\"_row_num\":44},{\"choice_list_name\":\"healthstaff\",\"data_value\":\"VI\",\"display\":{\"title\":{\"text\":{\"english\":\"Neighbour\",\"default\":\"Vizinho\"}}},\"_row_num\":45},{\"choice_list_name\":\"healthstaff\",\"data_value\":\"no\",\"display\":{\"title\":{\"text\":{\"english\":\"No one\",\"default\":\"Ninguem\"}}},\"_row_num\":46}]"
+        "_value": "[{\"choice_list_name\":\"healthstaff\",\"data_value\":\"DR\",\"display\":{\"title\":{\"text\":{\"english\":\"Doctor\",\"default\":\"Médico\"}}},\"_row_num\":39},{\"choice_list_name\":\"healthstaff\",\"data_value\":\"PA\",\"display\":{\"title\":{\"text\":{\"english\":\"Midwife\",\"default\":\"Parteira\"}}},\"_row_num\":40},{\"choice_list_name\":\"healthstaff\",\"data_value\":\"EN\",\"display\":{\"title\":{\"text\":{\"english\":\"Nurse\",\"default\":\"Enfermeira/o\"}}},\"_row_num\":41},{\"choice_list_name\":\"healthstaff\",\"data_value\":\"MA-N\",\"display\":{\"title\":{\"text\":{\"english\":\"Traditional birth attendant - no course\",\"default\":\"Matrona - sem curso\"}}},\"_row_num\":42},{\"choice_list_name\":\"healthstaff\",\"data_value\":\"MA-F\",\"display\":{\"title\":{\"text\":{\"english\":\"Traditional birth attendant - course\",\"default\":\"Matrona - formado\"}}},\"_row_num\":43},{\"choice_list_name\":\"healthstaff\",\"data_value\":\"FA\",\"display\":{\"title\":{\"text\":{\"english\":\"Family member\",\"default\":\"Familia\"}}},\"_row_num\":44},{\"choice_list_name\":\"healthstaff\",\"data_value\":\"VI\",\"display\":{\"title\":{\"text\":{\"english\":\"Neighbour\",\"default\":\"Vizinho\"}}},\"_row_num\":45},{\"choice_list_name\":\"healthstaff\",\"data_value\":\"no\",\"display\":{\"title\":{\"text\":{\"english\":\"No one\",\"default\":\"Ninguem\"}}},\"_row_num\":46}]"
       },
       {
         "_partition": "Column",
@@ -6144,7 +6144,7 @@
         "_aspect": "LOCPAR",
         "_key": "displayChoicesList",
         "_type": "object",
-        "_value": "[{\"choice_list_name\":\"facility\",\"data_value\":\"HO\",\"display\":{\"title\":{\"text\":{\"english\":\"Hospital\",\"default\":\"Hospital\"}}},\"_row_num\":34},{\"choice_list_name\":\"facility\",\"data_value\":\"CS\",\"display\":{\"title\":{\"text\":{\"english\":\"Health Center\",\"default\":\"Centro de Saude\"}}},\"_row_num\":35},{\"choice_list_name\":\"facility\",\"data_value\":\"US\",\"display\":{\"title\":{\"text\":{\"english\":\"Health Unit\",\"default\":\"Unidade de Saude Base\"}}},\"_row_num\":36},{\"choice_list_name\":\"facility\",\"data_value\":\"CA\",\"display\":{\"title\":{\"text\":{\"english\":\"Home\",\"default\":\"Casa\"}}},\"_row_num\":37},{\"choice_list_name\":\"facility\",\"data_value\":\"OU\",\"display\":{\"title\":{\"text\":{\"english\":\"Elsewhere\",\"default\":\"Outro\"}}},\"_row_num\":38}]"
+        "_value": "[{\"choice_list_name\":\"facility\",\"data_value\":\"HO\",\"display\":{\"title\":{\"text\":{\"english\":\"Hospital\",\"default\":\"Hospital\"}}},\"_row_num\":34},{\"choice_list_name\":\"facility\",\"data_value\":\"CS\",\"display\":{\"title\":{\"text\":{\"english\":\"Health Center\",\"default\":\"Centro de Saude\"}}},\"_row_num\":35},{\"choice_list_name\":\"facility\",\"data_value\":\"US\",\"display\":{\"title\":{\"text\":{\"english\":\"Health Unit\",\"default\":\"Unidade de Saude Base\"}}},\"_row_num\":36},{\"choice_list_name\":\"facility\",\"data_value\":\"CA\",\"display\":{\"title\":{\"text\":{\"english\":\"Home\",\"default\":\"Casa\"}}},\"_row_num\":37},{\"choice_list_name\":\"facility\",\"data_value\":\"OU\",\"display\":{\"title\":{\"text\":{\"english\":\"Elsewhere\",\"default\":\"Outro lugar\"}}},\"_row_num\":38}]"
       },
       {
         "_partition": "Column",

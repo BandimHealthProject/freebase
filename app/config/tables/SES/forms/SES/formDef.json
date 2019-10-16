@@ -76,7 +76,7 @@
           "prompt": {
             "text": {
               "english": "Type of roof",
-              "default": "Tipo de tecto"
+              "default": "Tipo de telhado"
             }
           }
         },
@@ -112,7 +112,7 @@
           "prompt": {
             "text": {
               "english": "Do they have a electricity in the compound",
-              "default": "Eles têm eletricidade no moranca?"
+              "default": "Eles têm eletricidade na morança?"
             }
           }
         },
@@ -126,7 +126,7 @@
           "prompt": {
             "text": {
               "english": "Do they have a radio in the compound",
-              "default": "Eles têm um rádio no moranca?"
+              "default": "Eles têm um rádio na morança?"
             }
           }
         },
@@ -148,7 +148,7 @@
           "prompt": {
             "text": {
               "english": "Does the mother or father own a telephone",
-              "default": "A mãe ou o pai têm telemovel?"
+              "default": "A mãe ou o pai tem telemovel?"
             }
           }
         },
@@ -911,7 +911,7 @@
               "prompt": {
                 "text": {
                   "english": "Type of roof",
-                  "default": "Tipo de tecto"
+                  "default": "Tipo de telhado"
                 }
               }
             },
@@ -949,7 +949,7 @@
               "prompt": {
                 "text": {
                   "english": "Do they have a electricity in the compound",
-                  "default": "Eles têm eletricidade no moranca?"
+                  "default": "Eles têm eletricidade na morança?"
                 }
               }
             },
@@ -968,7 +968,7 @@
               "prompt": {
                 "text": {
                   "english": "Do they have a radio in the compound",
-                  "default": "Eles têm um rádio no moranca?"
+                  "default": "Eles têm um rádio na morança?"
                 }
               }
             },
@@ -987,7 +987,7 @@
               "prompt": {
                 "text": {
                   "english": "Does the mother or father own a telephone",
-                  "default": "A mãe ou o pai têm telemovel?"
+                  "default": "A mãe ou o pai tem telemovel?"
                 }
               }
             },
