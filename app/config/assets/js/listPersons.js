@@ -260,6 +260,7 @@ function populateView() {
     defaults['VISITTYPE'] = visitType;
     defaults['ASSISTENTE'] = assistant;
     defaults['CONT'] = date; // today's date
+    defaults['REGDIA'] = date;
 
 // Adds button for new MIF
     ul.append($("<li />").append($("<button />").attr('id','new' + '_' + 'mif').attr('class', ' btn ' + 'mif').text('Nova Mulher')));

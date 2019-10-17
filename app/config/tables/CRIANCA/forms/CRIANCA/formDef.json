@@ -66,7 +66,7 @@
     "survey": [
       {
         "clause": "if",
-        "condition": "data('NOME') == null",
+        "condition": "data('lastvisitdate') == null",
         "_row_num": 2
       },
       {
@@ -234,7 +234,7 @@
           "prompt": {
             "text": {
               "english": "Want to change the infromation?",
-              "default": "Quer mudar?"
+              "default": "Mudar as informações?"
             }
           }
         },
@@ -611,7 +611,7 @@
       },
       {
         "clause": "if",
-        "condition": "data('REGID') != null",
+        "condition": "data('PREGID') != null",
         "_row_num": 19
       },
       {
@@ -817,7 +817,7 @@
         "_row_num": 45
       },
       {
-        "clause": "do section visit",
+        "clause": "do section stsc",
         "_row_num": 46
       }
     ],
@@ -1228,6 +1228,10 @@
       {
         "clause": "end screen",
         "_row_num": 57
+      },
+      {
+        "clause": "do section stsc",
+        "_row_num": 58
       }
     ],
     "visit": [
@@ -13502,11 +13506,11 @@
         "reachable_sections": {
           "reg": true,
           "parto": true,
+          "stsc": true,
           "visit": true,
           "vac": true,
           "fal": true,
-          "control": true,
-          "stsc": true
+          "control": true
         },
         "prompts": [
           {
@@ -13560,7 +13564,7 @@
         "operations": [
           {
             "clause": "if",
-            "condition": "data('NOME') == null",
+            "condition": "data('lastvisitdate') == null",
             "_row_num": 2,
             "__rowNum__": 1,
             "_token_type": "goto_label",
@@ -13800,7 +13804,7 @@
               "prompt": {
                 "text": {
                   "english": "Want to change the infromation?",
-                  "default": "Quer mudar?"
+                  "default": "Mudar as informações?"
                 }
               }
             },
@@ -14216,10 +14220,11 @@
         "section_name": "reg",
         "nested_sections": {
           "parto": true,
-          "visit": true
+          "stsc": true
         },
         "reachable_sections": {
           "parto": true,
+          "stsc": true,
           "visit": true,
           "vac": true,
           "fal": true,
@@ -14511,11 +14516,11 @@
             "_branch_label_enclosing_screen": "parto/0"
           },
           {
-            "clause": "do section visit",
+            "clause": "do section stsc",
             "_row_num": 46,
             "__rowNum__": 45,
             "_token_type": "prompt",
-            "_do_section_name": "visit",
+            "_do_section_name": "stsc",
             "_type": "_section",
             "promptIdx": 15,
             "display": {
@@ -14526,7 +14531,7 @@
                 }
               }
             },
-            "_branch_label_enclosing_screen": "visit/0"
+            "_branch_label_enclosing_screen": "stsc/0"
           },
           {
             "_token_type": "prompt",
@@ -14633,7 +14638,7 @@
           },
           {
             "clause": "if",
-            "condition": "data('REGID') != null",
+            "condition": "data('PREGID') != null",
             "_row_num": 19,
             "__rowNum__": 18,
             "_token_type": "goto_label",
@@ -14742,11 +14747,11 @@
             "operationIdx": 19
           },
           {
-            "clause": "do section visit",
+            "clause": "do section stsc",
             "_row_num": 46,
             "__rowNum__": 45,
             "_token_type": "do_section",
-            "_do_section_name": "visit",
+            "_do_section_name": "stsc",
             "operationIdx": 20
           },
           {
@@ -14797,8 +14802,16 @@
       },
       "parto": {
         "section_name": "parto",
-        "nested_sections": {},
-        "reachable_sections": {},
+        "nested_sections": {
+          "stsc": true
+        },
+        "reachable_sections": {
+          "stsc": true,
+          "visit": true,
+          "vac": true,
+          "fal": true,
+          "control": true
+        },
         "prompts": [
           {
             "type": "select_one",
@@ -15145,12 +15158,30 @@
             "promptIdx": 18
           },
           {
+            "clause": "do section stsc",
+            "_row_num": 58,
+            "__rowNum__": 57,
+            "_token_type": "prompt",
+            "_do_section_name": "stsc",
+            "_type": "_section",
+            "promptIdx": 19,
+            "display": {
+              "title": {
+                "text": {
+                  "english": "Children",
+                  "default": "Criancas"
+                }
+              }
+            },
+            "_branch_label_enclosing_screen": "stsc/0"
+          },
+          {
             "_token_type": "prompt",
             "type": "contents",
             "_type": "contents",
-            "_row_num": 58,
-            "_branch_label_enclosing_screen": "parto/_screen58",
-            "promptIdx": 19
+            "_row_num": 59,
+            "_branch_label_enclosing_screen": "parto/_screen59",
+            "promptIdx": 20
           }
         ],
         "validation_tag_map": {
@@ -15312,25 +15343,33 @@
             "operationIdx": 10
           },
           {
-            "_token_type": "exit_section",
-            "clause": "exit section",
+            "clause": "do section stsc",
             "_row_num": 58,
+            "__rowNum__": 57,
+            "_token_type": "do_section",
+            "_do_section_name": "stsc",
             "operationIdx": 11
           },
           {
-            "_row_num": 58,
+            "_token_type": "exit_section",
+            "clause": "exit section",
+            "_row_num": 59,
+            "operationIdx": 12
+          },
+          {
+            "_row_num": 59,
             "_token_type": "begin_screen",
-            "_screen_block": "function() {var activePromptIndicies = [];\nactivePromptIndicies.push(19);\n\nreturn activePromptIndicies;\n}\n",
+            "_screen_block": "function() {var activePromptIndicies = [];\nactivePromptIndicies.push(20);\n\nreturn activePromptIndicies;\n}\n",
             "screen": {
               "hideInBackHistory": true
             },
-            "operationIdx": 12
+            "operationIdx": 13
           },
           {
             "_token_type": "resume",
             "clause": "resume",
-            "_row_num": 58,
-            "operationIdx": 13
+            "_row_num": 59,
+            "operationIdx": 14
           }
         ],
         "branch_label_map": {
@@ -15345,8 +15384,8 @@
           "_screen49": 8,
           "_screen52": 9,
           "_screen55": 10,
-          "_contents": 12,
-          "_screen58": 12
+          "_contents": 13,
+          "_screen59": 13
         }
       },
       "visit": {
@@ -20553,11 +20592,11 @@
           "survey": true,
           "reg": true,
           "parto": true,
+          "stsc": true,
           "visit": true,
           "vac": true,
           "fal": true,
-          "control": true,
-          "stsc": true
+          "control": true
         },
         "prompts": [
           {
