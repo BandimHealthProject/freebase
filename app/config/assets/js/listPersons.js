@@ -129,7 +129,7 @@ function loadPersons() {
 
 function loadChildren() {
     // SQL to load children
-    var sql = "SELECT REGIDC, NOME, REGID, pres, CARTVAC, CONT, OUTDATE, SEX, NOMEMAE, MOR, CASA, FOGAO, BCG, POLIONAS, POLIO1, PENTA1, PCV1, ROX1, POLIO2, PENTA2, PCV2, ROX2, POLIO3, PENTA3, PCV3, VPI, SARAMPO1, FEBAMAREL FROM CRIANCA  WHERE REG = " + region + " AND TAB = " + tabanca + " AND MOR = " + cluster + " GROUP BY REGIDC HAVING MIN(ROWID) AND ESTADO = 1  ORDER BY substr(CONT, instr(CONT, 'Y:')+2, 4) || substr('00'|| trim(substr(CONT, instr(CONT, 'M:')+2, 2),','), -2, 2) || substr('00'|| trim(substr(CONT, instr(CONT, 'D:')+2, 2),','), -2, 2) DESC, NOME";
+    var sql = "SELECT REGIDC, NOME, REGID, pres, CARTVAC, CONT, OUTDATE, SEX, NOMEMAE, MOR, CASA, FOGAO, BCG, POLIONAS, POLIO1, PENTA1, PCV1, ROX1, POLIO2, PENTA2, PCV2, ROX2, POLIO3, PENTA3, PCV3, VPI, SARAMPO1, FEBAMAREL FROM CRIANCA  WHERE REG = " + region + " AND TAB = " + tabanca + " AND MOR = " + cluster + " GROUP BY REGIDC HAVING MIN(ROWID) AND ESTADO = 11  ORDER BY substr(CONT, instr(CONT, 'Y:')+2, 4) || substr('00'|| trim(substr(CONT, instr(CONT, 'M:')+2, 2),','), -2, 2) || substr('00'|| trim(substr(CONT, instr(CONT, 'D:')+2, 2),','), -2, 2) DESC, NOME";
     children = [];
     console.log("Querying database for CRIANCAs...");
     console.log(sql);

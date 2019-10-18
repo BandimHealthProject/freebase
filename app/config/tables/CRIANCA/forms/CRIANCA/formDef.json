@@ -241,30 +241,17 @@
         "_row_num": 18
       },
       {
-        "type": "adate",
-        "name": "CONT",
-        "display": {
-          "prompt": {
-            "text": {
-              "english": "Today",
-              "default": "Today"
-            }
-          }
-        },
-        "_row_num": 19
-      },
-      {
         "clause": "end screen",
-        "_row_num": 20
+        "_row_num": 19
       },
       {
         "clause": "if",
         "condition": "data('change') == '1'",
-        "_row_num": 21
+        "_row_num": 20
       },
       {
         "clause": "begin screen",
-        "_row_num": 22
+        "_row_num": 21
       },
       {
         "type": "text",
@@ -277,7 +264,7 @@
             }
           }
         },
-        "_row_num": 23
+        "_row_num": 22
       },
       {
         "type": "adate",
@@ -290,7 +277,7 @@
             }
           }
         },
-        "_row_num": 24
+        "_row_num": 23
       },
       {
         "type": "select_one",
@@ -304,7 +291,7 @@
             }
           }
         },
-        "_row_num": 25
+        "_row_num": 24
       },
       {
         "type": "text",
@@ -317,7 +304,7 @@
             }
           }
         },
-        "_row_num": 26
+        "_row_num": 25
       },
       {
         "type": "integer",
@@ -330,7 +317,7 @@
             }
           }
         },
-        "_row_num": 27
+        "_row_num": 26
       },
       {
         "type": "integer",
@@ -343,7 +330,7 @@
             }
           }
         },
-        "_row_num": 28
+        "_row_num": 27
       },
       {
         "type": "integer",
@@ -356,15 +343,15 @@
             }
           }
         },
-        "_row_num": 29
+        "_row_num": 28
       },
       {
         "clause": "end screen",
-        "_row_num": 30
+        "_row_num": 29
       },
       {
         "clause": "begin screen",
-        "_row_num": 31
+        "_row_num": 30
       },
       {
         "type": "note",
@@ -376,7 +363,7 @@
             }
           }
         },
-        "_row_num": 32
+        "_row_num": 31
       },
       {
         "type": "note",
@@ -388,7 +375,7 @@
             }
           }
         },
-        "_row_num": 33
+        "_row_num": 32
       },
       {
         "type": "note",
@@ -400,7 +387,7 @@
             }
           }
         },
-        "_row_num": 34
+        "_row_num": 33
       },
       {
         "type": "note",
@@ -412,7 +399,7 @@
             }
           }
         },
-        "_row_num": 35
+        "_row_num": 34
       },
       {
         "type": "note",
@@ -424,7 +411,7 @@
             }
           }
         },
-        "_row_num": 36
+        "_row_num": 35
       },
       {
         "type": "note",
@@ -436,7 +423,7 @@
             }
           }
         },
-        "_row_num": 37
+        "_row_num": 36
       },
       {
         "type": "note",
@@ -448,19 +435,19 @@
             }
           }
         },
-        "_row_num": 38
+        "_row_num": 37
       },
       {
         "clause": "end screen",
-        "_row_num": 39
+        "_row_num": 38
       },
       {
         "clause": "end if",
-        "_row_num": 40
+        "_row_num": 39
       },
       {
         "clause": "do section visit",
-        "_row_num": 41
+        "_row_num": 40
       }
     ],
     "reg": [
@@ -1425,7 +1412,7 @@
             }
           }
         },
-        "constraint": "((adate.diffInYears(data('CONT'), data('EXITDATA'))<1) && (adate.diffInYears(data('EXITDATA'), data('lastvisitdate'))<0) && (data('PRES') == '2' || data('PRES') == '3'))",
+        "constraint": "adate.diffInYears(data('CONT'), data('EXITDATA'))<1 && adate.diffInYears(data('EXITDATA'), data('lastvisitdate'))<0 || (data('PRES') != '2' && data('PRES') != '3')",
         "_row_num": 25
       },
       {
@@ -1901,7 +1888,7 @@
           "prompt": {
             "text": {
               "english": "What are the childs MUAC Mesurements in MM",
-              "default": "Quais são as medidas de MUAC na crianca em MM"
+              "default": "Quais são as medidas de braco na crianca em MM"
             }
           },
           "constraint_message": {
@@ -2782,7 +2769,7 @@
       },
       {
         "clause": "if",
-        "condition": "adate.diffInYears(data('OUTDATE'), data('BCG'))<0 && data('BCG') != null",
+        "condition": "adate.diffInYears(data('OUTDATE'), data('BCG'))<0 && data('BCG') != null && data('BCG') != 'D:2,M:2,Y:1922'",
         "_row_num": 29
       },
       {
@@ -2803,7 +2790,7 @@
       },
       {
         "clause": "if",
-        "condition": "adate.diffInYears(data('OUTDATE'), data('POLIONAS'))<0 && data('POLIONAS') != null",
+        "condition": "adate.diffInYears(data('OUTDATE'), data('POLIONAS'))<0 && data('POLIONAS') != null && data('POLIONAS') != 'D:2,M:2,Y:1922'",
         "_row_num": 32
       },
       {
@@ -3177,7 +3164,7 @@
       },
       {
         "clause": "if",
-        "condition": "adate.diffInYears(data('OUTDATE'), data('PENTA1'))<0  && data('PENTA1') != null",
+        "condition": "adate.diffInYears(data('OUTDATE'), data('PENTA1'))<0  && data('PENTA1') != null && data('PENTA1') != 'D:2,M:2,Y:1922'",
         "_row_num": 94
       },
       {
@@ -3198,7 +3185,7 @@
       },
       {
         "clause": "if",
-        "condition": "adate.diffInYears(data('OUTDATE'), data('POLIO1'))<0  && data('POLIO1') != null",
+        "condition": "adate.diffInYears(data('OUTDATE'), data('POLIO1'))<0  && data('POLIO1') != null && data('POLIO1') != 'D:2,M:2,Y:1922'",
         "_row_num": 97
       },
       {
@@ -3219,7 +3206,7 @@
       },
       {
         "clause": "if",
-        "condition": "adate.diffInYears(data('OUTDATE'), data('PCV1'))<0 && data('PCV1') != null",
+        "condition": "adate.diffInYears(data('OUTDATE'), data('PCV1'))<0 && data('PCV1') != null && data('PCV1') != 'D:2,M:2,Y:1922'",
         "_row_num": 100
       },
       {
@@ -3240,7 +3227,7 @@
       },
       {
         "clause": "if",
-        "condition": "adate.diffInYears(data('OUTDATE'), data('ROX1'))<0  && data('ROX1') != null",
+        "condition": "adate.diffInYears(data('OUTDATE'), data('ROX1'))<0  && data('ROX1') != null && data('ROX1') != 'D:2,M:2,Y:1922'",
         "_row_num": 103
       },
       {
@@ -3614,7 +3601,7 @@
       },
       {
         "clause": "if",
-        "condition": "adate.diffInYears(data('OUTDATE'), data('PENTA2'))<0 && data('PENTA2') != null",
+        "condition": "adate.diffInYears(data('OUTDATE'), data('PENTA2'))<0 && data('PENTA2') != null && data('PENTA2') != 'D:2,M:2,Y:1922'",
         "_row_num": 165
       },
       {
@@ -3635,7 +3622,7 @@
       },
       {
         "clause": "if",
-        "condition": "adate.diffInYears(data('OUTDATE'), data('POLIO2'))<0 && data('POLIO2') != null",
+        "condition": "adate.diffInYears(data('OUTDATE'), data('POLIO2'))<0 && data('POLIO2') != null && data('POLIO2') != 'D:2,M:2,Y:1922'",
         "_row_num": 168
       },
       {
@@ -3656,7 +3643,7 @@
       },
       {
         "clause": "if",
-        "condition": "adate.diffInYears(data('OUTDATE'), data('PCV2'))<0 && data('PCV2') != null",
+        "condition": "adate.diffInYears(data('OUTDATE'), data('PCV2'))<0 && data('PCV2') != null && data('PCV2') != 'D:2,M:2,Y:1922'",
         "_row_num": 171
       },
       {
@@ -3677,7 +3664,7 @@
       },
       {
         "clause": "if",
-        "condition": "adate.diffInYears(data('OUTDATE'), data('ROX2'))<0 && data('ROX2') != null",
+        "condition": "adate.diffInYears(data('OUTDATE'), data('ROX2'))<0 && data('ROX2') != null && data('ROX2') != 'D:2,M:2,Y:1922'",
         "_row_num": 174
       },
       {
@@ -3698,7 +3685,7 @@
       },
       {
         "clause": "if",
-        "condition": "adate.diffInYears(data('PENTA1'), data('PENTA2'))<0 && data('PENTA2') != null",
+        "condition": "adate.diffInYears(data('PENTA1'), data('PENTA2'))<0 && data('PENTA2') != null && data('PENTA2') != 'D:2,M:2,Y:1922'",
         "_row_num": 177
       },
       {
@@ -3719,7 +3706,7 @@
       },
       {
         "clause": "if",
-        "condition": "adate.diffInYears(data('POLIO1'), data('POLIO2'))<0  && data('POLIO2') != null",
+        "condition": "adate.diffInYears(data('POLIO1'), data('POLIO2'))<0  && data('POLIO2') != null && data('POLIO2') != 'D:2,M:2,Y:1922'",
         "_row_num": 180
       },
       {
@@ -3740,7 +3727,7 @@
       },
       {
         "clause": "if",
-        "condition": "adate.diffInYears(data('PCV1'), data('PCV2'))<0  && data('PCV2') != null",
+        "condition": "adate.diffInYears(data('PCV1'), data('PCV2'))<0  && data('PCV2') != null && data('PCV2') != 'D:2,M:2,Y:1922'",
         "_row_num": 183
       },
       {
@@ -3761,7 +3748,7 @@
       },
       {
         "clause": "if",
-        "condition": "adate.diffInYears(data('ROX1'), data('ROX2'))<0  && data('ROX2') != null",
+        "condition": "adate.diffInYears(data('ROX1'), data('ROX2'))<0  && data('ROX2') != null && data('ROX2') != 'D:2,M:2,Y:1922'",
         "_row_num": 186
       },
       {
@@ -4135,7 +4122,7 @@
       },
       {
         "clause": "if",
-        "condition": "adate.diffInYears(data('OUTDATE'), data('PENTA3'))<0  && data('PENTA3') != null",
+        "condition": "adate.diffInYears(data('OUTDATE'), data('PENTA3'))<0  && data('PENTA3') != null && data('PENTA3') != 'D:2,M:2,Y:1922'",
         "_row_num": 248
       },
       {
@@ -4156,7 +4143,7 @@
       },
       {
         "clause": "if",
-        "condition": "adate.diffInYears(data('OUTDATE'), data('POLIO3'))<0 && data('POLIO3') != null",
+        "condition": "adate.diffInYears(data('OUTDATE'), data('POLIO3'))<0 && data('POLIO3') != null && data('POLIO3') != 'D:2,M:2,Y:1922'",
         "_row_num": 251
       },
       {
@@ -4177,7 +4164,7 @@
       },
       {
         "clause": "if",
-        "condition": "adate.diffInYears(data('OUTDATE'), data('PCV3'))<0 && data('PCV3') != null",
+        "condition": "adate.diffInYears(data('OUTDATE'), data('PCV3'))<0 && data('PCV3') != null && data('PCV3') != 'D:2,M:2,Y:1922'",
         "_row_num": 254
       },
       {
@@ -4198,7 +4185,7 @@
       },
       {
         "clause": "if",
-        "condition": "adate.diffInYears(data('OUTDATE'), data('VPI'))<0 && data('VPI') != null",
+        "condition": "adate.diffInYears(data('OUTDATE'), data('VPI'))<0 && data('VPI') != null && data('VPI') != 'D:2,M:2,Y:1922'",
         "_row_num": 257
       },
       {
@@ -4219,7 +4206,7 @@
       },
       {
         "clause": "if",
-        "condition": "adate.diffInYears(data('PENTA2'), data('PENTA3'))<0  && data('PENTA3') != null",
+        "condition": "adate.diffInYears(data('PENTA2'), data('PENTA3'))<0  && data('PENTA3') != null && data('PENTA3') != 'D:2,M:2,Y:1922'",
         "_row_num": 260
       },
       {
@@ -4240,7 +4227,7 @@
       },
       {
         "clause": "if",
-        "condition": "adate.diffInYears(data('POLIO2'), data('POLIO3'))<0  && data('POLIO3') != null",
+        "condition": "adate.diffInYears(data('POLIO2'), data('POLIO3'))<0  && data('POLIO3') != null && data('POLIO3') != 'D:2,M:2,Y:1922'",
         "_row_num": 263
       },
       {
@@ -4261,7 +4248,7 @@
       },
       {
         "clause": "if",
-        "condition": "adate.diffInYears(data('PCV2'), data('PCV3'))<0  && data('PCV3') != null",
+        "condition": "adate.diffInYears(data('PCV2'), data('PCV3'))<0  && data('PCV3') != null && data('PCV3') != 'D:2,M:2,Y:1922'",
         "_row_num": 266
       },
       {
@@ -4282,7 +4269,7 @@
       },
       {
         "clause": "if",
-        "condition": "adate.diffInYears(data('PENTA1'), data('PENTA3'))<0  && data('PENTA3') != null",
+        "condition": "adate.diffInYears(data('PENTA1'), data('PENTA3'))<0  && data('PENTA3') != null && data('PENTA3') != 'D:2,M:2,Y:1922'",
         "_row_num": 269
       },
       {
@@ -4303,7 +4290,7 @@
       },
       {
         "clause": "if",
-        "condition": "adate.diffInYears(data('POLIO1'), data('POLIO3'))<0  && data('POLIO3') != null",
+        "condition": "adate.diffInYears(data('POLIO1'), data('POLIO3'))<0  && data('POLIO3') != null && data('POLIO3') != 'D:2,M:2,Y:1922'",
         "_row_num": 272
       },
       {
@@ -4324,7 +4311,7 @@
       },
       {
         "clause": "if",
-        "condition": "adate.diffInYears(data('PCV1'), data('PCV3'))<0  && data('PCV3') != null",
+        "condition": "adate.diffInYears(data('PCV1'), data('PCV3'))<0  && data('PCV3') != null && data('PCV3') != 'D:2,M:2,Y:1922'",
         "_row_num": 275
       },
       {
@@ -4503,7 +4490,7 @@
       },
       {
         "clause": "if",
-        "condition": "adate.diffInYears(data('OUTDATE'), data('SARAMPO1'))<0 && data('SARAMPO') != null",
+        "condition": "adate.diffInYears(data('OUTDATE'), data('SARAMPO1'))<0 && data('SARAMPO') != null && data('SARAMPO') != 'D:2,M:2,Y:1922'",
         "_row_num": 304
       },
       {
@@ -4524,7 +4511,7 @@
       },
       {
         "clause": "if",
-        "condition": "adate.diffInYears(data('OUTDATE'), data('FEBAMAREL'))<0 && data('FEBAMAREL') != null",
+        "condition": "adate.diffInYears(data('OUTDATE'), data('FEBAMAREL'))<0 && data('FEBAMAREL') != null && data('FEBAMAREL') != 'D:2,M:2,Y:1922'",
         "_row_num": 307
       },
       {
@@ -10772,7 +10759,7 @@
         "type": "integer",
         "_defn": [
           {
-            "_row_num": 28,
+            "_row_num": 27,
             "section_name": "stsc"
           },
           {
@@ -10940,10 +10927,6 @@
         "_row_num": 2,
         "__rowNum__": 1,
         "_defn": [
-          {
-            "_row_num": 19,
-            "section_name": "stsc"
-          },
           {
             "_row_num": 53,
             "section_name": "model"
@@ -11459,7 +11442,7 @@
         "type": "integer",
         "_defn": [
           {
-            "_row_num": 29,
+            "_row_num": 28,
             "section_name": "stsc"
           },
           {
@@ -11765,7 +11748,7 @@
         "type": "integer",
         "_defn": [
           {
-            "_row_num": 27,
+            "_row_num": 26,
             "section_name": "stsc"
           },
           {
@@ -11811,7 +11794,7 @@
         "type": "string",
         "_defn": [
           {
-            "_row_num": 23,
+            "_row_num": 22,
             "section_name": "stsc"
           },
           {
@@ -11862,7 +11845,7 @@
         "type": "string",
         "_defn": [
           {
-            "_row_num": 26,
+            "_row_num": 25,
             "section_name": "stsc"
           },
           {
@@ -11913,7 +11896,7 @@
         "__rowNum__": 1,
         "_defn": [
           {
-            "_row_num": 24,
+            "_row_num": 23,
             "section_name": "stsc"
           },
           {
@@ -13159,7 +13142,7 @@
         "valuesList": "sex",
         "_defn": [
           {
-            "_row_num": 25,
+            "_row_num": 24,
             "section_name": "stsc"
           },
           {
@@ -13816,24 +13799,6 @@
             "promptIdx": 9
           },
           {
-            "type": "adate",
-            "name": "CONT",
-            "display": {
-              "prompt": {
-                "text": {
-                  "english": "Today",
-                  "default": "Today"
-                }
-              }
-            },
-            "_row_num": 19,
-            "__rowNum__": 18,
-            "_token_type": "prompt",
-            "_type": "adate",
-            "_branch_label_enclosing_screen": "stsc/_screen2",
-            "promptIdx": 10
-          },
-          {
             "type": "text",
             "name": "NOME",
             "display": {
@@ -13844,12 +13809,12 @@
                 }
               }
             },
-            "_row_num": 23,
-            "__rowNum__": 22,
+            "_row_num": 22,
+            "__rowNum__": 21,
             "_token_type": "prompt",
             "_type": "text",
-            "_branch_label_enclosing_screen": "stsc/_screen22",
-            "promptIdx": 11
+            "_branch_label_enclosing_screen": "stsc/_screen21",
+            "promptIdx": 10
           },
           {
             "type": "adate",
@@ -13862,12 +13827,12 @@
                 }
               }
             },
-            "_row_num": 24,
-            "__rowNum__": 23,
+            "_row_num": 23,
+            "__rowNum__": 22,
             "_token_type": "prompt",
             "_type": "adate",
-            "_branch_label_enclosing_screen": "stsc/_screen22",
-            "promptIdx": 12
+            "_branch_label_enclosing_screen": "stsc/_screen21",
+            "promptIdx": 11
           },
           {
             "type": "select_one",
@@ -13881,12 +13846,12 @@
                 }
               }
             },
-            "_row_num": 25,
-            "__rowNum__": 24,
+            "_row_num": 24,
+            "__rowNum__": 23,
             "_token_type": "prompt",
             "_type": "select_one",
-            "_branch_label_enclosing_screen": "stsc/_screen22",
-            "promptIdx": 13
+            "_branch_label_enclosing_screen": "stsc/_screen21",
+            "promptIdx": 12
           },
           {
             "type": "text",
@@ -13899,12 +13864,12 @@
                 }
               }
             },
-            "_row_num": 26,
-            "__rowNum__": 25,
+            "_row_num": 25,
+            "__rowNum__": 24,
             "_token_type": "prompt",
             "_type": "text",
-            "_branch_label_enclosing_screen": "stsc/_screen22",
-            "promptIdx": 14
+            "_branch_label_enclosing_screen": "stsc/_screen21",
+            "promptIdx": 13
           },
           {
             "type": "integer",
@@ -13917,12 +13882,12 @@
                 }
               }
             },
-            "_row_num": 27,
-            "__rowNum__": 26,
+            "_row_num": 26,
+            "__rowNum__": 25,
             "_token_type": "prompt",
             "_type": "integer",
-            "_branch_label_enclosing_screen": "stsc/_screen22",
-            "promptIdx": 15
+            "_branch_label_enclosing_screen": "stsc/_screen21",
+            "promptIdx": 14
           },
           {
             "type": "integer",
@@ -13935,12 +13900,12 @@
                 }
               }
             },
-            "_row_num": 28,
-            "__rowNum__": 27,
+            "_row_num": 27,
+            "__rowNum__": 26,
             "_token_type": "prompt",
             "_type": "integer",
-            "_branch_label_enclosing_screen": "stsc/_screen22",
-            "promptIdx": 16
+            "_branch_label_enclosing_screen": "stsc/_screen21",
+            "promptIdx": 15
           },
           {
             "type": "integer",
@@ -13953,12 +13918,12 @@
                 }
               }
             },
-            "_row_num": 29,
-            "__rowNum__": 28,
+            "_row_num": 28,
+            "__rowNum__": 27,
             "_token_type": "prompt",
             "_type": "integer",
-            "_branch_label_enclosing_screen": "stsc/_screen22",
-            "promptIdx": 17
+            "_branch_label_enclosing_screen": "stsc/_screen21",
+            "promptIdx": 16
           },
           {
             "type": "note",
@@ -13970,12 +13935,12 @@
                 }
               }
             },
-            "_row_num": 32,
-            "__rowNum__": 31,
+            "_row_num": 31,
+            "__rowNum__": 30,
             "_token_type": "prompt",
             "_type": "note",
-            "_branch_label_enclosing_screen": "stsc/_screen31",
-            "promptIdx": 18
+            "_branch_label_enclosing_screen": "stsc/_screen30",
+            "promptIdx": 17
           },
           {
             "type": "note",
@@ -13987,12 +13952,12 @@
                 }
               }
             },
-            "_row_num": 33,
-            "__rowNum__": 32,
+            "_row_num": 32,
+            "__rowNum__": 31,
             "_token_type": "prompt",
             "_type": "note",
-            "_branch_label_enclosing_screen": "stsc/_screen31",
-            "promptIdx": 19
+            "_branch_label_enclosing_screen": "stsc/_screen30",
+            "promptIdx": 18
           },
           {
             "type": "note",
@@ -14004,12 +13969,12 @@
                 }
               }
             },
-            "_row_num": 34,
-            "__rowNum__": 33,
+            "_row_num": 33,
+            "__rowNum__": 32,
             "_token_type": "prompt",
             "_type": "note",
-            "_branch_label_enclosing_screen": "stsc/_screen31",
-            "promptIdx": 20
+            "_branch_label_enclosing_screen": "stsc/_screen30",
+            "promptIdx": 19
           },
           {
             "type": "note",
@@ -14021,12 +13986,12 @@
                 }
               }
             },
-            "_row_num": 35,
-            "__rowNum__": 34,
+            "_row_num": 34,
+            "__rowNum__": 33,
             "_token_type": "prompt",
             "_type": "note",
-            "_branch_label_enclosing_screen": "stsc/_screen31",
-            "promptIdx": 21
+            "_branch_label_enclosing_screen": "stsc/_screen30",
+            "promptIdx": 20
           },
           {
             "type": "note",
@@ -14038,12 +14003,12 @@
                 }
               }
             },
-            "_row_num": 36,
-            "__rowNum__": 35,
+            "_row_num": 35,
+            "__rowNum__": 34,
             "_token_type": "prompt",
             "_type": "note",
-            "_branch_label_enclosing_screen": "stsc/_screen31",
-            "promptIdx": 22
+            "_branch_label_enclosing_screen": "stsc/_screen30",
+            "promptIdx": 21
           },
           {
             "type": "note",
@@ -14055,12 +14020,12 @@
                 }
               }
             },
-            "_row_num": 37,
-            "__rowNum__": 36,
+            "_row_num": 36,
+            "__rowNum__": 35,
             "_token_type": "prompt",
             "_type": "note",
-            "_branch_label_enclosing_screen": "stsc/_screen31",
-            "promptIdx": 23
+            "_branch_label_enclosing_screen": "stsc/_screen30",
+            "promptIdx": 22
           },
           {
             "type": "note",
@@ -14072,21 +14037,21 @@
                 }
               }
             },
-            "_row_num": 38,
-            "__rowNum__": 37,
+            "_row_num": 37,
+            "__rowNum__": 36,
             "_token_type": "prompt",
             "_type": "note",
-            "_branch_label_enclosing_screen": "stsc/_screen31",
-            "promptIdx": 24
+            "_branch_label_enclosing_screen": "stsc/_screen30",
+            "promptIdx": 23
           },
           {
             "clause": "do section visit",
-            "_row_num": 41,
-            "__rowNum__": 40,
+            "_row_num": 40,
+            "__rowNum__": 39,
             "_token_type": "prompt",
             "_do_section_name": "visit",
             "_type": "_section",
-            "promptIdx": 25,
+            "promptIdx": 24,
             "display": {
               "title": {
                 "text": {
@@ -14101,9 +14066,9 @@
             "_token_type": "prompt",
             "type": "contents",
             "_type": "contents",
-            "_row_num": 42,
-            "_branch_label_enclosing_screen": "stsc/_screen42",
-            "promptIdx": 26
+            "_row_num": 41,
+            "_branch_label_enclosing_screen": "stsc/_screen41",
+            "promptIdx": 25
           }
         ],
         "validation_tag_map": {
@@ -14117,68 +14082,68 @@
             "_token_type": "begin_screen",
             "_end_screen_clause": {
               "clause": "end screen",
-              "_row_num": 20,
-              "__rowNum__": 19,
+              "_row_num": 19,
+              "__rowNum__": 18,
               "_token_type": "end_screen"
             },
-            "_screen_block": "function() {var activePromptIndicies = [];\nactivePromptIndicies.push(0);\nactivePromptIndicies.push(1);\nif (data('SEX') =='1') {\nactivePromptIndicies.push(2);\n}\nif (data('SEX') =='2') {\nactivePromptIndicies.push(3);\n}\nif (data('SEX') =='3') {\nactivePromptIndicies.push(4);\n}\nactivePromptIndicies.push(5);\nactivePromptIndicies.push(6);\nactivePromptIndicies.push(7);\nactivePromptIndicies.push(8);\nactivePromptIndicies.push(9);\nactivePromptIndicies.push(10);\n\nreturn activePromptIndicies;\n}\n",
+            "_screen_block": "function() {var activePromptIndicies = [];\nactivePromptIndicies.push(0);\nactivePromptIndicies.push(1);\nif (data('SEX') =='1') {\nactivePromptIndicies.push(2);\n}\nif (data('SEX') =='2') {\nactivePromptIndicies.push(3);\n}\nif (data('SEX') =='3') {\nactivePromptIndicies.push(4);\n}\nactivePromptIndicies.push(5);\nactivePromptIndicies.push(6);\nactivePromptIndicies.push(7);\nactivePromptIndicies.push(8);\nactivePromptIndicies.push(9);\n\nreturn activePromptIndicies;\n}\n",
             "operationIdx": 0
           },
           {
             "clause": "if",
             "condition": "data('change') == '1'",
-            "_row_num": 21,
-            "__rowNum__": 20,
+            "_row_num": 20,
+            "__rowNum__": 19,
             "_token_type": "goto_label",
-            "_branch_label": "_then21",
+            "_branch_label": "_then20",
             "operationIdx": 1
           },
           {
             "clause": "end if",
             "_token_type": "goto_label",
-            "_branch_label": "_else40",
-            "_row_num": 40,
+            "_branch_label": "_else39",
+            "_row_num": 39,
             "operationIdx": 2
           },
           {
             "clause": "begin screen",
-            "_row_num": 22,
-            "__rowNum__": 21,
+            "_row_num": 21,
+            "__rowNum__": 20,
             "_token_type": "begin_screen",
             "_end_screen_clause": {
               "clause": "end screen",
-              "_row_num": 30,
-              "__rowNum__": 29,
+              "_row_num": 29,
+              "__rowNum__": 28,
               "_token_type": "end_screen"
             },
-            "_screen_block": "function() {var activePromptIndicies = [];\nactivePromptIndicies.push(11);\nactivePromptIndicies.push(12);\nactivePromptIndicies.push(13);\nactivePromptIndicies.push(14);\nactivePromptIndicies.push(15);\nactivePromptIndicies.push(16);\nactivePromptIndicies.push(17);\n\nreturn activePromptIndicies;\n}\n",
+            "_screen_block": "function() {var activePromptIndicies = [];\nactivePromptIndicies.push(10);\nactivePromptIndicies.push(11);\nactivePromptIndicies.push(12);\nactivePromptIndicies.push(13);\nactivePromptIndicies.push(14);\nactivePromptIndicies.push(15);\nactivePromptIndicies.push(16);\n\nreturn activePromptIndicies;\n}\n",
             "operationIdx": 3
           },
           {
             "clause": "begin screen",
-            "_row_num": 31,
-            "__rowNum__": 30,
+            "_row_num": 30,
+            "__rowNum__": 29,
             "_token_type": "begin_screen",
             "_end_screen_clause": {
               "clause": "end screen",
-              "_row_num": 39,
-              "__rowNum__": 38,
+              "_row_num": 38,
+              "__rowNum__": 37,
               "_token_type": "end_screen"
             },
-            "_screen_block": "function() {var activePromptIndicies = [];\nactivePromptIndicies.push(18);\nactivePromptIndicies.push(19);\nactivePromptIndicies.push(20);\nactivePromptIndicies.push(21);\nactivePromptIndicies.push(22);\nactivePromptIndicies.push(23);\nactivePromptIndicies.push(24);\n\nreturn activePromptIndicies;\n}\n",
+            "_screen_block": "function() {var activePromptIndicies = [];\nactivePromptIndicies.push(17);\nactivePromptIndicies.push(18);\nactivePromptIndicies.push(19);\nactivePromptIndicies.push(20);\nactivePromptIndicies.push(21);\nactivePromptIndicies.push(22);\nactivePromptIndicies.push(23);\n\nreturn activePromptIndicies;\n}\n",
             "operationIdx": 4
           },
           {
             "clause": "end if",
             "_token_type": "goto_label",
-            "_branch_label": "_endif40",
-            "_row_num": 40,
+            "_branch_label": "_endif39",
+            "_row_num": 39,
             "operationIdx": 5
           },
           {
             "clause": "do section visit",
-            "_row_num": 41,
-            "__rowNum__": 40,
+            "_row_num": 40,
+            "__rowNum__": 39,
             "_token_type": "do_section",
             "_do_section_name": "visit",
             "operationIdx": 6
@@ -14186,13 +14151,13 @@
           {
             "_token_type": "exit_section",
             "clause": "exit section",
-            "_row_num": 42,
+            "_row_num": 41,
             "operationIdx": 7
           },
           {
-            "_row_num": 42,
+            "_row_num": 41,
             "_token_type": "begin_screen",
-            "_screen_block": "function() {var activePromptIndicies = [];\nactivePromptIndicies.push(26);\n\nreturn activePromptIndicies;\n}\n",
+            "_screen_block": "function() {var activePromptIndicies = [];\nactivePromptIndicies.push(25);\n\nreturn activePromptIndicies;\n}\n",
             "screen": {
               "hideInBackHistory": true
             },
@@ -14201,19 +14166,19 @@
           {
             "_token_type": "resume",
             "clause": "resume",
-            "_row_num": 42,
+            "_row_num": 41,
             "operationIdx": 9
           }
         ],
         "branch_label_map": {
           "_screen2": 0,
-          "_then21": 3,
-          "_screen22": 3,
-          "_screen31": 4,
-          "_else40": 6,
-          "_endif40": 6,
+          "_then20": 3,
+          "_screen21": 3,
+          "_screen30": 4,
+          "_else39": 6,
+          "_endif39": 6,
           "_contents": 8,
-          "_screen42": 8
+          "_screen41": 8
         }
       },
       "reg": {
@@ -15573,7 +15538,7 @@
                 }
               }
             },
-            "constraint": "((adate.diffInYears(data('CONT'), data('EXITDATA'))<1) && (adate.diffInYears(data('EXITDATA'), data('lastvisitdate'))<0) && (data('PRES') == '2' || data('PRES') == '3'))",
+            "constraint": "adate.diffInYears(data('CONT'), data('EXITDATA'))<1 && adate.diffInYears(data('EXITDATA'), data('lastvisitdate'))<0 || (data('PRES') != '2' && data('PRES') != '3')",
             "_row_num": 25,
             "__rowNum__": 24,
             "_token_type": "prompt",
@@ -15988,7 +15953,7 @@
               "prompt": {
                 "text": {
                   "english": "What are the childs MUAC Mesurements in MM",
-                  "default": "Quais são as medidas de MUAC na crianca em MM"
+                  "default": "Quais são as medidas de braco na crianca em MM"
                 }
               },
               "constraint_message": {
@@ -18933,7 +18898,7 @@
               "__rowNum__": 91,
               "_token_type": "end_screen"
             },
-            "_screen_block": "function() {var activePromptIndicies = [];\nif (adate.diffInYears(data('OUTDATE'), data('BCG'))<0 && data('BCG') != null) {\nactivePromptIndicies.push(8);\n}\nif (adate.diffInYears(data('OUTDATE'), data('POLIONAS'))<0 && data('POLIONAS') != null) {\nactivePromptIndicies.push(9);\n}\nif (data('PENTA1') == null) {\nactivePromptIndicies.push(10);\nactivePromptIndicies.push(11);\nif (data('penta1ng') != null) {\nassign('PENTA1', \"D:2,M:2,Y:1922\");\n}\n}\nelse {\nactivePromptIndicies.push(12);\nif (data('PENTA1CHECK') == '2') {\nactivePromptIndicies.push(13);\n}\n}\nif (data('POLIO1') == null) {\nactivePromptIndicies.push(14);\nactivePromptIndicies.push(15);\nif (data('polio1ng') == \"1\") {\nassign('POLIO1', data('PENTA1'));\n}\nif (data('polio1ng') == \"2\") {\nassign('POLIO1', \"D:2,M:2,Y:1922\");\n}\n}\nelse {\nactivePromptIndicies.push(16);\nif (data('POLIO1CHECK') == '2') {\nactivePromptIndicies.push(17);\n}\n}\nif (data('PCV1') == null) {\nactivePromptIndicies.push(18);\nactivePromptIndicies.push(19);\nif (data('pcv1ng') == '1') {\nassign('PCV1', data('PENTA1'));\n}\nif (data('pcv1ng') == '2') {\nassign('PCV1', \"D:2,M:2,Y:1922\");\n}\n}\nelse {\nactivePromptIndicies.push(20);\nif (data('PCV1CHECK') == '2') {\nactivePromptIndicies.push(21);\n}\n}\nif (data('ROX1') == null) {\nactivePromptIndicies.push(22);\nactivePromptIndicies.push(23);\nif (data('rox1ng') == '1') {\nassign('ROX1', data('PENTA1'));\n}\nif (data('rox1ng') == '2') {\nassign('ROX1', \"D:2,M:2,Y:1922\");\n}\n}\nelse {\nactivePromptIndicies.push(24);\nif (data('ROX1CHECK') == '2') {\nactivePromptIndicies.push(25);\n}\n}\n\nreturn activePromptIndicies;\n}\n",
+            "_screen_block": "function() {var activePromptIndicies = [];\nif (adate.diffInYears(data('OUTDATE'), data('BCG'))<0 && data('BCG') != null && data('BCG') != 'D:2,M:2,Y:1922') {\nactivePromptIndicies.push(8);\n}\nif (adate.diffInYears(data('OUTDATE'), data('POLIONAS'))<0 && data('POLIONAS') != null && data('POLIONAS') != 'D:2,M:2,Y:1922') {\nactivePromptIndicies.push(9);\n}\nif (data('PENTA1') == null) {\nactivePromptIndicies.push(10);\nactivePromptIndicies.push(11);\nif (data('penta1ng') != null) {\nassign('PENTA1', \"D:2,M:2,Y:1922\");\n}\n}\nelse {\nactivePromptIndicies.push(12);\nif (data('PENTA1CHECK') == '2') {\nactivePromptIndicies.push(13);\n}\n}\nif (data('POLIO1') == null) {\nactivePromptIndicies.push(14);\nactivePromptIndicies.push(15);\nif (data('polio1ng') == \"1\") {\nassign('POLIO1', data('PENTA1'));\n}\nif (data('polio1ng') == \"2\") {\nassign('POLIO1', \"D:2,M:2,Y:1922\");\n}\n}\nelse {\nactivePromptIndicies.push(16);\nif (data('POLIO1CHECK') == '2') {\nactivePromptIndicies.push(17);\n}\n}\nif (data('PCV1') == null) {\nactivePromptIndicies.push(18);\nactivePromptIndicies.push(19);\nif (data('pcv1ng') == '1') {\nassign('PCV1', data('PENTA1'));\n}\nif (data('pcv1ng') == '2') {\nassign('PCV1', \"D:2,M:2,Y:1922\");\n}\n}\nelse {\nactivePromptIndicies.push(20);\nif (data('PCV1CHECK') == '2') {\nactivePromptIndicies.push(21);\n}\n}\nif (data('ROX1') == null) {\nactivePromptIndicies.push(22);\nactivePromptIndicies.push(23);\nif (data('rox1ng') == '1') {\nassign('ROX1', data('PENTA1'));\n}\nif (data('rox1ng') == '2') {\nassign('ROX1', \"D:2,M:2,Y:1922\");\n}\n}\nelse {\nactivePromptIndicies.push(24);\nif (data('ROX1CHECK') == '2') {\nactivePromptIndicies.push(25);\n}\n}\n\nreturn activePromptIndicies;\n}\n",
             "operationIdx": 1
           },
           {
@@ -18947,7 +18912,7 @@
               "__rowNum__": 162,
               "_token_type": "end_screen"
             },
-            "_screen_block": "function() {var activePromptIndicies = [];\nif (adate.diffInYears(data('OUTDATE'), data('PENTA1'))<0  && data('PENTA1') != null) {\nactivePromptIndicies.push(26);\n}\nif (adate.diffInYears(data('OUTDATE'), data('POLIO1'))<0  && data('POLIO1') != null) {\nactivePromptIndicies.push(27);\n}\nif (adate.diffInYears(data('OUTDATE'), data('PCV1'))<0 && data('PCV1') != null) {\nactivePromptIndicies.push(28);\n}\nif (adate.diffInYears(data('OUTDATE'), data('ROX1'))<0  && data('ROX1') != null) {\nactivePromptIndicies.push(29);\n}\nif (data('PENTA2') == null) {\nactivePromptIndicies.push(30);\nactivePromptIndicies.push(31);\nif (data('penta2ng') != null) {\nassign('PENTA2', \"D:2,M:2,Y:1922\");\n}\n}\nelse {\nactivePromptIndicies.push(32);\nif (data('PENTA2CHECK') == '2') {\nactivePromptIndicies.push(33);\n}\n}\nif (data('POLIO2') == null) {\nactivePromptIndicies.push(34);\nactivePromptIndicies.push(35);\nif (data('polio2ng') == '1') {\nassign('POLIO2', data('PENTA2'));\n}\nif (data('polio2ng') == '2') {\nassign('POLIO2', \"D:2,M:2,Y:1922\");\n}\n}\nelse {\nactivePromptIndicies.push(36);\nif (data('POLIO2CHECK') == '2') {\nactivePromptIndicies.push(37);\n}\n}\nif (data('PCV2') == null) {\nactivePromptIndicies.push(38);\nactivePromptIndicies.push(39);\nif (data('pcv2ng') == '1') {\nassign('PCV2', data('PENTA2'));\n}\nif (data('pcv2ng') == '2') {\nassign('PCV2', \"D:2,M:2,Y:1922\");\n}\n}\nelse {\nactivePromptIndicies.push(40);\nif (data('PCV2CHECK') == '2') {\nactivePromptIndicies.push(41);\n}\n}\nif (data('ROX2') == null) {\nactivePromptIndicies.push(42);\nactivePromptIndicies.push(43);\nif (data('rox2ng') == '1') {\nassign('ROX2', data('PENTA2'));\n}\nif (data('rox2ng') == '2') {\nassign('ROX2', \"D:2,M:2,Y:1922\");\n}\n}\nelse {\nactivePromptIndicies.push(44);\nif (data('ROX2CHECK') == '2') {\nactivePromptIndicies.push(45);\n}\n}\n\nreturn activePromptIndicies;\n}\n",
+            "_screen_block": "function() {var activePromptIndicies = [];\nif (adate.diffInYears(data('OUTDATE'), data('PENTA1'))<0  && data('PENTA1') != null && data('PENTA1') != 'D:2,M:2,Y:1922') {\nactivePromptIndicies.push(26);\n}\nif (adate.diffInYears(data('OUTDATE'), data('POLIO1'))<0  && data('POLIO1') != null && data('POLIO1') != 'D:2,M:2,Y:1922') {\nactivePromptIndicies.push(27);\n}\nif (adate.diffInYears(data('OUTDATE'), data('PCV1'))<0 && data('PCV1') != null && data('PCV1') != 'D:2,M:2,Y:1922') {\nactivePromptIndicies.push(28);\n}\nif (adate.diffInYears(data('OUTDATE'), data('ROX1'))<0  && data('ROX1') != null && data('ROX1') != 'D:2,M:2,Y:1922') {\nactivePromptIndicies.push(29);\n}\nif (data('PENTA2') == null) {\nactivePromptIndicies.push(30);\nactivePromptIndicies.push(31);\nif (data('penta2ng') != null) {\nassign('PENTA2', \"D:2,M:2,Y:1922\");\n}\n}\nelse {\nactivePromptIndicies.push(32);\nif (data('PENTA2CHECK') == '2') {\nactivePromptIndicies.push(33);\n}\n}\nif (data('POLIO2') == null) {\nactivePromptIndicies.push(34);\nactivePromptIndicies.push(35);\nif (data('polio2ng') == '1') {\nassign('POLIO2', data('PENTA2'));\n}\nif (data('polio2ng') == '2') {\nassign('POLIO2', \"D:2,M:2,Y:1922\");\n}\n}\nelse {\nactivePromptIndicies.push(36);\nif (data('POLIO2CHECK') == '2') {\nactivePromptIndicies.push(37);\n}\n}\nif (data('PCV2') == null) {\nactivePromptIndicies.push(38);\nactivePromptIndicies.push(39);\nif (data('pcv2ng') == '1') {\nassign('PCV2', data('PENTA2'));\n}\nif (data('pcv2ng') == '2') {\nassign('PCV2', \"D:2,M:2,Y:1922\");\n}\n}\nelse {\nactivePromptIndicies.push(40);\nif (data('PCV2CHECK') == '2') {\nactivePromptIndicies.push(41);\n}\n}\nif (data('ROX2') == null) {\nactivePromptIndicies.push(42);\nactivePromptIndicies.push(43);\nif (data('rox2ng') == '1') {\nassign('ROX2', data('PENTA2'));\n}\nif (data('rox2ng') == '2') {\nassign('ROX2', \"D:2,M:2,Y:1922\");\n}\n}\nelse {\nactivePromptIndicies.push(44);\nif (data('ROX2CHECK') == '2') {\nactivePromptIndicies.push(45);\n}\n}\n\nreturn activePromptIndicies;\n}\n",
             "operationIdx": 2
           },
           {
@@ -18961,7 +18926,7 @@
               "__rowNum__": 245,
               "_token_type": "end_screen"
             },
-            "_screen_block": "function() {var activePromptIndicies = [];\nif (adate.diffInYears(data('OUTDATE'), data('PENTA2'))<0 && data('PENTA2') != null) {\nactivePromptIndicies.push(46);\n}\nif (adate.diffInYears(data('OUTDATE'), data('POLIO2'))<0 && data('POLIO2') != null) {\nactivePromptIndicies.push(47);\n}\nif (adate.diffInYears(data('OUTDATE'), data('PCV2'))<0 && data('PCV2') != null) {\nactivePromptIndicies.push(48);\n}\nif (adate.diffInYears(data('OUTDATE'), data('ROX2'))<0 && data('ROX2') != null) {\nactivePromptIndicies.push(49);\n}\nif (adate.diffInYears(data('PENTA1'), data('PENTA2'))<0 && data('PENTA2') != null) {\nactivePromptIndicies.push(50);\n}\nif (adate.diffInYears(data('POLIO1'), data('POLIO2'))<0  && data('POLIO2') != null) {\nactivePromptIndicies.push(51);\n}\nif (adate.diffInYears(data('PCV1'), data('PCV2'))<0  && data('PCV2') != null) {\nactivePromptIndicies.push(52);\n}\nif (adate.diffInYears(data('ROX1'), data('ROX2'))<0  && data('ROX2') != null) {\nactivePromptIndicies.push(53);\n}\nif (data('PENTA3') == null) {\nactivePromptIndicies.push(54);\nactivePromptIndicies.push(55);\nif (data('penta3ng') != null) {\nassign('PENTA3', \"D:2,M:2,Y:1922\");\n}\n}\nelse {\nactivePromptIndicies.push(56);\nif (data('PENTA3CHECK') == '2') {\nactivePromptIndicies.push(57);\n}\n}\nif (data('POLIO3') == null) {\nactivePromptIndicies.push(58);\nactivePromptIndicies.push(59);\nif (data('polio3ng') == '1') {\nassign('POLIO3', data('PENTA3'));\n}\nif (data('polio3ng') == '2') {\nassign('POLIO3', \"D:2,M:2,Y:1922\");\n}\n}\nelse {\nactivePromptIndicies.push(60);\nif (data('POLIO3CHECK') == '2') {\nactivePromptIndicies.push(61);\n}\n}\nif (data('PCV3') == null) {\nactivePromptIndicies.push(62);\nactivePromptIndicies.push(63);\nif (data('pcv3ng') == '1') {\nassign('PCV3', data('PENTA3'));\n}\nif (data('pcv3ng') == '2') {\nassign('PCV3', \"D:2,M:2,Y:1922\");\n}\n}\nelse {\nactivePromptIndicies.push(64);\nif (data('PCV3CHECK') == '2') {\nactivePromptIndicies.push(65);\n}\n}\nif (data('VPI') == null) {\nactivePromptIndicies.push(66);\nactivePromptIndicies.push(67);\nif (data('vping') == '1') {\nassign('VPI', data('PENTA3'));\n}\nif (data('vping') == '2') {\nassign('VPI', \"D:2,M:2,Y:1922\");\n}\n}\nelse {\nactivePromptIndicies.push(68);\nif (data('VPICHECK') == '2') {\nactivePromptIndicies.push(69);\n}\n}\n\nreturn activePromptIndicies;\n}\n",
+            "_screen_block": "function() {var activePromptIndicies = [];\nif (adate.diffInYears(data('OUTDATE'), data('PENTA2'))<0 && data('PENTA2') != null && data('PENTA2') != 'D:2,M:2,Y:1922') {\nactivePromptIndicies.push(46);\n}\nif (adate.diffInYears(data('OUTDATE'), data('POLIO2'))<0 && data('POLIO2') != null && data('POLIO2') != 'D:2,M:2,Y:1922') {\nactivePromptIndicies.push(47);\n}\nif (adate.diffInYears(data('OUTDATE'), data('PCV2'))<0 && data('PCV2') != null && data('PCV2') != 'D:2,M:2,Y:1922') {\nactivePromptIndicies.push(48);\n}\nif (adate.diffInYears(data('OUTDATE'), data('ROX2'))<0 && data('ROX2') != null && data('ROX2') != 'D:2,M:2,Y:1922') {\nactivePromptIndicies.push(49);\n}\nif (adate.diffInYears(data('PENTA1'), data('PENTA2'))<0 && data('PENTA2') != null && data('PENTA2') != 'D:2,M:2,Y:1922') {\nactivePromptIndicies.push(50);\n}\nif (adate.diffInYears(data('POLIO1'), data('POLIO2'))<0  && data('POLIO2') != null && data('POLIO2') != 'D:2,M:2,Y:1922') {\nactivePromptIndicies.push(51);\n}\nif (adate.diffInYears(data('PCV1'), data('PCV2'))<0  && data('PCV2') != null && data('PCV2') != 'D:2,M:2,Y:1922') {\nactivePromptIndicies.push(52);\n}\nif (adate.diffInYears(data('ROX1'), data('ROX2'))<0  && data('ROX2') != null && data('ROX2') != 'D:2,M:2,Y:1922') {\nactivePromptIndicies.push(53);\n}\nif (data('PENTA3') == null) {\nactivePromptIndicies.push(54);\nactivePromptIndicies.push(55);\nif (data('penta3ng') != null) {\nassign('PENTA3', \"D:2,M:2,Y:1922\");\n}\n}\nelse {\nactivePromptIndicies.push(56);\nif (data('PENTA3CHECK') == '2') {\nactivePromptIndicies.push(57);\n}\n}\nif (data('POLIO3') == null) {\nactivePromptIndicies.push(58);\nactivePromptIndicies.push(59);\nif (data('polio3ng') == '1') {\nassign('POLIO3', data('PENTA3'));\n}\nif (data('polio3ng') == '2') {\nassign('POLIO3', \"D:2,M:2,Y:1922\");\n}\n}\nelse {\nactivePromptIndicies.push(60);\nif (data('POLIO3CHECK') == '2') {\nactivePromptIndicies.push(61);\n}\n}\nif (data('PCV3') == null) {\nactivePromptIndicies.push(62);\nactivePromptIndicies.push(63);\nif (data('pcv3ng') == '1') {\nassign('PCV3', data('PENTA3'));\n}\nif (data('pcv3ng') == '2') {\nassign('PCV3', \"D:2,M:2,Y:1922\");\n}\n}\nelse {\nactivePromptIndicies.push(64);\nif (data('PCV3CHECK') == '2') {\nactivePromptIndicies.push(65);\n}\n}\nif (data('VPI') == null) {\nactivePromptIndicies.push(66);\nactivePromptIndicies.push(67);\nif (data('vping') == '1') {\nassign('VPI', data('PENTA3'));\n}\nif (data('vping') == '2') {\nassign('VPI', \"D:2,M:2,Y:1922\");\n}\n}\nelse {\nactivePromptIndicies.push(68);\nif (data('VPICHECK') == '2') {\nactivePromptIndicies.push(69);\n}\n}\n\nreturn activePromptIndicies;\n}\n",
             "operationIdx": 3
           },
           {
@@ -18975,7 +18940,7 @@
               "__rowNum__": 301,
               "_token_type": "end_screen"
             },
-            "_screen_block": "function() {var activePromptIndicies = [];\nif (adate.diffInYears(data('OUTDATE'), data('PENTA3'))<0  && data('PENTA3') != null) {\nactivePromptIndicies.push(70);\n}\nif (adate.diffInYears(data('OUTDATE'), data('POLIO3'))<0 && data('POLIO3') != null) {\nactivePromptIndicies.push(71);\n}\nif (adate.diffInYears(data('OUTDATE'), data('PCV3'))<0 && data('PCV3') != null) {\nactivePromptIndicies.push(72);\n}\nif (adate.diffInYears(data('OUTDATE'), data('VPI'))<0 && data('VPI') != null) {\nactivePromptIndicies.push(73);\n}\nif (adate.diffInYears(data('PENTA2'), data('PENTA3'))<0  && data('PENTA3') != null) {\nactivePromptIndicies.push(74);\n}\nif (adate.diffInYears(data('POLIO2'), data('POLIO3'))<0  && data('POLIO3') != null) {\nactivePromptIndicies.push(75);\n}\nif (adate.diffInYears(data('PCV2'), data('PCV3'))<0  && data('PCV3') != null) {\nactivePromptIndicies.push(76);\n}\nif (adate.diffInYears(data('PENTA1'), data('PENTA3'))<0  && data('PENTA3') != null) {\nactivePromptIndicies.push(77);\n}\nif (adate.diffInYears(data('POLIO1'), data('POLIO3'))<0  && data('POLIO3') != null) {\nactivePromptIndicies.push(78);\n}\nif (adate.diffInYears(data('PCV1'), data('PCV3'))<0  && data('PCV3') != null) {\nactivePromptIndicies.push(79);\n}\nif (data('SARAMPO1') == null) {\nactivePromptIndicies.push(80);\nactivePromptIndicies.push(81);\nif (data('sarampo1ng') != null) {\nassign('SARAMPO1', \"D:2,M:2,Y:1922\");\n}\n}\nelse {\nactivePromptIndicies.push(82);\nif (data('SARAMPO1CHECK') == '2') {\nactivePromptIndicies.push(83);\n}\n}\nif (data('FEBAMAREL') == null) {\nactivePromptIndicies.push(84);\nactivePromptIndicies.push(85);\nif (data('febamarelng') != null) {\nassign('FEBAMAREL', \"D:2,M:2,Y:1922\");\n}\n}\nelse {\nactivePromptIndicies.push(86);\nif (data('FEBAMARELCHECK') == '2') {\nactivePromptIndicies.push(87);\n}\n}\n\nreturn activePromptIndicies;\n}\n",
+            "_screen_block": "function() {var activePromptIndicies = [];\nif (adate.diffInYears(data('OUTDATE'), data('PENTA3'))<0  && data('PENTA3') != null && data('PENTA3') != 'D:2,M:2,Y:1922') {\nactivePromptIndicies.push(70);\n}\nif (adate.diffInYears(data('OUTDATE'), data('POLIO3'))<0 && data('POLIO3') != null && data('POLIO3') != 'D:2,M:2,Y:1922') {\nactivePromptIndicies.push(71);\n}\nif (adate.diffInYears(data('OUTDATE'), data('PCV3'))<0 && data('PCV3') != null && data('PCV3') != 'D:2,M:2,Y:1922') {\nactivePromptIndicies.push(72);\n}\nif (adate.diffInYears(data('OUTDATE'), data('VPI'))<0 && data('VPI') != null && data('VPI') != 'D:2,M:2,Y:1922') {\nactivePromptIndicies.push(73);\n}\nif (adate.diffInYears(data('PENTA2'), data('PENTA3'))<0  && data('PENTA3') != null && data('PENTA3') != 'D:2,M:2,Y:1922') {\nactivePromptIndicies.push(74);\n}\nif (adate.diffInYears(data('POLIO2'), data('POLIO3'))<0  && data('POLIO3') != null && data('POLIO3') != 'D:2,M:2,Y:1922') {\nactivePromptIndicies.push(75);\n}\nif (adate.diffInYears(data('PCV2'), data('PCV3'))<0  && data('PCV3') != null && data('PCV3') != 'D:2,M:2,Y:1922') {\nactivePromptIndicies.push(76);\n}\nif (adate.diffInYears(data('PENTA1'), data('PENTA3'))<0  && data('PENTA3') != null && data('PENTA3') != 'D:2,M:2,Y:1922') {\nactivePromptIndicies.push(77);\n}\nif (adate.diffInYears(data('POLIO1'), data('POLIO3'))<0  && data('POLIO3') != null && data('POLIO3') != 'D:2,M:2,Y:1922') {\nactivePromptIndicies.push(78);\n}\nif (adate.diffInYears(data('PCV1'), data('PCV3'))<0  && data('PCV3') != null && data('PCV3') != 'D:2,M:2,Y:1922') {\nactivePromptIndicies.push(79);\n}\nif (data('SARAMPO1') == null) {\nactivePromptIndicies.push(80);\nactivePromptIndicies.push(81);\nif (data('sarampo1ng') != null) {\nassign('SARAMPO1', \"D:2,M:2,Y:1922\");\n}\n}\nelse {\nactivePromptIndicies.push(82);\nif (data('SARAMPO1CHECK') == '2') {\nactivePromptIndicies.push(83);\n}\n}\nif (data('FEBAMAREL') == null) {\nactivePromptIndicies.push(84);\nactivePromptIndicies.push(85);\nif (data('febamarelng') != null) {\nassign('FEBAMAREL', \"D:2,M:2,Y:1922\");\n}\n}\nelse {\nactivePromptIndicies.push(86);\nif (data('FEBAMARELCHECK') == '2') {\nactivePromptIndicies.push(87);\n}\n}\n\nreturn activePromptIndicies;\n}\n",
             "operationIdx": 4
           },
           {
@@ -18989,7 +18954,7 @@
               "__rowNum__": 315,
               "_token_type": "end_screen"
             },
-            "_screen_block": "function() {var activePromptIndicies = [];\nif (adate.diffInYears(data('OUTDATE'), data('SARAMPO1'))<0 && data('SARAMPO') != null) {\nactivePromptIndicies.push(88);\n}\nif (adate.diffInYears(data('OUTDATE'), data('FEBAMAREL'))<0 && data('FEBAMAREL') != null) {\nactivePromptIndicies.push(89);\n}\nif (data('SARAMPO1')<6) {\nactivePromptIndicies.push(90);\n}\nif (data('FEBAMAREL')<6) {\nactivePromptIndicies.push(91);\n}\n\nreturn activePromptIndicies;\n}\n",
+            "_screen_block": "function() {var activePromptIndicies = [];\nif (adate.diffInYears(data('OUTDATE'), data('SARAMPO1'))<0 && data('SARAMPO') != null && data('SARAMPO') != 'D:2,M:2,Y:1922') {\nactivePromptIndicies.push(88);\n}\nif (adate.diffInYears(data('OUTDATE'), data('FEBAMAREL'))<0 && data('FEBAMAREL') != null && data('FEBAMAREL') != 'D:2,M:2,Y:1922') {\nactivePromptIndicies.push(89);\n}\nif (data('SARAMPO1')<6) {\nactivePromptIndicies.push(90);\n}\nif (data('FEBAMAREL')<6) {\nactivePromptIndicies.push(91);\n}\n\nreturn activePromptIndicies;\n}\n",
             "operationIdx": 5
           },
           {
@@ -21563,7 +21528,7 @@
         "type": "integer",
         "_defn": [
           {
-            "_row_num": 28,
+            "_row_num": 27,
             "section_name": "stsc"
           },
           {
@@ -21764,10 +21729,6 @@
         "_row_num": 2,
         "__rowNum__": 1,
         "_defn": [
-          {
-            "_row_num": 19,
-            "section_name": "stsc"
-          },
           {
             "_row_num": 53,
             "section_name": "model"
@@ -22387,7 +22348,7 @@
         "type": "integer",
         "_defn": [
           {
-            "_row_num": 29,
+            "_row_num": 28,
             "section_name": "stsc"
           },
           {
@@ -22753,7 +22714,7 @@
         "type": "integer",
         "_defn": [
           {
-            "_row_num": 27,
+            "_row_num": 26,
             "section_name": "stsc"
           },
           {
@@ -22808,7 +22769,7 @@
         "type": "string",
         "_defn": [
           {
-            "_row_num": 23,
+            "_row_num": 22,
             "section_name": "stsc"
           },
           {
@@ -22868,7 +22829,7 @@
         "type": "string",
         "_defn": [
           {
-            "_row_num": 26,
+            "_row_num": 25,
             "section_name": "stsc"
           },
           {
@@ -22928,7 +22889,7 @@
         "__rowNum__": 1,
         "_defn": [
           {
-            "_row_num": 24,
+            "_row_num": 23,
             "section_name": "stsc"
           },
           {
@@ -24485,7 +24446,7 @@
         "valuesList": "sex",
         "_defn": [
           {
-            "_row_num": 25,
+            "_row_num": 24,
             "section_name": "stsc"
           },
           {
