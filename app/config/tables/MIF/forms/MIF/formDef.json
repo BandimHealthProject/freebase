@@ -6518,6 +6518,14 @@
         "_row_num": 3
       },
       {
+        "clause": "end screen",
+        "_row_num": 4
+      },
+      {
+        "clause": "begin screen",
+        "_row_num": 5
+      },
+      {
         "type": "integer",
         "name": "HOPART",
         "display": {
@@ -6528,7 +6536,7 @@
             }
           }
         },
-        "_row_num": 4
+        "_row_num": 6
       },
       {
         "type": "integer",
@@ -6541,7 +6549,7 @@
             }
           }
         },
-        "_row_num": 5
+        "_row_num": 7
       },
       {
         "type": "integer",
@@ -6554,15 +6562,15 @@
             }
           }
         },
-        "_row_num": 6
+        "_row_num": 8
       },
       {
         "clause": "end screen",
-        "_row_num": 7
+        "_row_num": 9
       },
       {
         "clause": "begin screen",
-        "_row_num": 8
+        "_row_num": 10
       },
       {
         "type": "select_one",
@@ -6576,15 +6584,15 @@
             }
           }
         },
-        "_row_num": 9
+        "_row_num": 11
       },
       {
         "clause": "end screen",
-        "_row_num": 10
+        "_row_num": 12
       },
       {
         "clause": "begin screen",
-        "_row_num": 11
+        "_row_num": 13
       },
       {
         "type": "select_one",
@@ -6598,15 +6606,15 @@
             }
           }
         },
-        "_row_num": 12
+        "_row_num": 14
       },
       {
         "clause": "end screen",
-        "_row_num": 13
+        "_row_num": 15
       },
       {
         "clause": "begin screen",
-        "_row_num": 14
+        "_row_num": 16
       },
       {
         "type": "select_one",
@@ -6620,12 +6628,12 @@
             }
           }
         },
-        "_row_num": 15
+        "_row_num": 17
       },
       {
         "clause": "if",
         "condition": "data('ONDECOD1') =='4'",
-        "_row_num": 16
+        "_row_num": 18
       },
       {
         "type": "text",
@@ -6638,16 +6646,16 @@
             }
           }
         },
-        "_row_num": 17
+        "_row_num": 19
       },
       {
         "clause": "end if",
-        "_row_num": 18
+        "_row_num": 20
       },
       {
         "clause": "if",
         "condition": "data('ONDECOD1') =='3'",
-        "_row_num": 19
+        "_row_num": 21
       },
       {
         "type": "text",
@@ -6660,19 +6668,19 @@
             }
           }
         },
-        "_row_num": 20
-      },
-      {
-        "clause": "end if",
-        "_row_num": 21
-      },
-      {
-        "clause": "end screen",
         "_row_num": 22
       },
       {
-        "clause": "begin screen",
+        "clause": "end if",
         "_row_num": 23
+      },
+      {
+        "clause": "end screen",
+        "_row_num": 24
+      },
+      {
+        "clause": "begin screen",
+        "_row_num": 25
       },
       {
         "type": "select_one",
@@ -6686,20 +6694,20 @@
             }
           }
         },
-        "_row_num": 24
+        "_row_num": 26
       },
       {
         "clause": "end screen",
-        "_row_num": 25
+        "_row_num": 27
       },
       {
         "clause": "if",
         "condition": "data('PARANFAL') =='1'",
-        "_row_num": 26
+        "_row_num": 28
       },
       {
         "clause": "begin screen",
-        "_row_num": 27
+        "_row_num": 29
       },
       {
         "type": "text",
@@ -6712,15 +6720,15 @@
             }
           }
         },
-        "_row_num": 28
+        "_row_num": 30
       },
       {
         "clause": "end screen",
-        "_row_num": 29
+        "_row_num": 31
       },
       {
         "clause": "begin screen",
-        "_row_num": 30
+        "_row_num": 32
       },
       {
         "type": "select_one",
@@ -6734,15 +6742,15 @@
             }
           }
         },
-        "_row_num": 31
+        "_row_num": 33
       },
       {
         "clause": "end screen",
-        "_row_num": 32
+        "_row_num": 34
       },
       {
         "clause": "begin screen",
-        "_row_num": 33
+        "_row_num": 35
       },
       {
         "type": "select_one",
@@ -6756,15 +6764,15 @@
             }
           }
         },
-        "_row_num": 34
+        "_row_num": 36
       },
       {
         "clause": "end screen",
-        "_row_num": 35
+        "_row_num": 37
       },
       {
         "clause": "begin screen",
-        "_row_num": 36
+        "_row_num": 38
       },
       {
         "type": "select_one",
@@ -6778,19 +6786,19 @@
             }
           }
         },
-        "_row_num": 37
-      },
-      {
-        "clause": "end screen",
-        "_row_num": 38
-      },
-      {
-        "clause": "begin screen",
         "_row_num": 39
       },
       {
+        "clause": "end screen",
+        "_row_num": 40
+      },
+      {
+        "clause": "begin screen",
+        "_row_num": 41
+      },
+      {
         "type": "select_one",
-        "values_list": "birthoutcome",
+        "values_list": "birthoutcomefal",
         "name": "RESGRAV",
         "display": {
           "prompt": {
@@ -6800,15 +6808,15 @@
             }
           }
         },
-        "_row_num": 40
+        "_row_num": 42
       },
       {
         "clause": "end screen",
-        "_row_num": 41
+        "_row_num": 43
       },
       {
         "clause": "begin screen",
-        "_row_num": 42
+        "_row_num": 44
       },
       {
         "type": "select_one",
@@ -6822,15 +6830,15 @@
             }
           }
         },
-        "_row_num": 43
+        "_row_num": 45
       },
       {
         "clause": "end screen",
-        "_row_num": 44
+        "_row_num": 46
       },
       {
         "clause": "begin screen",
-        "_row_num": 45
+        "_row_num": 47
       },
       {
         "type": "note",
@@ -6842,7 +6850,7 @@
             }
           }
         },
-        "_row_num": 46
+        "_row_num": 48
       },
       {
         "type": "integer",
@@ -6855,7 +6863,7 @@
             }
           }
         },
-        "_row_num": 47
+        "_row_num": 49
       },
       {
         "type": "integer",
@@ -6868,19 +6876,19 @@
             }
           }
         },
-        "_row_num": 48
-      },
-      {
-        "clause": "end screen",
-        "_row_num": 49
-      },
-      {
-        "clause": "end if",
         "_row_num": 50
       },
       {
-        "clause": "begin screen",
+        "clause": "end screen",
         "_row_num": 51
+      },
+      {
+        "clause": "end if",
+        "_row_num": 52
+      },
+      {
+        "clause": "begin screen",
+        "_row_num": 53
       },
       {
         "type": "select_one",
@@ -6894,12 +6902,12 @@
             }
           }
         },
-        "_row_num": 52
+        "_row_num": 54
       },
       {
         "clause": "if",
         "condition": "data('DOENCA') =='1'",
-        "_row_num": 53
+        "_row_num": 55
       },
       {
         "type": "text",
@@ -6912,19 +6920,19 @@
             }
           }
         },
-        "_row_num": 54
-      },
-      {
-        "clause": "end if",
-        "_row_num": 55
-      },
-      {
-        "clause": "end screen",
         "_row_num": 56
       },
       {
-        "clause": "begin screen",
+        "clause": "end if",
         "_row_num": 57
+      },
+      {
+        "clause": "end screen",
+        "_row_num": 58
+      },
+      {
+        "clause": "begin screen",
+        "_row_num": 59
       },
       {
         "type": "select_one",
@@ -6938,12 +6946,12 @@
             }
           }
         },
-        "_row_num": 58
+        "_row_num": 60
       },
       {
         "clause": "if",
         "condition": "data('DIAG') =='1'",
-        "_row_num": 59
+        "_row_num": 61
       },
       {
         "type": "text",
@@ -6956,24 +6964,24 @@
             }
           }
         },
-        "_row_num": 60
+        "_row_num": 62
       },
       {
         "clause": "end if",
-        "_row_num": 61
+        "_row_num": 63
       },
       {
         "clause": "end screen",
-        "_row_num": 62
+        "_row_num": 64
       },
       {
         "clause": "if",
         "condition": "data('DOENCA') =='1' || data('DIAG') =='1'",
-        "_row_num": 63
+        "_row_num": 65
       },
       {
         "clause": "begin screen",
-        "_row_num": 64
+        "_row_num": 66
       },
       {
         "type": "text",
@@ -6986,15 +6994,15 @@
             }
           }
         },
-        "_row_num": 65
+        "_row_num": 67
       },
       {
         "clause": "end screen",
-        "_row_num": 66
+        "_row_num": 68
       },
       {
         "clause": "begin screen",
-        "_row_num": 67
+        "_row_num": 69
       },
       {
         "type": "note",
@@ -7006,7 +7014,7 @@
             }
           }
         },
-        "_row_num": 68
+        "_row_num": 70
       },
       {
         "type": "select_one",
@@ -7020,7 +7028,7 @@
             }
           }
         },
-        "_row_num": 69
+        "_row_num": 71
       },
       {
         "type": "select_one",
@@ -7034,15 +7042,15 @@
             }
           }
         },
-        "_row_num": 70
+        "_row_num": 72
       },
       {
         "clause": "end screen",
-        "_row_num": 71
+        "_row_num": 73
       },
       {
         "clause": "begin screen",
-        "_row_num": 72
+        "_row_num": 74
       },
       {
         "type": "select_one",
@@ -7056,7 +7064,7 @@
             }
           }
         },
-        "_row_num": 73
+        "_row_num": 75
       },
       {
         "type": "select_one",
@@ -7070,15 +7078,15 @@
             }
           }
         },
-        "_row_num": 74
+        "_row_num": 76
       },
       {
         "clause": "end screen",
-        "_row_num": 75
+        "_row_num": 77
       },
       {
         "clause": "begin screen",
-        "_row_num": 76
+        "_row_num": 78
       },
       {
         "type": "select_one",
@@ -7092,7 +7100,7 @@
             }
           }
         },
-        "_row_num": 77
+        "_row_num": 79
       },
       {
         "type": "select_one",
@@ -7106,15 +7114,15 @@
             }
           }
         },
-        "_row_num": 78
+        "_row_num": 80
       },
       {
         "clause": "end screen",
-        "_row_num": 79
+        "_row_num": 81
       },
       {
         "clause": "begin screen",
-        "_row_num": 80
+        "_row_num": 82
       },
       {
         "type": "select_one",
@@ -7128,12 +7136,12 @@
             }
           }
         },
-        "_row_num": 81
+        "_row_num": 83
       },
       {
         "clause": "if",
         "condition": "data('OUTRODUR') == '1'",
-        "_row_num": 82
+        "_row_num": 84
       },
       {
         "type": "text",
@@ -7146,11 +7154,11 @@
             }
           }
         },
-        "_row_num": 83
+        "_row_num": 85
       },
       {
         "clause": "end if",
-        "_row_num": 84
+        "_row_num": 86
       },
       {
         "type": "select_one",
@@ -7164,12 +7172,12 @@
             }
           }
         },
-        "_row_num": 85
+        "_row_num": 87
       },
       {
         "clause": "if",
         "condition": "data('OUTROSIMP')",
-        "_row_num": 86
+        "_row_num": 88
       },
       {
         "type": "text",
@@ -7182,14 +7190,6 @@
             }
           }
         },
-        "_row_num": 87
-      },
-      {
-        "clause": "end if",
-        "_row_num": 88
-      },
-      {
-        "clause": "end screen",
         "_row_num": 89
       },
       {
@@ -7197,8 +7197,16 @@
         "_row_num": 90
       },
       {
-        "clause": "begin screen",
+        "clause": "end screen",
         "_row_num": 91
+      },
+      {
+        "clause": "end if",
+        "_row_num": 92
+      },
+      {
+        "clause": "begin screen",
+        "_row_num": 93
       },
       {
         "type": "select_one",
@@ -7212,12 +7220,12 @@
             }
           }
         },
-        "_row_num": 92
+        "_row_num": 94
       },
       {
         "clause": "if",
         "condition": "data('ACCIDENTE') =='1'",
-        "_row_num": 93
+        "_row_num": 95
       },
       {
         "type": "text",
@@ -7230,15 +7238,15 @@
             }
           }
         },
-        "_row_num": 94
+        "_row_num": 96
       },
       {
         "clause": "end if",
-        "_row_num": 95
+        "_row_num": 97
       },
       {
         "clause": "end screen",
-        "_row_num": 96
+        "_row_num": 98
       }
     ],
     "queries": [
@@ -8854,7 +8862,7 @@
         "display": {
           "title": {
             "text": {
-              "english": "Centro de saúde",
+              "english": "Health centre",
               "default": "Centro de saúde"
             }
           }
@@ -9153,7 +9161,7 @@
         "display": {
           "title": {
             "text": {
-              "english": "Não sabe",
+              "english": "Don't know",
               "default": "Não sabe"
             }
           }
@@ -9231,7 +9239,7 @@
         "display": {
           "title": {
             "text": {
-              "english": "Não sabe",
+              "english": "Don't know",
               "default": "Não sabe"
             }
           }
@@ -9239,38 +9247,38 @@
         "_row_num": 151
       },
       {
-        "choice_list_name": "birthoutcome",
+        "choice_list_name": "birthoutcomefal",
         "data_value": "1",
         "display": {
           "title": {
             "text": {
-              "english": "NadoVivo",
-              "default": "NadoVivo"
+              "english": "Live birth",
+              "default": "Nado vivo"
             }
           }
         },
         "_row_num": 152
       },
       {
-        "choice_list_name": "birthoutcome",
+        "choice_list_name": "birthoutcomefal",
         "data_value": "2",
         "display": {
           "title": {
             "text": {
-              "english": "NadoMorto",
-              "default": "NadoMorto"
+              "english": "Stillbirth",
+              "default": "Nado morto"
             }
           }
         },
         "_row_num": 153
       },
       {
-        "choice_list_name": "birthoutcome",
+        "choice_list_name": "birthoutcomefal",
         "data_value": "3",
         "display": {
           "title": {
             "text": {
-              "english": "Aborto",
+              "english": "Miscarriage",
               "default": "Aborto"
             }
           }
@@ -9278,7 +9286,7 @@
         "_row_num": 154
       },
       {
-        "choice_list_name": "birthoutcome",
+        "choice_list_name": "birthoutcomefal",
         "data_value": "4",
         "display": {
           "title": {
@@ -9291,12 +9299,12 @@
         "_row_num": 155
       },
       {
-        "choice_list_name": "birthoutcome",
+        "choice_list_name": "birthoutcomefal",
         "data_value": "5",
         "display": {
           "title": {
             "text": {
-              "english": "Não sabe",
+              "english": "Don't know",
               "default": "Não sabe"
             }
           }
@@ -12197,71 +12205,6 @@
             }
           },
           "_row_num": 95
-        },
-        {
-          "choice_list_name": "birthoutcome",
-          "data_value": "1",
-          "display": {
-            "title": {
-              "text": {
-                "english": "NadoVivo",
-                "default": "NadoVivo"
-              }
-            }
-          },
-          "_row_num": 152
-        },
-        {
-          "choice_list_name": "birthoutcome",
-          "data_value": "2",
-          "display": {
-            "title": {
-              "text": {
-                "english": "NadoMorto",
-                "default": "NadoMorto"
-              }
-            }
-          },
-          "_row_num": 153
-        },
-        {
-          "choice_list_name": "birthoutcome",
-          "data_value": "3",
-          "display": {
-            "title": {
-              "text": {
-                "english": "Aborto",
-                "default": "Aborto"
-              }
-            }
-          },
-          "_row_num": 154
-        },
-        {
-          "choice_list_name": "birthoutcome",
-          "data_value": "4",
-          "display": {
-            "title": {
-              "text": {
-                "english": "O feto não saiu",
-                "default": "O feto não saiu"
-              }
-            }
-          },
-          "_row_num": 155
-        },
-        {
-          "choice_list_name": "birthoutcome",
-          "data_value": "5",
-          "display": {
-            "title": {
-              "text": {
-                "english": "Não sabe",
-                "default": "Não sabe"
-              }
-            }
-          },
-          "_row_num": 156
         }
       ],
       "contraceptive": [
@@ -12623,7 +12566,7 @@
           "display": {
             "title": {
               "text": {
-                "english": "Centro de saúde",
+                "english": "Health centre",
                 "default": "Centro de saúde"
               }
             }
@@ -12928,7 +12871,7 @@
           "display": {
             "title": {
               "text": {
-                "english": "Não sabe",
+                "english": "Don't know",
                 "default": "Não sabe"
               }
             }
@@ -13008,12 +12951,79 @@
           "display": {
             "title": {
               "text": {
-                "english": "Não sabe",
+                "english": "Don't know",
                 "default": "Não sabe"
               }
             }
           },
           "_row_num": 151
+        }
+      ],
+      "birthoutcomefal": [
+        {
+          "choice_list_name": "birthoutcomefal",
+          "data_value": "1",
+          "display": {
+            "title": {
+              "text": {
+                "english": "Live birth",
+                "default": "Nado vivo"
+              }
+            }
+          },
+          "_row_num": 152
+        },
+        {
+          "choice_list_name": "birthoutcomefal",
+          "data_value": "2",
+          "display": {
+            "title": {
+              "text": {
+                "english": "Stillbirth",
+                "default": "Nado morto"
+              }
+            }
+          },
+          "_row_num": 153
+        },
+        {
+          "choice_list_name": "birthoutcomefal",
+          "data_value": "3",
+          "display": {
+            "title": {
+              "text": {
+                "english": "Miscarriage",
+                "default": "Aborto"
+              }
+            }
+          },
+          "_row_num": 154
+        },
+        {
+          "choice_list_name": "birthoutcomefal",
+          "data_value": "4",
+          "display": {
+            "title": {
+              "text": {
+                "english": "O feto não saiu",
+                "default": "O feto não saiu"
+              }
+            }
+          },
+          "_row_num": 155
+        },
+        {
+          "choice_list_name": "birthoutcomefal",
+          "data_value": "5",
+          "display": {
+            "title": {
+              "text": {
+                "english": "Don't know",
+                "default": "Não sabe"
+              }
+            }
+          },
+          "_row_num": 156
         }
       ]
     },
@@ -16599,7 +16609,7 @@
         "valuesList": "YesNoU",
         "_defn": [
           {
-            "_row_num": 92,
+            "_row_num": 94,
             "section_name": "fal"
           },
           {
@@ -16614,7 +16624,7 @@
         "type": "string",
         "_defn": [
           {
-            "_row_num": 94,
+            "_row_num": 96,
             "section_name": "fal"
           },
           {
@@ -16630,7 +16640,7 @@
         "valuesList": "healthstaff",
         "_defn": [
           {
-            "_row_num": 37,
+            "_row_num": 39,
             "section_name": "fal"
           },
           {
@@ -16646,7 +16656,7 @@
         "valuesList": "birthcomplication",
         "_defn": [
           {
-            "_row_num": 34,
+            "_row_num": 36,
             "section_name": "fal"
           },
           {
@@ -16682,7 +16692,7 @@
         "valuesList": "YesNoU",
         "_defn": [
           {
-            "_row_num": 58,
+            "_row_num": 60,
             "section_name": "fal"
           },
           {
@@ -16697,7 +16707,7 @@
         "type": "string",
         "_defn": [
           {
-            "_row_num": 60,
+            "_row_num": 62,
             "section_name": "fal"
           },
           {
@@ -16713,7 +16723,7 @@
         "valuesList": "YesNoU",
         "_defn": [
           {
-            "_row_num": 73,
+            "_row_num": 75,
             "section_name": "fal"
           },
           {
@@ -16729,7 +16739,7 @@
         "valuesList": "YesNoU",
         "_defn": [
           {
-            "_row_num": 52,
+            "_row_num": 54,
             "section_name": "fal"
           },
           {
@@ -16744,7 +16754,7 @@
         "type": "string",
         "_defn": [
           {
-            "_row_num": 54,
+            "_row_num": 56,
             "section_name": "fal"
           },
           {
@@ -16760,7 +16770,7 @@
         "valuesList": "YesNoU",
         "_defn": [
           {
-            "_row_num": 74,
+            "_row_num": 76,
             "section_name": "fal"
           },
           {
@@ -16775,7 +16785,7 @@
         "type": "string",
         "_defn": [
           {
-            "_row_num": 65,
+            "_row_num": 67,
             "section_name": "fal"
           },
           {
@@ -16791,7 +16801,7 @@
         "valuesList": "YesNoU",
         "_defn": [
           {
-            "_row_num": 77,
+            "_row_num": 79,
             "section_name": "fal"
           },
           {
@@ -16807,7 +16817,7 @@
         "valuesList": "YesNoU",
         "_defn": [
           {
-            "_row_num": 69,
+            "_row_num": 71,
             "section_name": "fal"
           },
           {
@@ -16823,7 +16833,7 @@
         "valuesList": "YesNoU",
         "_defn": [
           {
-            "_row_num": 43,
+            "_row_num": 45,
             "section_name": "fal"
           },
           {
@@ -16838,7 +16848,7 @@
         "type": "string",
         "_defn": [
           {
-            "_row_num": 28,
+            "_row_num": 30,
             "section_name": "fal"
           },
           {
@@ -16853,7 +16863,7 @@
         "type": "integer",
         "_defn": [
           {
-            "_row_num": 6,
+            "_row_num": 8,
             "section_name": "fal"
           },
           {
@@ -16868,7 +16878,7 @@
         "type": "integer",
         "_defn": [
           {
-            "_row_num": 4,
+            "_row_num": 6,
             "section_name": "fal"
           },
           {
@@ -16883,7 +16893,7 @@
         "type": "integer",
         "_defn": [
           {
-            "_row_num": 5,
+            "_row_num": 7,
             "section_name": "fal"
           },
           {
@@ -16899,7 +16909,7 @@
         "valuesList": "Facility",
         "_defn": [
           {
-            "_row_num": 15,
+            "_row_num": 17,
             "section_name": "fal"
           },
           {
@@ -16914,7 +16924,7 @@
         "type": "string",
         "_defn": [
           {
-            "_row_num": 20,
+            "_row_num": 22,
             "section_name": "fal"
           },
           {
@@ -16929,7 +16939,7 @@
         "type": "string",
         "_defn": [
           {
-            "_row_num": 17,
+            "_row_num": 19,
             "section_name": "fal"
           },
           {
@@ -16945,7 +16955,7 @@
         "valuesList": "YesNoU",
         "_defn": [
           {
-            "_row_num": 81,
+            "_row_num": 83,
             "section_name": "fal"
           },
           {
@@ -16961,7 +16971,7 @@
         "valuesList": "YesNoU",
         "_defn": [
           {
-            "_row_num": 85,
+            "_row_num": 87,
             "section_name": "fal"
           },
           {
@@ -16977,7 +16987,7 @@
         "valuesList": "YesNoU",
         "_defn": [
           {
-            "_row_num": 24,
+            "_row_num": 26,
             "section_name": "fal"
           },
           {
@@ -16993,7 +17003,7 @@
         "valuesList": "YesNoU",
         "_defn": [
           {
-            "_row_num": 78,
+            "_row_num": 80,
             "section_name": "fal"
           },
           {
@@ -17009,7 +17019,7 @@
         "valuesList": "inf3",
         "_defn": [
           {
-            "_row_num": 9,
+            "_row_num": 11,
             "section_name": "fal"
           },
           {
@@ -17025,7 +17035,7 @@
         "valuesList": "birthinterval",
         "_defn": [
           {
-            "_row_num": 31,
+            "_row_num": 33,
             "section_name": "fal"
           },
           {
@@ -17041,7 +17051,7 @@
         "valuesList": "YesNoU",
         "_defn": [
           {
-            "_row_num": 12,
+            "_row_num": 14,
             "section_name": "fal"
           },
           {
@@ -17054,10 +17064,10 @@
       },
       "RESGRAV": {
         "type": "integer",
-        "valuesList": "birthoutcome",
+        "valuesList": "birthoutcomefal",
         "_defn": [
           {
-            "_row_num": 40,
+            "_row_num": 42,
             "section_name": "fal"
           },
           {
@@ -17072,7 +17082,7 @@
         "type": "integer",
         "_defn": [
           {
-            "_row_num": 47,
+            "_row_num": 49,
             "section_name": "fal"
           },
           {
@@ -17087,7 +17097,7 @@
         "type": "integer",
         "_defn": [
           {
-            "_row_num": 48,
+            "_row_num": 50,
             "section_name": "fal"
           },
           {
@@ -17103,7 +17113,7 @@
         "valuesList": "YesNoU",
         "_defn": [
           {
-            "_row_num": 70,
+            "_row_num": 72,
             "section_name": "fal"
           },
           {
@@ -17118,7 +17128,7 @@
         "type": "string",
         "_defn": [
           {
-            "_row_num": 83,
+            "_row_num": 85,
             "section_name": "fal"
           },
           {
@@ -17133,7 +17143,7 @@
         "type": "string",
         "_defn": [
           {
-            "_row_num": 87,
+            "_row_num": 89,
             "section_name": "fal"
           },
           {
@@ -26657,11 +26667,11 @@
                 }
               }
             },
-            "_row_num": 4,
-            "__rowNum__": 3,
+            "_row_num": 6,
+            "__rowNum__": 5,
             "_token_type": "prompt",
             "_type": "integer",
-            "_branch_label_enclosing_screen": "fal/_screen2",
+            "_branch_label_enclosing_screen": "fal/_screen5",
             "promptIdx": 1
           },
           {
@@ -26675,11 +26685,11 @@
                 }
               }
             },
-            "_row_num": 5,
-            "__rowNum__": 4,
+            "_row_num": 7,
+            "__rowNum__": 6,
             "_token_type": "prompt",
             "_type": "integer",
-            "_branch_label_enclosing_screen": "fal/_screen2",
+            "_branch_label_enclosing_screen": "fal/_screen5",
             "promptIdx": 2
           },
           {
@@ -26693,11 +26703,11 @@
                 }
               }
             },
-            "_row_num": 6,
-            "__rowNum__": 5,
+            "_row_num": 8,
+            "__rowNum__": 7,
             "_token_type": "prompt",
             "_type": "integer",
-            "_branch_label_enclosing_screen": "fal/_screen2",
+            "_branch_label_enclosing_screen": "fal/_screen5",
             "promptIdx": 3
           },
           {
@@ -26712,11 +26722,11 @@
                 }
               }
             },
-            "_row_num": 9,
-            "__rowNum__": 8,
+            "_row_num": 11,
+            "__rowNum__": 10,
             "_token_type": "prompt",
             "_type": "select_one",
-            "_branch_label_enclosing_screen": "fal/_screen8",
+            "_branch_label_enclosing_screen": "fal/_screen10",
             "promptIdx": 4
           },
           {
@@ -26731,11 +26741,11 @@
                 }
               }
             },
-            "_row_num": 12,
-            "__rowNum__": 11,
+            "_row_num": 14,
+            "__rowNum__": 13,
             "_token_type": "prompt",
             "_type": "select_one",
-            "_branch_label_enclosing_screen": "fal/_screen11",
+            "_branch_label_enclosing_screen": "fal/_screen13",
             "promptIdx": 5
           },
           {
@@ -26750,11 +26760,11 @@
                 }
               }
             },
-            "_row_num": 15,
-            "__rowNum__": 14,
+            "_row_num": 17,
+            "__rowNum__": 16,
             "_token_type": "prompt",
             "_type": "select_one",
-            "_branch_label_enclosing_screen": "fal/_screen14",
+            "_branch_label_enclosing_screen": "fal/_screen16",
             "promptIdx": 6
           },
           {
@@ -26768,11 +26778,11 @@
                 }
               }
             },
-            "_row_num": 17,
-            "__rowNum__": 16,
+            "_row_num": 19,
+            "__rowNum__": 18,
             "_token_type": "prompt",
             "_type": "text",
-            "_branch_label_enclosing_screen": "fal/_screen14",
+            "_branch_label_enclosing_screen": "fal/_screen16",
             "promptIdx": 7
           },
           {
@@ -26786,11 +26796,11 @@
                 }
               }
             },
-            "_row_num": 20,
-            "__rowNum__": 19,
+            "_row_num": 22,
+            "__rowNum__": 21,
             "_token_type": "prompt",
             "_type": "text",
-            "_branch_label_enclosing_screen": "fal/_screen14",
+            "_branch_label_enclosing_screen": "fal/_screen16",
             "promptIdx": 8
           },
           {
@@ -26805,11 +26815,11 @@
                 }
               }
             },
-            "_row_num": 24,
-            "__rowNum__": 23,
+            "_row_num": 26,
+            "__rowNum__": 25,
             "_token_type": "prompt",
             "_type": "select_one",
-            "_branch_label_enclosing_screen": "fal/_screen23",
+            "_branch_label_enclosing_screen": "fal/_screen25",
             "promptIdx": 9
           },
           {
@@ -26823,11 +26833,11 @@
                 }
               }
             },
-            "_row_num": 28,
-            "__rowNum__": 27,
+            "_row_num": 30,
+            "__rowNum__": 29,
             "_token_type": "prompt",
             "_type": "text",
-            "_branch_label_enclosing_screen": "fal/_screen27",
+            "_branch_label_enclosing_screen": "fal/_screen29",
             "promptIdx": 10
           },
           {
@@ -26842,11 +26852,11 @@
                 }
               }
             },
-            "_row_num": 31,
-            "__rowNum__": 30,
+            "_row_num": 33,
+            "__rowNum__": 32,
             "_token_type": "prompt",
             "_type": "select_one",
-            "_branch_label_enclosing_screen": "fal/_screen30",
+            "_branch_label_enclosing_screen": "fal/_screen32",
             "promptIdx": 11
           },
           {
@@ -26861,11 +26871,11 @@
                 }
               }
             },
-            "_row_num": 34,
-            "__rowNum__": 33,
+            "_row_num": 36,
+            "__rowNum__": 35,
             "_token_type": "prompt",
             "_type": "select_one",
-            "_branch_label_enclosing_screen": "fal/_screen33",
+            "_branch_label_enclosing_screen": "fal/_screen35",
             "promptIdx": 12
           },
           {
@@ -26880,16 +26890,16 @@
                 }
               }
             },
-            "_row_num": 37,
-            "__rowNum__": 36,
+            "_row_num": 39,
+            "__rowNum__": 38,
             "_token_type": "prompt",
             "_type": "select_one",
-            "_branch_label_enclosing_screen": "fal/_screen36",
+            "_branch_label_enclosing_screen": "fal/_screen38",
             "promptIdx": 13
           },
           {
             "type": "select_one",
-            "values_list": "birthoutcome",
+            "values_list": "birthoutcomefal",
             "name": "RESGRAV",
             "display": {
               "prompt": {
@@ -26899,11 +26909,11 @@
                 }
               }
             },
-            "_row_num": 40,
-            "__rowNum__": 39,
+            "_row_num": 42,
+            "__rowNum__": 41,
             "_token_type": "prompt",
             "_type": "select_one",
-            "_branch_label_enclosing_screen": "fal/_screen39",
+            "_branch_label_enclosing_screen": "fal/_screen41",
             "promptIdx": 14
           },
           {
@@ -26918,11 +26928,11 @@
                 }
               }
             },
-            "_row_num": 43,
-            "__rowNum__": 42,
+            "_row_num": 45,
+            "__rowNum__": 44,
             "_token_type": "prompt",
             "_type": "select_one",
-            "_branch_label_enclosing_screen": "fal/_screen42",
+            "_branch_label_enclosing_screen": "fal/_screen44",
             "promptIdx": 15
           },
           {
@@ -26935,11 +26945,11 @@
                 }
               }
             },
-            "_row_num": 46,
-            "__rowNum__": 45,
+            "_row_num": 48,
+            "__rowNum__": 47,
             "_token_type": "prompt",
             "_type": "note",
-            "_branch_label_enclosing_screen": "fal/_screen45",
+            "_branch_label_enclosing_screen": "fal/_screen47",
             "promptIdx": 16
           },
           {
@@ -26953,11 +26963,11 @@
                 }
               }
             },
-            "_row_num": 47,
-            "__rowNum__": 46,
+            "_row_num": 49,
+            "__rowNum__": 48,
             "_token_type": "prompt",
             "_type": "integer",
-            "_branch_label_enclosing_screen": "fal/_screen45",
+            "_branch_label_enclosing_screen": "fal/_screen47",
             "promptIdx": 17
           },
           {
@@ -26971,11 +26981,11 @@
                 }
               }
             },
-            "_row_num": 48,
-            "__rowNum__": 47,
+            "_row_num": 50,
+            "__rowNum__": 49,
             "_token_type": "prompt",
             "_type": "integer",
-            "_branch_label_enclosing_screen": "fal/_screen45",
+            "_branch_label_enclosing_screen": "fal/_screen47",
             "promptIdx": 18
           },
           {
@@ -26990,11 +27000,11 @@
                 }
               }
             },
-            "_row_num": 52,
-            "__rowNum__": 51,
+            "_row_num": 54,
+            "__rowNum__": 53,
             "_token_type": "prompt",
             "_type": "select_one",
-            "_branch_label_enclosing_screen": "fal/_screen51",
+            "_branch_label_enclosing_screen": "fal/_screen53",
             "promptIdx": 19
           },
           {
@@ -27008,11 +27018,11 @@
                 }
               }
             },
-            "_row_num": 54,
-            "__rowNum__": 53,
+            "_row_num": 56,
+            "__rowNum__": 55,
             "_token_type": "prompt",
             "_type": "text",
-            "_branch_label_enclosing_screen": "fal/_screen51",
+            "_branch_label_enclosing_screen": "fal/_screen53",
             "promptIdx": 20
           },
           {
@@ -27027,11 +27037,11 @@
                 }
               }
             },
-            "_row_num": 58,
-            "__rowNum__": 57,
+            "_row_num": 60,
+            "__rowNum__": 59,
             "_token_type": "prompt",
             "_type": "select_one",
-            "_branch_label_enclosing_screen": "fal/_screen57",
+            "_branch_label_enclosing_screen": "fal/_screen59",
             "promptIdx": 21
           },
           {
@@ -27045,11 +27055,11 @@
                 }
               }
             },
-            "_row_num": 60,
-            "__rowNum__": 59,
+            "_row_num": 62,
+            "__rowNum__": 61,
             "_token_type": "prompt",
             "_type": "text",
-            "_branch_label_enclosing_screen": "fal/_screen57",
+            "_branch_label_enclosing_screen": "fal/_screen59",
             "promptIdx": 22
           },
           {
@@ -27063,11 +27073,11 @@
                 }
               }
             },
-            "_row_num": 65,
-            "__rowNum__": 64,
+            "_row_num": 67,
+            "__rowNum__": 66,
             "_token_type": "prompt",
             "_type": "text",
-            "_branch_label_enclosing_screen": "fal/_screen64",
+            "_branch_label_enclosing_screen": "fal/_screen66",
             "promptIdx": 23
           },
           {
@@ -27080,11 +27090,11 @@
                 }
               }
             },
-            "_row_num": 68,
-            "__rowNum__": 67,
+            "_row_num": 70,
+            "__rowNum__": 69,
             "_token_type": "prompt",
             "_type": "note",
-            "_branch_label_enclosing_screen": "fal/_screen67",
+            "_branch_label_enclosing_screen": "fal/_screen69",
             "promptIdx": 24
           },
           {
@@ -27099,11 +27109,11 @@
                 }
               }
             },
-            "_row_num": 69,
-            "__rowNum__": 68,
+            "_row_num": 71,
+            "__rowNum__": 70,
             "_token_type": "prompt",
             "_type": "select_one",
-            "_branch_label_enclosing_screen": "fal/_screen67",
+            "_branch_label_enclosing_screen": "fal/_screen69",
             "promptIdx": 25
           },
           {
@@ -27118,11 +27128,11 @@
                 }
               }
             },
-            "_row_num": 70,
-            "__rowNum__": 69,
+            "_row_num": 72,
+            "__rowNum__": 71,
             "_token_type": "prompt",
             "_type": "select_one",
-            "_branch_label_enclosing_screen": "fal/_screen67",
+            "_branch_label_enclosing_screen": "fal/_screen69",
             "promptIdx": 26
           },
           {
@@ -27137,11 +27147,11 @@
                 }
               }
             },
-            "_row_num": 73,
-            "__rowNum__": 72,
+            "_row_num": 75,
+            "__rowNum__": 74,
             "_token_type": "prompt",
             "_type": "select_one",
-            "_branch_label_enclosing_screen": "fal/_screen72",
+            "_branch_label_enclosing_screen": "fal/_screen74",
             "promptIdx": 27
           },
           {
@@ -27156,11 +27166,11 @@
                 }
               }
             },
-            "_row_num": 74,
-            "__rowNum__": 73,
+            "_row_num": 76,
+            "__rowNum__": 75,
             "_token_type": "prompt",
             "_type": "select_one",
-            "_branch_label_enclosing_screen": "fal/_screen72",
+            "_branch_label_enclosing_screen": "fal/_screen74",
             "promptIdx": 28
           },
           {
@@ -27175,11 +27185,11 @@
                 }
               }
             },
-            "_row_num": 77,
-            "__rowNum__": 76,
+            "_row_num": 79,
+            "__rowNum__": 78,
             "_token_type": "prompt",
             "_type": "select_one",
-            "_branch_label_enclosing_screen": "fal/_screen76",
+            "_branch_label_enclosing_screen": "fal/_screen78",
             "promptIdx": 29
           },
           {
@@ -27194,11 +27204,11 @@
                 }
               }
             },
-            "_row_num": 78,
-            "__rowNum__": 77,
+            "_row_num": 80,
+            "__rowNum__": 79,
             "_token_type": "prompt",
             "_type": "select_one",
-            "_branch_label_enclosing_screen": "fal/_screen76",
+            "_branch_label_enclosing_screen": "fal/_screen78",
             "promptIdx": 30
           },
           {
@@ -27213,11 +27223,11 @@
                 }
               }
             },
-            "_row_num": 81,
-            "__rowNum__": 80,
+            "_row_num": 83,
+            "__rowNum__": 82,
             "_token_type": "prompt",
             "_type": "select_one",
-            "_branch_label_enclosing_screen": "fal/_screen80",
+            "_branch_label_enclosing_screen": "fal/_screen82",
             "promptIdx": 31
           },
           {
@@ -27231,11 +27241,11 @@
                 }
               }
             },
-            "_row_num": 83,
-            "__rowNum__": 82,
+            "_row_num": 85,
+            "__rowNum__": 84,
             "_token_type": "prompt",
             "_type": "text",
-            "_branch_label_enclosing_screen": "fal/_screen80",
+            "_branch_label_enclosing_screen": "fal/_screen82",
             "promptIdx": 32
           },
           {
@@ -27250,11 +27260,11 @@
                 }
               }
             },
-            "_row_num": 85,
-            "__rowNum__": 84,
+            "_row_num": 87,
+            "__rowNum__": 86,
             "_token_type": "prompt",
             "_type": "select_one",
-            "_branch_label_enclosing_screen": "fal/_screen80",
+            "_branch_label_enclosing_screen": "fal/_screen82",
             "promptIdx": 33
           },
           {
@@ -27268,11 +27278,11 @@
                 }
               }
             },
-            "_row_num": 87,
-            "__rowNum__": 86,
+            "_row_num": 89,
+            "__rowNum__": 88,
             "_token_type": "prompt",
             "_type": "text",
-            "_branch_label_enclosing_screen": "fal/_screen80",
+            "_branch_label_enclosing_screen": "fal/_screen82",
             "promptIdx": 34
           },
           {
@@ -27287,11 +27297,11 @@
                 }
               }
             },
-            "_row_num": 92,
-            "__rowNum__": 91,
+            "_row_num": 94,
+            "__rowNum__": 93,
             "_token_type": "prompt",
             "_type": "select_one",
-            "_branch_label_enclosing_screen": "fal/_screen91",
+            "_branch_label_enclosing_screen": "fal/_screen93",
             "promptIdx": 35
           },
           {
@@ -27305,19 +27315,19 @@
                 }
               }
             },
-            "_row_num": 94,
-            "__rowNum__": 93,
+            "_row_num": 96,
+            "__rowNum__": 95,
             "_token_type": "prompt",
             "_type": "text",
-            "_branch_label_enclosing_screen": "fal/_screen91",
+            "_branch_label_enclosing_screen": "fal/_screen93",
             "promptIdx": 36
           },
           {
             "_token_type": "prompt",
             "type": "contents",
             "_type": "contents",
-            "_row_num": 97,
-            "_branch_label_enclosing_screen": "fal/_screen97",
+            "_row_num": 99,
+            "_branch_label_enclosing_screen": "fal/_screen99",
             "promptIdx": 37
           }
         ],
@@ -27332,376 +27342,391 @@
             "_token_type": "begin_screen",
             "_end_screen_clause": {
               "clause": "end screen",
-              "_row_num": 7,
-              "__rowNum__": 6,
+              "_row_num": 4,
+              "__rowNum__": 3,
               "_token_type": "end_screen"
             },
-            "_screen_block": "function() {var activePromptIndicies = [];\nactivePromptIndicies.push(0);\nactivePromptIndicies.push(1);\nactivePromptIndicies.push(2);\nactivePromptIndicies.push(3);\n\nreturn activePromptIndicies;\n}\n",
+            "_screen_block": "function() {var activePromptIndicies = [];\nactivePromptIndicies.push(0);\n\nreturn activePromptIndicies;\n}\n",
             "operationIdx": 0
           },
           {
             "clause": "begin screen",
-            "_row_num": 8,
-            "__rowNum__": 7,
+            "_row_num": 5,
+            "__rowNum__": 4,
             "_token_type": "begin_screen",
             "_end_screen_clause": {
               "clause": "end screen",
-              "_row_num": 10,
-              "__rowNum__": 9,
+              "_row_num": 9,
+              "__rowNum__": 8,
               "_token_type": "end_screen"
             },
-            "_screen_block": "function() {var activePromptIndicies = [];\nactivePromptIndicies.push(4);\n\nreturn activePromptIndicies;\n}\n",
+            "_screen_block": "function() {var activePromptIndicies = [];\nactivePromptIndicies.push(1);\nactivePromptIndicies.push(2);\nactivePromptIndicies.push(3);\n\nreturn activePromptIndicies;\n}\n",
             "operationIdx": 1
           },
           {
             "clause": "begin screen",
-            "_row_num": 11,
-            "__rowNum__": 10,
+            "_row_num": 10,
+            "__rowNum__": 9,
             "_token_type": "begin_screen",
             "_end_screen_clause": {
               "clause": "end screen",
-              "_row_num": 13,
-              "__rowNum__": 12,
+              "_row_num": 12,
+              "__rowNum__": 11,
               "_token_type": "end_screen"
             },
-            "_screen_block": "function() {var activePromptIndicies = [];\nactivePromptIndicies.push(5);\n\nreturn activePromptIndicies;\n}\n",
+            "_screen_block": "function() {var activePromptIndicies = [];\nactivePromptIndicies.push(4);\n\nreturn activePromptIndicies;\n}\n",
             "operationIdx": 2
           },
           {
             "clause": "begin screen",
-            "_row_num": 14,
-            "__rowNum__": 13,
+            "_row_num": 13,
+            "__rowNum__": 12,
             "_token_type": "begin_screen",
             "_end_screen_clause": {
               "clause": "end screen",
-              "_row_num": 22,
-              "__rowNum__": 21,
+              "_row_num": 15,
+              "__rowNum__": 14,
               "_token_type": "end_screen"
             },
-            "_screen_block": "function() {var activePromptIndicies = [];\nactivePromptIndicies.push(6);\nif (data('ONDECOD1') =='4') {\nactivePromptIndicies.push(7);\n}\nif (data('ONDECOD1') =='3') {\nactivePromptIndicies.push(8);\n}\n\nreturn activePromptIndicies;\n}\n",
+            "_screen_block": "function() {var activePromptIndicies = [];\nactivePromptIndicies.push(5);\n\nreturn activePromptIndicies;\n}\n",
             "operationIdx": 3
           },
           {
             "clause": "begin screen",
-            "_row_num": 23,
-            "__rowNum__": 22,
+            "_row_num": 16,
+            "__rowNum__": 15,
             "_token_type": "begin_screen",
             "_end_screen_clause": {
               "clause": "end screen",
-              "_row_num": 25,
-              "__rowNum__": 24,
+              "_row_num": 24,
+              "__rowNum__": 23,
+              "_token_type": "end_screen"
+            },
+            "_screen_block": "function() {var activePromptIndicies = [];\nactivePromptIndicies.push(6);\nif (data('ONDECOD1') =='4') {\nactivePromptIndicies.push(7);\n}\nif (data('ONDECOD1') =='3') {\nactivePromptIndicies.push(8);\n}\n\nreturn activePromptIndicies;\n}\n",
+            "operationIdx": 4
+          },
+          {
+            "clause": "begin screen",
+            "_row_num": 25,
+            "__rowNum__": 24,
+            "_token_type": "begin_screen",
+            "_end_screen_clause": {
+              "clause": "end screen",
+              "_row_num": 27,
+              "__rowNum__": 26,
               "_token_type": "end_screen"
             },
             "_screen_block": "function() {var activePromptIndicies = [];\nactivePromptIndicies.push(9);\n\nreturn activePromptIndicies;\n}\n",
-            "operationIdx": 4
+            "operationIdx": 5
           },
           {
             "clause": "if",
             "condition": "data('PARANFAL') =='1'",
-            "_row_num": 26,
-            "__rowNum__": 25,
+            "_row_num": 28,
+            "__rowNum__": 27,
             "_token_type": "goto_label",
-            "_branch_label": "_then26",
-            "operationIdx": 5
+            "_branch_label": "_then28",
+            "operationIdx": 6
           },
           {
             "clause": "end if",
             "_token_type": "goto_label",
-            "_branch_label": "_else50",
-            "_row_num": 50,
-            "operationIdx": 6
-          },
-          {
-            "clause": "begin screen",
-            "_row_num": 27,
-            "__rowNum__": 26,
-            "_token_type": "begin_screen",
-            "_end_screen_clause": {
-              "clause": "end screen",
-              "_row_num": 29,
-              "__rowNum__": 28,
-              "_token_type": "end_screen"
-            },
-            "_screen_block": "function() {var activePromptIndicies = [];\nactivePromptIndicies.push(10);\n\nreturn activePromptIndicies;\n}\n",
+            "_branch_label": "_else52",
+            "_row_num": 52,
             "operationIdx": 7
           },
           {
             "clause": "begin screen",
-            "_row_num": 30,
-            "__rowNum__": 29,
+            "_row_num": 29,
+            "__rowNum__": 28,
             "_token_type": "begin_screen",
             "_end_screen_clause": {
               "clause": "end screen",
-              "_row_num": 32,
-              "__rowNum__": 31,
+              "_row_num": 31,
+              "__rowNum__": 30,
               "_token_type": "end_screen"
             },
-            "_screen_block": "function() {var activePromptIndicies = [];\nactivePromptIndicies.push(11);\n\nreturn activePromptIndicies;\n}\n",
+            "_screen_block": "function() {var activePromptIndicies = [];\nactivePromptIndicies.push(10);\n\nreturn activePromptIndicies;\n}\n",
             "operationIdx": 8
           },
           {
             "clause": "begin screen",
-            "_row_num": 33,
-            "__rowNum__": 32,
+            "_row_num": 32,
+            "__rowNum__": 31,
             "_token_type": "begin_screen",
             "_end_screen_clause": {
               "clause": "end screen",
-              "_row_num": 35,
-              "__rowNum__": 34,
+              "_row_num": 34,
+              "__rowNum__": 33,
               "_token_type": "end_screen"
             },
-            "_screen_block": "function() {var activePromptIndicies = [];\nactivePromptIndicies.push(12);\n\nreturn activePromptIndicies;\n}\n",
+            "_screen_block": "function() {var activePromptIndicies = [];\nactivePromptIndicies.push(11);\n\nreturn activePromptIndicies;\n}\n",
             "operationIdx": 9
           },
           {
             "clause": "begin screen",
-            "_row_num": 36,
-            "__rowNum__": 35,
+            "_row_num": 35,
+            "__rowNum__": 34,
             "_token_type": "begin_screen",
             "_end_screen_clause": {
               "clause": "end screen",
-              "_row_num": 38,
-              "__rowNum__": 37,
+              "_row_num": 37,
+              "__rowNum__": 36,
               "_token_type": "end_screen"
             },
-            "_screen_block": "function() {var activePromptIndicies = [];\nactivePromptIndicies.push(13);\n\nreturn activePromptIndicies;\n}\n",
+            "_screen_block": "function() {var activePromptIndicies = [];\nactivePromptIndicies.push(12);\n\nreturn activePromptIndicies;\n}\n",
             "operationIdx": 10
           },
           {
             "clause": "begin screen",
-            "_row_num": 39,
-            "__rowNum__": 38,
+            "_row_num": 38,
+            "__rowNum__": 37,
             "_token_type": "begin_screen",
             "_end_screen_clause": {
               "clause": "end screen",
-              "_row_num": 41,
-              "__rowNum__": 40,
+              "_row_num": 40,
+              "__rowNum__": 39,
               "_token_type": "end_screen"
             },
-            "_screen_block": "function() {var activePromptIndicies = [];\nactivePromptIndicies.push(14);\n\nreturn activePromptIndicies;\n}\n",
+            "_screen_block": "function() {var activePromptIndicies = [];\nactivePromptIndicies.push(13);\n\nreturn activePromptIndicies;\n}\n",
             "operationIdx": 11
           },
           {
             "clause": "begin screen",
-            "_row_num": 42,
-            "__rowNum__": 41,
+            "_row_num": 41,
+            "__rowNum__": 40,
             "_token_type": "begin_screen",
             "_end_screen_clause": {
               "clause": "end screen",
-              "_row_num": 44,
-              "__rowNum__": 43,
+              "_row_num": 43,
+              "__rowNum__": 42,
               "_token_type": "end_screen"
             },
-            "_screen_block": "function() {var activePromptIndicies = [];\nactivePromptIndicies.push(15);\n\nreturn activePromptIndicies;\n}\n",
+            "_screen_block": "function() {var activePromptIndicies = [];\nactivePromptIndicies.push(14);\n\nreturn activePromptIndicies;\n}\n",
             "operationIdx": 12
           },
           {
             "clause": "begin screen",
-            "_row_num": 45,
-            "__rowNum__": 44,
+            "_row_num": 44,
+            "__rowNum__": 43,
             "_token_type": "begin_screen",
             "_end_screen_clause": {
               "clause": "end screen",
-              "_row_num": 49,
-              "__rowNum__": 48,
+              "_row_num": 46,
+              "__rowNum__": 45,
+              "_token_type": "end_screen"
+            },
+            "_screen_block": "function() {var activePromptIndicies = [];\nactivePromptIndicies.push(15);\n\nreturn activePromptIndicies;\n}\n",
+            "operationIdx": 13
+          },
+          {
+            "clause": "begin screen",
+            "_row_num": 47,
+            "__rowNum__": 46,
+            "_token_type": "begin_screen",
+            "_end_screen_clause": {
+              "clause": "end screen",
+              "_row_num": 51,
+              "__rowNum__": 50,
               "_token_type": "end_screen"
             },
             "_screen_block": "function() {var activePromptIndicies = [];\nactivePromptIndicies.push(16);\nactivePromptIndicies.push(17);\nactivePromptIndicies.push(18);\n\nreturn activePromptIndicies;\n}\n",
-            "operationIdx": 13
+            "operationIdx": 14
           },
           {
             "clause": "end if",
             "_token_type": "goto_label",
-            "_branch_label": "_endif50",
-            "_row_num": 50,
-            "operationIdx": 14
-          },
-          {
-            "clause": "begin screen",
-            "_row_num": 51,
-            "__rowNum__": 50,
-            "_token_type": "begin_screen",
-            "_end_screen_clause": {
-              "clause": "end screen",
-              "_row_num": 56,
-              "__rowNum__": 55,
-              "_token_type": "end_screen"
-            },
-            "_screen_block": "function() {var activePromptIndicies = [];\nactivePromptIndicies.push(19);\nif (data('DOENCA') =='1') {\nactivePromptIndicies.push(20);\n}\n\nreturn activePromptIndicies;\n}\n",
+            "_branch_label": "_endif52",
+            "_row_num": 52,
             "operationIdx": 15
           },
           {
             "clause": "begin screen",
-            "_row_num": 57,
-            "__rowNum__": 56,
+            "_row_num": 53,
+            "__rowNum__": 52,
             "_token_type": "begin_screen",
             "_end_screen_clause": {
               "clause": "end screen",
-              "_row_num": 62,
-              "__rowNum__": 61,
+              "_row_num": 58,
+              "__rowNum__": 57,
+              "_token_type": "end_screen"
+            },
+            "_screen_block": "function() {var activePromptIndicies = [];\nactivePromptIndicies.push(19);\nif (data('DOENCA') =='1') {\nactivePromptIndicies.push(20);\n}\n\nreturn activePromptIndicies;\n}\n",
+            "operationIdx": 16
+          },
+          {
+            "clause": "begin screen",
+            "_row_num": 59,
+            "__rowNum__": 58,
+            "_token_type": "begin_screen",
+            "_end_screen_clause": {
+              "clause": "end screen",
+              "_row_num": 64,
+              "__rowNum__": 63,
               "_token_type": "end_screen"
             },
             "_screen_block": "function() {var activePromptIndicies = [];\nactivePromptIndicies.push(21);\nif (data('DIAG') =='1') {\nactivePromptIndicies.push(22);\n}\n\nreturn activePromptIndicies;\n}\n",
-            "operationIdx": 16
+            "operationIdx": 17
           },
           {
             "clause": "if",
             "condition": "data('DOENCA') =='1' || data('DIAG') =='1'",
-            "_row_num": 63,
-            "__rowNum__": 62,
+            "_row_num": 65,
+            "__rowNum__": 64,
             "_token_type": "goto_label",
-            "_branch_label": "_then63",
-            "operationIdx": 17
+            "_branch_label": "_then65",
+            "operationIdx": 18
           },
           {
             "clause": "end if",
             "_token_type": "goto_label",
-            "_branch_label": "_else90",
-            "_row_num": 90,
-            "operationIdx": 18
-          },
-          {
-            "clause": "begin screen",
-            "_row_num": 64,
-            "__rowNum__": 63,
-            "_token_type": "begin_screen",
-            "_end_screen_clause": {
-              "clause": "end screen",
-              "_row_num": 66,
-              "__rowNum__": 65,
-              "_token_type": "end_screen"
-            },
-            "_screen_block": "function() {var activePromptIndicies = [];\nactivePromptIndicies.push(23);\n\nreturn activePromptIndicies;\n}\n",
+            "_branch_label": "_else92",
+            "_row_num": 92,
             "operationIdx": 19
           },
           {
             "clause": "begin screen",
-            "_row_num": 67,
-            "__rowNum__": 66,
+            "_row_num": 66,
+            "__rowNum__": 65,
             "_token_type": "begin_screen",
             "_end_screen_clause": {
               "clause": "end screen",
-              "_row_num": 71,
-              "__rowNum__": 70,
+              "_row_num": 68,
+              "__rowNum__": 67,
               "_token_type": "end_screen"
             },
-            "_screen_block": "function() {var activePromptIndicies = [];\nactivePromptIndicies.push(24);\nactivePromptIndicies.push(25);\nactivePromptIndicies.push(26);\n\nreturn activePromptIndicies;\n}\n",
+            "_screen_block": "function() {var activePromptIndicies = [];\nactivePromptIndicies.push(23);\n\nreturn activePromptIndicies;\n}\n",
             "operationIdx": 20
           },
           {
             "clause": "begin screen",
-            "_row_num": 72,
-            "__rowNum__": 71,
+            "_row_num": 69,
+            "__rowNum__": 68,
             "_token_type": "begin_screen",
             "_end_screen_clause": {
               "clause": "end screen",
-              "_row_num": 75,
-              "__rowNum__": 74,
+              "_row_num": 73,
+              "__rowNum__": 72,
               "_token_type": "end_screen"
             },
-            "_screen_block": "function() {var activePromptIndicies = [];\nactivePromptIndicies.push(27);\nactivePromptIndicies.push(28);\n\nreturn activePromptIndicies;\n}\n",
+            "_screen_block": "function() {var activePromptIndicies = [];\nactivePromptIndicies.push(24);\nactivePromptIndicies.push(25);\nactivePromptIndicies.push(26);\n\nreturn activePromptIndicies;\n}\n",
             "operationIdx": 21
           },
           {
             "clause": "begin screen",
-            "_row_num": 76,
-            "__rowNum__": 75,
+            "_row_num": 74,
+            "__rowNum__": 73,
             "_token_type": "begin_screen",
             "_end_screen_clause": {
               "clause": "end screen",
-              "_row_num": 79,
-              "__rowNum__": 78,
+              "_row_num": 77,
+              "__rowNum__": 76,
               "_token_type": "end_screen"
             },
-            "_screen_block": "function() {var activePromptIndicies = [];\nactivePromptIndicies.push(29);\nactivePromptIndicies.push(30);\n\nreturn activePromptIndicies;\n}\n",
+            "_screen_block": "function() {var activePromptIndicies = [];\nactivePromptIndicies.push(27);\nactivePromptIndicies.push(28);\n\nreturn activePromptIndicies;\n}\n",
             "operationIdx": 22
           },
           {
             "clause": "begin screen",
-            "_row_num": 80,
-            "__rowNum__": 79,
+            "_row_num": 78,
+            "__rowNum__": 77,
             "_token_type": "begin_screen",
             "_end_screen_clause": {
               "clause": "end screen",
-              "_row_num": 89,
-              "__rowNum__": 88,
+              "_row_num": 81,
+              "__rowNum__": 80,
+              "_token_type": "end_screen"
+            },
+            "_screen_block": "function() {var activePromptIndicies = [];\nactivePromptIndicies.push(29);\nactivePromptIndicies.push(30);\n\nreturn activePromptIndicies;\n}\n",
+            "operationIdx": 23
+          },
+          {
+            "clause": "begin screen",
+            "_row_num": 82,
+            "__rowNum__": 81,
+            "_token_type": "begin_screen",
+            "_end_screen_clause": {
+              "clause": "end screen",
+              "_row_num": 91,
+              "__rowNum__": 90,
               "_token_type": "end_screen"
             },
             "_screen_block": "function() {var activePromptIndicies = [];\nactivePromptIndicies.push(31);\nif (data('OUTRODUR') == '1') {\nactivePromptIndicies.push(32);\n}\nactivePromptIndicies.push(33);\nif (data('OUTROSIMP')) {\nactivePromptIndicies.push(34);\n}\n\nreturn activePromptIndicies;\n}\n",
-            "operationIdx": 23
+            "operationIdx": 24
           },
           {
             "clause": "end if",
             "_token_type": "goto_label",
-            "_branch_label": "_endif90",
-            "_row_num": 90,
-            "operationIdx": 24
+            "_branch_label": "_endif92",
+            "_row_num": 92,
+            "operationIdx": 25
           },
           {
             "clause": "begin screen",
-            "_row_num": 91,
-            "__rowNum__": 90,
+            "_row_num": 93,
+            "__rowNum__": 92,
             "_token_type": "begin_screen",
             "_end_screen_clause": {
               "clause": "end screen",
-              "_row_num": 96,
-              "__rowNum__": 95,
+              "_row_num": 98,
+              "__rowNum__": 97,
               "_token_type": "end_screen"
             },
             "_screen_block": "function() {var activePromptIndicies = [];\nactivePromptIndicies.push(35);\nif (data('ACCIDENTE') =='1') {\nactivePromptIndicies.push(36);\n}\n\nreturn activePromptIndicies;\n}\n",
-            "operationIdx": 25
+            "operationIdx": 26
           },
           {
             "_token_type": "exit_section",
             "clause": "exit section",
-            "_row_num": 97,
-            "operationIdx": 26
+            "_row_num": 99,
+            "operationIdx": 27
           },
           {
-            "_row_num": 97,
+            "_row_num": 99,
             "_token_type": "begin_screen",
             "_screen_block": "function() {var activePromptIndicies = [];\nactivePromptIndicies.push(37);\n\nreturn activePromptIndicies;\n}\n",
             "screen": {
               "hideInBackHistory": true
             },
-            "operationIdx": 27
+            "operationIdx": 28
           },
           {
             "_token_type": "resume",
             "clause": "resume",
-            "_row_num": 97,
-            "operationIdx": 28
+            "_row_num": 99,
+            "operationIdx": 29
           }
         ],
         "branch_label_map": {
           "_screen2": 0,
-          "_screen8": 1,
-          "_screen11": 2,
-          "_screen14": 3,
-          "_screen23": 4,
-          "_then26": 7,
-          "_screen27": 7,
-          "_screen30": 8,
-          "_screen33": 9,
-          "_screen36": 10,
-          "_screen39": 11,
-          "_screen42": 12,
-          "_screen45": 13,
-          "_else50": 15,
-          "_endif50": 15,
-          "_screen51": 15,
-          "_screen57": 16,
-          "_then63": 19,
-          "_screen64": 19,
-          "_screen67": 20,
-          "_screen72": 21,
-          "_screen76": 22,
-          "_screen80": 23,
-          "_else90": 25,
-          "_endif90": 25,
-          "_screen91": 25,
-          "_contents": 27,
-          "_screen97": 27
+          "_screen5": 1,
+          "_screen10": 2,
+          "_screen13": 3,
+          "_screen16": 4,
+          "_screen25": 5,
+          "_then28": 8,
+          "_screen29": 8,
+          "_screen32": 9,
+          "_screen35": 10,
+          "_screen38": 11,
+          "_screen41": 12,
+          "_screen44": 13,
+          "_screen47": 14,
+          "_else52": 16,
+          "_endif52": 16,
+          "_screen53": 16,
+          "_screen59": 17,
+          "_then65": 20,
+          "_screen66": 20,
+          "_screen69": 21,
+          "_screen74": 22,
+          "_screen78": 23,
+          "_screen82": 24,
+          "_else92": 26,
+          "_endif92": 26,
+          "_screen93": 26,
+          "_contents": 28,
+          "_screen99": 28
         }
       },
       "initial": {
@@ -32109,7 +32134,7 @@
         "valuesList": "YesNoU",
         "_defn": [
           {
-            "_row_num": 92,
+            "_row_num": 94,
             "section_name": "fal"
           },
           {
@@ -32127,7 +32152,7 @@
         "type": "string",
         "_defn": [
           {
-            "_row_num": 94,
+            "_row_num": 96,
             "section_name": "fal"
           },
           {
@@ -32146,7 +32171,7 @@
         "valuesList": "healthstaff",
         "_defn": [
           {
-            "_row_num": 37,
+            "_row_num": 39,
             "section_name": "fal"
           },
           {
@@ -32165,7 +32190,7 @@
         "valuesList": "birthcomplication",
         "_defn": [
           {
-            "_row_num": 34,
+            "_row_num": 36,
             "section_name": "fal"
           },
           {
@@ -32207,7 +32232,7 @@
         "valuesList": "YesNoU",
         "_defn": [
           {
-            "_row_num": 58,
+            "_row_num": 60,
             "section_name": "fal"
           },
           {
@@ -32225,7 +32250,7 @@
         "type": "string",
         "_defn": [
           {
-            "_row_num": 60,
+            "_row_num": 62,
             "section_name": "fal"
           },
           {
@@ -32244,7 +32269,7 @@
         "valuesList": "YesNoU",
         "_defn": [
           {
-            "_row_num": 73,
+            "_row_num": 75,
             "section_name": "fal"
           },
           {
@@ -32263,7 +32288,7 @@
         "valuesList": "YesNoU",
         "_defn": [
           {
-            "_row_num": 52,
+            "_row_num": 54,
             "section_name": "fal"
           },
           {
@@ -32281,7 +32306,7 @@
         "type": "string",
         "_defn": [
           {
-            "_row_num": 54,
+            "_row_num": 56,
             "section_name": "fal"
           },
           {
@@ -32300,7 +32325,7 @@
         "valuesList": "YesNoU",
         "_defn": [
           {
-            "_row_num": 74,
+            "_row_num": 76,
             "section_name": "fal"
           },
           {
@@ -32318,7 +32343,7 @@
         "type": "string",
         "_defn": [
           {
-            "_row_num": 65,
+            "_row_num": 67,
             "section_name": "fal"
           },
           {
@@ -32337,7 +32362,7 @@
         "valuesList": "YesNoU",
         "_defn": [
           {
-            "_row_num": 77,
+            "_row_num": 79,
             "section_name": "fal"
           },
           {
@@ -32356,7 +32381,7 @@
         "valuesList": "YesNoU",
         "_defn": [
           {
-            "_row_num": 69,
+            "_row_num": 71,
             "section_name": "fal"
           },
           {
@@ -32375,7 +32400,7 @@
         "valuesList": "YesNoU",
         "_defn": [
           {
-            "_row_num": 43,
+            "_row_num": 45,
             "section_name": "fal"
           },
           {
@@ -32393,7 +32418,7 @@
         "type": "string",
         "_defn": [
           {
-            "_row_num": 28,
+            "_row_num": 30,
             "section_name": "fal"
           },
           {
@@ -32411,7 +32436,7 @@
         "type": "integer",
         "_defn": [
           {
-            "_row_num": 6,
+            "_row_num": 8,
             "section_name": "fal"
           },
           {
@@ -32429,7 +32454,7 @@
         "type": "integer",
         "_defn": [
           {
-            "_row_num": 4,
+            "_row_num": 6,
             "section_name": "fal"
           },
           {
@@ -32447,7 +32472,7 @@
         "type": "integer",
         "_defn": [
           {
-            "_row_num": 5,
+            "_row_num": 7,
             "section_name": "fal"
           },
           {
@@ -32466,7 +32491,7 @@
         "valuesList": "Facility",
         "_defn": [
           {
-            "_row_num": 15,
+            "_row_num": 17,
             "section_name": "fal"
           },
           {
@@ -32484,7 +32509,7 @@
         "type": "string",
         "_defn": [
           {
-            "_row_num": 20,
+            "_row_num": 22,
             "section_name": "fal"
           },
           {
@@ -32502,7 +32527,7 @@
         "type": "string",
         "_defn": [
           {
-            "_row_num": 17,
+            "_row_num": 19,
             "section_name": "fal"
           },
           {
@@ -32521,7 +32546,7 @@
         "valuesList": "YesNoU",
         "_defn": [
           {
-            "_row_num": 81,
+            "_row_num": 83,
             "section_name": "fal"
           },
           {
@@ -32540,7 +32565,7 @@
         "valuesList": "YesNoU",
         "_defn": [
           {
-            "_row_num": 85,
+            "_row_num": 87,
             "section_name": "fal"
           },
           {
@@ -32559,7 +32584,7 @@
         "valuesList": "YesNoU",
         "_defn": [
           {
-            "_row_num": 24,
+            "_row_num": 26,
             "section_name": "fal"
           },
           {
@@ -32578,7 +32603,7 @@
         "valuesList": "YesNoU",
         "_defn": [
           {
-            "_row_num": 78,
+            "_row_num": 80,
             "section_name": "fal"
           },
           {
@@ -32597,7 +32622,7 @@
         "valuesList": "inf3",
         "_defn": [
           {
-            "_row_num": 9,
+            "_row_num": 11,
             "section_name": "fal"
           },
           {
@@ -32616,7 +32641,7 @@
         "valuesList": "birthinterval",
         "_defn": [
           {
-            "_row_num": 31,
+            "_row_num": 33,
             "section_name": "fal"
           },
           {
@@ -32635,7 +32660,7 @@
         "valuesList": "YesNoU",
         "_defn": [
           {
-            "_row_num": 12,
+            "_row_num": 14,
             "section_name": "fal"
           },
           {
@@ -32651,10 +32676,10 @@
       },
       "RESGRAV": {
         "type": "integer",
-        "valuesList": "birthoutcome",
+        "valuesList": "birthoutcomefal",
         "_defn": [
           {
-            "_row_num": 40,
+            "_row_num": 42,
             "section_name": "fal"
           },
           {
@@ -32672,7 +32697,7 @@
         "type": "integer",
         "_defn": [
           {
-            "_row_num": 47,
+            "_row_num": 49,
             "section_name": "fal"
           },
           {
@@ -32690,7 +32715,7 @@
         "type": "integer",
         "_defn": [
           {
-            "_row_num": 48,
+            "_row_num": 50,
             "section_name": "fal"
           },
           {
@@ -32709,7 +32734,7 @@
         "valuesList": "YesNoU",
         "_defn": [
           {
-            "_row_num": 70,
+            "_row_num": 72,
             "section_name": "fal"
           },
           {
@@ -32727,7 +32752,7 @@
         "type": "string",
         "_defn": [
           {
-            "_row_num": 83,
+            "_row_num": 85,
             "section_name": "fal"
           },
           {
@@ -32745,7 +32770,7 @@
         "type": "string",
         "_defn": [
           {
-            "_row_num": 87,
+            "_row_num": 89,
             "section_name": "fal"
           },
           {
@@ -33082,7 +33107,7 @@
         "_aspect": "ABPARTTIPO",
         "_key": "displayChoicesList",
         "_type": "object",
-        "_value": "[{\"choice_list_name\":\"birthoutcome\",\"data_value\":\"1\",\"display\":{\"title\":{\"text\":{\"english\":\"Live birth\",\"default\":\"Nado vivo\"}}},\"_row_num\":93},{\"choice_list_name\":\"birthoutcome\",\"data_value\":\"2\",\"display\":{\"title\":{\"text\":{\"english\":\"Stillbirth\",\"default\":\"Nado morto\"}}},\"_row_num\":94},{\"choice_list_name\":\"birthoutcome\",\"data_value\":\"3\",\"display\":{\"title\":{\"text\":{\"english\":\"Miscarriage\",\"default\":\"Aborto\"}}},\"_row_num\":95},{\"choice_list_name\":\"birthoutcome\",\"data_value\":\"1\",\"display\":{\"title\":{\"text\":{\"english\":\"NadoVivo\",\"default\":\"NadoVivo\"}}},\"_row_num\":152},{\"choice_list_name\":\"birthoutcome\",\"data_value\":\"2\",\"display\":{\"title\":{\"text\":{\"english\":\"NadoMorto\",\"default\":\"NadoMorto\"}}},\"_row_num\":153},{\"choice_list_name\":\"birthoutcome\",\"data_value\":\"3\",\"display\":{\"title\":{\"text\":{\"english\":\"Aborto\",\"default\":\"Aborto\"}}},\"_row_num\":154},{\"choice_list_name\":\"birthoutcome\",\"data_value\":\"4\",\"display\":{\"title\":{\"text\":{\"english\":\"O feto não saiu\",\"default\":\"O feto não saiu\"}}},\"_row_num\":155},{\"choice_list_name\":\"birthoutcome\",\"data_value\":\"5\",\"display\":{\"title\":{\"text\":{\"english\":\"Não sabe\",\"default\":\"Não sabe\"}}},\"_row_num\":156}]"
+        "_value": "[{\"choice_list_name\":\"birthoutcome\",\"data_value\":\"1\",\"display\":{\"title\":{\"text\":{\"english\":\"Live birth\",\"default\":\"Nado vivo\"}}},\"_row_num\":93},{\"choice_list_name\":\"birthoutcome\",\"data_value\":\"2\",\"display\":{\"title\":{\"text\":{\"english\":\"Stillbirth\",\"default\":\"Nado morto\"}}},\"_row_num\":94},{\"choice_list_name\":\"birthoutcome\",\"data_value\":\"3\",\"display\":{\"title\":{\"text\":{\"english\":\"Miscarriage\",\"default\":\"Aborto\"}}},\"_row_num\":95}]"
       },
       {
         "_partition": "Column",
@@ -33096,7 +33121,7 @@
         "_aspect": "AJUDOU",
         "_key": "displayChoicesList",
         "_type": "object",
-        "_value": "[{\"choice_list_name\":\"healthstaff\",\"data_value\":\"1\",\"display\":{\"title\":{\"text\":{\"english\":\"Parteira\",\"default\":\"Parteira\"}}},\"_row_num\":146},{\"choice_list_name\":\"healthstaff\",\"data_value\":\"2\",\"display\":{\"title\":{\"text\":{\"english\":\"Médico/Técnico de Saúde\",\"default\":\"Médico/Técnico de Saúde\"}}},\"_row_num\":147},{\"choice_list_name\":\"healthstaff\",\"data_value\":\"3\",\"display\":{\"title\":{\"text\":{\"english\":\"Matrona\",\"default\":\"Matrona\"}}},\"_row_num\":148},{\"choice_list_name\":\"healthstaff\",\"data_value\":\"4\",\"display\":{\"title\":{\"text\":{\"english\":\"Mãe/Tia/Madrasta/Avó\",\"default\":\"Mãe/Tia/Madrasta/Avó\"}}},\"_row_num\":149},{\"choice_list_name\":\"healthstaff\",\"data_value\":\"5\",\"display\":{\"title\":{\"text\":{\"english\":\"Outro\",\"default\":\"Outro\"}}},\"_row_num\":150},{\"choice_list_name\":\"healthstaff\",\"data_value\":\"6\",\"display\":{\"title\":{\"text\":{\"english\":\"Não sabe\",\"default\":\"Não sabe\"}}},\"_row_num\":151}]"
+        "_value": "[{\"choice_list_name\":\"healthstaff\",\"data_value\":\"1\",\"display\":{\"title\":{\"text\":{\"english\":\"Parteira\",\"default\":\"Parteira\"}}},\"_row_num\":146},{\"choice_list_name\":\"healthstaff\",\"data_value\":\"2\",\"display\":{\"title\":{\"text\":{\"english\":\"Médico/Técnico de Saúde\",\"default\":\"Médico/Técnico de Saúde\"}}},\"_row_num\":147},{\"choice_list_name\":\"healthstaff\",\"data_value\":\"3\",\"display\":{\"title\":{\"text\":{\"english\":\"Matrona\",\"default\":\"Matrona\"}}},\"_row_num\":148},{\"choice_list_name\":\"healthstaff\",\"data_value\":\"4\",\"display\":{\"title\":{\"text\":{\"english\":\"Mãe/Tia/Madrasta/Avó\",\"default\":\"Mãe/Tia/Madrasta/Avó\"}}},\"_row_num\":149},{\"choice_list_name\":\"healthstaff\",\"data_value\":\"5\",\"display\":{\"title\":{\"text\":{\"english\":\"Outro\",\"default\":\"Outro\"}}},\"_row_num\":150},{\"choice_list_name\":\"healthstaff\",\"data_value\":\"6\",\"display\":{\"title\":{\"text\":{\"english\":\"Don't know\",\"default\":\"Não sabe\"}}},\"_row_num\":151}]"
       },
       {
         "_partition": "Column",
@@ -33187,7 +33212,7 @@
         "_aspect": "COMPPAR",
         "_key": "displayChoicesList",
         "_type": "object",
-        "_value": "[{\"choice_list_name\":\"birthcomplication\",\"data_value\":\"1\",\"display\":{\"title\":{\"text\":{\"english\":\"Correu sem complicacões\",\"default\":\"Correu sem complicacões\"}}},\"_row_num\":139},{\"choice_list_name\":\"birthcomplication\",\"data_value\":\"2\",\"display\":{\"title\":{\"text\":{\"english\":\"Perdeu muito sangue\",\"default\":\"Perdeu muito sangue\"}}},\"_row_num\":140},{\"choice_list_name\":\"birthcomplication\",\"data_value\":\"3\",\"display\":{\"title\":{\"text\":{\"english\":\"Parto prolongado\",\"default\":\"Parto prolongado\"}}},\"_row_num\":141},{\"choice_list_name\":\"birthcomplication\",\"data_value\":\"4\",\"display\":{\"title\":{\"text\":{\"english\":\"Cesariana\",\"default\":\"Cesariana\"}}},\"_row_num\":142},{\"choice_list_name\":\"birthcomplication\",\"data_value\":\"5\",\"display\":{\"title\":{\"text\":{\"english\":\"Fórceps ou ventosa\",\"default\":\"Fórceps ou ventosa\"}}},\"_row_num\":143},{\"choice_list_name\":\"birthcomplication\",\"data_value\":\"6\",\"display\":{\"title\":{\"text\":{\"english\":\"Outros (descrever)\",\"default\":\"Outros (descrever)\"}}},\"_row_num\":144},{\"choice_list_name\":\"birthcomplication\",\"data_value\":\"7\",\"display\":{\"title\":{\"text\":{\"english\":\"Não sabe\",\"default\":\"Não sabe\"}}},\"_row_num\":145}]"
+        "_value": "[{\"choice_list_name\":\"birthcomplication\",\"data_value\":\"1\",\"display\":{\"title\":{\"text\":{\"english\":\"Correu sem complicacões\",\"default\":\"Correu sem complicacões\"}}},\"_row_num\":139},{\"choice_list_name\":\"birthcomplication\",\"data_value\":\"2\",\"display\":{\"title\":{\"text\":{\"english\":\"Perdeu muito sangue\",\"default\":\"Perdeu muito sangue\"}}},\"_row_num\":140},{\"choice_list_name\":\"birthcomplication\",\"data_value\":\"3\",\"display\":{\"title\":{\"text\":{\"english\":\"Parto prolongado\",\"default\":\"Parto prolongado\"}}},\"_row_num\":141},{\"choice_list_name\":\"birthcomplication\",\"data_value\":\"4\",\"display\":{\"title\":{\"text\":{\"english\":\"Cesariana\",\"default\":\"Cesariana\"}}},\"_row_num\":142},{\"choice_list_name\":\"birthcomplication\",\"data_value\":\"5\",\"display\":{\"title\":{\"text\":{\"english\":\"Fórceps ou ventosa\",\"default\":\"Fórceps ou ventosa\"}}},\"_row_num\":143},{\"choice_list_name\":\"birthcomplication\",\"data_value\":\"6\",\"display\":{\"title\":{\"text\":{\"english\":\"Outros (descrever)\",\"default\":\"Outros (descrever)\"}}},\"_row_num\":144},{\"choice_list_name\":\"birthcomplication\",\"data_value\":\"7\",\"display\":{\"title\":{\"text\":{\"english\":\"Don't know\",\"default\":\"Não sabe\"}}},\"_row_num\":145}]"
       },
       {
         "_partition": "Column",
@@ -33320,7 +33345,7 @@
         "_aspect": "ONDECOD1",
         "_key": "displayChoicesList",
         "_type": "object",
-        "_value": "[{\"choice_list_name\":\"Facility\",\"data_value\":\"1\",\"display\":{\"title\":{\"text\":{\"english\":\"Home\",\"default\":\"Casa\"}}},\"_row_num\":121},{\"choice_list_name\":\"Facility\",\"data_value\":\"2\",\"display\":{\"title\":{\"text\":{\"english\":\"Centro de saúde\",\"default\":\"Centro de saúde\"}}},\"_row_num\":122},{\"choice_list_name\":\"Facility\",\"data_value\":\"3\",\"display\":{\"title\":{\"text\":{\"english\":\"Hospital\",\"default\":\"Hospital\"}}},\"_row_num\":123},{\"choice_list_name\":\"Facility\",\"data_value\":\"4\",\"display\":{\"title\":{\"text\":{\"english\":\"Other\",\"default\":\"Outro\"}}},\"_row_num\":124}]"
+        "_value": "[{\"choice_list_name\":\"Facility\",\"data_value\":\"1\",\"display\":{\"title\":{\"text\":{\"english\":\"Home\",\"default\":\"Casa\"}}},\"_row_num\":121},{\"choice_list_name\":\"Facility\",\"data_value\":\"2\",\"display\":{\"title\":{\"text\":{\"english\":\"Health centre\",\"default\":\"Centro de saúde\"}}},\"_row_num\":122},{\"choice_list_name\":\"Facility\",\"data_value\":\"3\",\"display\":{\"title\":{\"text\":{\"english\":\"Hospital\",\"default\":\"Hospital\"}}},\"_row_num\":123},{\"choice_list_name\":\"Facility\",\"data_value\":\"4\",\"display\":{\"title\":{\"text\":{\"english\":\"Other\",\"default\":\"Outro\"}}},\"_row_num\":124}]"
       },
       {
         "_partition": "Column",
@@ -33390,7 +33415,7 @@
         "_aspect": "RESGRAV",
         "_key": "displayChoicesList",
         "_type": "object",
-        "_value": "[{\"choice_list_name\":\"birthoutcome\",\"data_value\":\"1\",\"display\":{\"title\":{\"text\":{\"english\":\"Live birth\",\"default\":\"Nado vivo\"}}},\"_row_num\":93},{\"choice_list_name\":\"birthoutcome\",\"data_value\":\"2\",\"display\":{\"title\":{\"text\":{\"english\":\"Stillbirth\",\"default\":\"Nado morto\"}}},\"_row_num\":94},{\"choice_list_name\":\"birthoutcome\",\"data_value\":\"3\",\"display\":{\"title\":{\"text\":{\"english\":\"Miscarriage\",\"default\":\"Aborto\"}}},\"_row_num\":95},{\"choice_list_name\":\"birthoutcome\",\"data_value\":\"1\",\"display\":{\"title\":{\"text\":{\"english\":\"NadoVivo\",\"default\":\"NadoVivo\"}}},\"_row_num\":152},{\"choice_list_name\":\"birthoutcome\",\"data_value\":\"2\",\"display\":{\"title\":{\"text\":{\"english\":\"NadoMorto\",\"default\":\"NadoMorto\"}}},\"_row_num\":153},{\"choice_list_name\":\"birthoutcome\",\"data_value\":\"3\",\"display\":{\"title\":{\"text\":{\"english\":\"Aborto\",\"default\":\"Aborto\"}}},\"_row_num\":154},{\"choice_list_name\":\"birthoutcome\",\"data_value\":\"4\",\"display\":{\"title\":{\"text\":{\"english\":\"O feto não saiu\",\"default\":\"O feto não saiu\"}}},\"_row_num\":155},{\"choice_list_name\":\"birthoutcome\",\"data_value\":\"5\",\"display\":{\"title\":{\"text\":{\"english\":\"Não sabe\",\"default\":\"Não sabe\"}}},\"_row_num\":156}]"
+        "_value": "[{\"choice_list_name\":\"birthoutcomefal\",\"data_value\":\"1\",\"display\":{\"title\":{\"text\":{\"english\":\"Live birth\",\"default\":\"Nado vivo\"}}},\"_row_num\":152},{\"choice_list_name\":\"birthoutcomefal\",\"data_value\":\"2\",\"display\":{\"title\":{\"text\":{\"english\":\"Stillbirth\",\"default\":\"Nado morto\"}}},\"_row_num\":153},{\"choice_list_name\":\"birthoutcomefal\",\"data_value\":\"3\",\"display\":{\"title\":{\"text\":{\"english\":\"Miscarriage\",\"default\":\"Aborto\"}}},\"_row_num\":154},{\"choice_list_name\":\"birthoutcomefal\",\"data_value\":\"4\",\"display\":{\"title\":{\"text\":{\"english\":\"O feto não saiu\",\"default\":\"O feto não saiu\"}}},\"_row_num\":155},{\"choice_list_name\":\"birthoutcomefal\",\"data_value\":\"5\",\"display\":{\"title\":{\"text\":{\"english\":\"Don't know\",\"default\":\"Não sabe\"}}},\"_row_num\":156}]"
       },
       {
         "_partition": "Column",

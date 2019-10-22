@@ -226,18 +226,42 @@
         "name": "GEST",
         "display": {
           "prompt": {
-            "text": "Mes de gestação"
+            "text": {
+              "english": "Gestation month",
+              "default": "Mes de gestação"
+            }
           }
         },
         "_row_num": 29
       },
       {
-        "clause": "end screen",
+        "type": "select_multiple",
+        "values_list": "dontknow",
+        "name": "gestns",
         "_row_num": 30
       },
       {
-        "clause": "begin screen",
+        "clause": "if",
+        "condition": "data('gestns') != null",
         "_row_num": 31
+      },
+      {
+        "type": "assign",
+        "name": "GEST",
+        "calculation": 99,
+        "_row_num": 32
+      },
+      {
+        "clause": "end if",
+        "_row_num": 33
+      },
+      {
+        "clause": "end screen",
+        "_row_num": 34
+      },
+      {
+        "clause": "begin screen",
+        "_row_num": 35
       },
       {
         "type": "note",
@@ -246,7 +270,7 @@
             "text": "Data de ultimo período"
           }
         },
-        "_row_num": 32
+        "_row_num": 36
       },
       {
         "type": "adate",
@@ -259,12 +283,12 @@
             }
           }
         },
-        "_row_num": 33
+        "_row_num": 37
       },
       {
         "clause": "if",
         "condition": "data('CARTONA') == 'VIC'",
-        "_row_num": 34
+        "_row_num": 38
       },
       {
         "type": "adate",
@@ -277,19 +301,19 @@
             }
           }
         },
-        "_row_num": 35
+        "_row_num": 39
       },
       {
         "clause": "end if",
-        "_row_num": 36
+        "_row_num": 40
       },
       {
         "clause": "end screen",
-        "_row_num": 37
+        "_row_num": 41
       },
       {
         "clause": "begin screen",
-        "_row_num": 38
+        "_row_num": 42
       },
       {
         "type": "note",
@@ -301,7 +325,7 @@
             }
           }
         },
-        "_row_num": 39
+        "_row_num": 43
       },
       {
         "type": "integer",
@@ -314,12 +338,33 @@
             }
           }
         },
-        "_row_num": 40
+        "_row_num": 44
+      },
+      {
+        "type": "select_multiple",
+        "values_list": "dontknow",
+        "name": "qc_mns",
+        "_row_num": 45
+      },
+      {
+        "clause": "if",
+        "condition": "data('qc_mns') != null",
+        "_row_num": 46
+      },
+      {
+        "type": "assign",
+        "name": "QC_M",
+        "calculation": 99,
+        "_row_num": 47
+      },
+      {
+        "clause": "end if",
+        "_row_num": 48
       },
       {
         "clause": "if",
         "condition": "data('CARTONA') == 'VIC'",
-        "_row_num": 41
+        "_row_num": 49
       },
       {
         "type": "integer",
@@ -332,19 +377,19 @@
             }
           }
         },
-        "_row_num": 42
+        "_row_num": 50
       },
       {
         "clause": "end if",
-        "_row_num": 43
+        "_row_num": 51
       },
       {
         "clause": "end screen",
-        "_row_num": 44
+        "_row_num": 52
       },
       {
         "clause": "begin screen",
-        "_row_num": 45
+        "_row_num": 53
       },
       {
         "type": "note",
@@ -356,7 +401,7 @@
             }
           }
         },
-        "_row_num": 46
+        "_row_num": 54
       },
       {
         "type": "integer",
@@ -369,12 +414,33 @@
             }
           }
         },
-        "_row_num": 47
+        "_row_num": 55
+      },
+      {
+        "type": "select_multiple",
+        "values_list": "dontknow",
+        "name": "fer_mns",
+        "_row_num": 56
+      },
+      {
+        "clause": "if",
+        "condition": "data('fer_mns') != null",
+        "_row_num": 57
+      },
+      {
+        "type": "assign",
+        "name": "FER_M",
+        "calculation": 99,
+        "_row_num": 58
+      },
+      {
+        "clause": "end if",
+        "_row_num": 59
       },
       {
         "clause": "if",
         "condition": "data('CARTONA') == 'VIC'",
-        "_row_num": 48
+        "_row_num": 60
       },
       {
         "type": "integer",
@@ -387,19 +453,19 @@
             }
           }
         },
-        "_row_num": 49
+        "_row_num": 61
       },
       {
         "clause": "end if",
-        "_row_num": 50
+        "_row_num": 62
       },
       {
         "clause": "end screen",
-        "_row_num": 51
+        "_row_num": 63
       },
       {
         "clause": "begin screen",
-        "_row_num": 52
+        "_row_num": 64
       },
       {
         "type": "note",
@@ -408,7 +474,7 @@
             "text": "A grávida recebeu fansidar (TPI, SP) quantas vezes?"
           }
         },
-        "_row_num": 53
+        "_row_num": 65
       },
       {
         "type": "integer",
@@ -421,12 +487,33 @@
             }
           }
         },
-        "_row_num": 54
+        "_row_num": 66
+      },
+      {
+        "type": "select_multiple",
+        "values_list": "dontknow",
+        "name": "fansi_mns",
+        "_row_num": 67
+      },
+      {
+        "clause": "if",
+        "condition": "data('fansi_mns') != null",
+        "_row_num": 68
+      },
+      {
+        "type": "assign",
+        "name": "FANSI_M",
+        "calculation": 99,
+        "_row_num": 69
+      },
+      {
+        "clause": "end if",
+        "_row_num": 70
       },
       {
         "clause": "if",
         "condition": "data('CARTONA') == 'VIC'",
-        "_row_num": 55
+        "_row_num": 71
       },
       {
         "type": "integer",
@@ -439,24 +526,24 @@
             }
           }
         },
-        "_row_num": 56
+        "_row_num": 72
       },
       {
         "clause": "end if",
-        "_row_num": 57
+        "_row_num": 73
       },
       {
         "clause": "end screen",
-        "_row_num": 58
+        "_row_num": 74
       },
       {
         "clause": "if",
         "condition": "data('CARTONA') == 'VIC'",
-        "_row_num": 59
+        "_row_num": 75
       },
       {
         "clause": "begin screen",
-        "_row_num": 60
+        "_row_num": 76
       },
       {
         "type": "adate",
@@ -466,28 +553,28 @@
             "text": "Data provavel do parto indicado no cartão?"
           }
         },
-        "_row_num": 61
+        "_row_num": 77
       },
       {
         "clause": "end screen",
-        "_row_num": 62
+        "_row_num": 78
       },
       {
         "clause": "end if",
-        "_row_num": 63
+        "_row_num": 79
       },
       {
         "clause": "end if",
-        "_row_num": 64
+        "_row_num": 80
       },
       {
         "clause": "if",
         "condition": "data('GRAVIDA_ESTADO') == '2'",
-        "_row_num": 65
+        "_row_num": 81
       },
       {
         "clause": "begin screen",
-        "_row_num": 66
+        "_row_num": 82
       },
       {
         "type": "select_one",
@@ -501,15 +588,15 @@
             }
           }
         },
-        "_row_num": 67
+        "_row_num": 83
       },
       {
         "clause": "end screen",
-        "_row_num": 68
+        "_row_num": 84
       },
       {
         "clause": "begin screen",
-        "_row_num": 69
+        "_row_num": 85
       },
       {
         "type": "adate",
@@ -522,20 +609,20 @@
             }
           }
         },
-        "_row_num": 70
+        "_row_num": 86
       },
       {
         "clause": "end screen",
-        "_row_num": 71
+        "_row_num": 87
       },
       {
         "clause": "if",
         "condition": "data('OUTSTATUS') == '2'",
-        "_row_num": 72
+        "_row_num": 88
       },
       {
         "clause": "begin screen",
-        "_row_num": 73
+        "_row_num": 89
       },
       {
         "type": "integer",
@@ -548,24 +635,45 @@
             }
           }
         },
-        "_row_num": 74
+        "_row_num": 90
       },
       {
-        "clause": "end screen",
-        "_row_num": 75
+        "type": "select_multiple",
+        "values_list": "dontknow",
+        "name": "abmesns",
+        "_row_num": 91
+      },
+      {
+        "clause": "if",
+        "condition": "data('abmesns') != null",
+        "_row_num": 92
+      },
+      {
+        "type": "assign",
+        "name": "ABMES",
+        "calculation": 99,
+        "_row_num": 93
       },
       {
         "clause": "end if",
-        "_row_num": 76
+        "_row_num": 94
+      },
+      {
+        "clause": "end screen",
+        "_row_num": 95
+      },
+      {
+        "clause": "end if",
+        "_row_num": 96
       },
       {
         "clause": "if",
         "condition": "data('OUTSTATUS') == '1'",
-        "_row_num": 77
+        "_row_num": 97
       },
       {
         "clause": "begin screen",
-        "_row_num": 78
+        "_row_num": 98
       },
       {
         "type": "integer",
@@ -578,19 +686,19 @@
             }
           }
         },
-        "_row_num": 79
+        "_row_num": 99
       },
       {
         "clause": "end screen",
-        "_row_num": 80
+        "_row_num": 100
       },
       {
         "clause": "end if",
-        "_row_num": 81
+        "_row_num": 101
       },
       {
         "clause": "begin screen",
-        "_row_num": 82
+        "_row_num": 102
       },
       {
         "type": "select_one",
@@ -604,12 +712,12 @@
             }
           }
         },
-        "_row_num": 83
+        "_row_num": 103
       },
       {
         "clause": "if",
         "condition": "data('inf1') == '2'",
-        "_row_num": 84
+        "_row_num": 104
       },
       {
         "type": "select_one",
@@ -623,44 +731,44 @@
             }
           }
         },
-        "_row_num": 85
+        "_row_num": 105
       },
       {
         "clause": "end if",
-        "_row_num": 86
+        "_row_num": 106
       },
       {
         "clause": "if",
         "condition": "data('inf1') == '2'",
-        "_row_num": 87
+        "_row_num": 107
       },
       {
         "type": "assign",
         "name": "GRINFOS",
         "calculation": "data('inf2')",
-        "_row_num": 88
+        "_row_num": 108
       },
       {
         "clause": "else",
-        "_row_num": 89
+        "_row_num": 109
       },
       {
         "type": "assign",
         "name": "GRINFOS",
         "calculation": "data('inf1')",
-        "_row_num": 90
+        "_row_num": 110
       },
       {
         "clause": "end if",
-        "_row_num": 91
+        "_row_num": 111
       },
       {
         "clause": "end screen",
-        "_row_num": 92
+        "_row_num": 112
       },
       {
         "clause": "begin screen",
-        "_row_num": 93
+        "_row_num": 113
       },
       {
         "type": "select_one",
@@ -674,15 +782,15 @@
             }
           }
         },
-        "_row_num": 94
+        "_row_num": 114
       },
       {
         "clause": "end screen",
-        "_row_num": 95
+        "_row_num": 115
       },
       {
         "clause": "begin screen",
-        "_row_num": 96
+        "_row_num": 116
       },
       {
         "type": "select_one",
@@ -696,15 +804,15 @@
             }
           }
         },
-        "_row_num": 97
+        "_row_num": 117
       },
       {
         "clause": "end screen",
-        "_row_num": 98
+        "_row_num": 118
       },
       {
         "clause": "begin screen",
-        "_row_num": 99
+        "_row_num": 119
       },
       {
         "type": "select_one",
@@ -715,12 +823,12 @@
             "text": "Vacina anti-tetánica durante esta gravidez?"
           }
         },
-        "_row_num": 100
+        "_row_num": 120
       },
       {
         "clause": "if",
         "condition": "data('GRVAC') == '1'",
-        "_row_num": 101
+        "_row_num": 121
       },
       {
         "type": "integer",
@@ -733,19 +841,19 @@
             }
           }
         },
-        "_row_num": 102
+        "_row_num": 122
       },
       {
         "clause": "end if",
-        "_row_num": 103
+        "_row_num": 123
       },
       {
         "clause": "end screen",
-        "_row_num": 104
+        "_row_num": 124
       },
       {
         "clause": "begin screen",
-        "_row_num": 105
+        "_row_num": 125
       },
       {
         "type": "note",
@@ -757,7 +865,7 @@
             }
           }
         },
-        "_row_num": 106
+        "_row_num": 126
       },
       {
         "type": "integer",
@@ -770,12 +878,33 @@
             }
           }
         },
-        "_row_num": 107
+        "_row_num": 127
+      },
+      {
+        "type": "select_multiple",
+        "values_list": "dontknow",
+        "name": "cdg_mns",
+        "_row_num": 128
+      },
+      {
+        "clause": "if",
+        "condition": "data('cdg_mns') != null",
+        "_row_num": 129
+      },
+      {
+        "type": "assign",
+        "name": "CDG_M",
+        "calculation": 99,
+        "_row_num": 130
+      },
+      {
+        "clause": "end if",
+        "_row_num": 131
       },
       {
         "clause": "if",
         "condition": "data('CART_ANC') == 'VIC'",
-        "_row_num": 108
+        "_row_num": 132
       },
       {
         "type": "integer",
@@ -788,19 +917,19 @@
             }
           }
         },
-        "_row_num": 109
+        "_row_num": 133
       },
       {
         "clause": "end if",
-        "_row_num": 110
+        "_row_num": 134
       },
       {
         "clause": "end screen",
-        "_row_num": 111
+        "_row_num": 135
       },
       {
         "clause": "begin screen",
-        "_row_num": 112
+        "_row_num": 136
       },
       {
         "type": "note",
@@ -812,7 +941,7 @@
             }
           }
         },
-        "_row_num": 113
+        "_row_num": 137
       },
       {
         "type": "integer",
@@ -825,12 +954,33 @@
             }
           }
         },
-        "_row_num": 114
+        "_row_num": 138
+      },
+      {
+        "type": "select_multiple",
+        "values_list": "dontknow",
+        "name": "fedep_mns",
+        "_row_num": 139
+      },
+      {
+        "clause": "if",
+        "condition": "data('fedep_mns') != null",
+        "_row_num": 140
+      },
+      {
+        "type": "assign",
+        "name": "FEDEP_M",
+        "calculation": 99,
+        "_row_num": 141
+      },
+      {
+        "clause": "end if",
+        "_row_num": 142
       },
       {
         "clause": "if",
         "condition": "data('CART_ANC') == 'VIC'",
-        "_row_num": 115
+        "_row_num": 143
       },
       {
         "type": "integer",
@@ -843,19 +993,19 @@
             }
           }
         },
-        "_row_num": 116
+        "_row_num": 144
       },
       {
         "clause": "end if",
-        "_row_num": 117
+        "_row_num": 145
       },
       {
         "clause": "end screen",
-        "_row_num": 118
+        "_row_num": 146
       },
       {
         "clause": "begin screen",
-        "_row_num": 119
+        "_row_num": 147
       },
       {
         "type": "note",
@@ -864,7 +1014,7 @@
             "text": "A grávida recebeu fansidar (TPI, SP) quantas vezes?"
           }
         },
-        "_row_num": 120
+        "_row_num": 148
       },
       {
         "type": "integer",
@@ -877,12 +1027,33 @@
             }
           }
         },
-        "_row_num": 121
+        "_row_num": 149
+      },
+      {
+        "type": "select_multiple",
+        "values_list": "dontknow",
+        "name": "qvfansi_mns",
+        "_row_num": 150
+      },
+      {
+        "clause": "if",
+        "condition": "data('qvfansi_mns') != null",
+        "_row_num": 151
+      },
+      {
+        "type": "assign",
+        "name": "QVFANSI_M",
+        "calculation": 99,
+        "_row_num": 152
+      },
+      {
+        "clause": "end if",
+        "_row_num": 153
       },
       {
         "clause": "if",
         "condition": "data('CART_ANC') == 'VIC'",
-        "_row_num": 122
+        "_row_num": 154
       },
       {
         "type": "integer",
@@ -895,19 +1066,19 @@
             }
           }
         },
-        "_row_num": 123
+        "_row_num": 155
       },
       {
         "clause": "end if",
-        "_row_num": 124
+        "_row_num": 156
       },
       {
         "clause": "end screen",
-        "_row_num": 125
+        "_row_num": 157
       },
       {
         "clause": "begin screen",
-        "_row_num": 126
+        "_row_num": 158
       },
       {
         "type": "select_one",
@@ -921,15 +1092,15 @@
             }
           }
         },
-        "_row_num": 127
+        "_row_num": 159
       },
       {
         "clause": "end screen",
-        "_row_num": 128
+        "_row_num": 160
       },
       {
         "clause": "begin screen",
-        "_row_num": 129
+        "_row_num": 161
       },
       {
         "type": "select_one",
@@ -943,15 +1114,15 @@
             }
           }
         },
-        "_row_num": 130
+        "_row_num": 162
       },
       {
         "clause": "end screen",
-        "_row_num": 131
+        "_row_num": 163
       },
       {
         "clause": "begin screen",
-        "_row_num": 132
+        "_row_num": 164
       },
       {
         "type": "select_one",
@@ -965,20 +1136,20 @@
             }
           }
         },
-        "_row_num": 133
+        "_row_num": 165
       },
       {
         "clause": "end screen",
-        "_row_num": 134
+        "_row_num": 166
       },
       {
         "clause": "if",
         "condition": "data('LITTERSIZE') >='1'",
-        "_row_num": 135
+        "_row_num": 167
       },
       {
         "clause": "begin screen",
-        "_row_num": 136
+        "_row_num": 168
       },
       {
         "type": "note",
@@ -990,25 +1161,25 @@
             }
           }
         },
-        "_row_num": 137
+        "_row_num": 169
       },
       {
         "type": "linked_table",
         "values_list": "child",
-        "_row_num": 138
+        "_row_num": 170
       },
       {
         "clause": "end screen",
-        "_row_num": 139
+        "_row_num": 171
       },
       {
         "clause": "if",
         "condition": "data('LITTERSIZE') >='2'",
-        "_row_num": 140
+        "_row_num": 172
       },
       {
         "clause": "begin screen",
-        "_row_num": 141
+        "_row_num": 173
       },
       {
         "type": "note",
@@ -1020,25 +1191,25 @@
             }
           }
         },
-        "_row_num": 142
+        "_row_num": 174
       },
       {
         "type": "linked_table",
         "values_list": "child",
-        "_row_num": 143
+        "_row_num": 175
       },
       {
         "clause": "end screen",
-        "_row_num": 144
+        "_row_num": 176
       },
       {
         "clause": "if",
         "condition": "data('LITTERSIZE') >='3'",
-        "_row_num": 145
+        "_row_num": 177
       },
       {
         "clause": "begin screen",
-        "_row_num": 146
+        "_row_num": 178
       },
       {
         "type": "note",
@@ -1050,25 +1221,25 @@
             }
           }
         },
-        "_row_num": 147
+        "_row_num": 179
       },
       {
         "type": "linked_table",
         "values_list": "child",
-        "_row_num": 148
+        "_row_num": 180
       },
       {
         "clause": "end screen",
-        "_row_num": 149
+        "_row_num": 181
       },
       {
         "clause": "if",
         "condition": "data('LITTERSIZE') >='4'",
-        "_row_num": 150
+        "_row_num": 182
       },
       {
         "clause": "begin screen",
-        "_row_num": 151
+        "_row_num": 183
       },
       {
         "type": "note",
@@ -1080,36 +1251,36 @@
             }
           }
         },
-        "_row_num": 152
+        "_row_num": 184
       },
       {
         "type": "linked_table",
         "values_list": "child",
-        "_row_num": 153
+        "_row_num": 185
       },
       {
         "clause": "end screen",
-        "_row_num": 154
+        "_row_num": 186
       },
       {
         "clause": "end if",
-        "_row_num": 155
+        "_row_num": 187
       },
       {
         "clause": "end if",
-        "_row_num": 156
+        "_row_num": 188
       },
       {
         "clause": "end if",
-        "_row_num": 157
+        "_row_num": 189
       },
       {
         "clause": "end if",
-        "_row_num": 158
+        "_row_num": 190
       },
       {
         "clause": "end if",
-        "_row_num": 159
+        "_row_num": 191
       }
     ],
     "queries": [
@@ -1767,6 +1938,19 @@
           }
         },
         "_row_num": 47
+      },
+      {
+        "choice_list_name": "dontknow",
+        "data_value": "99",
+        "display": {
+          "title": {
+            "text": {
+              "english": "Don't know",
+              "default": "Não sabe"
+            }
+          }
+        },
+        "_row_num": 48
       }
     ],
     "model": [
@@ -2009,6 +2193,54 @@
         "type": "text",
         "isSessionVariable": false,
         "_row_num": 44
+      },
+      {
+        "name": "gestns",
+        "type": "select_multiple",
+        "isSessionVariable": true,
+        "_row_num": 45
+      },
+      {
+        "name": "qc_mns",
+        "type": "select_multiple",
+        "isSessionVariable": true,
+        "_row_num": 46
+      },
+      {
+        "name": "fer_mns",
+        "type": "select_multiple",
+        "isSessionVariable": true,
+        "_row_num": 47
+      },
+      {
+        "name": "fansi_mns",
+        "type": "select_multiple",
+        "isSessionVariable": true,
+        "_row_num": 48
+      },
+      {
+        "name": "abmesns",
+        "type": "select_multiple",
+        "isSessionVariable": true,
+        "_row_num": 49
+      },
+      {
+        "name": "cdg_mns",
+        "type": "select_multiple",
+        "isSessionVariable": true,
+        "_row_num": 50
+      },
+      {
+        "name": "fedep_mns",
+        "type": "select_multiple",
+        "isSessionVariable": true,
+        "_row_num": 51
+      },
+      {
+        "name": "qvfansi_mns",
+        "type": "select_multiple",
+        "isSessionVariable": true,
+        "_row_num": 52
       }
     ]
   },
@@ -2756,6 +2988,21 @@
           },
           "_row_num": 47
         }
+      ],
+      "dontknow": [
+        {
+          "choice_list_name": "dontknow",
+          "data_value": "99",
+          "display": {
+            "title": {
+              "text": {
+                "english": "Don't know",
+                "default": "Não sabe"
+              }
+            }
+          },
+          "_row_num": 48
+        }
       ]
     },
     "table_specific_definitions": {
@@ -2803,7 +3050,7 @@
         "type": "integer",
         "_defn": [
           {
-            "_row_num": 74,
+            "_row_num": 90,
             "section_name": "survey"
           },
           {
@@ -2819,7 +3066,7 @@
         "valuesList": "healthstaff",
         "_defn": [
           {
-            "_row_num": 133,
+            "_row_num": 165,
             "section_name": "survey"
           },
           {
@@ -2835,7 +3082,7 @@
         "valuesList": "vpcard",
         "_defn": [
           {
-            "_row_num": 97,
+            "_row_num": 117,
             "section_name": "survey"
           },
           {
@@ -2866,7 +3113,7 @@
         "type": "integer",
         "_defn": [
           {
-            "_row_num": 109,
+            "_row_num": 133,
             "section_name": "survey"
           },
           {
@@ -2881,7 +3128,7 @@
         "type": "integer",
         "_defn": [
           {
-            "_row_num": 107,
+            "_row_num": 127,
             "section_name": "survey"
           },
           {
@@ -2901,7 +3148,7 @@
         "__rowNum__": 3,
         "_defn": [
           {
-            "_row_num": 61,
+            "_row_num": 77,
             "section_name": "survey"
           },
           {
@@ -2916,7 +3163,7 @@
         "type": "integer",
         "_defn": [
           {
-            "_row_num": 56,
+            "_row_num": 72,
             "section_name": "survey"
           },
           {
@@ -2931,7 +3178,7 @@
         "type": "integer",
         "_defn": [
           {
-            "_row_num": 54,
+            "_row_num": 66,
             "section_name": "survey"
           },
           {
@@ -2946,7 +3193,7 @@
         "type": "integer",
         "_defn": [
           {
-            "_row_num": 116,
+            "_row_num": 144,
             "section_name": "survey"
           },
           {
@@ -2961,7 +3208,7 @@
         "type": "integer",
         "_defn": [
           {
-            "_row_num": 114,
+            "_row_num": 138,
             "section_name": "survey"
           },
           {
@@ -2976,7 +3223,7 @@
         "type": "integer",
         "_defn": [
           {
-            "_row_num": 49,
+            "_row_num": 61,
             "section_name": "survey"
           },
           {
@@ -2991,7 +3238,7 @@
         "type": "integer",
         "_defn": [
           {
-            "_row_num": 47,
+            "_row_num": 55,
             "section_name": "survey"
           },
           {
@@ -3038,7 +3285,7 @@
         "valuesList": "YesNoU",
         "_defn": [
           {
-            "_row_num": 94,
+            "_row_num": 114,
             "section_name": "survey"
           },
           {
@@ -3065,7 +3312,7 @@
         "valuesList": "YesNoU",
         "_defn": [
           {
-            "_row_num": 100,
+            "_row_num": 120,
             "section_name": "survey"
           },
           {
@@ -3081,7 +3328,7 @@
         "valuesList": "inf1",
         "_defn": [
           {
-            "_row_num": 83,
+            "_row_num": 103,
             "section_name": "survey"
           },
           {
@@ -3097,7 +3344,7 @@
         "valuesList": "inf2",
         "_defn": [
           {
-            "_row_num": 85,
+            "_row_num": 105,
             "section_name": "survey"
           },
           {
@@ -3112,7 +3359,7 @@
         "type": "integer",
         "_defn": [
           {
-            "_row_num": 79,
+            "_row_num": 99,
             "section_name": "survey"
           },
           {
@@ -3132,7 +3379,7 @@
         "__rowNum__": 3,
         "_defn": [
           {
-            "_row_num": 35,
+            "_row_num": 39,
             "section_name": "survey"
           },
           {
@@ -3152,7 +3399,7 @@
         "__rowNum__": 3,
         "_defn": [
           {
-            "_row_num": 33,
+            "_row_num": 37,
             "section_name": "survey"
           },
           {
@@ -3168,7 +3415,7 @@
         "valuesList": "facility",
         "_defn": [
           {
-            "_row_num": 130,
+            "_row_num": 162,
             "section_name": "survey"
           },
           {
@@ -3234,7 +3481,7 @@
         "__rowNum__": 3,
         "_defn": [
           {
-            "_row_num": 70,
+            "_row_num": 86,
             "section_name": "survey"
           },
           {
@@ -3250,7 +3497,7 @@
         "valuesList": "pregstat",
         "_defn": [
           {
-            "_row_num": 67,
+            "_row_num": 83,
             "section_name": "survey"
           },
           {
@@ -3265,7 +3512,7 @@
         "type": "integer",
         "_defn": [
           {
-            "_row_num": 42,
+            "_row_num": 50,
             "section_name": "survey"
           },
           {
@@ -3280,7 +3527,7 @@
         "type": "integer",
         "_defn": [
           {
-            "_row_num": 40,
+            "_row_num": 44,
             "section_name": "survey"
           },
           {
@@ -3295,7 +3542,7 @@
         "type": "integer",
         "_defn": [
           {
-            "_row_num": 123,
+            "_row_num": 155,
             "section_name": "survey"
           },
           {
@@ -3310,7 +3557,7 @@
         "type": "integer",
         "_defn": [
           {
-            "_row_num": 121,
+            "_row_num": 149,
             "section_name": "survey"
           },
           {
@@ -3326,7 +3573,7 @@
         "valuesList": "YesNoU",
         "_defn": [
           {
-            "_row_num": 127,
+            "_row_num": 159,
             "section_name": "survey"
           },
           {
@@ -3341,7 +3588,7 @@
         "type": "integer",
         "_defn": [
           {
-            "_row_num": 102,
+            "_row_num": 122,
             "section_name": "survey"
           },
           {
@@ -3416,6 +3663,166 @@
         ],
         "isSessionVariable": false,
         "elementKey": "ASSISTENTE"
+      },
+      "gestns": {
+        "type": "array",
+        "items": {
+          "type": "string",
+          "elementKey": "gestns_items"
+        },
+        "valuesList": "dontknow",
+        "_defn": [
+          {
+            "_row_num": 30,
+            "section_name": "survey"
+          },
+          {
+            "_row_num": 45,
+            "section_name": "model"
+          }
+        ],
+        "isSessionVariable": true,
+        "elementKey": "gestns"
+      },
+      "qc_mns": {
+        "type": "array",
+        "items": {
+          "type": "string",
+          "elementKey": "qc_mns_items"
+        },
+        "valuesList": "dontknow",
+        "_defn": [
+          {
+            "_row_num": 45,
+            "section_name": "survey"
+          },
+          {
+            "_row_num": 46,
+            "section_name": "model"
+          }
+        ],
+        "isSessionVariable": true,
+        "elementKey": "qc_mns"
+      },
+      "fer_mns": {
+        "type": "array",
+        "items": {
+          "type": "string",
+          "elementKey": "fer_mns_items"
+        },
+        "valuesList": "dontknow",
+        "_defn": [
+          {
+            "_row_num": 56,
+            "section_name": "survey"
+          },
+          {
+            "_row_num": 47,
+            "section_name": "model"
+          }
+        ],
+        "isSessionVariable": true,
+        "elementKey": "fer_mns"
+      },
+      "fansi_mns": {
+        "type": "array",
+        "items": {
+          "type": "string",
+          "elementKey": "fansi_mns_items"
+        },
+        "valuesList": "dontknow",
+        "_defn": [
+          {
+            "_row_num": 67,
+            "section_name": "survey"
+          },
+          {
+            "_row_num": 48,
+            "section_name": "model"
+          }
+        ],
+        "isSessionVariable": true,
+        "elementKey": "fansi_mns"
+      },
+      "abmesns": {
+        "type": "array",
+        "items": {
+          "type": "string",
+          "elementKey": "abmesns_items"
+        },
+        "valuesList": "dontknow",
+        "_defn": [
+          {
+            "_row_num": 91,
+            "section_name": "survey"
+          },
+          {
+            "_row_num": 49,
+            "section_name": "model"
+          }
+        ],
+        "isSessionVariable": true,
+        "elementKey": "abmesns"
+      },
+      "cdg_mns": {
+        "type": "array",
+        "items": {
+          "type": "string",
+          "elementKey": "cdg_mns_items"
+        },
+        "valuesList": "dontknow",
+        "_defn": [
+          {
+            "_row_num": 128,
+            "section_name": "survey"
+          },
+          {
+            "_row_num": 50,
+            "section_name": "model"
+          }
+        ],
+        "isSessionVariable": true,
+        "elementKey": "cdg_mns"
+      },
+      "fedep_mns": {
+        "type": "array",
+        "items": {
+          "type": "string",
+          "elementKey": "fedep_mns_items"
+        },
+        "valuesList": "dontknow",
+        "_defn": [
+          {
+            "_row_num": 139,
+            "section_name": "survey"
+          },
+          {
+            "_row_num": 51,
+            "section_name": "model"
+          }
+        ],
+        "isSessionVariable": true,
+        "elementKey": "fedep_mns"
+      },
+      "qvfansi_mns": {
+        "type": "array",
+        "items": {
+          "type": "string",
+          "elementKey": "qvfansi_mns_items"
+        },
+        "valuesList": "dontknow",
+        "_defn": [
+          {
+            "_row_num": 150,
+            "section_name": "survey"
+          },
+          {
+            "_row_num": 52,
+            "section_name": "model"
+          }
+        ],
+        "isSessionVariable": true,
+        "elementKey": "qvfansi_mns"
       }
     },
     "section_names": [
@@ -3543,7 +3950,10 @@
             "name": "GEST",
             "display": {
               "prompt": {
-                "text": "Mes de gestação"
+                "text": {
+                  "english": "Gestation month",
+                  "default": "Mes de gestação"
+                }
               }
             },
             "_row_num": 29,
@@ -3554,18 +3964,29 @@
             "promptIdx": 7
           },
           {
+            "type": "select_multiple",
+            "values_list": "dontknow",
+            "name": "gestns",
+            "_row_num": 30,
+            "__rowNum__": 29,
+            "_token_type": "prompt",
+            "_type": "select_multiple",
+            "_branch_label_enclosing_screen": "survey/_screen28",
+            "promptIdx": 8
+          },
+          {
             "type": "note",
             "display": {
               "prompt": {
                 "text": "Data de ultimo período"
               }
             },
-            "_row_num": 32,
-            "__rowNum__": 31,
+            "_row_num": 36,
+            "__rowNum__": 35,
             "_token_type": "prompt",
             "_type": "note",
-            "_branch_label_enclosing_screen": "survey/_screen31",
-            "promptIdx": 8
+            "_branch_label_enclosing_screen": "survey/_screen35",
+            "promptIdx": 9
           },
           {
             "type": "adate",
@@ -3578,12 +3999,12 @@
                 }
               }
             },
-            "_row_num": 33,
-            "__rowNum__": 32,
+            "_row_num": 37,
+            "__rowNum__": 36,
             "_token_type": "prompt",
             "_type": "adate",
-            "_branch_label_enclosing_screen": "survey/_screen31",
-            "promptIdx": 9
+            "_branch_label_enclosing_screen": "survey/_screen35",
+            "promptIdx": 10
           },
           {
             "type": "adate",
@@ -3596,12 +4017,12 @@
                 }
               }
             },
-            "_row_num": 35,
-            "__rowNum__": 34,
+            "_row_num": 39,
+            "__rowNum__": 38,
             "_token_type": "prompt",
             "_type": "adate",
-            "_branch_label_enclosing_screen": "survey/_screen31",
-            "promptIdx": 10
+            "_branch_label_enclosing_screen": "survey/_screen35",
+            "promptIdx": 11
           },
           {
             "type": "note",
@@ -3613,12 +4034,12 @@
                 }
               }
             },
-            "_row_num": 39,
-            "__rowNum__": 38,
+            "_row_num": 43,
+            "__rowNum__": 42,
             "_token_type": "prompt",
             "_type": "note",
-            "_branch_label_enclosing_screen": "survey/_screen38",
-            "promptIdx": 11
+            "_branch_label_enclosing_screen": "survey/_screen42",
+            "promptIdx": 12
           },
           {
             "type": "integer",
@@ -3631,12 +4052,23 @@
                 }
               }
             },
-            "_row_num": 40,
-            "__rowNum__": 39,
+            "_row_num": 44,
+            "__rowNum__": 43,
             "_token_type": "prompt",
             "_type": "integer",
-            "_branch_label_enclosing_screen": "survey/_screen38",
-            "promptIdx": 12
+            "_branch_label_enclosing_screen": "survey/_screen42",
+            "promptIdx": 13
+          },
+          {
+            "type": "select_multiple",
+            "values_list": "dontknow",
+            "name": "qc_mns",
+            "_row_num": 45,
+            "__rowNum__": 44,
+            "_token_type": "prompt",
+            "_type": "select_multiple",
+            "_branch_label_enclosing_screen": "survey/_screen42",
+            "promptIdx": 14
           },
           {
             "type": "integer",
@@ -3649,12 +4081,12 @@
                 }
               }
             },
-            "_row_num": 42,
-            "__rowNum__": 41,
+            "_row_num": 50,
+            "__rowNum__": 49,
             "_token_type": "prompt",
             "_type": "integer",
-            "_branch_label_enclosing_screen": "survey/_screen38",
-            "promptIdx": 13
+            "_branch_label_enclosing_screen": "survey/_screen42",
+            "promptIdx": 15
           },
           {
             "type": "note",
@@ -3666,12 +4098,12 @@
                 }
               }
             },
-            "_row_num": 46,
-            "__rowNum__": 45,
+            "_row_num": 54,
+            "__rowNum__": 53,
             "_token_type": "prompt",
             "_type": "note",
-            "_branch_label_enclosing_screen": "survey/_screen45",
-            "promptIdx": 14
+            "_branch_label_enclosing_screen": "survey/_screen53",
+            "promptIdx": 16
           },
           {
             "type": "integer",
@@ -3684,12 +4116,23 @@
                 }
               }
             },
-            "_row_num": 47,
-            "__rowNum__": 46,
+            "_row_num": 55,
+            "__rowNum__": 54,
             "_token_type": "prompt",
             "_type": "integer",
-            "_branch_label_enclosing_screen": "survey/_screen45",
-            "promptIdx": 15
+            "_branch_label_enclosing_screen": "survey/_screen53",
+            "promptIdx": 17
+          },
+          {
+            "type": "select_multiple",
+            "values_list": "dontknow",
+            "name": "fer_mns",
+            "_row_num": 56,
+            "__rowNum__": 55,
+            "_token_type": "prompt",
+            "_type": "select_multiple",
+            "_branch_label_enclosing_screen": "survey/_screen53",
+            "promptIdx": 18
           },
           {
             "type": "integer",
@@ -3702,12 +4145,12 @@
                 }
               }
             },
-            "_row_num": 49,
-            "__rowNum__": 48,
+            "_row_num": 61,
+            "__rowNum__": 60,
             "_token_type": "prompt",
             "_type": "integer",
-            "_branch_label_enclosing_screen": "survey/_screen45",
-            "promptIdx": 16
+            "_branch_label_enclosing_screen": "survey/_screen53",
+            "promptIdx": 19
           },
           {
             "type": "note",
@@ -3716,12 +4159,12 @@
                 "text": "A grávida recebeu fansidar (TPI, SP) quantas vezes?"
               }
             },
-            "_row_num": 53,
-            "__rowNum__": 52,
+            "_row_num": 65,
+            "__rowNum__": 64,
             "_token_type": "prompt",
             "_type": "note",
-            "_branch_label_enclosing_screen": "survey/_screen52",
-            "promptIdx": 17
+            "_branch_label_enclosing_screen": "survey/_screen64",
+            "promptIdx": 20
           },
           {
             "type": "integer",
@@ -3734,12 +4177,23 @@
                 }
               }
             },
-            "_row_num": 54,
-            "__rowNum__": 53,
+            "_row_num": 66,
+            "__rowNum__": 65,
             "_token_type": "prompt",
             "_type": "integer",
-            "_branch_label_enclosing_screen": "survey/_screen52",
-            "promptIdx": 18
+            "_branch_label_enclosing_screen": "survey/_screen64",
+            "promptIdx": 21
+          },
+          {
+            "type": "select_multiple",
+            "values_list": "dontknow",
+            "name": "fansi_mns",
+            "_row_num": 67,
+            "__rowNum__": 66,
+            "_token_type": "prompt",
+            "_type": "select_multiple",
+            "_branch_label_enclosing_screen": "survey/_screen64",
+            "promptIdx": 22
           },
           {
             "type": "integer",
@@ -3752,12 +4206,12 @@
                 }
               }
             },
-            "_row_num": 56,
-            "__rowNum__": 55,
+            "_row_num": 72,
+            "__rowNum__": 71,
             "_token_type": "prompt",
             "_type": "integer",
-            "_branch_label_enclosing_screen": "survey/_screen52",
-            "promptIdx": 19
+            "_branch_label_enclosing_screen": "survey/_screen64",
+            "promptIdx": 23
           },
           {
             "type": "adate",
@@ -3767,12 +4221,12 @@
                 "text": "Data provavel do parto indicado no cartão?"
               }
             },
-            "_row_num": 61,
-            "__rowNum__": 60,
+            "_row_num": 77,
+            "__rowNum__": 76,
             "_token_type": "prompt",
             "_type": "adate",
-            "_branch_label_enclosing_screen": "survey/_screen60",
-            "promptIdx": 20
+            "_branch_label_enclosing_screen": "survey/_screen76",
+            "promptIdx": 24
           },
           {
             "type": "select_one",
@@ -3786,12 +4240,12 @@
                 }
               }
             },
-            "_row_num": 67,
-            "__rowNum__": 66,
+            "_row_num": 83,
+            "__rowNum__": 82,
             "_token_type": "prompt",
             "_type": "select_one",
-            "_branch_label_enclosing_screen": "survey/_screen66",
-            "promptIdx": 21
+            "_branch_label_enclosing_screen": "survey/_screen82",
+            "promptIdx": 25
           },
           {
             "type": "adate",
@@ -3804,12 +4258,12 @@
                 }
               }
             },
-            "_row_num": 70,
-            "__rowNum__": 69,
+            "_row_num": 86,
+            "__rowNum__": 85,
             "_token_type": "prompt",
             "_type": "adate",
-            "_branch_label_enclosing_screen": "survey/_screen69",
-            "promptIdx": 22
+            "_branch_label_enclosing_screen": "survey/_screen85",
+            "promptIdx": 26
           },
           {
             "type": "integer",
@@ -3822,12 +4276,23 @@
                 }
               }
             },
-            "_row_num": 74,
-            "__rowNum__": 73,
+            "_row_num": 90,
+            "__rowNum__": 89,
             "_token_type": "prompt",
             "_type": "integer",
-            "_branch_label_enclosing_screen": "survey/_screen73",
-            "promptIdx": 23
+            "_branch_label_enclosing_screen": "survey/_screen89",
+            "promptIdx": 27
+          },
+          {
+            "type": "select_multiple",
+            "values_list": "dontknow",
+            "name": "abmesns",
+            "_row_num": 91,
+            "__rowNum__": 90,
+            "_token_type": "prompt",
+            "_type": "select_multiple",
+            "_branch_label_enclosing_screen": "survey/_screen89",
+            "promptIdx": 28
           },
           {
             "type": "integer",
@@ -3840,12 +4305,12 @@
                 }
               }
             },
-            "_row_num": 79,
-            "__rowNum__": 78,
+            "_row_num": 99,
+            "__rowNum__": 98,
             "_token_type": "prompt",
             "_type": "integer",
-            "_branch_label_enclosing_screen": "survey/_screen78",
-            "promptIdx": 24
+            "_branch_label_enclosing_screen": "survey/_screen98",
+            "promptIdx": 29
           },
           {
             "type": "select_one",
@@ -3859,12 +4324,12 @@
                 }
               }
             },
-            "_row_num": 83,
-            "__rowNum__": 82,
+            "_row_num": 103,
+            "__rowNum__": 102,
             "_token_type": "prompt",
             "_type": "select_one",
-            "_branch_label_enclosing_screen": "survey/_screen82",
-            "promptIdx": 25
+            "_branch_label_enclosing_screen": "survey/_screen102",
+            "promptIdx": 30
           },
           {
             "type": "select_one",
@@ -3878,12 +4343,12 @@
                 }
               }
             },
-            "_row_num": 85,
-            "__rowNum__": 84,
+            "_row_num": 105,
+            "__rowNum__": 104,
             "_token_type": "prompt",
             "_type": "select_one",
-            "_branch_label_enclosing_screen": "survey/_screen82",
-            "promptIdx": 26
+            "_branch_label_enclosing_screen": "survey/_screen102",
+            "promptIdx": 31
           },
           {
             "type": "select_one",
@@ -3897,12 +4362,12 @@
                 }
               }
             },
-            "_row_num": 94,
-            "__rowNum__": 93,
+            "_row_num": 114,
+            "__rowNum__": 113,
             "_token_type": "prompt",
             "_type": "select_one",
-            "_branch_label_enclosing_screen": "survey/_screen93",
-            "promptIdx": 27
+            "_branch_label_enclosing_screen": "survey/_screen113",
+            "promptIdx": 32
           },
           {
             "type": "select_one",
@@ -3916,12 +4381,12 @@
                 }
               }
             },
-            "_row_num": 97,
-            "__rowNum__": 96,
+            "_row_num": 117,
+            "__rowNum__": 116,
             "_token_type": "prompt",
             "_type": "select_one",
-            "_branch_label_enclosing_screen": "survey/_screen96",
-            "promptIdx": 28
+            "_branch_label_enclosing_screen": "survey/_screen116",
+            "promptIdx": 33
           },
           {
             "type": "select_one",
@@ -3932,12 +4397,12 @@
                 "text": "Vacina anti-tetánica durante esta gravidez?"
               }
             },
-            "_row_num": 100,
-            "__rowNum__": 99,
+            "_row_num": 120,
+            "__rowNum__": 119,
             "_token_type": "prompt",
             "_type": "select_one",
-            "_branch_label_enclosing_screen": "survey/_screen99",
-            "promptIdx": 29
+            "_branch_label_enclosing_screen": "survey/_screen119",
+            "promptIdx": 34
           },
           {
             "type": "integer",
@@ -3950,12 +4415,12 @@
                 }
               }
             },
-            "_row_num": 102,
-            "__rowNum__": 101,
+            "_row_num": 122,
+            "__rowNum__": 121,
             "_token_type": "prompt",
             "_type": "integer",
-            "_branch_label_enclosing_screen": "survey/_screen99",
-            "promptIdx": 30
+            "_branch_label_enclosing_screen": "survey/_screen119",
+            "promptIdx": 35
           },
           {
             "type": "note",
@@ -3967,12 +4432,12 @@
                 }
               }
             },
-            "_row_num": 106,
-            "__rowNum__": 105,
+            "_row_num": 126,
+            "__rowNum__": 125,
             "_token_type": "prompt",
             "_type": "note",
-            "_branch_label_enclosing_screen": "survey/_screen105",
-            "promptIdx": 31
+            "_branch_label_enclosing_screen": "survey/_screen125",
+            "promptIdx": 36
           },
           {
             "type": "integer",
@@ -3985,12 +4450,23 @@
                 }
               }
             },
-            "_row_num": 107,
-            "__rowNum__": 106,
+            "_row_num": 127,
+            "__rowNum__": 126,
             "_token_type": "prompt",
             "_type": "integer",
-            "_branch_label_enclosing_screen": "survey/_screen105",
-            "promptIdx": 32
+            "_branch_label_enclosing_screen": "survey/_screen125",
+            "promptIdx": 37
+          },
+          {
+            "type": "select_multiple",
+            "values_list": "dontknow",
+            "name": "cdg_mns",
+            "_row_num": 128,
+            "__rowNum__": 127,
+            "_token_type": "prompt",
+            "_type": "select_multiple",
+            "_branch_label_enclosing_screen": "survey/_screen125",
+            "promptIdx": 38
           },
           {
             "type": "integer",
@@ -4003,12 +4479,12 @@
                 }
               }
             },
-            "_row_num": 109,
-            "__rowNum__": 108,
+            "_row_num": 133,
+            "__rowNum__": 132,
             "_token_type": "prompt",
             "_type": "integer",
-            "_branch_label_enclosing_screen": "survey/_screen105",
-            "promptIdx": 33
+            "_branch_label_enclosing_screen": "survey/_screen125",
+            "promptIdx": 39
           },
           {
             "type": "note",
@@ -4020,12 +4496,12 @@
                 }
               }
             },
-            "_row_num": 113,
-            "__rowNum__": 112,
+            "_row_num": 137,
+            "__rowNum__": 136,
             "_token_type": "prompt",
             "_type": "note",
-            "_branch_label_enclosing_screen": "survey/_screen112",
-            "promptIdx": 34
+            "_branch_label_enclosing_screen": "survey/_screen136",
+            "promptIdx": 40
           },
           {
             "type": "integer",
@@ -4038,12 +4514,23 @@
                 }
               }
             },
-            "_row_num": 114,
-            "__rowNum__": 113,
+            "_row_num": 138,
+            "__rowNum__": 137,
             "_token_type": "prompt",
             "_type": "integer",
-            "_branch_label_enclosing_screen": "survey/_screen112",
-            "promptIdx": 35
+            "_branch_label_enclosing_screen": "survey/_screen136",
+            "promptIdx": 41
+          },
+          {
+            "type": "select_multiple",
+            "values_list": "dontknow",
+            "name": "fedep_mns",
+            "_row_num": 139,
+            "__rowNum__": 138,
+            "_token_type": "prompt",
+            "_type": "select_multiple",
+            "_branch_label_enclosing_screen": "survey/_screen136",
+            "promptIdx": 42
           },
           {
             "type": "integer",
@@ -4056,12 +4543,12 @@
                 }
               }
             },
-            "_row_num": 116,
-            "__rowNum__": 115,
+            "_row_num": 144,
+            "__rowNum__": 143,
             "_token_type": "prompt",
             "_type": "integer",
-            "_branch_label_enclosing_screen": "survey/_screen112",
-            "promptIdx": 36
+            "_branch_label_enclosing_screen": "survey/_screen136",
+            "promptIdx": 43
           },
           {
             "type": "note",
@@ -4070,12 +4557,12 @@
                 "text": "A grávida recebeu fansidar (TPI, SP) quantas vezes?"
               }
             },
-            "_row_num": 120,
-            "__rowNum__": 119,
+            "_row_num": 148,
+            "__rowNum__": 147,
             "_token_type": "prompt",
             "_type": "note",
-            "_branch_label_enclosing_screen": "survey/_screen119",
-            "promptIdx": 37
+            "_branch_label_enclosing_screen": "survey/_screen147",
+            "promptIdx": 44
           },
           {
             "type": "integer",
@@ -4088,12 +4575,23 @@
                 }
               }
             },
-            "_row_num": 121,
-            "__rowNum__": 120,
+            "_row_num": 149,
+            "__rowNum__": 148,
             "_token_type": "prompt",
             "_type": "integer",
-            "_branch_label_enclosing_screen": "survey/_screen119",
-            "promptIdx": 38
+            "_branch_label_enclosing_screen": "survey/_screen147",
+            "promptIdx": 45
+          },
+          {
+            "type": "select_multiple",
+            "values_list": "dontknow",
+            "name": "qvfansi_mns",
+            "_row_num": 150,
+            "__rowNum__": 149,
+            "_token_type": "prompt",
+            "_type": "select_multiple",
+            "_branch_label_enclosing_screen": "survey/_screen147",
+            "promptIdx": 46
           },
           {
             "type": "integer",
@@ -4106,12 +4604,12 @@
                 }
               }
             },
-            "_row_num": 123,
-            "__rowNum__": 122,
+            "_row_num": 155,
+            "__rowNum__": 154,
             "_token_type": "prompt",
             "_type": "integer",
-            "_branch_label_enclosing_screen": "survey/_screen119",
-            "promptIdx": 39
+            "_branch_label_enclosing_screen": "survey/_screen147",
+            "promptIdx": 47
           },
           {
             "type": "select_one",
@@ -4125,12 +4623,12 @@
                 }
               }
             },
-            "_row_num": 127,
-            "__rowNum__": 126,
+            "_row_num": 159,
+            "__rowNum__": 158,
             "_token_type": "prompt",
             "_type": "select_one",
-            "_branch_label_enclosing_screen": "survey/_screen126",
-            "promptIdx": 40
+            "_branch_label_enclosing_screen": "survey/_screen158",
+            "promptIdx": 48
           },
           {
             "type": "select_one",
@@ -4144,12 +4642,12 @@
                 }
               }
             },
-            "_row_num": 130,
-            "__rowNum__": 129,
+            "_row_num": 162,
+            "__rowNum__": 161,
             "_token_type": "prompt",
             "_type": "select_one",
-            "_branch_label_enclosing_screen": "survey/_screen129",
-            "promptIdx": 41
+            "_branch_label_enclosing_screen": "survey/_screen161",
+            "promptIdx": 49
           },
           {
             "type": "select_one",
@@ -4163,12 +4661,12 @@
                 }
               }
             },
-            "_row_num": 133,
-            "__rowNum__": 132,
+            "_row_num": 165,
+            "__rowNum__": 164,
             "_token_type": "prompt",
             "_type": "select_one",
-            "_branch_label_enclosing_screen": "survey/_screen132",
-            "promptIdx": 42
+            "_branch_label_enclosing_screen": "survey/_screen164",
+            "promptIdx": 50
           },
           {
             "type": "note",
@@ -4180,22 +4678,22 @@
                 }
               }
             },
-            "_row_num": 137,
-            "__rowNum__": 136,
+            "_row_num": 169,
+            "__rowNum__": 168,
             "_token_type": "prompt",
             "_type": "note",
-            "_branch_label_enclosing_screen": "survey/_screen136",
-            "promptIdx": 43
+            "_branch_label_enclosing_screen": "survey/_screen168",
+            "promptIdx": 51
           },
           {
             "type": "linked_table",
             "values_list": "child",
-            "_row_num": 138,
-            "__rowNum__": 137,
+            "_row_num": 170,
+            "__rowNum__": 169,
             "_token_type": "prompt",
             "_type": "linked_table",
-            "_branch_label_enclosing_screen": "survey/_screen136",
-            "promptIdx": 44
+            "_branch_label_enclosing_screen": "survey/_screen168",
+            "promptIdx": 52
           },
           {
             "type": "note",
@@ -4207,22 +4705,22 @@
                 }
               }
             },
-            "_row_num": 142,
-            "__rowNum__": 141,
+            "_row_num": 174,
+            "__rowNum__": 173,
             "_token_type": "prompt",
             "_type": "note",
-            "_branch_label_enclosing_screen": "survey/_screen141",
-            "promptIdx": 45
+            "_branch_label_enclosing_screen": "survey/_screen173",
+            "promptIdx": 53
           },
           {
             "type": "linked_table",
             "values_list": "child",
-            "_row_num": 143,
-            "__rowNum__": 142,
+            "_row_num": 175,
+            "__rowNum__": 174,
             "_token_type": "prompt",
             "_type": "linked_table",
-            "_branch_label_enclosing_screen": "survey/_screen141",
-            "promptIdx": 46
+            "_branch_label_enclosing_screen": "survey/_screen173",
+            "promptIdx": 54
           },
           {
             "type": "note",
@@ -4234,22 +4732,22 @@
                 }
               }
             },
-            "_row_num": 147,
-            "__rowNum__": 146,
+            "_row_num": 179,
+            "__rowNum__": 178,
             "_token_type": "prompt",
             "_type": "note",
-            "_branch_label_enclosing_screen": "survey/_screen146",
-            "promptIdx": 47
+            "_branch_label_enclosing_screen": "survey/_screen178",
+            "promptIdx": 55
           },
           {
             "type": "linked_table",
             "values_list": "child",
-            "_row_num": 148,
-            "__rowNum__": 147,
+            "_row_num": 180,
+            "__rowNum__": 179,
             "_token_type": "prompt",
             "_type": "linked_table",
-            "_branch_label_enclosing_screen": "survey/_screen146",
-            "promptIdx": 48
+            "_branch_label_enclosing_screen": "survey/_screen178",
+            "promptIdx": 56
           },
           {
             "type": "note",
@@ -4261,30 +4759,30 @@
                 }
               }
             },
-            "_row_num": 152,
-            "__rowNum__": 151,
+            "_row_num": 184,
+            "__rowNum__": 183,
             "_token_type": "prompt",
             "_type": "note",
-            "_branch_label_enclosing_screen": "survey/_screen151",
-            "promptIdx": 49
+            "_branch_label_enclosing_screen": "survey/_screen183",
+            "promptIdx": 57
           },
           {
             "type": "linked_table",
             "values_list": "child",
-            "_row_num": 153,
-            "__rowNum__": 152,
+            "_row_num": 185,
+            "__rowNum__": 184,
             "_token_type": "prompt",
             "_type": "linked_table",
-            "_branch_label_enclosing_screen": "survey/_screen151",
-            "promptIdx": 50
+            "_branch_label_enclosing_screen": "survey/_screen183",
+            "promptIdx": 58
           },
           {
             "_token_type": "prompt",
             "type": "contents",
             "_type": "contents",
-            "_row_num": 160,
-            "_branch_label_enclosing_screen": "survey/_screen160",
-            "promptIdx": 51
+            "_row_num": 192,
+            "_branch_label_enclosing_screen": "survey/_screen192",
+            "promptIdx": 59
           }
         ],
         "validation_tag_map": {
@@ -4354,8 +4852,8 @@
           {
             "clause": "end if",
             "_token_type": "goto_label",
-            "_branch_label": "_else64",
-            "_row_num": 64,
+            "_branch_label": "_else80",
+            "_row_num": 80,
             "operationIdx": 6
           },
           {
@@ -4430,230 +4928,128 @@
             "_token_type": "begin_screen",
             "_end_screen_clause": {
               "clause": "end screen",
-              "_row_num": 30,
-              "__rowNum__": 29,
+              "_row_num": 34,
+              "__rowNum__": 33,
               "_token_type": "end_screen"
             },
-            "_screen_block": "function() {var activePromptIndicies = [];\nactivePromptIndicies.push(7);\n\nreturn activePromptIndicies;\n}\n",
+            "_screen_block": "function() {var activePromptIndicies = [];\nactivePromptIndicies.push(7);\nactivePromptIndicies.push(8);\nif (data('gestns') != null) {\nassign('GEST', 99);\n}\n\nreturn activePromptIndicies;\n}\n",
             "operationIdx": 13
           },
           {
             "clause": "begin screen",
-            "_row_num": 31,
-            "__rowNum__": 30,
+            "_row_num": 35,
+            "__rowNum__": 34,
             "_token_type": "begin_screen",
             "_end_screen_clause": {
               "clause": "end screen",
-              "_row_num": 37,
-              "__rowNum__": 36,
+              "_row_num": 41,
+              "__rowNum__": 40,
               "_token_type": "end_screen"
             },
-            "_screen_block": "function() {var activePromptIndicies = [];\nactivePromptIndicies.push(8);\nactivePromptIndicies.push(9);\nif (data('CARTONA') == 'VIC') {\nactivePromptIndicies.push(10);\n}\n\nreturn activePromptIndicies;\n}\n",
+            "_screen_block": "function() {var activePromptIndicies = [];\nactivePromptIndicies.push(9);\nactivePromptIndicies.push(10);\nif (data('CARTONA') == 'VIC') {\nactivePromptIndicies.push(11);\n}\n\nreturn activePromptIndicies;\n}\n",
             "operationIdx": 14
           },
           {
             "clause": "begin screen",
-            "_row_num": 38,
-            "__rowNum__": 37,
+            "_row_num": 42,
+            "__rowNum__": 41,
             "_token_type": "begin_screen",
             "_end_screen_clause": {
               "clause": "end screen",
-              "_row_num": 44,
-              "__rowNum__": 43,
+              "_row_num": 52,
+              "__rowNum__": 51,
               "_token_type": "end_screen"
             },
-            "_screen_block": "function() {var activePromptIndicies = [];\nactivePromptIndicies.push(11);\nactivePromptIndicies.push(12);\nif (data('CARTONA') == 'VIC') {\nactivePromptIndicies.push(13);\n}\n\nreturn activePromptIndicies;\n}\n",
+            "_screen_block": "function() {var activePromptIndicies = [];\nactivePromptIndicies.push(12);\nactivePromptIndicies.push(13);\nactivePromptIndicies.push(14);\nif (data('qc_mns') != null) {\nassign('QC_M', 99);\n}\nif (data('CARTONA') == 'VIC') {\nactivePromptIndicies.push(15);\n}\n\nreturn activePromptIndicies;\n}\n",
             "operationIdx": 15
           },
           {
             "clause": "begin screen",
-            "_row_num": 45,
-            "__rowNum__": 44,
+            "_row_num": 53,
+            "__rowNum__": 52,
             "_token_type": "begin_screen",
             "_end_screen_clause": {
               "clause": "end screen",
-              "_row_num": 51,
-              "__rowNum__": 50,
+              "_row_num": 63,
+              "__rowNum__": 62,
               "_token_type": "end_screen"
             },
-            "_screen_block": "function() {var activePromptIndicies = [];\nactivePromptIndicies.push(14);\nactivePromptIndicies.push(15);\nif (data('CARTONA') == 'VIC') {\nactivePromptIndicies.push(16);\n}\n\nreturn activePromptIndicies;\n}\n",
+            "_screen_block": "function() {var activePromptIndicies = [];\nactivePromptIndicies.push(16);\nactivePromptIndicies.push(17);\nactivePromptIndicies.push(18);\nif (data('fer_mns') != null) {\nassign('FER_M', 99);\n}\nif (data('CARTONA') == 'VIC') {\nactivePromptIndicies.push(19);\n}\n\nreturn activePromptIndicies;\n}\n",
             "operationIdx": 16
           },
           {
             "clause": "begin screen",
-            "_row_num": 52,
-            "__rowNum__": 51,
+            "_row_num": 64,
+            "__rowNum__": 63,
             "_token_type": "begin_screen",
             "_end_screen_clause": {
               "clause": "end screen",
-              "_row_num": 58,
-              "__rowNum__": 57,
+              "_row_num": 74,
+              "__rowNum__": 73,
               "_token_type": "end_screen"
             },
-            "_screen_block": "function() {var activePromptIndicies = [];\nactivePromptIndicies.push(17);\nactivePromptIndicies.push(18);\nif (data('CARTONA') == 'VIC') {\nactivePromptIndicies.push(19);\n}\n\nreturn activePromptIndicies;\n}\n",
+            "_screen_block": "function() {var activePromptIndicies = [];\nactivePromptIndicies.push(20);\nactivePromptIndicies.push(21);\nactivePromptIndicies.push(22);\nif (data('fansi_mns') != null) {\nassign('FANSI_M', 99);\n}\nif (data('CARTONA') == 'VIC') {\nactivePromptIndicies.push(23);\n}\n\nreturn activePromptIndicies;\n}\n",
             "operationIdx": 17
           },
           {
             "clause": "if",
             "condition": "data('CARTONA') == 'VIC'",
-            "_row_num": 59,
-            "__rowNum__": 58,
+            "_row_num": 75,
+            "__rowNum__": 74,
             "_token_type": "goto_label",
-            "_branch_label": "_then59",
+            "_branch_label": "_then75",
             "operationIdx": 18
           },
           {
             "clause": "end if",
             "_token_type": "goto_label",
-            "_branch_label": "_else63",
-            "_row_num": 63,
+            "_branch_label": "_else79",
+            "_row_num": 79,
             "operationIdx": 19
           },
           {
             "clause": "begin screen",
-            "_row_num": 60,
-            "__rowNum__": 59,
+            "_row_num": 76,
+            "__rowNum__": 75,
             "_token_type": "begin_screen",
             "_end_screen_clause": {
               "clause": "end screen",
-              "_row_num": 62,
-              "__rowNum__": 61,
+              "_row_num": 78,
+              "__rowNum__": 77,
               "_token_type": "end_screen"
             },
-            "_screen_block": "function() {var activePromptIndicies = [];\nactivePromptIndicies.push(20);\n\nreturn activePromptIndicies;\n}\n",
+            "_screen_block": "function() {var activePromptIndicies = [];\nactivePromptIndicies.push(24);\n\nreturn activePromptIndicies;\n}\n",
             "operationIdx": 20
           },
           {
             "clause": "end if",
             "_token_type": "goto_label",
-            "_branch_label": "_endif63",
-            "_row_num": 63,
+            "_branch_label": "_endif79",
+            "_row_num": 79,
             "operationIdx": 21
           },
           {
             "clause": "end if",
             "_token_type": "goto_label",
-            "_branch_label": "_endif64",
-            "_row_num": 64,
+            "_branch_label": "_endif80",
+            "_row_num": 80,
             "operationIdx": 22
           },
           {
             "clause": "if",
             "condition": "data('GRAVIDA_ESTADO') == '2'",
-            "_row_num": 65,
-            "__rowNum__": 64,
+            "_row_num": 81,
+            "__rowNum__": 80,
             "_token_type": "goto_label",
-            "_branch_label": "_then65",
+            "_branch_label": "_then81",
             "operationIdx": 23
           },
           {
             "clause": "end if",
             "_token_type": "goto_label",
-            "_branch_label": "_else159",
-            "_row_num": 159,
+            "_branch_label": "_else191",
+            "_row_num": 191,
             "operationIdx": 24
-          },
-          {
-            "clause": "begin screen",
-            "_row_num": 66,
-            "__rowNum__": 65,
-            "_token_type": "begin_screen",
-            "_end_screen_clause": {
-              "clause": "end screen",
-              "_row_num": 68,
-              "__rowNum__": 67,
-              "_token_type": "end_screen"
-            },
-            "_screen_block": "function() {var activePromptIndicies = [];\nactivePromptIndicies.push(21);\n\nreturn activePromptIndicies;\n}\n",
-            "operationIdx": 25
-          },
-          {
-            "clause": "begin screen",
-            "_row_num": 69,
-            "__rowNum__": 68,
-            "_token_type": "begin_screen",
-            "_end_screen_clause": {
-              "clause": "end screen",
-              "_row_num": 71,
-              "__rowNum__": 70,
-              "_token_type": "end_screen"
-            },
-            "_screen_block": "function() {var activePromptIndicies = [];\nactivePromptIndicies.push(22);\n\nreturn activePromptIndicies;\n}\n",
-            "operationIdx": 26
-          },
-          {
-            "clause": "if",
-            "condition": "data('OUTSTATUS') == '2'",
-            "_row_num": 72,
-            "__rowNum__": 71,
-            "_token_type": "goto_label",
-            "_branch_label": "_then72",
-            "operationIdx": 27
-          },
-          {
-            "clause": "end if",
-            "_token_type": "goto_label",
-            "_branch_label": "_else76",
-            "_row_num": 76,
-            "operationIdx": 28
-          },
-          {
-            "clause": "begin screen",
-            "_row_num": 73,
-            "__rowNum__": 72,
-            "_token_type": "begin_screen",
-            "_end_screen_clause": {
-              "clause": "end screen",
-              "_row_num": 75,
-              "__rowNum__": 74,
-              "_token_type": "end_screen"
-            },
-            "_screen_block": "function() {var activePromptIndicies = [];\nactivePromptIndicies.push(23);\n\nreturn activePromptIndicies;\n}\n",
-            "operationIdx": 29
-          },
-          {
-            "clause": "end if",
-            "_token_type": "goto_label",
-            "_branch_label": "_endif76",
-            "_row_num": 76,
-            "operationIdx": 30
-          },
-          {
-            "clause": "if",
-            "condition": "data('OUTSTATUS') == '1'",
-            "_row_num": 77,
-            "__rowNum__": 76,
-            "_token_type": "goto_label",
-            "_branch_label": "_then77",
-            "operationIdx": 31
-          },
-          {
-            "clause": "end if",
-            "_token_type": "goto_label",
-            "_branch_label": "_else81",
-            "_row_num": 81,
-            "operationIdx": 32
-          },
-          {
-            "clause": "begin screen",
-            "_row_num": 78,
-            "__rowNum__": 77,
-            "_token_type": "begin_screen",
-            "_end_screen_clause": {
-              "clause": "end screen",
-              "_row_num": 80,
-              "__rowNum__": 79,
-              "_token_type": "end_screen"
-            },
-            "_screen_block": "function() {var activePromptIndicies = [];\nactivePromptIndicies.push(24);\n\nreturn activePromptIndicies;\n}\n",
-            "operationIdx": 33
-          },
-          {
-            "clause": "end if",
-            "_token_type": "goto_label",
-            "_branch_label": "_endif81",
-            "_row_num": 81,
-            "operationIdx": 34
           },
           {
             "clause": "begin screen",
@@ -4662,17 +5058,47 @@
             "_token_type": "begin_screen",
             "_end_screen_clause": {
               "clause": "end screen",
-              "_row_num": 92,
-              "__rowNum__": 91,
+              "_row_num": 84,
+              "__rowNum__": 83,
               "_token_type": "end_screen"
             },
-            "_screen_block": "function() {var activePromptIndicies = [];\nactivePromptIndicies.push(25);\nif (data('inf1') == '2') {\nactivePromptIndicies.push(26);\n}\nif (data('inf1') == '2') {\nassign('GRINFOS', data('inf2'));\n}\nelse {\nassign('GRINFOS', data('inf1'));\n}\n\nreturn activePromptIndicies;\n}\n",
-            "operationIdx": 35
+            "_screen_block": "function() {var activePromptIndicies = [];\nactivePromptIndicies.push(25);\n\nreturn activePromptIndicies;\n}\n",
+            "operationIdx": 25
           },
           {
             "clause": "begin screen",
-            "_row_num": 93,
-            "__rowNum__": 92,
+            "_row_num": 85,
+            "__rowNum__": 84,
+            "_token_type": "begin_screen",
+            "_end_screen_clause": {
+              "clause": "end screen",
+              "_row_num": 87,
+              "__rowNum__": 86,
+              "_token_type": "end_screen"
+            },
+            "_screen_block": "function() {var activePromptIndicies = [];\nactivePromptIndicies.push(26);\n\nreturn activePromptIndicies;\n}\n",
+            "operationIdx": 26
+          },
+          {
+            "clause": "if",
+            "condition": "data('OUTSTATUS') == '2'",
+            "_row_num": 88,
+            "__rowNum__": 87,
+            "_token_type": "goto_label",
+            "_branch_label": "_then88",
+            "operationIdx": 27
+          },
+          {
+            "clause": "end if",
+            "_token_type": "goto_label",
+            "_branch_label": "_else96",
+            "_row_num": 96,
+            "operationIdx": 28
+          },
+          {
+            "clause": "begin screen",
+            "_row_num": 89,
+            "__rowNum__": 88,
             "_token_type": "begin_screen",
             "_end_screen_clause": {
               "clause": "end screen",
@@ -4680,55 +5106,85 @@
               "__rowNum__": 94,
               "_token_type": "end_screen"
             },
-            "_screen_block": "function() {var activePromptIndicies = [];\nactivePromptIndicies.push(27);\n\nreturn activePromptIndicies;\n}\n",
+            "_screen_block": "function() {var activePromptIndicies = [];\nactivePromptIndicies.push(27);\nactivePromptIndicies.push(28);\nif (data('abmesns') != null) {\nassign('ABMES', 99);\n}\n\nreturn activePromptIndicies;\n}\n",
+            "operationIdx": 29
+          },
+          {
+            "clause": "end if",
+            "_token_type": "goto_label",
+            "_branch_label": "_endif96",
+            "_row_num": 96,
+            "operationIdx": 30
+          },
+          {
+            "clause": "if",
+            "condition": "data('OUTSTATUS') == '1'",
+            "_row_num": 97,
+            "__rowNum__": 96,
+            "_token_type": "goto_label",
+            "_branch_label": "_then97",
+            "operationIdx": 31
+          },
+          {
+            "clause": "end if",
+            "_token_type": "goto_label",
+            "_branch_label": "_else101",
+            "_row_num": 101,
+            "operationIdx": 32
+          },
+          {
+            "clause": "begin screen",
+            "_row_num": 98,
+            "__rowNum__": 97,
+            "_token_type": "begin_screen",
+            "_end_screen_clause": {
+              "clause": "end screen",
+              "_row_num": 100,
+              "__rowNum__": 99,
+              "_token_type": "end_screen"
+            },
+            "_screen_block": "function() {var activePromptIndicies = [];\nactivePromptIndicies.push(29);\n\nreturn activePromptIndicies;\n}\n",
+            "operationIdx": 33
+          },
+          {
+            "clause": "end if",
+            "_token_type": "goto_label",
+            "_branch_label": "_endif101",
+            "_row_num": 101,
+            "operationIdx": 34
+          },
+          {
+            "clause": "begin screen",
+            "_row_num": 102,
+            "__rowNum__": 101,
+            "_token_type": "begin_screen",
+            "_end_screen_clause": {
+              "clause": "end screen",
+              "_row_num": 112,
+              "__rowNum__": 111,
+              "_token_type": "end_screen"
+            },
+            "_screen_block": "function() {var activePromptIndicies = [];\nactivePromptIndicies.push(30);\nif (data('inf1') == '2') {\nactivePromptIndicies.push(31);\n}\nif (data('inf1') == '2') {\nassign('GRINFOS', data('inf2'));\n}\nelse {\nassign('GRINFOS', data('inf1'));\n}\n\nreturn activePromptIndicies;\n}\n",
+            "operationIdx": 35
+          },
+          {
+            "clause": "begin screen",
+            "_row_num": 113,
+            "__rowNum__": 112,
+            "_token_type": "begin_screen",
+            "_end_screen_clause": {
+              "clause": "end screen",
+              "_row_num": 115,
+              "__rowNum__": 114,
+              "_token_type": "end_screen"
+            },
+            "_screen_block": "function() {var activePromptIndicies = [];\nactivePromptIndicies.push(32);\n\nreturn activePromptIndicies;\n}\n",
             "operationIdx": 36
           },
           {
             "clause": "begin screen",
-            "_row_num": 96,
-            "__rowNum__": 95,
-            "_token_type": "begin_screen",
-            "_end_screen_clause": {
-              "clause": "end screen",
-              "_row_num": 98,
-              "__rowNum__": 97,
-              "_token_type": "end_screen"
-            },
-            "_screen_block": "function() {var activePromptIndicies = [];\nactivePromptIndicies.push(28);\n\nreturn activePromptIndicies;\n}\n",
-            "operationIdx": 37
-          },
-          {
-            "clause": "begin screen",
-            "_row_num": 99,
-            "__rowNum__": 98,
-            "_token_type": "begin_screen",
-            "_end_screen_clause": {
-              "clause": "end screen",
-              "_row_num": 104,
-              "__rowNum__": 103,
-              "_token_type": "end_screen"
-            },
-            "_screen_block": "function() {var activePromptIndicies = [];\nactivePromptIndicies.push(29);\nif (data('GRVAC') == '1') {\nactivePromptIndicies.push(30);\n}\n\nreturn activePromptIndicies;\n}\n",
-            "operationIdx": 38
-          },
-          {
-            "clause": "begin screen",
-            "_row_num": 105,
-            "__rowNum__": 104,
-            "_token_type": "begin_screen",
-            "_end_screen_clause": {
-              "clause": "end screen",
-              "_row_num": 111,
-              "__rowNum__": 110,
-              "_token_type": "end_screen"
-            },
-            "_screen_block": "function() {var activePromptIndicies = [];\nactivePromptIndicies.push(31);\nactivePromptIndicies.push(32);\nif (data('CART_ANC') == 'VIC') {\nactivePromptIndicies.push(33);\n}\n\nreturn activePromptIndicies;\n}\n",
-            "operationIdx": 39
-          },
-          {
-            "clause": "begin screen",
-            "_row_num": 112,
-            "__rowNum__": 111,
+            "_row_num": 116,
+            "__rowNum__": 115,
             "_token_type": "begin_screen",
             "_end_screen_clause": {
               "clause": "end screen",
@@ -4736,8 +5192,8 @@
               "__rowNum__": 117,
               "_token_type": "end_screen"
             },
-            "_screen_block": "function() {var activePromptIndicies = [];\nactivePromptIndicies.push(34);\nactivePromptIndicies.push(35);\nif (data('CART_ANC') == 'VIC') {\nactivePromptIndicies.push(36);\n}\n\nreturn activePromptIndicies;\n}\n",
-            "operationIdx": 40
+            "_screen_block": "function() {var activePromptIndicies = [];\nactivePromptIndicies.push(33);\n\nreturn activePromptIndicies;\n}\n",
+            "operationIdx": 37
           },
           {
             "clause": "begin screen",
@@ -4746,70 +5202,26 @@
             "_token_type": "begin_screen",
             "_end_screen_clause": {
               "clause": "end screen",
-              "_row_num": 125,
-              "__rowNum__": 124,
+              "_row_num": 124,
+              "__rowNum__": 123,
               "_token_type": "end_screen"
             },
-            "_screen_block": "function() {var activePromptIndicies = [];\nactivePromptIndicies.push(37);\nactivePromptIndicies.push(38);\nif (data('CART_ANC') == 'VIC') {\nactivePromptIndicies.push(39);\n}\n\nreturn activePromptIndicies;\n}\n",
-            "operationIdx": 41
+            "_screen_block": "function() {var activePromptIndicies = [];\nactivePromptIndicies.push(34);\nif (data('GRVAC') == '1') {\nactivePromptIndicies.push(35);\n}\n\nreturn activePromptIndicies;\n}\n",
+            "operationIdx": 38
           },
           {
             "clause": "begin screen",
-            "_row_num": 126,
-            "__rowNum__": 125,
+            "_row_num": 125,
+            "__rowNum__": 124,
             "_token_type": "begin_screen",
             "_end_screen_clause": {
               "clause": "end screen",
-              "_row_num": 128,
-              "__rowNum__": 127,
+              "_row_num": 135,
+              "__rowNum__": 134,
               "_token_type": "end_screen"
             },
-            "_screen_block": "function() {var activePromptIndicies = [];\nactivePromptIndicies.push(40);\n\nreturn activePromptIndicies;\n}\n",
-            "operationIdx": 42
-          },
-          {
-            "clause": "begin screen",
-            "_row_num": 129,
-            "__rowNum__": 128,
-            "_token_type": "begin_screen",
-            "_end_screen_clause": {
-              "clause": "end screen",
-              "_row_num": 131,
-              "__rowNum__": 130,
-              "_token_type": "end_screen"
-            },
-            "_screen_block": "function() {var activePromptIndicies = [];\nactivePromptIndicies.push(41);\n\nreturn activePromptIndicies;\n}\n",
-            "operationIdx": 43
-          },
-          {
-            "clause": "begin screen",
-            "_row_num": 132,
-            "__rowNum__": 131,
-            "_token_type": "begin_screen",
-            "_end_screen_clause": {
-              "clause": "end screen",
-              "_row_num": 134,
-              "__rowNum__": 133,
-              "_token_type": "end_screen"
-            },
-            "_screen_block": "function() {var activePromptIndicies = [];\nactivePromptIndicies.push(42);\n\nreturn activePromptIndicies;\n}\n",
-            "operationIdx": 44
-          },
-          {
-            "clause": "if",
-            "condition": "data('LITTERSIZE') >='1'",
-            "_row_num": 135,
-            "__rowNum__": 134,
-            "_token_type": "goto_label",
-            "_branch_label": "_then135",
-            "operationIdx": 45
-          },
-          {
-            "clause": "end if",
-            "_token_type": "goto_label",
-            "_branch_label": "_else158",
-            "_row_num": 158,
-            "operationIdx": 46
+            "_screen_block": "function() {var activePromptIndicies = [];\nactivePromptIndicies.push(36);\nactivePromptIndicies.push(37);\nactivePromptIndicies.push(38);\nif (data('cdg_mns') != null) {\nassign('CDG_M', 99);\n}\nif (data('CART_ANC') == 'VIC') {\nactivePromptIndicies.push(39);\n}\n\nreturn activePromptIndicies;\n}\n",
+            "operationIdx": 39
           },
           {
             "clause": "begin screen",
@@ -4818,148 +5230,234 @@
             "_token_type": "begin_screen",
             "_end_screen_clause": {
               "clause": "end screen",
-              "_row_num": 139,
-              "__rowNum__": 138,
+              "_row_num": 146,
+              "__rowNum__": 145,
               "_token_type": "end_screen"
             },
-            "_screen_block": "function() {var activePromptIndicies = [];\nactivePromptIndicies.push(43);\nactivePromptIndicies.push(44);\n\nreturn activePromptIndicies;\n}\n",
+            "_screen_block": "function() {var activePromptIndicies = [];\nactivePromptIndicies.push(40);\nactivePromptIndicies.push(41);\nactivePromptIndicies.push(42);\nif (data('fedep_mns') != null) {\nassign('FEDEP_M', 99);\n}\nif (data('CART_ANC') == 'VIC') {\nactivePromptIndicies.push(43);\n}\n\nreturn activePromptIndicies;\n}\n",
+            "operationIdx": 40
+          },
+          {
+            "clause": "begin screen",
+            "_row_num": 147,
+            "__rowNum__": 146,
+            "_token_type": "begin_screen",
+            "_end_screen_clause": {
+              "clause": "end screen",
+              "_row_num": 157,
+              "__rowNum__": 156,
+              "_token_type": "end_screen"
+            },
+            "_screen_block": "function() {var activePromptIndicies = [];\nactivePromptIndicies.push(44);\nactivePromptIndicies.push(45);\nactivePromptIndicies.push(46);\nif (data('qvfansi_mns') != null) {\nassign('QVFANSI_M', 99);\n}\nif (data('CART_ANC') == 'VIC') {\nactivePromptIndicies.push(47);\n}\n\nreturn activePromptIndicies;\n}\n",
+            "operationIdx": 41
+          },
+          {
+            "clause": "begin screen",
+            "_row_num": 158,
+            "__rowNum__": 157,
+            "_token_type": "begin_screen",
+            "_end_screen_clause": {
+              "clause": "end screen",
+              "_row_num": 160,
+              "__rowNum__": 159,
+              "_token_type": "end_screen"
+            },
+            "_screen_block": "function() {var activePromptIndicies = [];\nactivePromptIndicies.push(48);\n\nreturn activePromptIndicies;\n}\n",
+            "operationIdx": 42
+          },
+          {
+            "clause": "begin screen",
+            "_row_num": 161,
+            "__rowNum__": 160,
+            "_token_type": "begin_screen",
+            "_end_screen_clause": {
+              "clause": "end screen",
+              "_row_num": 163,
+              "__rowNum__": 162,
+              "_token_type": "end_screen"
+            },
+            "_screen_block": "function() {var activePromptIndicies = [];\nactivePromptIndicies.push(49);\n\nreturn activePromptIndicies;\n}\n",
+            "operationIdx": 43
+          },
+          {
+            "clause": "begin screen",
+            "_row_num": 164,
+            "__rowNum__": 163,
+            "_token_type": "begin_screen",
+            "_end_screen_clause": {
+              "clause": "end screen",
+              "_row_num": 166,
+              "__rowNum__": 165,
+              "_token_type": "end_screen"
+            },
+            "_screen_block": "function() {var activePromptIndicies = [];\nactivePromptIndicies.push(50);\n\nreturn activePromptIndicies;\n}\n",
+            "operationIdx": 44
+          },
+          {
+            "clause": "if",
+            "condition": "data('LITTERSIZE') >='1'",
+            "_row_num": 167,
+            "__rowNum__": 166,
+            "_token_type": "goto_label",
+            "_branch_label": "_then167",
+            "operationIdx": 45
+          },
+          {
+            "clause": "end if",
+            "_token_type": "goto_label",
+            "_branch_label": "_else190",
+            "_row_num": 190,
+            "operationIdx": 46
+          },
+          {
+            "clause": "begin screen",
+            "_row_num": 168,
+            "__rowNum__": 167,
+            "_token_type": "begin_screen",
+            "_end_screen_clause": {
+              "clause": "end screen",
+              "_row_num": 171,
+              "__rowNum__": 170,
+              "_token_type": "end_screen"
+            },
+            "_screen_block": "function() {var activePromptIndicies = [];\nactivePromptIndicies.push(51);\nactivePromptIndicies.push(52);\n\nreturn activePromptIndicies;\n}\n",
             "operationIdx": 47
           },
           {
             "clause": "if",
             "condition": "data('LITTERSIZE') >='2'",
-            "_row_num": 140,
-            "__rowNum__": 139,
+            "_row_num": 172,
+            "__rowNum__": 171,
             "_token_type": "goto_label",
-            "_branch_label": "_then140",
+            "_branch_label": "_then172",
             "operationIdx": 48
           },
           {
             "clause": "end if",
             "_token_type": "goto_label",
-            "_branch_label": "_else157",
-            "_row_num": 157,
+            "_branch_label": "_else189",
+            "_row_num": 189,
             "operationIdx": 49
           },
           {
             "clause": "begin screen",
-            "_row_num": 141,
-            "__rowNum__": 140,
+            "_row_num": 173,
+            "__rowNum__": 172,
             "_token_type": "begin_screen",
             "_end_screen_clause": {
               "clause": "end screen",
-              "_row_num": 144,
-              "__rowNum__": 143,
+              "_row_num": 176,
+              "__rowNum__": 175,
               "_token_type": "end_screen"
             },
-            "_screen_block": "function() {var activePromptIndicies = [];\nactivePromptIndicies.push(45);\nactivePromptIndicies.push(46);\n\nreturn activePromptIndicies;\n}\n",
+            "_screen_block": "function() {var activePromptIndicies = [];\nactivePromptIndicies.push(53);\nactivePromptIndicies.push(54);\n\nreturn activePromptIndicies;\n}\n",
             "operationIdx": 50
           },
           {
             "clause": "if",
             "condition": "data('LITTERSIZE') >='3'",
-            "_row_num": 145,
-            "__rowNum__": 144,
+            "_row_num": 177,
+            "__rowNum__": 176,
             "_token_type": "goto_label",
-            "_branch_label": "_then145",
+            "_branch_label": "_then177",
             "operationIdx": 51
           },
           {
             "clause": "end if",
             "_token_type": "goto_label",
-            "_branch_label": "_else156",
-            "_row_num": 156,
+            "_branch_label": "_else188",
+            "_row_num": 188,
             "operationIdx": 52
           },
           {
             "clause": "begin screen",
-            "_row_num": 146,
-            "__rowNum__": 145,
+            "_row_num": 178,
+            "__rowNum__": 177,
             "_token_type": "begin_screen",
             "_end_screen_clause": {
               "clause": "end screen",
-              "_row_num": 149,
-              "__rowNum__": 148,
+              "_row_num": 181,
+              "__rowNum__": 180,
               "_token_type": "end_screen"
             },
-            "_screen_block": "function() {var activePromptIndicies = [];\nactivePromptIndicies.push(47);\nactivePromptIndicies.push(48);\n\nreturn activePromptIndicies;\n}\n",
+            "_screen_block": "function() {var activePromptIndicies = [];\nactivePromptIndicies.push(55);\nactivePromptIndicies.push(56);\n\nreturn activePromptIndicies;\n}\n",
             "operationIdx": 53
           },
           {
             "clause": "if",
             "condition": "data('LITTERSIZE') >='4'",
-            "_row_num": 150,
-            "__rowNum__": 149,
+            "_row_num": 182,
+            "__rowNum__": 181,
             "_token_type": "goto_label",
-            "_branch_label": "_then150",
+            "_branch_label": "_then182",
             "operationIdx": 54
           },
           {
             "clause": "end if",
             "_token_type": "goto_label",
-            "_branch_label": "_else155",
-            "_row_num": 155,
+            "_branch_label": "_else187",
+            "_row_num": 187,
             "operationIdx": 55
           },
           {
             "clause": "begin screen",
-            "_row_num": 151,
-            "__rowNum__": 150,
+            "_row_num": 183,
+            "__rowNum__": 182,
             "_token_type": "begin_screen",
             "_end_screen_clause": {
               "clause": "end screen",
-              "_row_num": 154,
-              "__rowNum__": 153,
+              "_row_num": 186,
+              "__rowNum__": 185,
               "_token_type": "end_screen"
             },
-            "_screen_block": "function() {var activePromptIndicies = [];\nactivePromptIndicies.push(49);\nactivePromptIndicies.push(50);\n\nreturn activePromptIndicies;\n}\n",
+            "_screen_block": "function() {var activePromptIndicies = [];\nactivePromptIndicies.push(57);\nactivePromptIndicies.push(58);\n\nreturn activePromptIndicies;\n}\n",
             "operationIdx": 56
           },
           {
             "clause": "end if",
             "_token_type": "goto_label",
-            "_branch_label": "_endif155",
-            "_row_num": 155,
+            "_branch_label": "_endif187",
+            "_row_num": 187,
             "operationIdx": 57
           },
           {
             "clause": "end if",
             "_token_type": "goto_label",
-            "_branch_label": "_endif156",
-            "_row_num": 156,
+            "_branch_label": "_endif188",
+            "_row_num": 188,
             "operationIdx": 58
           },
           {
             "clause": "end if",
             "_token_type": "goto_label",
-            "_branch_label": "_endif157",
-            "_row_num": 157,
+            "_branch_label": "_endif189",
+            "_row_num": 189,
             "operationIdx": 59
           },
           {
             "clause": "end if",
             "_token_type": "goto_label",
-            "_branch_label": "_endif158",
-            "_row_num": 158,
+            "_branch_label": "_endif190",
+            "_row_num": 190,
             "operationIdx": 60
           },
           {
             "clause": "end if",
             "_token_type": "goto_label",
-            "_branch_label": "_endif159",
-            "_row_num": 159,
+            "_branch_label": "_endif191",
+            "_row_num": 191,
             "operationIdx": 61
           },
           {
             "_token_type": "exit_section",
             "clause": "exit section",
-            "_row_num": 160,
+            "_row_num": 192,
             "operationIdx": 62
           },
           {
-            "_row_num": 160,
+            "_row_num": 192,
             "_token_type": "begin_screen",
-            "_screen_block": "function() {var activePromptIndicies = [];\nactivePromptIndicies.push(51);\n\nreturn activePromptIndicies;\n}\n",
+            "_screen_block": "function() {var activePromptIndicies = [];\nactivePromptIndicies.push(59);\n\nreturn activePromptIndicies;\n}\n",
             "screen": {
               "hideInBackHistory": true
             },
@@ -4968,7 +5466,7 @@
           {
             "_token_type": "resume",
             "clause": "resume",
-            "_row_num": 160,
+            "_row_num": 192,
             "operationIdx": 64
           }
         ],
@@ -4986,57 +5484,57 @@
           "_endif24": 12,
           "_screen25": 12,
           "_screen28": 13,
-          "_screen31": 14,
-          "_screen38": 15,
-          "_screen45": 16,
-          "_screen52": 17,
-          "_then59": 20,
-          "_screen60": 20,
-          "_else63": 22,
-          "_endif63": 22,
-          "_else64": 23,
-          "_endif64": 23,
-          "_then65": 25,
-          "_screen66": 25,
-          "_screen69": 26,
-          "_then72": 29,
-          "_screen73": 29,
-          "_else76": 31,
-          "_endif76": 31,
-          "_then77": 33,
-          "_screen78": 33,
-          "_else81": 35,
-          "_endif81": 35,
-          "_screen82": 35,
-          "_screen93": 36,
-          "_screen96": 37,
-          "_screen99": 38,
-          "_screen105": 39,
-          "_screen112": 40,
-          "_screen119": 41,
-          "_screen126": 42,
-          "_screen129": 43,
-          "_screen132": 44,
-          "_then135": 47,
-          "_screen136": 47,
-          "_then140": 50,
-          "_screen141": 50,
-          "_then145": 53,
-          "_screen146": 53,
-          "_then150": 56,
-          "_screen151": 56,
-          "_else155": 58,
-          "_endif155": 58,
-          "_else156": 59,
-          "_endif156": 59,
-          "_else157": 60,
-          "_endif157": 60,
-          "_else158": 61,
-          "_endif158": 61,
-          "_else159": 62,
-          "_endif159": 62,
+          "_screen35": 14,
+          "_screen42": 15,
+          "_screen53": 16,
+          "_screen64": 17,
+          "_then75": 20,
+          "_screen76": 20,
+          "_else79": 22,
+          "_endif79": 22,
+          "_else80": 23,
+          "_endif80": 23,
+          "_then81": 25,
+          "_screen82": 25,
+          "_screen85": 26,
+          "_then88": 29,
+          "_screen89": 29,
+          "_else96": 31,
+          "_endif96": 31,
+          "_then97": 33,
+          "_screen98": 33,
+          "_else101": 35,
+          "_endif101": 35,
+          "_screen102": 35,
+          "_screen113": 36,
+          "_screen116": 37,
+          "_screen119": 38,
+          "_screen125": 39,
+          "_screen136": 40,
+          "_screen147": 41,
+          "_screen158": 42,
+          "_screen161": 43,
+          "_screen164": 44,
+          "_then167": 47,
+          "_screen168": 47,
+          "_then172": 50,
+          "_screen173": 50,
+          "_then177": 53,
+          "_screen178": 53,
+          "_then182": 56,
+          "_screen183": 56,
+          "_else187": 58,
+          "_endif187": 58,
+          "_else188": 59,
+          "_endif188": 59,
+          "_else189": 60,
+          "_endif189": 60,
+          "_else190": 61,
+          "_endif190": 61,
+          "_else191": 62,
+          "_endif191": 62,
           "_contents": 63,
-          "_screen160": 63
+          "_screen192": 63
         }
       },
       "initial": {
@@ -5225,7 +5723,7 @@
         "type": "integer",
         "_defn": [
           {
-            "_row_num": 74,
+            "_row_num": 90,
             "section_name": "survey"
           },
           {
@@ -5244,7 +5742,7 @@
         "valuesList": "healthstaff",
         "_defn": [
           {
-            "_row_num": 133,
+            "_row_num": 165,
             "section_name": "survey"
           },
           {
@@ -5263,7 +5761,7 @@
         "valuesList": "vpcard",
         "_defn": [
           {
-            "_row_num": 97,
+            "_row_num": 117,
             "section_name": "survey"
           },
           {
@@ -5300,7 +5798,7 @@
         "type": "integer",
         "_defn": [
           {
-            "_row_num": 109,
+            "_row_num": 133,
             "section_name": "survey"
           },
           {
@@ -5318,7 +5816,7 @@
         "type": "integer",
         "_defn": [
           {
-            "_row_num": 107,
+            "_row_num": 127,
             "section_name": "survey"
           },
           {
@@ -5341,7 +5839,7 @@
         "__rowNum__": 3,
         "_defn": [
           {
-            "_row_num": 61,
+            "_row_num": 77,
             "section_name": "survey"
           },
           {
@@ -5359,7 +5857,7 @@
         "type": "integer",
         "_defn": [
           {
-            "_row_num": 56,
+            "_row_num": 72,
             "section_name": "survey"
           },
           {
@@ -5377,7 +5875,7 @@
         "type": "integer",
         "_defn": [
           {
-            "_row_num": 54,
+            "_row_num": 66,
             "section_name": "survey"
           },
           {
@@ -5395,7 +5893,7 @@
         "type": "integer",
         "_defn": [
           {
-            "_row_num": 116,
+            "_row_num": 144,
             "section_name": "survey"
           },
           {
@@ -5413,7 +5911,7 @@
         "type": "integer",
         "_defn": [
           {
-            "_row_num": 114,
+            "_row_num": 138,
             "section_name": "survey"
           },
           {
@@ -5431,7 +5929,7 @@
         "type": "integer",
         "_defn": [
           {
-            "_row_num": 49,
+            "_row_num": 61,
             "section_name": "survey"
           },
           {
@@ -5449,7 +5947,7 @@
         "type": "integer",
         "_defn": [
           {
-            "_row_num": 47,
+            "_row_num": 55,
             "section_name": "survey"
           },
           {
@@ -5505,7 +6003,7 @@
         "valuesList": "YesNoU",
         "_defn": [
           {
-            "_row_num": 94,
+            "_row_num": 114,
             "section_name": "survey"
           },
           {
@@ -5538,7 +6036,7 @@
         "valuesList": "YesNoU",
         "_defn": [
           {
-            "_row_num": 100,
+            "_row_num": 120,
             "section_name": "survey"
           },
           {
@@ -5557,7 +6055,7 @@
         "valuesList": "inf1",
         "_defn": [
           {
-            "_row_num": 83,
+            "_row_num": 103,
             "section_name": "survey"
           },
           {
@@ -5576,7 +6074,7 @@
         "valuesList": "inf2",
         "_defn": [
           {
-            "_row_num": 85,
+            "_row_num": 105,
             "section_name": "survey"
           },
           {
@@ -5594,7 +6092,7 @@
         "type": "integer",
         "_defn": [
           {
-            "_row_num": 79,
+            "_row_num": 99,
             "section_name": "survey"
           },
           {
@@ -5617,7 +6115,7 @@
         "__rowNum__": 3,
         "_defn": [
           {
-            "_row_num": 35,
+            "_row_num": 39,
             "section_name": "survey"
           },
           {
@@ -5640,7 +6138,7 @@
         "__rowNum__": 3,
         "_defn": [
           {
-            "_row_num": 33,
+            "_row_num": 37,
             "section_name": "survey"
           },
           {
@@ -5659,7 +6157,7 @@
         "valuesList": "facility",
         "_defn": [
           {
-            "_row_num": 130,
+            "_row_num": 162,
             "section_name": "survey"
           },
           {
@@ -5745,7 +6243,7 @@
         "__rowNum__": 3,
         "_defn": [
           {
-            "_row_num": 70,
+            "_row_num": 86,
             "section_name": "survey"
           },
           {
@@ -5764,7 +6262,7 @@
         "valuesList": "pregstat",
         "_defn": [
           {
-            "_row_num": 67,
+            "_row_num": 83,
             "section_name": "survey"
           },
           {
@@ -5782,7 +6280,7 @@
         "type": "integer",
         "_defn": [
           {
-            "_row_num": 42,
+            "_row_num": 50,
             "section_name": "survey"
           },
           {
@@ -5800,7 +6298,7 @@
         "type": "integer",
         "_defn": [
           {
-            "_row_num": 40,
+            "_row_num": 44,
             "section_name": "survey"
           },
           {
@@ -5818,7 +6316,7 @@
         "type": "integer",
         "_defn": [
           {
-            "_row_num": 123,
+            "_row_num": 155,
             "section_name": "survey"
           },
           {
@@ -5836,7 +6334,7 @@
         "type": "integer",
         "_defn": [
           {
-            "_row_num": 121,
+            "_row_num": 149,
             "section_name": "survey"
           },
           {
@@ -5855,7 +6353,7 @@
         "valuesList": "YesNoU",
         "_defn": [
           {
-            "_row_num": 127,
+            "_row_num": 159,
             "section_name": "survey"
           },
           {
@@ -5873,7 +6371,7 @@
         "type": "integer",
         "_defn": [
           {
-            "_row_num": 102,
+            "_row_num": 122,
             "section_name": "survey"
           },
           {
@@ -5967,12 +6465,332 @@
         "elementSet": "data",
         "elementPath": "ASSISTENTE"
       },
+      "gestns": {
+        "type": "array",
+        "items": {
+          "type": "string",
+          "elementKey": "gestns_items",
+          "elementName": "items",
+          "elementSet": "data",
+          "elementPath": "gestns.items",
+          "isSessionVariable": true,
+          "notUnitOfRetention": true
+        },
+        "valuesList": "dontknow",
+        "_defn": [
+          {
+            "_row_num": 30,
+            "section_name": "survey"
+          },
+          {
+            "_row_num": 45,
+            "section_name": "model"
+          }
+        ],
+        "isSessionVariable": true,
+        "elementKey": "gestns",
+        "elementName": "gestns",
+        "elementSet": "data",
+        "elementPath": "gestns",
+        "listChildElementKeys": [
+          "gestns_items"
+        ]
+      },
+      "qc_mns": {
+        "type": "array",
+        "items": {
+          "type": "string",
+          "elementKey": "qc_mns_items",
+          "elementName": "items",
+          "elementSet": "data",
+          "elementPath": "qc_mns.items",
+          "isSessionVariable": true,
+          "notUnitOfRetention": true
+        },
+        "valuesList": "dontknow",
+        "_defn": [
+          {
+            "_row_num": 45,
+            "section_name": "survey"
+          },
+          {
+            "_row_num": 46,
+            "section_name": "model"
+          }
+        ],
+        "isSessionVariable": true,
+        "elementKey": "qc_mns",
+        "elementName": "qc_mns",
+        "elementSet": "data",
+        "elementPath": "qc_mns",
+        "listChildElementKeys": [
+          "qc_mns_items"
+        ]
+      },
+      "fer_mns": {
+        "type": "array",
+        "items": {
+          "type": "string",
+          "elementKey": "fer_mns_items",
+          "elementName": "items",
+          "elementSet": "data",
+          "elementPath": "fer_mns.items",
+          "isSessionVariable": true,
+          "notUnitOfRetention": true
+        },
+        "valuesList": "dontknow",
+        "_defn": [
+          {
+            "_row_num": 56,
+            "section_name": "survey"
+          },
+          {
+            "_row_num": 47,
+            "section_name": "model"
+          }
+        ],
+        "isSessionVariable": true,
+        "elementKey": "fer_mns",
+        "elementName": "fer_mns",
+        "elementSet": "data",
+        "elementPath": "fer_mns",
+        "listChildElementKeys": [
+          "fer_mns_items"
+        ]
+      },
+      "fansi_mns": {
+        "type": "array",
+        "items": {
+          "type": "string",
+          "elementKey": "fansi_mns_items",
+          "elementName": "items",
+          "elementSet": "data",
+          "elementPath": "fansi_mns.items",
+          "isSessionVariable": true,
+          "notUnitOfRetention": true
+        },
+        "valuesList": "dontknow",
+        "_defn": [
+          {
+            "_row_num": 67,
+            "section_name": "survey"
+          },
+          {
+            "_row_num": 48,
+            "section_name": "model"
+          }
+        ],
+        "isSessionVariable": true,
+        "elementKey": "fansi_mns",
+        "elementName": "fansi_mns",
+        "elementSet": "data",
+        "elementPath": "fansi_mns",
+        "listChildElementKeys": [
+          "fansi_mns_items"
+        ]
+      },
+      "abmesns": {
+        "type": "array",
+        "items": {
+          "type": "string",
+          "elementKey": "abmesns_items",
+          "elementName": "items",
+          "elementSet": "data",
+          "elementPath": "abmesns.items",
+          "isSessionVariable": true,
+          "notUnitOfRetention": true
+        },
+        "valuesList": "dontknow",
+        "_defn": [
+          {
+            "_row_num": 91,
+            "section_name": "survey"
+          },
+          {
+            "_row_num": 49,
+            "section_name": "model"
+          }
+        ],
+        "isSessionVariable": true,
+        "elementKey": "abmesns",
+        "elementName": "abmesns",
+        "elementSet": "data",
+        "elementPath": "abmesns",
+        "listChildElementKeys": [
+          "abmesns_items"
+        ]
+      },
+      "cdg_mns": {
+        "type": "array",
+        "items": {
+          "type": "string",
+          "elementKey": "cdg_mns_items",
+          "elementName": "items",
+          "elementSet": "data",
+          "elementPath": "cdg_mns.items",
+          "isSessionVariable": true,
+          "notUnitOfRetention": true
+        },
+        "valuesList": "dontknow",
+        "_defn": [
+          {
+            "_row_num": 128,
+            "section_name": "survey"
+          },
+          {
+            "_row_num": 50,
+            "section_name": "model"
+          }
+        ],
+        "isSessionVariable": true,
+        "elementKey": "cdg_mns",
+        "elementName": "cdg_mns",
+        "elementSet": "data",
+        "elementPath": "cdg_mns",
+        "listChildElementKeys": [
+          "cdg_mns_items"
+        ]
+      },
+      "fedep_mns": {
+        "type": "array",
+        "items": {
+          "type": "string",
+          "elementKey": "fedep_mns_items",
+          "elementName": "items",
+          "elementSet": "data",
+          "elementPath": "fedep_mns.items",
+          "isSessionVariable": true,
+          "notUnitOfRetention": true
+        },
+        "valuesList": "dontknow",
+        "_defn": [
+          {
+            "_row_num": 139,
+            "section_name": "survey"
+          },
+          {
+            "_row_num": 51,
+            "section_name": "model"
+          }
+        ],
+        "isSessionVariable": true,
+        "elementKey": "fedep_mns",
+        "elementName": "fedep_mns",
+        "elementSet": "data",
+        "elementPath": "fedep_mns",
+        "listChildElementKeys": [
+          "fedep_mns_items"
+        ]
+      },
+      "qvfansi_mns": {
+        "type": "array",
+        "items": {
+          "type": "string",
+          "elementKey": "qvfansi_mns_items",
+          "elementName": "items",
+          "elementSet": "data",
+          "elementPath": "qvfansi_mns.items",
+          "isSessionVariable": true,
+          "notUnitOfRetention": true
+        },
+        "valuesList": "dontknow",
+        "_defn": [
+          {
+            "_row_num": 150,
+            "section_name": "survey"
+          },
+          {
+            "_row_num": 52,
+            "section_name": "model"
+          }
+        ],
+        "isSessionVariable": true,
+        "elementKey": "qvfansi_mns",
+        "elementName": "qvfansi_mns",
+        "elementSet": "data",
+        "elementPath": "qvfansi_mns",
+        "listChildElementKeys": [
+          "qvfansi_mns_items"
+        ]
+      },
       "muacbig_items": {
         "type": "string",
         "elementKey": "muacbig_items",
         "elementName": "items",
         "elementSet": "data",
         "elementPath": "muacbig.items",
+        "isSessionVariable": true,
+        "notUnitOfRetention": true
+      },
+      "gestns_items": {
+        "type": "string",
+        "elementKey": "gestns_items",
+        "elementName": "items",
+        "elementSet": "data",
+        "elementPath": "gestns.items",
+        "isSessionVariable": true,
+        "notUnitOfRetention": true
+      },
+      "qc_mns_items": {
+        "type": "string",
+        "elementKey": "qc_mns_items",
+        "elementName": "items",
+        "elementSet": "data",
+        "elementPath": "qc_mns.items",
+        "isSessionVariable": true,
+        "notUnitOfRetention": true
+      },
+      "fer_mns_items": {
+        "type": "string",
+        "elementKey": "fer_mns_items",
+        "elementName": "items",
+        "elementSet": "data",
+        "elementPath": "fer_mns.items",
+        "isSessionVariable": true,
+        "notUnitOfRetention": true
+      },
+      "fansi_mns_items": {
+        "type": "string",
+        "elementKey": "fansi_mns_items",
+        "elementName": "items",
+        "elementSet": "data",
+        "elementPath": "fansi_mns.items",
+        "isSessionVariable": true,
+        "notUnitOfRetention": true
+      },
+      "abmesns_items": {
+        "type": "string",
+        "elementKey": "abmesns_items",
+        "elementName": "items",
+        "elementSet": "data",
+        "elementPath": "abmesns.items",
+        "isSessionVariable": true,
+        "notUnitOfRetention": true
+      },
+      "cdg_mns_items": {
+        "type": "string",
+        "elementKey": "cdg_mns_items",
+        "elementName": "items",
+        "elementSet": "data",
+        "elementPath": "cdg_mns.items",
+        "isSessionVariable": true,
+        "notUnitOfRetention": true
+      },
+      "fedep_mns_items": {
+        "type": "string",
+        "elementKey": "fedep_mns_items",
+        "elementName": "items",
+        "elementSet": "data",
+        "elementPath": "fedep_mns.items",
+        "isSessionVariable": true,
+        "notUnitOfRetention": true
+      },
+      "qvfansi_mns_items": {
+        "type": "string",
+        "elementKey": "qvfansi_mns_items",
+        "elementName": "items",
+        "elementSet": "data",
+        "elementPath": "qvfansi_mns.items",
         "isSessionVariable": true,
         "notUnitOfRetention": true
       },
