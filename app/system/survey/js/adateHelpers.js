@@ -47,6 +47,18 @@ return {
             return -9999;
         }
         return b.diff(a,'years');
+    },
+    diffInDays: function(aDateA,aDateB) {
+        var a = this.getMoment(aDateA);
+        var b = this.getMoment(aDateB);
+        if (!a || !b) {
+            return -9999;
+        }
+        return b.diff(a,'days');
+    },
+    display: function(aDate) {
+        return this.getMoment(aDate);
+        
     }
 }
 });

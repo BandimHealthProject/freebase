@@ -32,8 +32,9 @@ function loadPersons() {
             var MOR = result.getData(row,"MOR");
             var MORNOME =  result.getData(row,"MORNOME");
             var GRUPO =  result.getData(row,"GRUPO");
+            var AMOSTRA = result.getData(row,"AMOSTRA");
             var VISITED = false;
-            clusters.push({ id: MOR, visited: VISITED, group: GRUPO, name: MOR + " - " + MORNOME + " (" + GRUPO + ")"});
+            clusters.push({ id: MOR, visited: VISITED, group: GRUPO, amostra: AMOSTRA, name: MOR + " - " + MORNOME + " (" + GRUPO + ")"});
         }        
         populateView();
         return;
@@ -44,7 +45,7 @@ function loadPersons() {
         alert('Failed to get morancas from database: ' + errorMsg);
     }
 
-    var sql = "SELECT DISTINCT MOR, MORNOME, GRUPO FROM MORLIST WHERE REG = '" + region + "' AND TAB = " + tabanca + " ORDER BY GRUPO, MOR";
+    var sql = "SELECT DISTINCT AMOSTRA, MOR, MORNOME, GRUPO FROM MORLIST WHERE REG = '" + region + "' AND TAB = " + tabanca + " ORDER BY GRUPO, MOR";
     odkData.arbitraryQuery('MORLIST', sql, null, null, null, successFn, failureFn);
     
 }
@@ -55,11 +56,11 @@ function populateView() {
     $.each(clusters, function() {
         console.log(this);
         var visited = this.visited ? 'visited' : '';
-        ul.append($("<li />").append($("<button />").attr('onclick','go(' + this.id + ');').attr('class',visited + ' btn group' + this.group).text(this.name)));
+        ul.append($("<li />").append($("<button />").attr('onclick','go(' + this.id + ',' + this.amostra + ');').attr('class',visited + ' btn group' + this.group).text(this.name)));
     });
 }
 
-function go(clusterId) {
+function go(clusterId, amostra) {
     console.log("Going with " + visitType + " in " + clusterId);
 
     var region = util.getQueryParameter('region');
@@ -67,7 +68,7 @@ function go(clusterId) {
     var assistant = util.getQueryParameter('assistant');
     var date = util.getQueryParameter('date');
 
-    var queryParams = util.setQuerystringParams(region, tabanca, assistant, visitType, date, clusterId);
+    var queryParams = util.setQuerystringParams(region, tabanca, assistant, visitType, date, amostra, clusterId);
         if (util.DEBUG) top.location = 'listPersons.html' + queryParams;
         odkTables.launchHTML(null,  'config/assets/listPersons.html' + queryParams);
 }

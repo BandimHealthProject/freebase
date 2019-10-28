@@ -4,7 +4,7 @@
 'use strict';
 /* global odkTables, util, odkCommon, odkData */
 
-var persons, children, visitType, cluster, assistant, region, tabanca, date;
+var persons, children, visitType, cluster, assistant, region, tabanca, date, amostra;
 // note that persons are the MIFs
 
 function display() {
@@ -15,6 +15,7 @@ function display() {
     region = util.getQueryParameter('region');
     tabanca = util.getQueryParameter('tabanca');
     date = util.getQueryParameter('date');
+    amostra = util.getQueryParameter('amostra')
     
     // Set the background to be a picture.
     var body = $('body').first();
@@ -28,7 +29,7 @@ function display() {
 
 function loadPersons() {
     // SQL to get women (MIF)
-    var sql = "SELECT REGID, NOME, gr, estadovis, CART, cont, MIFDNASC, MOR, CASA, FOGAO, RELA1, RELA1NOME, VAC1TIPO, VAC1DATA, VAC1INF, VAC2TIPO, VAC2DATA, VAC2INF, VAC3TIPO, VAC3DATA, VAC3INF, VAC4TIPO, VAC4DATA, VAC4INF, VAC5TIPO, VAC5DATA, VAC5INF, VAC6TIPO, VAC6DATA, VAC6INF, VAC7TIPO, VAC7DATA, VAC7INF, VAC8TIPO, VAC8DATA, VAC8INF, VAC9TIPO, VAC9DATA, VAC9INF, VAC10TIPO, VAC10DATA, VAC10INF, VAC11TIPO, VAC11DATA, VAC11INF, VAC12TIPO, VAC12DATA, VAC12INF, VAC13TIPO, VAC13DATA, VAC13INF, VAC14TIPO, VAC14DATA, VAC14INF, VAC15TIPO, VAC15DATA, VAC15INF, VAC16TIPO, VAC16DATA, VAC16INF, VAC17TIPO, VAC17DATA, VAC17INF, VAC18TIPO, VAC18DATA, VAC18INF, VAC19TIPO, VAC19DATA, VAC19INF, VAC20TIPO, VAC20DATA, VAC20INF FROM MIF WHERE REG = " + region + " AND TAB = " + tabanca + " AND MOR = " + cluster + " GROUP BY REGID HAVING MIN(ROWID) AND ESTADO = 1 ORDER BY substr(CONT, instr(CONT, 'Y:')+2, 4) || substr('00'|| trim(substr(CONT, instr(CONT, 'M:')+2, 2),','), -2, 2) || substr('00'|| trim(substr(CONT, instr(CONT, 'D:')+2, 2),','), -2, 2) DESC, NOME";
+    var sql = "SELECT REGID, NOME, gr, estadovis, CART, cont, MIFDNASC, CASA, FOGAO, RELA1, RELA1NOME, VAC1TIPO, VAC1DATA, VAC1INF, VAC2TIPO, VAC2DATA, VAC2INF, VAC3TIPO, VAC3DATA, VAC3INF, VAC4TIPO, VAC4DATA, VAC4INF, VAC5TIPO, VAC5DATA, VAC5INF, VAC6TIPO, VAC6DATA, VAC6INF, VAC7TIPO, VAC7DATA, VAC7INF, VAC8TIPO, VAC8DATA, VAC8INF, VAC9TIPO, VAC9DATA, VAC9INF, VAC10TIPO, VAC10DATA, VAC10INF, VAC11TIPO, VAC11DATA, VAC11INF, VAC12TIPO, VAC12DATA, VAC12INF, VAC13TIPO, VAC13DATA, VAC13INF, VAC14TIPO, VAC14DATA, VAC14INF, VAC15TIPO, VAC15DATA, VAC15INF, VAC16TIPO, VAC16DATA, VAC16INF, VAC17TIPO, VAC17DATA, VAC17INF, VAC18TIPO, VAC18DATA, VAC18INF, VAC19TIPO, VAC19DATA, VAC19INF, VAC20TIPO, VAC20DATA, VAC20INF FROM MIF WHERE REG = " + region + " AND TAB = " + tabanca + " AND MOR = " + cluster + " GROUP BY REGID HAVING MIN(ROWID) AND ESTADO = 1 ORDER BY substr(CONT, instr(CONT, 'Y:')+2, 4) || substr('00'|| trim(substr(CONT, instr(CONT, 'M:')+2, 2),','), -2, 2) || substr('00'|| trim(substr(CONT, instr(CONT, 'D:')+2, 2),','), -2, 2) DESC, NOME";
     // Todo - look up in db => callback: populateView;
     persons = [];
     console.log("Querying database for MIFs...");
@@ -42,7 +43,6 @@ function loadPersons() {
             var CART = result.getData(row,"CART");
             var cont = result.getData(row,"CONT");
             var MIFDNASC = result.getData(row,"MIFDNASC");
-            var MOR = result.getData(row,"MOR");
             var CASA = result.getData(row,"CASA");
             var FOGAO = result.getData(row,"FOGAO");
             var RELA1 = result.getData(row,"RELA1");
@@ -110,7 +110,7 @@ function loadPersons() {
             var VAC20DATA = result.getData(row,"VAC20DATA");
             var VAC20INF = result.getData(row,"VAC20INF");
 
-            var p = { type: 'mif', REGID, NOME, gr, estadovis, CART, cont, MIFDNASC, MOR, CASA, FOGAO, RELA1, RELA1NOME, VAC1TIPO, VAC1DATA, VAC1INF, VAC2TIPO, VAC2DATA, VAC2INF, VAC3TIPO, VAC3DATA, VAC3INF, VAC4TIPO, VAC4DATA, VAC4INF, VAC5TIPO, VAC5DATA, VAC5INF, VAC6TIPO, VAC6DATA, VAC6INF, VAC7TIPO, VAC7DATA, VAC7INF, VAC8TIPO, VAC8DATA, VAC8INF, VAC9TIPO, VAC9DATA, VAC9INF, VAC10TIPO, VAC10DATA, VAC10INF, VAC11TIPO, VAC11DATA, VAC11INF, VAC12TIPO, VAC12DATA, VAC12INF, VAC13TIPO, VAC13DATA, VAC13INF, VAC14TIPO, VAC14DATA, VAC14INF, VAC15TIPO, VAC15DATA, VAC15INF, VAC16TIPO, VAC16DATA, VAC16INF, VAC17TIPO, VAC17DATA, VAC17INF, VAC18TIPO, VAC18DATA, VAC18INF, VAC19TIPO, VAC19DATA, VAC19INF, VAC20TIPO, VAC20DATA, VAC20INF };
+            var p = { type: 'mif', REGID, NOME, gr, estadovis, CART, cont, MIFDNASC, CASA, FOGAO, RELA1, RELA1NOME, VAC1TIPO, VAC1DATA, VAC1INF, VAC2TIPO, VAC2DATA, VAC2INF, VAC3TIPO, VAC3DATA, VAC3INF, VAC4TIPO, VAC4DATA, VAC4INF, VAC5TIPO, VAC5DATA, VAC5INF, VAC6TIPO, VAC6DATA, VAC6INF, VAC7TIPO, VAC7DATA, VAC7INF, VAC8TIPO, VAC8DATA, VAC8INF, VAC9TIPO, VAC9DATA, VAC9INF, VAC10TIPO, VAC10DATA, VAC10INF, VAC11TIPO, VAC11DATA, VAC11INF, VAC12TIPO, VAC12DATA, VAC12INF, VAC13TIPO, VAC13DATA, VAC13INF, VAC14TIPO, VAC14DATA, VAC14INF, VAC15TIPO, VAC15DATA, VAC15INF, VAC16TIPO, VAC16DATA, VAC16INF, VAC17TIPO, VAC17DATA, VAC17INF, VAC18TIPO, VAC18DATA, VAC18INF, VAC19TIPO, VAC19DATA, VAC19INF, VAC20TIPO, VAC20DATA, VAC20INF };
             console.log(p);
             persons.push(p);
         }
@@ -129,7 +129,7 @@ function loadPersons() {
 
 function loadChildren() {
     // SQL to load children
-    var sql = "SELECT REGIDC, NOME, REGID, pres, CARTVAC, CONT, OUTDATE, SEX, NOMEMAE, MOR, CASA, FOGAO, BCG, POLIONAS, POLIO1, PENTA1, PCV1, ROX1, POLIO2, PENTA2, PCV2, ROX2, POLIO3, PENTA3, PCV3, VPI, SARAMPO1, FEBAMAREL FROM CRIANCA  WHERE REG = " + region + " AND TAB = " + tabanca + " AND MOR = " + cluster + " GROUP BY REGIDC HAVING MIN(ROWID) AND ESTADO = 11  ORDER BY substr(CONT, instr(CONT, 'Y:')+2, 4) || substr('00'|| trim(substr(CONT, instr(CONT, 'M:')+2, 2),','), -2, 2) || substr('00'|| trim(substr(CONT, instr(CONT, 'D:')+2, 2),','), -2, 2) DESC, NOME";
+    var sql = "SELECT REGIDC, NOME, REGID, pres, CARTVAC, CONT, OUTDATE, SEX, NOMEMAE, CASA, FOGAO, BCG, POLIONAS, POLIO1, PENTA1, PCV1, ROX1, POLIO2, PENTA2, PCV2, ROX2, POLIO3, PENTA3, PCV3, VPI, SARAMPO1, FEBAMAREL FROM CRIANCA  WHERE REG = " + region + " AND TAB = " + tabanca + " AND MOR = " + cluster + " GROUP BY REGIDC HAVING MIN(ROWID) AND ESTADO = 11  ORDER BY substr(CONT, instr(CONT, 'Y:')+2, 4) || substr('00'|| trim(substr(CONT, instr(CONT, 'M:')+2, 2),','), -2, 2) || substr('00'|| trim(substr(CONT, instr(CONT, 'D:')+2, 2),','), -2, 2) DESC, NOME";
     children = [];
     console.log("Querying database for CRIANCAs...");
     console.log(sql);
@@ -146,7 +146,6 @@ function loadChildren() {
             var OUTDATE = result.getData(row,"OUTDATE");
             var SEX = result.getData(row,"SEX");
             var NOMEMAE = result.getData(row,"NOMEMAE");
-            var MOR = result.getData(row,"MOR");
             var CASA = result.getData(row,"CASA");
             var FOGAO = result.getData(row,"FOGAO");
            
@@ -167,7 +166,7 @@ function loadChildren() {
             var SARAMPO1 = result.getData(row,"SARAMPO1");
             var FEBAMAREL = result.getData(row,"FEBAMAREL");
 
-            var p = { type: 'crianca', REGIDC, NOME, REGID, pres, CARTVAC, CONT, OUTDATE, SEX, NOMEMAE, MOR, CASA, FOGAO, BCG, POLIONAS, POLIO1, PENTA1, PCV1, ROX1, POLIO2, PENTA2, PCV2, ROX2, POLIO3, PENTA3, PCV3, VPI, SARAMPO1, FEBAMAREL };
+            var p = { type: 'crianca', REGIDC, NOME, REGID, pres, CARTVAC, CONT, OUTDATE, SEX, NOMEMAE, CASA, FOGAO, BCG, POLIONAS, POLIO1, PENTA1, PCV1, ROX1, POLIO2, PENTA2, PCV2, ROX2, POLIO3, PENTA3, PCV3, VPI, SARAMPO1, FEBAMAREL };
             console.log(p);
             children.push(p);
         }
@@ -257,6 +256,7 @@ function populateView() {
     defaults['MOR'] = cluster;
     defaults['REG'] = region;
     defaults['TAB'] = tabanca;
+    defaults['AMO'] = amostra;
     defaults['VISITTYPE'] = visitType;
     defaults['ASSISTENTE'] = assistant;
     defaults['CONT'] = date; // today's date
@@ -295,6 +295,7 @@ function getDefaultsMIF(person) {
     defaults['MOR'] = cluster;
     defaults['REG'] = region;
     defaults['TAB'] = tabanca;
+    defaults['AMO'] = amostra;
     defaults['VISITTYPE'] = visitType;
     defaults['ASSISTENTE'] = assistant;
     defaults['CONT'] = date; // today's date
@@ -304,9 +305,8 @@ function getDefaultsMIF(person) {
     
     defaults['estadovis'] = person.estadovis;
     defaults['CART'] = person.CART;
-    defaults['lastvisitdate'] = person.cont; // date of last visit TODO
+    defaults['lastvisitdate'] = person.cont; // date of last visit
     defaults['MIFDNASC'] = person.MIFDNASC;
-    defaults['MOR'] = person.MOR;
     defaults['CASA'] = person.CASA;
     defaults['FOGAO'] = person.FOGAO;
     defaults['RELA1'] = person.RELA1;
@@ -379,6 +379,7 @@ function getDefaultsChild(person) {
     defaults['MOR'] = cluster;
     defaults['REG'] = region;
     defaults['TAB'] = tabanca;
+    defaults['AMO'] = amostra;
     defaults['VISITTYPE'] = visitType;
     defaults['ASSISTENTE'] = assistant;
     defaults['CONT'] = date; // today's date
@@ -392,7 +393,6 @@ function getDefaultsChild(person) {
     defaults['OUTDATE'] = person.OUTDATE;
     defaults['SEX'] = person.SEX;
     defaults['NOMEMAE'] = person.NOMEMAE;
-    defaults['MOR'] = person.MOR;
     defaults['CASA'] = person.CASA;
     defaults['FOGAO'] = person.FOGAO;
     defaults['BCG'] = person.BCG;

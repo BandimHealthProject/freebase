@@ -10,7 +10,7 @@ util.DEBUG = false;
  * Get a string to append to a url that will contain information the date and
  * time. The values can then be retrieved using getQueryParameter.
  */
-util.setQuerystringParams = function(region, tabanca, assistant, visitType, date, cluster) {
+util.setQuerystringParams = function(region, tabanca, assistant, visitType, date, amostra, cluster) {
 
     var that = this;
     var first = true;
@@ -36,6 +36,10 @@ util.setQuerystringParams = function(region, tabanca, assistant, visitType, date
 
     if (date) {
         adaptProps['date'] = date;
+    }  
+
+    if (amostra) {
+        adaptProps['amostra'] = amostra;
     }  
 
     if (cluster) {

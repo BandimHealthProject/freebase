@@ -1121,8 +1121,162 @@
         "_row_num": 163
       },
       {
-        "clause": "begin screen",
+        "branch_label": "WorldBank",
+        "clause": "if",
+        "condition": "data('LOCPAR') == 'HO' || data('LOCPAR') == 'CS' || data('LOCPAR') == 'US'",
         "_row_num": 164
+      },
+      {
+        "clause": "begin screen",
+        "_row_num": 165
+      },
+      {
+        "type": "note",
+        "display": {
+          "prompt": {
+            "text": {
+              "english": "Place of hospital / health center",
+              "default": "Local do hospital / centro de saude"
+            }
+          }
+        },
+        "_row_num": 166
+      },
+      {
+        "type": "select_one_dropdown",
+        "values_list": "reg_csv",
+        "name": "regpar",
+        "display": {
+          "prompt": {
+            "text": {
+              "english": "Region: {{data.regpar}}",
+              "default": "Região: {{data.regpar}}"
+            }
+          }
+        },
+        "_row_num": 167
+      },
+      {
+        "type": "select_one_dropdown",
+        "values_list": "hc_csv",
+        "name": "PARTONDE",
+        "display": {
+          "prompt": {
+            "text": {
+              "english": "Health center / hospital: {{data.PARTONDE}}",
+              "default": "Centro de saúde / hospital: {{data.PARTONDE}}"
+            }
+          }
+        },
+        "choice_filter": "choice_item.reg === data('regpar')",
+        "_row_num": 168
+      },
+      {
+        "type": "select_multiple",
+        "values_list": "dontknowfac",
+        "name": "partondens",
+        "_row_num": 169
+      },
+      {
+        "clause": "if",
+        "condition": "data('partondens') != null",
+        "_row_num": 170
+      },
+      {
+        "type": "assign",
+        "name": "PARTONDE",
+        "calculation": "data('partondens')",
+        "_row_num": 171
+      },
+      {
+        "clause": "end if",
+        "_row_num": 172
+      },
+      {
+        "clause": "end screen",
+        "_row_num": 173
+      },
+      {
+        "clause": "if",
+        "condition": "data('PARTONDE') == '8888'",
+        "_row_num": 174
+      },
+      {
+        "clause": "begin screen",
+        "_row_num": 175
+      },
+      {
+        "type": "text",
+        "name": "PARTONDENS",
+        "display": {
+          "prompt": {
+            "text": {
+              "english": "Place of hospitalisation",
+              "default": "Onde internou"
+            }
+          }
+        },
+        "_row_num": 176
+      },
+      {
+        "clause": "end screen",
+        "_row_num": 177
+      },
+      {
+        "clause": "end if",
+        "_row_num": 178
+      },
+      {
+        "clause": "begin screen",
+        "_row_num": 179
+      },
+      {
+        "type": "select_one",
+        "values_list": "YesNoU",
+        "name": "PARTPERTO",
+        "display": {
+          "prompt": {
+            "text": {
+              "english": "Closest hospital?",
+              "default": "Este é o hospital mais perto?"
+            }
+          }
+        },
+        "_row_num": 180
+      },
+      {
+        "clause": "if",
+        "condition": "data('PARTPERTO') =='2'",
+        "_row_num": 181
+      },
+      {
+        "type": "text",
+        "name": "PARTPERPORQ",
+        "display": {
+          "prompt": {
+            "text": {
+              "english": "Why not attending closest hospital",
+              "default": "Porque internou aqui?"
+            }
+          }
+        },
+        "_row_num": 182
+      },
+      {
+        "clause": "end if",
+        "_row_num": 183
+      },
+      {
+        "clause": "end screen",
+        "_row_num": 184
+      },
+      {
+        "clause": "end if",
+        "_row_num": 185
+      },
+      {
+        "clause": "begin screen",
+        "_row_num": 186
       },
       {
         "type": "select_one",
@@ -1136,20 +1290,20 @@
             }
           }
         },
-        "_row_num": 165
+        "_row_num": 187
       },
       {
         "clause": "end screen",
-        "_row_num": 166
+        "_row_num": 188
       },
       {
         "clause": "if",
         "condition": "data('LITTERSIZE') >='1'",
-        "_row_num": 167
+        "_row_num": 189
       },
       {
         "clause": "begin screen",
-        "_row_num": 168
+        "_row_num": 190
       },
       {
         "type": "note",
@@ -1161,25 +1315,25 @@
             }
           }
         },
-        "_row_num": 169
+        "_row_num": 191
       },
       {
         "type": "linked_table",
         "values_list": "child",
-        "_row_num": 170
+        "_row_num": 192
       },
       {
         "clause": "end screen",
-        "_row_num": 171
+        "_row_num": 193
       },
       {
         "clause": "if",
         "condition": "data('LITTERSIZE') >='2'",
-        "_row_num": 172
+        "_row_num": 194
       },
       {
         "clause": "begin screen",
-        "_row_num": 173
+        "_row_num": 195
       },
       {
         "type": "note",
@@ -1191,25 +1345,25 @@
             }
           }
         },
-        "_row_num": 174
+        "_row_num": 196
       },
       {
         "type": "linked_table",
         "values_list": "child",
-        "_row_num": 175
+        "_row_num": 197
       },
       {
         "clause": "end screen",
-        "_row_num": 176
+        "_row_num": 198
       },
       {
         "clause": "if",
         "condition": "data('LITTERSIZE') >='3'",
-        "_row_num": 177
+        "_row_num": 199
       },
       {
         "clause": "begin screen",
-        "_row_num": 178
+        "_row_num": 200
       },
       {
         "type": "note",
@@ -1221,25 +1375,25 @@
             }
           }
         },
-        "_row_num": 179
+        "_row_num": 201
       },
       {
         "type": "linked_table",
         "values_list": "child",
-        "_row_num": 180
+        "_row_num": 202
       },
       {
         "clause": "end screen",
-        "_row_num": 181
+        "_row_num": 203
       },
       {
         "clause": "if",
         "condition": "data('LITTERSIZE') >='4'",
-        "_row_num": 182
+        "_row_num": 204
       },
       {
         "clause": "begin screen",
-        "_row_num": 183
+        "_row_num": 205
       },
       {
         "type": "note",
@@ -1251,36 +1405,36 @@
             }
           }
         },
-        "_row_num": 184
+        "_row_num": 206
       },
       {
         "type": "linked_table",
         "values_list": "child",
-        "_row_num": 185
+        "_row_num": 207
       },
       {
         "clause": "end screen",
-        "_row_num": 186
+        "_row_num": 208
       },
       {
         "clause": "end if",
-        "_row_num": 187
+        "_row_num": 209
       },
       {
         "clause": "end if",
-        "_row_num": 188
+        "_row_num": 210
       },
       {
         "clause": "end if",
-        "_row_num": 189
+        "_row_num": 211
       },
       {
         "clause": "end if",
-        "_row_num": 190
+        "_row_num": 212
       },
       {
         "clause": "end if",
-        "_row_num": 191
+        "_row_num": 213
       }
     ],
     "queries": [
@@ -1317,6 +1471,20 @@
         "newRowInitialElementKeyToValueMap": "{PREGID: opendatakit.getCurrentInstanceId(), REGID: data('REGID'), REGDIA: data('PREGDIA'), OUTDATE: data('OUTDATE'), ASSISTPART: data('ASSISTPART'), CART_ANC: data('CART_ANC'), CDG_C: data('CDG_C'), CDG_M: data('CDG_M'), FEDEP_C: data('FEDEP_C'), FEDEP_M: data('FEDEP_M'), GRCONS: data('GRCONS'), GRINFOS: data('GRINFOS'), GRVAC: data('GRVAC'), LITTERSIZE: data('LITTERSIZE'), LOCPAR: data('LOCPAR'), QVFANSI_C: data('QVFANSI_C'), QVFANSI_M: data('QVFANSI_M'), TABPART: data('TABPART'), VACTTHI: data('VACTTHI')}",
         "openRowInitialElementKeyToValueMap": "{}",
         "_row_num": 5
+      },
+      {
+        "query_name": "reg_csv",
+        "query_type": "csv",
+        "uri": "\"HEALTHCENTRES.csv\"",
+        "callback": "_.chain(context)\n.uniq(function(x) {\nreturn x.reg\n})\n.map(function(place){\nreturn {\ndata_value:place.reg,\ndisplay:{title: {text: place.regname} } };\n}).value()",
+        "_row_num": 7
+      },
+      {
+        "query_name": "hc_csv",
+        "query_type": "csv",
+        "uri": "\"HEALTHCENTRES.csv\"",
+        "callback": "_.map(context, function(place){place.data_value = place.cscode;\nplace.display = {title: {text: place.csname} };\nreturn place;\n})",
+        "_row_num": 8
       }
     ],
     "prompt_types": [
@@ -1659,8 +1827,8 @@
         "display": {
           "title": {
             "text": {
-              "english": "Mother",
-              "default": "Mãe"
+              "english": "Father",
+              "default": "Pai"
             }
           }
         },
@@ -1672,8 +1840,8 @@
         "display": {
           "title": {
             "text": {
-              "english": "Father",
-              "default": "Pai"
+              "english": "Mothers mother",
+              "default": "Avó"
             }
           }
         },
@@ -1685,8 +1853,8 @@
         "display": {
           "title": {
             "text": {
-              "english": "Mothers mother",
-              "default": "Avó"
+              "english": "Other family member",
+              "default": "Outra mebro da familia"
             }
           }
         },
@@ -1698,8 +1866,8 @@
         "display": {
           "title": {
             "text": {
-              "english": "Other family member",
-              "default": "Outra mebro da familia"
+              "english": "Other",
+              "default": "Outra/o"
             }
           }
         },
@@ -1711,25 +1879,12 @@
         "display": {
           "title": {
             "text": {
-              "english": "Other",
-              "default": "Outra/o"
-            }
-          }
-        },
-        "_row_num": 30
-      },
-      {
-        "choice_list_name": "inf2",
-        "data_value": "6",
-        "display": {
-          "title": {
-            "text": {
               "english": "No informant found",
               "default": "Nenhum informador"
             }
           }
         },
-        "_row_num": 31
+        "_row_num": 30
       },
       {
         "choice_list_name": "inf2",
@@ -1742,7 +1897,7 @@
             }
           }
         },
-        "_row_num": 32
+        "_row_num": 31
       },
       {
         "choice_list_name": "inf2",
@@ -1755,7 +1910,7 @@
             }
           }
         },
-        "_row_num": 33
+        "_row_num": 32
       },
       {
         "choice_list_name": "facility",
@@ -1768,7 +1923,7 @@
             }
           }
         },
-        "_row_num": 34
+        "_row_num": 33
       },
       {
         "choice_list_name": "facility",
@@ -1781,7 +1936,7 @@
             }
           }
         },
-        "_row_num": 35
+        "_row_num": 34
       },
       {
         "choice_list_name": "facility",
@@ -1794,7 +1949,7 @@
             }
           }
         },
-        "_row_num": 36
+        "_row_num": 35
       },
       {
         "choice_list_name": "facility",
@@ -1807,7 +1962,7 @@
             }
           }
         },
-        "_row_num": 37
+        "_row_num": 36
       },
       {
         "choice_list_name": "facility",
@@ -1820,6 +1975,19 @@
             }
           }
         },
+        "_row_num": 37
+      },
+      {
+        "choice_list_name": "facility",
+        "data_value": "NS",
+        "display": {
+          "title": {
+            "text": {
+              "english": "Dont know",
+              "default": "Não sabe"
+            }
+          }
+        },
         "_row_num": 38
       },
       {
@@ -1829,7 +1997,7 @@
           "title": {
             "text": {
               "english": "Doctor",
-              "default": "Médico"
+              "default": "Medico"
             }
           }
         },
@@ -1915,7 +2083,7 @@
       },
       {
         "choice_list_name": "healthstaff",
-        "data_value": "no",
+        "data_value": "NO",
         "display": {
           "title": {
             "text": {
@@ -1925,6 +2093,19 @@
           }
         },
         "_row_num": 46
+      },
+      {
+        "choice_list_name": "healthstaff",
+        "data_value": "NS",
+        "display": {
+          "title": {
+            "text": {
+              "english": "Dont know",
+              "default": "Não sabe"
+            }
+          }
+        },
+        "_row_num": 47
       },
       {
         "choice_list_name": "muac",
@@ -1937,7 +2118,7 @@
             }
           }
         },
-        "_row_num": 47
+        "_row_num": 48
       },
       {
         "choice_list_name": "dontknow",
@@ -1950,7 +2131,33 @@
             }
           }
         },
-        "_row_num": 48
+        "_row_num": 49
+      },
+      {
+        "choice_list_name": "dontknowfac",
+        "data_value": "8888",
+        "display": {
+          "title": {
+            "text": {
+              "english": "Other place",
+              "default": "Outro lugar"
+            }
+          }
+        },
+        "_row_num": 50
+      },
+      {
+        "choice_list_name": "dontknowfac",
+        "data_value": "9999",
+        "display": {
+          "title": {
+            "text": {
+              "english": "Don't know",
+              "default": "Não sabe"
+            }
+          }
+        },
+        "_row_num": 51
       }
     ],
     "model": [
@@ -2241,6 +2448,42 @@
         "type": "select_multiple",
         "isSessionVariable": true,
         "_row_num": 52
+      },
+      {
+        "name": "PARTONDE",
+        "type": "select_one_dropdown",
+        "isSessionVariable": false,
+        "_row_num": 54
+      },
+      {
+        "name": "PARTONDENS",
+        "type": "text",
+        "isSessionVariable": false,
+        "_row_num": 55
+      },
+      {
+        "name": "PARTPERPORQ",
+        "type": "text",
+        "isSessionVariable": false,
+        "_row_num": 56
+      },
+      {
+        "name": "PARTPERTO",
+        "type": "select_one",
+        "isSessionVariable": false,
+        "_row_num": 57
+      },
+      {
+        "name": "regpar",
+        "type": "select_one_dropdown",
+        "isSessionVariable": true,
+        "_row_num": 58
+      },
+      {
+        "name": "partondens",
+        "type": "select_multiple",
+        "isSessionVariable": true,
+        "_row_num": 59
       }
     ]
   },
@@ -2702,8 +2945,8 @@
           "display": {
             "title": {
               "text": {
-                "english": "Mother",
-                "default": "Mãe"
+                "english": "Father",
+                "default": "Pai"
               }
             }
           },
@@ -2715,8 +2958,8 @@
           "display": {
             "title": {
               "text": {
-                "english": "Father",
-                "default": "Pai"
+                "english": "Mothers mother",
+                "default": "Avó"
               }
             }
           },
@@ -2728,8 +2971,8 @@
           "display": {
             "title": {
               "text": {
-                "english": "Mothers mother",
-                "default": "Avó"
+                "english": "Other family member",
+                "default": "Outra mebro da familia"
               }
             }
           },
@@ -2741,8 +2984,8 @@
           "display": {
             "title": {
               "text": {
-                "english": "Other family member",
-                "default": "Outra mebro da familia"
+                "english": "Other",
+                "default": "Outra/o"
               }
             }
           },
@@ -2754,25 +2997,12 @@
           "display": {
             "title": {
               "text": {
-                "english": "Other",
-                "default": "Outra/o"
-              }
-            }
-          },
-          "_row_num": 30
-        },
-        {
-          "choice_list_name": "inf2",
-          "data_value": "6",
-          "display": {
-            "title": {
-              "text": {
                 "english": "No informant found",
                 "default": "Nenhum informador"
               }
             }
           },
-          "_row_num": 31
+          "_row_num": 30
         },
         {
           "choice_list_name": "inf2",
@@ -2785,7 +3015,7 @@
               }
             }
           },
-          "_row_num": 32
+          "_row_num": 31
         },
         {
           "choice_list_name": "inf2",
@@ -2798,7 +3028,7 @@
               }
             }
           },
-          "_row_num": 33
+          "_row_num": 32
         }
       ],
       "facility": [
@@ -2813,7 +3043,7 @@
               }
             }
           },
-          "_row_num": 34
+          "_row_num": 33
         },
         {
           "choice_list_name": "facility",
@@ -2826,7 +3056,7 @@
               }
             }
           },
-          "_row_num": 35
+          "_row_num": 34
         },
         {
           "choice_list_name": "facility",
@@ -2839,7 +3069,7 @@
               }
             }
           },
-          "_row_num": 36
+          "_row_num": 35
         },
         {
           "choice_list_name": "facility",
@@ -2852,7 +3082,7 @@
               }
             }
           },
-          "_row_num": 37
+          "_row_num": 36
         },
         {
           "choice_list_name": "facility",
@@ -2862,6 +3092,19 @@
               "text": {
                 "english": "Elsewhere",
                 "default": "Outro lugar"
+              }
+            }
+          },
+          "_row_num": 37
+        },
+        {
+          "choice_list_name": "facility",
+          "data_value": "NS",
+          "display": {
+            "title": {
+              "text": {
+                "english": "Dont know",
+                "default": "Não sabe"
               }
             }
           },
@@ -2876,7 +3119,7 @@
             "title": {
               "text": {
                 "english": "Doctor",
-                "default": "Médico"
+                "default": "Medico"
               }
             }
           },
@@ -2962,7 +3205,7 @@
         },
         {
           "choice_list_name": "healthstaff",
-          "data_value": "no",
+          "data_value": "NO",
           "display": {
             "title": {
               "text": {
@@ -2972,6 +3215,19 @@
             }
           },
           "_row_num": 46
+        },
+        {
+          "choice_list_name": "healthstaff",
+          "data_value": "NS",
+          "display": {
+            "title": {
+              "text": {
+                "english": "Dont know",
+                "default": "Não sabe"
+              }
+            }
+          },
+          "_row_num": 47
         }
       ],
       "muac": [
@@ -2986,7 +3242,7 @@
               }
             }
           },
-          "_row_num": 47
+          "_row_num": 48
         }
       ],
       "dontknow": [
@@ -3001,7 +3257,35 @@
               }
             }
           },
-          "_row_num": 48
+          "_row_num": 49
+        }
+      ],
+      "dontknowfac": [
+        {
+          "choice_list_name": "dontknowfac",
+          "data_value": "8888",
+          "display": {
+            "title": {
+              "text": {
+                "english": "Other place",
+                "default": "Outro lugar"
+              }
+            }
+          },
+          "_row_num": 50
+        },
+        {
+          "choice_list_name": "dontknowfac",
+          "data_value": "9999",
+          "display": {
+            "title": {
+              "text": {
+                "english": "Don't know",
+                "default": "Não sabe"
+              }
+            }
+          },
+          "_row_num": 51
         }
       ]
     },
@@ -3042,6 +3326,20 @@
         "newRowInitialElementKeyToValueMap": "{PREGID: opendatakit.getCurrentInstanceId(), REGID: data('REGID'), REGDIA: data('PREGDIA'), OUTDATE: data('OUTDATE'), ASSISTPART: data('ASSISTPART'), CART_ANC: data('CART_ANC'), CDG_C: data('CDG_C'), CDG_M: data('CDG_M'), FEDEP_C: data('FEDEP_C'), FEDEP_M: data('FEDEP_M'), GRCONS: data('GRCONS'), GRINFOS: data('GRINFOS'), GRVAC: data('GRVAC'), LITTERSIZE: data('LITTERSIZE'), LOCPAR: data('LOCPAR'), QVFANSI_C: data('QVFANSI_C'), QVFANSI_M: data('QVFANSI_M'), TABPART: data('TABPART'), VACTTHI: data('VACTTHI')}",
         "openRowInitialElementKeyToValueMap": "{}",
         "_row_num": 5
+      },
+      "reg_csv": {
+        "query_name": "reg_csv",
+        "query_type": "csv",
+        "uri": "\"HEALTHCENTRES.csv\"",
+        "callback": "_.chain(context)\n.uniq(function(x) {\nreturn x.reg\n})\n.map(function(place){\nreturn {\ndata_value:place.reg,\ndisplay:{title: {text: place.regname} } };\n}).value()",
+        "_row_num": 7
+      },
+      "hc_csv": {
+        "query_name": "hc_csv",
+        "query_type": "csv",
+        "uri": "\"HEALTHCENTRES.csv\"",
+        "callback": "_.map(context, function(place){place.data_value = place.cscode;\nplace.display = {title: {text: place.csname} };\nreturn place;\n})",
+        "_row_num": 8
       }
     },
     "calculates": {},
@@ -3066,7 +3364,7 @@
         "valuesList": "healthstaff",
         "_defn": [
           {
-            "_row_num": 165,
+            "_row_num": 187,
             "section_name": "survey"
           },
           {
@@ -3823,6 +4121,104 @@
         ],
         "isSessionVariable": true,
         "elementKey": "qvfansi_mns"
+      },
+      "PARTONDE": {
+        "type": "string",
+        "valuesList": "hc_csv",
+        "_defn": [
+          {
+            "_row_num": 168,
+            "section_name": "survey"
+          },
+          {
+            "_row_num": 54,
+            "section_name": "model"
+          }
+        ],
+        "isSessionVariable": false,
+        "elementKey": "PARTONDE"
+      },
+      "PARTONDENS": {
+        "type": "string",
+        "_defn": [
+          {
+            "_row_num": 176,
+            "section_name": "survey"
+          },
+          {
+            "_row_num": 55,
+            "section_name": "model"
+          }
+        ],
+        "isSessionVariable": false,
+        "elementKey": "PARTONDENS"
+      },
+      "PARTPERPORQ": {
+        "type": "string",
+        "_defn": [
+          {
+            "_row_num": 182,
+            "section_name": "survey"
+          },
+          {
+            "_row_num": 56,
+            "section_name": "model"
+          }
+        ],
+        "isSessionVariable": false,
+        "elementKey": "PARTPERPORQ"
+      },
+      "PARTPERTO": {
+        "type": "string",
+        "valuesList": "YesNoU",
+        "_defn": [
+          {
+            "_row_num": 180,
+            "section_name": "survey"
+          },
+          {
+            "_row_num": 57,
+            "section_name": "model"
+          }
+        ],
+        "isSessionVariable": false,
+        "elementKey": "PARTPERTO"
+      },
+      "regpar": {
+        "type": "string",
+        "valuesList": "reg_csv",
+        "_defn": [
+          {
+            "_row_num": 167,
+            "section_name": "survey"
+          },
+          {
+            "_row_num": 58,
+            "section_name": "model"
+          }
+        ],
+        "isSessionVariable": true,
+        "elementKey": "regpar"
+      },
+      "partondens": {
+        "type": "array",
+        "items": {
+          "type": "string",
+          "elementKey": "partondens_items"
+        },
+        "valuesList": "dontknowfac",
+        "_defn": [
+          {
+            "_row_num": 169,
+            "section_name": "survey"
+          },
+          {
+            "_row_num": 59,
+            "section_name": "model"
+          }
+        ],
+        "isSessionVariable": true,
+        "elementKey": "partondens"
       }
     },
     "section_names": [
@@ -4650,6 +5046,128 @@
             "promptIdx": 49
           },
           {
+            "type": "note",
+            "display": {
+              "prompt": {
+                "text": {
+                  "english": "Place of hospital / health center",
+                  "default": "Local do hospital / centro de saude"
+                }
+              }
+            },
+            "_row_num": 166,
+            "__rowNum__": 165,
+            "_token_type": "prompt",
+            "_type": "note",
+            "_branch_label_enclosing_screen": "survey/_screen165",
+            "promptIdx": 50
+          },
+          {
+            "type": "select_one_dropdown",
+            "values_list": "reg_csv",
+            "name": "regpar",
+            "display": {
+              "prompt": {
+                "text": {
+                  "english": "Region: {{data.regpar}}",
+                  "default": "Região: {{data.regpar}}"
+                }
+              }
+            },
+            "_row_num": 167,
+            "__rowNum__": 166,
+            "_token_type": "prompt",
+            "_type": "select_one_dropdown",
+            "_branch_label_enclosing_screen": "survey/_screen165",
+            "promptIdx": 51
+          },
+          {
+            "type": "select_one_dropdown",
+            "values_list": "hc_csv",
+            "name": "PARTONDE",
+            "display": {
+              "prompt": {
+                "text": {
+                  "english": "Health center / hospital: {{data.PARTONDE}}",
+                  "default": "Centro de saúde / hospital: {{data.PARTONDE}}"
+                }
+              }
+            },
+            "choice_filter": "choice_item.reg === data('regpar')",
+            "_row_num": 168,
+            "__rowNum__": 167,
+            "_token_type": "prompt",
+            "_type": "select_one_dropdown",
+            "_branch_label_enclosing_screen": "survey/_screen165",
+            "promptIdx": 52
+          },
+          {
+            "type": "select_multiple",
+            "values_list": "dontknowfac",
+            "name": "partondens",
+            "_row_num": 169,
+            "__rowNum__": 168,
+            "_token_type": "prompt",
+            "_type": "select_multiple",
+            "_branch_label_enclosing_screen": "survey/_screen165",
+            "promptIdx": 53
+          },
+          {
+            "type": "text",
+            "name": "PARTONDENS",
+            "display": {
+              "prompt": {
+                "text": {
+                  "english": "Place of hospitalisation",
+                  "default": "Onde internou"
+                }
+              }
+            },
+            "_row_num": 176,
+            "__rowNum__": 175,
+            "_token_type": "prompt",
+            "_type": "text",
+            "_branch_label_enclosing_screen": "survey/_screen175",
+            "promptIdx": 54
+          },
+          {
+            "type": "select_one",
+            "values_list": "YesNoU",
+            "name": "PARTPERTO",
+            "display": {
+              "prompt": {
+                "text": {
+                  "english": "Closest hospital?",
+                  "default": "Este é o hospital mais perto?"
+                }
+              }
+            },
+            "_row_num": 180,
+            "__rowNum__": 179,
+            "_token_type": "prompt",
+            "_type": "select_one",
+            "_branch_label_enclosing_screen": "survey/_screen179",
+            "promptIdx": 55
+          },
+          {
+            "type": "text",
+            "name": "PARTPERPORQ",
+            "display": {
+              "prompt": {
+                "text": {
+                  "english": "Why not attending closest hospital",
+                  "default": "Porque internou aqui?"
+                }
+              }
+            },
+            "_row_num": 182,
+            "__rowNum__": 181,
+            "_token_type": "prompt",
+            "_type": "text",
+            "_branch_label_enclosing_screen": "survey/_screen179",
+            "promptIdx": 56
+          },
+          {
             "type": "select_one",
             "values_list": "healthstaff",
             "name": "ASSISTPART",
@@ -4661,12 +5179,12 @@
                 }
               }
             },
-            "_row_num": 165,
-            "__rowNum__": 164,
+            "_row_num": 187,
+            "__rowNum__": 186,
             "_token_type": "prompt",
             "_type": "select_one",
-            "_branch_label_enclosing_screen": "survey/_screen164",
-            "promptIdx": 50
+            "_branch_label_enclosing_screen": "survey/_screen186",
+            "promptIdx": 57
           },
           {
             "type": "note",
@@ -4678,22 +5196,22 @@
                 }
               }
             },
-            "_row_num": 169,
-            "__rowNum__": 168,
+            "_row_num": 191,
+            "__rowNum__": 190,
             "_token_type": "prompt",
             "_type": "note",
-            "_branch_label_enclosing_screen": "survey/_screen168",
-            "promptIdx": 51
+            "_branch_label_enclosing_screen": "survey/_screen190",
+            "promptIdx": 58
           },
           {
             "type": "linked_table",
             "values_list": "child",
-            "_row_num": 170,
-            "__rowNum__": 169,
+            "_row_num": 192,
+            "__rowNum__": 191,
             "_token_type": "prompt",
             "_type": "linked_table",
-            "_branch_label_enclosing_screen": "survey/_screen168",
-            "promptIdx": 52
+            "_branch_label_enclosing_screen": "survey/_screen190",
+            "promptIdx": 59
           },
           {
             "type": "note",
@@ -4705,22 +5223,22 @@
                 }
               }
             },
-            "_row_num": 174,
-            "__rowNum__": 173,
+            "_row_num": 196,
+            "__rowNum__": 195,
             "_token_type": "prompt",
             "_type": "note",
-            "_branch_label_enclosing_screen": "survey/_screen173",
-            "promptIdx": 53
+            "_branch_label_enclosing_screen": "survey/_screen195",
+            "promptIdx": 60
           },
           {
             "type": "linked_table",
             "values_list": "child",
-            "_row_num": 175,
-            "__rowNum__": 174,
+            "_row_num": 197,
+            "__rowNum__": 196,
             "_token_type": "prompt",
             "_type": "linked_table",
-            "_branch_label_enclosing_screen": "survey/_screen173",
-            "promptIdx": 54
+            "_branch_label_enclosing_screen": "survey/_screen195",
+            "promptIdx": 61
           },
           {
             "type": "note",
@@ -4732,22 +5250,22 @@
                 }
               }
             },
-            "_row_num": 179,
-            "__rowNum__": 178,
+            "_row_num": 201,
+            "__rowNum__": 200,
             "_token_type": "prompt",
             "_type": "note",
-            "_branch_label_enclosing_screen": "survey/_screen178",
-            "promptIdx": 55
+            "_branch_label_enclosing_screen": "survey/_screen200",
+            "promptIdx": 62
           },
           {
             "type": "linked_table",
             "values_list": "child",
-            "_row_num": 180,
-            "__rowNum__": 179,
+            "_row_num": 202,
+            "__rowNum__": 201,
             "_token_type": "prompt",
             "_type": "linked_table",
-            "_branch_label_enclosing_screen": "survey/_screen178",
-            "promptIdx": 56
+            "_branch_label_enclosing_screen": "survey/_screen200",
+            "promptIdx": 63
           },
           {
             "type": "note",
@@ -4759,30 +5277,30 @@
                 }
               }
             },
-            "_row_num": 184,
-            "__rowNum__": 183,
+            "_row_num": 206,
+            "__rowNum__": 205,
             "_token_type": "prompt",
             "_type": "note",
-            "_branch_label_enclosing_screen": "survey/_screen183",
-            "promptIdx": 57
+            "_branch_label_enclosing_screen": "survey/_screen205",
+            "promptIdx": 64
           },
           {
             "type": "linked_table",
             "values_list": "child",
-            "_row_num": 185,
-            "__rowNum__": 184,
+            "_row_num": 207,
+            "__rowNum__": 206,
             "_token_type": "prompt",
             "_type": "linked_table",
-            "_branch_label_enclosing_screen": "survey/_screen183",
-            "promptIdx": 58
+            "_branch_label_enclosing_screen": "survey/_screen205",
+            "promptIdx": 65
           },
           {
             "_token_type": "prompt",
             "type": "contents",
             "_type": "contents",
-            "_row_num": 192,
-            "_branch_label_enclosing_screen": "survey/_screen192",
-            "promptIdx": 59
+            "_row_num": 214,
+            "_branch_label_enclosing_screen": "survey/_screen214",
+            "promptIdx": 66
           }
         ],
         "validation_tag_map": {
@@ -5047,8 +5565,8 @@
           {
             "clause": "end if",
             "_token_type": "goto_label",
-            "_branch_label": "_else191",
-            "_row_num": 191,
+            "_branch_label": "_else213",
+            "_row_num": 213,
             "operationIdx": 24
           },
           {
@@ -5280,194 +5798,282 @@
             "operationIdx": 43
           },
           {
-            "clause": "begin screen",
+            "clause": "if",
+            "condition": "data('LOCPAR') == 'HO' || data('LOCPAR') == 'CS' || data('LOCPAR') == 'US'",
             "_row_num": 164,
             "__rowNum__": 163,
-            "_token_type": "begin_screen",
-            "_end_screen_clause": {
-              "clause": "end screen",
-              "_row_num": 166,
-              "__rowNum__": 165,
-              "_token_type": "end_screen"
-            },
-            "_screen_block": "function() {var activePromptIndicies = [];\nactivePromptIndicies.push(50);\n\nreturn activePromptIndicies;\n}\n",
+            "_token_type": "goto_label",
+            "_branch_label": "_then164",
             "operationIdx": 44
           },
           {
-            "clause": "if",
-            "condition": "data('LITTERSIZE') >='1'",
-            "_row_num": 167,
-            "__rowNum__": 166,
+            "clause": "end if",
             "_token_type": "goto_label",
-            "_branch_label": "_then167",
+            "_branch_label": "_else185",
+            "_row_num": 185,
             "operationIdx": 45
           },
           {
-            "clause": "end if",
-            "_token_type": "goto_label",
-            "_branch_label": "_else190",
-            "_row_num": 190,
+            "clause": "begin screen",
+            "_row_num": 165,
+            "__rowNum__": 164,
+            "_token_type": "begin_screen",
+            "_end_screen_clause": {
+              "clause": "end screen",
+              "_row_num": 173,
+              "__rowNum__": 172,
+              "_token_type": "end_screen"
+            },
+            "_screen_block": "function() {var activePromptIndicies = [];\nactivePromptIndicies.push(50);\nactivePromptIndicies.push(51);\nactivePromptIndicies.push(52);\nactivePromptIndicies.push(53);\nif (data('partondens') != null) {\nassign('PARTONDE', data('partondens'));\n}\n\nreturn activePromptIndicies;\n}\n",
             "operationIdx": 46
           },
           {
-            "clause": "begin screen",
-            "_row_num": 168,
-            "__rowNum__": 167,
-            "_token_type": "begin_screen",
-            "_end_screen_clause": {
-              "clause": "end screen",
-              "_row_num": 171,
-              "__rowNum__": 170,
-              "_token_type": "end_screen"
-            },
-            "_screen_block": "function() {var activePromptIndicies = [];\nactivePromptIndicies.push(51);\nactivePromptIndicies.push(52);\n\nreturn activePromptIndicies;\n}\n",
-            "operationIdx": 47
-          },
-          {
             "clause": "if",
-            "condition": "data('LITTERSIZE') >='2'",
-            "_row_num": 172,
-            "__rowNum__": 171,
+            "condition": "data('PARTONDE') == '8888'",
+            "_row_num": 174,
+            "__rowNum__": 173,
             "_token_type": "goto_label",
-            "_branch_label": "_then172",
-            "operationIdx": 48
+            "_branch_label": "_then174",
+            "operationIdx": 47
           },
           {
             "clause": "end if",
             "_token_type": "goto_label",
-            "_branch_label": "_else189",
-            "_row_num": 189,
-            "operationIdx": 49
+            "_branch_label": "_else178",
+            "_row_num": 178,
+            "operationIdx": 48
           },
           {
             "clause": "begin screen",
-            "_row_num": 173,
-            "__rowNum__": 172,
+            "_row_num": 175,
+            "__rowNum__": 174,
             "_token_type": "begin_screen",
             "_end_screen_clause": {
               "clause": "end screen",
-              "_row_num": 176,
-              "__rowNum__": 175,
+              "_row_num": 177,
+              "__rowNum__": 176,
               "_token_type": "end_screen"
             },
-            "_screen_block": "function() {var activePromptIndicies = [];\nactivePromptIndicies.push(53);\nactivePromptIndicies.push(54);\n\nreturn activePromptIndicies;\n}\n",
+            "_screen_block": "function() {var activePromptIndicies = [];\nactivePromptIndicies.push(54);\n\nreturn activePromptIndicies;\n}\n",
+            "operationIdx": 49
+          },
+          {
+            "clause": "end if",
+            "_token_type": "goto_label",
+            "_branch_label": "_endif178",
+            "_row_num": 178,
             "operationIdx": 50
           },
           {
-            "clause": "if",
-            "condition": "data('LITTERSIZE') >='3'",
-            "_row_num": 177,
-            "__rowNum__": 176,
-            "_token_type": "goto_label",
-            "_branch_label": "_then177",
+            "clause": "begin screen",
+            "_row_num": 179,
+            "__rowNum__": 178,
+            "_token_type": "begin_screen",
+            "_end_screen_clause": {
+              "clause": "end screen",
+              "_row_num": 184,
+              "__rowNum__": 183,
+              "_token_type": "end_screen"
+            },
+            "_screen_block": "function() {var activePromptIndicies = [];\nactivePromptIndicies.push(55);\nif (data('PARTPERTO') =='2') {\nactivePromptIndicies.push(56);\n}\n\nreturn activePromptIndicies;\n}\n",
             "operationIdx": 51
           },
           {
             "clause": "end if",
             "_token_type": "goto_label",
-            "_branch_label": "_else188",
-            "_row_num": 188,
+            "_branch_label": "_endif185",
+            "_row_num": 185,
             "operationIdx": 52
           },
           {
             "clause": "begin screen",
-            "_row_num": 178,
-            "__rowNum__": 177,
+            "_row_num": 186,
+            "__rowNum__": 185,
             "_token_type": "begin_screen",
             "_end_screen_clause": {
               "clause": "end screen",
-              "_row_num": 181,
-              "__rowNum__": 180,
+              "_row_num": 188,
+              "__rowNum__": 187,
               "_token_type": "end_screen"
             },
-            "_screen_block": "function() {var activePromptIndicies = [];\nactivePromptIndicies.push(55);\nactivePromptIndicies.push(56);\n\nreturn activePromptIndicies;\n}\n",
+            "_screen_block": "function() {var activePromptIndicies = [];\nactivePromptIndicies.push(57);\n\nreturn activePromptIndicies;\n}\n",
             "operationIdx": 53
           },
           {
             "clause": "if",
-            "condition": "data('LITTERSIZE') >='4'",
-            "_row_num": 182,
-            "__rowNum__": 181,
+            "condition": "data('LITTERSIZE') >='1'",
+            "_row_num": 189,
+            "__rowNum__": 188,
             "_token_type": "goto_label",
-            "_branch_label": "_then182",
+            "_branch_label": "_then189",
             "operationIdx": 54
           },
           {
             "clause": "end if",
             "_token_type": "goto_label",
-            "_branch_label": "_else187",
-            "_row_num": 187,
+            "_branch_label": "_else212",
+            "_row_num": 212,
             "operationIdx": 55
           },
           {
             "clause": "begin screen",
-            "_row_num": 183,
-            "__rowNum__": 182,
+            "_row_num": 190,
+            "__rowNum__": 189,
             "_token_type": "begin_screen",
             "_end_screen_clause": {
               "clause": "end screen",
-              "_row_num": 186,
-              "__rowNum__": 185,
+              "_row_num": 193,
+              "__rowNum__": 192,
               "_token_type": "end_screen"
             },
-            "_screen_block": "function() {var activePromptIndicies = [];\nactivePromptIndicies.push(57);\nactivePromptIndicies.push(58);\n\nreturn activePromptIndicies;\n}\n",
+            "_screen_block": "function() {var activePromptIndicies = [];\nactivePromptIndicies.push(58);\nactivePromptIndicies.push(59);\n\nreturn activePromptIndicies;\n}\n",
             "operationIdx": 56
           },
           {
-            "clause": "end if",
+            "clause": "if",
+            "condition": "data('LITTERSIZE') >='2'",
+            "_row_num": 194,
+            "__rowNum__": 193,
             "_token_type": "goto_label",
-            "_branch_label": "_endif187",
-            "_row_num": 187,
+            "_branch_label": "_then194",
             "operationIdx": 57
           },
           {
             "clause": "end if",
             "_token_type": "goto_label",
-            "_branch_label": "_endif188",
-            "_row_num": 188,
+            "_branch_label": "_else211",
+            "_row_num": 211,
             "operationIdx": 58
           },
           {
-            "clause": "end if",
-            "_token_type": "goto_label",
-            "_branch_label": "_endif189",
-            "_row_num": 189,
+            "clause": "begin screen",
+            "_row_num": 195,
+            "__rowNum__": 194,
+            "_token_type": "begin_screen",
+            "_end_screen_clause": {
+              "clause": "end screen",
+              "_row_num": 198,
+              "__rowNum__": 197,
+              "_token_type": "end_screen"
+            },
+            "_screen_block": "function() {var activePromptIndicies = [];\nactivePromptIndicies.push(60);\nactivePromptIndicies.push(61);\n\nreturn activePromptIndicies;\n}\n",
             "operationIdx": 59
           },
           {
-            "clause": "end if",
+            "clause": "if",
+            "condition": "data('LITTERSIZE') >='3'",
+            "_row_num": 199,
+            "__rowNum__": 198,
             "_token_type": "goto_label",
-            "_branch_label": "_endif190",
-            "_row_num": 190,
+            "_branch_label": "_then199",
             "operationIdx": 60
           },
           {
             "clause": "end if",
             "_token_type": "goto_label",
-            "_branch_label": "_endif191",
-            "_row_num": 191,
+            "_branch_label": "_else210",
+            "_row_num": 210,
             "operationIdx": 61
+          },
+          {
+            "clause": "begin screen",
+            "_row_num": 200,
+            "__rowNum__": 199,
+            "_token_type": "begin_screen",
+            "_end_screen_clause": {
+              "clause": "end screen",
+              "_row_num": 203,
+              "__rowNum__": 202,
+              "_token_type": "end_screen"
+            },
+            "_screen_block": "function() {var activePromptIndicies = [];\nactivePromptIndicies.push(62);\nactivePromptIndicies.push(63);\n\nreturn activePromptIndicies;\n}\n",
+            "operationIdx": 62
+          },
+          {
+            "clause": "if",
+            "condition": "data('LITTERSIZE') >='4'",
+            "_row_num": 204,
+            "__rowNum__": 203,
+            "_token_type": "goto_label",
+            "_branch_label": "_then204",
+            "operationIdx": 63
+          },
+          {
+            "clause": "end if",
+            "_token_type": "goto_label",
+            "_branch_label": "_else209",
+            "_row_num": 209,
+            "operationIdx": 64
+          },
+          {
+            "clause": "begin screen",
+            "_row_num": 205,
+            "__rowNum__": 204,
+            "_token_type": "begin_screen",
+            "_end_screen_clause": {
+              "clause": "end screen",
+              "_row_num": 208,
+              "__rowNum__": 207,
+              "_token_type": "end_screen"
+            },
+            "_screen_block": "function() {var activePromptIndicies = [];\nactivePromptIndicies.push(64);\nactivePromptIndicies.push(65);\n\nreturn activePromptIndicies;\n}\n",
+            "operationIdx": 65
+          },
+          {
+            "clause": "end if",
+            "_token_type": "goto_label",
+            "_branch_label": "_endif209",
+            "_row_num": 209,
+            "operationIdx": 66
+          },
+          {
+            "clause": "end if",
+            "_token_type": "goto_label",
+            "_branch_label": "_endif210",
+            "_row_num": 210,
+            "operationIdx": 67
+          },
+          {
+            "clause": "end if",
+            "_token_type": "goto_label",
+            "_branch_label": "_endif211",
+            "_row_num": 211,
+            "operationIdx": 68
+          },
+          {
+            "clause": "end if",
+            "_token_type": "goto_label",
+            "_branch_label": "_endif212",
+            "_row_num": 212,
+            "operationIdx": 69
+          },
+          {
+            "clause": "end if",
+            "_token_type": "goto_label",
+            "_branch_label": "_endif213",
+            "_row_num": 213,
+            "operationIdx": 70
           },
           {
             "_token_type": "exit_section",
             "clause": "exit section",
-            "_row_num": 192,
-            "operationIdx": 62
+            "_row_num": 214,
+            "operationIdx": 71
           },
           {
-            "_row_num": 192,
+            "_row_num": 214,
             "_token_type": "begin_screen",
-            "_screen_block": "function() {var activePromptIndicies = [];\nactivePromptIndicies.push(59);\n\nreturn activePromptIndicies;\n}\n",
+            "_screen_block": "function() {var activePromptIndicies = [];\nactivePromptIndicies.push(66);\n\nreturn activePromptIndicies;\n}\n",
             "screen": {
               "hideInBackHistory": true
             },
-            "operationIdx": 63
+            "operationIdx": 72
           },
           {
             "_token_type": "resume",
             "clause": "resume",
-            "_row_num": 192,
-            "operationIdx": 64
+            "_row_num": 214,
+            "operationIdx": 73
           }
         ],
         "branch_label_map": {
@@ -5514,27 +6120,37 @@
           "_screen147": 41,
           "_screen158": 42,
           "_screen161": 43,
-          "_screen164": 44,
-          "_then167": 47,
-          "_screen168": 47,
-          "_then172": 50,
-          "_screen173": 50,
-          "_then177": 53,
-          "_screen178": 53,
-          "_then182": 56,
-          "_screen183": 56,
-          "_else187": 58,
-          "_endif187": 58,
-          "_else188": 59,
-          "_endif188": 59,
-          "_else189": 60,
-          "_endif189": 60,
-          "_else190": 61,
-          "_endif190": 61,
-          "_else191": 62,
-          "_endif191": 62,
-          "_contents": 63,
-          "_screen192": 63
+          "WorldBank": 44,
+          "_then164": 46,
+          "_screen165": 46,
+          "_then174": 49,
+          "_screen175": 49,
+          "_else178": 51,
+          "_endif178": 51,
+          "_screen179": 51,
+          "_else185": 53,
+          "_endif185": 53,
+          "_screen186": 53,
+          "_then189": 56,
+          "_screen190": 56,
+          "_then194": 59,
+          "_screen195": 59,
+          "_then199": 62,
+          "_screen200": 62,
+          "_then204": 65,
+          "_screen205": 65,
+          "_else209": 67,
+          "_endif209": 67,
+          "_else210": 68,
+          "_endif210": 68,
+          "_else211": 69,
+          "_endif211": 69,
+          "_else212": 70,
+          "_endif212": 70,
+          "_else213": 71,
+          "_endif213": 71,
+          "_contents": 72,
+          "_screen214": 72
         }
       },
       "initial": {
@@ -5742,7 +6358,7 @@
         "valuesList": "healthstaff",
         "_defn": [
           {
-            "_row_num": 165,
+            "_row_num": 187,
             "section_name": "survey"
           },
           {
@@ -6713,6 +7329,130 @@
           "qvfansi_mns_items"
         ]
       },
+      "PARTONDE": {
+        "type": "string",
+        "valuesList": "hc_csv",
+        "_defn": [
+          {
+            "_row_num": 168,
+            "section_name": "survey"
+          },
+          {
+            "_row_num": 54,
+            "section_name": "model"
+          }
+        ],
+        "isSessionVariable": false,
+        "elementKey": "PARTONDE",
+        "elementName": "PARTONDE",
+        "elementSet": "data",
+        "elementPath": "PARTONDE"
+      },
+      "PARTONDENS": {
+        "type": "string",
+        "_defn": [
+          {
+            "_row_num": 176,
+            "section_name": "survey"
+          },
+          {
+            "_row_num": 55,
+            "section_name": "model"
+          }
+        ],
+        "isSessionVariable": false,
+        "elementKey": "PARTONDENS",
+        "elementName": "PARTONDENS",
+        "elementSet": "data",
+        "elementPath": "PARTONDENS"
+      },
+      "PARTPERPORQ": {
+        "type": "string",
+        "_defn": [
+          {
+            "_row_num": 182,
+            "section_name": "survey"
+          },
+          {
+            "_row_num": 56,
+            "section_name": "model"
+          }
+        ],
+        "isSessionVariable": false,
+        "elementKey": "PARTPERPORQ",
+        "elementName": "PARTPERPORQ",
+        "elementSet": "data",
+        "elementPath": "PARTPERPORQ"
+      },
+      "PARTPERTO": {
+        "type": "string",
+        "valuesList": "YesNoU",
+        "_defn": [
+          {
+            "_row_num": 180,
+            "section_name": "survey"
+          },
+          {
+            "_row_num": 57,
+            "section_name": "model"
+          }
+        ],
+        "isSessionVariable": false,
+        "elementKey": "PARTPERTO",
+        "elementName": "PARTPERTO",
+        "elementSet": "data",
+        "elementPath": "PARTPERTO"
+      },
+      "regpar": {
+        "type": "string",
+        "valuesList": "reg_csv",
+        "_defn": [
+          {
+            "_row_num": 167,
+            "section_name": "survey"
+          },
+          {
+            "_row_num": 58,
+            "section_name": "model"
+          }
+        ],
+        "isSessionVariable": true,
+        "elementKey": "regpar",
+        "elementName": "regpar",
+        "elementSet": "data",
+        "elementPath": "regpar"
+      },
+      "partondens": {
+        "type": "array",
+        "items": {
+          "type": "string",
+          "elementKey": "partondens_items",
+          "elementName": "items",
+          "elementSet": "data",
+          "elementPath": "partondens.items",
+          "isSessionVariable": true,
+          "notUnitOfRetention": true
+        },
+        "valuesList": "dontknowfac",
+        "_defn": [
+          {
+            "_row_num": 169,
+            "section_name": "survey"
+          },
+          {
+            "_row_num": 59,
+            "section_name": "model"
+          }
+        ],
+        "isSessionVariable": true,
+        "elementKey": "partondens",
+        "elementName": "partondens",
+        "elementSet": "data",
+        "elementPath": "partondens",
+        "listChildElementKeys": [
+          "partondens_items"
+        ]
+      },
       "muacbig_items": {
         "type": "string",
         "elementKey": "muacbig_items",
@@ -6791,6 +7531,15 @@
         "elementName": "items",
         "elementSet": "data",
         "elementPath": "qvfansi_mns.items",
+        "isSessionVariable": true,
+        "notUnitOfRetention": true
+      },
+      "partondens_items": {
+        "type": "string",
+        "elementKey": "partondens_items",
+        "elementName": "items",
+        "elementSet": "data",
+        "elementPath": "partondens.items",
         "isSessionVariable": true,
         "notUnitOfRetention": true
       },
@@ -6913,7 +7662,7 @@
         "_aspect": "ASSISTPART",
         "_key": "displayChoicesList",
         "_type": "object",
-        "_value": "[{\"choice_list_name\":\"healthstaff\",\"data_value\":\"DR\",\"display\":{\"title\":{\"text\":{\"english\":\"Doctor\",\"default\":\"Médico\"}}},\"_row_num\":39},{\"choice_list_name\":\"healthstaff\",\"data_value\":\"PA\",\"display\":{\"title\":{\"text\":{\"english\":\"Midwife\",\"default\":\"Parteira\"}}},\"_row_num\":40},{\"choice_list_name\":\"healthstaff\",\"data_value\":\"EN\",\"display\":{\"title\":{\"text\":{\"english\":\"Nurse\",\"default\":\"Enfermeira/o\"}}},\"_row_num\":41},{\"choice_list_name\":\"healthstaff\",\"data_value\":\"MA-N\",\"display\":{\"title\":{\"text\":{\"english\":\"Traditional birth attendant - no course\",\"default\":\"Matrona - sem curso\"}}},\"_row_num\":42},{\"choice_list_name\":\"healthstaff\",\"data_value\":\"MA-F\",\"display\":{\"title\":{\"text\":{\"english\":\"Traditional birth attendant - course\",\"default\":\"Matrona - formado\"}}},\"_row_num\":43},{\"choice_list_name\":\"healthstaff\",\"data_value\":\"FA\",\"display\":{\"title\":{\"text\":{\"english\":\"Family member\",\"default\":\"Familia\"}}},\"_row_num\":44},{\"choice_list_name\":\"healthstaff\",\"data_value\":\"VI\",\"display\":{\"title\":{\"text\":{\"english\":\"Neighbour\",\"default\":\"Vizinho\"}}},\"_row_num\":45},{\"choice_list_name\":\"healthstaff\",\"data_value\":\"no\",\"display\":{\"title\":{\"text\":{\"english\":\"No one\",\"default\":\"Ninguem\"}}},\"_row_num\":46}]"
+        "_value": "[{\"choice_list_name\":\"healthstaff\",\"data_value\":\"DR\",\"display\":{\"title\":{\"text\":{\"english\":\"Doctor\",\"default\":\"Medico\"}}},\"_row_num\":39},{\"choice_list_name\":\"healthstaff\",\"data_value\":\"PA\",\"display\":{\"title\":{\"text\":{\"english\":\"Midwife\",\"default\":\"Parteira\"}}},\"_row_num\":40},{\"choice_list_name\":\"healthstaff\",\"data_value\":\"EN\",\"display\":{\"title\":{\"text\":{\"english\":\"Nurse\",\"default\":\"Enfermeira/o\"}}},\"_row_num\":41},{\"choice_list_name\":\"healthstaff\",\"data_value\":\"MA-N\",\"display\":{\"title\":{\"text\":{\"english\":\"Traditional birth attendant - no course\",\"default\":\"Matrona - sem curso\"}}},\"_row_num\":42},{\"choice_list_name\":\"healthstaff\",\"data_value\":\"MA-F\",\"display\":{\"title\":{\"text\":{\"english\":\"Traditional birth attendant - course\",\"default\":\"Matrona - formado\"}}},\"_row_num\":43},{\"choice_list_name\":\"healthstaff\",\"data_value\":\"FA\",\"display\":{\"title\":{\"text\":{\"english\":\"Family member\",\"default\":\"Familia\"}}},\"_row_num\":44},{\"choice_list_name\":\"healthstaff\",\"data_value\":\"VI\",\"display\":{\"title\":{\"text\":{\"english\":\"Neighbour\",\"default\":\"Vizinho\"}}},\"_row_num\":45},{\"choice_list_name\":\"healthstaff\",\"data_value\":\"NO\",\"display\":{\"title\":{\"text\":{\"english\":\"No one\",\"default\":\"Ninguem\"}}},\"_row_num\":46},{\"choice_list_name\":\"healthstaff\",\"data_value\":\"NS\",\"display\":{\"title\":{\"text\":{\"english\":\"Dont know\",\"default\":\"Não sabe\"}}},\"_row_num\":47}]"
       },
       {
         "_partition": "Column",
@@ -6962,7 +7711,7 @@
         "_aspect": "LOCPAR",
         "_key": "displayChoicesList",
         "_type": "object",
-        "_value": "[{\"choice_list_name\":\"facility\",\"data_value\":\"HO\",\"display\":{\"title\":{\"text\":{\"english\":\"Hospital\",\"default\":\"Hospital\"}}},\"_row_num\":34},{\"choice_list_name\":\"facility\",\"data_value\":\"CS\",\"display\":{\"title\":{\"text\":{\"english\":\"Health Center\",\"default\":\"Centro de Saude\"}}},\"_row_num\":35},{\"choice_list_name\":\"facility\",\"data_value\":\"US\",\"display\":{\"title\":{\"text\":{\"english\":\"Health Unit\",\"default\":\"Unidade de Saude Base\"}}},\"_row_num\":36},{\"choice_list_name\":\"facility\",\"data_value\":\"CA\",\"display\":{\"title\":{\"text\":{\"english\":\"Home\",\"default\":\"Casa\"}}},\"_row_num\":37},{\"choice_list_name\":\"facility\",\"data_value\":\"OU\",\"display\":{\"title\":{\"text\":{\"english\":\"Elsewhere\",\"default\":\"Outro lugar\"}}},\"_row_num\":38}]"
+        "_value": "[{\"choice_list_name\":\"facility\",\"data_value\":\"HO\",\"display\":{\"title\":{\"text\":{\"english\":\"Hospital\",\"default\":\"Hospital\"}}},\"_row_num\":33},{\"choice_list_name\":\"facility\",\"data_value\":\"CS\",\"display\":{\"title\":{\"text\":{\"english\":\"Health Center\",\"default\":\"Centro de Saude\"}}},\"_row_num\":34},{\"choice_list_name\":\"facility\",\"data_value\":\"US\",\"display\":{\"title\":{\"text\":{\"english\":\"Health Unit\",\"default\":\"Unidade de Saude Base\"}}},\"_row_num\":35},{\"choice_list_name\":\"facility\",\"data_value\":\"CA\",\"display\":{\"title\":{\"text\":{\"english\":\"Home\",\"default\":\"Casa\"}}},\"_row_num\":36},{\"choice_list_name\":\"facility\",\"data_value\":\"OU\",\"display\":{\"title\":{\"text\":{\"english\":\"Elsewhere\",\"default\":\"Outro lugar\"}}},\"_row_num\":37},{\"choice_list_name\":\"facility\",\"data_value\":\"NS\",\"display\":{\"title\":{\"text\":{\"english\":\"Dont know\",\"default\":\"Não sabe\"}}},\"_row_num\":38}]"
       },
       {
         "_partition": "Column",
@@ -6970,6 +7719,13 @@
         "_key": "displayChoicesList",
         "_type": "object",
         "_value": "[{\"choice_list_name\":\"pregstat\",\"data_value\":\"1\",\"display\":{\"title\":{\"text\":{\"english\":\"Birth\",\"default\":\"Nado\"}}},\"_row_num\":21},{\"choice_list_name\":\"pregstat\",\"data_value\":\"2\",\"display\":{\"title\":{\"text\":{\"english\":\"Miscarriage\",\"default\":\"Aborto\"}}},\"_row_num\":22},{\"choice_list_name\":\"pregstat\",\"data_value\":\"3\",\"display\":{\"title\":{\"text\":{\"english\":\"Never pregnant\",\"default\":\"Enganou\"}}},\"_row_num\":23}]"
+      },
+      {
+        "_partition": "Column",
+        "_aspect": "PARTPERTO",
+        "_key": "displayChoicesList",
+        "_type": "object",
+        "_value": "[{\"choice_list_name\":\"YesNoU\",\"data_value\":\"1\",\"display\":{\"title\":{\"text\":{\"english\":\"Yes\",\"default\":\"Sim\"}}},\"_row_num\":2},{\"choice_list_name\":\"YesNoU\",\"data_value\":\"2\",\"display\":{\"title\":{\"text\":{\"english\":\"No\",\"default\":\"Não\"}}},\"_row_num\":3},{\"choice_list_name\":\"YesNoU\",\"data_value\":\"3\",\"display\":{\"title\":{\"text\":{\"english\":\"Don't know\",\"default\":\"Não sabe\"}}},\"_row_num\":4}]"
       },
       {
         "_partition": "Column",

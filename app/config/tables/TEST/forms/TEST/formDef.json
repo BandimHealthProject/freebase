@@ -19,12 +19,9 @@
       {
         "setting_name": "survey",
         "display": {
-          "tittle": {
-            "text": "TEST"
-          },
           "title": {
             "text": {
-              "portuguese": "TEST",
+              "english": "TEST",
               "default": "TEST"
             }
           }
@@ -36,20 +33,20 @@
         "display": {
           "locale": {
             "text": {
-              "default": "English",
-              "portuguese": "Inglês"
+              "english": "Portuguese",
+              "default": "Portugues"
             }
           }
         },
         "_row_num": 6
       },
       {
-        "setting_name": "portuguese",
+        "setting_name": "english",
         "display": {
           "locale": {
             "text": {
-              "default": "Portuguese",
-              "portuguese": "Portugues"
+              "english": "English",
+              "default": "Inglês"
             }
           }
         },
@@ -72,13 +69,9 @@
         "display": {
           "prompt": {
             "text": {
-              "default": "ADATEST",
-              "portuguese": "ADATEST"
+              "english": "ADATEST",
+              "default": "ADATEST"
             }
-          },
-          "adate": {
-            "fromYear": 1998,
-            "toYear": 2022
           }
         },
         "_row_num": 3
@@ -89,13 +82,9 @@
         "display": {
           "prompt": {
             "text": {
-              "default": "Testdato 2",
-              "portuguese": "Nammename"
+              "english": "Testdato 2",
+              "default": "Nammename"
             }
-          },
-          "adate": {
-            "fromYear": 1990,
-            "toYear": 1995
           }
         },
         "_row_num": 4
@@ -109,53 +98,60 @@
         "_row_num": 6
       },
       {
-        "clause": "if",
-        "condition": "data('ADA') == null",
+        "type": "note",
+        "display": {
+          "prompt": {
+            "text": {
+              "english": "diff in days: {{calculates.diffdays}}",
+              "default": "diff in days: {{calculates.diffdays}}"
+            }
+          }
+        },
         "_row_num": 7
       },
       {
         "type": "note",
         "display": {
           "prompt": {
-            "text": "{{calculates.test}}"
+            "text": {
+              "english": "diff in years: {{calculates.diffInYears}}",
+              "default": "diff in years: {{calculates.diffInYears}}"
+            }
           }
         },
         "_row_num": 8
       },
       {
-        "clause": "end if",
-        "_row_num": 9
-      },
-      {
-        "clause": "if",
-        "condition": "adate.ageInYears(data('ADA'))>=2",
-        "_row_num": 10
-      },
-      {
         "type": "note",
-        "name": "lblKnown",
         "display": {
           "prompt": {
             "text": {
-              "default": "OVER 2 ÅR",
-              "portuguese": "MAS DE 2 ANOS"
+              "english": "display: {{calculates.display}}",
+              "default": "display: {{calculates.display}}"
             }
           }
         },
+        "_row_num": 9
+      },
+      {
+        "clause": "end screen",
+        "_row_num": 10
+      },
+      {
+        "clause": "begin screen",
         "_row_num": 11
       },
       {
-        "clause": "else",
+        "clause": "if",
+        "condition": "data('ADA') == null",
         "_row_num": 12
       },
       {
         "type": "note",
-        "name": "lblUnknown",
         "display": {
           "prompt": {
             "text": {
-              "default": "IKKE OVER 2 ÅR",
-              "portuguese": "NAO MAS DE 2 ANOS"
+              "english": "{{calculates.test}}"
             }
           }
         },
@@ -167,32 +163,59 @@
       },
       {
         "clause": "if",
-        "condition": "!adate.yearUnknown(data('ADA'))",
+        "condition": "adate.ageInYears(data('ADA'))>=2",
         "_row_num": 15
+      },
+      {
+        "type": "note",
+        "name": "lblKnown",
+        "display": {
+          "prompt": {
+            "text": {
+              "english": "OVER 2 ÅR",
+              "default": "MAS DE 2 ANOS"
+            }
+          }
+        },
+        "_row_num": 16
+      },
+      {
+        "clause": "else",
+        "_row_num": 17
+      },
+      {
+        "type": "note",
+        "name": "lblUnknown",
+        "display": {
+          "prompt": {
+            "text": {
+              "english": "IKKE OVER 2 ÅR",
+              "default": "NAO MAS DE 2 ANOS"
+            }
+          }
+        },
+        "_row_num": 18
+      },
+      {
+        "clause": "end if",
+        "_row_num": 19
+      },
+      {
+        "clause": "if",
+        "condition": "!adate.yearUnknown(data('ADA'))",
+        "_row_num": 20
       },
       {
         "type": "note",
         "name": "lblbla",
         "display": {
           "prompt": {
-            "text": "Alder I hele år: <b>{{calculates.ageInYears}}</b><br/>I måneder: {{calculates.ageInMonths}}<br/>I dage: {{calculates.ageInDays}}<br/>( baseret på {{data.ADA}} )<br/>"
+            "text": {
+              "english": "Alder I hele år: <b>{{calculates.ageInYears}}</b><br/>I måneder: {{calculates.ageInMonths}}<br/>I dage: {{calculates.ageInDays}}<br/>( baseret på {{data.ADA}} )<br/>"
+            }
           }
         },
-        "_row_num": 16
-      },
-      {
-        "type": "note",
-        "name": "lblblabla",
-        "display": {
-          "prompt": {
-            "text": "Differencen var: {{calculates.diffInYears}} år."
-          }
-        },
-        "_row_num": 17
-      },
-      {
-        "clause": "else",
-        "_row_num": 18
+        "_row_num": 21
       },
       {
         "type": "note",
@@ -200,20 +223,36 @@
         "display": {
           "prompt": {
             "text": {
-              "default": "Ingen alder…",
-              "portuguese": "Falsk"
+              "english": "Differencen var: {{calculates.diffInYears}} år."
             }
           }
         },
-        "_row_num": 19
+        "_row_num": 22
+      },
+      {
+        "clause": "else",
+        "_row_num": 23
+      },
+      {
+        "type": "note",
+        "name": "lblblabla",
+        "display": {
+          "prompt": {
+            "text": {
+              "english": "Ingen alder…",
+              "default": "Falsk"
+            }
+          }
+        },
+        "_row_num": 24
       },
       {
         "clause": "end if",
-        "_row_num": 20
+        "_row_num": 25
       },
       {
         "clause": "end screen",
-        "_row_num": 21
+        "_row_num": 26
       }
     ],
     "calculates": [
@@ -241,22 +280,16 @@
         "calculation_name": "test",
         "calculation": "freebase.echo('Fill in the date')",
         "_row_num": 6
-      }
-    ],
-    "queries": [
-      {
-        "query_name": "region_csv",
-        "query_type": "csv",
-        "uri": "\"TABANCAS.csv\"",
-        "callback": "_.chain(context)\n.uniq(function(x) {\nreturn x.REG\n})\n.map(function(place){\nreturn {\ndata_value:place.REG,\ndisplay:{title: {text: place.REGIAO} } };\n}).value()",
-        "_row_num": 2
       },
       {
-        "query_name": "tabanca_csv",
-        "query_type": "csv",
-        "uri": "\"TABANCAS.csv\"",
-        "callback": "_.map(context, function(place){place.data_value = place.TAB;\nplace.display = {title: {text: place.TABANCA} };\nreturn place;\n})",
-        "_row_num": 3
+        "calculation_name": "diffdays",
+        "calculation": "adate.diffInDays(data('ADA'), data('ADA2'))",
+        "_row_num": 7
+      },
+      {
+        "calculation_name": "display",
+        "calculation": "adate.display(data('ADA'))",
+        "_row_num": 8
       }
     ],
     "prompt_types": [
@@ -282,8 +315,8 @@
         "display": {
           "title": {
             "text": {
-              "default": "Yes",
-              "portuguese": "Sim"
+              "english": "Yes",
+              "default": "Sim"
             }
           }
         },
@@ -295,8 +328,8 @@
         "display": {
           "title": {
             "text": {
-              "default": "No",
-              "portuguese": "Não"
+              "english": "No",
+              "default": "Não"
             }
           }
         },
@@ -308,1767 +341,12 @@
         "display": {
           "title": {
             "text": {
-              "default": "Don't know",
-              "portuguese": "Não sabe"
+              "english": "Don't know",
+              "default": "Não sabe"
             }
           }
         },
         "_row_num": 4
-      },
-      {
-        "choice_list_name": "inf1",
-        "data_value": "1",
-        "display": {
-          "title": {
-            "text": {
-              "default": "Self",
-              "portuguese": "Ela/e"
-            }
-          }
-        },
-        "_row_num": 5
-      },
-      {
-        "choice_list_name": "inf1",
-        "data_value": "2",
-        "display": {
-          "title": {
-            "text": {
-              "default": "Other",
-              "portuguese": "Outra/o"
-            }
-          }
-        },
-        "_row_num": 6
-      },
-      {
-        "choice_list_name": "inf2",
-        "data_value": "1",
-        "display": {
-          "title": {
-            "text": {
-              "default": "Mother",
-              "portuguese": "Mãe"
-            }
-          }
-        },
-        "_row_num": 7
-      },
-      {
-        "choice_list_name": "inf2",
-        "data_value": "2",
-        "display": {
-          "title": {
-            "text": {
-              "default": "Father",
-              "portuguese": "Pai"
-            }
-          }
-        },
-        "_row_num": 8
-      },
-      {
-        "choice_list_name": "inf2",
-        "data_value": "3",
-        "display": {
-          "title": {
-            "text": {
-              "default": "Mothers mother",
-              "portuguese": "Avó"
-            }
-          }
-        },
-        "_row_num": 9
-      },
-      {
-        "choice_list_name": "inf2",
-        "data_value": "4",
-        "display": {
-          "title": {
-            "text": {
-              "default": "Other family member",
-              "portuguese": "Outra mebro da familia"
-            }
-          }
-        },
-        "_row_num": 10
-      },
-      {
-        "choice_list_name": "inf2",
-        "data_value": "5",
-        "display": {
-          "title": {
-            "text": {
-              "default": "Other",
-              "portuguese": "Outra/o"
-            }
-          }
-        },
-        "_row_num": 11
-      },
-      {
-        "choice_list_name": "inf2",
-        "data_value": "6",
-        "display": {
-          "title": {
-            "text": {
-              "default": "No informant found",
-              "portuguese": "Nenhum informador"
-            }
-          }
-        },
-        "_row_num": 12
-      },
-      {
-        "choice_list_name": "inf2",
-        "data_value": "88",
-        "display": {
-          "title": {
-            "text": {
-              "default": "Not applicable",
-              "portuguese": "Não aplicável"
-            }
-          }
-        },
-        "_row_num": 13
-      },
-      {
-        "choice_list_name": "inf2",
-        "data_value": "99",
-        "display": {
-          "title": {
-            "text": {
-              "default": "Missing",
-              "portuguese": "Falta informacao"
-            }
-          }
-        },
-        "_row_num": 14
-      },
-      {
-        "choice_list_name": "etn1",
-        "data_value": "BA",
-        "display": {
-          "title": {
-            "text": {
-              "default": "BA - Balanta",
-              "portuguese": "BA - Balanta"
-            }
-          }
-        },
-        "_row_num": 15
-      },
-      {
-        "choice_list_name": "etn1",
-        "data_value": "FU",
-        "display": {
-          "title": {
-            "text": {
-              "default": "FU - Fula",
-              "portuguese": "FU - Fula"
-            }
-          }
-        },
-        "_row_num": 16
-      },
-      {
-        "choice_list_name": "etn1",
-        "data_value": "MC",
-        "display": {
-          "title": {
-            "text": {
-              "default": "MC - Mancanha",
-              "portuguese": "MC - Mancanha"
-            }
-          }
-        },
-        "_row_num": 17
-      },
-      {
-        "choice_list_name": "etn1",
-        "data_value": "MD",
-        "display": {
-          "title": {
-            "text": {
-              "default": "MD - Mandinga",
-              "portuguese": "MD - Mandinga"
-            }
-          }
-        },
-        "_row_num": 18
-      },
-      {
-        "choice_list_name": "etn1",
-        "data_value": "MJ",
-        "display": {
-          "title": {
-            "text": {
-              "default": "MJ - Mandjancu",
-              "portuguese": "MJ - Mandjancu"
-            }
-          }
-        },
-        "_row_num": 19
-      },
-      {
-        "choice_list_name": "etn1",
-        "data_value": "PE",
-        "display": {
-          "title": {
-            "text": {
-              "default": "PE - Pepel",
-              "portuguese": "PE - Pepel"
-            }
-          }
-        },
-        "_row_num": 20
-      },
-      {
-        "choice_list_name": "etn1",
-        "data_value": "MX",
-        "display": {
-          "title": {
-            "text": {
-              "default": "MX - Mixted",
-              "portuguese": "MX - Mixto"
-            }
-          }
-        },
-        "_row_num": 21
-      },
-      {
-        "choice_list_name": "etn1",
-        "data_value": "OU",
-        "display": {
-          "title": {
-            "text": {
-              "default": "Other",
-              "portuguese": "Outra/o"
-            }
-          }
-        },
-        "_row_num": 22
-      },
-      {
-        "choice_list_name": "etn1",
-        "data_value": "NS",
-        "display": {
-          "title": {
-            "text": {
-              "default": "Don't know",
-              "portuguese": "Não sabe"
-            }
-          }
-        },
-        "_row_num": 23
-      },
-      {
-        "choice_list_name": "etn2",
-        "data_value": "BE",
-        "display": {
-          "title": {
-            "text": {
-              "default": "BE - Beafada",
-              "portuguese": "BE - Beafada"
-            }
-          }
-        },
-        "_row_num": 24
-      },
-      {
-        "choice_list_name": "etn2",
-        "data_value": "BI",
-        "display": {
-          "title": {
-            "text": {
-              "default": "BI - Bijago",
-              "portuguese": "BI - Bijago"
-            }
-          }
-        },
-        "_row_num": 25
-      },
-      {
-        "choice_list_name": "etn2",
-        "data_value": "BM",
-        "display": {
-          "title": {
-            "text": {
-              "default": "BM - Balante mane",
-              "portuguese": "BM - Balante mane"
-            }
-          }
-        },
-        "_row_num": 26
-      },
-      {
-        "choice_list_name": "etn2",
-        "data_value": "CV",
-        "display": {
-          "title": {
-            "text": {
-              "default": "CV - Cabo Verdiano",
-              "portuguese": "CV - Cabo Verdiano"
-            }
-          }
-        },
-        "_row_num": 27
-      },
-      {
-        "choice_list_name": "etn2",
-        "data_value": "GE",
-        "display": {
-          "title": {
-            "text": {
-              "default": "GE - Geba",
-              "portuguese": "GE - Geba"
-            }
-          }
-        },
-        "_row_num": 28
-      },
-      {
-        "choice_list_name": "etn2",
-        "data_value": "FE",
-        "display": {
-          "title": {
-            "text": {
-              "default": "FE - Felupe",
-              "portuguese": "FE - Felupe"
-            }
-          }
-        },
-        "_row_num": 29
-      },
-      {
-        "choice_list_name": "etn2",
-        "data_value": "MS",
-        "display": {
-          "title": {
-            "text": {
-              "default": "MS - Mansoanca",
-              "portuguese": "MS - Mansonca"
-            }
-          }
-        },
-        "_row_num": 30
-      },
-      {
-        "choice_list_name": "etn2",
-        "data_value": "NA",
-        "display": {
-          "title": {
-            "text": {
-              "default": "NA - Nalu",
-              "portuguese": "NA - Nalu"
-            }
-          }
-        },
-        "_row_num": 31
-      },
-      {
-        "choice_list_name": "etn2",
-        "data_value": "SA",
-        "display": {
-          "title": {
-            "text": {
-              "default": "SA - Sarakolé",
-              "portuguese": "SA - Sarakolé"
-            }
-          }
-        },
-        "_row_num": 32
-      },
-      {
-        "choice_list_name": "etn2",
-        "data_value": "WO",
-        "display": {
-          "title": {
-            "text": {
-              "default": "WO - Wolof",
-              "portuguese": "WO - Wolof"
-            }
-          }
-        },
-        "_row_num": 33
-      },
-      {
-        "choice_list_name": "etn2",
-        "data_value": "OU",
-        "display": {
-          "title": {
-            "text": {
-              "default": "OU - Other",
-              "portuguese": "OU - Outra/o"
-            }
-          }
-        },
-        "_row_num": 34
-      },
-      {
-        "choice_list_name": "etn2",
-        "data_value": "na",
-        "display": {
-          "title": {
-            "text": {
-              "default": "Don't know",
-              "portuguese": "Não sabe"
-            }
-          }
-        },
-        "_row_num": 35
-      },
-      {
-        "choice_list_name": "precision",
-        "data_value": "1",
-        "display": {
-          "title": {
-            "text": {
-              "default": "Day certain",
-              "portuguese": "Dia certo"
-            }
-          }
-        },
-        "_row_num": 36
-      },
-      {
-        "choice_list_name": "precision",
-        "data_value": "2",
-        "display": {
-          "title": {
-            "text": {
-              "default": "Month certain",
-              "portuguese": "Mes certo"
-            }
-          }
-        },
-        "_row_num": 37
-      },
-      {
-        "choice_list_name": "precision",
-        "data_value": "3",
-        "display": {
-          "title": {
-            "text": {
-              "default": "Season certain",
-              "portuguese": "Estação certo"
-            }
-          }
-        },
-        "_row_num": 38
-      },
-      {
-        "choice_list_name": "precision",
-        "data_value": "4",
-        "display": {
-          "title": {
-            "text": {
-              "default": "Year certain",
-              "portuguese": "Ano certo"
-            }
-          }
-        },
-        "_row_num": 39
-      },
-      {
-        "choice_list_name": "dontknow",
-        "data_value": "1",
-        "display": {
-          "title": {
-            "text": {
-              "default": "Don't know",
-              "portuguese": "Não sabe"
-            }
-          }
-        },
-        "_row_num": 40
-      },
-      {
-        "choice_list_name": "region",
-        "data_value": "1",
-        "display": {
-          "title": {
-            "text": {
-              "default": "Oio",
-              "portuguese": "Oio"
-            }
-          }
-        },
-        "_row_num": 41
-      },
-      {
-        "choice_list_name": "region",
-        "data_value": "2",
-        "display": {
-          "title": {
-            "text": {
-              "default": "Biombo",
-              "portuguese": "Biombo"
-            }
-          }
-        },
-        "_row_num": 42
-      },
-      {
-        "choice_list_name": "region",
-        "data_value": "5",
-        "display": {
-          "title": {
-            "text": {
-              "default": "Gabu",
-              "portuguese": "Gabu"
-            }
-          }
-        },
-        "_row_num": 43
-      },
-      {
-        "choice_list_name": "region",
-        "data_value": "7",
-        "display": {
-          "title": {
-            "text": {
-              "default": "Cacheu",
-              "portuguese": "Cacheu"
-            }
-          }
-        },
-        "_row_num": 44
-      },
-      {
-        "choice_list_name": "region",
-        "data_value": "8",
-        "display": {
-          "title": {
-            "text": {
-              "default": "Bafata",
-              "portuguese": "Bafata"
-            }
-          }
-        },
-        "_row_num": 45
-      },
-      {
-        "choice_list_name": "region",
-        "data_value": "11",
-        "display": {
-          "title": {
-            "text": {
-              "default": "Quinnara",
-              "portuguese": "Quinnara"
-            }
-          }
-        },
-        "_row_num": 46
-      },
-      {
-        "choice_list_name": "region",
-        "data_value": "12",
-        "display": {
-          "title": {
-            "text": {
-              "default": "Tombali",
-              "portuguese": "Tombali"
-            }
-          }
-        },
-        "_row_num": 47
-      },
-      {
-        "choice_list_name": "region",
-        "data_value": "13",
-        "display": {
-          "title": {
-            "text": {
-              "default": "Bubaque",
-              "portuguese": "Bubaque"
-            }
-          }
-        },
-        "_row_num": 48
-      },
-      {
-        "choice_list_name": "region",
-        "data_value": "14",
-        "display": {
-          "title": {
-            "text": {
-              "default": "Bolama",
-              "portuguese": "Bolama"
-            }
-          }
-        },
-        "_row_num": 49
-      },
-      {
-        "choice_list_name": "region",
-        "data_value": "15",
-        "display": {
-          "title": {
-            "text": {
-              "default": "São Domingos",
-              "portuguese": "São Domingos"
-            }
-          }
-        },
-        "_row_num": 50
-      },
-      {
-        "choice_list_name": "region",
-        "data_value": "16",
-        "display": {
-          "title": {
-            "text": {
-              "default": "MSF Bafata",
-              "portuguese": "MSF Bafata"
-            }
-          }
-        },
-        "_row_num": 51
-      },
-      {
-        "choice_list_name": "relation",
-        "data_value": "1",
-        "display": {
-          "title": {
-            "text": {
-              "default": "Mother/father",
-              "portuguese": "Mãe/pai"
-            }
-          }
-        },
-        "_row_num": 52
-      },
-      {
-        "choice_list_name": "relation",
-        "data_value": "2",
-        "display": {
-          "title": {
-            "text": {
-              "default": "Husband",
-              "portuguese": "Marido"
-            }
-          }
-        },
-        "_row_num": 53
-      },
-      {
-        "choice_list_name": "relation",
-        "data_value": "3",
-        "display": {
-          "title": {
-            "text": {
-              "default": "Sister/brother",
-              "portuguese": "Irmã/irmão"
-            }
-          }
-        },
-        "_row_num": 54
-      },
-      {
-        "choice_list_name": "relation",
-        "data_value": "4",
-        "display": {
-          "title": {
-            "text": {
-              "default": "Aunt/uncle",
-              "portuguese": "Tia/tio"
-            }
-          }
-        },
-        "_row_num": 55
-      },
-      {
-        "choice_list_name": "relation",
-        "data_value": "5",
-        "display": {
-          "title": {
-            "text": {
-              "default": "Other",
-              "portuguese": "Outra/o"
-            }
-          }
-        },
-        "_row_num": 56
-      },
-      {
-        "choice_list_name": "tab1",
-        "data_value": "1",
-        "display": {
-          "title": {
-            "text": {
-              "default": "Ntchugal",
-              "portuguese": "Ntchugal"
-            }
-          }
-        },
-        "_row_num": 58
-      },
-      {
-        "choice_list_name": "tab1",
-        "data_value": "2",
-        "display": {
-          "title": {
-            "text": {
-              "default": "Blas",
-              "portuguese": "Blas"
-            }
-          }
-        },
-        "_row_num": 59
-      },
-      {
-        "choice_list_name": "tab1",
-        "data_value": "3",
-        "display": {
-          "title": {
-            "text": {
-              "default": "Colicunda",
-              "portuguese": "Colicunda"
-            }
-          }
-        },
-        "_row_num": 60
-      },
-      {
-        "choice_list_name": "tab1",
-        "data_value": "4",
-        "display": {
-          "title": {
-            "text": {
-              "default": "Wanquilim",
-              "portuguese": "Wanquilim"
-            }
-          }
-        },
-        "_row_num": 61
-      },
-      {
-        "choice_list_name": "tab1",
-        "data_value": "5",
-        "display": {
-          "title": {
-            "text": {
-              "default": "Mandingara",
-              "portuguese": "Mandingara"
-            }
-          }
-        },
-        "_row_num": 62
-      },
-      {
-        "choice_list_name": "tab1",
-        "data_value": "6",
-        "display": {
-          "title": {
-            "text": {
-              "default": "Cutia",
-              "portuguese": "Cutia"
-            }
-          }
-        },
-        "_row_num": 63
-      },
-      {
-        "choice_list_name": "tab1",
-        "data_value": "7",
-        "display": {
-          "title": {
-            "text": {
-              "default": "Rossum",
-              "portuguese": "Rossum"
-            }
-          }
-        },
-        "_row_num": 64
-      },
-      {
-        "choice_list_name": "tab1",
-        "data_value": "9",
-        "display": {
-          "title": {
-            "text": {
-              "default": "Amedalae",
-              "portuguese": "Amedalae"
-            }
-          }
-        },
-        "_row_num": 65
-      },
-      {
-        "choice_list_name": "tab1",
-        "data_value": "10",
-        "display": {
-          "title": {
-            "text": {
-              "default": "Ntchane",
-              "portuguese": "Ntchane"
-            }
-          }
-        },
-        "_row_num": 66
-      },
-      {
-        "choice_list_name": "tab1",
-        "data_value": "11",
-        "display": {
-          "title": {
-            "text": {
-              "default": "Quinhaque Mansoa",
-              "portuguese": "Quinhaque Mansoa"
-            }
-          }
-        },
-        "_row_num": 67
-      },
-      {
-        "choice_list_name": "tab1",
-        "data_value": "12",
-        "display": {
-          "title": {
-            "text": {
-              "default": "Ntchangue Bideta",
-              "portuguese": "Ntchangue Bideta"
-            }
-          }
-        },
-        "_row_num": 68
-      },
-      {
-        "choice_list_name": "tab1",
-        "data_value": "13",
-        "display": {
-          "title": {
-            "text": {
-              "default": "Ntchangue Subal",
-              "portuguese": "Ntchangue Subal"
-            }
-          }
-        },
-        "_row_num": 69
-      },
-      {
-        "choice_list_name": "tab1",
-        "data_value": "14",
-        "display": {
-          "title": {
-            "text": {
-              "default": "Jogudul Com",
-              "portuguese": "Jogudul Com"
-            }
-          }
-        },
-        "_row_num": 70
-      },
-      {
-        "choice_list_name": "tab1",
-        "data_value": "15",
-        "display": {
-          "title": {
-            "text": {
-              "default": "Joaquim Com",
-              "portuguese": "Joaquim Com"
-            }
-          }
-        },
-        "_row_num": 71
-      },
-      {
-        "choice_list_name": "tab1",
-        "data_value": "16",
-        "display": {
-          "title": {
-            "text": {
-              "default": "Cangha Ntchugal",
-              "portuguese": "Cangha Ntchugal"
-            }
-          }
-        },
-        "_row_num": 72
-      },
-      {
-        "choice_list_name": "tab1",
-        "data_value": "17",
-        "display": {
-          "title": {
-            "text": {
-              "default": "Cangha Cocry",
-              "portuguese": "Cangha Cocry"
-            }
-          }
-        },
-        "_row_num": 73
-      },
-      {
-        "choice_list_name": "tab1",
-        "data_value": "18",
-        "display": {
-          "title": {
-            "text": {
-              "default": "Encheia",
-              "portuguese": "Encheia"
-            }
-          }
-        },
-        "_row_num": 74
-      },
-      {
-        "choice_list_name": "tab1",
-        "data_value": "19",
-        "display": {
-          "title": {
-            "text": {
-              "default": "Cadjque",
-              "portuguese": "Cadjque"
-            }
-          }
-        },
-        "_row_num": 75
-      },
-      {
-        "choice_list_name": "tab1",
-        "data_value": "20",
-        "display": {
-          "title": {
-            "text": {
-              "default": "Mpas",
-              "portuguese": "Mpas"
-            }
-          }
-        },
-        "_row_num": 76
-      },
-      {
-        "choice_list_name": "tab1",
-        "data_value": "21",
-        "display": {
-          "title": {
-            "text": {
-              "default": "Quinhaque Ncor",
-              "portuguese": "Quinhaque Ncor"
-            }
-          }
-        },
-        "_row_num": 77
-      },
-      {
-        "choice_list_name": "tab1",
-        "data_value": "22",
-        "display": {
-          "title": {
-            "text": {
-              "default": "Quinhaque",
-              "portuguese": "Quinhaque"
-            }
-          }
-        },
-        "_row_num": 78
-      },
-      {
-        "choice_list_name": "tab1",
-        "data_value": "23",
-        "display": {
-          "title": {
-            "text": {
-              "default": "Untche",
-              "portuguese": "Untche"
-            }
-          }
-        },
-        "_row_num": 79
-      },
-      {
-        "choice_list_name": "tab1",
-        "data_value": "24",
-        "display": {
-          "title": {
-            "text": {
-              "default": "Cumbidjam",
-              "portuguese": "Cumbidjam"
-            }
-          }
-        },
-        "_row_num": 80
-      },
-      {
-        "choice_list_name": "tab1",
-        "data_value": "25",
-        "display": {
-          "title": {
-            "text": {
-              "default": "Sintcham",
-              "portuguese": "Sintcham"
-            }
-          }
-        },
-        "_row_num": 81
-      },
-      {
-        "choice_list_name": "tab1",
-        "data_value": "26",
-        "display": {
-          "title": {
-            "text": {
-              "default": "Sansancutoto",
-              "portuguese": "Sansancutoto"
-            }
-          }
-        },
-        "_row_num": 82
-      },
-      {
-        "choice_list_name": "tab1",
-        "data_value": "27",
-        "display": {
-          "title": {
-            "text": {
-              "default": "Bironque",
-              "portuguese": "Bironque"
-            }
-          }
-        },
-        "_row_num": 83
-      },
-      {
-        "choice_list_name": "tab1",
-        "data_value": "28",
-        "display": {
-          "title": {
-            "text": {
-              "default": "Gendo",
-              "portuguese": "Gendo"
-            }
-          }
-        },
-        "_row_num": 84
-      },
-      {
-        "choice_list_name": "tab1",
-        "data_value": "29",
-        "display": {
-          "title": {
-            "text": {
-              "default": "Mansaba",
-              "portuguese": "Mansaba"
-            }
-          }
-        },
-        "_row_num": 85
-      },
-      {
-        "choice_list_name": "tab1",
-        "data_value": "30",
-        "display": {
-          "title": {
-            "text": {
-              "default": "Sanaia",
-              "portuguese": "Sanaia"
-            }
-          }
-        },
-        "_row_num": 86
-      },
-      {
-        "choice_list_name": "tab1",
-        "data_value": "31",
-        "display": {
-          "title": {
-            "text": {
-              "default": "Galenque",
-              "portuguese": "Galenque"
-            }
-          }
-        },
-        "_row_num": 87
-      },
-      {
-        "choice_list_name": "tab1",
-        "data_value": "32",
-        "display": {
-          "title": {
-            "text": {
-              "default": "Demba So",
-              "portuguese": "Demba So"
-            }
-          }
-        },
-        "_row_num": 88
-      },
-      {
-        "choice_list_name": "tab2",
-        "data_value": "1",
-        "display": {
-          "title": {
-            "text": {
-              "default": "Bilma",
-              "portuguese": "Bilma"
-            }
-          }
-        },
-        "_row_num": 89
-      },
-      {
-        "choice_list_name": "tab2",
-        "data_value": "2",
-        "display": {
-          "title": {
-            "text": {
-              "default": "Gua",
-              "portuguese": "Gua"
-            }
-          }
-        },
-        "_row_num": 90
-      },
-      {
-        "choice_list_name": "tab2",
-        "data_value": "3",
-        "display": {
-          "title": {
-            "text": {
-              "default": "Ntusse",
-              "portuguese": "Ntusse"
-            }
-          }
-        },
-        "_row_num": 91
-      },
-      {
-        "choice_list_name": "tab2",
-        "data_value": "4",
-        "display": {
-          "title": {
-            "text": {
-              "default": "Ponta Vicente",
-              "portuguese": "Ponta Vicente"
-            }
-          }
-        },
-        "_row_num": 92
-      },
-      {
-        "choice_list_name": "tab2",
-        "data_value": "5",
-        "display": {
-          "title": {
-            "text": {
-              "default": "Incaite",
-              "portuguese": "Incaite"
-            }
-          }
-        },
-        "_row_num": 93
-      },
-      {
-        "choice_list_name": "tab2",
-        "data_value": "6",
-        "display": {
-          "title": {
-            "text": {
-              "default": "Qindinga",
-              "portuguese": "Qindinga"
-            }
-          }
-        },
-        "_row_num": 94
-      },
-      {
-        "choice_list_name": "tab2",
-        "data_value": "7",
-        "display": {
-          "title": {
-            "text": {
-              "default": "Intuzinho",
-              "portuguese": "Intuzinho"
-            }
-          }
-        },
-        "_row_num": 95
-      },
-      {
-        "choice_list_name": "tab2",
-        "data_value": "8",
-        "display": {
-          "title": {
-            "text": {
-              "default": "Bambadinca",
-              "portuguese": "Bambadinca"
-            }
-          }
-        },
-        "_row_num": 96
-      },
-      {
-        "choice_list_name": "tab2",
-        "data_value": "9",
-        "display": {
-          "title": {
-            "text": {
-              "default": "Iem",
-              "portuguese": "Iem"
-            }
-          }
-        },
-        "_row_num": 97
-      },
-      {
-        "choice_list_name": "tab2",
-        "data_value": "10",
-        "display": {
-          "title": {
-            "text": {
-              "default": "Buno",
-              "portuguese": "Buno"
-            }
-          }
-        },
-        "_row_num": 98
-      },
-      {
-        "choice_list_name": "tab2",
-        "data_value": "11",
-        "display": {
-          "title": {
-            "text": {
-              "default": "Prite",
-              "portuguese": "Prite"
-            }
-          }
-        },
-        "_row_num": 99
-      },
-      {
-        "choice_list_name": "tab2",
-        "data_value": "12",
-        "display": {
-          "title": {
-            "text": {
-              "default": "Reino Quicete",
-              "portuguese": "Reino Quicete"
-            }
-          }
-        },
-        "_row_num": 100
-      },
-      {
-        "choice_list_name": "tab2",
-        "data_value": "13",
-        "display": {
-          "title": {
-            "text": {
-              "default": "Betafte",
-              "portuguese": "Betafte"
-            }
-          }
-        },
-        "_row_num": 101
-      },
-      {
-        "choice_list_name": "tab2",
-        "data_value": "14",
-        "display": {
-          "title": {
-            "text": {
-              "default": "Bissa",
-              "portuguese": "Bissa"
-            }
-          }
-        },
-        "_row_num": 102
-      },
-      {
-        "choice_list_name": "tab2",
-        "data_value": "15",
-        "display": {
-          "title": {
-            "text": {
-              "default": "Reino Tor",
-              "portuguese": "Reino Tor"
-            }
-          }
-        },
-        "_row_num": 103
-      },
-      {
-        "choice_list_name": "tab2",
-        "data_value": "16",
-        "display": {
-          "title": {
-            "text": {
-              "default": "Dorse",
-              "portuguese": "Dorse"
-            }
-          }
-        },
-        "_row_num": 104
-      },
-      {
-        "choice_list_name": "tab2",
-        "data_value": "17",
-        "display": {
-          "title": {
-            "text": {
-              "default": "Blim Blim",
-              "portuguese": "Blim Blim"
-            }
-          }
-        },
-        "_row_num": 105
-      },
-      {
-        "choice_list_name": "tab2",
-        "data_value": "18",
-        "display": {
-          "title": {
-            "text": {
-              "default": "Quinsana",
-              "portuguese": "Quinsana"
-            }
-          }
-        },
-        "_row_num": 106
-      },
-      {
-        "choice_list_name": "tab2",
-        "data_value": "19",
-        "display": {
-          "title": {
-            "text": {
-              "default": "Quita",
-              "portuguese": "Quita"
-            }
-          }
-        },
-        "_row_num": 107
-      },
-      {
-        "choice_list_name": "tab2",
-        "data_value": "20",
-        "display": {
-          "title": {
-            "text": {
-              "default": "Ondame",
-              "portuguese": "Ondame"
-            }
-          }
-        },
-        "_row_num": 108
-      },
-      {
-        "choice_list_name": "tab2",
-        "data_value": "21",
-        "display": {
-          "title": {
-            "text": {
-              "default": "Blom",
-              "portuguese": "Blom"
-            }
-          }
-        },
-        "_row_num": 109
-      },
-      {
-        "choice_list_name": "tab2",
-        "data_value": "22",
-        "display": {
-          "title": {
-            "text": {
-              "default": "Bocomul",
-              "portuguese": "Bocomul"
-            }
-          }
-        },
-        "_row_num": 110
-      },
-      {
-        "choice_list_name": "tab2",
-        "data_value": "23",
-        "display": {
-          "title": {
-            "text": {
-              "default": "Ome",
-              "portuguese": "Ome"
-            }
-          }
-        },
-        "_row_num": 111
-      },
-      {
-        "choice_list_name": "tab2",
-        "data_value": "24",
-        "display": {
-          "title": {
-            "text": {
-              "default": "Quinhamel",
-              "portuguese": "Quinhamel"
-            }
-          }
-        },
-        "_row_num": 112
-      },
-      {
-        "choice_list_name": "tab2",
-        "data_value": "25",
-        "display": {
-          "title": {
-            "text": {
-              "default": "Ponta Augusto Vicente",
-              "portuguese": "Ponta Augusto Vicente"
-            }
-          }
-        },
-        "_row_num": 113
-      },
-      {
-        "choice_list_name": "tab2",
-        "data_value": "26",
-        "display": {
-          "title": {
-            "text": {
-              "default": "Bilmate",
-              "portuguese": "Bilmate"
-            }
-          }
-        },
-        "_row_num": 114
-      },
-      {
-        "choice_list_name": "tab5",
-        "data_value": "1",
-        "display": {
-          "title": {
-            "text": {
-              "default": "Badjefa",
-              "portuguese": "Badjefa"
-            }
-          }
-        },
-        "_row_num": 115
-      },
-      {
-        "choice_list_name": "tab5",
-        "data_value": "2",
-        "display": {
-          "title": {
-            "text": {
-              "default": "Gundjur",
-              "portuguese": "Gundjur"
-            }
-          }
-        },
-        "_row_num": 116
-      },
-      {
-        "choice_list_name": "tab5",
-        "data_value": "3",
-        "display": {
-          "title": {
-            "text": {
-              "default": "Carabele",
-              "portuguese": "Carabele"
-            }
-          }
-        },
-        "_row_num": 117
-      },
-      {
-        "choice_list_name": "tab5",
-        "data_value": "4",
-        "display": {
-          "title": {
-            "text": {
-              "default": "Nema",
-              "portuguese": "Nema"
-            }
-          }
-        },
-        "_row_num": 118
-      },
-      {
-        "choice_list_name": "tab5",
-        "data_value": "5",
-        "display": {
-          "title": {
-            "text": {
-              "default": "Dobanla",
-              "portuguese": "Dobanla"
-            }
-          }
-        },
-        "_row_num": 119
-      },
-      {
-        "choice_list_name": "tab5",
-        "data_value": "6",
-        "display": {
-          "title": {
-            "text": {
-              "default": "Sintcham Delo Mamado",
-              "portuguese": "Sintcham Delo Mamado"
-            }
-          }
-        },
-        "_row_num": 120
-      },
-      {
-        "choice_list_name": "tab5",
-        "data_value": "7",
-        "display": {
-          "title": {
-            "text": {
-              "default": "\"      \"     \"    \"    \"  Malam",
-              "portuguese": "\"      \"     \"    \"    \"  Malam"
-            }
-          }
-        },
-        "_row_num": 121
-      },
-      {
-        "choice_list_name": "tab5",
-        "data_value": "8",
-        "display": {
-          "title": {
-            "text": {
-              "default": "\"     \"      \" Umaro",
-              "portuguese": "\"     \"      \" Umaro"
-            }
-          }
-        },
-        "_row_num": 122
-      },
-      {
-        "choice_list_name": "tab5",
-        "data_value": "9",
-        "display": {
-          "title": {
-            "text": {
-              "default": "Ponhe Maunde",
-              "portuguese": "Ponhe Maunde"
-            }
-          }
-        },
-        "_row_num": 123
-      },
-      {
-        "choice_list_name": "tab5",
-        "data_value": "10",
-        "display": {
-          "title": {
-            "text": {
-              "default": "Candjufa",
-              "portuguese": "Candjufa"
-            }
-          }
-        },
-        "_row_num": 124
-      },
-      {
-        "choice_list_name": "tab5",
-        "data_value": "11",
-        "display": {
-          "title": {
-            "text": {
-              "default": "Olocunda",
-              "portuguese": "Olocunda"
-            }
-          }
-        },
-        "_row_num": 125
-      },
-      {
-        "choice_list_name": "tab5",
-        "data_value": "12",
-        "display": {
-          "title": {
-            "text": {
-              "default": "Funtufuntula",
-              "portuguese": "Funtufuntula"
-            }
-          }
-        },
-        "_row_num": 126
-      },
-      {
-        "choice_list_name": "tab5",
-        "data_value": "13",
-        "display": {
-          "title": {
-            "text": {
-              "default": "Sintcham Iero Djadja",
-              "portuguese": "Sintcham Iero Djadja"
-            }
-          }
-        },
-        "_row_num": 127
-      },
-      {
-        "choice_list_name": "tab5",
-        "data_value": "14",
-        "display": {
-          "title": {
-            "text": {
-              "default": "Buruntuma",
-              "portuguese": "Buruntuma"
-            }
-          }
-        },
-        "_row_num": 128
-      },
-      {
-        "choice_list_name": "tab5",
-        "data_value": "15",
-        "display": {
-          "title": {
-            "text": {
-              "default": "Dara Braima",
-              "portuguese": "Dara Braima"
-            }
-          }
-        },
-        "_row_num": 129
-      },
-      {
-        "choice_list_name": "tab5",
-        "data_value": "16",
-        "display": {
-          "title": {
-            "text": {
-              "default": "Padjama",
-              "portuguese": "Padjama"
-            }
-          }
-        },
-        "_row_num": 130
-      },
-      {
-        "choice_list_name": "tab5",
-        "data_value": "17",
-        "display": {
-          "title": {
-            "text": {
-              "default": "Sintcham Cunadi(Camedina)",
-              "portuguese": "Sintcham Cunadi (Camedina)"
-            }
-          }
-        },
-        "_row_num": 131
-      },
-      {
-        "choice_list_name": "tab5",
-        "data_value": "18",
-        "display": {
-          "title": {
-            "text": {
-              "default": "Djebacunda",
-              "portuguese": "Djebacunda"
-            }
-          }
-        },
-        "_row_num": 132
-      },
-      {
-        "choice_list_name": "tab5",
-        "data_value": "19",
-        "display": {
-          "title": {
-            "text": {
-              "default": "Afia",
-              "portuguese": "Afia"
-            }
-          }
-        },
-        "_row_num": 133
-      },
-      {
-        "choice_list_name": "tab5",
-        "data_value": "20",
-        "display": {
-          "title": {
-            "text": {
-              "default": "Camanca",
-              "portuguese": "Camanca"
-            }
-          }
-        },
-        "_row_num": 134
-      },
-      {
-        "choice_list_name": "tab5",
-        "data_value": "21",
-        "display": {
-          "title": {
-            "text": {
-              "default": "Fasse(Bairo Ii)",
-              "portuguese": "Fasse (Bairo Ii)"
-            }
-          }
-        },
-        "_row_num": 135
-      },
-      {
-        "choice_list_name": "tab5",
-        "data_value": "22",
-        "display": {
-          "title": {
-            "text": {
-              "default": "Mafonco",
-              "portuguese": "Mafonco"
-            }
-          }
-        },
-        "_row_num": 136
-      },
-      {
-        "choice_list_name": "tab5",
-        "data_value": "23",
-        "display": {
-          "title": {
-            "text": {
-              "default": "Samba Canda",
-              "portuguese": "Samba Canda"
-            }
-          }
-        },
-        "_row_num": 137
-      },
-      {
-        "choice_list_name": "tab5",
-        "data_value": "24",
-        "display": {
-          "title": {
-            "text": {
-              "default": "Sintcham Nhapo",
-              "portuguese": "Sintcham Nhapo"
-            }
-          }
-        },
-        "_row_num": 138
-      },
-      {
-        "choice_list_name": "tab5",
-        "data_value": "25",
-        "display": {
-          "title": {
-            "text": {
-              "default": "Tabadjenque",
-              "portuguese": "Tabadjenque"
-            }
-          }
-        },
-        "_row_num": 139
-      },
-      {
-        "choice_list_name": "tab5",
-        "data_value": "26",
-        "display": {
-          "title": {
-            "text": {
-              "default": "Tchetche",
-              "portuguese": "Tchetche"
-            }
-          }
-        },
-        "_row_num": 140
       }
     ],
     "model": [
@@ -2121,12 +399,9 @@
       "survey": {
         "setting_name": "survey",
         "display": {
-          "tittle": {
-            "text": "TEST"
-          },
           "title": {
             "text": {
-              "portuguese": "TEST",
+              "english": "TEST",
               "default": "TEST"
             }
           }
@@ -2138,20 +413,20 @@
         "display": {
           "locale": {
             "text": {
-              "default": "English",
-              "portuguese": "Inglês"
+              "english": "Portuguese",
+              "default": "Portugues"
             }
           }
         },
         "_row_num": 6
       },
-      "portuguese": {
-        "setting_name": "portuguese",
+      "english": {
+        "setting_name": "english",
         "display": {
           "locale": {
             "text": {
-              "default": "Portuguese",
-              "portuguese": "Portugues"
+              "english": "English",
+              "default": "Inglês"
             }
           }
         },
@@ -2170,30 +445,39 @@
             "display": {
               "locale": {
                 "text": {
-                  "default": "Portuguese",
-                  "portuguese": "Portugues"
+                  "english": "Portuguese",
+                  "default": "Portugues"
+                }
+              }
+            },
+            "_row_num": 6,
+            "name": "default"
+          },
+          {
+            "display": {
+              "locale": {
+                "text": {
+                  "english": "English",
+                  "default": "Inglês"
                 }
               }
             },
             "_row_num": 7,
-            "name": "portuguese"
+            "name": "english"
           }
         ]
       },
       "_default_locale": {
         "setting_name": "_default_locale",
         "_row_num": 5,
-        "value": "portuguese"
+        "value": "default"
       },
       "initial": {
         "setting_name": "survey",
         "display": {
-          "tittle": {
-            "text": "TEST"
-          },
           "title": {
             "text": {
-              "portuguese": "TEST",
+              "english": "TEST",
               "default": "TEST"
             }
           }
@@ -2209,8 +493,8 @@
           "display": {
             "title": {
               "text": {
-                "default": "Yes",
-                "portuguese": "Sim"
+                "english": "Yes",
+                "default": "Sim"
               }
             }
           },
@@ -2222,8 +506,8 @@
           "display": {
             "title": {
               "text": {
-                "default": "No",
-                "portuguese": "Não"
+                "english": "No",
+                "default": "Não"
               }
             }
           },
@@ -2235,1811 +519,19 @@
           "display": {
             "title": {
               "text": {
-                "default": "Don't know",
-                "portuguese": "Não sabe"
+                "english": "Don't know",
+                "default": "Não sabe"
               }
             }
           },
           "_row_num": 4
-        }
-      ],
-      "inf1": [
-        {
-          "choice_list_name": "inf1",
-          "data_value": "1",
-          "display": {
-            "title": {
-              "text": {
-                "default": "Self",
-                "portuguese": "Ela/e"
-              }
-            }
-          },
-          "_row_num": 5
-        },
-        {
-          "choice_list_name": "inf1",
-          "data_value": "2",
-          "display": {
-            "title": {
-              "text": {
-                "default": "Other",
-                "portuguese": "Outra/o"
-              }
-            }
-          },
-          "_row_num": 6
-        }
-      ],
-      "inf2": [
-        {
-          "choice_list_name": "inf2",
-          "data_value": "1",
-          "display": {
-            "title": {
-              "text": {
-                "default": "Mother",
-                "portuguese": "Mãe"
-              }
-            }
-          },
-          "_row_num": 7
-        },
-        {
-          "choice_list_name": "inf2",
-          "data_value": "2",
-          "display": {
-            "title": {
-              "text": {
-                "default": "Father",
-                "portuguese": "Pai"
-              }
-            }
-          },
-          "_row_num": 8
-        },
-        {
-          "choice_list_name": "inf2",
-          "data_value": "3",
-          "display": {
-            "title": {
-              "text": {
-                "default": "Mothers mother",
-                "portuguese": "Avó"
-              }
-            }
-          },
-          "_row_num": 9
-        },
-        {
-          "choice_list_name": "inf2",
-          "data_value": "4",
-          "display": {
-            "title": {
-              "text": {
-                "default": "Other family member",
-                "portuguese": "Outra mebro da familia"
-              }
-            }
-          },
-          "_row_num": 10
-        },
-        {
-          "choice_list_name": "inf2",
-          "data_value": "5",
-          "display": {
-            "title": {
-              "text": {
-                "default": "Other",
-                "portuguese": "Outra/o"
-              }
-            }
-          },
-          "_row_num": 11
-        },
-        {
-          "choice_list_name": "inf2",
-          "data_value": "6",
-          "display": {
-            "title": {
-              "text": {
-                "default": "No informant found",
-                "portuguese": "Nenhum informador"
-              }
-            }
-          },
-          "_row_num": 12
-        },
-        {
-          "choice_list_name": "inf2",
-          "data_value": "88",
-          "display": {
-            "title": {
-              "text": {
-                "default": "Not applicable",
-                "portuguese": "Não aplicável"
-              }
-            }
-          },
-          "_row_num": 13
-        },
-        {
-          "choice_list_name": "inf2",
-          "data_value": "99",
-          "display": {
-            "title": {
-              "text": {
-                "default": "Missing",
-                "portuguese": "Falta informacao"
-              }
-            }
-          },
-          "_row_num": 14
-        }
-      ],
-      "etn1": [
-        {
-          "choice_list_name": "etn1",
-          "data_value": "BA",
-          "display": {
-            "title": {
-              "text": {
-                "default": "BA - Balanta",
-                "portuguese": "BA - Balanta"
-              }
-            }
-          },
-          "_row_num": 15
-        },
-        {
-          "choice_list_name": "etn1",
-          "data_value": "FU",
-          "display": {
-            "title": {
-              "text": {
-                "default": "FU - Fula",
-                "portuguese": "FU - Fula"
-              }
-            }
-          },
-          "_row_num": 16
-        },
-        {
-          "choice_list_name": "etn1",
-          "data_value": "MC",
-          "display": {
-            "title": {
-              "text": {
-                "default": "MC - Mancanha",
-                "portuguese": "MC - Mancanha"
-              }
-            }
-          },
-          "_row_num": 17
-        },
-        {
-          "choice_list_name": "etn1",
-          "data_value": "MD",
-          "display": {
-            "title": {
-              "text": {
-                "default": "MD - Mandinga",
-                "portuguese": "MD - Mandinga"
-              }
-            }
-          },
-          "_row_num": 18
-        },
-        {
-          "choice_list_name": "etn1",
-          "data_value": "MJ",
-          "display": {
-            "title": {
-              "text": {
-                "default": "MJ - Mandjancu",
-                "portuguese": "MJ - Mandjancu"
-              }
-            }
-          },
-          "_row_num": 19
-        },
-        {
-          "choice_list_name": "etn1",
-          "data_value": "PE",
-          "display": {
-            "title": {
-              "text": {
-                "default": "PE - Pepel",
-                "portuguese": "PE - Pepel"
-              }
-            }
-          },
-          "_row_num": 20
-        },
-        {
-          "choice_list_name": "etn1",
-          "data_value": "MX",
-          "display": {
-            "title": {
-              "text": {
-                "default": "MX - Mixted",
-                "portuguese": "MX - Mixto"
-              }
-            }
-          },
-          "_row_num": 21
-        },
-        {
-          "choice_list_name": "etn1",
-          "data_value": "OU",
-          "display": {
-            "title": {
-              "text": {
-                "default": "Other",
-                "portuguese": "Outra/o"
-              }
-            }
-          },
-          "_row_num": 22
-        },
-        {
-          "choice_list_name": "etn1",
-          "data_value": "NS",
-          "display": {
-            "title": {
-              "text": {
-                "default": "Don't know",
-                "portuguese": "Não sabe"
-              }
-            }
-          },
-          "_row_num": 23
-        }
-      ],
-      "etn2": [
-        {
-          "choice_list_name": "etn2",
-          "data_value": "BE",
-          "display": {
-            "title": {
-              "text": {
-                "default": "BE - Beafada",
-                "portuguese": "BE - Beafada"
-              }
-            }
-          },
-          "_row_num": 24
-        },
-        {
-          "choice_list_name": "etn2",
-          "data_value": "BI",
-          "display": {
-            "title": {
-              "text": {
-                "default": "BI - Bijago",
-                "portuguese": "BI - Bijago"
-              }
-            }
-          },
-          "_row_num": 25
-        },
-        {
-          "choice_list_name": "etn2",
-          "data_value": "BM",
-          "display": {
-            "title": {
-              "text": {
-                "default": "BM - Balante mane",
-                "portuguese": "BM - Balante mane"
-              }
-            }
-          },
-          "_row_num": 26
-        },
-        {
-          "choice_list_name": "etn2",
-          "data_value": "CV",
-          "display": {
-            "title": {
-              "text": {
-                "default": "CV - Cabo Verdiano",
-                "portuguese": "CV - Cabo Verdiano"
-              }
-            }
-          },
-          "_row_num": 27
-        },
-        {
-          "choice_list_name": "etn2",
-          "data_value": "GE",
-          "display": {
-            "title": {
-              "text": {
-                "default": "GE - Geba",
-                "portuguese": "GE - Geba"
-              }
-            }
-          },
-          "_row_num": 28
-        },
-        {
-          "choice_list_name": "etn2",
-          "data_value": "FE",
-          "display": {
-            "title": {
-              "text": {
-                "default": "FE - Felupe",
-                "portuguese": "FE - Felupe"
-              }
-            }
-          },
-          "_row_num": 29
-        },
-        {
-          "choice_list_name": "etn2",
-          "data_value": "MS",
-          "display": {
-            "title": {
-              "text": {
-                "default": "MS - Mansoanca",
-                "portuguese": "MS - Mansonca"
-              }
-            }
-          },
-          "_row_num": 30
-        },
-        {
-          "choice_list_name": "etn2",
-          "data_value": "NA",
-          "display": {
-            "title": {
-              "text": {
-                "default": "NA - Nalu",
-                "portuguese": "NA - Nalu"
-              }
-            }
-          },
-          "_row_num": 31
-        },
-        {
-          "choice_list_name": "etn2",
-          "data_value": "SA",
-          "display": {
-            "title": {
-              "text": {
-                "default": "SA - Sarakolé",
-                "portuguese": "SA - Sarakolé"
-              }
-            }
-          },
-          "_row_num": 32
-        },
-        {
-          "choice_list_name": "etn2",
-          "data_value": "WO",
-          "display": {
-            "title": {
-              "text": {
-                "default": "WO - Wolof",
-                "portuguese": "WO - Wolof"
-              }
-            }
-          },
-          "_row_num": 33
-        },
-        {
-          "choice_list_name": "etn2",
-          "data_value": "OU",
-          "display": {
-            "title": {
-              "text": {
-                "default": "OU - Other",
-                "portuguese": "OU - Outra/o"
-              }
-            }
-          },
-          "_row_num": 34
-        },
-        {
-          "choice_list_name": "etn2",
-          "data_value": "na",
-          "display": {
-            "title": {
-              "text": {
-                "default": "Don't know",
-                "portuguese": "Não sabe"
-              }
-            }
-          },
-          "_row_num": 35
-        }
-      ],
-      "precision": [
-        {
-          "choice_list_name": "precision",
-          "data_value": "1",
-          "display": {
-            "title": {
-              "text": {
-                "default": "Day certain",
-                "portuguese": "Dia certo"
-              }
-            }
-          },
-          "_row_num": 36
-        },
-        {
-          "choice_list_name": "precision",
-          "data_value": "2",
-          "display": {
-            "title": {
-              "text": {
-                "default": "Month certain",
-                "portuguese": "Mes certo"
-              }
-            }
-          },
-          "_row_num": 37
-        },
-        {
-          "choice_list_name": "precision",
-          "data_value": "3",
-          "display": {
-            "title": {
-              "text": {
-                "default": "Season certain",
-                "portuguese": "Estação certo"
-              }
-            }
-          },
-          "_row_num": 38
-        },
-        {
-          "choice_list_name": "precision",
-          "data_value": "4",
-          "display": {
-            "title": {
-              "text": {
-                "default": "Year certain",
-                "portuguese": "Ano certo"
-              }
-            }
-          },
-          "_row_num": 39
-        }
-      ],
-      "dontknow": [
-        {
-          "choice_list_name": "dontknow",
-          "data_value": "1",
-          "display": {
-            "title": {
-              "text": {
-                "default": "Don't know",
-                "portuguese": "Não sabe"
-              }
-            }
-          },
-          "_row_num": 40
-        }
-      ],
-      "region": [
-        {
-          "choice_list_name": "region",
-          "data_value": "1",
-          "display": {
-            "title": {
-              "text": {
-                "default": "Oio",
-                "portuguese": "Oio"
-              }
-            }
-          },
-          "_row_num": 41
-        },
-        {
-          "choice_list_name": "region",
-          "data_value": "2",
-          "display": {
-            "title": {
-              "text": {
-                "default": "Biombo",
-                "portuguese": "Biombo"
-              }
-            }
-          },
-          "_row_num": 42
-        },
-        {
-          "choice_list_name": "region",
-          "data_value": "5",
-          "display": {
-            "title": {
-              "text": {
-                "default": "Gabu",
-                "portuguese": "Gabu"
-              }
-            }
-          },
-          "_row_num": 43
-        },
-        {
-          "choice_list_name": "region",
-          "data_value": "7",
-          "display": {
-            "title": {
-              "text": {
-                "default": "Cacheu",
-                "portuguese": "Cacheu"
-              }
-            }
-          },
-          "_row_num": 44
-        },
-        {
-          "choice_list_name": "region",
-          "data_value": "8",
-          "display": {
-            "title": {
-              "text": {
-                "default": "Bafata",
-                "portuguese": "Bafata"
-              }
-            }
-          },
-          "_row_num": 45
-        },
-        {
-          "choice_list_name": "region",
-          "data_value": "11",
-          "display": {
-            "title": {
-              "text": {
-                "default": "Quinnara",
-                "portuguese": "Quinnara"
-              }
-            }
-          },
-          "_row_num": 46
-        },
-        {
-          "choice_list_name": "region",
-          "data_value": "12",
-          "display": {
-            "title": {
-              "text": {
-                "default": "Tombali",
-                "portuguese": "Tombali"
-              }
-            }
-          },
-          "_row_num": 47
-        },
-        {
-          "choice_list_name": "region",
-          "data_value": "13",
-          "display": {
-            "title": {
-              "text": {
-                "default": "Bubaque",
-                "portuguese": "Bubaque"
-              }
-            }
-          },
-          "_row_num": 48
-        },
-        {
-          "choice_list_name": "region",
-          "data_value": "14",
-          "display": {
-            "title": {
-              "text": {
-                "default": "Bolama",
-                "portuguese": "Bolama"
-              }
-            }
-          },
-          "_row_num": 49
-        },
-        {
-          "choice_list_name": "region",
-          "data_value": "15",
-          "display": {
-            "title": {
-              "text": {
-                "default": "São Domingos",
-                "portuguese": "São Domingos"
-              }
-            }
-          },
-          "_row_num": 50
-        },
-        {
-          "choice_list_name": "region",
-          "data_value": "16",
-          "display": {
-            "title": {
-              "text": {
-                "default": "MSF Bafata",
-                "portuguese": "MSF Bafata"
-              }
-            }
-          },
-          "_row_num": 51
-        }
-      ],
-      "relation": [
-        {
-          "choice_list_name": "relation",
-          "data_value": "1",
-          "display": {
-            "title": {
-              "text": {
-                "default": "Mother/father",
-                "portuguese": "Mãe/pai"
-              }
-            }
-          },
-          "_row_num": 52
-        },
-        {
-          "choice_list_name": "relation",
-          "data_value": "2",
-          "display": {
-            "title": {
-              "text": {
-                "default": "Husband",
-                "portuguese": "Marido"
-              }
-            }
-          },
-          "_row_num": 53
-        },
-        {
-          "choice_list_name": "relation",
-          "data_value": "3",
-          "display": {
-            "title": {
-              "text": {
-                "default": "Sister/brother",
-                "portuguese": "Irmã/irmão"
-              }
-            }
-          },
-          "_row_num": 54
-        },
-        {
-          "choice_list_name": "relation",
-          "data_value": "4",
-          "display": {
-            "title": {
-              "text": {
-                "default": "Aunt/uncle",
-                "portuguese": "Tia/tio"
-              }
-            }
-          },
-          "_row_num": 55
-        },
-        {
-          "choice_list_name": "relation",
-          "data_value": "5",
-          "display": {
-            "title": {
-              "text": {
-                "default": "Other",
-                "portuguese": "Outra/o"
-              }
-            }
-          },
-          "_row_num": 56
-        }
-      ],
-      "tab1": [
-        {
-          "choice_list_name": "tab1",
-          "data_value": "1",
-          "display": {
-            "title": {
-              "text": {
-                "default": "Ntchugal",
-                "portuguese": "Ntchugal"
-              }
-            }
-          },
-          "_row_num": 58
-        },
-        {
-          "choice_list_name": "tab1",
-          "data_value": "2",
-          "display": {
-            "title": {
-              "text": {
-                "default": "Blas",
-                "portuguese": "Blas"
-              }
-            }
-          },
-          "_row_num": 59
-        },
-        {
-          "choice_list_name": "tab1",
-          "data_value": "3",
-          "display": {
-            "title": {
-              "text": {
-                "default": "Colicunda",
-                "portuguese": "Colicunda"
-              }
-            }
-          },
-          "_row_num": 60
-        },
-        {
-          "choice_list_name": "tab1",
-          "data_value": "4",
-          "display": {
-            "title": {
-              "text": {
-                "default": "Wanquilim",
-                "portuguese": "Wanquilim"
-              }
-            }
-          },
-          "_row_num": 61
-        },
-        {
-          "choice_list_name": "tab1",
-          "data_value": "5",
-          "display": {
-            "title": {
-              "text": {
-                "default": "Mandingara",
-                "portuguese": "Mandingara"
-              }
-            }
-          },
-          "_row_num": 62
-        },
-        {
-          "choice_list_name": "tab1",
-          "data_value": "6",
-          "display": {
-            "title": {
-              "text": {
-                "default": "Cutia",
-                "portuguese": "Cutia"
-              }
-            }
-          },
-          "_row_num": 63
-        },
-        {
-          "choice_list_name": "tab1",
-          "data_value": "7",
-          "display": {
-            "title": {
-              "text": {
-                "default": "Rossum",
-                "portuguese": "Rossum"
-              }
-            }
-          },
-          "_row_num": 64
-        },
-        {
-          "choice_list_name": "tab1",
-          "data_value": "9",
-          "display": {
-            "title": {
-              "text": {
-                "default": "Amedalae",
-                "portuguese": "Amedalae"
-              }
-            }
-          },
-          "_row_num": 65
-        },
-        {
-          "choice_list_name": "tab1",
-          "data_value": "10",
-          "display": {
-            "title": {
-              "text": {
-                "default": "Ntchane",
-                "portuguese": "Ntchane"
-              }
-            }
-          },
-          "_row_num": 66
-        },
-        {
-          "choice_list_name": "tab1",
-          "data_value": "11",
-          "display": {
-            "title": {
-              "text": {
-                "default": "Quinhaque Mansoa",
-                "portuguese": "Quinhaque Mansoa"
-              }
-            }
-          },
-          "_row_num": 67
-        },
-        {
-          "choice_list_name": "tab1",
-          "data_value": "12",
-          "display": {
-            "title": {
-              "text": {
-                "default": "Ntchangue Bideta",
-                "portuguese": "Ntchangue Bideta"
-              }
-            }
-          },
-          "_row_num": 68
-        },
-        {
-          "choice_list_name": "tab1",
-          "data_value": "13",
-          "display": {
-            "title": {
-              "text": {
-                "default": "Ntchangue Subal",
-                "portuguese": "Ntchangue Subal"
-              }
-            }
-          },
-          "_row_num": 69
-        },
-        {
-          "choice_list_name": "tab1",
-          "data_value": "14",
-          "display": {
-            "title": {
-              "text": {
-                "default": "Jogudul Com",
-                "portuguese": "Jogudul Com"
-              }
-            }
-          },
-          "_row_num": 70
-        },
-        {
-          "choice_list_name": "tab1",
-          "data_value": "15",
-          "display": {
-            "title": {
-              "text": {
-                "default": "Joaquim Com",
-                "portuguese": "Joaquim Com"
-              }
-            }
-          },
-          "_row_num": 71
-        },
-        {
-          "choice_list_name": "tab1",
-          "data_value": "16",
-          "display": {
-            "title": {
-              "text": {
-                "default": "Cangha Ntchugal",
-                "portuguese": "Cangha Ntchugal"
-              }
-            }
-          },
-          "_row_num": 72
-        },
-        {
-          "choice_list_name": "tab1",
-          "data_value": "17",
-          "display": {
-            "title": {
-              "text": {
-                "default": "Cangha Cocry",
-                "portuguese": "Cangha Cocry"
-              }
-            }
-          },
-          "_row_num": 73
-        },
-        {
-          "choice_list_name": "tab1",
-          "data_value": "18",
-          "display": {
-            "title": {
-              "text": {
-                "default": "Encheia",
-                "portuguese": "Encheia"
-              }
-            }
-          },
-          "_row_num": 74
-        },
-        {
-          "choice_list_name": "tab1",
-          "data_value": "19",
-          "display": {
-            "title": {
-              "text": {
-                "default": "Cadjque",
-                "portuguese": "Cadjque"
-              }
-            }
-          },
-          "_row_num": 75
-        },
-        {
-          "choice_list_name": "tab1",
-          "data_value": "20",
-          "display": {
-            "title": {
-              "text": {
-                "default": "Mpas",
-                "portuguese": "Mpas"
-              }
-            }
-          },
-          "_row_num": 76
-        },
-        {
-          "choice_list_name": "tab1",
-          "data_value": "21",
-          "display": {
-            "title": {
-              "text": {
-                "default": "Quinhaque Ncor",
-                "portuguese": "Quinhaque Ncor"
-              }
-            }
-          },
-          "_row_num": 77
-        },
-        {
-          "choice_list_name": "tab1",
-          "data_value": "22",
-          "display": {
-            "title": {
-              "text": {
-                "default": "Quinhaque",
-                "portuguese": "Quinhaque"
-              }
-            }
-          },
-          "_row_num": 78
-        },
-        {
-          "choice_list_name": "tab1",
-          "data_value": "23",
-          "display": {
-            "title": {
-              "text": {
-                "default": "Untche",
-                "portuguese": "Untche"
-              }
-            }
-          },
-          "_row_num": 79
-        },
-        {
-          "choice_list_name": "tab1",
-          "data_value": "24",
-          "display": {
-            "title": {
-              "text": {
-                "default": "Cumbidjam",
-                "portuguese": "Cumbidjam"
-              }
-            }
-          },
-          "_row_num": 80
-        },
-        {
-          "choice_list_name": "tab1",
-          "data_value": "25",
-          "display": {
-            "title": {
-              "text": {
-                "default": "Sintcham",
-                "portuguese": "Sintcham"
-              }
-            }
-          },
-          "_row_num": 81
-        },
-        {
-          "choice_list_name": "tab1",
-          "data_value": "26",
-          "display": {
-            "title": {
-              "text": {
-                "default": "Sansancutoto",
-                "portuguese": "Sansancutoto"
-              }
-            }
-          },
-          "_row_num": 82
-        },
-        {
-          "choice_list_name": "tab1",
-          "data_value": "27",
-          "display": {
-            "title": {
-              "text": {
-                "default": "Bironque",
-                "portuguese": "Bironque"
-              }
-            }
-          },
-          "_row_num": 83
-        },
-        {
-          "choice_list_name": "tab1",
-          "data_value": "28",
-          "display": {
-            "title": {
-              "text": {
-                "default": "Gendo",
-                "portuguese": "Gendo"
-              }
-            }
-          },
-          "_row_num": 84
-        },
-        {
-          "choice_list_name": "tab1",
-          "data_value": "29",
-          "display": {
-            "title": {
-              "text": {
-                "default": "Mansaba",
-                "portuguese": "Mansaba"
-              }
-            }
-          },
-          "_row_num": 85
-        },
-        {
-          "choice_list_name": "tab1",
-          "data_value": "30",
-          "display": {
-            "title": {
-              "text": {
-                "default": "Sanaia",
-                "portuguese": "Sanaia"
-              }
-            }
-          },
-          "_row_num": 86
-        },
-        {
-          "choice_list_name": "tab1",
-          "data_value": "31",
-          "display": {
-            "title": {
-              "text": {
-                "default": "Galenque",
-                "portuguese": "Galenque"
-              }
-            }
-          },
-          "_row_num": 87
-        },
-        {
-          "choice_list_name": "tab1",
-          "data_value": "32",
-          "display": {
-            "title": {
-              "text": {
-                "default": "Demba So",
-                "portuguese": "Demba So"
-              }
-            }
-          },
-          "_row_num": 88
-        }
-      ],
-      "tab2": [
-        {
-          "choice_list_name": "tab2",
-          "data_value": "1",
-          "display": {
-            "title": {
-              "text": {
-                "default": "Bilma",
-                "portuguese": "Bilma"
-              }
-            }
-          },
-          "_row_num": 89
-        },
-        {
-          "choice_list_name": "tab2",
-          "data_value": "2",
-          "display": {
-            "title": {
-              "text": {
-                "default": "Gua",
-                "portuguese": "Gua"
-              }
-            }
-          },
-          "_row_num": 90
-        },
-        {
-          "choice_list_name": "tab2",
-          "data_value": "3",
-          "display": {
-            "title": {
-              "text": {
-                "default": "Ntusse",
-                "portuguese": "Ntusse"
-              }
-            }
-          },
-          "_row_num": 91
-        },
-        {
-          "choice_list_name": "tab2",
-          "data_value": "4",
-          "display": {
-            "title": {
-              "text": {
-                "default": "Ponta Vicente",
-                "portuguese": "Ponta Vicente"
-              }
-            }
-          },
-          "_row_num": 92
-        },
-        {
-          "choice_list_name": "tab2",
-          "data_value": "5",
-          "display": {
-            "title": {
-              "text": {
-                "default": "Incaite",
-                "portuguese": "Incaite"
-              }
-            }
-          },
-          "_row_num": 93
-        },
-        {
-          "choice_list_name": "tab2",
-          "data_value": "6",
-          "display": {
-            "title": {
-              "text": {
-                "default": "Qindinga",
-                "portuguese": "Qindinga"
-              }
-            }
-          },
-          "_row_num": 94
-        },
-        {
-          "choice_list_name": "tab2",
-          "data_value": "7",
-          "display": {
-            "title": {
-              "text": {
-                "default": "Intuzinho",
-                "portuguese": "Intuzinho"
-              }
-            }
-          },
-          "_row_num": 95
-        },
-        {
-          "choice_list_name": "tab2",
-          "data_value": "8",
-          "display": {
-            "title": {
-              "text": {
-                "default": "Bambadinca",
-                "portuguese": "Bambadinca"
-              }
-            }
-          },
-          "_row_num": 96
-        },
-        {
-          "choice_list_name": "tab2",
-          "data_value": "9",
-          "display": {
-            "title": {
-              "text": {
-                "default": "Iem",
-                "portuguese": "Iem"
-              }
-            }
-          },
-          "_row_num": 97
-        },
-        {
-          "choice_list_name": "tab2",
-          "data_value": "10",
-          "display": {
-            "title": {
-              "text": {
-                "default": "Buno",
-                "portuguese": "Buno"
-              }
-            }
-          },
-          "_row_num": 98
-        },
-        {
-          "choice_list_name": "tab2",
-          "data_value": "11",
-          "display": {
-            "title": {
-              "text": {
-                "default": "Prite",
-                "portuguese": "Prite"
-              }
-            }
-          },
-          "_row_num": 99
-        },
-        {
-          "choice_list_name": "tab2",
-          "data_value": "12",
-          "display": {
-            "title": {
-              "text": {
-                "default": "Reino Quicete",
-                "portuguese": "Reino Quicete"
-              }
-            }
-          },
-          "_row_num": 100
-        },
-        {
-          "choice_list_name": "tab2",
-          "data_value": "13",
-          "display": {
-            "title": {
-              "text": {
-                "default": "Betafte",
-                "portuguese": "Betafte"
-              }
-            }
-          },
-          "_row_num": 101
-        },
-        {
-          "choice_list_name": "tab2",
-          "data_value": "14",
-          "display": {
-            "title": {
-              "text": {
-                "default": "Bissa",
-                "portuguese": "Bissa"
-              }
-            }
-          },
-          "_row_num": 102
-        },
-        {
-          "choice_list_name": "tab2",
-          "data_value": "15",
-          "display": {
-            "title": {
-              "text": {
-                "default": "Reino Tor",
-                "portuguese": "Reino Tor"
-              }
-            }
-          },
-          "_row_num": 103
-        },
-        {
-          "choice_list_name": "tab2",
-          "data_value": "16",
-          "display": {
-            "title": {
-              "text": {
-                "default": "Dorse",
-                "portuguese": "Dorse"
-              }
-            }
-          },
-          "_row_num": 104
-        },
-        {
-          "choice_list_name": "tab2",
-          "data_value": "17",
-          "display": {
-            "title": {
-              "text": {
-                "default": "Blim Blim",
-                "portuguese": "Blim Blim"
-              }
-            }
-          },
-          "_row_num": 105
-        },
-        {
-          "choice_list_name": "tab2",
-          "data_value": "18",
-          "display": {
-            "title": {
-              "text": {
-                "default": "Quinsana",
-                "portuguese": "Quinsana"
-              }
-            }
-          },
-          "_row_num": 106
-        },
-        {
-          "choice_list_name": "tab2",
-          "data_value": "19",
-          "display": {
-            "title": {
-              "text": {
-                "default": "Quita",
-                "portuguese": "Quita"
-              }
-            }
-          },
-          "_row_num": 107
-        },
-        {
-          "choice_list_name": "tab2",
-          "data_value": "20",
-          "display": {
-            "title": {
-              "text": {
-                "default": "Ondame",
-                "portuguese": "Ondame"
-              }
-            }
-          },
-          "_row_num": 108
-        },
-        {
-          "choice_list_name": "tab2",
-          "data_value": "21",
-          "display": {
-            "title": {
-              "text": {
-                "default": "Blom",
-                "portuguese": "Blom"
-              }
-            }
-          },
-          "_row_num": 109
-        },
-        {
-          "choice_list_name": "tab2",
-          "data_value": "22",
-          "display": {
-            "title": {
-              "text": {
-                "default": "Bocomul",
-                "portuguese": "Bocomul"
-              }
-            }
-          },
-          "_row_num": 110
-        },
-        {
-          "choice_list_name": "tab2",
-          "data_value": "23",
-          "display": {
-            "title": {
-              "text": {
-                "default": "Ome",
-                "portuguese": "Ome"
-              }
-            }
-          },
-          "_row_num": 111
-        },
-        {
-          "choice_list_name": "tab2",
-          "data_value": "24",
-          "display": {
-            "title": {
-              "text": {
-                "default": "Quinhamel",
-                "portuguese": "Quinhamel"
-              }
-            }
-          },
-          "_row_num": 112
-        },
-        {
-          "choice_list_name": "tab2",
-          "data_value": "25",
-          "display": {
-            "title": {
-              "text": {
-                "default": "Ponta Augusto Vicente",
-                "portuguese": "Ponta Augusto Vicente"
-              }
-            }
-          },
-          "_row_num": 113
-        },
-        {
-          "choice_list_name": "tab2",
-          "data_value": "26",
-          "display": {
-            "title": {
-              "text": {
-                "default": "Bilmate",
-                "portuguese": "Bilmate"
-              }
-            }
-          },
-          "_row_num": 114
-        }
-      ],
-      "tab5": [
-        {
-          "choice_list_name": "tab5",
-          "data_value": "1",
-          "display": {
-            "title": {
-              "text": {
-                "default": "Badjefa",
-                "portuguese": "Badjefa"
-              }
-            }
-          },
-          "_row_num": 115
-        },
-        {
-          "choice_list_name": "tab5",
-          "data_value": "2",
-          "display": {
-            "title": {
-              "text": {
-                "default": "Gundjur",
-                "portuguese": "Gundjur"
-              }
-            }
-          },
-          "_row_num": 116
-        },
-        {
-          "choice_list_name": "tab5",
-          "data_value": "3",
-          "display": {
-            "title": {
-              "text": {
-                "default": "Carabele",
-                "portuguese": "Carabele"
-              }
-            }
-          },
-          "_row_num": 117
-        },
-        {
-          "choice_list_name": "tab5",
-          "data_value": "4",
-          "display": {
-            "title": {
-              "text": {
-                "default": "Nema",
-                "portuguese": "Nema"
-              }
-            }
-          },
-          "_row_num": 118
-        },
-        {
-          "choice_list_name": "tab5",
-          "data_value": "5",
-          "display": {
-            "title": {
-              "text": {
-                "default": "Dobanla",
-                "portuguese": "Dobanla"
-              }
-            }
-          },
-          "_row_num": 119
-        },
-        {
-          "choice_list_name": "tab5",
-          "data_value": "6",
-          "display": {
-            "title": {
-              "text": {
-                "default": "Sintcham Delo Mamado",
-                "portuguese": "Sintcham Delo Mamado"
-              }
-            }
-          },
-          "_row_num": 120
-        },
-        {
-          "choice_list_name": "tab5",
-          "data_value": "7",
-          "display": {
-            "title": {
-              "text": {
-                "default": "\"      \"     \"    \"    \"  Malam",
-                "portuguese": "\"      \"     \"    \"    \"  Malam"
-              }
-            }
-          },
-          "_row_num": 121
-        },
-        {
-          "choice_list_name": "tab5",
-          "data_value": "8",
-          "display": {
-            "title": {
-              "text": {
-                "default": "\"     \"      \" Umaro",
-                "portuguese": "\"     \"      \" Umaro"
-              }
-            }
-          },
-          "_row_num": 122
-        },
-        {
-          "choice_list_name": "tab5",
-          "data_value": "9",
-          "display": {
-            "title": {
-              "text": {
-                "default": "Ponhe Maunde",
-                "portuguese": "Ponhe Maunde"
-              }
-            }
-          },
-          "_row_num": 123
-        },
-        {
-          "choice_list_name": "tab5",
-          "data_value": "10",
-          "display": {
-            "title": {
-              "text": {
-                "default": "Candjufa",
-                "portuguese": "Candjufa"
-              }
-            }
-          },
-          "_row_num": 124
-        },
-        {
-          "choice_list_name": "tab5",
-          "data_value": "11",
-          "display": {
-            "title": {
-              "text": {
-                "default": "Olocunda",
-                "portuguese": "Olocunda"
-              }
-            }
-          },
-          "_row_num": 125
-        },
-        {
-          "choice_list_name": "tab5",
-          "data_value": "12",
-          "display": {
-            "title": {
-              "text": {
-                "default": "Funtufuntula",
-                "portuguese": "Funtufuntula"
-              }
-            }
-          },
-          "_row_num": 126
-        },
-        {
-          "choice_list_name": "tab5",
-          "data_value": "13",
-          "display": {
-            "title": {
-              "text": {
-                "default": "Sintcham Iero Djadja",
-                "portuguese": "Sintcham Iero Djadja"
-              }
-            }
-          },
-          "_row_num": 127
-        },
-        {
-          "choice_list_name": "tab5",
-          "data_value": "14",
-          "display": {
-            "title": {
-              "text": {
-                "default": "Buruntuma",
-                "portuguese": "Buruntuma"
-              }
-            }
-          },
-          "_row_num": 128
-        },
-        {
-          "choice_list_name": "tab5",
-          "data_value": "15",
-          "display": {
-            "title": {
-              "text": {
-                "default": "Dara Braima",
-                "portuguese": "Dara Braima"
-              }
-            }
-          },
-          "_row_num": 129
-        },
-        {
-          "choice_list_name": "tab5",
-          "data_value": "16",
-          "display": {
-            "title": {
-              "text": {
-                "default": "Padjama",
-                "portuguese": "Padjama"
-              }
-            }
-          },
-          "_row_num": 130
-        },
-        {
-          "choice_list_name": "tab5",
-          "data_value": "17",
-          "display": {
-            "title": {
-              "text": {
-                "default": "Sintcham Cunadi(Camedina)",
-                "portuguese": "Sintcham Cunadi (Camedina)"
-              }
-            }
-          },
-          "_row_num": 131
-        },
-        {
-          "choice_list_name": "tab5",
-          "data_value": "18",
-          "display": {
-            "title": {
-              "text": {
-                "default": "Djebacunda",
-                "portuguese": "Djebacunda"
-              }
-            }
-          },
-          "_row_num": 132
-        },
-        {
-          "choice_list_name": "tab5",
-          "data_value": "19",
-          "display": {
-            "title": {
-              "text": {
-                "default": "Afia",
-                "portuguese": "Afia"
-              }
-            }
-          },
-          "_row_num": 133
-        },
-        {
-          "choice_list_name": "tab5",
-          "data_value": "20",
-          "display": {
-            "title": {
-              "text": {
-                "default": "Camanca",
-                "portuguese": "Camanca"
-              }
-            }
-          },
-          "_row_num": 134
-        },
-        {
-          "choice_list_name": "tab5",
-          "data_value": "21",
-          "display": {
-            "title": {
-              "text": {
-                "default": "Fasse(Bairo Ii)",
-                "portuguese": "Fasse (Bairo Ii)"
-              }
-            }
-          },
-          "_row_num": 135
-        },
-        {
-          "choice_list_name": "tab5",
-          "data_value": "22",
-          "display": {
-            "title": {
-              "text": {
-                "default": "Mafonco",
-                "portuguese": "Mafonco"
-              }
-            }
-          },
-          "_row_num": 136
-        },
-        {
-          "choice_list_name": "tab5",
-          "data_value": "23",
-          "display": {
-            "title": {
-              "text": {
-                "default": "Samba Canda",
-                "portuguese": "Samba Canda"
-              }
-            }
-          },
-          "_row_num": 137
-        },
-        {
-          "choice_list_name": "tab5",
-          "data_value": "24",
-          "display": {
-            "title": {
-              "text": {
-                "default": "Sintcham Nhapo",
-                "portuguese": "Sintcham Nhapo"
-              }
-            }
-          },
-          "_row_num": 138
-        },
-        {
-          "choice_list_name": "tab5",
-          "data_value": "25",
-          "display": {
-            "title": {
-              "text": {
-                "default": "Tabadjenque",
-                "portuguese": "Tabadjenque"
-              }
-            }
-          },
-          "_row_num": 139
-        },
-        {
-          "choice_list_name": "tab5",
-          "data_value": "26",
-          "display": {
-            "title": {
-              "text": {
-                "default": "Tchetche",
-                "portuguese": "Tchetche"
-              }
-            }
-          },
-          "_row_num": 140
         }
       ]
     },
     "table_specific_definitions": {
       "_tokens": {}
     },
-    "queries": {
-      "region_csv": {
-        "query_name": "region_csv",
-        "query_type": "csv",
-        "uri": "\"TABANCAS.csv\"",
-        "callback": "_.chain(context)\n.uniq(function(x) {\nreturn x.REG\n})\n.map(function(place){\nreturn {\ndata_value:place.REG,\ndisplay:{title: {text: place.REGIAO} } };\n}).value()",
-        "_row_num": 2
-      },
-      "tabanca_csv": {
-        "query_name": "tabanca_csv",
-        "query_type": "csv",
-        "uri": "\"TABANCAS.csv\"",
-        "callback": "_.map(context, function(place){place.data_value = place.TAB;\nplace.display = {title: {text: place.TABANCA} };\nreturn place;\n})",
-        "_row_num": 3
-      }
-    },
+    "queries": {},
     "calculates": {
       "ageInYears": {
         "calculation_name": "ageInYears",
@@ -4065,6 +557,16 @@
         "calculation_name": "test",
         "calculation": "freebase.echo('Fill in the date')",
         "_row_num": 6
+      },
+      "diffdays": {
+        "calculation_name": "diffdays",
+        "calculation": "adate.diffInDays(data('ADA'), data('ADA2'))",
+        "_row_num": 7
+      },
+      "display": {
+        "calculation_name": "display",
+        "calculation": "adate.display(data('ADA'))",
+        "_row_num": 8
       }
     },
     "model": {
@@ -4121,13 +623,9 @@
             "display": {
               "prompt": {
                 "text": {
-                  "default": "ADATEST",
-                  "portuguese": "ADATEST"
+                  "english": "ADATEST",
+                  "default": "ADATEST"
                 }
-              },
-              "adate": {
-                "fromYear": 1998,
-                "toYear": 2022
               }
             },
             "_row_num": 3,
@@ -4143,13 +641,9 @@
             "display": {
               "prompt": {
                 "text": {
-                  "default": "Testdato 2",
-                  "portuguese": "Nammename"
+                  "english": "Testdato 2",
+                  "default": "Nammename"
                 }
-              },
-              "adate": {
-                "fromYear": 1990,
-                "toYear": 1995
               }
             },
             "_row_num": 4,
@@ -4163,11 +657,14 @@
             "type": "note",
             "display": {
               "prompt": {
-                "text": "{{calculates.test}}"
+                "text": {
+                  "english": "diff in days: {{calculates.diffdays}}",
+                  "default": "diff in days: {{calculates.diffdays}}"
+                }
               }
             },
-            "_row_num": 8,
-            "__rowNum__": 7,
+            "_row_num": 7,
+            "__rowNum__": 6,
             "_token_type": "prompt",
             "_type": "note",
             "_branch_label_enclosing_screen": "survey/_screen6",
@@ -4175,17 +672,16 @@
           },
           {
             "type": "note",
-            "name": "lblKnown",
             "display": {
               "prompt": {
                 "text": {
-                  "default": "OVER 2 ÅR",
-                  "portuguese": "MAS DE 2 ANOS"
+                  "english": "diff in years: {{calculates.diffInYears}}",
+                  "default": "diff in years: {{calculates.diffInYears}}"
                 }
               }
             },
-            "_row_num": 11,
-            "__rowNum__": 10,
+            "_row_num": 8,
+            "__rowNum__": 7,
             "_token_type": "prompt",
             "_type": "note",
             "_branch_label_enclosing_screen": "survey/_screen6",
@@ -4193,17 +689,16 @@
           },
           {
             "type": "note",
-            "name": "lblUnknown",
             "display": {
               "prompt": {
                 "text": {
-                  "default": "IKKE OVER 2 ÅR",
-                  "portuguese": "NAO MAS DE 2 ANOS"
+                  "english": "display: {{calculates.display}}",
+                  "default": "display: {{calculates.display}}"
                 }
               }
             },
-            "_row_num": 13,
-            "__rowNum__": 12,
+            "_row_num": 9,
+            "__rowNum__": 8,
             "_token_type": "prompt",
             "_type": "note",
             "_branch_label_enclosing_screen": "survey/_screen6",
@@ -4211,33 +706,72 @@
           },
           {
             "type": "note",
-            "name": "lblbla",
             "display": {
               "prompt": {
-                "text": "Alder I hele år: <b>{{calculates.ageInYears}}</b><br/>I måneder: {{calculates.ageInMonths}}<br/>I dage: {{calculates.ageInDays}}<br/>( baseret på {{data.ADA}} )<br/>"
+                "text": {
+                  "english": "{{calculates.test}}"
+                }
+              }
+            },
+            "_row_num": 13,
+            "__rowNum__": 12,
+            "_token_type": "prompt",
+            "_type": "note",
+            "_branch_label_enclosing_screen": "survey/_screen11",
+            "promptIdx": 5
+          },
+          {
+            "type": "note",
+            "name": "lblKnown",
+            "display": {
+              "prompt": {
+                "text": {
+                  "english": "OVER 2 ÅR",
+                  "default": "MAS DE 2 ANOS"
+                }
               }
             },
             "_row_num": 16,
             "__rowNum__": 15,
             "_token_type": "prompt",
             "_type": "note",
-            "_branch_label_enclosing_screen": "survey/_screen6",
-            "promptIdx": 5
+            "_branch_label_enclosing_screen": "survey/_screen11",
+            "promptIdx": 6
           },
           {
             "type": "note",
-            "name": "lblblabla",
+            "name": "lblUnknown",
             "display": {
               "prompt": {
-                "text": "Differencen var: {{calculates.diffInYears}} år."
+                "text": {
+                  "english": "IKKE OVER 2 ÅR",
+                  "default": "NAO MAS DE 2 ANOS"
+                }
               }
             },
-            "_row_num": 17,
-            "__rowNum__": 16,
+            "_row_num": 18,
+            "__rowNum__": 17,
             "_token_type": "prompt",
             "_type": "note",
-            "_branch_label_enclosing_screen": "survey/_screen6",
-            "promptIdx": 6
+            "_branch_label_enclosing_screen": "survey/_screen11",
+            "promptIdx": 7
+          },
+          {
+            "type": "note",
+            "name": "lblbla",
+            "display": {
+              "prompt": {
+                "text": {
+                  "english": "Alder I hele år: <b>{{calculates.ageInYears}}</b><br/>I måneder: {{calculates.ageInMonths}}<br/>I dage: {{calculates.ageInDays}}<br/>( baseret på {{data.ADA}} )<br/>"
+                }
+              }
+            },
+            "_row_num": 21,
+            "__rowNum__": 20,
+            "_token_type": "prompt",
+            "_type": "note",
+            "_branch_label_enclosing_screen": "survey/_screen11",
+            "promptIdx": 8
           },
           {
             "type": "note",
@@ -4245,25 +779,42 @@
             "display": {
               "prompt": {
                 "text": {
-                  "default": "Ingen alder…",
-                  "portuguese": "Falsk"
+                  "english": "Differencen var: {{calculates.diffInYears}} år."
                 }
               }
             },
-            "_row_num": 19,
-            "__rowNum__": 18,
+            "_row_num": 22,
+            "__rowNum__": 21,
             "_token_type": "prompt",
             "_type": "note",
-            "_branch_label_enclosing_screen": "survey/_screen6",
-            "promptIdx": 7
+            "_branch_label_enclosing_screen": "survey/_screen11",
+            "promptIdx": 9
+          },
+          {
+            "type": "note",
+            "name": "lblblabla",
+            "display": {
+              "prompt": {
+                "text": {
+                  "english": "Ingen alder…",
+                  "default": "Falsk"
+                }
+              }
+            },
+            "_row_num": 24,
+            "__rowNum__": 23,
+            "_token_type": "prompt",
+            "_type": "note",
+            "_branch_label_enclosing_screen": "survey/_screen11",
+            "promptIdx": 10
           },
           {
             "_token_type": "prompt",
             "type": "contents",
             "_type": "contents",
-            "_row_num": 22,
-            "_branch_label_enclosing_screen": "survey/_screen22",
-            "promptIdx": 8
+            "_row_num": 27,
+            "_branch_label_enclosing_screen": "survey/_screen27",
+            "promptIdx": 11
           }
         ],
         "validation_tag_map": {
@@ -4291,40 +842,55 @@
             "_token_type": "begin_screen",
             "_end_screen_clause": {
               "clause": "end screen",
-              "_row_num": 21,
-              "__rowNum__": 20,
+              "_row_num": 10,
+              "__rowNum__": 9,
               "_token_type": "end_screen"
             },
-            "_screen_block": "function() {var activePromptIndicies = [];\nif (data('ADA') == null) {\nactivePromptIndicies.push(2);\n}\nif (adate.ageInYears(data('ADA'))>=2) {\nactivePromptIndicies.push(3);\n}\nelse {\nactivePromptIndicies.push(4);\n}\nif (!adate.yearUnknown(data('ADA'))) {\nactivePromptIndicies.push(5);\nactivePromptIndicies.push(6);\n}\nelse {\nactivePromptIndicies.push(7);\n}\n\nreturn activePromptIndicies;\n}\n",
+            "_screen_block": "function() {var activePromptIndicies = [];\nactivePromptIndicies.push(2);\nactivePromptIndicies.push(3);\nactivePromptIndicies.push(4);\n\nreturn activePromptIndicies;\n}\n",
             "operationIdx": 1
+          },
+          {
+            "clause": "begin screen",
+            "_row_num": 11,
+            "__rowNum__": 10,
+            "_token_type": "begin_screen",
+            "_end_screen_clause": {
+              "clause": "end screen",
+              "_row_num": 26,
+              "__rowNum__": 25,
+              "_token_type": "end_screen"
+            },
+            "_screen_block": "function() {var activePromptIndicies = [];\nif (data('ADA') == null) {\nactivePromptIndicies.push(5);\n}\nif (adate.ageInYears(data('ADA'))>=2) {\nactivePromptIndicies.push(6);\n}\nelse {\nactivePromptIndicies.push(7);\n}\nif (!adate.yearUnknown(data('ADA'))) {\nactivePromptIndicies.push(8);\nactivePromptIndicies.push(9);\n}\nelse {\nactivePromptIndicies.push(10);\n}\n\nreturn activePromptIndicies;\n}\n",
+            "operationIdx": 2
           },
           {
             "_token_type": "exit_section",
             "clause": "exit section",
-            "_row_num": 22,
-            "operationIdx": 2
+            "_row_num": 27,
+            "operationIdx": 3
           },
           {
-            "_row_num": 22,
+            "_row_num": 27,
             "_token_type": "begin_screen",
-            "_screen_block": "function() {var activePromptIndicies = [];\nactivePromptIndicies.push(8);\n\nreturn activePromptIndicies;\n}\n",
+            "_screen_block": "function() {var activePromptIndicies = [];\nactivePromptIndicies.push(11);\n\nreturn activePromptIndicies;\n}\n",
             "screen": {
               "hideInBackHistory": true
             },
-            "operationIdx": 3
+            "operationIdx": 4
           },
           {
             "_token_type": "resume",
             "clause": "resume",
-            "_row_num": 22,
-            "operationIdx": 4
+            "_row_num": 27,
+            "operationIdx": 5
           }
         ],
         "branch_label_map": {
           "_screen2": 0,
           "_screen6": 1,
-          "_contents": 3,
-          "_screen22": 3
+          "_screen11": 2,
+          "_contents": 4,
+          "_screen27": 4
         }
       },
       "initial": {
@@ -4355,12 +921,9 @@
             "_type": "_section",
             "promptIdx": 1,
             "display": {
-              "tittle": {
-                "text": "TEST"
-              },
               "title": {
                 "text": {
-                  "portuguese": "TEST",
+                  "english": "TEST",
                   "default": "TEST"
                 }
               }
@@ -4694,7 +1257,7 @@
         "_aspect": "default",
         "_key": "displayName",
         "_type": "object",
-        "_value": "{\"text\":{\"portuguese\":\"TEST\",\"default\":\"TEST\"}}"
+        "_value": "{\"text\":{\"english\":\"TEST\",\"default\":\"TEST\"}}"
       }
     ]
   }

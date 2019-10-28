@@ -169,7 +169,7 @@
       },
       {
         "type": "select_one_dropdown",
-        "values_list": "region_csv",
+        "values_list": "reg_csv",
         "name": "reg",
         "display": {
           "prompt": {
@@ -198,7 +198,7 @@
       },
       {
         "type": "select_multiple",
-        "values_list": "dontknow",
+        "values_list": "dontknowfac",
         "name": "ondeintcns",
         "_row_num": 18
       },
@@ -210,7 +210,7 @@
       {
         "type": "assign",
         "name": "ONDEINTC",
-        "calculation": 9999,
+        "calculation": "data('ondeintcns')",
         "_row_num": 20
       },
       {
@@ -223,7 +223,7 @@
       },
       {
         "clause": "if",
-        "condition": "data('ONDEINTC') == '9999'",
+        "condition": "data('ONDEINTC') == '8888'",
         "_row_num": 23
       },
       {
@@ -501,7 +501,7 @@
     ],
     "queries": [
       {
-        "query_name": "region_csv",
+        "query_name": "reg_csv",
         "query_type": "csv",
         "uri": "\"HEALTHCENTRES.csv\"",
         "callback": "_.chain(context)\n.uniq(function(x) {\nreturn x.reg\n})\n.map(function(place){\nreturn {\ndata_value:place.reg,\ndisplay:{title: {text: place.regname} } };\n}).value()",
@@ -624,7 +624,20 @@
         "_row_num": 8
       },
       {
-        "choice_list_name": "dontknow",
+        "choice_list_name": "dontknowfac",
+        "data_value": "8888",
+        "display": {
+          "title": {
+            "text": {
+              "english": "Other place",
+              "default": "Outro lugar"
+            }
+          }
+        },
+        "_row_num": 9
+      },
+      {
+        "choice_list_name": "dontknowfac",
         "data_value": "9999",
         "display": {
           "title": {
@@ -634,7 +647,7 @@
             }
           }
         },
-        "_row_num": 9
+        "_row_num": 10
       }
     ],
     "model": [
@@ -994,9 +1007,22 @@
           "_row_num": 8
         }
       ],
-      "dontknow": [
+      "dontknowfac": [
         {
-          "choice_list_name": "dontknow",
+          "choice_list_name": "dontknowfac",
+          "data_value": "8888",
+          "display": {
+            "title": {
+              "text": {
+                "english": "Other place",
+                "default": "Outro lugar"
+              }
+            }
+          },
+          "_row_num": 9
+        },
+        {
+          "choice_list_name": "dontknowfac",
           "data_value": "9999",
           "display": {
             "title": {
@@ -1006,7 +1032,7 @@
               }
             }
           },
-          "_row_num": 9
+          "_row_num": 10
         }
       ]
     },
@@ -1014,8 +1040,8 @@
       "_tokens": {}
     },
     "queries": {
-      "region_csv": {
-        "query_name": "region_csv",
+      "reg_csv": {
+        "query_name": "reg_csv",
         "query_type": "csv",
         "uri": "\"HEALTHCENTRES.csv\"",
         "callback": "_.chain(context)\n.uniq(function(x) {\nreturn x.reg\n})\n.map(function(place){\nreturn {\ndata_value:place.reg,\ndisplay:{title: {text: place.regname} } };\n}).value()",
@@ -1340,7 +1366,7 @@
       },
       "reg": {
         "type": "integer",
-        "valuesList": "region_csv",
+        "valuesList": "reg_csv",
         "_defn": [
           {
             "_row_num": 16,
@@ -1360,7 +1386,7 @@
           "type": "string",
           "elementKey": "ondeintcns_items"
         },
-        "valuesList": "dontknow",
+        "valuesList": "dontknowfac",
         "_defn": [
           {
             "_row_num": 18,
@@ -1487,7 +1513,7 @@
           },
           {
             "type": "select_one_dropdown",
-            "values_list": "region_csv",
+            "values_list": "reg_csv",
             "name": "reg",
             "display": {
               "prompt": {
@@ -1526,7 +1552,7 @@
           },
           {
             "type": "select_multiple",
-            "values_list": "dontknow",
+            "values_list": "dontknowfac",
             "name": "ondeintcns",
             "_row_num": 18,
             "__rowNum__": 17,
@@ -1828,12 +1854,12 @@
               "__rowNum__": 21,
               "_token_type": "end_screen"
             },
-            "_screen_block": "function() {var activePromptIndicies = [];\nactivePromptIndicies.push(4);\nactivePromptIndicies.push(5);\nactivePromptIndicies.push(6);\nactivePromptIndicies.push(7);\nif (data('ondeintcns') != null) {\nassign('ONDEINTC', 9999);\n}\n\nreturn activePromptIndicies;\n}\n",
+            "_screen_block": "function() {var activePromptIndicies = [];\nactivePromptIndicies.push(4);\nactivePromptIndicies.push(5);\nactivePromptIndicies.push(6);\nactivePromptIndicies.push(7);\nif (data('ondeintcns') != null) {\nassign('ONDEINTC', data('ondeintcns'));\n}\n\nreturn activePromptIndicies;\n}\n",
             "operationIdx": 2
           },
           {
             "clause": "if",
-            "condition": "data('ONDEINTC') == '9999'",
+            "condition": "data('ONDEINTC') == '8888'",
             "_row_num": 23,
             "__rowNum__": 22,
             "_token_type": "goto_label",
@@ -2543,7 +2569,7 @@
       },
       "reg": {
         "type": "integer",
-        "valuesList": "region_csv",
+        "valuesList": "reg_csv",
         "_defn": [
           {
             "_row_num": 16,
@@ -2571,7 +2597,7 @@
           "isSessionVariable": true,
           "notUnitOfRetention": true
         },
-        "valuesList": "dontknow",
+        "valuesList": "dontknowfac",
         "_defn": [
           {
             "_row_num": 18,
