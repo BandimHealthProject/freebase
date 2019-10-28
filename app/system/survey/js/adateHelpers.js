@@ -57,8 +57,23 @@ return {
         return b.diff(a,'days');
     },
     display: function(aDate) {
-        return this.getMoment(aDate);
-        
+        var a = this.getMoment(aDate);
+        var d;
+        if (this.hasUncertainty(aDate)) {
+            if (this.dayUnkown(aDate)) {
+                if (this.monthUnkown(aDate)) {
+                    d = moment(a).format('??/??/YYYY');
+                } else {
+                    d = moment(a).format('??/MM/YYYY');
+                }   
+            } 
+            else if (this.monthUnkown(aDate)) {
+                d = moment(a).format('DD/??/YYYY'); 
+            }
+        } else {
+            d = moment(a).format('DD/MM/YYYY');
+        }
+        return d;
     }
 }
 });

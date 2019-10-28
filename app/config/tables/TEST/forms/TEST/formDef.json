@@ -102,8 +102,8 @@
         "display": {
           "prompt": {
             "text": {
-              "english": "diff in days: {{calculates.diffdays}}",
-              "default": "diff in days: {{calculates.diffdays}}"
+              "english": "diff in days: <b>{{calculates.diffdays}}</b>",
+              "default": "diff in days: <b>{{calculates.diffdays}}</b>"
             }
           }
         },
@@ -114,8 +114,8 @@
         "display": {
           "prompt": {
             "text": {
-              "english": "diff in years: {{calculates.diffInYears}}",
-              "default": "diff in years: {{calculates.diffInYears}}"
+              "english": "diff in years: <font color=\"red\">{{calculates.diffInYears}}</font>",
+              "default": "diff in years: <font color=\"red\">{{calculates.diffInYears}}</font>"
             }
           }
         },
@@ -126,7 +126,7 @@
         "display": {
           "prompt": {
             "text": {
-              "english": "display: {{calculates.display}}",
+              "english": "display:{{calculates.display}}",
               "default": "display: {{calculates.display}}"
             }
           }
@@ -142,117 +142,20 @@
         "_row_num": 11
       },
       {
-        "clause": "if",
-        "condition": "data('ADA') == null",
+        "type": "note",
+        "display": {
+          "prompt": {
+            "text": {
+              "english": "Alder I hele år: <b>{{calculates.ageInYears}}</b><br/>I måneder: {{calculates.ageInMonths}}<br/>I dage: {{calculates.ageInDays}}<br/>( baseret på {{data.ADA}} )<br/>",
+              "default": "Alder I hele år: <b>{{calculates.ageInYears}}</b><br/>I måneder: {{calculates.ageInMonths}}<br/>I dage: {{calculates.ageInDays}}<br/>( baseret på {{data.ADA}} )<br/>"
+            }
+          }
+        },
         "_row_num": 12
       },
       {
-        "type": "note",
-        "display": {
-          "prompt": {
-            "text": {
-              "english": "{{calculates.test}}"
-            }
-          }
-        },
-        "_row_num": 13
-      },
-      {
-        "clause": "end if",
-        "_row_num": 14
-      },
-      {
-        "clause": "if",
-        "condition": "adate.ageInYears(data('ADA'))>=2",
-        "_row_num": 15
-      },
-      {
-        "type": "note",
-        "name": "lblKnown",
-        "display": {
-          "prompt": {
-            "text": {
-              "english": "OVER 2 ÅR",
-              "default": "MAS DE 2 ANOS"
-            }
-          }
-        },
-        "_row_num": 16
-      },
-      {
-        "clause": "else",
-        "_row_num": 17
-      },
-      {
-        "type": "note",
-        "name": "lblUnknown",
-        "display": {
-          "prompt": {
-            "text": {
-              "english": "IKKE OVER 2 ÅR",
-              "default": "NAO MAS DE 2 ANOS"
-            }
-          }
-        },
-        "_row_num": 18
-      },
-      {
-        "clause": "end if",
-        "_row_num": 19
-      },
-      {
-        "clause": "if",
-        "condition": "!adate.yearUnknown(data('ADA'))",
-        "_row_num": 20
-      },
-      {
-        "type": "note",
-        "name": "lblbla",
-        "display": {
-          "prompt": {
-            "text": {
-              "english": "Alder I hele år: <b>{{calculates.ageInYears}}</b><br/>I måneder: {{calculates.ageInMonths}}<br/>I dage: {{calculates.ageInDays}}<br/>( baseret på {{data.ADA}} )<br/>"
-            }
-          }
-        },
-        "_row_num": 21
-      },
-      {
-        "type": "note",
-        "name": "lblblabla",
-        "display": {
-          "prompt": {
-            "text": {
-              "english": "Differencen var: {{calculates.diffInYears}} år."
-            }
-          }
-        },
-        "_row_num": 22
-      },
-      {
-        "clause": "else",
-        "_row_num": 23
-      },
-      {
-        "type": "note",
-        "name": "lblblabla",
-        "display": {
-          "prompt": {
-            "text": {
-              "english": "Ingen alder…",
-              "default": "Falsk"
-            }
-          }
-        },
-        "_row_num": 24
-      },
-      {
-        "clause": "end if",
-        "_row_num": 25
-      },
-      {
         "clause": "end screen",
-        "_row_num": 26
+        "_row_num": 13
       }
     ],
     "calculates": [
@@ -658,8 +561,8 @@
             "display": {
               "prompt": {
                 "text": {
-                  "english": "diff in days: {{calculates.diffdays}}",
-                  "default": "diff in days: {{calculates.diffdays}}"
+                  "english": "diff in days: <b>{{calculates.diffdays}}</b>",
+                  "default": "diff in days: <b>{{calculates.diffdays}}</b>"
                 }
               }
             },
@@ -675,8 +578,8 @@
             "display": {
               "prompt": {
                 "text": {
-                  "english": "diff in years: {{calculates.diffInYears}}",
-                  "default": "diff in years: {{calculates.diffInYears}}"
+                  "english": "diff in years: <font color=\"red\">{{calculates.diffInYears}}</font>",
+                  "default": "diff in years: <font color=\"red\">{{calculates.diffInYears}}</font>"
                 }
               }
             },
@@ -692,7 +595,7 @@
             "display": {
               "prompt": {
                 "text": {
-                  "english": "display: {{calculates.display}}",
+                  "english": "display:{{calculates.display}}",
                   "default": "display: {{calculates.display}}"
                 }
               }
@@ -709,112 +612,25 @@
             "display": {
               "prompt": {
                 "text": {
-                  "english": "{{calculates.test}}"
+                  "english": "Alder I hele år: <b>{{calculates.ageInYears}}</b><br/>I måneder: {{calculates.ageInMonths}}<br/>I dage: {{calculates.ageInDays}}<br/>( baseret på {{data.ADA}} )<br/>",
+                  "default": "Alder I hele år: <b>{{calculates.ageInYears}}</b><br/>I måneder: {{calculates.ageInMonths}}<br/>I dage: {{calculates.ageInDays}}<br/>( baseret på {{data.ADA}} )<br/>"
                 }
               }
             },
-            "_row_num": 13,
-            "__rowNum__": 12,
+            "_row_num": 12,
+            "__rowNum__": 11,
             "_token_type": "prompt",
             "_type": "note",
             "_branch_label_enclosing_screen": "survey/_screen11",
             "promptIdx": 5
           },
           {
-            "type": "note",
-            "name": "lblKnown",
-            "display": {
-              "prompt": {
-                "text": {
-                  "english": "OVER 2 ÅR",
-                  "default": "MAS DE 2 ANOS"
-                }
-              }
-            },
-            "_row_num": 16,
-            "__rowNum__": 15,
-            "_token_type": "prompt",
-            "_type": "note",
-            "_branch_label_enclosing_screen": "survey/_screen11",
-            "promptIdx": 6
-          },
-          {
-            "type": "note",
-            "name": "lblUnknown",
-            "display": {
-              "prompt": {
-                "text": {
-                  "english": "IKKE OVER 2 ÅR",
-                  "default": "NAO MAS DE 2 ANOS"
-                }
-              }
-            },
-            "_row_num": 18,
-            "__rowNum__": 17,
-            "_token_type": "prompt",
-            "_type": "note",
-            "_branch_label_enclosing_screen": "survey/_screen11",
-            "promptIdx": 7
-          },
-          {
-            "type": "note",
-            "name": "lblbla",
-            "display": {
-              "prompt": {
-                "text": {
-                  "english": "Alder I hele år: <b>{{calculates.ageInYears}}</b><br/>I måneder: {{calculates.ageInMonths}}<br/>I dage: {{calculates.ageInDays}}<br/>( baseret på {{data.ADA}} )<br/>"
-                }
-              }
-            },
-            "_row_num": 21,
-            "__rowNum__": 20,
-            "_token_type": "prompt",
-            "_type": "note",
-            "_branch_label_enclosing_screen": "survey/_screen11",
-            "promptIdx": 8
-          },
-          {
-            "type": "note",
-            "name": "lblblabla",
-            "display": {
-              "prompt": {
-                "text": {
-                  "english": "Differencen var: {{calculates.diffInYears}} år."
-                }
-              }
-            },
-            "_row_num": 22,
-            "__rowNum__": 21,
-            "_token_type": "prompt",
-            "_type": "note",
-            "_branch_label_enclosing_screen": "survey/_screen11",
-            "promptIdx": 9
-          },
-          {
-            "type": "note",
-            "name": "lblblabla",
-            "display": {
-              "prompt": {
-                "text": {
-                  "english": "Ingen alder…",
-                  "default": "Falsk"
-                }
-              }
-            },
-            "_row_num": 24,
-            "__rowNum__": 23,
-            "_token_type": "prompt",
-            "_type": "note",
-            "_branch_label_enclosing_screen": "survey/_screen11",
-            "promptIdx": 10
-          },
-          {
             "_token_type": "prompt",
             "type": "contents",
             "_type": "contents",
-            "_row_num": 27,
-            "_branch_label_enclosing_screen": "survey/_screen27",
-            "promptIdx": 11
+            "_row_num": 14,
+            "_branch_label_enclosing_screen": "survey/_screen14",
+            "promptIdx": 6
           }
         ],
         "validation_tag_map": {
@@ -856,23 +672,23 @@
             "_token_type": "begin_screen",
             "_end_screen_clause": {
               "clause": "end screen",
-              "_row_num": 26,
-              "__rowNum__": 25,
+              "_row_num": 13,
+              "__rowNum__": 12,
               "_token_type": "end_screen"
             },
-            "_screen_block": "function() {var activePromptIndicies = [];\nif (data('ADA') == null) {\nactivePromptIndicies.push(5);\n}\nif (adate.ageInYears(data('ADA'))>=2) {\nactivePromptIndicies.push(6);\n}\nelse {\nactivePromptIndicies.push(7);\n}\nif (!adate.yearUnknown(data('ADA'))) {\nactivePromptIndicies.push(8);\nactivePromptIndicies.push(9);\n}\nelse {\nactivePromptIndicies.push(10);\n}\n\nreturn activePromptIndicies;\n}\n",
+            "_screen_block": "function() {var activePromptIndicies = [];\nactivePromptIndicies.push(5);\n\nreturn activePromptIndicies;\n}\n",
             "operationIdx": 2
           },
           {
             "_token_type": "exit_section",
             "clause": "exit section",
-            "_row_num": 27,
+            "_row_num": 14,
             "operationIdx": 3
           },
           {
-            "_row_num": 27,
+            "_row_num": 14,
             "_token_type": "begin_screen",
-            "_screen_block": "function() {var activePromptIndicies = [];\nactivePromptIndicies.push(11);\n\nreturn activePromptIndicies;\n}\n",
+            "_screen_block": "function() {var activePromptIndicies = [];\nactivePromptIndicies.push(6);\n\nreturn activePromptIndicies;\n}\n",
             "screen": {
               "hideInBackHistory": true
             },
@@ -881,7 +697,7 @@
           {
             "_token_type": "resume",
             "clause": "resume",
-            "_row_num": 27,
+            "_row_num": 14,
             "operationIdx": 5
           }
         ],
@@ -890,7 +706,7 @@
           "_screen6": 1,
           "_screen11": 2,
           "_contents": 4,
-          "_screen27": 4
+          "_screen14": 4
         }
       },
       "initial": {
