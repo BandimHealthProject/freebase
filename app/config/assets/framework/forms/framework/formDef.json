@@ -79,12 +79,12 @@
       },
       {
         "choice_list_name": "forms",
-        "data_value": "MIF_VISIT",
+        "data_value": "CRIANCA",
         "display": {
           "title": {
             "text": {
-              "english": "Woman in the fertile age - visit",
-              "default": "Mulher na idade fertil - visita"
+              "english": "Child",
+              "default": "Crianca"
             }
           }
         },
@@ -92,12 +92,12 @@
       },
       {
         "choice_list_name": "forms",
-        "data_value": "VAC",
+        "data_value": "GRAVIDA_VISIT",
         "display": {
           "title": {
             "text": {
-              "english": "Vaccine",
-              "default": "Mulher na idade fertil - visitas"
+              "english": "Pregnants_visits",
+              "default": "Grávidas_visitas"
             }
           }
         },
@@ -105,12 +105,12 @@
       },
       {
         "choice_list_name": "forms",
-        "data_value": "SCAR",
+        "data_value": "CRIANCA_HOSP",
         "display": {
           "title": {
             "text": {
-              "english": "Scars",
-              "default": "Cicatrizes"
+              "english": "Child hospitalization",
+              "default": "Child hospitalization"
             }
           }
         },
@@ -131,32 +131,6 @@
       },
       {
         "choice_list_name": "forms",
-        "data_value": "GRAVIDA",
-        "display": {
-          "title": {
-            "text": {
-              "english": "Pregnant",
-              "default": "Grávidas"
-            }
-          }
-        },
-        "_row_num": 7
-      },
-      {
-        "choice_list_name": "forms",
-        "data_value": "GRAVIDA_VISIT",
-        "display": {
-          "title": {
-            "text": {
-              "english": "Pregnants_visits",
-              "default": "Grávidas_visitas"
-            }
-          }
-        },
-        "_row_num": 8
-      },
-      {
-        "choice_list_name": "forms",
         "data_value": "TEST",
         "display": {
           "title": {
@@ -166,33 +140,20 @@
             }
           }
         },
-        "_row_num": 9
+        "_row_num": 7
       },
       {
         "choice_list_name": "forms",
-        "data_value": "CRIANCA_VISIT",
+        "data_value": "MORSLIST",
         "display": {
           "title": {
             "text": {
-              "english": "Child Visit",
-              "default": "Crianca_visitas"
+              "english": "MORLIST",
+              "default": "MORLIST"
             }
           }
         },
-        "_row_num": 10
-      },
-      {
-        "choice_list_name": "forms",
-        "data_value": "CRIANCA",
-        "display": {
-          "title": {
-            "text": {
-              "english": "Child",
-              "default": "Crianca"
-            }
-          }
-        },
-        "_row_num": 11
+        "_row_num": 8
       }
     ],
     "survey": [
@@ -251,11 +212,11 @@
         "_row_num": 10
       },
       {
-        "branch_label": "MIF_VISIT",
+        "branch_label": "CRIANCA",
         "_row_num": 11
       },
       {
-        "url": "'?' + odkSurvey.getHashString('MIF_VISIT')",
+        "url": "'?' + odkSurvey.getHashString('CRIANCA')",
         "type": "external_link",
         "display": {
           "prompt": {
@@ -269,11 +230,11 @@
         "_row_num": 13
       },
       {
-        "branch_label": "VAC",
+        "branch_label": "GRAVIDA_VISIT",
         "_row_num": 14
       },
       {
-        "url": "'?' + odkSurvey.getHashString('VAC')",
+        "url": "'?' + odkSurvey.getHashString('GRAVIDA_VISIT')",
         "type": "external_link",
         "display": {
           "prompt": {
@@ -287,11 +248,11 @@
         "_row_num": 16
       },
       {
-        "branch_label": "SCAR",
+        "branch_label": "CRIANCA_HOSP",
         "_row_num": 17
       },
       {
-        "url": "'?' + odkSurvey.getHashString('SCAR')",
+        "url": "'?' + odkSurvey.getHashString('CRIANCA_HOSP')",
         "type": "external_link",
         "display": {
           "prompt": {
@@ -305,11 +266,11 @@
         "_row_num": 19
       },
       {
-        "branch_label": "CRIANCA",
+        "branch_label": "SES",
         "_row_num": 20
       },
       {
-        "url": "'?' + odkSurvey.getHashString('CRIANCA')",
+        "url": "'?' + odkSurvey.getHashString('SES')",
         "type": "external_link",
         "display": {
           "prompt": {
@@ -323,11 +284,11 @@
         "_row_num": 22
       },
       {
-        "branch_label": "GRAVIDA",
+        "branch_label": "TEST",
         "_row_num": 23
       },
       {
-        "url": "'?' + odkSurvey.getHashString('GRAVIDA')",
+        "url": "'?' + odkSurvey.getHashString('TEST')",
         "type": "external_link",
         "display": {
           "prompt": {
@@ -341,11 +302,11 @@
         "_row_num": 25
       },
       {
-        "branch_label": "GRAVIDA_VISIT",
+        "branch_label": "MORLIST",
         "_row_num": 26
       },
       {
-        "url": "'?' + odkSurvey.getHashString('GRAVIDA_VISIT')",
+        "url": "'?' + odkSurvey.getHashString('MORLIST')",
         "type": "external_link",
         "display": {
           "prompt": {
@@ -357,60 +318,6 @@
       {
         "clause": "exit section",
         "_row_num": 28
-      },
-      {
-        "branch_label": "TEST",
-        "_row_num": 29
-      },
-      {
-        "url": "'?' + odkSurvey.getHashString('TEST')",
-        "type": "external_link",
-        "display": {
-          "prompt": {
-            "text": "Open form"
-          }
-        },
-        "_row_num": 30
-      },
-      {
-        "clause": "exit section",
-        "_row_num": 31
-      },
-      {
-        "branch_label": "CRIANCA_VISIT",
-        "_row_num": 32
-      },
-      {
-        "url": "'?' + odkSurvey.getHashString('CRIANCA_VISIT')",
-        "type": "external_link",
-        "display": {
-          "prompt": {
-            "text": "Open form"
-          }
-        },
-        "_row_num": 33
-      },
-      {
-        "clause": "exit section",
-        "_row_num": 34
-      },
-      {
-        "branch_label": "SES",
-        "_row_num": 35
-      },
-      {
-        "url": "'?' + odkSurvey.getHashString('SES')",
-        "type": "external_link",
-        "display": {
-          "prompt": {
-            "text": "Open form"
-          }
-        },
-        "_row_num": 36
-      },
-      {
-        "clause": "exit section",
-        "_row_num": 37
       }
     ],
     "framework_translations": [
@@ -630,7 +537,7 @@
         "string_token": "finalize_survey_instance_detail",
         "text": {
           "english": "<p>You are at the end of the questionaire: </p><p>\"{{display_field}}\"</p><hr>",
-          "default": "<p>Você finalizou o questionário por esta criança: </p><p>\"{{display_field}}\"</p><hr>"
+          "default": "<p>Você finalizou o questionário: </p><p>\"{{display_field}}\"</p><hr>"
         },
         "_row_num": 29
       },
@@ -1009,12 +916,12 @@
         },
         {
           "choice_list_name": "forms",
-          "data_value": "MIF_VISIT",
+          "data_value": "CRIANCA",
           "display": {
             "title": {
               "text": {
-                "english": "Woman in the fertile age - visit",
-                "default": "Mulher na idade fertil - visita"
+                "english": "Child",
+                "default": "Crianca"
               }
             }
           },
@@ -1022,12 +929,12 @@
         },
         {
           "choice_list_name": "forms",
-          "data_value": "VAC",
+          "data_value": "GRAVIDA_VISIT",
           "display": {
             "title": {
               "text": {
-                "english": "Vaccine",
-                "default": "Mulher na idade fertil - visitas"
+                "english": "Pregnants_visits",
+                "default": "Grávidas_visitas"
               }
             }
           },
@@ -1035,12 +942,12 @@
         },
         {
           "choice_list_name": "forms",
-          "data_value": "SCAR",
+          "data_value": "CRIANCA_HOSP",
           "display": {
             "title": {
               "text": {
-                "english": "Scars",
-                "default": "Cicatrizes"
+                "english": "Child hospitalization",
+                "default": "Child hospitalization"
               }
             }
           },
@@ -1061,32 +968,6 @@
         },
         {
           "choice_list_name": "forms",
-          "data_value": "GRAVIDA",
-          "display": {
-            "title": {
-              "text": {
-                "english": "Pregnant",
-                "default": "Grávidas"
-              }
-            }
-          },
-          "_row_num": 7
-        },
-        {
-          "choice_list_name": "forms",
-          "data_value": "GRAVIDA_VISIT",
-          "display": {
-            "title": {
-              "text": {
-                "english": "Pregnants_visits",
-                "default": "Grávidas_visitas"
-              }
-            }
-          },
-          "_row_num": 8
-        },
-        {
-          "choice_list_name": "forms",
           "data_value": "TEST",
           "display": {
             "title": {
@@ -1096,33 +977,20 @@
               }
             }
           },
-          "_row_num": 9
+          "_row_num": 7
         },
         {
           "choice_list_name": "forms",
-          "data_value": "CRIANCA_VISIT",
+          "data_value": "MORSLIST",
           "display": {
             "title": {
               "text": {
-                "english": "Child Visit",
-                "default": "Crianca_visitas"
+                "english": "MORLIST",
+                "default": "MORLIST"
               }
             }
           },
-          "_row_num": 10
-        },
-        {
-          "choice_list_name": "forms",
-          "data_value": "CRIANCA",
-          "display": {
-            "title": {
-              "text": {
-                "english": "Child",
-                "default": "Crianca"
-              }
-            }
-          },
-          "_row_num": 11
+          "_row_num": 8
         }
       ]
     },
@@ -1344,7 +1212,7 @@
           "string_token": "finalize_survey_instance_detail",
           "text": {
             "english": "<p>You are at the end of the questionaire: </p><p>\"{{display_field}}\"</p><hr>",
-            "default": "<p>Você finalizou o questionário por esta criança: </p><p>\"{{display_field}}\"</p><hr>"
+            "default": "<p>Você finalizou o questionário: </p><p>\"{{display_field}}\"</p><hr>"
           },
           "_row_num": 29
         },
@@ -1784,7 +1652,7 @@
             "promptIdx": 2
           },
           {
-            "url": "'?' + odkSurvey.getHashString('MIF_VISIT')",
+            "url": "'?' + odkSurvey.getHashString('CRIANCA')",
             "type": "external_link",
             "display": {
               "prompt": {
@@ -1799,7 +1667,7 @@
             "promptIdx": 3
           },
           {
-            "url": "'?' + odkSurvey.getHashString('VAC')",
+            "url": "'?' + odkSurvey.getHashString('GRAVIDA_VISIT')",
             "type": "external_link",
             "display": {
               "prompt": {
@@ -1814,7 +1682,7 @@
             "promptIdx": 4
           },
           {
-            "url": "'?' + odkSurvey.getHashString('SCAR')",
+            "url": "'?' + odkSurvey.getHashString('CRIANCA_HOSP')",
             "type": "external_link",
             "display": {
               "prompt": {
@@ -1829,7 +1697,7 @@
             "promptIdx": 5
           },
           {
-            "url": "'?' + odkSurvey.getHashString('CRIANCA')",
+            "url": "'?' + odkSurvey.getHashString('SES')",
             "type": "external_link",
             "display": {
               "prompt": {
@@ -1844,7 +1712,7 @@
             "promptIdx": 6
           },
           {
-            "url": "'?' + odkSurvey.getHashString('GRAVIDA')",
+            "url": "'?' + odkSurvey.getHashString('TEST')",
             "type": "external_link",
             "display": {
               "prompt": {
@@ -1859,7 +1727,7 @@
             "promptIdx": 7
           },
           {
-            "url": "'?' + odkSurvey.getHashString('GRAVIDA_VISIT')",
+            "url": "'?' + odkSurvey.getHashString('MORLIST')",
             "type": "external_link",
             "display": {
               "prompt": {
@@ -1874,57 +1742,12 @@
             "promptIdx": 8
           },
           {
-            "url": "'?' + odkSurvey.getHashString('TEST')",
-            "type": "external_link",
-            "display": {
-              "prompt": {
-                "text": "Open form"
-              }
-            },
-            "_row_num": 30,
-            "__rowNum__": 29,
-            "_token_type": "prompt",
-            "_type": "external_link",
-            "_branch_label_enclosing_screen": "survey/_screen30",
-            "promptIdx": 9
-          },
-          {
-            "url": "'?' + odkSurvey.getHashString('CRIANCA_VISIT')",
-            "type": "external_link",
-            "display": {
-              "prompt": {
-                "text": "Open form"
-              }
-            },
-            "_row_num": 33,
-            "__rowNum__": 32,
-            "_token_type": "prompt",
-            "_type": "external_link",
-            "_branch_label_enclosing_screen": "survey/_screen33",
-            "promptIdx": 10
-          },
-          {
-            "url": "'?' + odkSurvey.getHashString('SES')",
-            "type": "external_link",
-            "display": {
-              "prompt": {
-                "text": "Open form"
-              }
-            },
-            "_row_num": 36,
-            "__rowNum__": 35,
-            "_token_type": "prompt",
-            "_type": "external_link",
-            "_branch_label_enclosing_screen": "survey/_screen36",
-            "promptIdx": 11
-          },
-          {
             "_token_type": "prompt",
             "type": "contents",
             "_type": "contents",
-            "_row_num": 38,
-            "_branch_label_enclosing_screen": "survey/_screen38",
-            "promptIdx": 12
+            "_row_num": 29,
+            "_branch_label_enclosing_screen": "survey/_screen29",
+            "promptIdx": 9
           }
         ],
         "validation_tag_map": {
@@ -2065,64 +1888,25 @@
             "operationIdx": 19
           },
           {
-            "_row_num": 30,
-            "_token_type": "begin_screen",
-            "_screen_block": "function() {var activePromptIndicies = [];\nactivePromptIndicies.push(9);\n\nreturn activePromptIndicies;\n}\n",
+            "_token_type": "exit_section",
+            "clause": "exit section",
+            "_row_num": 29,
             "operationIdx": 20
           },
           {
-            "clause": "exit section",
-            "_row_num": 31,
-            "__rowNum__": 30,
-            "_token_type": "exit_section",
-            "operationIdx": 21
-          },
-          {
-            "_row_num": 33,
+            "_row_num": 29,
             "_token_type": "begin_screen",
-            "_screen_block": "function() {var activePromptIndicies = [];\nactivePromptIndicies.push(10);\n\nreturn activePromptIndicies;\n}\n",
-            "operationIdx": 22
-          },
-          {
-            "clause": "exit section",
-            "_row_num": 34,
-            "__rowNum__": 33,
-            "_token_type": "exit_section",
-            "operationIdx": 23
-          },
-          {
-            "_row_num": 36,
-            "_token_type": "begin_screen",
-            "_screen_block": "function() {var activePromptIndicies = [];\nactivePromptIndicies.push(11);\n\nreturn activePromptIndicies;\n}\n",
-            "operationIdx": 24
-          },
-          {
-            "clause": "exit section",
-            "_row_num": 37,
-            "__rowNum__": 36,
-            "_token_type": "exit_section",
-            "operationIdx": 25
-          },
-          {
-            "_token_type": "exit_section",
-            "clause": "exit section",
-            "_row_num": 38,
-            "operationIdx": 26
-          },
-          {
-            "_row_num": 38,
-            "_token_type": "begin_screen",
-            "_screen_block": "function() {var activePromptIndicies = [];\nactivePromptIndicies.push(12);\n\nreturn activePromptIndicies;\n}\n",
+            "_screen_block": "function() {var activePromptIndicies = [];\nactivePromptIndicies.push(9);\n\nreturn activePromptIndicies;\n}\n",
             "screen": {
               "hideInBackHistory": true
             },
-            "operationIdx": 27
+            "operationIdx": 21
           },
           {
             "_token_type": "resume",
             "clause": "resume",
-            "_row_num": 38,
-            "operationIdx": 28
+            "_row_num": 29,
+            "operationIdx": 22
           }
         ],
         "branch_label_map": {
@@ -2133,26 +1917,20 @@
           "_endif6": 5,
           "MIF": 6,
           "_screen9": 6,
-          "MIF_VISIT": 8,
+          "CRIANCA": 8,
           "_screen12": 8,
-          "VAC": 10,
+          "GRAVIDA_VISIT": 10,
           "_screen15": 10,
-          "SCAR": 12,
+          "CRIANCA_HOSP": 12,
           "_screen18": 12,
-          "CRIANCA": 14,
+          "SES": 14,
           "_screen21": 14,
-          "GRAVIDA": 16,
+          "TEST": 16,
           "_screen24": 16,
-          "GRAVIDA_VISIT": 18,
+          "MORLIST": 18,
           "_screen27": 18,
-          "TEST": 20,
-          "_screen30": 20,
-          "CRIANCA_VISIT": 22,
-          "_screen33": 22,
-          "SES": 24,
-          "_screen36": 24,
-          "_contents": 27,
-          "_screen38": 27
+          "_contents": 21,
+          "_screen29": 21
         }
       }
     },

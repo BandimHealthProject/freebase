@@ -143,8 +143,15 @@
               "english": "Date of hospitalisation",
               "default": "Data de internamento"
             }
+          },
+          "constraint_message": {
+            "text": {
+              "english": "Date of hospitalisation cannot be in the future",
+              "default": "Date of hospitalisation cannot be in the future"
+            }
           }
         },
+        "constraint": "adate.diffInDays(data('CONT'), data('DATAINT'))<1",
         "_row_num": 12
       },
       {
@@ -174,8 +181,8 @@
         "display": {
           "prompt": {
             "text": {
-              "english": "Region: {{data.reg}}",
-              "default": "Região: {{data.reg}}"
+              "english": "Region: <b>{{data.reg}}<b>",
+              "default": "Região: <b>{{data.reg}}<b>"
             }
           }
         },
@@ -188,8 +195,8 @@
         "display": {
           "prompt": {
             "text": {
-              "english": "Health center / hospital: {{data.ONDEINTC}}",
-              "default": "Centro de saúde / hospital: {{data.ONDEINTC}}"
+              "english": "Health center / hospital: <b>{{data.ONDEINTC}}<b>",
+              "default": "Centro de saúde / hospital: <b>{{data.ONDEINTC}}<b>"
             }
           }
         },
@@ -760,7 +767,7 @@
         "_row_num": 20
       },
       {
-        "name": "VISITDATE",
+        "name": "CONT",
         "type": "adate",
         "isSessionVariable": false,
         "_row_num": 21
@@ -1337,7 +1344,7 @@
         "isSessionVariable": false,
         "elementKey": "REGIDC"
       },
-      "VISITDATE": {
+      "CONT": {
         "prompt_type_name": "adate",
         "type": "string",
         "elementType": "string",
@@ -1351,7 +1358,7 @@
           }
         ],
         "isSessionVariable": false,
-        "elementKey": "VISITDATE"
+        "elementKey": "CONT"
       },
       "VISITIDC": {
         "type": "string",
@@ -1485,8 +1492,15 @@
                   "english": "Date of hospitalisation",
                   "default": "Data de internamento"
                 }
+              },
+              "constraint_message": {
+                "text": {
+                  "english": "Date of hospitalisation cannot be in the future",
+                  "default": "Date of hospitalisation cannot be in the future"
+                }
               }
             },
+            "constraint": "adate.diffInDays(data('CONT'), data('DATAINT'))<1",
             "_row_num": 12,
             "__rowNum__": 11,
             "_token_type": "prompt",
@@ -1518,8 +1532,8 @@
             "display": {
               "prompt": {
                 "text": {
-                  "english": "Region: {{data.reg}}",
-                  "default": "Região: {{data.reg}}"
+                  "english": "Region: <b>{{data.reg}}<b>",
+                  "default": "Região: <b>{{data.reg}}<b>"
                 }
               }
             },
@@ -1537,8 +1551,8 @@
             "display": {
               "prompt": {
                 "text": {
-                  "english": "Health center / hospital: {{data.ONDEINTC}}",
-                  "default": "Centro de saúde / hospital: {{data.ONDEINTC}}"
+                  "english": "Health center / hospital: <b>{{data.ONDEINTC}}<b>",
+                  "default": "Centro de saúde / hospital: <b>{{data.ONDEINTC}}<b>"
                 }
               }
             },
@@ -1812,7 +1826,9 @@
           }
         ],
         "validation_tag_map": {
-          "finalize": []
+          "finalize": [
+            3
+          ]
         },
         "operations": [
           {
@@ -2534,7 +2550,7 @@
         "elementSet": "data",
         "elementPath": "REGIDC"
       },
-      "VISITDATE": {
+      "CONT": {
         "prompt_type_name": "adate",
         "type": "string",
         "elementType": "string",
@@ -2548,10 +2564,10 @@
           }
         ],
         "isSessionVariable": false,
-        "elementKey": "VISITDATE",
-        "elementName": "VISITDATE",
+        "elementKey": "CONT",
+        "elementName": "CONT",
         "elementSet": "data",
-        "elementPath": "VISITDATE"
+        "elementPath": "CONT"
       },
       "VISITIDC": {
         "type": "string",

@@ -216,7 +216,7 @@ window.odkFrameworkDefinitions = {
       "string_token": "finalize_survey_instance_detail",
       "text": {
         "english": "<p>You are at the end of the questionaire: </p><p>\"{{display_field}}\"</p><hr>",
-        "default": "<p>Você finalizou o questionário por esta criança: </p><p>\"{{display_field}}\"</p><hr>"
+        "default": "<p>Você finalizou o questionário: </p><p>\"{{display_field}}\"</p><hr>"
       },
       "_row_num": 29
     },

@@ -281,8 +281,15 @@
               "english": "Woman",
               "default": "Mulher"
             }
+          },
+          "constraint_message": {
+            "text": {
+              "english": "Cannot be in the future",
+              "default": "Cannot be in the future"
+            }
           }
         },
+        "constraint": "adate.diffInDays(data('CONT'), data('LMP_M'))<1 || data('LMP_M') == null",
         "_row_num": 37
       },
       {
@@ -299,8 +306,15 @@
               "english": "Card",
               "default": "Cartão"
             }
+          },
+          "constraint_message": {
+            "text": {
+              "english": "Cannot be in the future",
+              "default": "Cannot be in the future"
+            }
           }
         },
+        "constraint": "adate.diffInDays(data('CONT'), data('LMP_C'))<1 || data('LMP_C') == null",
         "_row_num": 39
       },
       {
@@ -607,8 +621,15 @@
               "english": "Date of pregnancy end",
               "default": "Data do fim da gravidez"
             }
+          },
+          "constraint_message": {
+            "text": {
+              "english": "Date of pregnancy end cannot be in the future",
+              "default": "Date of pregnancy end cannot be in the future"
+            }
           }
         },
+        "constraint": "adate.diffInDays(data('CONT'), data('OUTDATE'))<1 || data('OUTDATE') == null",
         "_row_num": 86
       },
       {
@@ -1149,8 +1170,8 @@
         "display": {
           "prompt": {
             "text": {
-              "english": "Region: {{data.regpar}}",
-              "default": "Região: {{data.regpar}}"
+              "english": "Region: <b>{{data.regpar}}<b>",
+              "default": "Região: <b>{{data.regpar}}<b>"
             }
           }
         },
@@ -1163,8 +1184,8 @@
         "display": {
           "prompt": {
             "text": {
-              "english": "Health center / hospital: {{data.PARTONDE}}",
-              "default": "Centro de saúde / hospital: {{data.PARTONDE}}"
+              "english": "Health center / hospital: <b>{{data.PARTONDE}}<b>",
+              "default": "Centro de saúde / hospital: <b>{{data.PARTONDE}}<b>"
             }
           }
         },
@@ -4393,8 +4414,15 @@
                   "english": "Woman",
                   "default": "Mulher"
                 }
+              },
+              "constraint_message": {
+                "text": {
+                  "english": "Cannot be in the future",
+                  "default": "Cannot be in the future"
+                }
               }
             },
+            "constraint": "adate.diffInDays(data('CONT'), data('LMP_M'))<1 || data('LMP_M') == null",
             "_row_num": 37,
             "__rowNum__": 36,
             "_token_type": "prompt",
@@ -4411,8 +4439,15 @@
                   "english": "Card",
                   "default": "Cartão"
                 }
+              },
+              "constraint_message": {
+                "text": {
+                  "english": "Cannot be in the future",
+                  "default": "Cannot be in the future"
+                }
               }
             },
+            "constraint": "adate.diffInDays(data('CONT'), data('LMP_C'))<1 || data('LMP_C') == null",
             "_row_num": 39,
             "__rowNum__": 38,
             "_token_type": "prompt",
@@ -4652,8 +4687,15 @@
                   "english": "Date of pregnancy end",
                   "default": "Data do fim da gravidez"
                 }
+              },
+              "constraint_message": {
+                "text": {
+                  "english": "Date of pregnancy end cannot be in the future",
+                  "default": "Date of pregnancy end cannot be in the future"
+                }
               }
             },
+            "constraint": "adate.diffInDays(data('CONT'), data('OUTDATE'))<1 || data('OUTDATE') == null",
             "_row_num": 86,
             "__rowNum__": 85,
             "_token_type": "prompt",
@@ -5069,8 +5111,8 @@
             "display": {
               "prompt": {
                 "text": {
-                  "english": "Region: {{data.regpar}}",
-                  "default": "Região: {{data.regpar}}"
+                  "english": "Region: <b>{{data.regpar}}<b>",
+                  "default": "Região: <b>{{data.regpar}}<b>"
                 }
               }
             },
@@ -5088,8 +5130,8 @@
             "display": {
               "prompt": {
                 "text": {
-                  "english": "Health center / hospital: {{data.PARTONDE}}",
-                  "default": "Centro de saúde / hospital: {{data.PARTONDE}}"
+                  "english": "Health center / hospital: <b>{{data.PARTONDE}}<b>",
+                  "default": "Centro de saúde / hospital: <b>{{data.PARTONDE}}<b>"
                 }
               }
             },
@@ -5304,7 +5346,11 @@
           }
         ],
         "validation_tag_map": {
-          "finalize": []
+          "finalize": [
+            10,
+            11,
+            26
+          ]
         },
         "operations": [
           {

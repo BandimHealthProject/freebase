@@ -5,7 +5,7 @@ return {
         if (!aDate || aDate.length<4 || this.yearUnknown(aDate)) {
             return false;
         }
-        aDate = aDate.toUpperCase().replace('D:NS','D:15').replace('M:NS','M:5');
+        aDate = aDate.toUpperCase().replace('D:NS','D:15').replace('M:NS','M:7').replace('M:NS','D:1'); // unknown date: 15th of month, unknown month: july 1st
         var d = moment(aDate, '\\D:DD,\\M:MM,\\Y:YYYY');
         if (d.isValid()) {
             return d;
