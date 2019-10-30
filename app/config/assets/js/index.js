@@ -169,7 +169,7 @@ function initDrops() {
         selAss.append($("<option />").val(this.no).text(this.name));
     })
 
-    selReg.append($("<option />").val(-1).text(""));
+    // selReg.append($("<option />").val(-1).text(""));
     $.each(regions, function() {
         // console.log("REGIONS:");
         // console.log(this);
