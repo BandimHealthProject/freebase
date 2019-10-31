@@ -83,7 +83,7 @@
           "prompt": {
             "text": {
               "english": "Testdato 2",
-              "default": "Nammename"
+              "default": "Testdato 2"
             }
           }
         },
@@ -98,6 +98,24 @@
         "_row_num": 6
       },
       {
+        "type": "assign",
+        "name": "test",
+        "calculation": "adate.today()",
+        "_row_num": 7
+      },
+      {
+        "type": "note",
+        "display": {
+          "prompt": {
+            "text": {
+              "english": "today: {{calculates.today}}",
+              "default": "today: {{calculates.today}}"
+            }
+          }
+        },
+        "_row_num": 8
+      },
+      {
         "type": "note",
         "display": {
           "prompt": {
@@ -107,7 +125,7 @@
             }
           }
         },
-        "_row_num": 7
+        "_row_num": 9
       },
       {
         "type": "note",
@@ -119,7 +137,7 @@
             }
           }
         },
-        "_row_num": 8
+        "_row_num": 10
       },
       {
         "type": "note",
@@ -131,15 +149,64 @@
             }
           }
         },
-        "_row_num": 9
+        "_row_num": 11
+      },
+      {
+        "type": "note",
+        "display": {
+          "prompt": {
+            "text": {
+              "english": "display today: {{calculates.displayToday}}",
+              "default": "display today: {{calculates.displayToday}}"
+            }
+          }
+        },
+        "_row_num": 12
+      },
+      {
+        "type": "note",
+        "display": {
+          "prompt": {
+            "text": {
+              "english": "assign: {{data.test}}",
+              "default": "assign: {{data.test}}"
+            }
+          }
+        },
+        "_row_num": 13
+      },
+      {
+        "type": "note",
+        "display": {
+          "prompt": {
+            "text": {
+              "english": "ADA: {{data.ADA}}",
+              "default": "ADA: {{data.ADA}}"
+            }
+          }
+        },
+        "_row_num": 14
+      },
+      {
+        "type": "adate",
+        "name": "test",
+        "display": {
+          "prompt": {
+            "text": {
+              "english": "adate",
+              "default": "adate"
+            }
+          }
+        },
+        "_row_num": 15
       },
       {
         "clause": "end screen",
-        "_row_num": 10
+        "_row_num": 16
       },
       {
         "clause": "begin screen",
-        "_row_num": 11
+        "_row_num": 17
       },
       {
         "type": "note",
@@ -151,11 +218,11 @@
             }
           }
         },
-        "_row_num": 12
+        "_row_num": 18
       },
       {
         "clause": "end screen",
-        "_row_num": 13
+        "_row_num": 19
       }
     ],
     "calculates": [
@@ -193,6 +260,16 @@
         "calculation_name": "display",
         "calculation": "adate.display(data('ADA'))",
         "_row_num": 8
+      },
+      {
+        "calculation_name": "today",
+        "calculation": "adate.today()",
+        "_row_num": 9
+      },
+      {
+        "calculation_name": "displayToday",
+        "calculation": "adate.display(adate.today())",
+        "_row_num": 10
       }
     ],
     "prompt_types": [
@@ -264,6 +341,18 @@
         "type": "string",
         "isSessionVariable": true,
         "_row_num": 3
+      },
+      {
+        "name": "ADA3",
+        "type": "adate",
+        "isSessionVariable": true,
+        "_row_num": 4
+      },
+      {
+        "name": "test",
+        "type": "text",
+        "isSessionVariable": true,
+        "_row_num": 5
       }
     ]
   },
@@ -470,6 +559,16 @@
         "calculation_name": "display",
         "calculation": "adate.display(data('ADA'))",
         "_row_num": 8
+      },
+      "today": {
+        "calculation_name": "today",
+        "calculation": "adate.today()",
+        "_row_num": 9
+      },
+      "displayToday": {
+        "calculation_name": "displayToday",
+        "calculation": "adate.display(adate.today())",
+        "_row_num": 10
       }
     },
     "model": {
@@ -508,6 +607,40 @@
         ],
         "isSessionVariable": true,
         "elementKey": "ADA2"
+      },
+      "ADA3": {
+        "prompt_type_name": "adate",
+        "type": "string",
+        "elementType": "string",
+        "comment": "Save only mm.dd.yyyy with support for ?? at all positions",
+        "_row_num": 3,
+        "__rowNum__": 2,
+        "_defn": [
+          {
+            "_row_num": 4,
+            "section_name": "model"
+          }
+        ],
+        "isSessionVariable": true,
+        "elementKey": "ADA3"
+      },
+      "test": {
+        "prompt_type_name": "adate",
+        "type": "string",
+        "elementType": "string",
+        "comment": "Save only mm.dd.yyyy with support for ?? at all positions",
+        "_defn": [
+          {
+            "_row_num": 15,
+            "section_name": "survey"
+          },
+          {
+            "_row_num": 5,
+            "section_name": "model"
+          }
+        ],
+        "isSessionVariable": true,
+        "elementKey": "test"
       }
     },
     "section_names": [
@@ -545,7 +678,7 @@
               "prompt": {
                 "text": {
                   "english": "Testdato 2",
-                  "default": "Nammename"
+                  "default": "Testdato 2"
                 }
               }
             },
@@ -561,17 +694,34 @@
             "display": {
               "prompt": {
                 "text": {
+                  "english": "today: {{calculates.today}}",
+                  "default": "today: {{calculates.today}}"
+                }
+              }
+            },
+            "_row_num": 8,
+            "__rowNum__": 7,
+            "_token_type": "prompt",
+            "_type": "note",
+            "_branch_label_enclosing_screen": "survey/_screen6",
+            "promptIdx": 2
+          },
+          {
+            "type": "note",
+            "display": {
+              "prompt": {
+                "text": {
                   "english": "diff in days: <b>{{calculates.diffdays}}</b>",
                   "default": "diff in days: <b>{{calculates.diffdays}}</b>"
                 }
               }
             },
-            "_row_num": 7,
-            "__rowNum__": 6,
+            "_row_num": 9,
+            "__rowNum__": 8,
             "_token_type": "prompt",
             "_type": "note",
             "_branch_label_enclosing_screen": "survey/_screen6",
-            "promptIdx": 2
+            "promptIdx": 3
           },
           {
             "type": "note",
@@ -583,12 +733,12 @@
                 }
               }
             },
-            "_row_num": 8,
-            "__rowNum__": 7,
+            "_row_num": 10,
+            "__rowNum__": 9,
             "_token_type": "prompt",
             "_type": "note",
             "_branch_label_enclosing_screen": "survey/_screen6",
-            "promptIdx": 3
+            "promptIdx": 4
           },
           {
             "type": "note",
@@ -600,12 +750,81 @@
                 }
               }
             },
-            "_row_num": 9,
-            "__rowNum__": 8,
+            "_row_num": 11,
+            "__rowNum__": 10,
             "_token_type": "prompt",
             "_type": "note",
             "_branch_label_enclosing_screen": "survey/_screen6",
-            "promptIdx": 4
+            "promptIdx": 5
+          },
+          {
+            "type": "note",
+            "display": {
+              "prompt": {
+                "text": {
+                  "english": "display today: {{calculates.displayToday}}",
+                  "default": "display today: {{calculates.displayToday}}"
+                }
+              }
+            },
+            "_row_num": 12,
+            "__rowNum__": 11,
+            "_token_type": "prompt",
+            "_type": "note",
+            "_branch_label_enclosing_screen": "survey/_screen6",
+            "promptIdx": 6
+          },
+          {
+            "type": "note",
+            "display": {
+              "prompt": {
+                "text": {
+                  "english": "assign: {{data.test}}",
+                  "default": "assign: {{data.test}}"
+                }
+              }
+            },
+            "_row_num": 13,
+            "__rowNum__": 12,
+            "_token_type": "prompt",
+            "_type": "note",
+            "_branch_label_enclosing_screen": "survey/_screen6",
+            "promptIdx": 7
+          },
+          {
+            "type": "note",
+            "display": {
+              "prompt": {
+                "text": {
+                  "english": "ADA: {{data.ADA}}",
+                  "default": "ADA: {{data.ADA}}"
+                }
+              }
+            },
+            "_row_num": 14,
+            "__rowNum__": 13,
+            "_token_type": "prompt",
+            "_type": "note",
+            "_branch_label_enclosing_screen": "survey/_screen6",
+            "promptIdx": 8
+          },
+          {
+            "type": "adate",
+            "name": "test",
+            "display": {
+              "prompt": {
+                "text": {
+                  "english": "adate",
+                  "default": "adate"
+                }
+              }
+            },
+            "_row_num": 15,
+            "__rowNum__": 14,
+            "_token_type": "prompt",
+            "_type": "adate",
+            "_branch_label_enclosing_screen": "survey/_screen6",
+            "promptIdx": 9
           },
           {
             "type": "note",
@@ -617,20 +836,20 @@
                 }
               }
             },
-            "_row_num": 12,
-            "__rowNum__": 11,
+            "_row_num": 18,
+            "__rowNum__": 17,
             "_token_type": "prompt",
             "_type": "note",
-            "_branch_label_enclosing_screen": "survey/_screen11",
-            "promptIdx": 5
+            "_branch_label_enclosing_screen": "survey/_screen17",
+            "promptIdx": 10
           },
           {
             "_token_type": "prompt",
             "type": "contents",
             "_type": "contents",
-            "_row_num": 14,
-            "_branch_label_enclosing_screen": "survey/_screen14",
-            "promptIdx": 6
+            "_row_num": 20,
+            "_branch_label_enclosing_screen": "survey/_screen20",
+            "promptIdx": 11
           }
         ],
         "validation_tag_map": {
@@ -658,37 +877,37 @@
             "_token_type": "begin_screen",
             "_end_screen_clause": {
               "clause": "end screen",
-              "_row_num": 10,
-              "__rowNum__": 9,
+              "_row_num": 16,
+              "__rowNum__": 15,
               "_token_type": "end_screen"
             },
-            "_screen_block": "function() {var activePromptIndicies = [];\nactivePromptIndicies.push(2);\nactivePromptIndicies.push(3);\nactivePromptIndicies.push(4);\n\nreturn activePromptIndicies;\n}\n",
+            "_screen_block": "function() {var activePromptIndicies = [];\nassign('test', adate.today());\nactivePromptIndicies.push(2);\nactivePromptIndicies.push(3);\nactivePromptIndicies.push(4);\nactivePromptIndicies.push(5);\nactivePromptIndicies.push(6);\nactivePromptIndicies.push(7);\nactivePromptIndicies.push(8);\nactivePromptIndicies.push(9);\n\nreturn activePromptIndicies;\n}\n",
             "operationIdx": 1
           },
           {
             "clause": "begin screen",
-            "_row_num": 11,
-            "__rowNum__": 10,
+            "_row_num": 17,
+            "__rowNum__": 16,
             "_token_type": "begin_screen",
             "_end_screen_clause": {
               "clause": "end screen",
-              "_row_num": 13,
-              "__rowNum__": 12,
+              "_row_num": 19,
+              "__rowNum__": 18,
               "_token_type": "end_screen"
             },
-            "_screen_block": "function() {var activePromptIndicies = [];\nactivePromptIndicies.push(5);\n\nreturn activePromptIndicies;\n}\n",
+            "_screen_block": "function() {var activePromptIndicies = [];\nactivePromptIndicies.push(10);\n\nreturn activePromptIndicies;\n}\n",
             "operationIdx": 2
           },
           {
             "_token_type": "exit_section",
             "clause": "exit section",
-            "_row_num": 14,
+            "_row_num": 20,
             "operationIdx": 3
           },
           {
-            "_row_num": 14,
+            "_row_num": 20,
             "_token_type": "begin_screen",
-            "_screen_block": "function() {var activePromptIndicies = [];\nactivePromptIndicies.push(6);\n\nreturn activePromptIndicies;\n}\n",
+            "_screen_block": "function() {var activePromptIndicies = [];\nactivePromptIndicies.push(11);\n\nreturn activePromptIndicies;\n}\n",
             "screen": {
               "hideInBackHistory": true
             },
@@ -697,16 +916,16 @@
           {
             "_token_type": "resume",
             "clause": "resume",
-            "_row_num": 14,
+            "_row_num": 20,
             "operationIdx": 5
           }
         ],
         "branch_label_map": {
           "_screen2": 0,
           "_screen6": 1,
-          "_screen11": 2,
+          "_screen17": 2,
           "_contents": 4,
-          "_screen14": 4
+          "_screen20": 4
         }
       },
       "initial": {
@@ -932,6 +1151,46 @@
         "elementName": "ADA2",
         "elementSet": "data",
         "elementPath": "ADA2"
+      },
+      "ADA3": {
+        "prompt_type_name": "adate",
+        "type": "string",
+        "elementType": "string",
+        "comment": "Save only mm.dd.yyyy with support for ?? at all positions",
+        "_row_num": 3,
+        "__rowNum__": 2,
+        "_defn": [
+          {
+            "_row_num": 4,
+            "section_name": "model"
+          }
+        ],
+        "isSessionVariable": true,
+        "elementKey": "ADA3",
+        "elementName": "ADA3",
+        "elementSet": "data",
+        "elementPath": "ADA3"
+      },
+      "test": {
+        "prompt_type_name": "adate",
+        "type": "string",
+        "elementType": "string",
+        "comment": "Save only mm.dd.yyyy with support for ?? at all positions",
+        "_defn": [
+          {
+            "_row_num": 15,
+            "section_name": "survey"
+          },
+          {
+            "_row_num": 5,
+            "section_name": "model"
+          }
+        ],
+        "isSessionVariable": true,
+        "elementKey": "test",
+        "elementName": "test",
+        "elementSet": "data",
+        "elementPath": "test"
       },
       "_id": {
         "type": "string",

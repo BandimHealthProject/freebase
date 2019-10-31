@@ -74,6 +74,14 @@ return {
             d = moment(a).format('DD/MM/YYYY');
         }
         return d;
+    },
+    today: function() {
+        var today = new Date();
+        var day = today.getDate();
+        var mon = today.getMonth()+1;
+        var yea = today.getFullYear();
+        var aDate = 'D:' + day + ',M:' + mon + ',Y:' + yea;
+        return aDate;
     }
 }
 });
