@@ -303,7 +303,7 @@ function getDefaultsMIF(person) {
     defaults['NOME'] = person.NOME;
     defaults['gr'] = person.gr;
     
-    defaults['estadovis'] = person.estadovis;
+    defaults['lastvisitestado'] = person.estadovis;
     defaults['CART'] = person.CART;
     defaults['lastvisitdate'] = person.cont; // date of last visit
     defaults['MIFDNASC'] = person.MIFDNASC;
