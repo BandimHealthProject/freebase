@@ -8212,11 +8212,11 @@
       {
         "query_name": "pregnancies",
         "query_type": "linked_table",
-        "linked_form_id": "GRAVIDA_VISIT",
-        "linked_table_id": "GRAVIDA_VISIT",
+        "linked_form_id": "GRAVIDA",
+        "linked_table_id": "GRAVIDA",
         "selection": "REGID = ?",
         "selectionArgs": "[data('REGID')]",
-        "newRowInitialElementKeyToValueMap": "{REGID: data('REGID'), CONT: data('CONT'), MULPRESA: data('ESTADOVIS'), VISITID: opendatakit.getCurrentInstanceId(), ASSISTENTE: data('ASSISTENTE')}",
+        "newRowInitialElementKeyToValueMap": "{REGID: data('REGID'), CONT: data('CONT'), MULPRESA1: data('ESTADOVIS'), VISITID: opendatakit.getCurrentInstanceId(), ASSISTENTE: data('ASSISTENTE')}",
         "openRowInitialElementKeyToValueMap": "{}",
         "_row_num": 2
       },
@@ -11375,6 +11375,12 @@
         "type": "adate",
         "isSessionVariable": true,
         "_row_num": 258
+      },
+      {
+        "name": "LITTERSIZE_ABPART",
+        "type": "integer",
+        "isSessionVariable": false,
+        "_row_num": 260
       }
     ]
   },
@@ -13250,11 +13256,11 @@
       "pregnancies": {
         "query_name": "pregnancies",
         "query_type": "linked_table",
-        "linked_form_id": "GRAVIDA_VISIT",
-        "linked_table_id": "GRAVIDA_VISIT",
+        "linked_form_id": "GRAVIDA",
+        "linked_table_id": "GRAVIDA",
         "selection": "REGID = ?",
         "selectionArgs": "[data('REGID')]",
-        "newRowInitialElementKeyToValueMap": "{REGID: data('REGID'), CONT: data('CONT'), MULPRESA: data('ESTADOVIS'), VISITID: opendatakit.getCurrentInstanceId(), ASSISTENTE: data('ASSISTENTE')}",
+        "newRowInitialElementKeyToValueMap": "{REGID: data('REGID'), CONT: data('CONT'), MULPRESA1: data('ESTADOVIS'), VISITID: opendatakit.getCurrentInstanceId(), ASSISTENTE: data('ASSISTENTE')}",
         "openRowInitialElementKeyToValueMap": "{}",
         "_row_num": 2
       },
@@ -17688,13 +17694,18 @@
         "elementKey": "lastvisitdate"
       },
       "LITTERSIZE_ABPART": {
+        "type": "integer",
         "_defn": [
           {
             "_row_num": 68,
             "section_name": "visit"
+          },
+          {
+            "_row_num": 260,
+            "section_name": "model"
           }
         ],
-        "type": "integer",
+        "isSessionVariable": false,
         "elementKey": "LITTERSIZE_ABPART"
       }
     },
@@ -34307,13 +34318,18 @@
         "elementPath": "lastvisitdate"
       },
       "LITTERSIZE_ABPART": {
+        "type": "integer",
         "_defn": [
           {
             "_row_num": 68,
             "section_name": "visit"
+          },
+          {
+            "_row_num": 260,
+            "section_name": "model"
           }
         ],
-        "type": "integer",
+        "isSessionVariable": false,
         "elementKey": "LITTERSIZE_ABPART",
         "elementName": "LITTERSIZE_ABPART",
         "elementSet": "data",

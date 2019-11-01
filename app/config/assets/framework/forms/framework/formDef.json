@@ -92,12 +92,12 @@
       },
       {
         "choice_list_name": "forms",
-        "data_value": "GRAVIDA_VISIT",
+        "data_value": "GRAVIDA",
         "display": {
           "title": {
             "text": {
-              "english": "Pregnants_visits",
-              "default": "Grávidas_visitas"
+              "english": "Pregnants",
+              "default": "Grávidas"
             }
           }
         },
@@ -929,12 +929,12 @@
         },
         {
           "choice_list_name": "forms",
-          "data_value": "GRAVIDA_VISIT",
+          "data_value": "GRAVIDA",
           "display": {
             "title": {
               "text": {
-                "english": "Pregnants_visits",
-                "default": "Grávidas_visitas"
+                "english": "Pregnants",
+                "default": "Grávidas"
               }
             }
           },

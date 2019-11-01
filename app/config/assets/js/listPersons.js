@@ -185,9 +185,9 @@ function loadChildren() {
 
 function loadPregnancies() {
     // SQL to load pregnancies
-    var sql = "SELECT LMP_M, OUTSTATUS  FROM GRAVIDA_VISIT  WHERE REGID = " + REGID + " GROUP BY REGID HAVING MIN(ROWID) AND  ORDER BY substr(CONT, instr(CONT, 'Y:')+2, 4) || substr('00'|| trim(substr(CONT, instr(CONT, 'M:')+2, 2),','), -2, 2) || substr('00'|| trim(substr(CONT, instr(CONT, 'D:')+2, 2),','), -2, 2) DESC";
+    var sql = "SELECT LMP_M, OUTSTATUS  FROM GRAVIDA  WHERE REGID = " + REGID + " GROUP BY REGID HAVING MIN(ROWID) AND  ORDER BY substr(CONT, instr(CONT, 'Y:')+2, 4) || substr('00'|| trim(substr(CONT, instr(CONT, 'M:')+2, 2),','), -2, 2) || substr('00'|| trim(substr(CONT, instr(CONT, 'D:')+2, 2),','), -2, 2) DESC";
     pregnancies = [];
-    console.log("Querying database for GRAVIDA_VISIT...");
+    console.log("Querying database for GRAVIDA...");
     console.log(sql);
     var successFn = function( result ) {
         console.log("Found " + result.getCount() + " pregnancies");
@@ -211,7 +211,7 @@ function loadPregnancies() {
         alert("Program error Unable to look up pregnancies.");
     }
 
-    odkData.arbitraryQuery('GRAVIDA_VISIT', sql, null, null, null, successFn, failureFn);
+    odkData.arbitraryQuery('GRAVIDA', sql, null, null, null, successFn, failureFn);
 }
 
 function populateView() {
