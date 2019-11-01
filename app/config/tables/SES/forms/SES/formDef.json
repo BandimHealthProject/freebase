@@ -360,23 +360,24 @@
         "name": "CABA",
         "type": "select_one",
         "isSessionVariable": false,
+        "comment": "survey",
         "_row_num": 2
-      },
-      {
-        "name": "SES_ESTADO",
-        "type": "integer",
-        "isSessionVariable": false,
-        "_row_num": 3
       },
       {
         "name": "GERADOR",
         "type": "select_one",
         "isSessionVariable": false,
-        "_row_num": 4
+        "_row_num": 3
       },
       {
         "name": "RADIO",
         "type": "select_one",
+        "isSessionVariable": false,
+        "_row_num": 4
+      },
+      {
+        "name": "SES_ESTADO",
+        "type": "assign",
         "isSessionVariable": false,
         "_row_num": 5
       },
@@ -399,20 +400,21 @@
         "_row_num": 8
       },
       {
-        "name": "REGID",
+        "name": "PREGID",
         "type": "text",
         "isSessionVariable": false,
+        "comment": "GRAVIDA",
         "_row_num": 10
       },
       {
-        "name": "SESDATA",
-        "type": "adate",
+        "name": "REGID",
+        "type": "text",
         "isSessionVariable": false,
         "_row_num": 11
       },
       {
-        "name": "PREGID",
-        "type": "text",
+        "name": "SESDATA",
+        "type": "adate",
         "isSessionVariable": false,
         "_row_num": 12
       },
@@ -420,13 +422,14 @@
         "name": "REGIDC",
         "type": "text",
         "isSessionVariable": false,
-        "_row_num": 13
+        "comment": "CRIANCA",
+        "_row_num": 14
       },
       {
-        "name": "VISITIDC",
+        "name": "VISITID",
         "type": "text",
         "isSessionVariable": false,
-        "_row_num": 14
+        "_row_num": 15
       }
     ]
   },
@@ -740,18 +743,8 @@
           }
         ],
         "isSessionVariable": false,
+        "comment": "survey",
         "elementKey": "CABA"
-      },
-      "SES_ESTADO": {
-        "type": "integer",
-        "_defn": [
-          {
-            "_row_num": 3,
-            "section_name": "model"
-          }
-        ],
-        "isSessionVariable": false,
-        "elementKey": "SES_ESTADO"
       },
       "GERADOR": {
         "type": "string",
@@ -762,7 +755,7 @@
             "section_name": "survey"
           },
           {
-            "_row_num": 4,
+            "_row_num": 3,
             "section_name": "model"
           }
         ],
@@ -778,12 +771,23 @@
             "section_name": "survey"
           },
           {
-            "_row_num": 5,
+            "_row_num": 4,
             "section_name": "model"
           }
         ],
         "isSessionVariable": false,
         "elementKey": "RADIO"
+      },
+      "SES_ESTADO": {
+        "_defn": [
+          {
+            "_row_num": 5,
+            "section_name": "model"
+          }
+        ],
+        "type": "assign",
+        "isSessionVariable": false,
+        "elementKey": "SES_ESTADO"
       },
       "TECTO": {
         "type": "string",
@@ -832,11 +836,23 @@
         "isSessionVariable": false,
         "elementKey": "TELENUMERO"
       },
-      "REGID": {
+      "PREGID": {
         "type": "string",
         "_defn": [
           {
             "_row_num": 10,
+            "section_name": "model"
+          }
+        ],
+        "isSessionVariable": false,
+        "comment": "GRAVIDA",
+        "elementKey": "PREGID"
+      },
+      "REGID": {
+        "type": "string",
+        "_defn": [
+          {
+            "_row_num": 11,
             "section_name": "model"
           }
         ],
@@ -852,36 +868,14 @@
         "__rowNum__": 2,
         "_defn": [
           {
-            "_row_num": 11,
+            "_row_num": 12,
             "section_name": "model"
           }
         ],
         "isSessionVariable": false,
         "elementKey": "SESDATA"
       },
-      "PREGID": {
-        "type": "string",
-        "_defn": [
-          {
-            "_row_num": 12,
-            "section_name": "model"
-          }
-        ],
-        "isSessionVariable": false,
-        "elementKey": "PREGID"
-      },
       "REGIDC": {
-        "type": "string",
-        "_defn": [
-          {
-            "_row_num": 13,
-            "section_name": "model"
-          }
-        ],
-        "isSessionVariable": false,
-        "elementKey": "REGIDC"
-      },
-      "VISITIDC": {
         "type": "string",
         "_defn": [
           {
@@ -890,7 +884,19 @@
           }
         ],
         "isSessionVariable": false,
-        "elementKey": "VISITIDC"
+        "comment": "CRIANCA",
+        "elementKey": "REGIDC"
+      },
+      "VISITID": {
+        "type": "string",
+        "_defn": [
+          {
+            "_row_num": 15,
+            "section_name": "model"
+          }
+        ],
+        "isSessionVariable": false,
+        "elementKey": "VISITID"
       }
     },
     "section_names": [
@@ -1300,24 +1306,11 @@
           }
         ],
         "isSessionVariable": false,
+        "comment": "survey",
         "elementKey": "CABA",
         "elementName": "CABA",
         "elementSet": "data",
         "elementPath": "CABA"
-      },
-      "SES_ESTADO": {
-        "type": "integer",
-        "_defn": [
-          {
-            "_row_num": 3,
-            "section_name": "model"
-          }
-        ],
-        "isSessionVariable": false,
-        "elementKey": "SES_ESTADO",
-        "elementName": "SES_ESTADO",
-        "elementSet": "data",
-        "elementPath": "SES_ESTADO"
       },
       "GERADOR": {
         "type": "string",
@@ -1328,7 +1321,7 @@
             "section_name": "survey"
           },
           {
-            "_row_num": 4,
+            "_row_num": 3,
             "section_name": "model"
           }
         ],
@@ -1347,7 +1340,7 @@
             "section_name": "survey"
           },
           {
-            "_row_num": 5,
+            "_row_num": 4,
             "section_name": "model"
           }
         ],
@@ -1356,6 +1349,20 @@
         "elementName": "RADIO",
         "elementSet": "data",
         "elementPath": "RADIO"
+      },
+      "SES_ESTADO": {
+        "_defn": [
+          {
+            "_row_num": 5,
+            "section_name": "model"
+          }
+        ],
+        "type": "assign",
+        "isSessionVariable": false,
+        "elementKey": "SES_ESTADO",
+        "elementName": "SES_ESTADO",
+        "elementSet": "data",
+        "elementPath": "SES_ESTADO"
       },
       "TECTO": {
         "type": "string",
@@ -1413,11 +1420,26 @@
         "elementSet": "data",
         "elementPath": "TELENUMERO"
       },
-      "REGID": {
+      "PREGID": {
         "type": "string",
         "_defn": [
           {
             "_row_num": 10,
+            "section_name": "model"
+          }
+        ],
+        "isSessionVariable": false,
+        "comment": "GRAVIDA",
+        "elementKey": "PREGID",
+        "elementName": "PREGID",
+        "elementSet": "data",
+        "elementPath": "PREGID"
+      },
+      "REGID": {
+        "type": "string",
+        "_defn": [
+          {
+            "_row_num": 11,
             "section_name": "model"
           }
         ],
@@ -1436,7 +1458,7 @@
         "__rowNum__": 2,
         "_defn": [
           {
-            "_row_num": 11,
+            "_row_num": 12,
             "section_name": "model"
           }
         ],
@@ -1446,35 +1468,7 @@
         "elementSet": "data",
         "elementPath": "SESDATA"
       },
-      "PREGID": {
-        "type": "string",
-        "_defn": [
-          {
-            "_row_num": 12,
-            "section_name": "model"
-          }
-        ],
-        "isSessionVariable": false,
-        "elementKey": "PREGID",
-        "elementName": "PREGID",
-        "elementSet": "data",
-        "elementPath": "PREGID"
-      },
       "REGIDC": {
-        "type": "string",
-        "_defn": [
-          {
-            "_row_num": 13,
-            "section_name": "model"
-          }
-        ],
-        "isSessionVariable": false,
-        "elementKey": "REGIDC",
-        "elementName": "REGIDC",
-        "elementSet": "data",
-        "elementPath": "REGIDC"
-      },
-      "VISITIDC": {
         "type": "string",
         "_defn": [
           {
@@ -1483,10 +1477,25 @@
           }
         ],
         "isSessionVariable": false,
-        "elementKey": "VISITIDC",
-        "elementName": "VISITIDC",
+        "comment": "CRIANCA",
+        "elementKey": "REGIDC",
+        "elementName": "REGIDC",
         "elementSet": "data",
-        "elementPath": "VISITIDC"
+        "elementPath": "REGIDC"
+      },
+      "VISITID": {
+        "type": "string",
+        "_defn": [
+          {
+            "_row_num": 15,
+            "section_name": "model"
+          }
+        ],
+        "isSessionVariable": false,
+        "elementKey": "VISITID",
+        "elementName": "VISITID",
+        "elementSet": "data",
+        "elementPath": "VISITID"
       },
       "_id": {
         "type": "string",

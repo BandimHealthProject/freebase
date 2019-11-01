@@ -230,11 +230,11 @@
         "_row_num": 13
       },
       {
-        "branch_label": "GRAVIDA_VISIT",
+        "branch_label": "GRAVIDA",
         "_row_num": 14
       },
       {
-        "url": "'?' + odkSurvey.getHashString('GRAVIDA_VISIT')",
+        "url": "'?' + odkSurvey.getHashString('GRAVIDA')",
         "type": "external_link",
         "display": {
           "prompt": {
@@ -1667,7 +1667,7 @@
             "promptIdx": 3
           },
           {
-            "url": "'?' + odkSurvey.getHashString('GRAVIDA_VISIT')",
+            "url": "'?' + odkSurvey.getHashString('GRAVIDA')",
             "type": "external_link",
             "display": {
               "prompt": {
@@ -1919,7 +1919,7 @@
           "_screen9": 6,
           "CRIANCA": 8,
           "_screen12": 8,
-          "GRAVIDA_VISIT": 10,
+          "GRAVIDA": 10,
           "_screen15": 10,
           "CRIANCA_HOSP": 12,
           "_screen18": 12,

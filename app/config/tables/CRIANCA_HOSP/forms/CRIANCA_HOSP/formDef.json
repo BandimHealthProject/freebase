@@ -662,6 +662,7 @@
         "name": "ACCIHOSP",
         "type": "select_one",
         "isSessionVariable": false,
+        "comment": "survey",
         "_row_num": 2
       },
       {
@@ -713,82 +714,89 @@
         "_row_num": 10
       },
       {
-        "name": "DURINT",
+        "name": "DOCINTQUAL",
         "type": "text",
         "isSessionVariable": false,
         "_row_num": 11
       },
       {
+        "name": "DURINT",
+        "type": "text",
+        "isSessionVariable": false,
+        "_row_num": 12
+      },
+      {
         "name": "INFORMADOR",
         "type": "select_one",
         "isSessionVariable": false,
-        "_row_num": 12
+        "_row_num": 13
       },
       {
         "name": "INFPORQ",
         "type": "text",
         "isSessionVariable": false,
-        "_row_num": 13
+        "_row_num": 14
       },
       {
         "name": "INFQUEM",
         "type": "text",
         "isSessionVariable": false,
-        "_row_num": 14
+        "_row_num": 15
       },
       {
         "name": "ONDEINT",
         "type": "text",
         "isSessionVariable": false,
-        "_row_num": 15
+        "_row_num": 16
       },
       {
         "name": "ONDEINTC",
         "type": "select_one_dropdown",
         "isSessionVariable": false,
-        "_row_num": 16
-      },
-      {
-        "name": "PERPORQ",
-        "type": "text",
-        "isSessionVariable": false,
         "_row_num": 17
-      },
-      {
-        "name": "PERTO",
-        "type": "select_one",
-        "isSessionVariable": false,
-        "_row_num": 18
-      },
-      {
-        "name": "REGIDC",
-        "type": "text",
-        "isSessionVariable": false,
-        "_row_num": 20
-      },
-      {
-        "name": "CONT",
-        "type": "adate",
-        "isSessionVariable": false,
-        "_row_num": 21
-      },
-      {
-        "name": "VISITIDC",
-        "type": "text",
-        "isSessionVariable": false,
-        "_row_num": 22
-      },
-      {
-        "name": "reg",
-        "type": "integer",
-        "isSessionVariable": true,
-        "_row_num": 23
       },
       {
         "name": "ondeintcns",
         "type": "select_multiple",
         "isSessionVariable": true,
+        "_row_num": 18
+      },
+      {
+        "name": "PERPORQ",
+        "type": "text",
+        "isSessionVariable": false,
+        "_row_num": 19
+      },
+      {
+        "name": "PERTO",
+        "type": "select_one",
+        "isSessionVariable": false,
+        "_row_num": 20
+      },
+      {
+        "name": "reg",
+        "type": "select_one_dropdown",
+        "isSessionVariable": true,
+        "_row_num": 21
+      },
+      {
+        "name": "CONT",
+        "type": "adate",
+        "isSessionVariable": false,
+        "comment": "CRIANCA",
+        "_row_num": 23
+      },
+      {
+        "name": "REGIDC",
+        "type": "text",
+        "isSessionVariable": false,
         "_row_num": 24
+      },
+      {
+        "name": "VISITIDC",
+        "type": "text",
+        "isSessionVariable": false,
+        "_row_num": 25
       }
     ]
   },
@@ -1078,6 +1086,7 @@
           }
         ],
         "isSessionVariable": false,
+        "comment": "survey",
         "elementKey": "ACCIHOSP"
       },
       "AINDAINT": {
@@ -1210,6 +1219,21 @@
         "isSessionVariable": false,
         "elementKey": "DOCINT"
       },
+      "DOCINTQUAL": {
+        "type": "string",
+        "_defn": [
+          {
+            "_row_num": 37,
+            "section_name": "survey"
+          },
+          {
+            "_row_num": 11,
+            "section_name": "model"
+          }
+        ],
+        "isSessionVariable": false,
+        "elementKey": "DOCINTQUAL"
+      },
       "DURINT": {
         "type": "string",
         "_defn": [
@@ -1218,7 +1242,7 @@
             "section_name": "survey"
           },
           {
-            "_row_num": 11,
+            "_row_num": 12,
             "section_name": "model"
           }
         ],
@@ -1234,7 +1258,7 @@
             "section_name": "survey"
           },
           {
-            "_row_num": 12,
+            "_row_num": 13,
             "section_name": "model"
           }
         ],
@@ -1249,7 +1273,7 @@
             "section_name": "survey"
           },
           {
-            "_row_num": 13,
+            "_row_num": 14,
             "section_name": "model"
           }
         ],
@@ -1264,7 +1288,7 @@
             "section_name": "survey"
           },
           {
-            "_row_num": 14,
+            "_row_num": 15,
             "section_name": "model"
           }
         ],
@@ -1279,7 +1303,7 @@
             "section_name": "survey"
           },
           {
-            "_row_num": 15,
+            "_row_num": 16,
             "section_name": "model"
           }
         ],
@@ -1295,12 +1319,32 @@
             "section_name": "survey"
           },
           {
-            "_row_num": 16,
+            "_row_num": 17,
             "section_name": "model"
           }
         ],
         "isSessionVariable": false,
         "elementKey": "ONDEINTC"
+      },
+      "ondeintcns": {
+        "type": "array",
+        "items": {
+          "type": "string",
+          "elementKey": "ondeintcns_items"
+        },
+        "valuesList": "dontknowfac",
+        "_defn": [
+          {
+            "_row_num": 18,
+            "section_name": "survey"
+          },
+          {
+            "_row_num": 18,
+            "section_name": "model"
+          }
+        ],
+        "isSessionVariable": true,
+        "elementKey": "ondeintcns"
       },
       "PERPORQ": {
         "type": "string",
@@ -1310,7 +1354,7 @@
             "section_name": "survey"
           },
           {
-            "_row_num": 17,
+            "_row_num": 19,
             "section_name": "model"
           }
         ],
@@ -1326,53 +1370,15 @@
             "section_name": "survey"
           },
           {
-            "_row_num": 18,
+            "_row_num": 20,
             "section_name": "model"
           }
         ],
         "isSessionVariable": false,
         "elementKey": "PERTO"
       },
-      "REGIDC": {
-        "type": "string",
-        "_defn": [
-          {
-            "_row_num": 20,
-            "section_name": "model"
-          }
-        ],
-        "isSessionVariable": false,
-        "elementKey": "REGIDC"
-      },
-      "CONT": {
-        "prompt_type_name": "adate",
-        "type": "string",
-        "elementType": "string",
-        "comment": "Save only mm.dd.yyyy with support for ?? at all positions",
-        "_row_num": 3,
-        "__rowNum__": 2,
-        "_defn": [
-          {
-            "_row_num": 21,
-            "section_name": "model"
-          }
-        ],
-        "isSessionVariable": false,
-        "elementKey": "CONT"
-      },
-      "VISITIDC": {
-        "type": "string",
-        "_defn": [
-          {
-            "_row_num": 22,
-            "section_name": "model"
-          }
-        ],
-        "isSessionVariable": false,
-        "elementKey": "VISITIDC"
-      },
       "reg": {
-        "type": "integer",
+        "type": "string",
         "valuesList": "reg_csv",
         "_defn": [
           {
@@ -1380,42 +1386,50 @@
             "section_name": "survey"
           },
           {
-            "_row_num": 23,
+            "_row_num": 21,
             "section_name": "model"
           }
         ],
         "isSessionVariable": true,
         "elementKey": "reg"
       },
-      "ondeintcns": {
-        "type": "array",
-        "items": {
-          "type": "string",
-          "elementKey": "ondeintcns_items"
-        },
-        "valuesList": "dontknowfac",
+      "CONT": {
+        "prompt_type_name": "adate",
+        "type": "string",
+        "elementType": "string",
+        "comment": "CRIANCA",
+        "_row_num": 3,
+        "__rowNum__": 2,
         "_defn": [
           {
-            "_row_num": 18,
-            "section_name": "survey"
-          },
+            "_row_num": 23,
+            "section_name": "model"
+          }
+        ],
+        "isSessionVariable": false,
+        "elementKey": "CONT"
+      },
+      "REGIDC": {
+        "type": "string",
+        "_defn": [
           {
             "_row_num": 24,
             "section_name": "model"
           }
         ],
-        "isSessionVariable": true,
-        "elementKey": "ondeintcns"
+        "isSessionVariable": false,
+        "elementKey": "REGIDC"
       },
-      "DOCINTQUAL": {
+      "VISITIDC": {
+        "type": "string",
         "_defn": [
           {
-            "_row_num": 37,
-            "section_name": "survey"
+            "_row_num": 25,
+            "section_name": "model"
           }
         ],
-        "type": "string",
-        "elementKey": "DOCINTQUAL"
+        "isSessionVariable": false,
+        "elementKey": "VISITIDC"
       }
     },
     "section_names": [
@@ -2230,6 +2244,7 @@
           }
         ],
         "isSessionVariable": false,
+        "comment": "survey",
         "elementKey": "ACCIHOSP",
         "elementName": "ACCIHOSP",
         "elementSet": "data",
@@ -2389,6 +2404,24 @@
         "elementSet": "data",
         "elementPath": "DOCINT"
       },
+      "DOCINTQUAL": {
+        "type": "string",
+        "_defn": [
+          {
+            "_row_num": 37,
+            "section_name": "survey"
+          },
+          {
+            "_row_num": 11,
+            "section_name": "model"
+          }
+        ],
+        "isSessionVariable": false,
+        "elementKey": "DOCINTQUAL",
+        "elementName": "DOCINTQUAL",
+        "elementSet": "data",
+        "elementPath": "DOCINTQUAL"
+      },
       "DURINT": {
         "type": "string",
         "_defn": [
@@ -2397,7 +2430,7 @@
             "section_name": "survey"
           },
           {
-            "_row_num": 11,
+            "_row_num": 12,
             "section_name": "model"
           }
         ],
@@ -2416,7 +2449,7 @@
             "section_name": "survey"
           },
           {
-            "_row_num": 12,
+            "_row_num": 13,
             "section_name": "model"
           }
         ],
@@ -2434,7 +2467,7 @@
             "section_name": "survey"
           },
           {
-            "_row_num": 13,
+            "_row_num": 14,
             "section_name": "model"
           }
         ],
@@ -2452,7 +2485,7 @@
             "section_name": "survey"
           },
           {
-            "_row_num": 14,
+            "_row_num": 15,
             "section_name": "model"
           }
         ],
@@ -2470,7 +2503,7 @@
             "section_name": "survey"
           },
           {
-            "_row_num": 15,
+            "_row_num": 16,
             "section_name": "model"
           }
         ],
@@ -2489,7 +2522,7 @@
             "section_name": "survey"
           },
           {
-            "_row_num": 16,
+            "_row_num": 17,
             "section_name": "model"
           }
         ],
@@ -2498,109 +2531,6 @@
         "elementName": "ONDEINTC",
         "elementSet": "data",
         "elementPath": "ONDEINTC"
-      },
-      "PERPORQ": {
-        "type": "string",
-        "_defn": [
-          {
-            "_row_num": 31,
-            "section_name": "survey"
-          },
-          {
-            "_row_num": 17,
-            "section_name": "model"
-          }
-        ],
-        "isSessionVariable": false,
-        "elementKey": "PERPORQ",
-        "elementName": "PERPORQ",
-        "elementSet": "data",
-        "elementPath": "PERPORQ"
-      },
-      "PERTO": {
-        "type": "string",
-        "valuesList": "YesNoU",
-        "_defn": [
-          {
-            "_row_num": 29,
-            "section_name": "survey"
-          },
-          {
-            "_row_num": 18,
-            "section_name": "model"
-          }
-        ],
-        "isSessionVariable": false,
-        "elementKey": "PERTO",
-        "elementName": "PERTO",
-        "elementSet": "data",
-        "elementPath": "PERTO"
-      },
-      "REGIDC": {
-        "type": "string",
-        "_defn": [
-          {
-            "_row_num": 20,
-            "section_name": "model"
-          }
-        ],
-        "isSessionVariable": false,
-        "elementKey": "REGIDC",
-        "elementName": "REGIDC",
-        "elementSet": "data",
-        "elementPath": "REGIDC"
-      },
-      "CONT": {
-        "prompt_type_name": "adate",
-        "type": "string",
-        "elementType": "string",
-        "comment": "Save only mm.dd.yyyy with support for ?? at all positions",
-        "_row_num": 3,
-        "__rowNum__": 2,
-        "_defn": [
-          {
-            "_row_num": 21,
-            "section_name": "model"
-          }
-        ],
-        "isSessionVariable": false,
-        "elementKey": "CONT",
-        "elementName": "CONT",
-        "elementSet": "data",
-        "elementPath": "CONT"
-      },
-      "VISITIDC": {
-        "type": "string",
-        "_defn": [
-          {
-            "_row_num": 22,
-            "section_name": "model"
-          }
-        ],
-        "isSessionVariable": false,
-        "elementKey": "VISITIDC",
-        "elementName": "VISITIDC",
-        "elementSet": "data",
-        "elementPath": "VISITIDC"
-      },
-      "reg": {
-        "type": "integer",
-        "valuesList": "reg_csv",
-        "_defn": [
-          {
-            "_row_num": 16,
-            "section_name": "survey"
-          },
-          {
-            "_row_num": 23,
-            "section_name": "model"
-          }
-        ],
-        "isSessionVariable": true,
-        "elementKey": "reg",
-        "elementName": "reg",
-        "elementSet": "data",
-        "elementPath": "reg"
       },
       "ondeintcns": {
         "type": "array",
@@ -2620,7 +2550,7 @@
             "section_name": "survey"
           },
           {
-            "_row_num": 24,
+            "_row_num": 18,
             "section_name": "model"
           }
         ],
@@ -2633,18 +2563,108 @@
           "ondeintcns_items"
         ]
       },
-      "DOCINTQUAL": {
+      "PERPORQ": {
+        "type": "string",
         "_defn": [
           {
-            "_row_num": 37,
+            "_row_num": 31,
             "section_name": "survey"
+          },
+          {
+            "_row_num": 19,
+            "section_name": "model"
           }
         ],
-        "type": "string",
-        "elementKey": "DOCINTQUAL",
-        "elementName": "DOCINTQUAL",
+        "isSessionVariable": false,
+        "elementKey": "PERPORQ",
+        "elementName": "PERPORQ",
         "elementSet": "data",
-        "elementPath": "DOCINTQUAL"
+        "elementPath": "PERPORQ"
+      },
+      "PERTO": {
+        "type": "string",
+        "valuesList": "YesNoU",
+        "_defn": [
+          {
+            "_row_num": 29,
+            "section_name": "survey"
+          },
+          {
+            "_row_num": 20,
+            "section_name": "model"
+          }
+        ],
+        "isSessionVariable": false,
+        "elementKey": "PERTO",
+        "elementName": "PERTO",
+        "elementSet": "data",
+        "elementPath": "PERTO"
+      },
+      "reg": {
+        "type": "string",
+        "valuesList": "reg_csv",
+        "_defn": [
+          {
+            "_row_num": 16,
+            "section_name": "survey"
+          },
+          {
+            "_row_num": 21,
+            "section_name": "model"
+          }
+        ],
+        "isSessionVariable": true,
+        "elementKey": "reg",
+        "elementName": "reg",
+        "elementSet": "data",
+        "elementPath": "reg"
+      },
+      "CONT": {
+        "prompt_type_name": "adate",
+        "type": "string",
+        "elementType": "string",
+        "comment": "CRIANCA",
+        "_row_num": 3,
+        "__rowNum__": 2,
+        "_defn": [
+          {
+            "_row_num": 23,
+            "section_name": "model"
+          }
+        ],
+        "isSessionVariable": false,
+        "elementKey": "CONT",
+        "elementName": "CONT",
+        "elementSet": "data",
+        "elementPath": "CONT"
+      },
+      "REGIDC": {
+        "type": "string",
+        "_defn": [
+          {
+            "_row_num": 24,
+            "section_name": "model"
+          }
+        ],
+        "isSessionVariable": false,
+        "elementKey": "REGIDC",
+        "elementName": "REGIDC",
+        "elementSet": "data",
+        "elementPath": "REGIDC"
+      },
+      "VISITIDC": {
+        "type": "string",
+        "_defn": [
+          {
+            "_row_num": 25,
+            "section_name": "model"
+          }
+        ],
+        "isSessionVariable": false,
+        "elementKey": "VISITIDC",
+        "elementName": "VISITIDC",
+        "elementSet": "data",
+        "elementPath": "VISITIDC"
       },
       "ondeintcns_items": {
         "type": "string",

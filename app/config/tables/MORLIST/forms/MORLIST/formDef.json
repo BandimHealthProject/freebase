@@ -118,50 +118,50 @@
     ],
     "model": [
       {
-        "name": "REG",
+        "name": "AMOSTRA",
         "type": "integer",
         "isSessionVariable": false,
         "_row_num": 2
       },
       {
-        "name": "TAB",
+        "name": "GRUPO",
         "type": "integer",
         "isSessionVariable": false,
         "_row_num": 3
       },
       {
-        "name": "TABNOME",
-        "type": "text",
-        "isSessionVariable": false,
-        "_row_num": 4
-      },
-      {
         "name": "MOR",
         "type": "integer",
         "isSessionVariable": false,
-        "_row_num": 5
+        "_row_num": 4
       },
       {
         "name": "MORNOME",
         "type": "text",
         "isSessionVariable": false,
-        "_row_num": 6
+        "_row_num": 5
       },
       {
-        "name": "GRUPO",
+        "name": "REG",
         "type": "integer",
         "isSessionVariable": false,
-        "_row_num": 7
+        "_row_num": 6
       },
       {
         "name": "REGNOME",
         "type": "text",
         "isSessionVariable": false,
+        "_row_num": 7
+      },
+      {
+        "name": "TAB",
+        "type": "integer",
+        "isSessionVariable": false,
         "_row_num": 8
       },
       {
-        "name": "AMOSTRA",
-        "type": "integer",
+        "name": "TABNOME",
+        "type": "text",
         "isSessionVariable": false,
         "_row_num": 9
       }
@@ -295,11 +295,11 @@
     "queries": {},
     "calculates": {},
     "model": {
-      "REG": {
+      "AMOSTRA": {
         "type": "integer",
         "_defn": [
           {
-            "_row_num": 3,
+            "_row_num": 10,
             "section_name": "survey"
           },
           {
@@ -308,13 +308,13 @@
           }
         ],
         "isSessionVariable": false,
-        "elementKey": "REG"
+        "elementKey": "AMOSTRA"
       },
-      "TAB": {
+      "GRUPO": {
         "type": "integer",
         "_defn": [
           {
-            "_row_num": 4,
+            "_row_num": 7,
             "section_name": "survey"
           },
           {
@@ -323,22 +323,7 @@
           }
         ],
         "isSessionVariable": false,
-        "elementKey": "TAB"
-      },
-      "TABNOME": {
-        "type": "string",
-        "_defn": [
-          {
-            "_row_num": 9,
-            "section_name": "survey"
-          },
-          {
-            "_row_num": 4,
-            "section_name": "model"
-          }
-        ],
-        "isSessionVariable": false,
-        "elementKey": "TABNOME"
+        "elementKey": "GRUPO"
       },
       "MOR": {
         "type": "integer",
@@ -348,7 +333,7 @@
             "section_name": "survey"
           },
           {
-            "_row_num": 5,
+            "_row_num": 4,
             "section_name": "model"
           }
         ],
@@ -363,27 +348,27 @@
             "section_name": "survey"
           },
           {
-            "_row_num": 6,
+            "_row_num": 5,
             "section_name": "model"
           }
         ],
         "isSessionVariable": false,
         "elementKey": "MORNOME"
       },
-      "GRUPO": {
+      "REG": {
         "type": "integer",
         "_defn": [
           {
-            "_row_num": 7,
+            "_row_num": 3,
             "section_name": "survey"
           },
           {
-            "_row_num": 7,
+            "_row_num": 6,
             "section_name": "model"
           }
         ],
         "isSessionVariable": false,
-        "elementKey": "GRUPO"
+        "elementKey": "REG"
       },
       "REGNOME": {
         "type": "string",
@@ -393,18 +378,33 @@
             "section_name": "survey"
           },
           {
-            "_row_num": 8,
+            "_row_num": 7,
             "section_name": "model"
           }
         ],
         "isSessionVariable": false,
         "elementKey": "REGNOME"
       },
-      "AMOSTRA": {
+      "TAB": {
         "type": "integer",
         "_defn": [
           {
-            "_row_num": 10,
+            "_row_num": 4,
+            "section_name": "survey"
+          },
+          {
+            "_row_num": 8,
+            "section_name": "model"
+          }
+        ],
+        "isSessionVariable": false,
+        "elementKey": "TAB"
+      },
+      "TABNOME": {
+        "type": "string",
+        "_defn": [
+          {
+            "_row_num": 9,
             "section_name": "survey"
           },
           {
@@ -413,7 +413,7 @@
           }
         ],
         "isSessionVariable": false,
-        "elementKey": "AMOSTRA"
+        "elementKey": "TABNOME"
       }
     },
     "section_names": [
@@ -743,11 +743,11 @@
       }
     },
     "dataTableModel": {
-      "REG": {
+      "AMOSTRA": {
         "type": "integer",
         "_defn": [
           {
-            "_row_num": 3,
+            "_row_num": 10,
             "section_name": "survey"
           },
           {
@@ -756,16 +756,16 @@
           }
         ],
         "isSessionVariable": false,
-        "elementKey": "REG",
-        "elementName": "REG",
+        "elementKey": "AMOSTRA",
+        "elementName": "AMOSTRA",
         "elementSet": "data",
-        "elementPath": "REG"
+        "elementPath": "AMOSTRA"
       },
-      "TAB": {
+      "GRUPO": {
         "type": "integer",
         "_defn": [
           {
-            "_row_num": 4,
+            "_row_num": 7,
             "section_name": "survey"
           },
           {
@@ -774,28 +774,10 @@
           }
         ],
         "isSessionVariable": false,
-        "elementKey": "TAB",
-        "elementName": "TAB",
+        "elementKey": "GRUPO",
+        "elementName": "GRUPO",
         "elementSet": "data",
-        "elementPath": "TAB"
-      },
-      "TABNOME": {
-        "type": "string",
-        "_defn": [
-          {
-            "_row_num": 9,
-            "section_name": "survey"
-          },
-          {
-            "_row_num": 4,
-            "section_name": "model"
-          }
-        ],
-        "isSessionVariable": false,
-        "elementKey": "TABNOME",
-        "elementName": "TABNOME",
-        "elementSet": "data",
-        "elementPath": "TABNOME"
+        "elementPath": "GRUPO"
       },
       "MOR": {
         "type": "integer",
@@ -805,7 +787,7 @@
             "section_name": "survey"
           },
           {
-            "_row_num": 5,
+            "_row_num": 4,
             "section_name": "model"
           }
         ],
@@ -823,7 +805,7 @@
             "section_name": "survey"
           },
           {
-            "_row_num": 6,
+            "_row_num": 5,
             "section_name": "model"
           }
         ],
@@ -833,23 +815,23 @@
         "elementSet": "data",
         "elementPath": "MORNOME"
       },
-      "GRUPO": {
+      "REG": {
         "type": "integer",
         "_defn": [
           {
-            "_row_num": 7,
+            "_row_num": 3,
             "section_name": "survey"
           },
           {
-            "_row_num": 7,
+            "_row_num": 6,
             "section_name": "model"
           }
         ],
         "isSessionVariable": false,
-        "elementKey": "GRUPO",
-        "elementName": "GRUPO",
+        "elementKey": "REG",
+        "elementName": "REG",
         "elementSet": "data",
-        "elementPath": "GRUPO"
+        "elementPath": "REG"
       },
       "REGNOME": {
         "type": "string",
@@ -859,7 +841,7 @@
             "section_name": "survey"
           },
           {
-            "_row_num": 8,
+            "_row_num": 7,
             "section_name": "model"
           }
         ],
@@ -869,11 +851,29 @@
         "elementSet": "data",
         "elementPath": "REGNOME"
       },
-      "AMOSTRA": {
+      "TAB": {
         "type": "integer",
         "_defn": [
           {
-            "_row_num": 10,
+            "_row_num": 4,
+            "section_name": "survey"
+          },
+          {
+            "_row_num": 8,
+            "section_name": "model"
+          }
+        ],
+        "isSessionVariable": false,
+        "elementKey": "TAB",
+        "elementName": "TAB",
+        "elementSet": "data",
+        "elementPath": "TAB"
+      },
+      "TABNOME": {
+        "type": "string",
+        "_defn": [
+          {
+            "_row_num": 9,
             "section_name": "survey"
           },
           {
@@ -882,10 +882,10 @@
           }
         ],
         "isSessionVariable": false,
-        "elementKey": "AMOSTRA",
-        "elementName": "AMOSTRA",
+        "elementKey": "TABNOME",
+        "elementName": "TABNOME",
         "elementSet": "data",
-        "elementPath": "AMOSTRA"
+        "elementPath": "TABNOME"
       },
       "_id": {
         "type": "string",
