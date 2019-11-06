@@ -415,12 +415,12 @@ function getDefaultsChild(person) {
     return defaults;
 }
 
-function getDefaultsPregnancy(person) {
-    var defaults = {};
-    defaults['outdate'] = person.OUTDATE;
-    defaults['outstatus'] = person.OUTSTATUS;
-    return defaults;
-}
+//function getDefaultsPregnancy(person) {
+  //  var defaults = {};
+  //  defaults['outdate'] = person.OUTDATE;
+  //  defaults['outstatus'] = person.OUTSTATUS;
+  //  return defaults;
+//}
 
 function openForm(type, person) {
     console.log("Preparing form for ", person);
@@ -436,7 +436,7 @@ function openForm(type, person) {
     if ("mif" == type) {
         // It's a MIF
         mif = getDefaultsMIF(person);
-        pregnancy = getDefaultsPregnancy(person);
+        //pregnancy = getDefaultsPregnancy(person);
         defaults = Object.assign({}, mif, pregnancy);
     } else {
         // It's a child
