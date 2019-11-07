@@ -63,6 +63,13 @@
         "_row_num": 9
       }
     ],
+    "calculates": [
+      {
+        "calculation_name": "displayOutdate",
+        "calculation": "adate.display(data('outdate'))",
+        "_row_num": 2
+      }
+    ],
     "survey": [
       {
         "clause": "begin screen",
@@ -106,7 +113,7 @@
           "prompt": {
             "text": {
               "english": "Who?",
-              "default": "Quem"
+              "default": "Quem?"
             }
           }
         },
@@ -329,7 +336,7 @@
         "display": {
           "prompt": {
             "text": {
-              "english": "Closest hospital?",
+              "english": "Is this the closest hospital?",
               "default": "Este é o hospital mais perto?"
             }
           }
@@ -347,7 +354,7 @@
         "display": {
           "prompt": {
             "text": {
-              "english": "Why not attending closest hospital",
+              "english": "Why not use the closest hospital?",
               "default": "Porque internou aqui?"
             }
           }
@@ -385,7 +392,7 @@
         "display": {
           "prompt": {
             "text": {
-              "english": "Seen documentation of hospitalisation",
+              "english": "Seen documentation of hospitalisation?",
               "default": "Viu documentacão da data de internamento?"
             }
           }
@@ -403,8 +410,8 @@
         "display": {
           "prompt": {
             "text": {
-              "english": "Which documentation for hospitalisation",
-              "default": "Qual documentacão"
+              "english": "Which documentation for hospitalisation?",
+              "default": "Qual documentacão?"
             }
           }
         },
@@ -441,7 +448,7 @@
         "display": {
           "prompt": {
             "text": {
-              "english": "Still hospitalised",
+              "english": "Is the child still hospitalized?",
               "default": "A crianca ainda está internado?"
             }
           }
@@ -497,7 +504,7 @@
         "display": {
           "prompt": {
             "text": {
-              "english": "Mother decided taking the child to hospital",
+              "english": "Did the mother decide to take the child to the hospital?",
               "default": "A mãe decidiu levar a crianca ao hospital?"
             }
           }
@@ -511,7 +518,7 @@
         "display": {
           "prompt": {
             "text": {
-              "english": "Father decided taking the child to hospital",
+              "english": "Did the father decide to take the child to the hospital?",
               "default": "O pai decidiu levar a crianca ao hospital?"
             }
           }
@@ -527,23 +534,35 @@
         "_row_num": 58
       },
       {
-        "type": "select_one",
-        "values_list": "YesNoU",
-        "name": "DECIDOUTR",
+        "type": "note",
         "display": {
           "prompt": {
             "text": {
-              "english": "Other decided taking the child to hospital",
-              "default": "Outra pessoa decidiu levar a crianca ao hospital?"
+              "english": "<b>Hospitalization: {{data.nome}} - Dob: {{calculates.displayOutdate}}<b>",
+              "default": "<b>Hospitalizcao: {{data.nome}} - Nas: {{calculates.displayOutdate}}<b>"
             }
           }
         },
         "_row_num": 59
       },
       {
+        "type": "select_one",
+        "values_list": "YesNoU",
+        "name": "DECIDOUTR",
+        "display": {
+          "prompt": {
+            "text": {
+              "english": "Did someone else decide to take the child to the hospital?",
+              "default": "Outra pessoa decidiu levar a crianca ao hospital?"
+            }
+          }
+        },
+        "_row_num": 60
+      },
+      {
         "clause": "if",
         "condition": "data('DECIDOUTR') =='1'",
-        "_row_num": 60
+        "_row_num": 61
       },
       {
         "type": "text",
@@ -552,23 +571,23 @@
           "prompt": {
             "text": {
               "english": "Who decided taking the child to hospital",
-              "default": "Quem decidiu levar a crianca ao hospital? (marque um ou mais)"
+              "default": "Quem decidiu levar a crianca ao hospital?"
             }
           }
         },
-        "_row_num": 61
-      },
-      {
-        "clause": "end if",
         "_row_num": 62
       },
       {
-        "clause": "end screen",
+        "clause": "end if",
         "_row_num": 63
       },
       {
-        "clause": "begin screen",
+        "clause": "end screen",
         "_row_num": 64
+      },
+      {
+        "clause": "begin screen",
+        "_row_num": 65
       },
       {
         "type": "note",
@@ -580,7 +599,7 @@
             }
           }
         },
-        "_row_num": 65
+        "_row_num": 66
       },
       {
         "type": "text",
@@ -593,7 +612,7 @@
             }
           }
         },
-        "_row_num": 66
+        "_row_num": 67
       },
       {
         "type": "select_one",
@@ -607,15 +626,15 @@
             }
           }
         },
-        "_row_num": 67
-      },
-      {
-        "clause": "end screen",
         "_row_num": 68
       },
       {
-        "clause": "begin screen",
+        "clause": "end screen",
         "_row_num": 69
+      },
+      {
+        "clause": "begin screen",
+        "_row_num": 70
       },
       {
         "type": "note",
@@ -627,7 +646,7 @@
             }
           }
         },
-        "_row_num": 70
+        "_row_num": 71
       },
       {
         "type": "text",
@@ -635,23 +654,16 @@
         "display": {
           "prompt": {
             "text": {
-              "english": "Comment",
-              "default": "Comentário"
+              "english": "Comments to hospitalization",
+              "default": "Comentários à hospitalização"
             }
           }
         },
-        "_row_num": 71
+        "_row_num": 72
       },
       {
         "clause": "end screen",
-        "_row_num": 72
-      }
-    ],
-    "calculates": [
-      {
-        "calculation_name": "displayOutdate",
-        "calculation": "adate.display(data('outdate'))",
-        "_row_num": 2
+        "_row_num": 73
       }
     ],
     "queries": [
@@ -1249,7 +1261,7 @@
         "valuesList": "YesNoU",
         "_defn": [
           {
-            "_row_num": 67,
+            "_row_num": 68,
             "section_name": "survey"
           },
           {
@@ -1281,7 +1293,7 @@
         "type": "string",
         "_defn": [
           {
-            "_row_num": 66,
+            "_row_num": 67,
             "section_name": "survey"
           },
           {
@@ -1333,7 +1345,7 @@
         "valuesList": "YesNoU",
         "_defn": [
           {
-            "_row_num": 59,
+            "_row_num": 60,
             "section_name": "survey"
           },
           {
@@ -1364,7 +1376,7 @@
         "type": "string",
         "_defn": [
           {
-            "_row_num": 61,
+            "_row_num": 62,
             "section_name": "survey"
           },
           {
@@ -1471,7 +1483,7 @@
         "type": "string",
         "_defn": [
           {
-            "_row_num": 71,
+            "_row_num": 72,
             "section_name": "survey"
           },
           {
@@ -1699,7 +1711,7 @@
               "prompt": {
                 "text": {
                   "english": "Who?",
-                  "default": "Quem"
+                  "default": "Quem?"
                 }
               }
             },
@@ -1913,7 +1925,7 @@
             "display": {
               "prompt": {
                 "text": {
-                  "english": "Closest hospital?",
+                  "english": "Is this the closest hospital?",
                   "default": "Este é o hospital mais perto?"
                 }
               }
@@ -1931,7 +1943,7 @@
             "display": {
               "prompt": {
                 "text": {
-                  "english": "Why not attending closest hospital",
+                  "english": "Why not use the closest hospital?",
                   "default": "Porque internou aqui?"
                 }
               }
@@ -1967,7 +1979,7 @@
             "display": {
               "prompt": {
                 "text": {
-                  "english": "Seen documentation of hospitalisation",
+                  "english": "Seen documentation of hospitalisation?",
                   "default": "Viu documentacão da data de internamento?"
                 }
               }
@@ -1985,8 +1997,8 @@
             "display": {
               "prompt": {
                 "text": {
-                  "english": "Which documentation for hospitalisation",
-                  "default": "Qual documentacão"
+                  "english": "Which documentation for hospitalisation?",
+                  "default": "Qual documentacão?"
                 }
               }
             },
@@ -2021,7 +2033,7 @@
             "display": {
               "prompt": {
                 "text": {
-                  "english": "Still hospitalised",
+                  "english": "Is the child still hospitalized?",
                   "default": "A crianca ainda está internado?"
                 }
               }
@@ -2075,7 +2087,7 @@
             "display": {
               "prompt": {
                 "text": {
-                  "english": "Mother decided taking the child to hospital",
+                  "english": "Did the mother decide to take the child to the hospital?",
                   "default": "A mãe decidiu levar a crianca ao hospital?"
                 }
               }
@@ -2094,7 +2106,7 @@
             "display": {
               "prompt": {
                 "text": {
-                  "english": "Father decided taking the child to hospital",
+                  "english": "Did the father decide to take the child to the hospital?",
                   "default": "O pai decidiu levar a crianca ao hospital?"
                 }
               }
@@ -2107,23 +2119,40 @@
             "promptIdx": 24
           },
           {
-            "type": "select_one",
-            "values_list": "YesNoU",
-            "name": "DECIDOUTR",
+            "type": "note",
             "display": {
               "prompt": {
                 "text": {
-                  "english": "Other decided taking the child to hospital",
-                  "default": "Outra pessoa decidiu levar a crianca ao hospital?"
+                  "english": "<b>Hospitalization: {{data.nome}} - Dob: {{calculates.displayOutdate}}<b>",
+                  "default": "<b>Hospitalizcao: {{data.nome}} - Nas: {{calculates.displayOutdate}}<b>"
                 }
               }
             },
             "_row_num": 59,
             "__rowNum__": 58,
             "_token_type": "prompt",
-            "_type": "select_one",
+            "_type": "note",
             "_branch_label_enclosing_screen": "survey/_screen58",
             "promptIdx": 25
+          },
+          {
+            "type": "select_one",
+            "values_list": "YesNoU",
+            "name": "DECIDOUTR",
+            "display": {
+              "prompt": {
+                "text": {
+                  "english": "Did someone else decide to take the child to the hospital?",
+                  "default": "Outra pessoa decidiu levar a crianca ao hospital?"
+                }
+              }
+            },
+            "_row_num": 60,
+            "__rowNum__": 59,
+            "_token_type": "prompt",
+            "_type": "select_one",
+            "_branch_label_enclosing_screen": "survey/_screen58",
+            "promptIdx": 26
           },
           {
             "type": "text",
@@ -2132,16 +2161,16 @@
               "prompt": {
                 "text": {
                   "english": "Who decided taking the child to hospital",
-                  "default": "Quem decidiu levar a crianca ao hospital? (marque um ou mais)"
+                  "default": "Quem decidiu levar a crianca ao hospital?"
                 }
               }
             },
-            "_row_num": 61,
-            "__rowNum__": 60,
+            "_row_num": 62,
+            "__rowNum__": 61,
             "_token_type": "prompt",
             "_type": "text",
             "_branch_label_enclosing_screen": "survey/_screen58",
-            "promptIdx": 26
+            "promptIdx": 27
           },
           {
             "type": "note",
@@ -2153,12 +2182,12 @@
                 }
               }
             },
-            "_row_num": 65,
-            "__rowNum__": 64,
+            "_row_num": 66,
+            "__rowNum__": 65,
             "_token_type": "prompt",
             "_type": "note",
-            "_branch_label_enclosing_screen": "survey/_screen64",
-            "promptIdx": 27
+            "_branch_label_enclosing_screen": "survey/_screen65",
+            "promptIdx": 28
           },
           {
             "type": "text",
@@ -2171,12 +2200,12 @@
                 }
               }
             },
-            "_row_num": 66,
-            "__rowNum__": 65,
+            "_row_num": 67,
+            "__rowNum__": 66,
             "_token_type": "prompt",
             "_type": "text",
-            "_branch_label_enclosing_screen": "survey/_screen64",
-            "promptIdx": 28
+            "_branch_label_enclosing_screen": "survey/_screen65",
+            "promptIdx": 29
           },
           {
             "type": "select_one",
@@ -2190,12 +2219,12 @@
                 }
               }
             },
-            "_row_num": 67,
-            "__rowNum__": 66,
+            "_row_num": 68,
+            "__rowNum__": 67,
             "_token_type": "prompt",
             "_type": "select_one",
-            "_branch_label_enclosing_screen": "survey/_screen64",
-            "promptIdx": 29
+            "_branch_label_enclosing_screen": "survey/_screen65",
+            "promptIdx": 30
           },
           {
             "type": "note",
@@ -2207,12 +2236,12 @@
                 }
               }
             },
-            "_row_num": 70,
-            "__rowNum__": 69,
+            "_row_num": 71,
+            "__rowNum__": 70,
             "_token_type": "prompt",
             "_type": "note",
-            "_branch_label_enclosing_screen": "survey/_screen69",
-            "promptIdx": 30
+            "_branch_label_enclosing_screen": "survey/_screen70",
+            "promptIdx": 31
           },
           {
             "type": "text",
@@ -2220,25 +2249,25 @@
             "display": {
               "prompt": {
                 "text": {
-                  "english": "Comment",
-                  "default": "Comentário"
+                  "english": "Comments to hospitalization",
+                  "default": "Comentários à hospitalização"
                 }
               }
             },
-            "_row_num": 71,
-            "__rowNum__": 70,
+            "_row_num": 72,
+            "__rowNum__": 71,
             "_token_type": "prompt",
             "_type": "text",
-            "_branch_label_enclosing_screen": "survey/_screen69",
-            "promptIdx": 31
+            "_branch_label_enclosing_screen": "survey/_screen70",
+            "promptIdx": 32
           },
           {
             "_token_type": "prompt",
             "type": "contents",
             "_type": "contents",
-            "_row_num": 73,
-            "_branch_label_enclosing_screen": "survey/_screen73",
-            "promptIdx": 32
+            "_row_num": 74,
+            "_branch_label_enclosing_screen": "survey/_screen74",
+            "promptIdx": 33
           }
         ],
         "validation_tag_map": {
@@ -2389,51 +2418,51 @@
             "_token_type": "begin_screen",
             "_end_screen_clause": {
               "clause": "end screen",
-              "_row_num": 63,
-              "__rowNum__": 62,
+              "_row_num": 64,
+              "__rowNum__": 63,
               "_token_type": "end_screen"
             },
-            "_screen_block": "function() {var activePromptIndicies = [];\nactivePromptIndicies.push(25);\nif (data('DECIDOUTR') =='1') {\nactivePromptIndicies.push(26);\n}\n\nreturn activePromptIndicies;\n}\n",
+            "_screen_block": "function() {var activePromptIndicies = [];\nactivePromptIndicies.push(25);\nactivePromptIndicies.push(26);\nif (data('DECIDOUTR') =='1') {\nactivePromptIndicies.push(27);\n}\n\nreturn activePromptIndicies;\n}\n",
             "operationIdx": 11
           },
           {
             "clause": "begin screen",
-            "_row_num": 64,
-            "__rowNum__": 63,
+            "_row_num": 65,
+            "__rowNum__": 64,
             "_token_type": "begin_screen",
             "_end_screen_clause": {
               "clause": "end screen",
-              "_row_num": 68,
-              "__rowNum__": 67,
+              "_row_num": 69,
+              "__rowNum__": 68,
               "_token_type": "end_screen"
             },
-            "_screen_block": "function() {var activePromptIndicies = [];\nactivePromptIndicies.push(27);\nactivePromptIndicies.push(28);\nactivePromptIndicies.push(29);\n\nreturn activePromptIndicies;\n}\n",
+            "_screen_block": "function() {var activePromptIndicies = [];\nactivePromptIndicies.push(28);\nactivePromptIndicies.push(29);\nactivePromptIndicies.push(30);\n\nreturn activePromptIndicies;\n}\n",
             "operationIdx": 12
           },
           {
             "clause": "begin screen",
-            "_row_num": 69,
-            "__rowNum__": 68,
+            "_row_num": 70,
+            "__rowNum__": 69,
             "_token_type": "begin_screen",
             "_end_screen_clause": {
               "clause": "end screen",
-              "_row_num": 72,
-              "__rowNum__": 71,
+              "_row_num": 73,
+              "__rowNum__": 72,
               "_token_type": "end_screen"
             },
-            "_screen_block": "function() {var activePromptIndicies = [];\nactivePromptIndicies.push(30);\nactivePromptIndicies.push(31);\n\nreturn activePromptIndicies;\n}\n",
+            "_screen_block": "function() {var activePromptIndicies = [];\nactivePromptIndicies.push(31);\nactivePromptIndicies.push(32);\n\nreturn activePromptIndicies;\n}\n",
             "operationIdx": 13
           },
           {
             "_token_type": "exit_section",
             "clause": "exit section",
-            "_row_num": 73,
+            "_row_num": 74,
             "operationIdx": 14
           },
           {
-            "_row_num": 73,
+            "_row_num": 74,
             "_token_type": "begin_screen",
-            "_screen_block": "function() {var activePromptIndicies = [];\nactivePromptIndicies.push(32);\n\nreturn activePromptIndicies;\n}\n",
+            "_screen_block": "function() {var activePromptIndicies = [];\nactivePromptIndicies.push(33);\n\nreturn activePromptIndicies;\n}\n",
             "screen": {
               "hideInBackHistory": true
             },
@@ -2442,7 +2471,7 @@
           {
             "_token_type": "resume",
             "clause": "resume",
-            "_row_num": 73,
+            "_row_num": 74,
             "operationIdx": 16
           }
         ],
@@ -2459,10 +2488,10 @@
           "_screen46": 9,
           "_screen53": 10,
           "_screen58": 11,
-          "_screen64": 12,
-          "_screen69": 13,
+          "_screen65": 12,
+          "_screen70": 13,
           "_contents": 15,
-          "_screen73": 15
+          "_screen74": 15
         }
       },
       "initial": {
@@ -2652,7 +2681,7 @@
         "valuesList": "YesNoU",
         "_defn": [
           {
-            "_row_num": 67,
+            "_row_num": 68,
             "section_name": "survey"
           },
           {
@@ -2690,7 +2719,7 @@
         "type": "string",
         "_defn": [
           {
-            "_row_num": 66,
+            "_row_num": 67,
             "section_name": "survey"
           },
           {
@@ -2751,7 +2780,7 @@
         "valuesList": "YesNoU",
         "_defn": [
           {
-            "_row_num": 59,
+            "_row_num": 60,
             "section_name": "survey"
           },
           {
@@ -2788,7 +2817,7 @@
         "type": "string",
         "_defn": [
           {
-            "_row_num": 61,
+            "_row_num": 62,
             "section_name": "survey"
           },
           {
@@ -2916,7 +2945,7 @@
         "type": "string",
         "_defn": [
           {
-            "_row_num": 71,
+            "_row_num": 72,
             "section_name": "survey"
           },
           {

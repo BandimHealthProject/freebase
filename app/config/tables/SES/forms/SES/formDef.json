@@ -238,8 +238,8 @@
         "display": {
           "prompt": {
             "text": {
-              "english": "Comment",
-              "default": "Comentário"
+              "english": "Comments to socioeconomic status",
+              "default": "Comentários ao status socioeconômico"
             }
           }
         },
@@ -1189,8 +1189,8 @@
             "display": {
               "prompt": {
                 "text": {
-                  "english": "Comment",
-                  "default": "Comentário"
+                  "english": "Comments to socioeconomic status",
+                  "default": "Comentários ao status socioeconômico"
                 }
               }
             },
