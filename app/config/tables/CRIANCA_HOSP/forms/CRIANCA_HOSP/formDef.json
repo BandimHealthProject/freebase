@@ -171,14 +171,14 @@
         "display": {
           "prompt": {
             "text": {
-              "english": "Date of hospitalisation",
+              "english": "Date of hospitalization",
               "default": "Data de internamento"
             }
           },
           "constraint_message": {
             "text": {
-              "english": "Date of hospitalisation cannot be in the future",
-              "default": "Date of hospitalisation cannot be in the future"
+              "english": "The date of hospitalization cannot be in the future",
+              "default": "A data da hospitalização não pode ser no futuro"
             }
           }
         },
@@ -1763,14 +1763,14 @@
             "display": {
               "prompt": {
                 "text": {
-                  "english": "Date of hospitalisation",
+                  "english": "Date of hospitalization",
                   "default": "Data de internamento"
                 }
               },
               "constraint_message": {
                 "text": {
-                  "english": "Date of hospitalisation cannot be in the future",
-                  "default": "Date of hospitalisation cannot be in the future"
+                  "english": "The date of hospitalization cannot be in the future",
+                  "default": "A data da hospitalização não pode ser no futuro"
                 }
               }
             },

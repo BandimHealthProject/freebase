@@ -162,8 +162,15 @@
               "english": "Maternal middle upper arm circumference",
               "default": "Perimetro do braço esquerdo"
             }
+          },
+          "constraint_message": {
+            "text": {
+              "english": "Must be between 50 and 342 and a even number:",
+              "default": "Deve estar entre 50 e 342 e um número par:"
+            }
           }
         },
+        "constraint": "(data('MAEBRAC1')>49 && data('MAEBRAC1')<343 && data('MAEBRAC1')%2 == 0) ||data('MULPRESA1') != '1'",
         "_row_num": 11
       },
       {
@@ -323,8 +330,8 @@
           },
           "constraint_message": {
             "text": {
-              "english": "Cannot be in the future",
-              "default": "Cannot be in the future"
+              "english": "The date of last period cannot be in the future",
+              "default": "A data do último período não pode estar no futuro"
             }
           }
         },
@@ -348,8 +355,8 @@
           },
           "constraint_message": {
             "text": {
-              "english": "Cannot be in the future",
-              "default": "Cannot be in the future"
+              "english": "The date of last period cannot be in the future",
+              "default": "A data do último período não pode estar no futuro"
             }
           }
         },
@@ -885,8 +892,15 @@
               "english": "Maternal middle upper arm circumference",
               "default": "Perimetro do braço esquerdo"
             }
+          },
+          "constraint_message": {
+            "text": {
+              "english": "Must be between 50 and 342 and a even number:",
+              "default": "Deve estar entre 50 e 342 e um número par:"
+            }
           }
         },
+        "constraint": "(data('MAEBRAC2')>49 && data('MAEBRAC2')<343 && data('MAEBRAC2')%2 == 0) ||data('MULPRESA2') != '1'",
         "_row_num": 21
       },
       {
@@ -1046,8 +1060,8 @@
           },
           "constraint_message": {
             "text": {
-              "english": "Cannot be in the future",
-              "default": "Cannot be in the future"
+              "english": "The date of last period cannot be in the future",
+              "default": "A data do último período não pode estar no futuro"
             }
           }
         },
@@ -1071,8 +1085,8 @@
           },
           "constraint_message": {
             "text": {
-              "english": "Cannot be in the future",
-              "default": "Cannot be in the future"
+              "english": "The date of last period cannot be in the future",
+              "default": "A data do último período não pode estar no futuro"
             }
           }
         },
@@ -1615,8 +1629,8 @@
           },
           "constraint_message": {
             "text": {
-              "english": "Date of pregnancy end cannot be in the future",
-              "default": "Date of pregnancy end cannot be in the future"
+              "english": "The date of pregnancy end cannot be in the future",
+              "default": "A data de término da gravidez não pode estar no futuro"
             }
           }
         },
@@ -6223,8 +6237,15 @@
                   "english": "Maternal middle upper arm circumference",
                   "default": "Perimetro do braço esquerdo"
                 }
+              },
+              "constraint_message": {
+                "text": {
+                  "english": "Must be between 50 and 342 and a even number:",
+                  "default": "Deve estar entre 50 e 342 e um número par:"
+                }
               }
             },
+            "constraint": "(data('MAEBRAC1')>49 && data('MAEBRAC1')<343 && data('MAEBRAC1')%2 == 0) ||data('MULPRESA1') != '1'",
             "_row_num": 11,
             "__rowNum__": 10,
             "_token_type": "prompt",
@@ -6371,8 +6392,8 @@
               },
               "constraint_message": {
                 "text": {
-                  "english": "Cannot be in the future",
-                  "default": "Cannot be in the future"
+                  "english": "The date of last period cannot be in the future",
+                  "default": "A data do último período não pode estar no futuro"
                 }
               }
             },
@@ -6396,8 +6417,8 @@
               },
               "constraint_message": {
                 "text": {
-                  "english": "Cannot be in the future",
-                  "default": "Cannot be in the future"
+                  "english": "The date of last period cannot be in the future",
+                  "default": "A data do último período não pode estar no futuro"
                 }
               }
             },
@@ -6777,6 +6798,7 @@
         ],
         "validation_tag_map": {
           "finalize": [
+            3,
             12,
             13
           ]
@@ -7169,8 +7191,15 @@
                   "english": "Maternal middle upper arm circumference",
                   "default": "Perimetro do braço esquerdo"
                 }
+              },
+              "constraint_message": {
+                "text": {
+                  "english": "Must be between 50 and 342 and a even number:",
+                  "default": "Deve estar entre 50 e 342 e um número par:"
+                }
               }
             },
+            "constraint": "(data('MAEBRAC2')>49 && data('MAEBRAC2')<343 && data('MAEBRAC2')%2 == 0) ||data('MULPRESA2') != '1'",
             "_row_num": 21,
             "__rowNum__": 20,
             "_token_type": "prompt",
@@ -7317,8 +7346,8 @@
               },
               "constraint_message": {
                 "text": {
-                  "english": "Cannot be in the future",
-                  "default": "Cannot be in the future"
+                  "english": "The date of last period cannot be in the future",
+                  "default": "A data do último período não pode estar no futuro"
                 }
               }
             },
@@ -7342,8 +7371,8 @@
               },
               "constraint_message": {
                 "text": {
-                  "english": "Cannot be in the future",
-                  "default": "Cannot be in the future"
+                  "english": "The date of last period cannot be in the future",
+                  "default": "A data do último período não pode estar no futuro"
                 }
               }
             },
@@ -7679,6 +7708,7 @@
         ],
         "validation_tag_map": {
           "finalize": [
+            7,
             16,
             17
           ]
@@ -8163,8 +8193,8 @@
               },
               "constraint_message": {
                 "text": {
-                  "english": "Date of pregnancy end cannot be in the future",
-                  "default": "Date of pregnancy end cannot be in the future"
+                  "english": "The date of pregnancy end cannot be in the future",
+                  "default": "A data de término da gravidez não pode estar no futuro"
                 }
               }
             },

@@ -645,7 +645,7 @@
           "constraint_message": {
             "text": {
               "english": "The child must be below the age of 5:",
-              "default": "The child must be below the age of 5:"
+              "default": "A criança deve ter menos de 5 anos de idade:"
             }
           }
         },
@@ -2061,8 +2061,8 @@
           },
           "constraint_message": {
             "text": {
-              "english": "Exitdate cannot be before before last vist and cannot be in the future",
-              "default": "Exitdate cannot be before before last vist and cannot be in the future"
+              "english": "The exit date cannot be before before last visit and cannot be in the future",
+              "default": "A data de saída não pode ser anterior à última visita e não pode ser no futuro"
             }
           }
         },
@@ -2259,7 +2259,7 @@
           "constraint_message": {
             "text": {
               "english": "The date of starting supplementary feeding cannot be in the future",
-              "default": "The date of starting supplementary feeding cannot be in the future"
+              "default": "A data de início da alimentação suplementar não pode ser no futuro"
             }
           }
         },
@@ -2365,7 +2365,7 @@
           "constraint_message": {
             "text": {
               "english": "The date of stopping breastfeeding cannot be in the future",
-              "default": "The date of stopping breastfeeding cannot be in the future"
+              "default": "A data de interrupção da amamentação não pode ser no futuro"
             }
           }
         },
@@ -2603,7 +2603,7 @@
           "constraint_message": {
             "text": {
               "english": "The date of the separation from the mother cannot be in the future",
-              "default": "The date of the separation from the mother cannot be in the future"
+              "default": "A data de separação da mãe não pode ser no futuro"
             }
           }
         },
@@ -2786,7 +2786,7 @@
           "constraint_message": {
             "text": {
               "english": "Must be between 50 and 342 and a even number:",
-              "default": "Must be between 50 and 342 and a even number:"
+              "default": "Deve estar entre 50 e 342 e um número par:"
             }
           }
         },
@@ -3183,8 +3183,8 @@
           },
           "constraint_message": {
             "text": {
-              "english": "Cannot be before date of birth and in the future",
-              "default": "Cannot be before date of birth and in the future"
+              "english": "The date of consultation cannot be before the date of birth and in the future",
+              "default": "A data da consulta não pode ser anterior à data de nascimento e no futuro"
             }
           }
         },
@@ -3476,8 +3476,8 @@
           },
           "constraint_message": {
             "text": {
-              "english": "Cannot be before date of birth and in the future",
-              "default": "Cannot be before date of birth and in the future"
+              "english": "The date of consultation cannot be before the date of birth and in the future",
+              "default": "A data da consulta não pode ser anterior à data de nascimento e no futuro"
             }
           }
         },
@@ -3764,14 +3764,14 @@
         "display": {
           "prompt": {
             "text": {
-              "english": "BCG vaccine",
-              "default": "BCG vacina"
+              "english": "BCG",
+              "default": "BCG"
             }
           },
           "constraint_message": {
             "text": {
               "english": "The BCG vaccine cannot be in the future",
-              "default": "The BCG vaccine cannot be in the future 1"
+              "default": "A vacina BCG não pode estar no futuro"
             }
           }
         },
@@ -3813,8 +3813,8 @@
         "display": {
           "prompt": {
             "text": {
-              "english": "BCG vaccine <b>{{calculates.displayBCG}}</b>",
-              "default": "BCG vacina <b>{{calculates.displayBCG}}</b>"
+              "english": "BCG <b>{{calculates.displayBCG}}</b>",
+              "default": "BCG <b>{{calculates.displayBCG}}</b>"
             }
           }
         },
@@ -3829,8 +3829,8 @@
         "display": {
           "prompt": {
             "text": {
-              "english": "<font color = \"red\">BCG vaccine <b>{{calculates.displayBCG}}</b></font>",
-              "default": "<font color = \"red\">BCG vacina <b>{{calculates.displayBCG}}</b></font>"
+              "english": "<font color = \"red\">BCG <b>{{calculates.displayBCG}}</b></font>",
+              "default": "<font color = \"red\">BCG <b>{{calculates.displayBCG}}</b></font>"
             }
           }
         },
@@ -3859,7 +3859,7 @@
           "constraint_message": {
             "text": {
               "english": "The BCG vaccine cannot be in the future",
-              "default": "The BCG vaccine cannot be in the future 2"
+              "default": "A vacina BCG não pode estar no futuro"
             }
           }
         },
@@ -3905,14 +3905,14 @@
         "display": {
           "prompt": {
             "text": {
-              "english": "Polio vaccine",
-              "default": "Polio vacina"
+              "english": "Polio at birth",
+              "default": "Polio ao nascimento"
             }
           },
           "constraint_message": {
             "text": {
-              "english": "The polio vaccine cannot be in the future",
-              "default": "The polio vaccine cannot be in the future"
+              "english": "The polio at birth vaccine cannot be in the future",
+              "default": "A vacina polio ao nascimento não pode estar no futuro"
             }
           }
         },
@@ -3954,8 +3954,8 @@
         "display": {
           "prompt": {
             "text": {
-              "english": "Polio vaccine <b>{{calculates.displayPOLIONAS}}</b>",
-              "default": "Polio vacina <b>{{calculates.displayPOLIONAS}}</b>"
+              "english": "Polio at birth <b>{{calculates.displayPOLIONAS}}</b>",
+              "default": "Polio ao nascimento <b>{{calculates.displayPOLIONAS}}</b>"
             }
           }
         },
@@ -3970,8 +3970,8 @@
         "display": {
           "prompt": {
             "text": {
-              "english": "<font color = \"red\">Polio vaccine <b>{{calculates.displayPOLIONAS}}</b></font>",
-              "default": "<font color = \"red\">Polio vacina <b>{{calculates.displayPOLIONAS}}</b></font>"
+              "english": "<font color = \"red\">Polio at birth <b>{{calculates.displayPOLIONAS}}</b></font>",
+              "default": "<font color = \"red\">Polio ao nascimento <b>{{calculates.displayPOLIONAS}}</b></font>"
             }
           }
         },
@@ -3999,8 +3999,8 @@
         "display": {
           "constraint_message": {
             "text": {
-              "english": "The polio vaccine cannot be in the future",
-              "default": "The polio vaccine cannot be in the future"
+              "english": "The polio at birth vaccine cannot be in the future",
+              "default": "A vacina polio ao nascimento não pode estar no futuro"
             }
           }
         },
@@ -4152,14 +4152,14 @@
         "display": {
           "prompt": {
             "text": {
-              "english": "PENTA1 vaccine",
-              "default": "PENTA1 vacina"
+              "english": "Penta 1",
+              "default": "Penta 1"
             }
           },
           "constraint_message": {
             "text": {
-              "english": "The PENTA1 vaccine cannot be in the future",
-              "default": "The PENTA1 vaccine cannot be in the future"
+              "english": "The penta 1 vaccine cannot be in the future",
+              "default": "A vacina penta 1 não pode estar no futuro"
             }
           }
         },
@@ -4201,8 +4201,8 @@
         "display": {
           "prompt": {
             "text": {
-              "english": "PENTA1 vaccine <b>{{calculates.displayPENTA1}}</b>",
-              "default": "PENTA1 vacina  <b>{{calculates.displayPENTA1}}</b>"
+              "english": "Penta 1 <b>{{calculates.displayPENTA1}}</b>",
+              "default": "Penta 1  <b>{{calculates.displayPENTA1}}</b>"
             }
           }
         },
@@ -4217,8 +4217,8 @@
         "display": {
           "prompt": {
             "text": {
-              "english": "<font color = \"red\">PENTA1 vaccine <b>{{calculates.displayPENTA1}}</b></font>",
-              "default": "<font color = \"red\">PENTA1 vacina  <b>{{calculates.displayPENTA1}}</b></font>"
+              "english": "<font color = \"red\">Penta 1 <b>{{calculates.displayPENTA1}}</b></font>",
+              "default": "<font color = \"red\">Penta 1  <b>{{calculates.displayPENTA1}}</b></font>"
             }
           }
         },
@@ -4246,8 +4246,8 @@
         "display": {
           "constraint_message": {
             "text": {
-              "english": "The PENTA1 vaccine cannot be in the future",
-              "default": "The PENTA1 vaccine cannot be in the future"
+              "english": "The penta 1 vaccine cannot be in the future",
+              "default": "A vacina penta 1 não pode estar no futuro"
             }
           }
         },
@@ -4293,14 +4293,14 @@
         "display": {
           "prompt": {
             "text": {
-              "english": "POLIO1 vaccine",
-              "default": "POLIO1 vacina"
+              "english": "Polio 1",
+              "default": "Polio 1"
             }
           },
           "constraint_message": {
             "text": {
-              "english": "The POLIO1 vaccine cannot be in the future",
-              "default": "The POLIO1 vaccine cannot be in the future"
+              "english": "The polio 1 vaccine cannot be in the future",
+              "default": "A vacina polio 1 não pode estar no futuro"
             }
           }
         },
@@ -4357,8 +4357,8 @@
         "display": {
           "prompt": {
             "text": {
-              "english": "POLIO1 vaccine <b>{{calculates.displayPOLIO1}}</b>",
-              "default": "POLIO1 vacina <b>{{calculates.displayPOLIO1}}</b>"
+              "english": "Polio 1 <b>{{calculates.displayPOLIO1}}</b>",
+              "default": "Polio 1 <b>{{calculates.displayPOLIO1}}</b>"
             }
           }
         },
@@ -4373,8 +4373,8 @@
         "display": {
           "prompt": {
             "text": {
-              "english": "<font color = \"red\">POLIO1 vaccine <b>{{calculates.displayPOLIO1}}</b></font>",
-              "default": "<font color = \"red\">POLIO1 vacina <b>{{calculates.displayPOLIO1}}</b></font>"
+              "english": "<font color = \"red\">Polio 1 <b>{{calculates.displayPOLIO1}}</b></font>",
+              "default": "<font color = \"red\">Polio 1 <b>{{calculates.displayPOLIO1}}</b></font>"
             }
           }
         },
@@ -4402,8 +4402,8 @@
         "display": {
           "constraint_message": {
             "text": {
-              "english": "The POLIO1 vaccine cannot be in the future",
-              "default": "The POLIO1 vaccine cannot be in the future"
+              "english": "The polio 1 vaccine cannot be in the future",
+              "default": "A vacina polio 1 não pode estar no futuro"
             }
           }
         },
@@ -4449,14 +4449,14 @@
         "display": {
           "prompt": {
             "text": {
-              "english": "PCV1 vaccine",
-              "default": "PCV1 vacina"
+              "english": "PCV 1",
+              "default": "PCV 1"
             }
           },
           "constraint_message": {
             "text": {
-              "english": "The PCV1 vaccine cannot be in the future",
-              "default": "The PCV1 vaccine cannot be in the future"
+              "english": "The PCV 1 vaccine cannot be in the future",
+              "default": "A vacina PCV 1 não pode estar no futuro"
             }
           }
         },
@@ -4513,8 +4513,8 @@
         "display": {
           "prompt": {
             "text": {
-              "english": "PCV1 vaccine <b>{{calculates.displayPCV1}}</b>",
-              "default": "PCV1 vacina <b>{{calculates.displayPCV1}}</b>"
+              "english": "PCV 1 <b>{{calculates.displayPCV1}}</b>",
+              "default": "PCV 1 <b>{{calculates.displayPCV1}}</b>"
             }
           }
         },
@@ -4529,8 +4529,8 @@
         "display": {
           "prompt": {
             "text": {
-              "english": "<font color = \"red\">PCV1 vaccine <b>{{calculates.displayPCV1}}</b></font>",
-              "default": "<font color = \"red\">PCV1 vacina <b>{{calculates.displayPCV1}}</b></font>"
+              "english": "<font color = \"red\">PCV 1 <b>{{calculates.displayPCV1}}</b></font>",
+              "default": "<font color = \"red\">PCV 1 <b>{{calculates.displayPCV1}}</b></font>"
             }
           }
         },
@@ -4558,8 +4558,8 @@
         "display": {
           "constraint_message": {
             "text": {
-              "english": "The PCV1 vaccine cannot be in the future",
-              "default": "The PCV1 vaccine cannot be in the future"
+              "english": "The PCV 1 vaccine cannot be in the future",
+              "default": "A vacina PCV 1 não pode estar no futuro"
             }
           }
         },
@@ -4605,14 +4605,14 @@
         "display": {
           "prompt": {
             "text": {
-              "english": "ROX1 vaccine",
-              "default": "ROX1 vacina"
+              "english": "Rota 1",
+              "default": "Rota 1"
             }
           },
           "constraint_message": {
             "text": {
-              "english": "The ROX1 vaccine cannot be in the future",
-              "default": "The ROX1 vaccine cannot be in the future"
+              "english": "The rota 1 vaccine cannot be in the future",
+              "default": "A vacina rota 1 não pode estar no futuro"
             }
           }
         },
@@ -4669,8 +4669,8 @@
         "display": {
           "prompt": {
             "text": {
-              "english": "ROX1 vaccine <b>{{calculates.displayROX1}}</b>",
-              "default": "ROX1 vacina <b>{{calculates.displayROX1}}</b>"
+              "english": "Rota 1 <b>{{calculates.displayROX1}}</b>",
+              "default": "Rota 1 <b>{{calculates.displayROX1}}</b>"
             }
           }
         },
@@ -4685,8 +4685,8 @@
         "display": {
           "prompt": {
             "text": {
-              "english": "<font color = \"red\">ROX1 vaccine <b>{{calculates.displayROX1}}</b></font>",
-              "default": "<font color = \"red\">ROX1 vacina <b>{{calculates.displayROX1}}</b></font>"
+              "english": "<font color = \"red\">Rota 1 <b>{{calculates.displayROX1}}</b></font>",
+              "default": "<font color = \"red\">Rota 1 <b>{{calculates.displayROX1}}</b></font>"
             }
           }
         },
@@ -4714,8 +4714,8 @@
         "display": {
           "constraint_message": {
             "text": {
-              "english": "The ROX1 vaccine cannot be in the future",
-              "default": "The ROX1 vaccine cannot be in the future"
+              "english": "The rota 1 vaccine cannot be in the future",
+              "default": "A vacina rota 1 não pode estar no futuro"
             }
           }
         },
@@ -4943,14 +4943,14 @@
         "display": {
           "prompt": {
             "text": {
-              "english": "PENTA2 vaccine",
-              "default": "PENTA2 vacina"
+              "english": "Penta 2",
+              "default": "Penta 2"
             }
           },
           "constraint_message": {
             "text": {
-              "english": "PENTA2 vaccine cannot be in the future",
-              "default": "PENTA2 vaccine cannot be in the future"
+              "english": "The penta 2 vaccine cannot be in the future",
+              "default": "A vacina penta 2 não pode estar no futuro"
             }
           }
         },
@@ -4992,8 +4992,8 @@
         "display": {
           "prompt": {
             "text": {
-              "english": "PENTA2 vaccine <b>{{calculates.displayPENTA2}}</b>",
-              "default": "PENTA2 vacina <b>{{calculates.displayPENTA2}}</b>"
+              "english": "Penta 2 <b>{{calculates.displayPENTA2}}</b>",
+              "default": "Penta 2 <b>{{calculates.displayPENTA2}}</b>"
             }
           }
         },
@@ -5008,8 +5008,8 @@
         "display": {
           "prompt": {
             "text": {
-              "english": "<font color = \"red\">PENTA2 vaccine <b>{{calculates.displayPENTA2}}</b></font>",
-              "default": "<font color = \"red\">PENTA2 vacina  <b>{{calculates.displayPENTA2}}</b></font>"
+              "english": "<font color = \"red\">Penta 2 <b>{{calculates.displayPENTA2}}</b></font>",
+              "default": "<font color = \"red\">Penta 2  <b>{{calculates.displayPENTA2}}</b></font>"
             }
           }
         },
@@ -5037,8 +5037,8 @@
         "display": {
           "constraint_message": {
             "text": {
-              "english": "PENTA2 vaccine cannot be in the future",
-              "default": "PENTA2 vaccine cannot be in the future"
+              "english": "The penta 2 vaccine cannot be in the future",
+              "default": "A vacina penta 2 não pode estar no futuro"
             }
           }
         },
@@ -5084,14 +5084,14 @@
         "display": {
           "prompt": {
             "text": {
-              "english": "POLIO2 vaccine",
-              "default": "POLIO2 vacina"
+              "english": "Polio 2",
+              "default": "Polio 2"
             }
           },
           "constraint_message": {
             "text": {
-              "english": "POLIO2 vaccine cannot be in the future",
-              "default": "POLIO2 vaccine cannot be in the future"
+              "english": "The polio 2 vaccine cannot be in the future",
+              "default": "A vacina polio 2 não pode estar no futuro"
             }
           }
         },
@@ -5148,8 +5148,8 @@
         "display": {
           "prompt": {
             "text": {
-              "english": "POLIO2 vaccine <b>{{calculates.displayPOLIO2}}</b>",
-              "default": "POLIO2 vacina <b>{{calculates.displayPOLIO2}}</b>"
+              "english": "Polio 2 <b>{{calculates.displayPOLIO2}}</b>",
+              "default": "Polio 2 <b>{{calculates.displayPOLIO2}}</b>"
             }
           }
         },
@@ -5164,8 +5164,8 @@
         "display": {
           "prompt": {
             "text": {
-              "english": "<font color = \"red\">POLIO2 vaccine <b>{{calculates.displayPOLIO2}}</b></font>",
-              "default": "<font color = \"red\">POLIO2 vacina <b>{{calculates.displayPOLIO2}}</b></font>"
+              "english": "<font color = \"red\">Polio 2 <b>{{calculates.displayPOLIO2}}</b></font>",
+              "default": "<font color = \"red\">Polio 2 <b>{{calculates.displayPOLIO2}}</b></font>"
             }
           }
         },
@@ -5193,8 +5193,8 @@
         "display": {
           "constraint_message": {
             "text": {
-              "english": "POLIO2 vaccine cannot be in the future",
-              "default": "POLIO2 vaccine cannot be in the future"
+              "english": "The polio 2 vaccine cannot be in the future",
+              "default": "A vacina polio 2 não pode estar no futuro"
             }
           }
         },
@@ -5240,14 +5240,14 @@
         "display": {
           "prompt": {
             "text": {
-              "english": "PCV2 vaccine",
-              "default": "PCV2 vacina"
+              "english": "PCV 2",
+              "default": "PCV 2"
             }
           },
           "constraint_message": {
             "text": {
-              "english": "PCV2 vaccine cannot be in the future",
-              "default": "PCV2 vaccine cannot be in the future"
+              "english": "The PCV 2 vaccine cannot be in the future",
+              "default": "A vacina PCV 2 não pode estar no futuro"
             }
           }
         },
@@ -5304,8 +5304,8 @@
         "display": {
           "prompt": {
             "text": {
-              "english": "PCV2 vaccine <b>{{calculates.displayPCV2}}</b>",
-              "default": "PCV2 vacina <b>{{calculates.displayPCV2}}</b>"
+              "english": "PCV 2 <b>{{calculates.displayPCV2}}</b>",
+              "default": "PCV 2 <b>{{calculates.displayPCV2}}</b>"
             }
           }
         },
@@ -5320,8 +5320,8 @@
         "display": {
           "prompt": {
             "text": {
-              "english": "<font color = \"red\">PCV2 vaccine <b>{{calculates.displayPCV2}}</b></font>",
-              "default": "<font color = \"red\">PCV2 vacina <b>{{calculates.displayPCV2}}</b></font>"
+              "english": "<font color = \"red\">PCV 2 <b>{{calculates.displayPCV2}}</b></font>",
+              "default": "<font color = \"red\">PCV 2 <b>{{calculates.displayPCV2}}</b></font>"
             }
           }
         },
@@ -5349,8 +5349,8 @@
         "display": {
           "constraint_message": {
             "text": {
-              "english": "PCV2 vaccine cannot be in the future",
-              "default": "PCV2 vaccine cannot be in the future"
+              "english": "The PCV 2 vaccine cannot be in the future",
+              "default": "A vacina PCV 2 não pode estar no futuro"
             }
           }
         },
@@ -5396,14 +5396,14 @@
         "display": {
           "prompt": {
             "text": {
-              "english": "ROX2 vaccine",
-              "default": "ROX2 vacina"
+              "english": "Rota 2",
+              "default": "Rota 2"
             }
           },
           "constraint_message": {
             "text": {
-              "english": "ROX2 vaccine cannot be in the future",
-              "default": "ROX2 vaccine cannot be in the future"
+              "english": "The rota 2 vaccine cannot be in the future",
+              "default": "A vacina rota 2 não pode estar no futuro"
             }
           }
         },
@@ -5460,8 +5460,8 @@
         "display": {
           "prompt": {
             "text": {
-              "english": "ROX2 vaccine <b>{{calculates.displayROX2}}</b>",
-              "default": "ROX2 vacina <b>{{calculates.displayROX2}}</b>"
+              "english": "Rota 2 <b>{{calculates.displayROX2}}</b>",
+              "default": "Rota 2 <b>{{calculates.displayROX2}}</b>"
             }
           }
         },
@@ -5476,8 +5476,8 @@
         "display": {
           "prompt": {
             "text": {
-              "english": "<font color = \"red\">ROX2 vaccine <b>{{calculates.displayROX2}}</b></font>",
-              "default": "<font color = \"red\">ROX2 vacina <b>{{calculates.displayROX2}}</b></font>"
+              "english": "<font color = \"red\">Rota 2 <b>{{calculates.displayROX2}}</b></font>",
+              "default": "<font color = \"red\">Rota 2 <b>{{calculates.displayROX2}}</b></font>"
             }
           }
         },
@@ -5505,8 +5505,8 @@
         "display": {
           "constraint_message": {
             "text": {
-              "english": "ROX2 vaccine cannot be in the future",
-              "default": "ROX2 vaccine cannot be in the future"
+              "english": "The rota 2 vaccine cannot be in the future",
+              "default": "A vacina rota 2 não pode estar no futuro"
             }
           }
         },
@@ -5842,14 +5842,14 @@
         "display": {
           "prompt": {
             "text": {
-              "english": "PENTA3 vaccine",
-              "default": "PENTA3 vacina"
+              "english": "Penta 3",
+              "default": "Penta 3"
             }
           },
           "constraint_message": {
             "text": {
-              "english": "PENTA3 vaccine cannot be in the future",
-              "default": "PENTA3 vaccine cannot be in the future"
+              "english": "The penta 3 vaccine cannot be in the future",
+              "default": "A vacina penta 3 não pode estar no futuro"
             }
           }
         },
@@ -5891,8 +5891,8 @@
         "display": {
           "prompt": {
             "text": {
-              "english": "PENTA3 vaccine <b>{{calculates.displayPENTA3}}</b>",
-              "default": "PENTA3 vacina <b>{{calculates.displayPENTA3}}</b>"
+              "english": "Penta 3 <b>{{calculates.displayPENTA3}}</b>",
+              "default": "Penta 3 <b>{{calculates.displayPENTA3}}</b>"
             }
           }
         },
@@ -5907,8 +5907,8 @@
         "display": {
           "prompt": {
             "text": {
-              "english": "<font color = \"red\">PENTA3 vaccine <b>{{calculates.displayPENTA3}}</b></font>",
-              "default": "<font color = \"red\">PENTA3 vacina  <b>{{calculates.displayPENTA3}}</b></font>"
+              "english": "<font color = \"red\">Penta 3 <b>{{calculates.displayPENTA3}}</b></font>",
+              "default": "<font color = \"red\">Penta 3  <b>{{calculates.displayPENTA3}}</b></font>"
             }
           }
         },
@@ -5936,8 +5936,8 @@
         "display": {
           "constraint_message": {
             "text": {
-              "english": "PENTA3 vaccine cannot be in the future",
-              "default": "PENTA3 vaccine cannot be in the future"
+              "english": "The penta 3 vaccine cannot be in the future",
+              "default": "A vacina penta 3 não pode estar no futuro"
             }
           }
         },
@@ -5983,14 +5983,14 @@
         "display": {
           "prompt": {
             "text": {
-              "english": "POLIO3 vaccine",
-              "default": "POLIO3 vacina"
+              "english": "Polio 3",
+              "default": "Polio 3"
             }
           },
           "constraint_message": {
             "text": {
-              "english": "POLIO3 vaccine cannot be in the future",
-              "default": "POLIO3 vaccine cannot be in the future"
+              "english": "The polio 3 vaccine cannot be in the future",
+              "default": "A vacina polio 3 não pode estar no futuro"
             }
           }
         },
@@ -6047,8 +6047,8 @@
         "display": {
           "prompt": {
             "text": {
-              "english": "POLIO3 vaccine <b>{{calculates.displayPOLIO3}}</b>",
-              "default": "POLIO3 vacina <b>{{calculates.displayPOLIO3}}</b>"
+              "english": "Polio 3 <b>{{calculates.displayPOLIO3}}</b>",
+              "default": "Polio 3 <b>{{calculates.displayPOLIO3}}</b>"
             }
           }
         },
@@ -6063,8 +6063,8 @@
         "display": {
           "prompt": {
             "text": {
-              "english": "<font color = \"red\">POLIO3 vaccine <b>{{calculates.displayPOLIO3}}</b></font>",
-              "default": "<font color = \"red\">POLIO2 vacina <b>{{calculates.displayPOLIO2}}</b></font>"
+              "english": "<font color = \"red\">Polio 3 <b>{{calculates.displayPOLIO3}}</b></font>",
+              "default": "<font color = \"red\">Polio 3 <b>{{calculates.displayPOLIO3}}</b></font>"
             }
           }
         },
@@ -6092,8 +6092,8 @@
         "display": {
           "constraint_message": {
             "text": {
-              "english": "POLIO3 vaccine cannot be in the future",
-              "default": "POLIO3 vaccine cannot be in the future"
+              "english": "The polio 3 vaccine cannot be in the future",
+              "default": "A vacina polio 3 não pode estar no futuro"
             }
           }
         },
@@ -6139,14 +6139,14 @@
         "display": {
           "prompt": {
             "text": {
-              "english": "PCV3 vaccine",
-              "default": "PCV3 vacina"
+              "english": "PCV 3",
+              "default": "PCV 3"
             }
           },
           "constraint_message": {
             "text": {
-              "english": "PCV3 vaccine cannot be in the future",
-              "default": "PCV3 vaccine cannot be in the future"
+              "english": "The PCV 3 vaccine cannot be in the future",
+              "default": "A vacina PCV 3 não pode estar no futuro"
             }
           }
         },
@@ -6203,8 +6203,8 @@
         "display": {
           "prompt": {
             "text": {
-              "english": "PCV3 vaccine <b>{{calculates.displayPCV3}}</b>",
-              "default": "PCV3 vacina <b>{{calculates.displayPCV3}}</b>"
+              "english": "PCV 3 <b>{{calculates.displayPCV3}}</b>",
+              "default": "PCV 3 <b>{{calculates.displayPCV3}}</b>"
             }
           }
         },
@@ -6219,8 +6219,8 @@
         "display": {
           "prompt": {
             "text": {
-              "english": "<font color = \"red\">PCV3 vaccine <b>{{calculates.displayPCV3}}</b></font>",
-              "default": "<font color = \"red\">PCV2 vacina <b>{{calculates.displayPCV2}}</b></font>"
+              "english": "<font color = \"red\">PCV 3 <b>{{calculates.displayPCV3}}</b></font>",
+              "default": "<font color = \"red\">PCV 3 <b>{{calculates.displayPCV3}}</b></font>"
             }
           }
         },
@@ -6248,8 +6248,8 @@
         "display": {
           "constraint_message": {
             "text": {
-              "english": "PCV3 vaccine cannot be in the future",
-              "default": "PCV3 vaccine cannot be in the future"
+              "english": "The PCV3 vaccine cannot be in the future",
+              "default": "A vacina PCV3 não pode estar no futuro"
             }
           }
         },
@@ -6295,14 +6295,14 @@
         "display": {
           "prompt": {
             "text": {
-              "english": "VPI vaccine",
-              "default": "VPI vacina"
+              "english": "VPI",
+              "default": "VPI"
             }
           },
           "constraint_message": {
             "text": {
-              "english": "VPI vaccine cannot be in the future",
-              "default": "VPI vaccine cannot be in the future"
+              "english": "The VPI vaccine cannot be in the future",
+              "default": "A vacina VPI não pode estar no futuro"
             }
           }
         },
@@ -6359,8 +6359,8 @@
         "display": {
           "prompt": {
             "text": {
-              "english": "VPI vaccine <b>{{calculates.displayVPI}}</b>",
-              "default": "VPI vacina <b>{{calculates.displayVPI}}</b>"
+              "english": "VPI <b>{{calculates.displayVPI}}</b>",
+              "default": "VPI <b>{{calculates.displayVPI}}</b>"
             }
           }
         },
@@ -6375,8 +6375,8 @@
         "display": {
           "prompt": {
             "text": {
-              "english": "<font color = \"red\">VPI vaccine <b>{{calculates.displayVPI}}</b></font>",
-              "default": "<font color = \"red\">VPI vacina <b>{{calculates.displayVPI}}</b></font>"
+              "english": "<font color = \"red\">VPI<b>{{calculates.displayVPI}}</b></font>",
+              "default": "<font color = \"red\">VPI <b>{{calculates.displayVPI}}</b></font>"
             }
           }
         },
@@ -6404,8 +6404,8 @@
         "display": {
           "constraint_message": {
             "text": {
-              "english": "VPI vaccine cannot be in the future",
-              "default": "VPI vaccine cannot be in the future"
+              "english": "The VPI vaccine cannot be in the future",
+              "default": "A vacina VPI não pode estar no futuro"
             }
           }
         },
@@ -6795,14 +6795,14 @@
         "display": {
           "prompt": {
             "text": {
-              "english": "SARAMPO1 vaccine",
-              "default": "SARAMPO1 vacina"
+              "english": "Measles 1",
+              "default": "Sarampo 1"
             }
           },
           "constraint_message": {
             "text": {
-              "english": "SARAMPO1 vaccine cannot be in the future",
-              "default": "SARAMPO1 vaccine cannot be in the future"
+              "english": "The measles 1 vaccine cannot be in the future",
+              "default": "A vacina sarampo 1não pode estar no futuro"
             }
           }
         },
@@ -6844,8 +6844,8 @@
         "display": {
           "prompt": {
             "text": {
-              "english": "SARAMPO1 vaccine <b>{{calculates.displaySARAMPO1}}</b>",
-              "default": "SARAMPO1 vacina <b>{{calculates.displaySARAMPO1}}</b>"
+              "english": "Measles 1 <b>{{calculates.displaySARAMPO1}}</b>",
+              "default": "Sarampo 1 <b>{{calculates.displaySARAMPO1}}</b>"
             }
           }
         },
@@ -6860,8 +6860,8 @@
         "display": {
           "prompt": {
             "text": {
-              "english": "<font color = \"red\">SARAMPO1 vaccine <b>{{calculates.displaySARAMPO1}}</b></font>",
-              "default": "<font color = \"red\">SARAMPO1 vacina <b>{{calculates.displaySARAMPO1}}</b></font>"
+              "english": "<font color = \"red\">Measles 1 <b>{{calculates.displaySARAMPO1}}</b></font>",
+              "default": "<font color = \"red\">Sarampo 1 <b>{{calculates.displaySARAMPO1}}</b></font>"
             }
           }
         },
@@ -6889,8 +6889,8 @@
         "display": {
           "constraint_message": {
             "text": {
-              "english": "SARAMPO1 vaccine cannot be in the future",
-              "default": "SARAMPO1 vaccine cannot be in the future"
+              "english": "The measles 1 vaccine cannot be in the future",
+              "default": "A vacina sarampo 1não pode estar no futuro"
             }
           }
         },
@@ -6936,14 +6936,14 @@
         "display": {
           "prompt": {
             "text": {
-              "english": "FEBAMAREL vaccine",
-              "default": "FEBAMAREL vacina"
+              "english": "Yellow fever",
+              "default": "Febre amarela"
             }
           },
           "constraint_message": {
             "text": {
-              "english": "FEBAMAREL vaccine cannot be in the future",
-              "default": "FEBAMAREL vaccine cannot be in the future"
+              "english": "The yellow fever vaccine cannot be in the future",
+              "default": "A vacina febre amarela não pode estar no futuro"
             }
           }
         },
@@ -6985,8 +6985,8 @@
         "display": {
           "prompt": {
             "text": {
-              "english": "FEBAMAREL vaccine <b>{{calculates.displayFEBAMAREL}}</b>",
-              "default": "FEBAMAREL vacina <b>{{calculates.displayFEBAMAREL}}</b>"
+              "english": "Yellow fever <b>{{calculates.displayFEBAMAREL}}</b>",
+              "default": "Febre amarela<b>{{calculates.displayFEBAMAREL}}</b>"
             }
           }
         },
@@ -7001,8 +7001,8 @@
         "display": {
           "prompt": {
             "text": {
-              "english": "<font color = \"red\">FEBAMAREL vaccine <b>{{calculates.displayFEBAMAREL}}</b></font>",
-              "default": "<font color = \"red\">FEBAMAREL vacina <b>{{calculates.displayFEBAMAREL}}</b></font>"
+              "english": "<font color = \"red\">Yellow fever <b>{{calculates.displayFEBAMAREL}}</b></font>",
+              "default": "<font color = \"red\">Febre amarela<b>{{calculates.displayFEBAMAREL}}</b></font>"
             }
           }
         },
@@ -7030,8 +7030,8 @@
         "display": {
           "constraint_message": {
             "text": {
-              "english": "FEBAMAREL vaccine cannot be in the future",
-              "default": "FEBAMAREL vaccine cannot be in the future"
+              "english": "The yellow fever vaccine cannot be in the future",
+              "default": "A vacina febre amarela não pode estar no futuro"
             }
           }
         },
@@ -7513,8 +7513,8 @@
           },
           "constraint_message": {
             "text": {
-              "english": "Cannot be before date of birth and in the future",
-              "default": "Cannot be before date of birth and in the future"
+              "english": "The date of intervention cannot be before date of birth and in the future",
+              "default": "A data da intervenção não pode ser anterior à data de nascimento e no futuro"
             }
           }
         },
@@ -7566,8 +7566,8 @@
           },
           "constraint_message": {
             "text": {
-              "english": "Cannot be before date of birth and in the future",
-              "default": "Cannot be before date of birth and in the future"
+              "english": "The date of intervention cannot be before date of birth and in the future",
+              "default": "A data da intervenção não pode ser anterior à data de nascimento e no futuro"
             }
           }
         },
@@ -8825,282 +8825,282 @@
       },
       {
         "calculation_name": "bcgpu",
-        "calculation": "freebase.echo('Date of the BCG vaccination is before the date of birth')",
+        "calculation": "freebase.echo('The date of the BCG vaccination is before the date of birth')",
         "_row_num": 21
       },
       {
         "calculation_name": "polionaspu",
-        "calculation": "freebase.echo('Date of the polio vaccination is before the date of birth')",
+        "calculation": "freebase.echo('The date of the polio at birth vaccination is before the date of birth')",
         "_row_num": 22
       },
       {
         "calculation_name": "penta1pu",
-        "calculation": "freebase.echo('Date of the Penta1 vaccination is before the date of birth')",
+        "calculation": "freebase.echo('The date of the penta 1 vaccination is before the date of birth')",
         "_row_num": 23
       },
       {
         "calculation_name": "polio1pu",
-        "calculation": "freebase.echo('Date of the Polio1 vaccination is before the date of birth')",
+        "calculation": "freebase.echo('The date of the polio 1 vaccination is before the date of birth')",
         "_row_num": 24
       },
       {
         "calculation_name": "pcv1pu",
-        "calculation": "freebase.echo('Date of the PCV1 vaccination is before the date of birth')",
+        "calculation": "freebase.echo('The date of the PCV 1 vaccination is before the date of birth')",
         "_row_num": 25
       },
       {
         "calculation_name": "rox1pu",
-        "calculation": "freebase.echo('Date of the ROX1 vaccination is before the date of birth')",
+        "calculation": "freebase.echo('The date of the rota 1 vaccination is before the date of birth')",
         "_row_num": 26
       },
       {
         "calculation_name": "penta2pu",
-        "calculation": "freebase.echo('Date of the Penta2 vaccination is before the date of birth')",
+        "calculation": "freebase.echo('The date of the penta 2 vaccination is before the date of birth')",
         "_row_num": 27
       },
       {
         "calculation_name": "polio2pu",
-        "calculation": "freebase.echo('Date of the Polio2 vaccination is before the date of birth')",
+        "calculation": "freebase.echo('The date of the polio 2 vaccination is before the date of birth')",
         "_row_num": 28
       },
       {
         "calculation_name": "pcv2pu",
-        "calculation": "freebase.echo('Date of the PCV2 vaccination is before the date of birth')",
+        "calculation": "freebase.echo('The date of the PCV 2 vaccination is before the date of birth')",
         "_row_num": 29
       },
       {
         "calculation_name": "rox2pu",
-        "calculation": "freebase.echo('Date of the ROX2 vaccination is before the date of birth')",
+        "calculation": "freebase.echo('The date of the rota 2 vaccination is before the date of birth')",
         "_row_num": 30
       },
       {
         "calculation_name": "penta3pu",
-        "calculation": "freebase.echo('Date of the Penta3 vaccination is before the date of birth')",
+        "calculation": "freebase.echo('The date of the penta 3 vaccination is before the date of birth')",
         "_row_num": 31
       },
       {
         "calculation_name": "polio3pu",
-        "calculation": "freebase.echo('Date of the Polio3 vaccination is before the date of birth')",
+        "calculation": "freebase.echo('The date of the polio 3 vaccination is before the date of birth')",
         "_row_num": 32
       },
       {
         "calculation_name": "pcv3pu",
-        "calculation": "freebase.echo('Date of the PCV3 vaccination is before the date of birth')",
+        "calculation": "freebase.echo('The date of the PCV 3 vaccination is before the date of birth')",
         "_row_num": 33
       },
       {
         "calculation_name": "pvipu",
-        "calculation": "freebase.echo('Date of the PVI vaccination is before the date of birth')",
+        "calculation": "freebase.echo('The date of the VPI vaccination is before the date of birth')",
         "_row_num": 34
       },
       {
         "calculation_name": "sarampo1pu",
-        "calculation": "freebase.echo('Date of the Sarampo1 vaccination is before the date of birth')",
+        "calculation": "freebase.echo('The date of the measles 1 vaccination is before the date of birth')",
         "_row_num": 35
       },
       {
         "calculation_name": "febamarelpu",
-        "calculation": "freebase.echo('Date of the Febamarel vaccination is before the date of birth')",
+        "calculation": "freebase.echo('The date of the yellow fever vaccination is before the date of birth')",
         "_row_num": 36
       },
       {
         "calculation_name": "1penta2pu",
-        "calculation": "freebase.echo('Got PENTA2 before PENTA1')",
+        "calculation": "freebase.echo('The date of penta 2 is before penta 1')",
         "_row_num": 37
       },
       {
         "calculation_name": "1polio2pu",
-        "calculation": "freebase.echo('Got POLIO2 before POLIO1')",
+        "calculation": "freebase.echo('The date of polio 2 is before polio 1')",
         "_row_num": 38
       },
       {
         "calculation_name": "1pcv2pu",
-        "calculation": "freebase.echo('Got PCV2 before PCV1')",
+        "calculation": "freebase.echo('The date of PCV 2 is before PCV 1')",
         "_row_num": 39
       },
       {
         "calculation_name": "1rox2pu",
-        "calculation": "freebase.echo('Got ROX2 before ROX1')",
+        "calculation": "freebase.echo('The date of rota 2 is before rota 1')",
         "_row_num": 40
       },
       {
         "calculation_name": "2penta3pu",
-        "calculation": "freebase.echo('Got PENTA3 before PENTA2')",
+        "calculation": "freebase.echo('The date of penta 3 is before penta 2')",
         "_row_num": 41
       },
       {
         "calculation_name": "2polio3pu",
-        "calculation": "freebase.echo('Got POLIO3 before POLIO2')",
+        "calculation": "freebase.echo('The date of polio 3 is before polio 2')",
         "_row_num": 42
       },
       {
         "calculation_name": "2pcv3pu",
-        "calculation": "freebase.echo('Got PCV3 before PCV2')",
+        "calculation": "freebase.echo('The date of PCV 3 is before PCV 2')",
         "_row_num": 43
       },
       {
         "calculation_name": "1penta3pu",
-        "calculation": "freebase.echo('Got PENTA3 before PENTA1')",
+        "calculation": "freebase.echo('The date of penta 3 is before penta 1')",
         "_row_num": 44
       },
       {
         "calculation_name": "1polio3pu",
-        "calculation": "freebase.echo('Got POLIO3 before POLIO1')",
+        "calculation": "freebase.echo('The date of polio 3 is before polio 1')",
         "_row_num": 45
       },
       {
         "calculation_name": "1pcv3pu",
-        "calculation": "freebase.echo('Got PCV3 before PCV1')",
+        "calculation": "freebase.echo('The date of PCV 3 is before PCV 1')",
         "_row_num": 46
       },
       {
         "calculation_name": "sarampo16mpu",
-        "calculation": "freebase.echo('Got sarampo vaccine before 6 months')",
+        "calculation": "freebase.echo('The date of measles 1 is before 6 months of age')",
         "_row_num": 47
       },
       {
         "calculation_name": "febamarel6mpu",
-        "calculation": "freebase.echo('Got febamarel before 6 months')",
+        "calculation": "freebase.echo('The date of yellow fever is before 6 months of age')",
         "_row_num": 48
       },
       {
         "calculation_name": "bcgpup",
-        "calculation": "freebase.echo('Date of the BCG vaccination is before the date of birth')",
+        "calculation": "freebase.echo('A data da vacinação BCG é anterior à data de nascimento')",
         "_row_num": 49
       },
       {
         "calculation_name": "polionaspup",
-        "calculation": "freebase.echo('Date of the polio vaccination is before the date of birth')",
+        "calculation": "freebase.echo('A data da vacinação polio ao nascimento é anterior à data de nascimento')",
         "_row_num": 50
       },
       {
         "calculation_name": "penta1pup",
-        "calculation": "freebase.echo('Date of the Penta1 vaccination is before the date of birth')",
+        "calculation": "freebase.echo('A data da vacinação penta 1 é anterior à data de nascimento')",
         "_row_num": 51
       },
       {
         "calculation_name": "polio1pup",
-        "calculation": "freebase.echo('Date of the Polio1 vaccination is before the date of birth')",
+        "calculation": "freebase.echo('A data da vacinação polio 1 é anterior à data de nascimento')",
         "_row_num": 52
       },
       {
         "calculation_name": "pcv1pup",
-        "calculation": "freebase.echo('Date of the PCV1 vaccination is before the date of birth')",
+        "calculation": "freebase.echo('A data da vacinação PCV 1 é anterior à data de nascimento')",
         "_row_num": 53
       },
       {
         "calculation_name": "rox1pup",
-        "calculation": "freebase.echo('Date of the ROX1 vaccination is before the date of birth')",
+        "calculation": "freebase.echo('A data da vacinação rota 1 é anterior à data de nascimento')",
         "_row_num": 54
       },
       {
         "calculation_name": "penta2pup",
-        "calculation": "freebase.echo('Date of the Penta2 vaccination is before the date of birth')",
+        "calculation": "freebase.echo('A data da vacinação penta 2 é anterior à data de nascimento')",
         "_row_num": 55
       },
       {
         "calculation_name": "polio2pup",
-        "calculation": "freebase.echo('Date of the Polio2 vaccination is before the date of birth')",
+        "calculation": "freebase.echo('A data da vacinação polio 2 é anterior à data de nascimento')",
         "_row_num": 56
       },
       {
         "calculation_name": "pcv2pup",
-        "calculation": "freebase.echo('Date of the PCV2 vaccination is before the date of birth')",
+        "calculation": "freebase.echo('A data da vacinação PCV 2 é anterior à data de nascimento')",
         "_row_num": 57
       },
       {
         "calculation_name": "rox2pup",
-        "calculation": "freebase.echo('Date of the ROX2 vaccination is before the date of birth')",
+        "calculation": "freebase.echo('A data da vacinação rota 2 é anterior à data de nascimento')",
         "_row_num": 58
       },
       {
         "calculation_name": "penta3pup",
-        "calculation": "freebase.echo('Date of the Penta3 vaccination is before the date of birth')",
+        "calculation": "freebase.echo('A data da vacinação penta 3 é anterior à data de nascimento')",
         "_row_num": 59
       },
       {
         "calculation_name": "polio3pup",
-        "calculation": "freebase.echo('Date of the Polio3 vaccination is before the date of birth')",
+        "calculation": "freebase.echo('A data da vacinação polio 3 é anterior à data de nascimento')",
         "_row_num": 60
       },
       {
         "calculation_name": "pcv3pup",
-        "calculation": "freebase.echo('Date of the PCV3 vaccination is before the date of birth')",
+        "calculation": "freebase.echo('A data da vacinação PCV 3 é anterior à data de nascimento')",
         "_row_num": 61
       },
       {
         "calculation_name": "pvipup",
-        "calculation": "freebase.echo('Date of the PVI vaccination is before the date of birth')",
+        "calculation": "freebase.echo('A data da vacinação VPI é anterior à data de nascimento')",
         "_row_num": 62
       },
       {
         "calculation_name": "sarampo1pup",
-        "calculation": "freebase.echo('Date of the Sarampo1 vaccination is before the date of birth')",
+        "calculation": "freebase.echo('A data da vacinação sarampo 1 é anterior à data de nascimento')",
         "_row_num": 63
       },
       {
         "calculation_name": "febamarelpup",
-        "calculation": "freebase.echo('Date of the Febamarel vaccination is before the date of birth')",
+        "calculation": "freebase.echo('A data da vacinação febra amarela é anterior à data de nascimento')",
         "_row_num": 64
       },
       {
         "calculation_name": "1penta2pup",
-        "calculation": "freebase.echo('Got PENTA2 before PENTA1')",
+        "calculation": "freebase.echo ('A data de penta 2 é anterior a penta 1')",
         "_row_num": 65
       },
       {
         "calculation_name": "1polio2pup",
-        "calculation": "freebase.echo('Got POLIO2 before POLIO1')",
+        "calculation": "freebase.echo ('A data de polio 2 é anterior a polio 1')",
         "_row_num": 66
       },
       {
         "calculation_name": "1pcv2pup",
-        "calculation": "freebase.echo('Got PCV2 before PCV1')",
+        "calculation": "freebase.echo ('A data do PCV 2 é anterior ao PCV 1')",
         "_row_num": 67
       },
       {
         "calculation_name": "1rox2pup",
-        "calculation": "freebase.echo('Got ROX2 before ROX1')",
+        "calculation": "freebase.echo ('A data do rota 2 é anterior ao rota 1')",
         "_row_num": 68
       },
       {
         "calculation_name": "2penta3pup",
-        "calculation": "freebase.echo('Got PENTA3 before PENTA2')",
+        "calculation": "freebase.echo ('A data de penta 3 é anterior a penta 2')",
         "_row_num": 69
       },
       {
         "calculation_name": "2polio3pup",
-        "calculation": "freebase.echo('Got POLIO3 before POLIO2')",
+        "calculation": "freebase.echo ('A data de polio 3 é anterior a polio 2')",
         "_row_num": 70
       },
       {
         "calculation_name": "2pcv3pup",
-        "calculation": "freebase.echo('Got PCV3 before PCV2')",
+        "calculation": "freebase.echo ('A data do PCV 3 é anterior ao PCV 2')",
         "_row_num": 71
       },
       {
         "calculation_name": "1penta3pup",
-        "calculation": "freebase.echo('Got PENTA3 before PENTA1')",
+        "calculation": "freebase.echo ('A data de penta 3 é anterior a penta 1')",
         "_row_num": 72
       },
       {
         "calculation_name": "1polio3pup",
-        "calculation": "freebase.echo('Got POLIO3 before POLIO1')",
+        "calculation": "freebase.echo ('A data de polio 3 é anterior a polio 1')",
         "_row_num": 73
       },
       {
         "calculation_name": "1pcv3pup",
-        "calculation": "freebase.echo('Got PCV3 before PCV1')",
+        "calculation": "freebase.echo ('A data do PCV 3 é anterior ao PCV 1')",
         "_row_num": 74
       },
       {
         "calculation_name": "sarampo16mpup",
-        "calculation": "freebase.echo('Got sarampo vaccine before 6 months')",
+        "calculation": "freebase.echo ('A data de sarampo 1 é anterior a 6 meses de idade')",
         "_row_num": 75
       },
       {
         "calculation_name": "febamarel6mpup",
-        "calculation": "freebase.echo('Got febamarel before 6 months')",
+        "calculation": "freebase.echo ('A data de febre amarela é anterior a 6 meses de idade')",
         "_row_num": 76
       }
     ],
@@ -13219,282 +13219,282 @@
       },
       "bcgpu": {
         "calculation_name": "bcgpu",
-        "calculation": "freebase.echo('Date of the BCG vaccination is before the date of birth')",
+        "calculation": "freebase.echo('The date of the BCG vaccination is before the date of birth')",
         "_row_num": 21
       },
       "polionaspu": {
         "calculation_name": "polionaspu",
-        "calculation": "freebase.echo('Date of the polio vaccination is before the date of birth')",
+        "calculation": "freebase.echo('The date of the polio at birth vaccination is before the date of birth')",
         "_row_num": 22
       },
       "penta1pu": {
         "calculation_name": "penta1pu",
-        "calculation": "freebase.echo('Date of the Penta1 vaccination is before the date of birth')",
+        "calculation": "freebase.echo('The date of the penta 1 vaccination is before the date of birth')",
         "_row_num": 23
       },
       "polio1pu": {
         "calculation_name": "polio1pu",
-        "calculation": "freebase.echo('Date of the Polio1 vaccination is before the date of birth')",
+        "calculation": "freebase.echo('The date of the polio 1 vaccination is before the date of birth')",
         "_row_num": 24
       },
       "pcv1pu": {
         "calculation_name": "pcv1pu",
-        "calculation": "freebase.echo('Date of the PCV1 vaccination is before the date of birth')",
+        "calculation": "freebase.echo('The date of the PCV 1 vaccination is before the date of birth')",
         "_row_num": 25
       },
       "rox1pu": {
         "calculation_name": "rox1pu",
-        "calculation": "freebase.echo('Date of the ROX1 vaccination is before the date of birth')",
+        "calculation": "freebase.echo('The date of the rota 1 vaccination is before the date of birth')",
         "_row_num": 26
       },
       "penta2pu": {
         "calculation_name": "penta2pu",
-        "calculation": "freebase.echo('Date of the Penta2 vaccination is before the date of birth')",
+        "calculation": "freebase.echo('The date of the penta 2 vaccination is before the date of birth')",
         "_row_num": 27
       },
       "polio2pu": {
         "calculation_name": "polio2pu",
-        "calculation": "freebase.echo('Date of the Polio2 vaccination is before the date of birth')",
+        "calculation": "freebase.echo('The date of the polio 2 vaccination is before the date of birth')",
         "_row_num": 28
       },
       "pcv2pu": {
         "calculation_name": "pcv2pu",
-        "calculation": "freebase.echo('Date of the PCV2 vaccination is before the date of birth')",
+        "calculation": "freebase.echo('The date of the PCV 2 vaccination is before the date of birth')",
         "_row_num": 29
       },
       "rox2pu": {
         "calculation_name": "rox2pu",
-        "calculation": "freebase.echo('Date of the ROX2 vaccination is before the date of birth')",
+        "calculation": "freebase.echo('The date of the rota 2 vaccination is before the date of birth')",
         "_row_num": 30
       },
       "penta3pu": {
         "calculation_name": "penta3pu",
-        "calculation": "freebase.echo('Date of the Penta3 vaccination is before the date of birth')",
+        "calculation": "freebase.echo('The date of the penta 3 vaccination is before the date of birth')",
         "_row_num": 31
       },
       "polio3pu": {
         "calculation_name": "polio3pu",
-        "calculation": "freebase.echo('Date of the Polio3 vaccination is before the date of birth')",
+        "calculation": "freebase.echo('The date of the polio 3 vaccination is before the date of birth')",
         "_row_num": 32
       },
       "pcv3pu": {
         "calculation_name": "pcv3pu",
-        "calculation": "freebase.echo('Date of the PCV3 vaccination is before the date of birth')",
+        "calculation": "freebase.echo('The date of the PCV 3 vaccination is before the date of birth')",
         "_row_num": 33
       },
       "pvipu": {
         "calculation_name": "pvipu",
-        "calculation": "freebase.echo('Date of the PVI vaccination is before the date of birth')",
+        "calculation": "freebase.echo('The date of the VPI vaccination is before the date of birth')",
         "_row_num": 34
       },
       "sarampo1pu": {
         "calculation_name": "sarampo1pu",
-        "calculation": "freebase.echo('Date of the Sarampo1 vaccination is before the date of birth')",
+        "calculation": "freebase.echo('The date of the measles 1 vaccination is before the date of birth')",
         "_row_num": 35
       },
       "febamarelpu": {
         "calculation_name": "febamarelpu",
-        "calculation": "freebase.echo('Date of the Febamarel vaccination is before the date of birth')",
+        "calculation": "freebase.echo('The date of the yellow fever vaccination is before the date of birth')",
         "_row_num": 36
       },
       "1penta2pu": {
         "calculation_name": "1penta2pu",
-        "calculation": "freebase.echo('Got PENTA2 before PENTA1')",
+        "calculation": "freebase.echo('The date of penta 2 is before penta 1')",
         "_row_num": 37
       },
       "1polio2pu": {
         "calculation_name": "1polio2pu",
-        "calculation": "freebase.echo('Got POLIO2 before POLIO1')",
+        "calculation": "freebase.echo('The date of polio 2 is before polio 1')",
         "_row_num": 38
       },
       "1pcv2pu": {
         "calculation_name": "1pcv2pu",
-        "calculation": "freebase.echo('Got PCV2 before PCV1')",
+        "calculation": "freebase.echo('The date of PCV 2 is before PCV 1')",
         "_row_num": 39
       },
       "1rox2pu": {
         "calculation_name": "1rox2pu",
-        "calculation": "freebase.echo('Got ROX2 before ROX1')",
+        "calculation": "freebase.echo('The date of rota 2 is before rota 1')",
         "_row_num": 40
       },
       "2penta3pu": {
         "calculation_name": "2penta3pu",
-        "calculation": "freebase.echo('Got PENTA3 before PENTA2')",
+        "calculation": "freebase.echo('The date of penta 3 is before penta 2')",
         "_row_num": 41
       },
       "2polio3pu": {
         "calculation_name": "2polio3pu",
-        "calculation": "freebase.echo('Got POLIO3 before POLIO2')",
+        "calculation": "freebase.echo('The date of polio 3 is before polio 2')",
         "_row_num": 42
       },
       "2pcv3pu": {
         "calculation_name": "2pcv3pu",
-        "calculation": "freebase.echo('Got PCV3 before PCV2')",
+        "calculation": "freebase.echo('The date of PCV 3 is before PCV 2')",
         "_row_num": 43
       },
       "1penta3pu": {
         "calculation_name": "1penta3pu",
-        "calculation": "freebase.echo('Got PENTA3 before PENTA1')",
+        "calculation": "freebase.echo('The date of penta 3 is before penta 1')",
         "_row_num": 44
       },
       "1polio3pu": {
         "calculation_name": "1polio3pu",
-        "calculation": "freebase.echo('Got POLIO3 before POLIO1')",
+        "calculation": "freebase.echo('The date of polio 3 is before polio 1')",
         "_row_num": 45
       },
       "1pcv3pu": {
         "calculation_name": "1pcv3pu",
-        "calculation": "freebase.echo('Got PCV3 before PCV1')",
+        "calculation": "freebase.echo('The date of PCV 3 is before PCV 1')",
         "_row_num": 46
       },
       "sarampo16mpu": {
         "calculation_name": "sarampo16mpu",
-        "calculation": "freebase.echo('Got sarampo vaccine before 6 months')",
+        "calculation": "freebase.echo('The date of measles 1 is before 6 months of age')",
         "_row_num": 47
       },
       "febamarel6mpu": {
         "calculation_name": "febamarel6mpu",
-        "calculation": "freebase.echo('Got febamarel before 6 months')",
+        "calculation": "freebase.echo('The date of yellow fever is before 6 months of age')",
         "_row_num": 48
       },
       "bcgpup": {
         "calculation_name": "bcgpup",
-        "calculation": "freebase.echo('Date of the BCG vaccination is before the date of birth')",
+        "calculation": "freebase.echo('A data da vacinação BCG é anterior à data de nascimento')",
         "_row_num": 49
       },
       "polionaspup": {
         "calculation_name": "polionaspup",
-        "calculation": "freebase.echo('Date of the polio vaccination is before the date of birth')",
+        "calculation": "freebase.echo('A data da vacinação polio ao nascimento é anterior à data de nascimento')",
         "_row_num": 50
       },
       "penta1pup": {
         "calculation_name": "penta1pup",
-        "calculation": "freebase.echo('Date of the Penta1 vaccination is before the date of birth')",
+        "calculation": "freebase.echo('A data da vacinação penta 1 é anterior à data de nascimento')",
         "_row_num": 51
       },
       "polio1pup": {
         "calculation_name": "polio1pup",
-        "calculation": "freebase.echo('Date of the Polio1 vaccination is before the date of birth')",
+        "calculation": "freebase.echo('A data da vacinação polio 1 é anterior à data de nascimento')",
         "_row_num": 52
       },
       "pcv1pup": {
         "calculation_name": "pcv1pup",
-        "calculation": "freebase.echo('Date of the PCV1 vaccination is before the date of birth')",
+        "calculation": "freebase.echo('A data da vacinação PCV 1 é anterior à data de nascimento')",
         "_row_num": 53
       },
       "rox1pup": {
         "calculation_name": "rox1pup",
-        "calculation": "freebase.echo('Date of the ROX1 vaccination is before the date of birth')",
+        "calculation": "freebase.echo('A data da vacinação rota 1 é anterior à data de nascimento')",
         "_row_num": 54
       },
       "penta2pup": {
         "calculation_name": "penta2pup",
-        "calculation": "freebase.echo('Date of the Penta2 vaccination is before the date of birth')",
+        "calculation": "freebase.echo('A data da vacinação penta 2 é anterior à data de nascimento')",
         "_row_num": 55
       },
       "polio2pup": {
         "calculation_name": "polio2pup",
-        "calculation": "freebase.echo('Date of the Polio2 vaccination is before the date of birth')",
+        "calculation": "freebase.echo('A data da vacinação polio 2 é anterior à data de nascimento')",
         "_row_num": 56
       },
       "pcv2pup": {
         "calculation_name": "pcv2pup",
-        "calculation": "freebase.echo('Date of the PCV2 vaccination is before the date of birth')",
+        "calculation": "freebase.echo('A data da vacinação PCV 2 é anterior à data de nascimento')",
         "_row_num": 57
       },
       "rox2pup": {
         "calculation_name": "rox2pup",
-        "calculation": "freebase.echo('Date of the ROX2 vaccination is before the date of birth')",
+        "calculation": "freebase.echo('A data da vacinação rota 2 é anterior à data de nascimento')",
         "_row_num": 58
       },
       "penta3pup": {
         "calculation_name": "penta3pup",
-        "calculation": "freebase.echo('Date of the Penta3 vaccination is before the date of birth')",
+        "calculation": "freebase.echo('A data da vacinação penta 3 é anterior à data de nascimento')",
         "_row_num": 59
       },
       "polio3pup": {
         "calculation_name": "polio3pup",
-        "calculation": "freebase.echo('Date of the Polio3 vaccination is before the date of birth')",
+        "calculation": "freebase.echo('A data da vacinação polio 3 é anterior à data de nascimento')",
         "_row_num": 60
       },
       "pcv3pup": {
         "calculation_name": "pcv3pup",
-        "calculation": "freebase.echo('Date of the PCV3 vaccination is before the date of birth')",
+        "calculation": "freebase.echo('A data da vacinação PCV 3 é anterior à data de nascimento')",
         "_row_num": 61
       },
       "pvipup": {
         "calculation_name": "pvipup",
-        "calculation": "freebase.echo('Date of the PVI vaccination is before the date of birth')",
+        "calculation": "freebase.echo('A data da vacinação VPI é anterior à data de nascimento')",
         "_row_num": 62
       },
       "sarampo1pup": {
         "calculation_name": "sarampo1pup",
-        "calculation": "freebase.echo('Date of the Sarampo1 vaccination is before the date of birth')",
+        "calculation": "freebase.echo('A data da vacinação sarampo 1 é anterior à data de nascimento')",
         "_row_num": 63
       },
       "febamarelpup": {
         "calculation_name": "febamarelpup",
-        "calculation": "freebase.echo('Date of the Febamarel vaccination is before the date of birth')",
+        "calculation": "freebase.echo('A data da vacinação febra amarela é anterior à data de nascimento')",
         "_row_num": 64
       },
       "1penta2pup": {
         "calculation_name": "1penta2pup",
-        "calculation": "freebase.echo('Got PENTA2 before PENTA1')",
+        "calculation": "freebase.echo ('A data de penta 2 é anterior a penta 1')",
         "_row_num": 65
       },
       "1polio2pup": {
         "calculation_name": "1polio2pup",
-        "calculation": "freebase.echo('Got POLIO2 before POLIO1')",
+        "calculation": "freebase.echo ('A data de polio 2 é anterior a polio 1')",
         "_row_num": 66
       },
       "1pcv2pup": {
         "calculation_name": "1pcv2pup",
-        "calculation": "freebase.echo('Got PCV2 before PCV1')",
+        "calculation": "freebase.echo ('A data do PCV 2 é anterior ao PCV 1')",
         "_row_num": 67
       },
       "1rox2pup": {
         "calculation_name": "1rox2pup",
-        "calculation": "freebase.echo('Got ROX2 before ROX1')",
+        "calculation": "freebase.echo ('A data do rota 2 é anterior ao rota 1')",
         "_row_num": 68
       },
       "2penta3pup": {
         "calculation_name": "2penta3pup",
-        "calculation": "freebase.echo('Got PENTA3 before PENTA2')",
+        "calculation": "freebase.echo ('A data de penta 3 é anterior a penta 2')",
         "_row_num": 69
       },
       "2polio3pup": {
         "calculation_name": "2polio3pup",
-        "calculation": "freebase.echo('Got POLIO3 before POLIO2')",
+        "calculation": "freebase.echo ('A data de polio 3 é anterior a polio 2')",
         "_row_num": 70
       },
       "2pcv3pup": {
         "calculation_name": "2pcv3pup",
-        "calculation": "freebase.echo('Got PCV3 before PCV2')",
+        "calculation": "freebase.echo ('A data do PCV 3 é anterior ao PCV 2')",
         "_row_num": 71
       },
       "1penta3pup": {
         "calculation_name": "1penta3pup",
-        "calculation": "freebase.echo('Got PENTA3 before PENTA1')",
+        "calculation": "freebase.echo ('A data de penta 3 é anterior a penta 1')",
         "_row_num": 72
       },
       "1polio3pup": {
         "calculation_name": "1polio3pup",
-        "calculation": "freebase.echo('Got POLIO3 before POLIO1')",
+        "calculation": "freebase.echo ('A data de polio 3 é anterior a polio 1')",
         "_row_num": 73
       },
       "1pcv3pup": {
         "calculation_name": "1pcv3pup",
-        "calculation": "freebase.echo('Got PCV3 before PCV1')",
+        "calculation": "freebase.echo ('A data do PCV 3 é anterior ao PCV 1')",
         "_row_num": 74
       },
       "sarampo16mpup": {
         "calculation_name": "sarampo16mpup",
-        "calculation": "freebase.echo('Got sarampo vaccine before 6 months')",
+        "calculation": "freebase.echo ('A data de sarampo 1 é anterior a 6 meses de idade')",
         "_row_num": 75
       },
       "febamarel6mpup": {
         "calculation_name": "febamarel6mpup",
-        "calculation": "freebase.echo('Got febamarel before 6 months')",
+        "calculation": "freebase.echo ('A data de febre amarela é anterior a 6 meses de idade')",
         "_row_num": 76
       }
     },
@@ -18337,7 +18337,7 @@
               "constraint_message": {
                 "text": {
                   "english": "The child must be below the age of 5:",
-                  "default": "The child must be below the age of 5:"
+                  "default": "A criança deve ter menos de 5 anos de idade:"
                 }
               }
             },
@@ -20301,8 +20301,8 @@
               },
               "constraint_message": {
                 "text": {
-                  "english": "Exitdate cannot be before before last vist and cannot be in the future",
-                  "default": "Exitdate cannot be before before last vist and cannot be in the future"
+                  "english": "The exit date cannot be before before last visit and cannot be in the future",
+                  "default": "A data de saída não pode ser anterior à última visita e não pode ser no futuro"
                 }
               }
             },
@@ -20471,7 +20471,7 @@
               "constraint_message": {
                 "text": {
                   "english": "The date of starting supplementary feeding cannot be in the future",
-                  "default": "The date of starting supplementary feeding cannot be in the future"
+                  "default": "A data de início da alimentação suplementar não pode ser no futuro"
                 }
               }
             },
@@ -20561,7 +20561,7 @@
               "constraint_message": {
                 "text": {
                   "english": "The date of stopping breastfeeding cannot be in the future",
-                  "default": "The date of stopping breastfeeding cannot be in the future"
+                  "default": "A data de interrupção da amamentação não pode ser no futuro"
                 }
               }
             },
@@ -20798,7 +20798,7 @@
               "constraint_message": {
                 "text": {
                   "english": "The date of the separation from the mother cannot be in the future",
-                  "default": "The date of the separation from the mother cannot be in the future"
+                  "default": "A data de separação da mãe não pode ser no futuro"
                 }
               }
             },
@@ -20966,7 +20966,7 @@
               "constraint_message": {
                 "text": {
                   "english": "Must be between 50 and 342 and a even number:",
-                  "default": "Must be between 50 and 342 and a even number:"
+                  "default": "Deve estar entre 50 e 342 e um número par:"
                 }
               }
             },
@@ -21967,8 +21967,8 @@
               },
               "constraint_message": {
                 "text": {
-                  "english": "Cannot be before date of birth and in the future",
-                  "default": "Cannot be before date of birth and in the future"
+                  "english": "The date of consultation cannot be before the date of birth and in the future",
+                  "default": "A data da consulta não pode ser anterior à data de nascimento e no futuro"
                 }
               }
             },
@@ -22245,8 +22245,8 @@
               },
               "constraint_message": {
                 "text": {
-                  "english": "Cannot be before date of birth and in the future",
-                  "default": "Cannot be before date of birth and in the future"
+                  "english": "The date of consultation cannot be before the date of birth and in the future",
+                  "default": "A data da consulta não pode ser anterior à data de nascimento e no futuro"
                 }
               }
             },
@@ -22856,14 +22856,14 @@
             "display": {
               "prompt": {
                 "text": {
-                  "english": "BCG vaccine",
-                  "default": "BCG vacina"
+                  "english": "BCG",
+                  "default": "BCG"
                 }
               },
               "constraint_message": {
                 "text": {
                   "english": "The BCG vaccine cannot be in the future",
-                  "default": "The BCG vaccine cannot be in the future 1"
+                  "default": "A vacina BCG não pode estar no futuro"
                 }
               }
             },
@@ -22891,8 +22891,8 @@
             "display": {
               "prompt": {
                 "text": {
-                  "english": "BCG vaccine <b>{{calculates.displayBCG}}</b>",
-                  "default": "BCG vacina <b>{{calculates.displayBCG}}</b>"
+                  "english": "BCG <b>{{calculates.displayBCG}}</b>",
+                  "default": "BCG <b>{{calculates.displayBCG}}</b>"
                 }
               }
             },
@@ -22908,8 +22908,8 @@
             "display": {
               "prompt": {
                 "text": {
-                  "english": "<font color = \"red\">BCG vaccine <b>{{calculates.displayBCG}}</b></font>",
-                  "default": "<font color = \"red\">BCG vacina <b>{{calculates.displayBCG}}</b></font>"
+                  "english": "<font color = \"red\">BCG <b>{{calculates.displayBCG}}</b></font>",
+                  "default": "<font color = \"red\">BCG <b>{{calculates.displayBCG}}</b></font>"
                 }
               }
             },
@@ -22939,7 +22939,7 @@
               "constraint_message": {
                 "text": {
                   "english": "The BCG vaccine cannot be in the future",
-                  "default": "The BCG vaccine cannot be in the future 2"
+                  "default": "A vacina BCG não pode estar no futuro"
                 }
               }
             },
@@ -22967,14 +22967,14 @@
             "display": {
               "prompt": {
                 "text": {
-                  "english": "Polio vaccine",
-                  "default": "Polio vacina"
+                  "english": "Polio at birth",
+                  "default": "Polio ao nascimento"
                 }
               },
               "constraint_message": {
                 "text": {
-                  "english": "The polio vaccine cannot be in the future",
-                  "default": "The polio vaccine cannot be in the future"
+                  "english": "The polio at birth vaccine cannot be in the future",
+                  "default": "A vacina polio ao nascimento não pode estar no futuro"
                 }
               }
             },
@@ -23002,8 +23002,8 @@
             "display": {
               "prompt": {
                 "text": {
-                  "english": "Polio vaccine <b>{{calculates.displayPOLIONAS}}</b>",
-                  "default": "Polio vacina <b>{{calculates.displayPOLIONAS}}</b>"
+                  "english": "Polio at birth <b>{{calculates.displayPOLIONAS}}</b>",
+                  "default": "Polio ao nascimento <b>{{calculates.displayPOLIONAS}}</b>"
                 }
               }
             },
@@ -23019,8 +23019,8 @@
             "display": {
               "prompt": {
                 "text": {
-                  "english": "<font color = \"red\">Polio vaccine <b>{{calculates.displayPOLIONAS}}</b></font>",
-                  "default": "<font color = \"red\">Polio vacina <b>{{calculates.displayPOLIONAS}}</b></font>"
+                  "english": "<font color = \"red\">Polio at birth <b>{{calculates.displayPOLIONAS}}</b></font>",
+                  "default": "<font color = \"red\">Polio ao nascimento <b>{{calculates.displayPOLIONAS}}</b></font>"
                 }
               }
             },
@@ -23049,8 +23049,8 @@
             "display": {
               "constraint_message": {
                 "text": {
-                  "english": "The polio vaccine cannot be in the future",
-                  "default": "The polio vaccine cannot be in the future"
+                  "english": "The polio at birth vaccine cannot be in the future",
+                  "default": "A vacina polio ao nascimento não pode estar no futuro"
                 }
               }
             },
@@ -23129,14 +23129,14 @@
             "display": {
               "prompt": {
                 "text": {
-                  "english": "PENTA1 vaccine",
-                  "default": "PENTA1 vacina"
+                  "english": "Penta 1",
+                  "default": "Penta 1"
                 }
               },
               "constraint_message": {
                 "text": {
-                  "english": "The PENTA1 vaccine cannot be in the future",
-                  "default": "The PENTA1 vaccine cannot be in the future"
+                  "english": "The penta 1 vaccine cannot be in the future",
+                  "default": "A vacina penta 1 não pode estar no futuro"
                 }
               }
             },
@@ -23164,8 +23164,8 @@
             "display": {
               "prompt": {
                 "text": {
-                  "english": "PENTA1 vaccine <b>{{calculates.displayPENTA1}}</b>",
-                  "default": "PENTA1 vacina  <b>{{calculates.displayPENTA1}}</b>"
+                  "english": "Penta 1 <b>{{calculates.displayPENTA1}}</b>",
+                  "default": "Penta 1  <b>{{calculates.displayPENTA1}}</b>"
                 }
               }
             },
@@ -23181,8 +23181,8 @@
             "display": {
               "prompt": {
                 "text": {
-                  "english": "<font color = \"red\">PENTA1 vaccine <b>{{calculates.displayPENTA1}}</b></font>",
-                  "default": "<font color = \"red\">PENTA1 vacina  <b>{{calculates.displayPENTA1}}</b></font>"
+                  "english": "<font color = \"red\">Penta 1 <b>{{calculates.displayPENTA1}}</b></font>",
+                  "default": "<font color = \"red\">Penta 1  <b>{{calculates.displayPENTA1}}</b></font>"
                 }
               }
             },
@@ -23211,8 +23211,8 @@
             "display": {
               "constraint_message": {
                 "text": {
-                  "english": "The PENTA1 vaccine cannot be in the future",
-                  "default": "The PENTA1 vaccine cannot be in the future"
+                  "english": "The penta 1 vaccine cannot be in the future",
+                  "default": "A vacina penta 1 não pode estar no futuro"
                 }
               }
             },
@@ -23240,14 +23240,14 @@
             "display": {
               "prompt": {
                 "text": {
-                  "english": "POLIO1 vaccine",
-                  "default": "POLIO1 vacina"
+                  "english": "Polio 1",
+                  "default": "Polio 1"
                 }
               },
               "constraint_message": {
                 "text": {
-                  "english": "The POLIO1 vaccine cannot be in the future",
-                  "default": "The POLIO1 vaccine cannot be in the future"
+                  "english": "The polio 1 vaccine cannot be in the future",
+                  "default": "A vacina polio 1 não pode estar no futuro"
                 }
               }
             },
@@ -23275,8 +23275,8 @@
             "display": {
               "prompt": {
                 "text": {
-                  "english": "POLIO1 vaccine <b>{{calculates.displayPOLIO1}}</b>",
-                  "default": "POLIO1 vacina <b>{{calculates.displayPOLIO1}}</b>"
+                  "english": "Polio 1 <b>{{calculates.displayPOLIO1}}</b>",
+                  "default": "Polio 1 <b>{{calculates.displayPOLIO1}}</b>"
                 }
               }
             },
@@ -23292,8 +23292,8 @@
             "display": {
               "prompt": {
                 "text": {
-                  "english": "<font color = \"red\">POLIO1 vaccine <b>{{calculates.displayPOLIO1}}</b></font>",
-                  "default": "<font color = \"red\">POLIO1 vacina <b>{{calculates.displayPOLIO1}}</b></font>"
+                  "english": "<font color = \"red\">Polio 1 <b>{{calculates.displayPOLIO1}}</b></font>",
+                  "default": "<font color = \"red\">Polio 1 <b>{{calculates.displayPOLIO1}}</b></font>"
                 }
               }
             },
@@ -23322,8 +23322,8 @@
             "display": {
               "constraint_message": {
                 "text": {
-                  "english": "The POLIO1 vaccine cannot be in the future",
-                  "default": "The POLIO1 vaccine cannot be in the future"
+                  "english": "The polio 1 vaccine cannot be in the future",
+                  "default": "A vacina polio 1 não pode estar no futuro"
                 }
               }
             },
@@ -23351,14 +23351,14 @@
             "display": {
               "prompt": {
                 "text": {
-                  "english": "PCV1 vaccine",
-                  "default": "PCV1 vacina"
+                  "english": "PCV 1",
+                  "default": "PCV 1"
                 }
               },
               "constraint_message": {
                 "text": {
-                  "english": "The PCV1 vaccine cannot be in the future",
-                  "default": "The PCV1 vaccine cannot be in the future"
+                  "english": "The PCV 1 vaccine cannot be in the future",
+                  "default": "A vacina PCV 1 não pode estar no futuro"
                 }
               }
             },
@@ -23386,8 +23386,8 @@
             "display": {
               "prompt": {
                 "text": {
-                  "english": "PCV1 vaccine <b>{{calculates.displayPCV1}}</b>",
-                  "default": "PCV1 vacina <b>{{calculates.displayPCV1}}</b>"
+                  "english": "PCV 1 <b>{{calculates.displayPCV1}}</b>",
+                  "default": "PCV 1 <b>{{calculates.displayPCV1}}</b>"
                 }
               }
             },
@@ -23403,8 +23403,8 @@
             "display": {
               "prompt": {
                 "text": {
-                  "english": "<font color = \"red\">PCV1 vaccine <b>{{calculates.displayPCV1}}</b></font>",
-                  "default": "<font color = \"red\">PCV1 vacina <b>{{calculates.displayPCV1}}</b></font>"
+                  "english": "<font color = \"red\">PCV 1 <b>{{calculates.displayPCV1}}</b></font>",
+                  "default": "<font color = \"red\">PCV 1 <b>{{calculates.displayPCV1}}</b></font>"
                 }
               }
             },
@@ -23433,8 +23433,8 @@
             "display": {
               "constraint_message": {
                 "text": {
-                  "english": "The PCV1 vaccine cannot be in the future",
-                  "default": "The PCV1 vaccine cannot be in the future"
+                  "english": "The PCV 1 vaccine cannot be in the future",
+                  "default": "A vacina PCV 1 não pode estar no futuro"
                 }
               }
             },
@@ -23462,14 +23462,14 @@
             "display": {
               "prompt": {
                 "text": {
-                  "english": "ROX1 vaccine",
-                  "default": "ROX1 vacina"
+                  "english": "Rota 1",
+                  "default": "Rota 1"
                 }
               },
               "constraint_message": {
                 "text": {
-                  "english": "The ROX1 vaccine cannot be in the future",
-                  "default": "The ROX1 vaccine cannot be in the future"
+                  "english": "The rota 1 vaccine cannot be in the future",
+                  "default": "A vacina rota 1 não pode estar no futuro"
                 }
               }
             },
@@ -23497,8 +23497,8 @@
             "display": {
               "prompt": {
                 "text": {
-                  "english": "ROX1 vaccine <b>{{calculates.displayROX1}}</b>",
-                  "default": "ROX1 vacina <b>{{calculates.displayROX1}}</b>"
+                  "english": "Rota 1 <b>{{calculates.displayROX1}}</b>",
+                  "default": "Rota 1 <b>{{calculates.displayROX1}}</b>"
                 }
               }
             },
@@ -23514,8 +23514,8 @@
             "display": {
               "prompt": {
                 "text": {
-                  "english": "<font color = \"red\">ROX1 vaccine <b>{{calculates.displayROX1}}</b></font>",
-                  "default": "<font color = \"red\">ROX1 vacina <b>{{calculates.displayROX1}}</b></font>"
+                  "english": "<font color = \"red\">Rota 1 <b>{{calculates.displayROX1}}</b></font>",
+                  "default": "<font color = \"red\">Rota 1 <b>{{calculates.displayROX1}}</b></font>"
                 }
               }
             },
@@ -23544,8 +23544,8 @@
             "display": {
               "constraint_message": {
                 "text": {
-                  "english": "The ROX1 vaccine cannot be in the future",
-                  "default": "The ROX1 vaccine cannot be in the future"
+                  "english": "The rota 1 vaccine cannot be in the future",
+                  "default": "A vacina rota 1 não pode estar no futuro"
                 }
               }
             },
@@ -23658,14 +23658,14 @@
             "display": {
               "prompt": {
                 "text": {
-                  "english": "PENTA2 vaccine",
-                  "default": "PENTA2 vacina"
+                  "english": "Penta 2",
+                  "default": "Penta 2"
                 }
               },
               "constraint_message": {
                 "text": {
-                  "english": "PENTA2 vaccine cannot be in the future",
-                  "default": "PENTA2 vaccine cannot be in the future"
+                  "english": "The penta 2 vaccine cannot be in the future",
+                  "default": "A vacina penta 2 não pode estar no futuro"
                 }
               }
             },
@@ -23693,8 +23693,8 @@
             "display": {
               "prompt": {
                 "text": {
-                  "english": "PENTA2 vaccine <b>{{calculates.displayPENTA2}}</b>",
-                  "default": "PENTA2 vacina <b>{{calculates.displayPENTA2}}</b>"
+                  "english": "Penta 2 <b>{{calculates.displayPENTA2}}</b>",
+                  "default": "Penta 2 <b>{{calculates.displayPENTA2}}</b>"
                 }
               }
             },
@@ -23710,8 +23710,8 @@
             "display": {
               "prompt": {
                 "text": {
-                  "english": "<font color = \"red\">PENTA2 vaccine <b>{{calculates.displayPENTA2}}</b></font>",
-                  "default": "<font color = \"red\">PENTA2 vacina  <b>{{calculates.displayPENTA2}}</b></font>"
+                  "english": "<font color = \"red\">Penta 2 <b>{{calculates.displayPENTA2}}</b></font>",
+                  "default": "<font color = \"red\">Penta 2  <b>{{calculates.displayPENTA2}}</b></font>"
                 }
               }
             },
@@ -23740,8 +23740,8 @@
             "display": {
               "constraint_message": {
                 "text": {
-                  "english": "PENTA2 vaccine cannot be in the future",
-                  "default": "PENTA2 vaccine cannot be in the future"
+                  "english": "The penta 2 vaccine cannot be in the future",
+                  "default": "A vacina penta 2 não pode estar no futuro"
                 }
               }
             },
@@ -23769,14 +23769,14 @@
             "display": {
               "prompt": {
                 "text": {
-                  "english": "POLIO2 vaccine",
-                  "default": "POLIO2 vacina"
+                  "english": "Polio 2",
+                  "default": "Polio 2"
                 }
               },
               "constraint_message": {
                 "text": {
-                  "english": "POLIO2 vaccine cannot be in the future",
-                  "default": "POLIO2 vaccine cannot be in the future"
+                  "english": "The polio 2 vaccine cannot be in the future",
+                  "default": "A vacina polio 2 não pode estar no futuro"
                 }
               }
             },
@@ -23804,8 +23804,8 @@
             "display": {
               "prompt": {
                 "text": {
-                  "english": "POLIO2 vaccine <b>{{calculates.displayPOLIO2}}</b>",
-                  "default": "POLIO2 vacina <b>{{calculates.displayPOLIO2}}</b>"
+                  "english": "Polio 2 <b>{{calculates.displayPOLIO2}}</b>",
+                  "default": "Polio 2 <b>{{calculates.displayPOLIO2}}</b>"
                 }
               }
             },
@@ -23821,8 +23821,8 @@
             "display": {
               "prompt": {
                 "text": {
-                  "english": "<font color = \"red\">POLIO2 vaccine <b>{{calculates.displayPOLIO2}}</b></font>",
-                  "default": "<font color = \"red\">POLIO2 vacina <b>{{calculates.displayPOLIO2}}</b></font>"
+                  "english": "<font color = \"red\">Polio 2 <b>{{calculates.displayPOLIO2}}</b></font>",
+                  "default": "<font color = \"red\">Polio 2 <b>{{calculates.displayPOLIO2}}</b></font>"
                 }
               }
             },
@@ -23851,8 +23851,8 @@
             "display": {
               "constraint_message": {
                 "text": {
-                  "english": "POLIO2 vaccine cannot be in the future",
-                  "default": "POLIO2 vaccine cannot be in the future"
+                  "english": "The polio 2 vaccine cannot be in the future",
+                  "default": "A vacina polio 2 não pode estar no futuro"
                 }
               }
             },
@@ -23880,14 +23880,14 @@
             "display": {
               "prompt": {
                 "text": {
-                  "english": "PCV2 vaccine",
-                  "default": "PCV2 vacina"
+                  "english": "PCV 2",
+                  "default": "PCV 2"
                 }
               },
               "constraint_message": {
                 "text": {
-                  "english": "PCV2 vaccine cannot be in the future",
-                  "default": "PCV2 vaccine cannot be in the future"
+                  "english": "The PCV 2 vaccine cannot be in the future",
+                  "default": "A vacina PCV 2 não pode estar no futuro"
                 }
               }
             },
@@ -23915,8 +23915,8 @@
             "display": {
               "prompt": {
                 "text": {
-                  "english": "PCV2 vaccine <b>{{calculates.displayPCV2}}</b>",
-                  "default": "PCV2 vacina <b>{{calculates.displayPCV2}}</b>"
+                  "english": "PCV 2 <b>{{calculates.displayPCV2}}</b>",
+                  "default": "PCV 2 <b>{{calculates.displayPCV2}}</b>"
                 }
               }
             },
@@ -23932,8 +23932,8 @@
             "display": {
               "prompt": {
                 "text": {
-                  "english": "<font color = \"red\">PCV2 vaccine <b>{{calculates.displayPCV2}}</b></font>",
-                  "default": "<font color = \"red\">PCV2 vacina <b>{{calculates.displayPCV2}}</b></font>"
+                  "english": "<font color = \"red\">PCV 2 <b>{{calculates.displayPCV2}}</b></font>",
+                  "default": "<font color = \"red\">PCV 2 <b>{{calculates.displayPCV2}}</b></font>"
                 }
               }
             },
@@ -23962,8 +23962,8 @@
             "display": {
               "constraint_message": {
                 "text": {
-                  "english": "PCV2 vaccine cannot be in the future",
-                  "default": "PCV2 vaccine cannot be in the future"
+                  "english": "The PCV 2 vaccine cannot be in the future",
+                  "default": "A vacina PCV 2 não pode estar no futuro"
                 }
               }
             },
@@ -23991,14 +23991,14 @@
             "display": {
               "prompt": {
                 "text": {
-                  "english": "ROX2 vaccine",
-                  "default": "ROX2 vacina"
+                  "english": "Rota 2",
+                  "default": "Rota 2"
                 }
               },
               "constraint_message": {
                 "text": {
-                  "english": "ROX2 vaccine cannot be in the future",
-                  "default": "ROX2 vaccine cannot be in the future"
+                  "english": "The rota 2 vaccine cannot be in the future",
+                  "default": "A vacina rota 2 não pode estar no futuro"
                 }
               }
             },
@@ -24026,8 +24026,8 @@
             "display": {
               "prompt": {
                 "text": {
-                  "english": "ROX2 vaccine <b>{{calculates.displayROX2}}</b>",
-                  "default": "ROX2 vacina <b>{{calculates.displayROX2}}</b>"
+                  "english": "Rota 2 <b>{{calculates.displayROX2}}</b>",
+                  "default": "Rota 2 <b>{{calculates.displayROX2}}</b>"
                 }
               }
             },
@@ -24043,8 +24043,8 @@
             "display": {
               "prompt": {
                 "text": {
-                  "english": "<font color = \"red\">ROX2 vaccine <b>{{calculates.displayROX2}}</b></font>",
-                  "default": "<font color = \"red\">ROX2 vacina <b>{{calculates.displayROX2}}</b></font>"
+                  "english": "<font color = \"red\">Rota 2 <b>{{calculates.displayROX2}}</b></font>",
+                  "default": "<font color = \"red\">Rota 2 <b>{{calculates.displayROX2}}</b></font>"
                 }
               }
             },
@@ -24073,8 +24073,8 @@
             "display": {
               "constraint_message": {
                 "text": {
-                  "english": "ROX2 vaccine cannot be in the future",
-                  "default": "ROX2 vaccine cannot be in the future"
+                  "english": "The rota 2 vaccine cannot be in the future",
+                  "default": "A vacina rota 2 não pode estar no futuro"
                 }
               }
             },
@@ -24255,14 +24255,14 @@
             "display": {
               "prompt": {
                 "text": {
-                  "english": "PENTA3 vaccine",
-                  "default": "PENTA3 vacina"
+                  "english": "Penta 3",
+                  "default": "Penta 3"
                 }
               },
               "constraint_message": {
                 "text": {
-                  "english": "PENTA3 vaccine cannot be in the future",
-                  "default": "PENTA3 vaccine cannot be in the future"
+                  "english": "The penta 3 vaccine cannot be in the future",
+                  "default": "A vacina penta 3 não pode estar no futuro"
                 }
               }
             },
@@ -24290,8 +24290,8 @@
             "display": {
               "prompt": {
                 "text": {
-                  "english": "PENTA3 vaccine <b>{{calculates.displayPENTA3}}</b>",
-                  "default": "PENTA3 vacina <b>{{calculates.displayPENTA3}}</b>"
+                  "english": "Penta 3 <b>{{calculates.displayPENTA3}}</b>",
+                  "default": "Penta 3 <b>{{calculates.displayPENTA3}}</b>"
                 }
               }
             },
@@ -24307,8 +24307,8 @@
             "display": {
               "prompt": {
                 "text": {
-                  "english": "<font color = \"red\">PENTA3 vaccine <b>{{calculates.displayPENTA3}}</b></font>",
-                  "default": "<font color = \"red\">PENTA3 vacina  <b>{{calculates.displayPENTA3}}</b></font>"
+                  "english": "<font color = \"red\">Penta 3 <b>{{calculates.displayPENTA3}}</b></font>",
+                  "default": "<font color = \"red\">Penta 3  <b>{{calculates.displayPENTA3}}</b></font>"
                 }
               }
             },
@@ -24337,8 +24337,8 @@
             "display": {
               "constraint_message": {
                 "text": {
-                  "english": "PENTA3 vaccine cannot be in the future",
-                  "default": "PENTA3 vaccine cannot be in the future"
+                  "english": "The penta 3 vaccine cannot be in the future",
+                  "default": "A vacina penta 3 não pode estar no futuro"
                 }
               }
             },
@@ -24366,14 +24366,14 @@
             "display": {
               "prompt": {
                 "text": {
-                  "english": "POLIO3 vaccine",
-                  "default": "POLIO3 vacina"
+                  "english": "Polio 3",
+                  "default": "Polio 3"
                 }
               },
               "constraint_message": {
                 "text": {
-                  "english": "POLIO3 vaccine cannot be in the future",
-                  "default": "POLIO3 vaccine cannot be in the future"
+                  "english": "The polio 3 vaccine cannot be in the future",
+                  "default": "A vacina polio 3 não pode estar no futuro"
                 }
               }
             },
@@ -24401,8 +24401,8 @@
             "display": {
               "prompt": {
                 "text": {
-                  "english": "POLIO3 vaccine <b>{{calculates.displayPOLIO3}}</b>",
-                  "default": "POLIO3 vacina <b>{{calculates.displayPOLIO3}}</b>"
+                  "english": "Polio 3 <b>{{calculates.displayPOLIO3}}</b>",
+                  "default": "Polio 3 <b>{{calculates.displayPOLIO3}}</b>"
                 }
               }
             },
@@ -24418,8 +24418,8 @@
             "display": {
               "prompt": {
                 "text": {
-                  "english": "<font color = \"red\">POLIO3 vaccine <b>{{calculates.displayPOLIO3}}</b></font>",
-                  "default": "<font color = \"red\">POLIO2 vacina <b>{{calculates.displayPOLIO2}}</b></font>"
+                  "english": "<font color = \"red\">Polio 3 <b>{{calculates.displayPOLIO3}}</b></font>",
+                  "default": "<font color = \"red\">Polio 3 <b>{{calculates.displayPOLIO3}}</b></font>"
                 }
               }
             },
@@ -24448,8 +24448,8 @@
             "display": {
               "constraint_message": {
                 "text": {
-                  "english": "POLIO3 vaccine cannot be in the future",
-                  "default": "POLIO3 vaccine cannot be in the future"
+                  "english": "The polio 3 vaccine cannot be in the future",
+                  "default": "A vacina polio 3 não pode estar no futuro"
                 }
               }
             },
@@ -24477,14 +24477,14 @@
             "display": {
               "prompt": {
                 "text": {
-                  "english": "PCV3 vaccine",
-                  "default": "PCV3 vacina"
+                  "english": "PCV 3",
+                  "default": "PCV 3"
                 }
               },
               "constraint_message": {
                 "text": {
-                  "english": "PCV3 vaccine cannot be in the future",
-                  "default": "PCV3 vaccine cannot be in the future"
+                  "english": "The PCV 3 vaccine cannot be in the future",
+                  "default": "A vacina PCV 3 não pode estar no futuro"
                 }
               }
             },
@@ -24512,8 +24512,8 @@
             "display": {
               "prompt": {
                 "text": {
-                  "english": "PCV3 vaccine <b>{{calculates.displayPCV3}}</b>",
-                  "default": "PCV3 vacina <b>{{calculates.displayPCV3}}</b>"
+                  "english": "PCV 3 <b>{{calculates.displayPCV3}}</b>",
+                  "default": "PCV 3 <b>{{calculates.displayPCV3}}</b>"
                 }
               }
             },
@@ -24529,8 +24529,8 @@
             "display": {
               "prompt": {
                 "text": {
-                  "english": "<font color = \"red\">PCV3 vaccine <b>{{calculates.displayPCV3}}</b></font>",
-                  "default": "<font color = \"red\">PCV2 vacina <b>{{calculates.displayPCV2}}</b></font>"
+                  "english": "<font color = \"red\">PCV 3 <b>{{calculates.displayPCV3}}</b></font>",
+                  "default": "<font color = \"red\">PCV 3 <b>{{calculates.displayPCV3}}</b></font>"
                 }
               }
             },
@@ -24559,8 +24559,8 @@
             "display": {
               "constraint_message": {
                 "text": {
-                  "english": "PCV3 vaccine cannot be in the future",
-                  "default": "PCV3 vaccine cannot be in the future"
+                  "english": "The PCV3 vaccine cannot be in the future",
+                  "default": "A vacina PCV3 não pode estar no futuro"
                 }
               }
             },
@@ -24588,14 +24588,14 @@
             "display": {
               "prompt": {
                 "text": {
-                  "english": "VPI vaccine",
-                  "default": "VPI vacina"
+                  "english": "VPI",
+                  "default": "VPI"
                 }
               },
               "constraint_message": {
                 "text": {
-                  "english": "VPI vaccine cannot be in the future",
-                  "default": "VPI vaccine cannot be in the future"
+                  "english": "The VPI vaccine cannot be in the future",
+                  "default": "A vacina VPI não pode estar no futuro"
                 }
               }
             },
@@ -24623,8 +24623,8 @@
             "display": {
               "prompt": {
                 "text": {
-                  "english": "VPI vaccine <b>{{calculates.displayVPI}}</b>",
-                  "default": "VPI vacina <b>{{calculates.displayVPI}}</b>"
+                  "english": "VPI <b>{{calculates.displayVPI}}</b>",
+                  "default": "VPI <b>{{calculates.displayVPI}}</b>"
                 }
               }
             },
@@ -24640,8 +24640,8 @@
             "display": {
               "prompt": {
                 "text": {
-                  "english": "<font color = \"red\">VPI vaccine <b>{{calculates.displayVPI}}</b></font>",
-                  "default": "<font color = \"red\">VPI vacina <b>{{calculates.displayVPI}}</b></font>"
+                  "english": "<font color = \"red\">VPI<b>{{calculates.displayVPI}}</b></font>",
+                  "default": "<font color = \"red\">VPI <b>{{calculates.displayVPI}}</b></font>"
                 }
               }
             },
@@ -24670,8 +24670,8 @@
             "display": {
               "constraint_message": {
                 "text": {
-                  "english": "VPI vaccine cannot be in the future",
-                  "default": "VPI vaccine cannot be in the future"
+                  "english": "The VPI vaccine cannot be in the future",
+                  "default": "A vacina VPI não pode estar no futuro"
                 }
               }
             },
@@ -24886,14 +24886,14 @@
             "display": {
               "prompt": {
                 "text": {
-                  "english": "SARAMPO1 vaccine",
-                  "default": "SARAMPO1 vacina"
+                  "english": "Measles 1",
+                  "default": "Sarampo 1"
                 }
               },
               "constraint_message": {
                 "text": {
-                  "english": "SARAMPO1 vaccine cannot be in the future",
-                  "default": "SARAMPO1 vaccine cannot be in the future"
+                  "english": "The measles 1 vaccine cannot be in the future",
+                  "default": "A vacina sarampo 1não pode estar no futuro"
                 }
               }
             },
@@ -24921,8 +24921,8 @@
             "display": {
               "prompt": {
                 "text": {
-                  "english": "SARAMPO1 vaccine <b>{{calculates.displaySARAMPO1}}</b>",
-                  "default": "SARAMPO1 vacina <b>{{calculates.displaySARAMPO1}}</b>"
+                  "english": "Measles 1 <b>{{calculates.displaySARAMPO1}}</b>",
+                  "default": "Sarampo 1 <b>{{calculates.displaySARAMPO1}}</b>"
                 }
               }
             },
@@ -24938,8 +24938,8 @@
             "display": {
               "prompt": {
                 "text": {
-                  "english": "<font color = \"red\">SARAMPO1 vaccine <b>{{calculates.displaySARAMPO1}}</b></font>",
-                  "default": "<font color = \"red\">SARAMPO1 vacina <b>{{calculates.displaySARAMPO1}}</b></font>"
+                  "english": "<font color = \"red\">Measles 1 <b>{{calculates.displaySARAMPO1}}</b></font>",
+                  "default": "<font color = \"red\">Sarampo 1 <b>{{calculates.displaySARAMPO1}}</b></font>"
                 }
               }
             },
@@ -24968,8 +24968,8 @@
             "display": {
               "constraint_message": {
                 "text": {
-                  "english": "SARAMPO1 vaccine cannot be in the future",
-                  "default": "SARAMPO1 vaccine cannot be in the future"
+                  "english": "The measles 1 vaccine cannot be in the future",
+                  "default": "A vacina sarampo 1não pode estar no futuro"
                 }
               }
             },
@@ -24997,14 +24997,14 @@
             "display": {
               "prompt": {
                 "text": {
-                  "english": "FEBAMAREL vaccine",
-                  "default": "FEBAMAREL vacina"
+                  "english": "Yellow fever",
+                  "default": "Febre amarela"
                 }
               },
               "constraint_message": {
                 "text": {
-                  "english": "FEBAMAREL vaccine cannot be in the future",
-                  "default": "FEBAMAREL vaccine cannot be in the future"
+                  "english": "The yellow fever vaccine cannot be in the future",
+                  "default": "A vacina febre amarela não pode estar no futuro"
                 }
               }
             },
@@ -25032,8 +25032,8 @@
             "display": {
               "prompt": {
                 "text": {
-                  "english": "FEBAMAREL vaccine <b>{{calculates.displayFEBAMAREL}}</b>",
-                  "default": "FEBAMAREL vacina <b>{{calculates.displayFEBAMAREL}}</b>"
+                  "english": "Yellow fever <b>{{calculates.displayFEBAMAREL}}</b>",
+                  "default": "Febre amarela<b>{{calculates.displayFEBAMAREL}}</b>"
                 }
               }
             },
@@ -25049,8 +25049,8 @@
             "display": {
               "prompt": {
                 "text": {
-                  "english": "<font color = \"red\">FEBAMAREL vaccine <b>{{calculates.displayFEBAMAREL}}</b></font>",
-                  "default": "<font color = \"red\">FEBAMAREL vacina <b>{{calculates.displayFEBAMAREL}}</b></font>"
+                  "english": "<font color = \"red\">Yellow fever <b>{{calculates.displayFEBAMAREL}}</b></font>",
+                  "default": "<font color = \"red\">Febre amarela<b>{{calculates.displayFEBAMAREL}}</b></font>"
                 }
               }
             },
@@ -25079,8 +25079,8 @@
             "display": {
               "constraint_message": {
                 "text": {
-                  "english": "FEBAMAREL vaccine cannot be in the future",
-                  "default": "FEBAMAREL vaccine cannot be in the future"
+                  "english": "The yellow fever vaccine cannot be in the future",
+                  "default": "A vacina febre amarela não pode estar no futuro"
                 }
               }
             },
@@ -27001,8 +27001,8 @@
               },
               "constraint_message": {
                 "text": {
-                  "english": "Cannot be before date of birth and in the future",
-                  "default": "Cannot be before date of birth and in the future"
+                  "english": "The date of intervention cannot be before date of birth and in the future",
+                  "default": "A data da intervenção não pode ser anterior à data de nascimento e no futuro"
                 }
               }
             },
@@ -27061,8 +27061,8 @@
               },
               "constraint_message": {
                 "text": {
-                  "english": "Cannot be before date of birth and in the future",
-                  "default": "Cannot be before date of birth and in the future"
+                  "english": "The date of intervention cannot be before date of birth and in the future",
+                  "default": "A data da intervenção não pode ser anterior à data de nascimento e no futuro"
                 }
               }
             },
