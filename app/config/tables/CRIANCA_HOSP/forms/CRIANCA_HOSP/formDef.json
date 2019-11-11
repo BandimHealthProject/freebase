@@ -182,7 +182,7 @@
             }
           }
         },
-        "constraint": "adate.diffInDays(data('CONT'), data('DATAINT'))<1",
+        "constraint": "adate.diffInDays(data('CONT'), data('DATAINT'))<1 || adate.hasUncertainty(data('DATAINT'))",
         "_row_num": 14
       },
       {
@@ -1774,7 +1774,7 @@
                 }
               }
             },
-            "constraint": "adate.diffInDays(data('CONT'), data('DATAINT'))<1",
+            "constraint": "adate.diffInDays(data('CONT'), data('DATAINT'))<1 || adate.hasUncertainty(data('DATAINT'))",
             "_row_num": 14,
             "__rowNum__": 13,
             "_token_type": "prompt",

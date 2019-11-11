@@ -1278,6 +1278,14 @@
       },
       {
         "type": "note",
+        "display": {
+          "prompt": {
+            "text": {
+              "english": "<b>Obstetric history: {{data.NOME}} - Dob: {{calculates.displayMIFDNASC}}<b>",
+              "default": "<b>História obstetrica: {{data.NOME}} - Nas: {{calculates.displayMIFDNASC}}<b>"
+            }
+          }
+        },
         "_row_num": 79
       },
       {
@@ -1493,8 +1501,15 @@
               "english": "Number of stillbirths",
               "default": "Número de natimortos"
             }
+          },
+          "constraint_message": {
+            "text": {
+              "english": "Number of births cannot be bigger than the number of children alive + children dead + stillbirths",
+              "default": "O número de nascimentos não pode ser maior que o número de criança vivas + criança mortas + natimortos"
+            }
           }
         },
+        "constraint": "data('PART')<=calculates.SUM() || data('PART') == '99'",
         "_row_num": 110
       },
       {
@@ -1579,7 +1594,7 @@
         "display": {
           "prompt": {
             "text": {
-              "english": "Number of miscarriages",
+              "english": "Any twins?",
               "default": "Algum gêmeos?"
             }
           }
@@ -1993,7 +2008,7 @@
             }
           }
         },
-        "constraint": "(adate.diffInDays(data('CONT'), data('EXITDATA'))<1 && adate.diffInDays(data('EXITDATA'), data('lastvisitdate'))<1) || (data('ESTADOVIS') != '2' && data('ESTADOVIS') != '3')",
+        "constraint": "(adate.diffInDays(data('CONT'), data('EXITDATA'))<1 && adate.diffInDays(data('EXITDATA'), data('lastvisitdate'))<1) || (data('ESTADOVIS') != '2' && data('ESTADOVIS') != '3') || adate.hasUncertainty(data('EXITDATA'))",
         "_row_num": 28
       },
       {
@@ -2155,7 +2170,7 @@
             }
           }
         },
-        "constraint": "adate.diffInDays(data('CONT'), data('CONSENTDAT'))<1 || data('CONSENTDAT') == null",
+        "constraint": "adate.diffInDays(data('CONT'), data('CONSENTDAT'))<1 || data('CONSENTDAT') == null || adate.hasUncertainty(data('CONSENTDAT'))",
         "_row_num": 50
       },
       {
@@ -2341,7 +2356,7 @@
             }
           }
         },
-        "constraint": "adate.diffInDays(data('CONT'), data('ABPARTDATA'))<1 || data('ABPARTDATA') == null",
+        "constraint": "adate.diffInDays(data('CONT'), data('ABPARTDATA'))<1 || data('ABPARTDATA') == null || adate.hasUncertainty(data('ABPARTDATA'))",
         "_row_num": 74
       },
       {
@@ -2962,6 +2977,15 @@
       {
         "type": "linked_table",
         "values_list": "pregnancies",
+        "display": {
+          "hint": {
+            "text": {
+              "english": "1: Pregnancy not terminated <br/>\n2: Pregnancy terminated <br/>\nA pregnancy <b>must</b> be terminated before creating a new pregnancy",
+              "default": "1: A gravidez não terminou <br/>\n2: Gravidez terminado <br/>\nUma gravidez <b> deve </b> ser terminado antes de criar uma nova gravidez"
+            }
+          },
+          "hide_delete_button": true
+        },
         "_row_num": 160
       },
       {
@@ -3125,7 +3149,7 @@
             }
           }
         },
-        "constraint": "adate.diffInDays(data('CONT'), data('VAC1DATA'))<1 || data('VAC1DATA') == null",
+        "constraint": "adate.diffInDays(data('CONT'), data('VAC1DATA'))<1 || data('VAC1DATA') == null || adate.hasUncertainty(data('VAC1DATA'))",
         "_row_num": 13
       },
       {
@@ -3228,7 +3252,7 @@
             }
           }
         },
-        "constraint": "adate.diffInDays(data('CONT'), data('VAC1DATA'))<1 || data('VAC1DATA') == null",
+        "constraint": "adate.diffInDays(data('CONT'), data('VAC1DATA'))<1 || data('VAC1DATA') == null || adate.hasUncertainty(data('VAC1DATA'))",
         "_row_num": 25
       },
       {
@@ -3361,7 +3385,7 @@
             }
           }
         },
-        "constraint": "adate.diffInDays(data('CONT'), data('VAC2DATA'))<1 || data('VAC2DATA')  == null",
+        "constraint": "adate.diffInDays(data('CONT'), data('VAC2DATA'))<1 || data('VAC2DATA')  == null || adate.hasUncertainty(data('VAC2DATA'))",
         "_row_num": 40
       },
       {
@@ -3471,7 +3495,7 @@
             }
           }
         },
-        "constraint": "adate.diffInDays(data('CONT'), data('VAC2DATA'))<1 || data('VAC2DATA')  == null",
+        "constraint": "adate.diffInDays(data('CONT'), data('VAC2DATA'))<1 || data('VAC2DATA')  == null || adate.hasUncertainty(data('VAC2DATA'))",
         "_row_num": 52
       },
       {
@@ -3604,7 +3628,7 @@
             }
           }
         },
-        "constraint": "adate.diffInDays(data('CONT'), data('VAC3DATA'))<1 || data('VAC3DATA') == null",
+        "constraint": "adate.diffInDays(data('CONT'), data('VAC3DATA'))<1 || data('VAC3DATA') == null || adate.hasUncertainty(data('VAC3DATA'))",
         "_row_num": 67
       },
       {
@@ -3707,7 +3731,7 @@
             }
           }
         },
-        "constraint": "adate.diffInDays(data('CONT'), data('VAC3DATA'))<1 || data('VAC3DATA') == null",
+        "constraint": "adate.diffInDays(data('CONT'), data('VAC3DATA'))<1 || data('VAC3DATA') == null || adate.hasUncertainty(data('VAC3DATA'))",
         "_row_num": 79
       },
       {
@@ -3840,7 +3864,7 @@
             }
           }
         },
-        "constraint": "adate.diffInDays(data('CONT'), data('VAC4DATA'))<1 || data('VAC4DATA') == null",
+        "constraint": "adate.diffInDays(data('CONT'), data('VAC4DATA'))<1 || data('VAC4DATA') == null || adate.hasUncertainty(data('VAC4DATA'))",
         "_row_num": 94
       },
       {
@@ -3950,7 +3974,7 @@
             }
           }
         },
-        "constraint": "adate.diffInDays(data('CONT'), data('VAC4DATA'))<1 || data('VAC4DATA') == null",
+        "constraint": "adate.diffInDays(data('CONT'), data('VAC4DATA'))<1 || data('VAC4DATA') == null || adate.hasUncertainty(data('VAC4DATA'))",
         "_row_num": 106
       },
       {
@@ -4083,7 +4107,7 @@
             }
           }
         },
-        "constraint": "adate.diffInDays(data('CONT'), data('VAC5DATA'))<1 || data('VAC5DATA') == null",
+        "constraint": "adate.diffInDays(data('CONT'), data('VAC5DATA'))<1 || data('VAC5DATA') == null || adate.hasUncertainty(data('VAC5DATA'))",
         "_row_num": 121
       },
       {
@@ -4186,7 +4210,7 @@
             }
           }
         },
-        "constraint": "adate.diffInDays(data('CONT'), data('VAC5DATA'))<1 || data('VAC5DATA') == null",
+        "constraint": "adate.diffInDays(data('CONT'), data('VAC5DATA'))<1 || data('VAC5DATA') == null || adate.hasUncertainty(data('VAC5DATA'))",
         "_row_num": 133
       },
       {
@@ -4319,7 +4343,7 @@
             }
           }
         },
-        "constraint": "adate.diffInDays(data('CONT'), data('VAC6DATA'))<1 || data('VAC6DATA') == null",
+        "constraint": "adate.diffInDays(data('CONT'), data('VAC6DATA'))<1 || data('VAC6DATA') == null || adate.hasUncertainty(data('VAC6DATA'))",
         "_row_num": 148
       },
       {
@@ -4429,7 +4453,7 @@
             }
           }
         },
-        "constraint": "adate.diffInDays(data('CONT'), data('VAC6DATA'))<1 || data('VAC6DATA') == null",
+        "constraint": "adate.diffInDays(data('CONT'), data('VAC6DATA'))<1 || data('VAC6DATA') == null || adate.hasUncertainty(data('VAC6DATA'))",
         "_row_num": 160
       },
       {
@@ -4562,7 +4586,7 @@
             }
           }
         },
-        "constraint": "adate.diffInDays(data('CONT'), data('VAC7DATA'))<1 || data('VAC7DATA') == null",
+        "constraint": "adate.diffInDays(data('CONT'), data('VAC7DATA'))<1 || data('VAC7DATA') == null || adate.hasUncertainty(data('VAC7DATA'))",
         "_row_num": 175
       },
       {
@@ -4665,7 +4689,7 @@
             }
           }
         },
-        "constraint": "adate.diffInDays(data('CONT'), data('VAC7DATA'))<1 || data('VAC7DATA') == null",
+        "constraint": "adate.diffInDays(data('CONT'), data('VAC7DATA'))<1 || data('VAC7DATA') == null || adate.hasUncertainty(data('VAC7DATA'))",
         "_row_num": 187
       },
       {
@@ -4798,7 +4822,7 @@
             }
           }
         },
-        "constraint": "adate.diffInDays(data('CONT'), data('VAC8DATA'))<1 || data('VAC8DATA') == null",
+        "constraint": "adate.diffInDays(data('CONT'), data('VAC8DATA'))<1 || data('VAC8DATA') == null || adate.hasUncertainty(data('VAC8DATA'))",
         "_row_num": 202
       },
       {
@@ -4908,7 +4932,7 @@
             }
           }
         },
-        "constraint": "adate.diffInDays(data('CONT'), data('VAC8DATA'))<1 || data('VAC8DATA') == null",
+        "constraint": "adate.diffInDays(data('CONT'), data('VAC8DATA'))<1 || data('VAC8DATA') == null || adate.hasUncertainty(data('VAC8DATA'))",
         "_row_num": 214
       },
       {
@@ -5041,7 +5065,7 @@
             }
           }
         },
-        "constraint": "adate.diffInDays(data('CONT'), data('VAC9DATA'))<1 || data('VAC9DATA') == null",
+        "constraint": "adate.diffInDays(data('CONT'), data('VAC9DATA'))<1 || data('VAC9DATA') == null || adate.hasUncertainty(data('VAC9DATA'))",
         "_row_num": 229
       },
       {
@@ -5144,7 +5168,7 @@
             }
           }
         },
-        "constraint": "adate.diffInDays(data('CONT'), data('VAC9DATA'))<1 || data('VAC9DATA') == null",
+        "constraint": "adate.diffInDays(data('CONT'), data('VAC9DATA'))<1 || data('VAC9DATA') == null || adate.hasUncertainty(data('VAC9DATA'))",
         "_row_num": 241
       },
       {
@@ -5277,7 +5301,7 @@
             }
           }
         },
-        "constraint": "adate.diffInDays(data('CONT'), data('VAC10DATA'))<1 || data('VAC10DATA') == null",
+        "constraint": "adate.diffInDays(data('CONT'), data('VAC10DATA'))<1 || data('VAC10DATA') == null || adate.hasUncertainty(data('VAC10DATA'))",
         "_row_num": 256
       },
       {
@@ -5387,7 +5411,7 @@
             }
           }
         },
-        "constraint": "adate.diffInDays(data('CONT'), data('VAC10DATA'))<1 || data('VAC10DATA') == null",
+        "constraint": "adate.diffInDays(data('CONT'), data('VAC10DATA'))<1 || data('VAC10DATA') == null || adate.hasUncertainty(data('VAC10DATA'))",
         "_row_num": 268
       },
       {
@@ -5520,7 +5544,7 @@
             }
           }
         },
-        "constraint": "adate.diffInDays(data('CONT'), data('VAC11DATA'))<1 || data('VAC11DATA') == null",
+        "constraint": "adate.diffInDays(data('CONT'), data('VAC11DATA'))<1 || data('VAC11DATA') == null || adate.hasUncertainty(data('VAC11DATA'))",
         "_row_num": 283
       },
       {
@@ -5623,7 +5647,7 @@
             }
           }
         },
-        "constraint": "adate.diffInDays(data('CONT'), data('VAC11DATA'))<1 || data('VAC11DATA') == null",
+        "constraint": "adate.diffInDays(data('CONT'), data('VAC11DATA'))<1 || data('VAC11DATA') == null || adate.hasUncertainty(data('VAC11DATA'))",
         "_row_num": 295
       },
       {
@@ -5756,7 +5780,7 @@
             }
           }
         },
-        "constraint": "adate.diffInDays(data('CONT'), data('VAC12DATA'))<1 || data('VAC12DATA') == null",
+        "constraint": "adate.diffInDays(data('CONT'), data('VAC12DATA'))<1 || data('VAC12DATA') == null || adate.hasUncertainty(data('VAC12DATA'))",
         "_row_num": 310
       },
       {
@@ -5866,7 +5890,7 @@
             }
           }
         },
-        "constraint": "adate.diffInDays(data('CONT'), data('VAC12DATA'))<1 || data('VAC12DATA') == null",
+        "constraint": "adate.diffInDays(data('CONT'), data('VAC12DATA'))<1 || data('VAC12DATA') == null || adate.hasUncertainty(data('VAC12DATA'))",
         "_row_num": 322
       },
       {
@@ -5999,7 +6023,7 @@
             }
           }
         },
-        "constraint": "adate.diffInDays(data('CONT'), data('VAC13DATA'))<1 || data('VAC13DATA') == null",
+        "constraint": "adate.diffInDays(data('CONT'), data('VAC13DATA'))<1 || data('VAC13DATA') == null || adate.hasUncertainty(data('VAC13DATA'))",
         "_row_num": 337
       },
       {
@@ -6102,7 +6126,7 @@
             }
           }
         },
-        "constraint": "adate.diffInDays(data('CONT'), data('VAC13DATA'))<1 || data('VAC13DATA') == null",
+        "constraint": "adate.diffInDays(data('CONT'), data('VAC13DATA'))<1 || data('VAC13DATA') == null || adate.hasUncertainty(data('VAC13DATA'))",
         "_row_num": 349
       },
       {
@@ -6235,7 +6259,7 @@
             }
           }
         },
-        "constraint": "adate.diffInDays(data('CONT'), data('VAC14DATA'))<1 || data('VAC14DATA') == null",
+        "constraint": "adate.diffInDays(data('CONT'), data('VAC14DATA'))<1 || data('VAC14DATA') == null || adate.hasUncertainty(data('VAC14DATA'))",
         "_row_num": 364
       },
       {
@@ -6345,7 +6369,7 @@
             }
           }
         },
-        "constraint": "adate.diffInDays(data('CONT'), data('VAC14DATA'))<1 || data('VAC14DATA') == null",
+        "constraint": "adate.diffInDays(data('CONT'), data('VAC14DATA'))<1 || data('VAC14DATA') == null || adate.hasUncertainty(data('VAC14DATA'))",
         "_row_num": 376
       },
       {
@@ -6478,7 +6502,7 @@
             }
           }
         },
-        "constraint": "adate.diffInDays(data('CONT'), data('VAC15DATA'))<1 || data('VAC15DATA') == null",
+        "constraint": "adate.diffInDays(data('CONT'), data('VAC15DATA'))<1 || data('VAC15DATA') == null || adate.hasUncertainty(data('VAC15DATA'))",
         "_row_num": 391
       },
       {
@@ -6581,7 +6605,7 @@
             }
           }
         },
-        "constraint": "adate.diffInDays(data('CONT'), data('VAC15DATA'))<1 || data('VAC15DATA') == null",
+        "constraint": "adate.diffInDays(data('CONT'), data('VAC15DATA'))<1 || data('VAC15DATA') == null || adate.hasUncertainty(data('VAC15DATA'))",
         "_row_num": 403
       },
       {
@@ -6714,7 +6738,7 @@
             }
           }
         },
-        "constraint": "adate.diffInDays(data('CONT'), data('VAC16DATA'))<1 || data('VAC16DATA') == null",
+        "constraint": "adate.diffInDays(data('CONT'), data('VAC16DATA'))<1 || data('VAC16DATA') == null || adate.hasUncertainty(data('VAC16DATA'))",
         "_row_num": 418
       },
       {
@@ -6824,7 +6848,7 @@
             }
           }
         },
-        "constraint": "adate.diffInDays(data('CONT'), data('VAC16DATA'))<1 || data('VAC16DATA') == null",
+        "constraint": "adate.diffInDays(data('CONT'), data('VAC16DATA'))<1 || data('VAC16DATA') == null || adate.hasUncertainty(data('VAC16DATA'))",
         "_row_num": 430
       },
       {
@@ -6957,7 +6981,7 @@
             }
           }
         },
-        "constraint": "adate.diffInDays(data('CONT'), data('VAC17DATA'))<1 || data('VAC17DATA') == null",
+        "constraint": "adate.diffInDays(data('CONT'), data('VAC17DATA'))<1 || data('VAC17DATA') == null || adate.hasUncertainty(data('VAC17DATA'))",
         "_row_num": 445
       },
       {
@@ -7060,7 +7084,7 @@
             }
           }
         },
-        "constraint": "adate.diffInDays(data('CONT'), data('VAC17DATA'))<1 || data('VAC17DATA') == null",
+        "constraint": "adate.diffInDays(data('CONT'), data('VAC17DATA'))<1 || data('VAC17DATA') == null || adate.hasUncertainty(data('VAC17DATA'))",
         "_row_num": 457
       },
       {
@@ -7193,7 +7217,7 @@
             }
           }
         },
-        "constraint": "adate.diffInDays(data('CONT'), data('VAC18DATA'))<1 || data('VAC18DATA') == null",
+        "constraint": "adate.diffInDays(data('CONT'), data('VAC18DATA'))<1 || data('VAC18DATA') == null || adate.hasUncertainty(data('VAC18DATA'))",
         "_row_num": 472
       },
       {
@@ -7303,7 +7327,7 @@
             }
           }
         },
-        "constraint": "adate.diffInDays(data('CONT'), data('VAC18DATA'))<1 || data('VAC18DATA') == null",
+        "constraint": "adate.diffInDays(data('CONT'), data('VAC18DATA'))<1 || data('VAC18DATA') == null || adate.hasUncertainty(data('VAC18DATA'))",
         "_row_num": 484
       },
       {
@@ -7436,7 +7460,7 @@
             }
           }
         },
-        "constraint": "adate.diffInDays(data('CONT'), data('VAC19DATA'))<1 || data('VAC19DATA') == null",
+        "constraint": "adate.diffInDays(data('CONT'), data('VAC19DATA'))<1 || data('VAC19DATA') == null || adate.hasUncertainty(data('VAC19DATA'))",
         "_row_num": 499
       },
       {
@@ -7539,7 +7563,7 @@
             }
           }
         },
-        "constraint": "adate.diffInDays(data('CONT'), data('VAC19DATA'))<1 || data('VAC19DATA') == null",
+        "constraint": "adate.diffInDays(data('CONT'), data('VAC19DATA'))<1 || data('VAC19DATA') == null || adate.hasUncertainty(data('VAC19DATA'))",
         "_row_num": 511
       },
       {
@@ -7672,7 +7696,7 @@
             }
           }
         },
-        "constraint": "adate.diffInDays(data('CONT'), data('VAC20DATA'))<1 || data('VAC20DATA') == null",
+        "constraint": "adate.diffInDays(data('CONT'), data('VAC20DATA'))<1 || data('VAC20DATA') == null || adate.hasUncertainty(data('VAC20DATA'))",
         "_row_num": 526
       },
       {
@@ -7782,7 +7806,7 @@
             }
           }
         },
-        "constraint": "adate.diffInDays(data('CONT'), data('VAC20DATA'))<1 || data('VAC20DATA') == null",
+        "constraint": "adate.diffInDays(data('CONT'), data('VAC20DATA'))<1 || data('VAC20DATA') == null || adate.hasUncertainty(data('VAC20DATA'))",
         "_row_num": 538
       },
       {
@@ -8567,7 +8591,7 @@
             }
           }
         },
-        "constraint": "((adate.diffInDays(data('DATAUP'), data('MIFDNASC'))<1 || data('MIFDNASC') == null) && adate.diffInDays(data('CONT'), data('DATAUP'))<1) || data('ESTADO') !='3'",
+        "constraint": "((adate.diffInDays(data('DATAUP'), data('MIFDNASC'))<1 || data('MIFDNASC') == null) && adate.diffInDays(data('CONT'), data('DATAUP'))<1) || data('ESTADO') !='3'  || adate.hasUncertainty(data('DATAUP')) || adate.hasUncertainty(data('MIFDNASC'))",
         "_row_num": 4
       },
       {
@@ -9690,6 +9714,11 @@
         "calculation_name": "displayVAC20DATA",
         "calculation": "adate.display(data('VAC20DATA'))",
         "_row_num": 24
+      },
+      {
+        "calculation_name": "SUM",
+        "calculation": "parseInt(data('VIVO'))+parseInt(data('FAL'))+parseInt(data('NM'))",
+        "_row_num": 25
       }
     ],
     "queries": [
@@ -9736,6 +9765,16 @@
         "prompt_type_name": "async_assign_num_value",
         "type": "integer",
         "_row_num": 4
+      }
+    ],
+    "table_specific_translations": [
+      {
+        "string_token": "linked_table_new_instance_label",
+        "text": {
+          "english": "Create a new pregnancy",
+          "default": "Crie uma nova gravidez"
+        },
+        "_row_num": 2
       }
     ],
     "choices": [
@@ -14741,7 +14780,16 @@
       ]
     },
     "table_specific_definitions": {
-      "_tokens": {}
+      "_tokens": {
+        "linked_table_new_instance_label": {
+          "string_token": "linked_table_new_instance_label",
+          "text": {
+            "english": "Create a new pregnancy",
+            "default": "Crie uma nova gravidez"
+          },
+          "_row_num": 2
+        }
+      }
     },
     "queries": {
       "pregnancies": {
@@ -14885,6 +14933,11 @@
         "calculation_name": "displayVAC20DATA",
         "calculation": "adate.display(data('VAC20DATA'))",
         "_row_num": 24
+      },
+      "SUM": {
+        "calculation_name": "SUM",
+        "calculation": "parseInt(data('VIVO'))+parseInt(data('FAL'))+parseInt(data('NM'))",
+        "_row_num": 25
       }
     },
     "model": {
@@ -20674,6 +20727,14 @@
           },
           {
             "type": "note",
+            "display": {
+              "prompt": {
+                "text": {
+                  "english": "<b>Obstetric history: {{data.NOME}} - Dob: {{calculates.displayMIFDNASC}}<b>",
+                  "default": "<b>História obstetrica: {{data.NOME}} - Nas: {{calculates.displayMIFDNASC}}<b>"
+                }
+              }
+            },
             "_row_num": 79,
             "__rowNum__": 78,
             "_token_type": "prompt",
@@ -20849,8 +20910,15 @@
                   "english": "Number of stillbirths",
                   "default": "Número de natimortos"
                 }
+              },
+              "constraint_message": {
+                "text": {
+                  "english": "Number of births cannot be bigger than the number of children alive + children dead + stillbirths",
+                  "default": "O número de nascimentos não pode ser maior que o número de criança vivas + criança mortas + natimortos"
+                }
               }
             },
+            "constraint": "data('PART')<=calculates.SUM() || data('PART') == '99'",
             "_row_num": 110,
             "__rowNum__": 109,
             "_token_type": "prompt",
@@ -20922,7 +20990,7 @@
             "display": {
               "prompt": {
                 "text": {
-                  "english": "Number of miscarriages",
+                  "english": "Any twins?",
                   "default": "Algum gêmeos?"
                 }
               }
@@ -21127,7 +21195,8 @@
         ],
         "validation_tag_map": {
           "finalize": [
-            9
+            9,
+            42
           ]
         },
         "operations": [
@@ -21608,7 +21677,7 @@
                 }
               }
             },
-            "constraint": "(adate.diffInDays(data('CONT'), data('EXITDATA'))<1 && adate.diffInDays(data('EXITDATA'), data('lastvisitdate'))<1) || (data('ESTADOVIS') != '2' && data('ESTADOVIS') != '3')",
+            "constraint": "(adate.diffInDays(data('CONT'), data('EXITDATA'))<1 && adate.diffInDays(data('EXITDATA'), data('lastvisitdate'))<1) || (data('ESTADOVIS') != '2' && data('ESTADOVIS') != '3') || adate.hasUncertainty(data('EXITDATA'))",
             "_row_num": 28,
             "__rowNum__": 27,
             "_token_type": "prompt",
@@ -21743,7 +21812,7 @@
                 }
               }
             },
-            "constraint": "adate.diffInDays(data('CONT'), data('CONSENTDAT'))<1 || data('CONSENTDAT') == null",
+            "constraint": "adate.diffInDays(data('CONT'), data('CONSENTDAT'))<1 || data('CONSENTDAT') == null || adate.hasUncertainty(data('CONSENTDAT'))",
             "_row_num": 50,
             "__rowNum__": 49,
             "_token_type": "prompt",
@@ -21910,7 +21979,7 @@
                 }
               }
             },
-            "constraint": "adate.diffInDays(data('CONT'), data('ABPARTDATA'))<1 || data('ABPARTDATA') == null",
+            "constraint": "adate.diffInDays(data('CONT'), data('ABPARTDATA'))<1 || data('ABPARTDATA') == null || adate.hasUncertainty(data('ABPARTDATA'))",
             "_row_num": 74,
             "__rowNum__": 73,
             "_token_type": "prompt",
@@ -22475,6 +22544,15 @@
           {
             "type": "linked_table",
             "values_list": "pregnancies",
+            "display": {
+              "hint": {
+                "text": {
+                  "english": "1: Pregnancy not terminated <br/>\n2: Pregnancy terminated <br/>\nA pregnancy <b>must</b> be terminated before creating a new pregnancy",
+                  "default": "1: A gravidez não terminou <br/>\n2: Gravidez terminado <br/>\nUma gravidez <b> deve </b> ser terminado antes de criar uma nova gravidez"
+                }
+              },
+              "hide_delete_button": true
+            },
             "_row_num": 160,
             "__rowNum__": 159,
             "_token_type": "prompt",
@@ -23278,7 +23356,7 @@
                 }
               }
             },
-            "constraint": "adate.diffInDays(data('CONT'), data('VAC1DATA'))<1 || data('VAC1DATA') == null",
+            "constraint": "adate.diffInDays(data('CONT'), data('VAC1DATA'))<1 || data('VAC1DATA') == null || adate.hasUncertainty(data('VAC1DATA'))",
             "_row_num": 13,
             "__rowNum__": 12,
             "_token_type": "prompt",
@@ -23377,7 +23455,7 @@
                 }
               }
             },
-            "constraint": "adate.diffInDays(data('CONT'), data('VAC1DATA'))<1 || data('VAC1DATA') == null",
+            "constraint": "adate.diffInDays(data('CONT'), data('VAC1DATA'))<1 || data('VAC1DATA') == null || adate.hasUncertainty(data('VAC1DATA'))",
             "_row_num": 25,
             "__rowNum__": 24,
             "_token_type": "prompt",
@@ -23510,7 +23588,7 @@
                 }
               }
             },
-            "constraint": "adate.diffInDays(data('CONT'), data('VAC2DATA'))<1 || data('VAC2DATA')  == null",
+            "constraint": "adate.diffInDays(data('CONT'), data('VAC2DATA'))<1 || data('VAC2DATA')  == null || adate.hasUncertainty(data('VAC2DATA'))",
             "_row_num": 40,
             "__rowNum__": 39,
             "_token_type": "prompt",
@@ -23609,7 +23687,7 @@
                 }
               }
             },
-            "constraint": "adate.diffInDays(data('CONT'), data('VAC2DATA'))<1 || data('VAC2DATA')  == null",
+            "constraint": "adate.diffInDays(data('CONT'), data('VAC2DATA'))<1 || data('VAC2DATA')  == null || adate.hasUncertainty(data('VAC2DATA'))",
             "_row_num": 52,
             "__rowNum__": 51,
             "_token_type": "prompt",
@@ -23742,7 +23820,7 @@
                 }
               }
             },
-            "constraint": "adate.diffInDays(data('CONT'), data('VAC3DATA'))<1 || data('VAC3DATA') == null",
+            "constraint": "adate.diffInDays(data('CONT'), data('VAC3DATA'))<1 || data('VAC3DATA') == null || adate.hasUncertainty(data('VAC3DATA'))",
             "_row_num": 67,
             "__rowNum__": 66,
             "_token_type": "prompt",
@@ -23841,7 +23919,7 @@
                 }
               }
             },
-            "constraint": "adate.diffInDays(data('CONT'), data('VAC3DATA'))<1 || data('VAC3DATA') == null",
+            "constraint": "adate.diffInDays(data('CONT'), data('VAC3DATA'))<1 || data('VAC3DATA') == null || adate.hasUncertainty(data('VAC3DATA'))",
             "_row_num": 79,
             "__rowNum__": 78,
             "_token_type": "prompt",
@@ -23974,7 +24052,7 @@
                 }
               }
             },
-            "constraint": "adate.diffInDays(data('CONT'), data('VAC4DATA'))<1 || data('VAC4DATA') == null",
+            "constraint": "adate.diffInDays(data('CONT'), data('VAC4DATA'))<1 || data('VAC4DATA') == null || adate.hasUncertainty(data('VAC4DATA'))",
             "_row_num": 94,
             "__rowNum__": 93,
             "_token_type": "prompt",
@@ -24073,7 +24151,7 @@
                 }
               }
             },
-            "constraint": "adate.diffInDays(data('CONT'), data('VAC4DATA'))<1 || data('VAC4DATA') == null",
+            "constraint": "adate.diffInDays(data('CONT'), data('VAC4DATA'))<1 || data('VAC4DATA') == null || adate.hasUncertainty(data('VAC4DATA'))",
             "_row_num": 106,
             "__rowNum__": 105,
             "_token_type": "prompt",
@@ -24206,7 +24284,7 @@
                 }
               }
             },
-            "constraint": "adate.diffInDays(data('CONT'), data('VAC5DATA'))<1 || data('VAC5DATA') == null",
+            "constraint": "adate.diffInDays(data('CONT'), data('VAC5DATA'))<1 || data('VAC5DATA') == null || adate.hasUncertainty(data('VAC5DATA'))",
             "_row_num": 121,
             "__rowNum__": 120,
             "_token_type": "prompt",
@@ -24305,7 +24383,7 @@
                 }
               }
             },
-            "constraint": "adate.diffInDays(data('CONT'), data('VAC5DATA'))<1 || data('VAC5DATA') == null",
+            "constraint": "adate.diffInDays(data('CONT'), data('VAC5DATA'))<1 || data('VAC5DATA') == null || adate.hasUncertainty(data('VAC5DATA'))",
             "_row_num": 133,
             "__rowNum__": 132,
             "_token_type": "prompt",
@@ -24438,7 +24516,7 @@
                 }
               }
             },
-            "constraint": "adate.diffInDays(data('CONT'), data('VAC6DATA'))<1 || data('VAC6DATA') == null",
+            "constraint": "adate.diffInDays(data('CONT'), data('VAC6DATA'))<1 || data('VAC6DATA') == null || adate.hasUncertainty(data('VAC6DATA'))",
             "_row_num": 148,
             "__rowNum__": 147,
             "_token_type": "prompt",
@@ -24537,7 +24615,7 @@
                 }
               }
             },
-            "constraint": "adate.diffInDays(data('CONT'), data('VAC6DATA'))<1 || data('VAC6DATA') == null",
+            "constraint": "adate.diffInDays(data('CONT'), data('VAC6DATA'))<1 || data('VAC6DATA') == null || adate.hasUncertainty(data('VAC6DATA'))",
             "_row_num": 160,
             "__rowNum__": 159,
             "_token_type": "prompt",
@@ -24670,7 +24748,7 @@
                 }
               }
             },
-            "constraint": "adate.diffInDays(data('CONT'), data('VAC7DATA'))<1 || data('VAC7DATA') == null",
+            "constraint": "adate.diffInDays(data('CONT'), data('VAC7DATA'))<1 || data('VAC7DATA') == null || adate.hasUncertainty(data('VAC7DATA'))",
             "_row_num": 175,
             "__rowNum__": 174,
             "_token_type": "prompt",
@@ -24769,7 +24847,7 @@
                 }
               }
             },
-            "constraint": "adate.diffInDays(data('CONT'), data('VAC7DATA'))<1 || data('VAC7DATA') == null",
+            "constraint": "adate.diffInDays(data('CONT'), data('VAC7DATA'))<1 || data('VAC7DATA') == null || adate.hasUncertainty(data('VAC7DATA'))",
             "_row_num": 187,
             "__rowNum__": 186,
             "_token_type": "prompt",
@@ -24902,7 +24980,7 @@
                 }
               }
             },
-            "constraint": "adate.diffInDays(data('CONT'), data('VAC8DATA'))<1 || data('VAC8DATA') == null",
+            "constraint": "adate.diffInDays(data('CONT'), data('VAC8DATA'))<1 || data('VAC8DATA') == null || adate.hasUncertainty(data('VAC8DATA'))",
             "_row_num": 202,
             "__rowNum__": 201,
             "_token_type": "prompt",
@@ -25001,7 +25079,7 @@
                 }
               }
             },
-            "constraint": "adate.diffInDays(data('CONT'), data('VAC8DATA'))<1 || data('VAC8DATA') == null",
+            "constraint": "adate.diffInDays(data('CONT'), data('VAC8DATA'))<1 || data('VAC8DATA') == null || adate.hasUncertainty(data('VAC8DATA'))",
             "_row_num": 214,
             "__rowNum__": 213,
             "_token_type": "prompt",
@@ -25134,7 +25212,7 @@
                 }
               }
             },
-            "constraint": "adate.diffInDays(data('CONT'), data('VAC9DATA'))<1 || data('VAC9DATA') == null",
+            "constraint": "adate.diffInDays(data('CONT'), data('VAC9DATA'))<1 || data('VAC9DATA') == null || adate.hasUncertainty(data('VAC9DATA'))",
             "_row_num": 229,
             "__rowNum__": 228,
             "_token_type": "prompt",
@@ -25233,7 +25311,7 @@
                 }
               }
             },
-            "constraint": "adate.diffInDays(data('CONT'), data('VAC9DATA'))<1 || data('VAC9DATA') == null",
+            "constraint": "adate.diffInDays(data('CONT'), data('VAC9DATA'))<1 || data('VAC9DATA') == null || adate.hasUncertainty(data('VAC9DATA'))",
             "_row_num": 241,
             "__rowNum__": 240,
             "_token_type": "prompt",
@@ -25366,7 +25444,7 @@
                 }
               }
             },
-            "constraint": "adate.diffInDays(data('CONT'), data('VAC10DATA'))<1 || data('VAC10DATA') == null",
+            "constraint": "adate.diffInDays(data('CONT'), data('VAC10DATA'))<1 || data('VAC10DATA') == null || adate.hasUncertainty(data('VAC10DATA'))",
             "_row_num": 256,
             "__rowNum__": 255,
             "_token_type": "prompt",
@@ -25465,7 +25543,7 @@
                 }
               }
             },
-            "constraint": "adate.diffInDays(data('CONT'), data('VAC10DATA'))<1 || data('VAC10DATA') == null",
+            "constraint": "adate.diffInDays(data('CONT'), data('VAC10DATA'))<1 || data('VAC10DATA') == null || adate.hasUncertainty(data('VAC10DATA'))",
             "_row_num": 268,
             "__rowNum__": 267,
             "_token_type": "prompt",
@@ -25598,7 +25676,7 @@
                 }
               }
             },
-            "constraint": "adate.diffInDays(data('CONT'), data('VAC11DATA'))<1 || data('VAC11DATA') == null",
+            "constraint": "adate.diffInDays(data('CONT'), data('VAC11DATA'))<1 || data('VAC11DATA') == null || adate.hasUncertainty(data('VAC11DATA'))",
             "_row_num": 283,
             "__rowNum__": 282,
             "_token_type": "prompt",
@@ -25697,7 +25775,7 @@
                 }
               }
             },
-            "constraint": "adate.diffInDays(data('CONT'), data('VAC11DATA'))<1 || data('VAC11DATA') == null",
+            "constraint": "adate.diffInDays(data('CONT'), data('VAC11DATA'))<1 || data('VAC11DATA') == null || adate.hasUncertainty(data('VAC11DATA'))",
             "_row_num": 295,
             "__rowNum__": 294,
             "_token_type": "prompt",
@@ -25830,7 +25908,7 @@
                 }
               }
             },
-            "constraint": "adate.diffInDays(data('CONT'), data('VAC12DATA'))<1 || data('VAC12DATA') == null",
+            "constraint": "adate.diffInDays(data('CONT'), data('VAC12DATA'))<1 || data('VAC12DATA') == null || adate.hasUncertainty(data('VAC12DATA'))",
             "_row_num": 310,
             "__rowNum__": 309,
             "_token_type": "prompt",
@@ -25929,7 +26007,7 @@
                 }
               }
             },
-            "constraint": "adate.diffInDays(data('CONT'), data('VAC12DATA'))<1 || data('VAC12DATA') == null",
+            "constraint": "adate.diffInDays(data('CONT'), data('VAC12DATA'))<1 || data('VAC12DATA') == null || adate.hasUncertainty(data('VAC12DATA'))",
             "_row_num": 322,
             "__rowNum__": 321,
             "_token_type": "prompt",
@@ -26062,7 +26140,7 @@
                 }
               }
             },
-            "constraint": "adate.diffInDays(data('CONT'), data('VAC13DATA'))<1 || data('VAC13DATA') == null",
+            "constraint": "adate.diffInDays(data('CONT'), data('VAC13DATA'))<1 || data('VAC13DATA') == null || adate.hasUncertainty(data('VAC13DATA'))",
             "_row_num": 337,
             "__rowNum__": 336,
             "_token_type": "prompt",
@@ -26161,7 +26239,7 @@
                 }
               }
             },
-            "constraint": "adate.diffInDays(data('CONT'), data('VAC13DATA'))<1 || data('VAC13DATA') == null",
+            "constraint": "adate.diffInDays(data('CONT'), data('VAC13DATA'))<1 || data('VAC13DATA') == null || adate.hasUncertainty(data('VAC13DATA'))",
             "_row_num": 349,
             "__rowNum__": 348,
             "_token_type": "prompt",
@@ -26294,7 +26372,7 @@
                 }
               }
             },
-            "constraint": "adate.diffInDays(data('CONT'), data('VAC14DATA'))<1 || data('VAC14DATA') == null",
+            "constraint": "adate.diffInDays(data('CONT'), data('VAC14DATA'))<1 || data('VAC14DATA') == null || adate.hasUncertainty(data('VAC14DATA'))",
             "_row_num": 364,
             "__rowNum__": 363,
             "_token_type": "prompt",
@@ -26393,7 +26471,7 @@
                 }
               }
             },
-            "constraint": "adate.diffInDays(data('CONT'), data('VAC14DATA'))<1 || data('VAC14DATA') == null",
+            "constraint": "adate.diffInDays(data('CONT'), data('VAC14DATA'))<1 || data('VAC14DATA') == null || adate.hasUncertainty(data('VAC14DATA'))",
             "_row_num": 376,
             "__rowNum__": 375,
             "_token_type": "prompt",
@@ -26526,7 +26604,7 @@
                 }
               }
             },
-            "constraint": "adate.diffInDays(data('CONT'), data('VAC15DATA'))<1 || data('VAC15DATA') == null",
+            "constraint": "adate.diffInDays(data('CONT'), data('VAC15DATA'))<1 || data('VAC15DATA') == null || adate.hasUncertainty(data('VAC15DATA'))",
             "_row_num": 391,
             "__rowNum__": 390,
             "_token_type": "prompt",
@@ -26625,7 +26703,7 @@
                 }
               }
             },
-            "constraint": "adate.diffInDays(data('CONT'), data('VAC15DATA'))<1 || data('VAC15DATA') == null",
+            "constraint": "adate.diffInDays(data('CONT'), data('VAC15DATA'))<1 || data('VAC15DATA') == null || adate.hasUncertainty(data('VAC15DATA'))",
             "_row_num": 403,
             "__rowNum__": 402,
             "_token_type": "prompt",
@@ -26758,7 +26836,7 @@
                 }
               }
             },
-            "constraint": "adate.diffInDays(data('CONT'), data('VAC16DATA'))<1 || data('VAC16DATA') == null",
+            "constraint": "adate.diffInDays(data('CONT'), data('VAC16DATA'))<1 || data('VAC16DATA') == null || adate.hasUncertainty(data('VAC16DATA'))",
             "_row_num": 418,
             "__rowNum__": 417,
             "_token_type": "prompt",
@@ -26857,7 +26935,7 @@
                 }
               }
             },
-            "constraint": "adate.diffInDays(data('CONT'), data('VAC16DATA'))<1 || data('VAC16DATA') == null",
+            "constraint": "adate.diffInDays(data('CONT'), data('VAC16DATA'))<1 || data('VAC16DATA') == null || adate.hasUncertainty(data('VAC16DATA'))",
             "_row_num": 430,
             "__rowNum__": 429,
             "_token_type": "prompt",
@@ -26990,7 +27068,7 @@
                 }
               }
             },
-            "constraint": "adate.diffInDays(data('CONT'), data('VAC17DATA'))<1 || data('VAC17DATA') == null",
+            "constraint": "adate.diffInDays(data('CONT'), data('VAC17DATA'))<1 || data('VAC17DATA') == null || adate.hasUncertainty(data('VAC17DATA'))",
             "_row_num": 445,
             "__rowNum__": 444,
             "_token_type": "prompt",
@@ -27089,7 +27167,7 @@
                 }
               }
             },
-            "constraint": "adate.diffInDays(data('CONT'), data('VAC17DATA'))<1 || data('VAC17DATA') == null",
+            "constraint": "adate.diffInDays(data('CONT'), data('VAC17DATA'))<1 || data('VAC17DATA') == null || adate.hasUncertainty(data('VAC17DATA'))",
             "_row_num": 457,
             "__rowNum__": 456,
             "_token_type": "prompt",
@@ -27222,7 +27300,7 @@
                 }
               }
             },
-            "constraint": "adate.diffInDays(data('CONT'), data('VAC18DATA'))<1 || data('VAC18DATA') == null",
+            "constraint": "adate.diffInDays(data('CONT'), data('VAC18DATA'))<1 || data('VAC18DATA') == null || adate.hasUncertainty(data('VAC18DATA'))",
             "_row_num": 472,
             "__rowNum__": 471,
             "_token_type": "prompt",
@@ -27321,7 +27399,7 @@
                 }
               }
             },
-            "constraint": "adate.diffInDays(data('CONT'), data('VAC18DATA'))<1 || data('VAC18DATA') == null",
+            "constraint": "adate.diffInDays(data('CONT'), data('VAC18DATA'))<1 || data('VAC18DATA') == null || adate.hasUncertainty(data('VAC18DATA'))",
             "_row_num": 484,
             "__rowNum__": 483,
             "_token_type": "prompt",
@@ -27454,7 +27532,7 @@
                 }
               }
             },
-            "constraint": "adate.diffInDays(data('CONT'), data('VAC19DATA'))<1 || data('VAC19DATA') == null",
+            "constraint": "adate.diffInDays(data('CONT'), data('VAC19DATA'))<1 || data('VAC19DATA') == null || adate.hasUncertainty(data('VAC19DATA'))",
             "_row_num": 499,
             "__rowNum__": 498,
             "_token_type": "prompt",
@@ -27553,7 +27631,7 @@
                 }
               }
             },
-            "constraint": "adate.diffInDays(data('CONT'), data('VAC19DATA'))<1 || data('VAC19DATA') == null",
+            "constraint": "adate.diffInDays(data('CONT'), data('VAC19DATA'))<1 || data('VAC19DATA') == null || adate.hasUncertainty(data('VAC19DATA'))",
             "_row_num": 511,
             "__rowNum__": 510,
             "_token_type": "prompt",
@@ -27686,7 +27764,7 @@
                 }
               }
             },
-            "constraint": "adate.diffInDays(data('CONT'), data('VAC20DATA'))<1 || data('VAC20DATA') == null",
+            "constraint": "adate.diffInDays(data('CONT'), data('VAC20DATA'))<1 || data('VAC20DATA') == null || adate.hasUncertainty(data('VAC20DATA'))",
             "_row_num": 526,
             "__rowNum__": 525,
             "_token_type": "prompt",
@@ -27785,7 +27863,7 @@
                 }
               }
             },
-            "constraint": "adate.diffInDays(data('CONT'), data('VAC20DATA'))<1 || data('VAC20DATA') == null",
+            "constraint": "adate.diffInDays(data('CONT'), data('VAC20DATA'))<1 || data('VAC20DATA') == null || adate.hasUncertainty(data('VAC20DATA'))",
             "_row_num": 538,
             "__rowNum__": 537,
             "_token_type": "prompt",
@@ -31188,7 +31266,7 @@
                 }
               }
             },
-            "constraint": "((adate.diffInDays(data('DATAUP'), data('MIFDNASC'))<1 || data('MIFDNASC') == null) && adate.diffInDays(data('CONT'), data('DATAUP'))<1) || data('ESTADO') !='3'",
+            "constraint": "((adate.diffInDays(data('DATAUP'), data('MIFDNASC'))<1 || data('MIFDNASC') == null) && adate.diffInDays(data('CONT'), data('DATAUP'))<1) || data('ESTADO') !='3'  || adate.hasUncertainty(data('DATAUP')) || adate.hasUncertainty(data('MIFDNASC'))",
             "_row_num": 4,
             "__rowNum__": 3,
             "_token_type": "prompt",

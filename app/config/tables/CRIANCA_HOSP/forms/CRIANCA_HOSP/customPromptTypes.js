@@ -38,12 +38,17 @@ var adate = promptTypes.input_type.extend({
         }
         var endYear = new Date().getYear()+1900;
         if (renderContext.display.adate && renderContext.display.adate.toYear) {
-            endYear = parseInt(renderContext.display.adate.toYear, 10);
+            if (renderContext.display.adate.toYear == "nextYear") {
+                endYear = endYear+1;
+            }
+            else {
+                endYear = parseInt(renderContext.display.adate.toYear, 10);
+            }
         }
         var dontknowLabel = "NS";
         renderContext.dayLabel = "dia";
         renderContext.monthLabel = "mes";
-        renderContext.yearLabel = "ano"
+        renderContext.yearLabel = "ano";
         
         var days = Array.apply(null, {length: 32}).map(Number.call, Number).slice(1);
         days.unshift(dontknowLabel);

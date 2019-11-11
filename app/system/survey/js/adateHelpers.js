@@ -18,10 +18,10 @@ return {
     yearUnknown: function(aDate) {
         return !aDate || aDate.toUpperCase().indexOf('Y:NS')>-1;
     },
-    monthUnkown: function(aDate) {
+    monthUnknown: function(aDate) {
         return !aDate || aDate.toUpperCase().indexOf('M:NS')>-1;   
     },
-    dayUnkown: function(aDate) {
+    dayUnknown: function(aDate) {
         return !aDate || aDate.toUpperCase().indexOf('D:NS')>-1;
     },
     ageIn: function(aDate, strUnit) {
@@ -60,14 +60,14 @@ return {
         var a = this.getMoment(aDate);
         var d;
         if (this.hasUncertainty(aDate)) {
-            if (this.dayUnkown(aDate)) {
-                if (this.monthUnkown(aDate)) {
+            if (this.dayUnknown(aDate)) {
+                if (this.monthUnknown(aDate)) {
                     d = moment(a).format('??/??/YYYY');
                 } else {
                     d = moment(a).format('??/MM/YYYY');
                 }   
             } 
-            else if (this.monthUnkown(aDate)) {
+            else if (this.monthUnknown(aDate)) {
                 d = moment(a).format('DD/??/YYYY'); 
             }
         } else {

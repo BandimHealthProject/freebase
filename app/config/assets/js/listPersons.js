@@ -129,7 +129,7 @@ function loadPersons() {
 
 function loadChildren() {
     // SQL to load children
-    var sql = "SELECT REGIDC, NOME, REGID, pres, CARTVAC, CONT, OUTDATE, SEX, NOMEMAE, CASA, FOGAO, BCG, POLIONAS, POLIO1, PENTA1, PCV1, ROX1, POLIO2, PENTA2, PCV2, ROX2, POLIO3, PENTA3, PCV3, VPI, SARAMPO1, FEBAMAREL FROM CRIANCA  WHERE REG = " + region + " AND TAB = " + tabanca + " AND MOR = " + cluster + " GROUP BY REGIDC HAVING MIN(ROWID) AND ESTADO = 11  ORDER BY substr(CONT, instr(CONT, 'Y:')+2, 4) || substr('00'|| trim(substr(CONT, instr(CONT, 'M:')+2, 2),','), -2, 2) || substr('00'|| trim(substr(CONT, instr(CONT, 'D:')+2, 2),','), -2, 2) DESC, NOME";
+    var sql = "SELECT REGIDC, NOME, REGID, pres, CARTVAC, CONT, OUTDATE, SEX, NOMEMAE, CASA, ONEYEAR, FOGAO, BCG, POLIONAS, POLIO1, PENTA1, PCV1, ROX1, POLIO2, PENTA2, PCV2, ROX2, POLIO3, PENTA3, PCV3, VPI, SARAMPO1, FEBAMAREL FROM CRIANCA  WHERE REG = " + region + " AND TAB = " + tabanca + " AND MOR = " + cluster + " GROUP BY REGIDC HAVING MIN(ROWID) AND ESTADO = 11  ORDER BY substr(CONT, instr(CONT, 'Y:')+2, 4) || substr('00'|| trim(substr(CONT, instr(CONT, 'M:')+2, 2),','), -2, 2) || substr('00'|| trim(substr(CONT, instr(CONT, 'D:')+2, 2),','), -2, 2) DESC, NOME";
     children = [];
     console.log("Querying database for CRIANCAs...");
     console.log(sql);
@@ -148,6 +148,7 @@ function loadChildren() {
             var NOMEMAE = result.getData(row,"NOMEMAE");
             var CASA = result.getData(row,"CASA");
             var FOGAO = result.getData(row,"FOGAO");
+            var ONEYEAR = result.getData(row,"ONEYEAR")
            
             var BCG = result.getData(row,"BCG");
             var POLIONAS = result.getData(row,"POLIONAS");
@@ -166,9 +167,16 @@ function loadChildren() {
             var SARAMPO1 = result.getData(row,"SARAMPO1");
             var FEBAMAREL = result.getData(row,"FEBAMAREL");
 
-            var p = { type: 'crianca', REGIDC, NOME, REGID, pres, CARTVAC, CONT, OUTDATE, SEX, NOMEMAE, CASA, FOGAO, BCG, POLIONAS, POLIO1, PENTA1, PCV1, ROX1, POLIO2, PENTA2, PCV2, ROX2, POLIO3, PENTA3, PCV3, VPI, SARAMPO1, FEBAMAREL };
+            var p = { type: 'crianca', REGIDC, NOME, REGID, pres, CARTVAC, CONT, OUTDATE, SEX, NOMEMAE, CASA, FOGAO, ONEYEAR, BCG, POLIONAS, POLIO1, PENTA1, PCV1, ROX1, POLIO2, PENTA2, PCV2, ROX2, POLIO3, PENTA3, PCV3, VPI, SARAMPO1, FEBAMAREL };
             console.log(p);
-            children.push(p);
+            // If control visit: list children <12m at last visit (variable ONEYEAR !=1)
+            if (visitType == "control" & ONEYEAR != 1) {
+                children.push(p);
+            }
+            else if (visitType == 'routine') {
+                children.push(p);
+            }
+            
         }
         populateView();
         return;
@@ -395,6 +403,7 @@ function getDefaultsChild(person) {
     defaults['NOMEMAE'] = person.NOMEMAE;
     defaults['CASA'] = person.CASA;
     defaults['FOGAO'] = person.FOGAO;
+    defaults['ONEYEAR'] = person.ONEYEAR;
     defaults['BCG'] = person.BCG;
     defaults['POLIONAS'] = person.POLIONAS;
     defaults['POLIO1'] = person.POLIO1;

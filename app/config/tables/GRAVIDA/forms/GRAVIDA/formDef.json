@@ -335,7 +335,7 @@
             }
           }
         },
-        "constraint": "adate.diffInDays(data('CONT'), data('LMP1_M'))<1 || data('LMP1_M') == null",
+        "constraint": "adate.diffInDays(data('CONT'), data('LMP1_M'))<1 || data('LMP1_M') == null || adate.hasUncertainty(data('LMP1_M'))",
         "_row_num": 34
       },
       {
@@ -360,7 +360,7 @@
             }
           }
         },
-        "constraint": "adate.diffInDays(data('CONT'), data('LMP1_C'))<1 || data('LMP1_C') == null",
+        "constraint": "adate.diffInDays(data('CONT'), data('LMP1_C'))<1 || data('LMP1_C') == null || adate.hasUncertainty(data('LMP1_C'))",
         "_row_num": 36
       },
       {
@@ -665,6 +665,9 @@
               "english": "Probable date of delivery indicated on the card?",
               "default": "Data provavel do parto indicado no cartão?"
             }
+          },
+          "adate": {
+            "toYear": "nextYear"
           }
         },
         "_row_num": 78
@@ -708,6 +711,9 @@
       {
         "type": "linked_table",
         "values_list": "ses",
+        "display": {
+          "hide_delete_button": true
+        },
         "_row_num": 84
       },
       {
@@ -1065,7 +1071,7 @@
             }
           }
         },
-        "constraint": "adate.diffInDays(data('VISDIA2'), data('LMP2_M'))<1 || data('LMP2_M') == null",
+        "constraint": "adate.diffInDays(data('VISDIA2'), data('LMP2_M'))<1 || data('LMP2_M') == null || adate.hasUncertainty(data('LMP2_M'))",
         "_row_num": 44
       },
       {
@@ -1090,7 +1096,7 @@
             }
           }
         },
-        "constraint": "adate.diffInDays(data('VISDIA2'), data('LMP2_C'))<1 || data('LMP2_C') == null",
+        "constraint": "adate.diffInDays(data('VISDIA2'), data('LMP2_C'))<1 || data('LMP2_C') == null || adate.hasUncertainty(data('LMP2_C'))",
         "_row_num": 46
       },
       {
@@ -1395,6 +1401,9 @@
               "english": "Probable date of delivery indicated on the card?",
               "default": "Data provavel do parto indicado no cartão?"
             }
+          },
+          "adate": {
+            "toYear": "nextYear"
           }
         },
         "_row_num": 88
@@ -1634,7 +1643,7 @@
             }
           }
         },
-        "constraint": "adate.diffInDays(data('VISDIAPARTO'), data('OUTDATE'))<1 || data('OUTDATE') == null",
+        "constraint": "adate.diffInDays(data('VISDIAPARTO'), data('OUTDATE'))<1 || data('OUTDATE') == null || adate.hasUncertainty(data('VISDIAPARTO')) || adate.hasUncertainty(data('OUTDATE'))",
         "_row_num": 25
       },
       {
@@ -2458,6 +2467,9 @@
       {
         "type": "linked_table",
         "values_list": "child",
+        "display": {
+          "hide_delete_button": true
+        },
         "_row_num": 134
       },
       {
@@ -2500,6 +2512,9 @@
       {
         "type": "linked_table",
         "values_list": "child",
+        "display": {
+          "hide_delete_button": true
+        },
         "_row_num": 140
       },
       {
@@ -2542,6 +2557,9 @@
       {
         "type": "linked_table",
         "values_list": "child",
+        "display": {
+          "hide_delete_button": true
+        },
         "_row_num": 146
       },
       {
@@ -2584,6 +2602,9 @@
       {
         "type": "linked_table",
         "values_list": "child",
+        "display": {
+          "hide_delete_button": true
+        },
         "_row_num": 152
       },
       {
@@ -2708,6 +2729,16 @@
         "elementType": "string",
         "comment": "Save only mm.dd.yyyy with support for ?? at all positions",
         "_row_num": 4
+      }
+    ],
+    "table_specific_translations": [
+      {
+        "string_token": "linked_table_new_instance_label",
+        "text": {
+          "english": "New registration",
+          "default": "Novo registro"
+        },
+        "_row_num": 2
       }
     ],
     "choices": [
@@ -4676,7 +4707,16 @@
       ]
     },
     "table_specific_definitions": {
-      "_tokens": {}
+      "_tokens": {
+        "linked_table_new_instance_label": {
+          "string_token": "linked_table_new_instance_label",
+          "text": {
+            "english": "New registration",
+            "default": "Novo registro"
+          },
+          "_row_num": 2
+        }
+      }
     },
     "queries": {
       "ses": {
@@ -6397,7 +6437,7 @@
                 }
               }
             },
-            "constraint": "adate.diffInDays(data('CONT'), data('LMP1_M'))<1 || data('LMP1_M') == null",
+            "constraint": "adate.diffInDays(data('CONT'), data('LMP1_M'))<1 || data('LMP1_M') == null || adate.hasUncertainty(data('LMP1_M'))",
             "_row_num": 34,
             "__rowNum__": 33,
             "_token_type": "prompt",
@@ -6422,7 +6462,7 @@
                 }
               }
             },
-            "constraint": "adate.diffInDays(data('CONT'), data('LMP1_C'))<1 || data('LMP1_C') == null",
+            "constraint": "adate.diffInDays(data('CONT'), data('LMP1_C'))<1 || data('LMP1_C') == null || adate.hasUncertainty(data('LMP1_C'))",
             "_row_num": 36,
             "__rowNum__": 35,
             "_token_type": "prompt",
@@ -6699,6 +6739,9 @@
                   "english": "Probable date of delivery indicated on the card?",
                   "default": "Data provavel do parto indicado no cartão?"
                 }
+              },
+              "adate": {
+                "toYear": "nextYear"
               }
             },
             "_row_num": 78,
@@ -6745,6 +6788,9 @@
           {
             "type": "linked_table",
             "values_list": "ses",
+            "display": {
+              "hide_delete_button": true
+            },
             "_row_num": 84,
             "__rowNum__": 83,
             "_token_type": "prompt",
@@ -7351,7 +7397,7 @@
                 }
               }
             },
-            "constraint": "adate.diffInDays(data('VISDIA2'), data('LMP2_M'))<1 || data('LMP2_M') == null",
+            "constraint": "adate.diffInDays(data('VISDIA2'), data('LMP2_M'))<1 || data('LMP2_M') == null || adate.hasUncertainty(data('LMP2_M'))",
             "_row_num": 44,
             "__rowNum__": 43,
             "_token_type": "prompt",
@@ -7376,7 +7422,7 @@
                 }
               }
             },
-            "constraint": "adate.diffInDays(data('VISDIA2'), data('LMP2_C'))<1 || data('LMP2_C') == null",
+            "constraint": "adate.diffInDays(data('VISDIA2'), data('LMP2_C'))<1 || data('LMP2_C') == null || adate.hasUncertainty(data('LMP2_C'))",
             "_row_num": 46,
             "__rowNum__": 45,
             "_token_type": "prompt",
@@ -7653,6 +7699,9 @@
                   "english": "Probable date of delivery indicated on the card?",
                   "default": "Data provavel do parto indicado no cartão?"
                 }
+              },
+              "adate": {
+                "toYear": "nextYear"
               }
             },
             "_row_num": 88,
@@ -8198,7 +8247,7 @@
                 }
               }
             },
-            "constraint": "adate.diffInDays(data('VISDIAPARTO'), data('OUTDATE'))<1 || data('OUTDATE') == null",
+            "constraint": "adate.diffInDays(data('VISDIAPARTO'), data('OUTDATE'))<1 || data('OUTDATE') == null || adate.hasUncertainty(data('VISDIAPARTO')) || adate.hasUncertainty(data('OUTDATE'))",
             "_row_num": 25,
             "__rowNum__": 24,
             "_token_type": "prompt",
@@ -8974,6 +9023,9 @@
           {
             "type": "linked_table",
             "values_list": "child",
+            "display": {
+              "hide_delete_button": true
+            },
             "_row_num": 134,
             "__rowNum__": 133,
             "_token_type": "prompt",
@@ -9018,6 +9070,9 @@
           {
             "type": "linked_table",
             "values_list": "child",
+            "display": {
+              "hide_delete_button": true
+            },
             "_row_num": 140,
             "__rowNum__": 139,
             "_token_type": "prompt",
@@ -9062,6 +9117,9 @@
           {
             "type": "linked_table",
             "values_list": "child",
+            "display": {
+              "hide_delete_button": true
+            },
             "_row_num": 146,
             "__rowNum__": 145,
             "_token_type": "prompt",
@@ -9106,6 +9164,9 @@
           {
             "type": "linked_table",
             "values_list": "child",
+            "display": {
+              "hide_delete_button": true
+            },
             "_row_num": 152,
             "__rowNum__": 151,
             "_token_type": "prompt",

@@ -400,21 +400,13 @@ window.odkFrameworkDefinitions = {
       },
       "_row_num": 52
     },
-    "linked_table_new_instance_label": {
-      "string_token": "linked_table_new_instance_label",
-      "text": {
-        "english": "Create new questionaire",
-        "default": "Criar um  novo questionário"
-      },
-      "_row_num": 53
-    },
     "barcode_button_label": {
       "string_token": "barcode_button_label",
       "text": {
         "english": "Scan barcode",
         "default": "Capturar Codigo de barra"
       },
-      "_row_num": 54
+      "_row_num": 53
     },
     "invalid_numeric_message": {
       "string_token": "invalid_numeric_message",
@@ -422,7 +414,7 @@ window.odkFrameworkDefinitions = {
         "english": "Numeric value expected",
         "default": "Valor numérico esperado"
       },
-      "_row_num": 55
+      "_row_num": 54
     },
     "invalid_integer_message": {
       "string_token": "invalid_integer_message",
@@ -430,7 +422,7 @@ window.odkFrameworkDefinitions = {
         "english": "Integer value expected",
         "default": "Valor número inteiro esperado"
       },
-      "_row_num": 56
+      "_row_num": 55
     },
     "confirm_exit_label": {
       "string_token": "confirm_exit_label",
@@ -438,7 +430,7 @@ window.odkFrameworkDefinitions = {
         "english": "Exit",
         "default": "Sair"
       },
-      "_row_num": 57
+      "_row_num": 56
     },
     "confirm_cancel_label": {
       "string_token": "confirm_cancel_label",
@@ -446,7 +438,7 @@ window.odkFrameworkDefinitions = {
         "english": "Cancel",
         "default": "Cancelar"
       },
-      "_row_num": 58
+      "_row_num": 57
     },
     "confirm_message": {
       "string_token": "confirm_message",
@@ -454,7 +446,7 @@ window.odkFrameworkDefinitions = {
         "english": "Are you sure you want to exit and lose all changes?",
         "default": "Você está que quer sair e sem gravar as alterações ?"
       },
-      "_row_num": 59
+      "_row_num": 58
     }
   }
 }
