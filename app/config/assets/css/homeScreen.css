@@ -68,6 +68,12 @@ h1 {
     text-align: center;
     color: #5C5C5C;
 }
+h3 {
+    font-size: 20pt;
+    margin: 10px 0;
+    text-align: center;
+    color: #5C5C5C;
+}
 
 .emptyLabel {
     visibility: hidden;
