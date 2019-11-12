@@ -1509,7 +1509,7 @@
             }
           }
         },
-        "constraint": "data('PART')<=calculates.SUM() || data('PART') == '99'",
+        "constraint": "data('PART')<=calculates.SUM() || data('PART') == '99' || data('PART') == null",
         "_row_num": 110
       },
       {
@@ -20918,7 +20918,7 @@
                 }
               }
             },
-            "constraint": "data('PART')<=calculates.SUM() || data('PART') == '99'",
+            "constraint": "data('PART')<=calculates.SUM() || data('PART') == '99' || data('PART') == null",
             "_row_num": 110,
             "__rowNum__": 109,
             "_token_type": "prompt",

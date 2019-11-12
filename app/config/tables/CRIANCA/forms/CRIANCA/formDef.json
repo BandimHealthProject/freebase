@@ -1016,8 +1016,17 @@
         "_row_num": 62
       },
       {
-        "clause": "do section stsc",
+        "clause": "if",
+        "condition": "data('NASESTADO') == '1'",
         "_row_num": 63
+      },
+      {
+        "clause": "do section stsc",
+        "_row_num": 64
+      },
+      {
+        "clause": "end if",
+        "_row_num": 65
       }
     ],
     "parto": [
@@ -2341,7 +2350,7 @@
           "prompt": {
             "text": {
               "english": "Has the child stopped breastfeeding?",
-              "default": "A criança parou de tomar peito (amamentação)?"
+              "default": "A criança parou de tomar leite (amamentação)?"
             }
           }
         },
@@ -4104,7 +4113,7 @@
       },
       {
         "clause": "if",
-        "condition": "(adate.diffInDays(data('OUTDATE'), data('BCG'))<1 && data('BCG') != null && data('BCG') != 'D:2,M:2,Y:1922' && data('obsbcg') !=2) || not(adate.hasUncertainty(data('BCG')))",
+        "condition": "adate.diffInDays(data('OUTDATE'), data('BCG'))<1 && data('BCG') != null && data('BCG') != 'D:2,M:2,Y:1922' && data('obsbcg') !=2 && not(adate.hasUncertainty(data('BCG'))) && not(adate.hasUncertainty(data('OUTDATE')))",
         "_row_num": 51
       },
       {
@@ -4131,7 +4140,7 @@
       },
       {
         "clause": "if",
-        "condition": "adate.diffInDays(data('OUTDATE'), data('POLIONAS'))<1 && data('POLIONAS') != null && data('POLIONAS') != 'D:2,M:2,Y:1922' && data('obspolionas') != '2' || not(adate.hasUncertainty(data('POLIONAS')))",
+        "condition": "adate.diffInDays(data('OUTDATE'), data('POLIONAS'))<1 && data('POLIONAS') != null && data('POLIONAS') != 'D:2,M:2,Y:1922' && data('obspolionas') != '2' && not(adate.hasUncertainty(data('POLIONAS'))) && not(adate.hasUncertainty(data('OUTDATE')))",
         "_row_num": 55
       },
       {
@@ -4826,7 +4835,7 @@
       },
       {
         "clause": "if",
-        "condition": "adate.diffInDays(data('OUTDATE'), data('PENTA1'))<1  && data('PENTA1') != null && data('PENTA1') != 'D:2,M:2,Y:1922' && data('obspenta1') != '2' || not(adate.hasUncertainty(data('PENTA1')))",
+        "condition": "adate.diffInDays(data('OUTDATE'), data('PENTA1'))<1  && data('PENTA1') != null && data('PENTA1') != 'D:2,M:2,Y:1922' && data('obspenta1') != '2' && not(adate.hasUncertainty(data('PENTA1'))) && not(adate.hasUncertainty(data('OUTDATE')))",
         "_row_num": 162
       },
       {
@@ -4853,7 +4862,7 @@
       },
       {
         "clause": "if",
-        "condition": "adate.diffInDays(data('OUTDATE'), data('POLIO1'))<1  && data('POLIO1') != null && data('POLIO1') != 'D:2,M:2,Y:1922' && data('obspolio1') != '2' || not(adate.hasUncertainty(data('POLIO1')))",
+        "condition": "adate.diffInDays(data('OUTDATE'), data('POLIO1'))<1  && data('POLIO1') != null && data('POLIO1') != 'D:2,M:2,Y:1922' && data('obspolio1') != '2' && not(adate.hasUncertainty(data('POLIO1'))) && not(adate.hasUncertainty(data('OUTDATE')))",
         "_row_num": 166
       },
       {
@@ -4880,7 +4889,7 @@
       },
       {
         "clause": "if",
-        "condition": "adate.diffInDays(data('OUTDATE'), data('PCV1'))<1 && data('PCV1') != null && data('PCV1') != 'D:2,M:2,Y:1922' && data('obspcv1') != '2' || not(adate.hasUncertainty(data('PCV1')))",
+        "condition": "adate.diffInDays(data('OUTDATE'), data('PCV1'))<1 && data('PCV1') != null && data('PCV1') != 'D:2,M:2,Y:1922' && data('obspcv1') != '2' && not(adate.hasUncertainty(data('PCV1'))) && not(adate.hasUncertainty(data('OUTDATE')))",
         "_row_num": 170
       },
       {
@@ -4907,7 +4916,7 @@
       },
       {
         "clause": "if",
-        "condition": "adate.diffInDays(data('OUTDATE'), data('ROX1'))<1  && data('ROX1') != null && data('ROX1') != 'D:2,M:2,Y:1922' && data('obsrox1') != '2' || not(adate.hasUncertainty(data('ROX1')))",
+        "condition": "adate.diffInDays(data('OUTDATE'), data('ROX1'))<1  && data('ROX1') != null && data('ROX1') != 'D:2,M:2,Y:1922' && data('obsrox1') != '2' && not(adate.hasUncertainty(data('ROX1'))) && not(adate.hasUncertainty(data('OUTDATE')))",
         "_row_num": 174
       },
       {
@@ -5602,7 +5611,7 @@
       },
       {
         "clause": "if",
-        "condition": "adate.diffInDays(data('OUTDATE'), data('PENTA2'))<1 && data('PENTA2') != null && data('PENTA2') != 'D:2,M:2,Y:1922' && data('obspenta2') != '2' || not(adate.hasUncertainty(data('PENTA2')))",
+        "condition": "adate.diffInDays(data('OUTDATE'), data('PENTA2'))<1 && data('PENTA2') != null && data('PENTA2') != 'D:2,M:2,Y:1922' && data('obspenta2') != '2' && not(adate.hasUncertainty(data('PENTA2'))) && not(adate.hasUncertainty(data('OUTDATE')))",
         "_row_num": 281
       },
       {
@@ -5629,7 +5638,7 @@
       },
       {
         "clause": "if",
-        "condition": "adate.diffInDays(data('OUTDATE'), data('POLIO2'))<1 && data('POLIO2') != null && data('POLIO2') != 'D:2,M:2,Y:1922' && data('obspolio2') != '2' || not(adate.hasUncertainty(data('POLIO2')))",
+        "condition": "adate.diffInDays(data('OUTDATE'), data('POLIO2'))<1 && data('POLIO2') != null && data('POLIO2') != 'D:2,M:2,Y:1922' && data('obspolio2') != '2' && not(adate.hasUncertainty(data('POLIO2'))) && not(adate.hasUncertainty(data('OUTDATE')))",
         "_row_num": 285
       },
       {
@@ -5656,7 +5665,7 @@
       },
       {
         "clause": "if",
-        "condition": "adate.diffInDays(data('OUTDATE'), data('PCV2'))<1 && data('PCV2') != null && data('PCV2') != 'D:2,M:2,Y:1922' && data('obspcv2') != '2' || not(adate.hasUncertainty(data('PCV2')))",
+        "condition": "adate.diffInDays(data('OUTDATE'), data('PCV2'))<1 && data('PCV2') != null && data('PCV2') != 'D:2,M:2,Y:1922' && data('obspcv2') != '2' && not(adate.hasUncertainty(data('PCV2'))) && not(adate.hasUncertainty(data('OUTDATE')))",
         "_row_num": 289
       },
       {
@@ -5683,7 +5692,7 @@
       },
       {
         "clause": "if",
-        "condition": "adate.diffInDays(data('OUTDATE'), data('ROX2'))<1 && data('ROX2') != null && data('ROX2') != 'D:2,M:2,Y:1922' && data('obsrox2') != '2' || not(adate.hasUncertainty(data('ROX2')))",
+        "condition": "adate.diffInDays(data('OUTDATE'), data('ROX2'))<1 && data('ROX2') != null && data('ROX2') != 'D:2,M:2,Y:1922' && data('obsrox2') != '2' && not(adate.hasUncertainty(data('ROX2'))) && not(adate.hasUncertainty(data('OUTDATE')))",
         "_row_num": 293
       },
       {
@@ -5710,7 +5719,7 @@
       },
       {
         "clause": "if",
-        "condition": "adate.diffInDays(data('PENTA1'), data('PENTA2'))<1 && data('PENTA2') != null && data('PENTA2') != 'D:2,M:2,Y:1922' && data('obspenta2') != '2' || not(adate.hasUncertainty(data('PENTA2')))",
+        "condition": "adate.diffInDays(data('PENTA1'), data('PENTA2'))<1 && data('PENTA2') != null && data('PENTA2') != 'D:2,M:2,Y:1922' && data('obspenta2') != '2' && not(adate.hasUncertainty(data('PENTA2'))) && not(adate.hasUncertainty(data('PENTA1')))",
         "_row_num": 297
       },
       {
@@ -5737,7 +5746,7 @@
       },
       {
         "clause": "if",
-        "condition": "adate.diffInDays(data('POLIO1'), data('POLIO2'))<1  && data('POLIO2') != null && data('POLIO2') != 'D:2,M:2,Y:1922' && data('obspolio2') != '2' || not(adate.hasUncertainty(data('POLIO2')))",
+        "condition": "adate.diffInDays(data('POLIO1'), data('POLIO2'))<1  && data('POLIO2') != null && data('POLIO2') != 'D:2,M:2,Y:1922' && data('obspolio2') != '2' && not(adate.hasUncertainty(data('POLIO2'))) && not(adate.hasUncertainty(data('POLIO1')))",
         "_row_num": 301
       },
       {
@@ -5764,7 +5773,7 @@
       },
       {
         "clause": "if",
-        "condition": "adate.diffInDays(data('PCV1'), data('PCV2'))<1  && data('PCV2') != null && data('PCV2') != 'D:2,M:2,Y:1922' && data('obspcv2') != '2' || not(adate.hasUncertainty(data('PCV2')))",
+        "condition": "adate.diffInDays(data('PCV1'), data('PCV2'))<1  && data('PCV2') != null && data('PCV2') != 'D:2,M:2,Y:1922' && data('obspcv2') != '2' && not(adate.hasUncertainty(data('PCV2'))) && not(adate.hasUncertainty(data('PCV1')))",
         "_row_num": 305
       },
       {
@@ -5791,7 +5800,7 @@
       },
       {
         "clause": "if",
-        "condition": "adate.diffInDays(data('ROX1'), data('ROX2'))<1  && data('ROX2') != null && data('ROX2') != 'D:2,M:2,Y:1922' && data('obsrox2') != '2' || not(adate.hasUncertainty(data('ROX2')))",
+        "condition": "adate.diffInDays(data('ROX1'), data('ROX2'))<1  && data('ROX2') != null && data('ROX2') != 'D:2,M:2,Y:1922' && data('obsrox2') != '2' && not(adate.hasUncertainty(data('ROX2'))) && not(adate.hasUncertainty(data('ROX1')))",
         "_row_num": 309
       },
       {
@@ -6486,7 +6495,7 @@
       },
       {
         "clause": "if",
-        "condition": "adate.diffInDays(data('OUTDATE'), data('PENTA3'))<1  && data('PENTA3') != null && data('PENTA3') != 'D:2,M:2,Y:1922' && data('obspenta3') != '2' || not(adate.hasUncertainty(data('PENTA3')))",
+        "condition": "adate.diffInDays(data('OUTDATE'), data('PENTA3'))<1  && data('PENTA3') != null && data('PENTA3') != 'D:2,M:2,Y:1922' && data('obspenta3') != '2' && not(adate.hasUncertainty(data('PENTA3'))) && not(adate.hasUncertainty(data('OUTDATE')))",
         "_row_num": 416
       },
       {
@@ -6513,7 +6522,7 @@
       },
       {
         "clause": "if",
-        "condition": "adate.diffInDays(data('OUTDATE'), data('POLIO3'))<1 && data('POLIO3') != null && data('POLIO3') != 'D:2,M:2,Y:1922' && data('obspolio3') != '2' || not(adate.hasUncertainty(data('POLIO3')))",
+        "condition": "adate.diffInDays(data('OUTDATE'), data('POLIO3'))<1 && data('POLIO3') != null && data('POLIO3') != 'D:2,M:2,Y:1922' && data('obspolio3') != '2' && not(adate.hasUncertainty(data('POLIO3'))) && not(adate.hasUncertainty(data('OUTDATE')))",
         "_row_num": 420
       },
       {
@@ -6540,7 +6549,7 @@
       },
       {
         "clause": "if",
-        "condition": "adate.diffInDays(data('OUTDATE'), data('PCV3'))<1 && data('PCV3') != null && data('PCV3') != 'D:2,M:2,Y:1922' && data('obspcv3') != '2' || not(adate.hasUncertainty(data('PCV3')))",
+        "condition": "adate.diffInDays(data('OUTDATE'), data('PCV3'))<1 && data('PCV3') != null && data('PCV3') != 'D:2,M:2,Y:1922' && data('obspcv3') != '2' && not(adate.hasUncertainty(data('PCV3'))) && not(adate.hasUncertainty(data('OUTDATE')))",
         "_row_num": 424
       },
       {
@@ -6567,7 +6576,7 @@
       },
       {
         "clause": "if",
-        "condition": "adate.diffInDays(data('OUTDATE'), data('VPI'))<1 && data('VPI') != null && data('VPI') != 'D:2,M:2,Y:1922' && data('obsvpi') != '2' || not(adate.hasUncertainty(data('VPI')))",
+        "condition": "adate.diffInDays(data('OUTDATE'), data('VPI'))<1 && data('VPI') != null && data('VPI') != 'D:2,M:2,Y:1922' && data('obsvpi') != '2' && not(adate.hasUncertainty(data('VPI'))) && not(adate.hasUncertainty(data('OUTDATE')))",
         "_row_num": 428
       },
       {
@@ -6594,7 +6603,7 @@
       },
       {
         "clause": "if",
-        "condition": "adate.diffInDays(data('PENTA2'), data('PENTA3'))<1  && data('PENTA3') != null && data('PENTA3') != 'D:2,M:2,Y:1922' && data('obspenta3') != '2' || not(adate.hasUncertainty(data('PENTA3')))",
+        "condition": "adate.diffInDays(data('PENTA2'), data('PENTA3'))<1  && data('PENTA3') != null && data('PENTA3') != 'D:2,M:2,Y:1922' && data('obspenta3') != '2' && not(adate.hasUncertainty(data('PENTA3'))) && not(adate.hasUncertainty(data('PENTA2')))",
         "_row_num": 432
       },
       {
@@ -6621,7 +6630,7 @@
       },
       {
         "clause": "if",
-        "condition": "adate.diffInDays(data('POLIO2'), data('POLIO3'))<1  && data('POLIO3') != null && data('POLIO3') != 'D:2,M:2,Y:1922' && data('obspolio3') != '2' || not(adate.hasUncertainty(data('POLIO3')))",
+        "condition": "adate.diffInDays(data('POLIO2'), data('POLIO3'))<1  && data('POLIO3') != null && data('POLIO3') != 'D:2,M:2,Y:1922' && data('obspolio3') != '2' && not(adate.hasUncertainty(data('POLIO3'))) && not(adate.hasUncertainty(data('POLIO2')))",
         "_row_num": 436
       },
       {
@@ -6648,7 +6657,7 @@
       },
       {
         "clause": "if",
-        "condition": "adate.diffInDays(data('PCV2'), data('PCV3'))<1  && data('PCV3') != null && data('PCV3') != 'D:2,M:2,Y:1922' && data('obspcv3') != '2' || not(adate.hasUncertainty(data('PCV3')))",
+        "condition": "adate.diffInDays(data('PCV2'), data('PCV3'))<1  && data('PCV3') != null && data('PCV3') != 'D:2,M:2,Y:1922' && data('obspcv3') != '2' && not(adate.hasUncertainty(data('PCV3'))) && not(adate.hasUncertainty(data('PCV2')))",
         "_row_num": 440
       },
       {
@@ -6675,7 +6684,7 @@
       },
       {
         "clause": "if",
-        "condition": "adate.diffInDays(data('PENTA1'), data('PENTA3'))<1  && data('PENTA3') != null && data('PENTA3') != 'D:2,M:2,Y:1922' && data('obspenta3') != '2' || not(adate.hasUncertainty(data('PENTA3')))",
+        "condition": "adate.diffInDays(data('PENTA1'), data('PENTA3'))<1  && data('PENTA3') != null && data('PENTA3') != 'D:2,M:2,Y:1922' && data('obspenta3') != '2' && not(adate.hasUncertainty(data('PENTA3'))) && not(adate.hasUncertainty(data('PENTA1')))",
         "_row_num": 444
       },
       {
@@ -6702,7 +6711,7 @@
       },
       {
         "clause": "if",
-        "condition": "adate.diffInDays(data('POLIO1'), data('POLIO3'))<1  && data('POLIO3') != null && data('POLIO3') != 'D:2,M:2,Y:1922' && data('obspolio3') != '2' || not(adate.hasUncertainty(data('POLIO3')))",
+        "condition": "adate.diffInDays(data('POLIO1'), data('POLIO3'))<1  && data('POLIO3') != null && data('POLIO3') != 'D:2,M:2,Y:1922' && data('obspolio3') != '2' && not(adate.hasUncertainty(data('POLIO3'))) && not(adate.hasUncertainty(data('POLIO1')))",
         "_row_num": 448
       },
       {
@@ -6729,7 +6738,7 @@
       },
       {
         "clause": "if",
-        "condition": "adate.diffInDays(data('PCV1'), data('PCV3'))<1  && data('PCV3') != null && data('PCV3') != 'D:2,M:2,Y:1922' && data('obspcv3') != '2' || not(adate.hasUncertainty(data('PCV3')))",
+        "condition": "adate.diffInDays(data('PCV1'), data('PCV3'))<1  && data('PCV3') != null && data('PCV3') != 'D:2,M:2,Y:1922' && data('obspcv3') != '2' && not(adate.hasUncertainty(data('PCV3'))) && not(adate.hasUncertainty(data('PCV1')))",
         "_row_num": 452
       },
       {
@@ -6978,7 +6987,7 @@
           "prompt": {
             "text": {
               "english": "Yellow fever <b>{{calculates.displayFEBAMAREL}}</b>",
-              "default": "Febre amarela<b>{{calculates.displayFEBAMAREL}}</b>"
+              "default": "Febre amarela <b>{{calculates.displayFEBAMAREL}}</b>"
             }
           }
         },
@@ -6994,7 +7003,7 @@
           "prompt": {
             "text": {
               "english": "<font color = \"red\">Yellow fever <b>{{calculates.displayFEBAMAREL}}</b></font>",
-              "default": "<font color = \"red\">Febre amarela<b>{{calculates.displayFEBAMAREL}}</b></font>"
+              "default": "<font color = \"red\">Febre amarela <b>{{calculates.displayFEBAMAREL}}</b></font>"
             }
           }
         },
@@ -7085,7 +7094,7 @@
       },
       {
         "clause": "if",
-        "condition": "adate.diffInDays(data('OUTDATE'), data('SARAMPO1'))<1 && data('SARAMPO1') != null && data('SARAMPO1') != 'D:2,M:2,Y:1922' && data('obssarampo1') != '2' || not(adate.hasUncertainty(data('SARAMPO1')))",
+        "condition": "adate.diffInDays(data('OUTDATE'), data('SARAMPO1'))<1 && data('SARAMPO1') != null && data('SARAMPO1') != 'D:2,M:2,Y:1922' && data('obssarampo1') != '2' && not(adate.hasUncertainty(data('SARAMPO1'))) && not(adate.hasUncertainty(data('OUTDATE')))",
         "_row_num": 506
       },
       {
@@ -7112,7 +7121,7 @@
       },
       {
         "clause": "if",
-        "condition": "adate.diffInDays(data('OUTDATE'), data('FEBAMAREL'))<1 && data('FEBAMAREL') != null && data('FEBAMAREL') != 'D:2,M:2,Y:1922' && data('obsfebamarel') != '2' || not(adate.hasUncertainty(data('FEBAMAREL')))",
+        "condition": "adate.diffInDays(data('OUTDATE'), data('FEBAMAREL'))<1 && data('FEBAMAREL') != null && data('FEBAMAREL') != 'D:2,M:2,Y:1922' && data('obsfebamarel') != '2' && not(adate.hasUncertainty(data('FEBAMAREL'))) && not(adate.hasUncertainty(data('OUTDATE')))",
         "_row_num": 510
       },
       {
@@ -7139,7 +7148,7 @@
       },
       {
         "clause": "if",
-        "condition": "adate.diffInDays(data('OUTDATE'), data('SARAMPO1'))<180 && data('SARAMPO1') != null && data('SARAMPO1') != 'D:2,M:2,Y:1922' && data('obssarampo1') != '2' || not(adate.hasUncertainty(data('SARAMPO1')))",
+        "condition": "adate.diffInDays(data('OUTDATE'), data('SARAMPO1'))<180 && data('SARAMPO1') != null && data('SARAMPO1') != 'D:2,M:2,Y:1922' && data('obssarampo1') != '2' && not(adate.hasUncertainty(data('SARAMPO1'))) && not(adate.hasUncertainty(data('OUTDATE')))",
         "_row_num": 514
       },
       {
@@ -7166,7 +7175,7 @@
       },
       {
         "clause": "if",
-        "condition": "adate.diffInDays(data('OUTDATE'), data('FEBAMAREL'))<180 && data('FEBAMAREL') != null && data('FEBAMAREL') != 'D:2,M:2,Y:1922' && data('obsfebamarel') != '2' || not(adate.hasUncertainty(data('FEBAMAREL')))",
+        "condition": "adate.diffInDays(data('OUTDATE'), data('FEBAMAREL'))<180 && data('FEBAMAREL') != null && data('FEBAMAREL') != 'D:2,M:2,Y:1922' && data('obsfebamarel') != '2' && not(adate.hasUncertainty(data('FEBAMAREL'))) && not(adate.hasUncertainty(data('OUTDATE')))",
         "_row_num": 518
       },
       {
@@ -18697,8 +18706,8 @@
           },
           {
             "clause": "do section stsc",
-            "_row_num": 63,
-            "__rowNum__": 62,
+            "_row_num": 64,
+            "__rowNum__": 63,
             "_token_type": "prompt",
             "_do_section_name": "stsc",
             "_type": "_section",
@@ -18717,8 +18726,8 @@
             "_token_type": "prompt",
             "type": "contents",
             "_type": "contents",
-            "_row_num": 64,
-            "_branch_label_enclosing_screen": "reg/_screen64",
+            "_row_num": 66,
+            "_branch_label_enclosing_screen": "reg/_screen66",
             "promptIdx": 25
           }
         ],
@@ -18941,33 +18950,56 @@
             "operationIdx": 20
           },
           {
-            "clause": "do section stsc",
+            "clause": "if",
+            "condition": "data('NASESTADO') == '1'",
             "_row_num": 63,
             "__rowNum__": 62,
+            "_token_type": "goto_label",
+            "_branch_label": "_then63",
+            "operationIdx": 21
+          },
+          {
+            "clause": "end if",
+            "_token_type": "goto_label",
+            "_branch_label": "_else65",
+            "_row_num": 65,
+            "operationIdx": 22
+          },
+          {
+            "clause": "do section stsc",
+            "_row_num": 64,
+            "__rowNum__": 63,
             "_token_type": "do_section",
             "_do_section_name": "stsc",
-            "operationIdx": 21
+            "operationIdx": 23
+          },
+          {
+            "clause": "end if",
+            "_token_type": "goto_label",
+            "_branch_label": "_endif65",
+            "_row_num": 65,
+            "operationIdx": 24
           },
           {
             "_token_type": "exit_section",
             "clause": "exit section",
-            "_row_num": 64,
-            "operationIdx": 22
+            "_row_num": 66,
+            "operationIdx": 25
           },
           {
-            "_row_num": 64,
+            "_row_num": 66,
             "_token_type": "begin_screen",
             "_screen_block": "function() {var activePromptIndicies = [];\nactivePromptIndicies.push(25);\n\nreturn activePromptIndicies;\n}\n",
             "screen": {
               "hideInBackHistory": true
             },
-            "operationIdx": 23
+            "operationIdx": 26
           },
           {
             "_token_type": "resume",
             "clause": "resume",
-            "_row_num": 64,
-            "operationIdx": 24
+            "_row_num": 66,
+            "operationIdx": 27
           }
         ],
         "branch_label_map": {
@@ -18991,8 +19023,11 @@
           "_then60": 19,
           "_else62": 21,
           "_endif62": 21,
-          "_contents": 23,
-          "_screen64": 23
+          "_then63": 23,
+          "_else65": 25,
+          "_endif65": 25,
+          "_contents": 26,
+          "_screen66": 26
         }
       },
       "parto": {
@@ -20560,7 +20595,7 @@
               "prompt": {
                 "text": {
                   "english": "Has the child stopped breastfeeding?",
-                  "default": "A criança parou de tomar peito (amamentação)?"
+                  "default": "A criança parou de tomar leite (amamentação)?"
                 }
               }
             },
@@ -25085,7 +25120,7 @@
               "prompt": {
                 "text": {
                   "english": "Yellow fever <b>{{calculates.displayFEBAMAREL}}</b>",
-                  "default": "Febre amarela<b>{{calculates.displayFEBAMAREL}}</b>"
+                  "default": "Febre amarela <b>{{calculates.displayFEBAMAREL}}</b>"
                 }
               }
             },
@@ -25102,7 +25137,7 @@
               "prompt": {
                 "text": {
                   "english": "<font color = \"red\">Yellow fever <b>{{calculates.displayFEBAMAREL}}</b></font>",
-                  "default": "<font color = \"red\">Febre amarela<b>{{calculates.displayFEBAMAREL}}</b></font>"
+                  "default": "<font color = \"red\">Febre amarela <b>{{calculates.displayFEBAMAREL}}</b></font>"
                 }
               }
             },
@@ -25319,7 +25354,7 @@
           },
           {
             "clause": "if",
-            "condition": "(adate.diffInDays(data('OUTDATE'), data('BCG'))<1 && data('BCG') != null && data('BCG') != 'D:2,M:2,Y:1922' && data('obsbcg') !=2) || not(adate.hasUncertainty(data('BCG')))",
+            "condition": "adate.diffInDays(data('OUTDATE'), data('BCG'))<1 && data('BCG') != null && data('BCG') != 'D:2,M:2,Y:1922' && data('obsbcg') !=2 && not(adate.hasUncertainty(data('BCG'))) && not(adate.hasUncertainty(data('OUTDATE')))",
             "_row_num": 51,
             "__rowNum__": 50,
             "_token_type": "goto_label",
@@ -25357,7 +25392,7 @@
           },
           {
             "clause": "if",
-            "condition": "adate.diffInDays(data('OUTDATE'), data('POLIONAS'))<1 && data('POLIONAS') != null && data('POLIONAS') != 'D:2,M:2,Y:1922' && data('obspolionas') != '2' || not(adate.hasUncertainty(data('POLIONAS')))",
+            "condition": "adate.diffInDays(data('OUTDATE'), data('POLIONAS'))<1 && data('POLIONAS') != null && data('POLIONAS') != 'D:2,M:2,Y:1922' && data('obspolionas') != '2' && not(adate.hasUncertainty(data('POLIONAS'))) && not(adate.hasUncertainty(data('OUTDATE')))",
             "_row_num": 55,
             "__rowNum__": 54,
             "_token_type": "goto_label",
@@ -25418,7 +25453,7 @@
           },
           {
             "clause": "if",
-            "condition": "adate.diffInDays(data('OUTDATE'), data('PENTA1'))<1  && data('PENTA1') != null && data('PENTA1') != 'D:2,M:2,Y:1922' && data('obspenta1') != '2' || not(adate.hasUncertainty(data('PENTA1')))",
+            "condition": "adate.diffInDays(data('OUTDATE'), data('PENTA1'))<1  && data('PENTA1') != null && data('PENTA1') != 'D:2,M:2,Y:1922' && data('obspenta1') != '2' && not(adate.hasUncertainty(data('PENTA1'))) && not(adate.hasUncertainty(data('OUTDATE')))",
             "_row_num": 162,
             "__rowNum__": 161,
             "_token_type": "goto_label",
@@ -25456,7 +25491,7 @@
           },
           {
             "clause": "if",
-            "condition": "adate.diffInDays(data('OUTDATE'), data('POLIO1'))<1  && data('POLIO1') != null && data('POLIO1') != 'D:2,M:2,Y:1922' && data('obspolio1') != '2' || not(adate.hasUncertainty(data('POLIO1')))",
+            "condition": "adate.diffInDays(data('OUTDATE'), data('POLIO1'))<1  && data('POLIO1') != null && data('POLIO1') != 'D:2,M:2,Y:1922' && data('obspolio1') != '2' && not(adate.hasUncertainty(data('POLIO1'))) && not(adate.hasUncertainty(data('OUTDATE')))",
             "_row_num": 166,
             "__rowNum__": 165,
             "_token_type": "goto_label",
@@ -25494,7 +25529,7 @@
           },
           {
             "clause": "if",
-            "condition": "adate.diffInDays(data('OUTDATE'), data('PCV1'))<1 && data('PCV1') != null && data('PCV1') != 'D:2,M:2,Y:1922' && data('obspcv1') != '2' || not(adate.hasUncertainty(data('PCV1')))",
+            "condition": "adate.diffInDays(data('OUTDATE'), data('PCV1'))<1 && data('PCV1') != null && data('PCV1') != 'D:2,M:2,Y:1922' && data('obspcv1') != '2' && not(adate.hasUncertainty(data('PCV1'))) && not(adate.hasUncertainty(data('OUTDATE')))",
             "_row_num": 170,
             "__rowNum__": 169,
             "_token_type": "goto_label",
@@ -25532,7 +25567,7 @@
           },
           {
             "clause": "if",
-            "condition": "adate.diffInDays(data('OUTDATE'), data('ROX1'))<1  && data('ROX1') != null && data('ROX1') != 'D:2,M:2,Y:1922' && data('obsrox1') != '2' || not(adate.hasUncertainty(data('ROX1')))",
+            "condition": "adate.diffInDays(data('OUTDATE'), data('ROX1'))<1  && data('ROX1') != null && data('ROX1') != 'D:2,M:2,Y:1922' && data('obsrox1') != '2' && not(adate.hasUncertainty(data('ROX1'))) && not(adate.hasUncertainty(data('OUTDATE')))",
             "_row_num": 174,
             "__rowNum__": 173,
             "_token_type": "goto_label",
@@ -25593,7 +25628,7 @@
           },
           {
             "clause": "if",
-            "condition": "adate.diffInDays(data('OUTDATE'), data('PENTA2'))<1 && data('PENTA2') != null && data('PENTA2') != 'D:2,M:2,Y:1922' && data('obspenta2') != '2' || not(adate.hasUncertainty(data('PENTA2')))",
+            "condition": "adate.diffInDays(data('OUTDATE'), data('PENTA2'))<1 && data('PENTA2') != null && data('PENTA2') != 'D:2,M:2,Y:1922' && data('obspenta2') != '2' && not(adate.hasUncertainty(data('PENTA2'))) && not(adate.hasUncertainty(data('OUTDATE')))",
             "_row_num": 281,
             "__rowNum__": 280,
             "_token_type": "goto_label",
@@ -25631,7 +25666,7 @@
           },
           {
             "clause": "if",
-            "condition": "adate.diffInDays(data('OUTDATE'), data('POLIO2'))<1 && data('POLIO2') != null && data('POLIO2') != 'D:2,M:2,Y:1922' && data('obspolio2') != '2' || not(adate.hasUncertainty(data('POLIO2')))",
+            "condition": "adate.diffInDays(data('OUTDATE'), data('POLIO2'))<1 && data('POLIO2') != null && data('POLIO2') != 'D:2,M:2,Y:1922' && data('obspolio2') != '2' && not(adate.hasUncertainty(data('POLIO2'))) && not(adate.hasUncertainty(data('OUTDATE')))",
             "_row_num": 285,
             "__rowNum__": 284,
             "_token_type": "goto_label",
@@ -25669,7 +25704,7 @@
           },
           {
             "clause": "if",
-            "condition": "adate.diffInDays(data('OUTDATE'), data('PCV2'))<1 && data('PCV2') != null && data('PCV2') != 'D:2,M:2,Y:1922' && data('obspcv2') != '2' || not(adate.hasUncertainty(data('PCV2')))",
+            "condition": "adate.diffInDays(data('OUTDATE'), data('PCV2'))<1 && data('PCV2') != null && data('PCV2') != 'D:2,M:2,Y:1922' && data('obspcv2') != '2' && not(adate.hasUncertainty(data('PCV2'))) && not(adate.hasUncertainty(data('OUTDATE')))",
             "_row_num": 289,
             "__rowNum__": 288,
             "_token_type": "goto_label",
@@ -25707,7 +25742,7 @@
           },
           {
             "clause": "if",
-            "condition": "adate.diffInDays(data('OUTDATE'), data('ROX2'))<1 && data('ROX2') != null && data('ROX2') != 'D:2,M:2,Y:1922' && data('obsrox2') != '2' || not(adate.hasUncertainty(data('ROX2')))",
+            "condition": "adate.diffInDays(data('OUTDATE'), data('ROX2'))<1 && data('ROX2') != null && data('ROX2') != 'D:2,M:2,Y:1922' && data('obsrox2') != '2' && not(adate.hasUncertainty(data('ROX2'))) && not(adate.hasUncertainty(data('OUTDATE')))",
             "_row_num": 293,
             "__rowNum__": 292,
             "_token_type": "goto_label",
@@ -25745,7 +25780,7 @@
           },
           {
             "clause": "if",
-            "condition": "adate.diffInDays(data('PENTA1'), data('PENTA2'))<1 && data('PENTA2') != null && data('PENTA2') != 'D:2,M:2,Y:1922' && data('obspenta2') != '2' || not(adate.hasUncertainty(data('PENTA2')))",
+            "condition": "adate.diffInDays(data('PENTA1'), data('PENTA2'))<1 && data('PENTA2') != null && data('PENTA2') != 'D:2,M:2,Y:1922' && data('obspenta2') != '2' && not(adate.hasUncertainty(data('PENTA2'))) && not(adate.hasUncertainty(data('PENTA1')))",
             "_row_num": 297,
             "__rowNum__": 296,
             "_token_type": "goto_label",
@@ -25783,7 +25818,7 @@
           },
           {
             "clause": "if",
-            "condition": "adate.diffInDays(data('POLIO1'), data('POLIO2'))<1  && data('POLIO2') != null && data('POLIO2') != 'D:2,M:2,Y:1922' && data('obspolio2') != '2' || not(adate.hasUncertainty(data('POLIO2')))",
+            "condition": "adate.diffInDays(data('POLIO1'), data('POLIO2'))<1  && data('POLIO2') != null && data('POLIO2') != 'D:2,M:2,Y:1922' && data('obspolio2') != '2' && not(adate.hasUncertainty(data('POLIO2'))) && not(adate.hasUncertainty(data('POLIO1')))",
             "_row_num": 301,
             "__rowNum__": 300,
             "_token_type": "goto_label",
@@ -25821,7 +25856,7 @@
           },
           {
             "clause": "if",
-            "condition": "adate.diffInDays(data('PCV1'), data('PCV2'))<1  && data('PCV2') != null && data('PCV2') != 'D:2,M:2,Y:1922' && data('obspcv2') != '2' || not(adate.hasUncertainty(data('PCV2')))",
+            "condition": "adate.diffInDays(data('PCV1'), data('PCV2'))<1  && data('PCV2') != null && data('PCV2') != 'D:2,M:2,Y:1922' && data('obspcv2') != '2' && not(adate.hasUncertainty(data('PCV2'))) && not(adate.hasUncertainty(data('PCV1')))",
             "_row_num": 305,
             "__rowNum__": 304,
             "_token_type": "goto_label",
@@ -25859,7 +25894,7 @@
           },
           {
             "clause": "if",
-            "condition": "adate.diffInDays(data('ROX1'), data('ROX2'))<1  && data('ROX2') != null && data('ROX2') != 'D:2,M:2,Y:1922' && data('obsrox2') != '2' || not(adate.hasUncertainty(data('ROX2')))",
+            "condition": "adate.diffInDays(data('ROX1'), data('ROX2'))<1  && data('ROX2') != null && data('ROX2') != 'D:2,M:2,Y:1922' && data('obsrox2') != '2' && not(adate.hasUncertainty(data('ROX2'))) && not(adate.hasUncertainty(data('ROX1')))",
             "_row_num": 309,
             "__rowNum__": 308,
             "_token_type": "goto_label",
@@ -25920,7 +25955,7 @@
           },
           {
             "clause": "if",
-            "condition": "adate.diffInDays(data('OUTDATE'), data('PENTA3'))<1  && data('PENTA3') != null && data('PENTA3') != 'D:2,M:2,Y:1922' && data('obspenta3') != '2' || not(adate.hasUncertainty(data('PENTA3')))",
+            "condition": "adate.diffInDays(data('OUTDATE'), data('PENTA3'))<1  && data('PENTA3') != null && data('PENTA3') != 'D:2,M:2,Y:1922' && data('obspenta3') != '2' && not(adate.hasUncertainty(data('PENTA3'))) && not(adate.hasUncertainty(data('OUTDATE')))",
             "_row_num": 416,
             "__rowNum__": 415,
             "_token_type": "goto_label",
@@ -25958,7 +25993,7 @@
           },
           {
             "clause": "if",
-            "condition": "adate.diffInDays(data('OUTDATE'), data('POLIO3'))<1 && data('POLIO3') != null && data('POLIO3') != 'D:2,M:2,Y:1922' && data('obspolio3') != '2' || not(adate.hasUncertainty(data('POLIO3')))",
+            "condition": "adate.diffInDays(data('OUTDATE'), data('POLIO3'))<1 && data('POLIO3') != null && data('POLIO3') != 'D:2,M:2,Y:1922' && data('obspolio3') != '2' && not(adate.hasUncertainty(data('POLIO3'))) && not(adate.hasUncertainty(data('OUTDATE')))",
             "_row_num": 420,
             "__rowNum__": 419,
             "_token_type": "goto_label",
@@ -25996,7 +26031,7 @@
           },
           {
             "clause": "if",
-            "condition": "adate.diffInDays(data('OUTDATE'), data('PCV3'))<1 && data('PCV3') != null && data('PCV3') != 'D:2,M:2,Y:1922' && data('obspcv3') != '2' || not(adate.hasUncertainty(data('PCV3')))",
+            "condition": "adate.diffInDays(data('OUTDATE'), data('PCV3'))<1 && data('PCV3') != null && data('PCV3') != 'D:2,M:2,Y:1922' && data('obspcv3') != '2' && not(adate.hasUncertainty(data('PCV3'))) && not(adate.hasUncertainty(data('OUTDATE')))",
             "_row_num": 424,
             "__rowNum__": 423,
             "_token_type": "goto_label",
@@ -26034,7 +26069,7 @@
           },
           {
             "clause": "if",
-            "condition": "adate.diffInDays(data('OUTDATE'), data('VPI'))<1 && data('VPI') != null && data('VPI') != 'D:2,M:2,Y:1922' && data('obsvpi') != '2' || not(adate.hasUncertainty(data('VPI')))",
+            "condition": "adate.diffInDays(data('OUTDATE'), data('VPI'))<1 && data('VPI') != null && data('VPI') != 'D:2,M:2,Y:1922' && data('obsvpi') != '2' && not(adate.hasUncertainty(data('VPI'))) && not(adate.hasUncertainty(data('OUTDATE')))",
             "_row_num": 428,
             "__rowNum__": 427,
             "_token_type": "goto_label",
@@ -26072,7 +26107,7 @@
           },
           {
             "clause": "if",
-            "condition": "adate.diffInDays(data('PENTA2'), data('PENTA3'))<1  && data('PENTA3') != null && data('PENTA3') != 'D:2,M:2,Y:1922' && data('obspenta3') != '2' || not(adate.hasUncertainty(data('PENTA3')))",
+            "condition": "adate.diffInDays(data('PENTA2'), data('PENTA3'))<1  && data('PENTA3') != null && data('PENTA3') != 'D:2,M:2,Y:1922' && data('obspenta3') != '2' && not(adate.hasUncertainty(data('PENTA3'))) && not(adate.hasUncertainty(data('PENTA2')))",
             "_row_num": 432,
             "__rowNum__": 431,
             "_token_type": "goto_label",
@@ -26110,7 +26145,7 @@
           },
           {
             "clause": "if",
-            "condition": "adate.diffInDays(data('POLIO2'), data('POLIO3'))<1  && data('POLIO3') != null && data('POLIO3') != 'D:2,M:2,Y:1922' && data('obspolio3') != '2' || not(adate.hasUncertainty(data('POLIO3')))",
+            "condition": "adate.diffInDays(data('POLIO2'), data('POLIO3'))<1  && data('POLIO3') != null && data('POLIO3') != 'D:2,M:2,Y:1922' && data('obspolio3') != '2' && not(adate.hasUncertainty(data('POLIO3'))) && not(adate.hasUncertainty(data('POLIO2')))",
             "_row_num": 436,
             "__rowNum__": 435,
             "_token_type": "goto_label",
@@ -26148,7 +26183,7 @@
           },
           {
             "clause": "if",
-            "condition": "adate.diffInDays(data('PCV2'), data('PCV3'))<1  && data('PCV3') != null && data('PCV3') != 'D:2,M:2,Y:1922' && data('obspcv3') != '2' || not(adate.hasUncertainty(data('PCV3')))",
+            "condition": "adate.diffInDays(data('PCV2'), data('PCV3'))<1  && data('PCV3') != null && data('PCV3') != 'D:2,M:2,Y:1922' && data('obspcv3') != '2' && not(adate.hasUncertainty(data('PCV3'))) && not(adate.hasUncertainty(data('PCV2')))",
             "_row_num": 440,
             "__rowNum__": 439,
             "_token_type": "goto_label",
@@ -26186,7 +26221,7 @@
           },
           {
             "clause": "if",
-            "condition": "adate.diffInDays(data('PENTA1'), data('PENTA3'))<1  && data('PENTA3') != null && data('PENTA3') != 'D:2,M:2,Y:1922' && data('obspenta3') != '2' || not(adate.hasUncertainty(data('PENTA3')))",
+            "condition": "adate.diffInDays(data('PENTA1'), data('PENTA3'))<1  && data('PENTA3') != null && data('PENTA3') != 'D:2,M:2,Y:1922' && data('obspenta3') != '2' && not(adate.hasUncertainty(data('PENTA3'))) && not(adate.hasUncertainty(data('PENTA1')))",
             "_row_num": 444,
             "__rowNum__": 443,
             "_token_type": "goto_label",
@@ -26224,7 +26259,7 @@
           },
           {
             "clause": "if",
-            "condition": "adate.diffInDays(data('POLIO1'), data('POLIO3'))<1  && data('POLIO3') != null && data('POLIO3') != 'D:2,M:2,Y:1922' && data('obspolio3') != '2' || not(adate.hasUncertainty(data('POLIO3')))",
+            "condition": "adate.diffInDays(data('POLIO1'), data('POLIO3'))<1  && data('POLIO3') != null && data('POLIO3') != 'D:2,M:2,Y:1922' && data('obspolio3') != '2' && not(adate.hasUncertainty(data('POLIO3'))) && not(adate.hasUncertainty(data('POLIO1')))",
             "_row_num": 448,
             "__rowNum__": 447,
             "_token_type": "goto_label",
@@ -26262,7 +26297,7 @@
           },
           {
             "clause": "if",
-            "condition": "adate.diffInDays(data('PCV1'), data('PCV3'))<1  && data('PCV3') != null && data('PCV3') != 'D:2,M:2,Y:1922' && data('obspcv3') != '2' || not(adate.hasUncertainty(data('PCV3')))",
+            "condition": "adate.diffInDays(data('PCV1'), data('PCV3'))<1  && data('PCV3') != null && data('PCV3') != 'D:2,M:2,Y:1922' && data('obspcv3') != '2' && not(adate.hasUncertainty(data('PCV3'))) && not(adate.hasUncertainty(data('PCV1')))",
             "_row_num": 452,
             "__rowNum__": 451,
             "_token_type": "goto_label",
@@ -26323,7 +26358,7 @@
           },
           {
             "clause": "if",
-            "condition": "adate.diffInDays(data('OUTDATE'), data('SARAMPO1'))<1 && data('SARAMPO1') != null && data('SARAMPO1') != 'D:2,M:2,Y:1922' && data('obssarampo1') != '2' || not(adate.hasUncertainty(data('SARAMPO1')))",
+            "condition": "adate.diffInDays(data('OUTDATE'), data('SARAMPO1'))<1 && data('SARAMPO1') != null && data('SARAMPO1') != 'D:2,M:2,Y:1922' && data('obssarampo1') != '2' && not(adate.hasUncertainty(data('SARAMPO1'))) && not(adate.hasUncertainty(data('OUTDATE')))",
             "_row_num": 506,
             "__rowNum__": 505,
             "_token_type": "goto_label",
@@ -26361,7 +26396,7 @@
           },
           {
             "clause": "if",
-            "condition": "adate.diffInDays(data('OUTDATE'), data('FEBAMAREL'))<1 && data('FEBAMAREL') != null && data('FEBAMAREL') != 'D:2,M:2,Y:1922' && data('obsfebamarel') != '2' || not(adate.hasUncertainty(data('FEBAMAREL')))",
+            "condition": "adate.diffInDays(data('OUTDATE'), data('FEBAMAREL'))<1 && data('FEBAMAREL') != null && data('FEBAMAREL') != 'D:2,M:2,Y:1922' && data('obsfebamarel') != '2' && not(adate.hasUncertainty(data('FEBAMAREL'))) && not(adate.hasUncertainty(data('OUTDATE')))",
             "_row_num": 510,
             "__rowNum__": 509,
             "_token_type": "goto_label",
@@ -26399,7 +26434,7 @@
           },
           {
             "clause": "if",
-            "condition": "adate.diffInDays(data('OUTDATE'), data('SARAMPO1'))<180 && data('SARAMPO1') != null && data('SARAMPO1') != 'D:2,M:2,Y:1922' && data('obssarampo1') != '2' || not(adate.hasUncertainty(data('SARAMPO1')))",
+            "condition": "adate.diffInDays(data('OUTDATE'), data('SARAMPO1'))<180 && data('SARAMPO1') != null && data('SARAMPO1') != 'D:2,M:2,Y:1922' && data('obssarampo1') != '2' && not(adate.hasUncertainty(data('SARAMPO1'))) && not(adate.hasUncertainty(data('OUTDATE')))",
             "_row_num": 514,
             "__rowNum__": 513,
             "_token_type": "goto_label",
@@ -26437,7 +26472,7 @@
           },
           {
             "clause": "if",
-            "condition": "adate.diffInDays(data('OUTDATE'), data('FEBAMAREL'))<180 && data('FEBAMAREL') != null && data('FEBAMAREL') != 'D:2,M:2,Y:1922' && data('obsfebamarel') != '2' || not(adate.hasUncertainty(data('FEBAMAREL')))",
+            "condition": "adate.diffInDays(data('OUTDATE'), data('FEBAMAREL'))<180 && data('FEBAMAREL') != null && data('FEBAMAREL') != 'D:2,M:2,Y:1922' && data('obsfebamarel') != '2' && not(adate.hasUncertainty(data('FEBAMAREL'))) && not(adate.hasUncertainty(data('OUTDATE')))",
             "_row_num": 518,
             "__rowNum__": 517,
             "_token_type": "goto_label",
