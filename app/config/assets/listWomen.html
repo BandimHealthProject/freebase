@@ -1,66 +1,67 @@
-<!DOCTYPE html>
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
 <html>
-    <head>
-        <title></title>
-        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<!--Menu-->
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link href="libs/bootstrap-3.3.7-dist/css/bootstrap.css" type="text/css" rel="stylesheet" />
+    <link href="css/homescreen.css" type="text/css" rel="stylesheet" />
+    <script type="text/javascript" src="commonDefinitions.js"></script>
+    <script type="text/javascript" src="libs/jquery-3.2.1.js"></script>
+    <script type="text/javascript" src="libs/jquery-migrate-3.0.0.js"></script>
+    <script type="text/javascript" src="../../system/js/odkCommon.js"></script>
+    <script type="text/javascript" src="../../system/js/odkData.js"></script>
+    <script type="text/javascript" src="../../system/tables/js/odkTables.js"></script>
+    
+    <script type="text/javascript" src="js/util.js"></script>
+    <script type="text/javascript" src="js/listWomen.js"></script>
+    
+    <style>
+        ul#persons > li {
+            list-style:none;
+        }
+        ul#persons > li > button {
+            margin:10px 0;
+            height:40px;
+            width:100%;
+            background-size: 30px;        
+        }
+        button.mif {
+            background-color: darkcyan;
+            color: white;
+            background-image: url(./img/woman.png);
+            text-align: left;
+            background-position: left;
+            background-repeat: no-repeat;
+            text-indent: 25px;
+        }
+        button.crianca {
+            text-align:left;
+            text-indent: 40px;
+            background-image: url(./img/baby.png);
+            background-repeat: no-repeat;
+            
+            background-position: 10px;
+        }
+        button.visited {
+            opacity:.5;
+            border:solid gray 1px;
+        }
         
-        <script type="text/javascript" src="commonDefinitions.js"></script>
-        <script type="text/javascript" src="libs/jquery-3.2.1.js"></script>
-        <script type="text/javascript" src="libs/jquery-migrate-3.0.0.js"></script>
-        <script type="text/javascript" src="../../system/js/odkCommon.js"></script>
-        <script type="text/javascript" src="../../system/js/odkData.js"></script>
-        <script type="text/javascript" src="../../system/tables/js/odkTables.js"></script>
-        <script type="text/javascript" src="../../system/libs/eonasdan/moment.min.js"></script>
-        <script type="text/javascript" src="js/util.js"></script>
-        
-        
-        <script type="text/javascript" src="js/listWomen.js"></script>
-        
-        <link href="../../system/libs/bootstrap-3.3.7-dist/css/bootstrap.min.css" type="text/css" rel="stylesheet" />
-        <style>
-            tr:nth-of-type(even) {
-                color:gray;
-            }
-            tr.numron1 {
-                background-color: aliceblue;
-            }
-            tr.numron2 {
-                background-color: orange;
-            }
-            tr.numron3 {
-                background-color: pink;
-            }
-            tr.numron4 {
-                background-color: greenyellow;
-            }
-        </style>
-    </head>
-    <body id="main">
-        <div id="wrapper">                
-            <div class="container">                
-                <h3 id="theHeader">Lista!</h3>
-                <br/>
-                <table id="theList" class="table">
-                    <tr>
-                        <th>ID</th>
-                        <th>Nome</th>
-                        <th>Sexo</th>
-                        <th>Idade</th>
-                        <th>AF</th>
-                        <th>&nbsp;</th>
-                    </tr>                    
-                </table>
-                <form>
-                    <input type="button" class="btn" id="btnOpenScan" value="Scan/Busca">
-                </form>
-            </div>
-        </div>
-        
-        
+    </style>
+</head>
 
-        <script type="text/javascript">
-            console.log("Initializing display")
-            $(display);
-        </script>
-    </body>
+<body>
+    <div id="main" class="container" style="height: 100vh;">
+        <h1>Mulheres</h1>
+        <h3><center>Escolha a mãe para a criança</center></h3>
+        <ul id="persons" style="padding:0;">            
+        </ul>
+    </div>
+    <script>
+    $(function() {
+        display();
+    });
+    </script>
+</body>
 </html>

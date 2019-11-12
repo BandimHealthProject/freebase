@@ -890,8 +890,8 @@
         "display": {
           "prompt": {
             "text": {
-              "english": "Name of mother",
-              "default": "Nome de mãe"
+              "english": "Mother's name",
+              "default": "Nome da mãe"
             }
           }
         },
@@ -20410,8 +20410,8 @@
             "display": {
               "prompt": {
                 "text": {
-                  "english": "Name of mother",
-                  "default": "Nome de mãe"
+                  "english": "Mother's name",
+                  "default": "Nome da mãe"
                 }
               }
             },

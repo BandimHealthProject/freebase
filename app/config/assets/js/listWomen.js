@@ -1,154 +1,156 @@
 /**
- * Responsible for rendering the list of perons
+ * Responsible for rendering the select person for mother of a child
  */
 'use strict';
 /* global odkTables, util, odkCommon, odkData */
 
+var persons, children, visitType, cluster, assistant, region, tabanca, date, amostra;
+// note that persons are the MIFs
 
 function display() {
-    window.adateHelper = getAdateHelper();
+    console.log("Persons list loading");
+    visitType = util.getQueryParameter('visitType');
+    cluster = util.getQueryParameter('cluster');
+    assistant = util.getQueryParameter('assistant');
+    region = util.getQueryParameter('region');
+    tabanca = util.getQueryParameter('tabanca');
+    date = util.getQueryParameter('date');
+    amostra = util.getQueryParameter('amostra')
     
-    // Hook up scan button
-    $("#btnOpenScan").on("click", function() {
-        odkTables.launchHTML(null, 'config/assets/scanQR.html');
-    });
-
-    var region = util.getQueryParameter("region")
-    var sector  = util.getQueryParameter("sector")
-    var tabanca = util.getQueryParameter("tabanca")
-    
-    $("#theHeader").html("Region = " + region + "<br/>Sector = " + sector + "<br/>Tabanca = " + tabanca);
-    listPersons(region, sector, tabanca);
+    // Set the background to be a picture.
+    var body = $('body').first();
+    body.css('background', 'url(img/bafata.jpg) fixed');
+    loadPersons();
 }
 
 
-function listPersons(region, sector, tabanca) {
-    console.log("Querying database...");
+// This handy SQL makes adates sortable: 
+// substr(CONT, instr(CONT, 'Y:')+2, 4) || substr('00'|| trim(substr(CONT, instr(CONT, 'M:')+2, 2),","), -2, 2) || substr('00'|| trim(substr(CONT, instr(CONT, 'D:')+2, 2),","), -2, 2) AS D,
+
+function loadPersons() {
+    // SQL to get women (MIF)
+    var sql = "SELECT REGID, NOME, CASA, FOGAO FROM MIF WHERE REG = " + region + " AND TAB = " + tabanca + " AND MOR = " + cluster + " GROUP BY REGID HAVING MIN(ROWID) AND ESTADO = 1 ORDER BY substr(CONT, instr(CONT, 'Y:')+2, 4) || substr('00'|| trim(substr(CONT, instr(CONT, 'M:')+2, 2),','), -2, 2) || substr('00'|| trim(substr(CONT, instr(CONT, 'D:')+2, 2),','), -2, 2) DESC, NOME";
+    persons = [];
+    console.log("Querying database for MIFs...");
+    console.log(sql);
     var successFn = function( result ) {
         console.log("Found " + result.getCount() + " persons");
-        var persons = [];
         for (var row = 0; row < result.getCount(); row++) {
-            var id = result.getData(row,"_id"); // or _row_etag
-            var id_paciente = result.getData(row,"id_paciente");
-            var nome =  result.getData(row,"nome");
-            var nome_casa =  result.getData(row,"nome_casa");
-            var sexo =  result.getData(row,"sexo");
-            var dn =  result.getData(row,"dn");
-            var ano =  result.getData(row,"ano");
-            var mes =  result.getData(row,"mes");
-            var af =  result.getData(row,"AF");
-            var numRondas = result.getData(row, 'numero_rondas')
-            var p = {
-                id,
-                id_paciente,
-                nome,
-                nome_casa,
-                sexo,
-                dn,
-                ano,
-                mes,
-                af,
-                numRondas
-            }
+            var REGID = result.getData(row,"REGID"); // Despite obviously bad naming, this is actually the Person ID
+            var NOME = titleCase(result.getData(row,"NOME"));
+            var CASA = result.getData(row,"CASA");
+            var FOGAO = result.getData(row,"FOGAO");
+            
+            var p = { type: 'mif', REGID, NOME, CASA, FOGAO };
             console.log(p);
             persons.push(p);
         }
-        populateList(persons);
+        populateView();
         return;
     }
     var failureFn = function( errorMsg ) {
         console.error('Failed to get persons from database: ' + errorMsg);
+        console.error('Trying to execute the following SQL:');
+        console.error(sql);
+        alert("Program error Unable to look up persons.");
     }
-    var sql = 'SELECT count(ronda.id_paciente) as numero_rondas, QPS._id, QPS.  id_paciente, nome, nome_casa, sexo, dn, ano, mes, af'
-    sql = sql + ' FROM QPS INNER JOIN ronda ON QPS.id_paciente = ronda.id_paciente'
-    sql = sql + ' WHERE region = "' + region + '" COLLATE NOCASE AND sector = "' + sector + '" COLLATE NOCASE AND tabanca = "' + tabanca + '" COLLATE NOCASE'
-    sql = sql + ' GROUP BY ronda.id_paciente ORDER BY QPS.id_paciente';
-    odkData.arbitraryQuery('QPS', sql, null, null, null, successFn, failureFn);
+
+    odkData.arbitraryQuery('MIF', sql, null, null, null, successFn, failureFn);
 }
 
-function populateList(listOfPersons) {
-    var theList = $("#theList");
-    console.log("Populating list with " + listOfPersons.length + " persons");
-    listOfPersons.forEach(person => {
-        addPersonDiv(person);
+function populateView() {
+    
+    console.log("MIFS:");
+    console.log(persons);
+    
+    var personsAndChildren = [];
+    persons.forEach(mif => {
+        personsAndChildren.push(mif);
     });
+
+    console.log(personsAndChildren);
+
+    var ul = $('#persons');
+    $.each(personsAndChildren, function() {
+        console.log(this);
+        var that = this;
+        var visited = this.visited ? 'visited' : '';
+        
+        ul.append($("<li />").append($("<button />").attr('id',this.REGID).attr('class',visited + ' btn ' + this.type).text(this.NOME)));
+        
+        var btn = ul.find('#' + this.REGID);
+        btn.on("click", function() {
+            openForm(that.type, that);
+        })
+    });
+
+    // Set values for new child with no mother on moranca
+    var defaults = {};
+    defaults['MOR'] = cluster;
+    defaults['REG'] = region;
+    defaults['TAB'] = tabanca;
+    defaults['AMO'] = amostra;
+    defaults['VISITTYPE'] = visitType;
+    defaults['ASSISTENTE'] = assistant;
+    defaults['CONT'] = date; // today's date
+    defaults['REGDIA'] = date;
+    defaults['REGID'] = region + tabanca + cluster; // regid ???
+
+    // Adds button for "anoter MIF"
+    ul.append($("<li />").append($("<button />").attr('id','new' + '_' + 'mif').attr('class', ' btn ' + 'mif').text('Outra mulher')));
+    var btn = ul.find('#' + 'new' + '_' + 'mif');
+        btn.on("click", function() {
+            odkTables.addRowWithSurvey(
+                null,
+                'CRIANCA',
+                'CRIANCA',
+                null,
+                defaults);
+        })
 }
 
-function getSexoString(sexo) {
-    if (sexo == "1" || 1) return "M";
-    if (sexo == "2" || 2) return "F";
-    return "?";
+function getDefaultsMIF(person) {
+    var defaults = {};
+    defaults['MOR'] = cluster;
+    defaults['REG'] = region;
+    defaults['TAB'] = tabanca;
+    defaults['AMO'] = amostra;
+    defaults['VISITTYPE'] = visitType;
+    defaults['ASSISTENTE'] = assistant;
+    defaults['CONT'] = date; // today's date
+    defaults['REGID'] = person.REGID;
+    defaults['NOMEMAE'] = person.NOME; // mother's name
+    defaults['CASA'] = person.CASA;
+    defaults['FOGAO'] = person.FOGAO;
+    defaults['REGDIA'] = date;
+    return defaults;
 }
 
-function getAgeString(person) {
-    var theAdate = person.dn;
-    if (!theAdate) {
-        var res = (person.ano) ? person.ano : "0";
-        if (person.mes) res = res + ("." + person.mes);
-        return res;
-    }    
-    return "" + adateHelper.ageInYears(theAdate) + "." + (adateHelper.ageInMonths(theAdate) % 12);
+function openForm(type, person) {
+    console.log("Preparing form for ", person);
+    var personId = person.REGID;
+    //alert("Opening " + type + " form for person id: " + personId);
+    // Look up person
+    // Open form
+    var defaults = {};
+    var tableId = "CRIANCA";
+    var formId = "CRIANCA";
+    if ("mif" == type) {
+        // It's a MIF
+        defaults = getDefaultsMIF(person);
+    } 
+    console.log("Opening form with:", defaults);
+    odkTables.addRowWithSurvey(
+            null,
+            tableId,
+            formId,
+            null,
+            defaults);
 }
 
-function addPersonDiv(p) {    
-    var nome = (p.nome_casa && p.nome_casa.length) ? nome = p.nome + " (" + p.nome_casa + ")" : p.nome;        
-    $('#theList tr:last').after("<tr class='numron" + p.numRondas + "'><td>" + p.id_paciente + "</td><td>" + nome + "</td><td>" + getSexoString(p.sexo) + "</td><td>" + getAgeString(p) + "</td><td>" + p.af + "</td><td><input onclick='openPersonForm(\"" + p.id + "\")' type='button' value='&gt;&gt;'></input></td></tr>");
-}
-
-function openPersonForm(rowId) {
-    var tableId = "QPS";
-    var rowId = rowId;
-    var formId = "QPS"; 
-    odkTables.editRowWithSurvey(null, tableId, rowId, formId, null, null);
-}
-
-/* adate helper */
-function getAdateHelper() {return {
-    getMoment: function(aDate) {
-        if (!aDate || aDate.length<4 || this.yearUnknown(aDate)) {
-            return false;
-        }
-        aDate = aDate.toUpperCase().replace('D:NS','D:15').replace('M:NS','M:5');
-        var d = moment(aDate, '\\D:DD,\\M:MM,\\Y:YYYY');
-        if (d.isValid()) {
-            return d;
-        }
-        return false;
-    },
-    hasUncertainty: function(aDate) {
-        return !aDate || aDate.toUpperCase().indexOf('NS')>-1;   
-    },
-    yearUnknown: function(aDate) {
-        return !aDate || aDate.toUpperCase().indexOf('Y:NS')>-1;
-    },
-    monthUnkown: function(aDate) {
-        return !aDate || aDate.toUpperCase().indexOf('M:NS')>-1;   
-    },
-    dayUnkown: function(aDate) {
-        return !aDate || aDate.toUpperCase().indexOf('D:NS')>-1;
-    },
-    ageIn: function(aDate, strUnit) {
-        var a = this.getMoment(aDate);
-        if (!a) {
-            return -9999;
-        }
-        return moment().diff(a,strUnit);
-    },
-    ageInYears: function(aDate) {
-        return this.ageIn(aDate, 'years');
-    },
-    ageInMonths: function(aDate) {
-        return this.ageIn(aDate, 'months');
-    },
-    ageInDays: function(aDate) {
-        return this.ageIn(aDate, 'days');
-    },
-    diffInYears: function(aDateA, aDateB) {
-        var a = this.getMoment(aDateA);
-        var b = this.getMoment(aDateB);
-        if (!a || !b) {
-            return -9999;
-        }
-        return b.diff(a,'years');
-    }
-}};
+function titleCase(str) {
+    if (!str) return str;
+    return str.toLowerCase().split(' ').map(function(word) {
+      return (word.charAt(0).toUpperCase() + word.slice(1));
+    }).join(' ');
+  }

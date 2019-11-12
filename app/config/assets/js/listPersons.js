@@ -282,16 +282,12 @@ function populateView() {
                 defaults);
         })
 
-// Adds buttin for new CRIANCA
+// Adds button for new CRIANCA
     ul.append($("<li />").append($("<button />").attr('id','new' + '_' + 'crianca').attr('class', ' btn ' + 'crianca').text('Novo Crianca')));
     var btn = ul.find('#' + 'new' + '_' + 'crianca');
         btn.on("click", function() {
-            odkTables.addRowWithSurvey(
-                null,
-                'CRIANCA',
-                'CRIANCA',
-                null,
-                defaults);
+            var queryParams = util.setQuerystringParams(region, tabanca, assistant, visitType, date, amostra, cluster);
+            odkTables.launchHTML(null,  'config/assets/listWomen.html' + queryParams);
         })
     console.log("Opening form with:", defaults);
  

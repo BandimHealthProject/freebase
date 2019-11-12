@@ -299,7 +299,7 @@
         "display": {
           "prompt": {
             "text": {
-              "english": "Mothers name",
+              "english": "Mother's name",
               "default": "Nome da mulher"
             }
           }
@@ -898,6 +898,19 @@
       },
       {
         "type": "text",
+        "name": "NOMEMAE",
+        "display": {
+          "prompt": {
+            "text": {
+              "english": "Mother's name",
+              "default": "Nome da mulher"
+            }
+          }
+        },
+        "_row_num": 47
+      },
+      {
+        "type": "text",
         "name": "REGIDC",
         "display": {
           "prompt": {
@@ -907,15 +920,15 @@
             }
           }
         },
-        "_row_num": 47
-      },
-      {
-        "clause": "end screen",
         "_row_num": 48
       },
       {
-        "clause": "begin screen",
+        "clause": "end screen",
         "_row_num": 49
+      },
+      {
+        "clause": "begin screen",
+        "_row_num": 50
       },
       {
         "type": "note",
@@ -927,7 +940,7 @@
             }
           }
         },
-        "_row_num": 50
+        "_row_num": 51
       },
       {
         "type": "select_one",
@@ -941,12 +954,12 @@
             }
           }
         },
-        "_row_num": 51
+        "_row_num": 52
       },
       {
         "clause": "if",
         "condition": "data('MALFORM') == '1'",
-        "_row_num": 52
+        "_row_num": 53
       },
       {
         "type": "text",
@@ -959,19 +972,19 @@
             }
           }
         },
-        "_row_num": 53
-      },
-      {
-        "clause": "end if",
         "_row_num": 54
       },
       {
-        "clause": "end screen",
+        "clause": "end if",
         "_row_num": 55
       },
       {
-        "clause": "begin screen",
+        "clause": "end screen",
         "_row_num": 56
+      },
+      {
+        "clause": "begin screen",
+        "_row_num": 57
       },
       {
         "type": "note",
@@ -983,7 +996,7 @@
             }
           }
         },
-        "_row_num": 57
+        "_row_num": 58
       },
       {
         "type": "text",
@@ -996,37 +1009,37 @@
             }
           }
         },
-        "_row_num": 58
+        "_row_num": 59
       },
       {
         "clause": "end screen",
-        "_row_num": 59
+        "_row_num": 60
       },
       {
         "clause": "if",
         "condition": "data('PREGID') == null && adate.ageInYears(data('OUTDATE'))<1",
-        "_row_num": 60
-      },
-      {
-        "clause": "do section parto",
         "_row_num": 61
       },
       {
-        "clause": "end if",
+        "clause": "do section parto",
         "_row_num": 62
+      },
+      {
+        "clause": "end if",
+        "_row_num": 63
       },
       {
         "clause": "if",
         "condition": "data('NASESTADO') == '1'",
-        "_row_num": 63
-      },
-      {
-        "clause": "do section stsc",
         "_row_num": 64
       },
       {
-        "clause": "end if",
+        "clause": "do section stsc",
         "_row_num": 65
+      },
+      {
+        "clause": "end if",
+        "_row_num": 66
       }
     ],
     "parto": [
@@ -13621,6 +13634,10 @@
             "section_name": "stsc"
           },
           {
+            "_row_num": 47,
+            "section_name": "reg"
+          },
+          {
             "_row_num": 7,
             "section_name": "model"
           }
@@ -13636,7 +13653,7 @@
             "section_name": "stsc"
           },
           {
-            "_row_num": 58,
+            "_row_num": 59,
             "section_name": "reg"
           },
           {
@@ -13723,7 +13740,7 @@
         "valuesList": "YesNoU",
         "_defn": [
           {
-            "_row_num": 51,
+            "_row_num": 52,
             "section_name": "reg"
           },
           {
@@ -13738,7 +13755,7 @@
         "type": "string",
         "_defn": [
           {
-            "_row_num": 53,
+            "_row_num": 54,
             "section_name": "reg"
           },
           {
@@ -13812,7 +13829,7 @@
         "type": "string",
         "_defn": [
           {
-            "_row_num": 47,
+            "_row_num": 48,
             "section_name": "reg"
           },
           {
@@ -17877,7 +17894,7 @@
             "display": {
               "prompt": {
                 "text": {
-                  "english": "Mothers name",
+                  "english": "Mother's name",
                   "default": "Nome da mulher"
                 }
               }
@@ -18581,12 +18598,12 @@
           },
           {
             "type": "text",
-            "name": "REGIDC",
+            "name": "NOMEMAE",
             "display": {
               "prompt": {
                 "text": {
-                  "english": "Child ID",
-                  "default": "ID da criança"
+                  "english": "Mother's name",
+                  "default": "Nome da mulher"
                 }
               }
             },
@@ -18598,6 +18615,24 @@
             "promptIdx": 17
           },
           {
+            "type": "text",
+            "name": "REGIDC",
+            "display": {
+              "prompt": {
+                "text": {
+                  "english": "Child ID",
+                  "default": "ID da criança"
+                }
+              }
+            },
+            "_row_num": 48,
+            "__rowNum__": 47,
+            "_token_type": "prompt",
+            "_type": "text",
+            "_branch_label_enclosing_screen": "reg/_screen45",
+            "promptIdx": 18
+          },
+          {
             "type": "note",
             "display": {
               "prompt": {
@@ -18607,12 +18642,12 @@
                 }
               }
             },
-            "_row_num": 50,
-            "__rowNum__": 49,
+            "_row_num": 51,
+            "__rowNum__": 50,
             "_token_type": "prompt",
             "_type": "note",
-            "_branch_label_enclosing_screen": "reg/_screen49",
-            "promptIdx": 18
+            "_branch_label_enclosing_screen": "reg/_screen50",
+            "promptIdx": 19
           },
           {
             "type": "select_one",
@@ -18626,12 +18661,12 @@
                 }
               }
             },
-            "_row_num": 51,
-            "__rowNum__": 50,
+            "_row_num": 52,
+            "__rowNum__": 51,
             "_token_type": "prompt",
             "_type": "select_one",
-            "_branch_label_enclosing_screen": "reg/_screen49",
-            "promptIdx": 19
+            "_branch_label_enclosing_screen": "reg/_screen50",
+            "promptIdx": 20
           },
           {
             "type": "text",
@@ -18644,12 +18679,12 @@
                 }
               }
             },
-            "_row_num": 53,
-            "__rowNum__": 52,
+            "_row_num": 54,
+            "__rowNum__": 53,
             "_token_type": "prompt",
             "_type": "text",
-            "_branch_label_enclosing_screen": "reg/_screen49",
-            "promptIdx": 20
+            "_branch_label_enclosing_screen": "reg/_screen50",
+            "promptIdx": 21
           },
           {
             "type": "note",
@@ -18661,12 +18696,12 @@
                 }
               }
             },
-            "_row_num": 57,
-            "__rowNum__": 56,
+            "_row_num": 58,
+            "__rowNum__": 57,
             "_token_type": "prompt",
             "_type": "note",
-            "_branch_label_enclosing_screen": "reg/_screen56",
-            "promptIdx": 21
+            "_branch_label_enclosing_screen": "reg/_screen57",
+            "promptIdx": 22
           },
           {
             "type": "text",
@@ -18679,21 +18714,21 @@
                 }
               }
             },
-            "_row_num": 58,
-            "__rowNum__": 57,
+            "_row_num": 59,
+            "__rowNum__": 58,
             "_token_type": "prompt",
             "_type": "text",
-            "_branch_label_enclosing_screen": "reg/_screen56",
-            "promptIdx": 22
+            "_branch_label_enclosing_screen": "reg/_screen57",
+            "promptIdx": 23
           },
           {
             "clause": "do section parto",
-            "_row_num": 61,
-            "__rowNum__": 60,
+            "_row_num": 62,
+            "__rowNum__": 61,
             "_token_type": "prompt",
             "_do_section_name": "parto",
             "_type": "_section",
-            "promptIdx": 23,
+            "promptIdx": 24,
             "display": {
               "title": {
                 "text": {
@@ -18706,12 +18741,12 @@
           },
           {
             "clause": "do section stsc",
-            "_row_num": 64,
-            "__rowNum__": 63,
+            "_row_num": 65,
+            "__rowNum__": 64,
             "_token_type": "prompt",
             "_do_section_name": "stsc",
             "_type": "_section",
-            "promptIdx": 24,
+            "promptIdx": 25,
             "display": {
               "title": {
                 "text": {
@@ -18726,9 +18761,9 @@
             "_token_type": "prompt",
             "type": "contents",
             "_type": "contents",
-            "_row_num": 66,
-            "_branch_label_enclosing_screen": "reg/_screen66",
-            "promptIdx": 25
+            "_row_num": 67,
+            "_branch_label_enclosing_screen": "reg/_screen67",
+            "promptIdx": 26
           }
         ],
         "validation_tag_map": {
@@ -18883,61 +18918,61 @@
             "_token_type": "begin_screen",
             "_end_screen_clause": {
               "clause": "end screen",
-              "_row_num": 48,
-              "__rowNum__": 47,
+              "_row_num": 49,
+              "__rowNum__": 48,
               "_token_type": "end_screen"
             },
-            "_screen_block": "function() {var activePromptIndicies = [];\nactivePromptIndicies.push(16);\nactivePromptIndicies.push(17);\n\nreturn activePromptIndicies;\n}\n",
+            "_screen_block": "function() {var activePromptIndicies = [];\nactivePromptIndicies.push(16);\nactivePromptIndicies.push(17);\nactivePromptIndicies.push(18);\n\nreturn activePromptIndicies;\n}\n",
             "operationIdx": 14
           },
           {
             "clause": "begin screen",
-            "_row_num": 49,
-            "__rowNum__": 48,
+            "_row_num": 50,
+            "__rowNum__": 49,
             "_token_type": "begin_screen",
             "_end_screen_clause": {
               "clause": "end screen",
-              "_row_num": 55,
-              "__rowNum__": 54,
+              "_row_num": 56,
+              "__rowNum__": 55,
               "_token_type": "end_screen"
             },
-            "_screen_block": "function() {var activePromptIndicies = [];\nactivePromptIndicies.push(18);\nactivePromptIndicies.push(19);\nif (data('MALFORM') == '1') {\nactivePromptIndicies.push(20);\n}\n\nreturn activePromptIndicies;\n}\n",
+            "_screen_block": "function() {var activePromptIndicies = [];\nactivePromptIndicies.push(19);\nactivePromptIndicies.push(20);\nif (data('MALFORM') == '1') {\nactivePromptIndicies.push(21);\n}\n\nreturn activePromptIndicies;\n}\n",
             "operationIdx": 15
           },
           {
             "clause": "begin screen",
-            "_row_num": 56,
-            "__rowNum__": 55,
+            "_row_num": 57,
+            "__rowNum__": 56,
             "_token_type": "begin_screen",
             "_end_screen_clause": {
               "clause": "end screen",
-              "_row_num": 59,
-              "__rowNum__": 58,
+              "_row_num": 60,
+              "__rowNum__": 59,
               "_token_type": "end_screen"
             },
-            "_screen_block": "function() {var activePromptIndicies = [];\nactivePromptIndicies.push(21);\nactivePromptIndicies.push(22);\n\nreturn activePromptIndicies;\n}\n",
+            "_screen_block": "function() {var activePromptIndicies = [];\nactivePromptIndicies.push(22);\nactivePromptIndicies.push(23);\n\nreturn activePromptIndicies;\n}\n",
             "operationIdx": 16
           },
           {
             "clause": "if",
             "condition": "data('PREGID') == null && adate.ageInYears(data('OUTDATE'))<1",
-            "_row_num": 60,
-            "__rowNum__": 59,
+            "_row_num": 61,
+            "__rowNum__": 60,
             "_token_type": "goto_label",
-            "_branch_label": "_then60",
+            "_branch_label": "_then61",
             "operationIdx": 17
           },
           {
             "clause": "end if",
             "_token_type": "goto_label",
-            "_branch_label": "_else62",
-            "_row_num": 62,
+            "_branch_label": "_else63",
+            "_row_num": 63,
             "operationIdx": 18
           },
           {
             "clause": "do section parto",
-            "_row_num": 61,
-            "__rowNum__": 60,
+            "_row_num": 62,
+            "__rowNum__": 61,
             "_token_type": "do_section",
             "_do_section_name": "parto",
             "operationIdx": 19
@@ -18945,30 +18980,30 @@
           {
             "clause": "end if",
             "_token_type": "goto_label",
-            "_branch_label": "_endif62",
-            "_row_num": 62,
+            "_branch_label": "_endif63",
+            "_row_num": 63,
             "operationIdx": 20
           },
           {
             "clause": "if",
             "condition": "data('NASESTADO') == '1'",
-            "_row_num": 63,
-            "__rowNum__": 62,
+            "_row_num": 64,
+            "__rowNum__": 63,
             "_token_type": "goto_label",
-            "_branch_label": "_then63",
+            "_branch_label": "_then64",
             "operationIdx": 21
           },
           {
             "clause": "end if",
             "_token_type": "goto_label",
-            "_branch_label": "_else65",
-            "_row_num": 65,
+            "_branch_label": "_else66",
+            "_row_num": 66,
             "operationIdx": 22
           },
           {
             "clause": "do section stsc",
-            "_row_num": 64,
-            "__rowNum__": 63,
+            "_row_num": 65,
+            "__rowNum__": 64,
             "_token_type": "do_section",
             "_do_section_name": "stsc",
             "operationIdx": 23
@@ -18976,20 +19011,20 @@
           {
             "clause": "end if",
             "_token_type": "goto_label",
-            "_branch_label": "_endif65",
-            "_row_num": 65,
+            "_branch_label": "_endif66",
+            "_row_num": 66,
             "operationIdx": 24
           },
           {
             "_token_type": "exit_section",
             "clause": "exit section",
-            "_row_num": 66,
+            "_row_num": 67,
             "operationIdx": 25
           },
           {
-            "_row_num": 66,
+            "_row_num": 67,
             "_token_type": "begin_screen",
-            "_screen_block": "function() {var activePromptIndicies = [];\nactivePromptIndicies.push(25);\n\nreturn activePromptIndicies;\n}\n",
+            "_screen_block": "function() {var activePromptIndicies = [];\nactivePromptIndicies.push(26);\n\nreturn activePromptIndicies;\n}\n",
             "screen": {
               "hideInBackHistory": true
             },
@@ -18998,7 +19033,7 @@
           {
             "_token_type": "resume",
             "clause": "resume",
-            "_row_num": 66,
+            "_row_num": 67,
             "operationIdx": 27
           }
         ],
@@ -19018,16 +19053,16 @@
           "_endif38": 13,
           "_screen39": 13,
           "_screen45": 14,
-          "_screen49": 15,
-          "_screen56": 16,
-          "_then60": 19,
-          "_else62": 21,
-          "_endif62": 21,
-          "_then63": 23,
-          "_else65": 25,
-          "_endif65": 25,
+          "_screen50": 15,
+          "_screen57": 16,
+          "_then61": 19,
+          "_else63": 21,
+          "_endif63": 21,
+          "_then64": 23,
+          "_else66": 25,
+          "_endif66": 25,
           "_contents": 26,
-          "_screen66": 26
+          "_screen67": 26
         }
       },
       "parto": {
@@ -29053,6 +29088,10 @@
             "section_name": "stsc"
           },
           {
+            "_row_num": 47,
+            "section_name": "reg"
+          },
+          {
             "_row_num": 7,
             "section_name": "model"
           }
@@ -29071,7 +29110,7 @@
             "section_name": "stsc"
           },
           {
-            "_row_num": 58,
+            "_row_num": 59,
             "section_name": "reg"
           },
           {
@@ -29173,7 +29212,7 @@
         "valuesList": "YesNoU",
         "_defn": [
           {
-            "_row_num": 51,
+            "_row_num": 52,
             "section_name": "reg"
           },
           {
@@ -29191,7 +29230,7 @@
         "type": "string",
         "_defn": [
           {
-            "_row_num": 53,
+            "_row_num": 54,
             "section_name": "reg"
           },
           {
@@ -29280,7 +29319,7 @@
         "type": "string",
         "_defn": [
           {
-            "_row_num": 47,
+            "_row_num": 48,
             "section_name": "reg"
           },
           {
