@@ -4,7 +4,7 @@
 'use strict';
 /* global odkTables, util, odkCommon, odkData */
 
-var persons, children, visitType, cluster, assistant, region, tabanca, date, amostra;
+var persons, visitType, cluster, assistant, region, tabanca, date, amostra;
 // note that persons are the MIFs
 
 function display() {
@@ -60,18 +60,10 @@ function loadPersons() {
 
 function populateView() {
     
-    console.log("MIFS:");
-    console.log(persons);
-    
-    var personsAndChildren = [];
-    persons.forEach(mif => {
-        personsAndChildren.push(mif);
-    });
-
-    console.log(personsAndChildren);
+    console.log("MIFS:", persons);
 
     var ul = $('#persons');
-    $.each(personsAndChildren, function() {
+    $.each(persons, function() {
         console.log(this);
         var that = this;
         var visited = this.visited ? 'visited' : '';
@@ -94,10 +86,10 @@ function populateView() {
     defaults['ASSISTENTE'] = assistant;
     defaults['CONT'] = date; // today's date
     defaults['REGDIA'] = date;
-    defaults['REGID'] = region + tabanca + cluster; // regid ???
+    defaults['REGID'] = "Outro"; // regid på "anden" mor ???
 
     // Adds button for "anoter MIF"
-    ul.append($("<li />").append($("<button />").attr('id','new' + '_' + 'mif').attr('class', ' btn ' + 'mif').text('Outra mulher')));
+    ul.append($("<li />").append($("<button />").attr('id','new' + '_' + 'mif').attr('class', ' btn ' + 'mifnew').text('Outro')));
     var btn = ul.find('#' + 'new' + '_' + 'mif');
         btn.on("click", function() {
             odkTables.addRowWithSurvey(
@@ -128,7 +120,6 @@ function getDefaultsMIF(person) {
 
 function openForm(type, person) {
     console.log("Preparing form for ", person);
-    var personId = person.REGID;
     //alert("Opening " + type + " form for person id: " + personId);
     // Look up person
     // Open form

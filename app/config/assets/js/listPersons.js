@@ -6,7 +6,6 @@
 
 var persons, children, visitType, cluster, assistant, region, tabanca, date, amostra;
 // note that persons are the MIFs
-
 function display() {
     console.log("Persons list loading");
     visitType = util.getQueryParameter('visitType');
@@ -136,7 +135,6 @@ function loadChildren() {
     var successFn = function( result ) {
         console.log("Found " + result.getCount() + " children");
         for (var row = 0; row < result.getCount(); row++) {
-
             var REGIDC = result.getData(row,"REGIDC");
             var NOME = titleCase(result.getData(row,"NOME"));
             var REGID = result.getData(row,"REGID"); // This is now the mother's id (go figure)
@@ -148,7 +146,7 @@ function loadChildren() {
             var NOMEMAE = result.getData(row,"NOMEMAE");
             var CASA = result.getData(row,"CASA");
             var FOGAO = result.getData(row,"FOGAO");
-            var ONEYEAR = result.getData(row,"ONEYEAR")
+            var ONEYEAR = result.getData(row,"ONEYEAR");
            
             var BCG = result.getData(row,"BCG");
             var POLIONAS = result.getData(row,"POLIONAS");
@@ -176,8 +174,8 @@ function loadChildren() {
             else if (visitType == 'routine') {
                 children.push(p);
             }
-            
         }
+        console.log("loadChildren:", children);
         populateView();
         return;
     }
@@ -191,69 +189,50 @@ function loadChildren() {
     odkData.arbitraryQuery('CRIANCA', sql, null, null, null, successFn, failureFn);
 }
 
-function loadPregnancies() {
-    // SQL to load pregnancies
-    var sql = "SELECT LMP_M, OUTSTATUS  FROM GRAVIDA  WHERE REGID = " + REGID + " GROUP BY REGID HAVING MIN(ROWID) AND  ORDER BY substr(CONT, instr(CONT, 'Y:')+2, 4) || substr('00'|| trim(substr(CONT, instr(CONT, 'M:')+2, 2),','), -2, 2) || substr('00'|| trim(substr(CONT, instr(CONT, 'D:')+2, 2),','), -2, 2) DESC";
-    pregnancies = [];
-    console.log("Querying database for GRAVIDA...");
-    console.log(sql);
-    var successFn = function( result ) {
-        console.log("Found " + result.getCount() + " pregnancies");
-        for (var row = 0; row < result.getCount(); row++) {
-
-            //var REGID = result.getData(row,"REGID"); // This is now the mother's id (go figure)
-            var LMP_M = result.getData(row,"LMP_M");
-            var OUTSTATUS = result.getData(row,"OUTSTATUS");
-
-            var p = { type: 'gravida', LMP_M, OUTSTATUS };
-            console.log(p);
-            pregnancies.push(p);
-        }
-        populateView();
-        return;
-    }
-    var failureFn = function( errorMsg ) {
-        console.error('Failed to get pregnancies from database: ' + errorMsg);
-        console.error('Trying to execute the following SQL:');
-        console.error(sql);
-        alert("Program error Unable to look up pregnancies.");
-    }
-
-    odkData.arbitraryQuery('GRAVIDA', sql, null, null, null, successFn, failureFn);
-}
-
 function populateView() {
+    // New function for matching women anc children
+    console.log("MIFS:", persons);
+    console.log("CHILDREN:", children); // this array will only contin non-matched children, because of 'splice'
     
-    console.log("MIFS:");
-    console.log(persons);
-    
-    console.log("CHILDREN:");
-    console.log(children);
-    
-    var personsAndChildren = [];
-    persons.forEach(mif => {
-        personsAndChildren.push(mif);
-        var thisMifsChildren = children.splice(children.findIndex(child => child.REGID == mif.REGID),1); // this also removes the matched children from the children list
-        thisMifsChildren.forEach(child => {
-            personsAndChildren.push(child);
+    var personList = [];
+    persons.forEach(function(woman) {
+        personList.push(woman);
+        var thisWomansChildren = children.filter(function(obj) {
+            return obj.REGID == woman.REGID
+        });
+        thisWomansChildren.forEach(function(child) {
+            personList.push(child);
+            children.splice(children.findIndex(function(obj) {
+                return obj.REGID == woman.REGID
+            }), 1);
         });
     });
 
-    console.log(personsAndChildren);
-
-    // Add any remaining (orphaned) children (to the beginning of the list - hence 'unshift')
-    children.forEach(child => {
-        personsAndChildren.unshift(child);        
+    // Add any remaining (orphaned) children to the beginning of the list - hence 'unshift'
+    children.forEach(function(child) {  
+        personList.unshift(child);     
     });
+    console.log('personList', personList);
 
     var ul = $('#persons');
-    $.each(personsAndChildren, function() {
+    $.each(personList, function() {
         console.log(this);
         var that = this;
         var visited = this.visited ? 'visited' : '';
         
-        ul.append($("<li />").append($("<button />").attr('id',this.REGID + '_' + this.REGIDC).attr('class',visited + ' btn ' + this.type).text(this.NOME)));
-        
+        // Assigning diffrent buttons
+        if (this.type == "mif") {
+            if (this.gr == "1") {
+                ul.append($("<li />").append($("<button />").attr('id',this.REGID + '_' + this.REGIDC).attr('class',visited + ' btn ' + this.type + 'gr').text(this.NOME)));
+            } else {
+                ul.append($("<li />").append($("<button />").attr('id',this.REGID + '_' + this.REGIDC).attr('class',visited + ' btn ' + this.type).text(this.NOME)));
+            }
+        } else if (this.type == "crianca" & (this.SEX == "1" | this.SEX == "2")) {
+            ul.append($("<li />").append($("<button />").attr('id',this.REGID + '_' + this.REGIDC).attr('class',visited + ' btn ' + this.type + this.SEX).text(this.NOME)));
+        } else {
+            ul.append($("<li />").append($("<button />").attr('id',this.REGID + '_' + this.REGIDC).attr('class',visited + ' btn ' + this.type).text(this.NOME)));
+        }
+                
         var btn = ul.find('#' + this.REGID + '_' + this.REGIDC);
         btn.on("click", function() {
             openForm(that.type, that);
@@ -271,7 +250,7 @@ function populateView() {
     defaults['REGDIA'] = date;
 
 // Adds button for new MIF
-    ul.append($("<li />").append($("<button />").attr('id','new' + '_' + 'mif').attr('class', ' btn ' + 'mif').text('Nova Mulher')));
+    ul.append($("<li />").append($("<button />").attr('id','new' + '_' + 'mif').attr('class', ' btn ' + 'mifnew').text('Nova Mulher')));
     var btn = ul.find('#' + 'new' + '_' + 'mif');
         btn.on("click", function() {
             odkTables.addRowWithSurvey(
@@ -281,16 +260,13 @@ function populateView() {
                 null,
                 defaults);
         })
-
 // Adds button for new CRIANCA
-    ul.append($("<li />").append($("<button />").attr('id','new' + '_' + 'crianca').attr('class', ' btn ' + 'crianca').text('Novo Crianca')));
+    ul.append($("<li />").append($("<button />").attr('id','new' + '_' + 'crianca').attr('class', ' btn ' + 'criancanew').text('Novo Crianca')));
     var btn = ul.find('#' + 'new' + '_' + 'crianca');
         btn.on("click", function() {
             var queryParams = util.setQuerystringParams(region, tabanca, assistant, visitType, date, amostra, cluster);
             odkTables.launchHTML(null,  'config/assets/listWomen.html' + queryParams);
         })
-    console.log("Opening form with:", defaults);
- 
 }
 
 
@@ -420,29 +396,17 @@ function getDefaultsChild(person) {
     return defaults;
 }
 
-//function getDefaultsPregnancy(person) {
-  //  var defaults = {};
-  //  defaults['outdate'] = person.OUTDATE;
-  //  defaults['outstatus'] = person.OUTSTATUS;
-  //  return defaults;
-//}
-
 function openForm(type, person) {
     console.log("Preparing form for ", person);
-    var personId = person.REGID;
     //alert("Opening " + type + " form for person id: " + personId);
     // Look up person
     // Open form
     var defaults = {};
-    var pregnancy = {};
-    var mif = {};
     var tableId = "mif" == type ? "MIF" : "CRIANCA";
     var formId = "mif" == type ? "MIF" : "CRIANCA";
     if ("mif" == type) {
         // It's a MIF
-        mif = getDefaultsMIF(person);
-        //pregnancy = getDefaultsPregnancy(person);
-        defaults = Object.assign({}, mif, pregnancy);
+        defaults = getDefaultsMIF(person);
     } else {
         // It's a child
         defaults = getDefaultsChild(person);
