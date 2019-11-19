@@ -35,6 +35,12 @@
             background-repeat: no-repeat;
             text-indent: 25px;
         }
+        button.visitedmif {
+            opacity:.5;
+            background-image: url(./img/woman.png), url(./img/checkMarkBlack.png);
+            background-repeat: no-repeat;
+            background-position-x: left, 99%;
+        }
         button.mifnew {
             background-color: lightyellow;
             background-image: url(./img/woman.png);
@@ -51,6 +57,12 @@
             background-position: left;
             background-repeat: no-repeat;
             text-indent: 25px;
+        }
+        button.visitedmifgr {
+            opacity:.5;
+            background-image: url(./img/pregnant.png), url(./img/checkMarkBlack.png);
+            background-repeat: no-repeat;
+            background-position-x: left, 99%;
         }
         button.crianca {
             background-color: lightgoldenrodyellow;
@@ -76,25 +88,27 @@
             background-repeat: no-repeat;
             background-position: 10px;
         }
+        button.visitedcrianca {
+            opacity:.5;
+            background-image: url(./img/baby.png), url(./img/checkMarkBlack.png);
+            background-repeat: no-repeat;
+            background-position-x: 10px, 99%;
+        }
         button.criancanew {
             background-color: lightyellow;
             text-align:left;
             text-indent: 25px;
             background-image: url(./img/baby.png);
             background-repeat: no-repeat;
-        }
-        button.visited {
-            opacity:.5;
-            border:solid gray 1px;
-        }
-        
+            background-position: 0px;
+        }     
     </style>
 </head>
 
 <body>
     <div id="main" class="container" style="height: 100vh;">
         <h1>Pessoas</h1>
-        <ul id="persons" style="padding:0;">            
+        <ul id="persons" style="padding:20px;">            
         </ul>
     </div>
     <script>

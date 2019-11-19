@@ -28,7 +28,19 @@ function display() {
 
 function loadPersons() {
     // SQL to get women (MIF)
-    var sql = "SELECT REGID, NOME, gr, estadovis, CART, cont, MIFDNASC, CASA, FOGAO, RELA1, RELA1NOME, VAC1TIPO, VAC1DATA, VAC1INF, VAC2TIPO, VAC2DATA, VAC2INF, VAC3TIPO, VAC3DATA, VAC3INF, VAC4TIPO, VAC4DATA, VAC4INF, VAC5TIPO, VAC5DATA, VAC5INF, VAC6TIPO, VAC6DATA, VAC6INF, VAC7TIPO, VAC7DATA, VAC7INF, VAC8TIPO, VAC8DATA, VAC8INF, VAC9TIPO, VAC9DATA, VAC9INF, VAC10TIPO, VAC10DATA, VAC10INF, VAC11TIPO, VAC11DATA, VAC11INF, VAC12TIPO, VAC12DATA, VAC12INF, VAC13TIPO, VAC13DATA, VAC13INF, VAC14TIPO, VAC14DATA, VAC14INF, VAC15TIPO, VAC15DATA, VAC15INF, VAC16TIPO, VAC16DATA, VAC16INF, VAC17TIPO, VAC17DATA, VAC17INF, VAC18TIPO, VAC18DATA, VAC18INF, VAC19TIPO, VAC19DATA, VAC19INF, VAC20TIPO, VAC20DATA, VAC20INF FROM MIF WHERE REG = " + region + " AND TAB = " + tabanca + " AND MOR = " + cluster + " GROUP BY REGID HAVING MIN(ROWID) AND ESTADO = 1 ORDER BY substr(CONT, instr(CONT, 'Y:')+2, 4) || substr('00'|| trim(substr(CONT, instr(CONT, 'M:')+2, 2),','), -2, 2) || substr('00'|| trim(substr(CONT, instr(CONT, 'D:')+2, 2),','), -2, 2) DESC, NOME";
+    var varNames = "REGID, NOME, GR, ESTADOVIS, CART, CONT, MIFDNASC, CASA, FOGAO, RELA1, RELA1NOME, VAC1TIPO, VAC1DATA, VAC1INF, VAC2TIPO, VAC2DATA, VAC2INF, VAC3TIPO, VAC3DATA, VAC3INF, VAC4TIPO, VAC4DATA, VAC4INF, VAC5TIPO, VAC5DATA, VAC5INF, VAC6TIPO, VAC6DATA, VAC6INF, VAC7TIPO, VAC7DATA, VAC7INF, VAC8TIPO, VAC8DATA, VAC8INF, VAC9TIPO, VAC9DATA, VAC9INF, VAC10TIPO, VAC10DATA, VAC10INF, VAC11TIPO, VAC11DATA, VAC11INF, VAC12TIPO, VAC12DATA, VAC12INF, VAC13TIPO, VAC13DATA, VAC13INF, VAC14TIPO, VAC14DATA, VAC14INF, VAC15TIPO, VAC15DATA, VAC15INF, VAC16TIPO, VAC16DATA, VAC16INF, VAC17TIPO, VAC17DATA, VAC17INF, VAC18TIPO, VAC18DATA, VAC18INF, VAC19TIPO, VAC19DATA, VAC19INF, VAC20TIPO, VAC20DATA, VAC20INF";
+    var sql = "SELECT " + varNames + 
+        " FROM (" +
+        " SELECT " + varNames + ", REG, TAB, MOR, ESTADO" +
+        " FROM MIF " + 
+        " ORDER BY " +
+        " substr(CONT, instr(CONT, 'Y:')+2, 4) || " +
+        " substr('00'|| trim(substr(CONT, instr(CONT, 'M:')+2, 2),','), -2, 2) || " +
+        " substr('00'|| trim(substr(CONT, instr(CONT, 'D:')+2, 2),','), -2, 2) ASC" + // For some reason this shold be ASC, but DESC when putting the code in SQL-database viewer
+        " ) " +
+        " WHERE REG = " + region + " AND TAB = " + tabanca + " AND MOR = " + cluster +
+        " GROUP BY REGID HAVING ESTADO = 1" +
+        " ORDER BY NOME ASC";
     // Todo - look up in db => callback: populateView;
     persons = [];
     console.log("Querying database for MIFs...");
@@ -38,15 +50,15 @@ function loadPersons() {
         for (var row = 0; row < result.getCount(); row++) {
             var REGID = result.getData(row,"REGID"); // Despite obviously bad naming, this is actually the Person ID
             var NOME = titleCase(result.getData(row,"NOME"));
-            var estadovis = result.getData(row,"ESTADOVIS");
+            var ESTADOVIS = result.getData(row,"ESTADOVIS");
             var CART = result.getData(row,"CART");
-            var cont = result.getData(row,"CONT");
+            var CONT = result.getData(row,"CONT");
             var MIFDNASC = result.getData(row,"MIFDNASC");
             var CASA = result.getData(row,"CASA");
             var FOGAO = result.getData(row,"FOGAO");
             var RELA1 = result.getData(row,"RELA1");
             var RELA1NOME = result.getData(row,"RELA1NOME");
-            var gr = result.getData(row,"GR");
+            var GR = result.getData(row,"GR");
             
             var VAC1TIPO = result.getData(row,"VAC1TIPO");
             var VAC1DATA = result.getData(row,"VAC1DATA");
@@ -109,7 +121,7 @@ function loadPersons() {
             var VAC20DATA = result.getData(row,"VAC20DATA");
             var VAC20INF = result.getData(row,"VAC20INF");
 
-            var p = { type: 'mif', REGID, NOME, gr, estadovis, CART, cont, MIFDNASC, CASA, FOGAO, RELA1, RELA1NOME, VAC1TIPO, VAC1DATA, VAC1INF, VAC2TIPO, VAC2DATA, VAC2INF, VAC3TIPO, VAC3DATA, VAC3INF, VAC4TIPO, VAC4DATA, VAC4INF, VAC5TIPO, VAC5DATA, VAC5INF, VAC6TIPO, VAC6DATA, VAC6INF, VAC7TIPO, VAC7DATA, VAC7INF, VAC8TIPO, VAC8DATA, VAC8INF, VAC9TIPO, VAC9DATA, VAC9INF, VAC10TIPO, VAC10DATA, VAC10INF, VAC11TIPO, VAC11DATA, VAC11INF, VAC12TIPO, VAC12DATA, VAC12INF, VAC13TIPO, VAC13DATA, VAC13INF, VAC14TIPO, VAC14DATA, VAC14INF, VAC15TIPO, VAC15DATA, VAC15INF, VAC16TIPO, VAC16DATA, VAC16INF, VAC17TIPO, VAC17DATA, VAC17INF, VAC18TIPO, VAC18DATA, VAC18INF, VAC19TIPO, VAC19DATA, VAC19INF, VAC20TIPO, VAC20DATA, VAC20INF };
+            var p = { type: 'mif', REGID, NOME, GR, ESTADOVIS, CART, CONT, MIFDNASC, CASA, FOGAO, RELA1, RELA1NOME, VAC1TIPO, VAC1DATA, VAC1INF, VAC2TIPO, VAC2DATA, VAC2INF, VAC3TIPO, VAC3DATA, VAC3INF, VAC4TIPO, VAC4DATA, VAC4INF, VAC5TIPO, VAC5DATA, VAC5INF, VAC6TIPO, VAC6DATA, VAC6INF, VAC7TIPO, VAC7DATA, VAC7INF, VAC8TIPO, VAC8DATA, VAC8INF, VAC9TIPO, VAC9DATA, VAC9INF, VAC10TIPO, VAC10DATA, VAC10INF, VAC11TIPO, VAC11DATA, VAC11INF, VAC12TIPO, VAC12DATA, VAC12INF, VAC13TIPO, VAC13DATA, VAC13INF, VAC14TIPO, VAC14DATA, VAC14INF, VAC15TIPO, VAC15DATA, VAC15INF, VAC16TIPO, VAC16DATA, VAC16INF, VAC17TIPO, VAC17DATA, VAC17INF, VAC18TIPO, VAC18DATA, VAC18INF, VAC19TIPO, VAC19DATA, VAC19INF, VAC20TIPO, VAC20DATA, VAC20INF };
             console.log(p);
             persons.push(p);
         }
@@ -128,7 +140,19 @@ function loadPersons() {
 
 function loadChildren() {
     // SQL to load children
-    var sql = "SELECT REGIDC, NOME, REGID, pres, CARTVAC, CONT, OUTDATE, SEX, NOMEMAE, CASA, ONEYEAR, FOGAO, BCG, POLIONAS, POLIO1, PENTA1, PCV1, ROX1, POLIO2, PENTA2, PCV2, ROX2, POLIO3, PENTA3, PCV3, VPI, SARAMPO1, FEBAMAREL FROM CRIANCA  WHERE REG = " + region + " AND TAB = " + tabanca + " AND MOR = " + cluster + " GROUP BY REGIDC HAVING MIN(ROWID) AND ESTADO = 11  ORDER BY substr(CONT, instr(CONT, 'Y:')+2, 4) || substr('00'|| trim(substr(CONT, instr(CONT, 'M:')+2, 2),','), -2, 2) || substr('00'|| trim(substr(CONT, instr(CONT, 'D:')+2, 2),','), -2, 2) DESC, NOME";
+    var varNames = "REGIDC, NOME, REGID, PRES, CARTVAC, CONT, OUTDATE, SEX, NOMEMAE, CASA, ONEYEAR, FOGAO, BCG, POLIONAS, POLIO1, PENTA1, PCV1, ROX1, POLIO2, PENTA2, PCV2, ROX2, POLIO3, PENTA3, PCV3, VPI, SARAMPO1, FEBAMAREL";
+    var sql = "SELECT " + varNames + 
+        " FROM (" +
+        " SELECT " + varNames + ", REG, TAB, MOR, ESTADO" +
+        " FROM CRIANCA " + 
+        " ORDER BY " +
+        " substr(CONT, instr(CONT, 'Y:')+2, 4) || " +
+        " substr('00'|| trim(substr(CONT, instr(CONT, 'M:')+2, 2),','), -2, 2) || " +
+        " substr('00'|| trim(substr(CONT, instr(CONT, 'D:')+2, 2),','), -2, 2) ASC " + // For some reason this shold be ASC, but DESC when putting the code in SQL-database viewer
+        " ) " +
+        " WHERE REG = " + region + " AND TAB = " + tabanca + " AND MOR = " + cluster +
+        " GROUP BY REGIDC HAVING ESTADO = 11" + 
+        " ORDER BY NOME DESC";
     children = [];
     console.log("Querying database for CRIANCAs...");
     console.log(sql);
@@ -190,20 +214,20 @@ function loadChildren() {
 }
 
 function populateView() {
-    // New function for matching women anc children
+    // New function for matching women and children
     console.log("MIFS:", persons);
-    console.log("CHILDREN:", children); // this array will only contin non-matched children, because of 'splice'
+    console.log("CHILDREN:", children); // this array will only contain non-matched children, because of 'splice'
     
     var personList = [];
     persons.forEach(function(woman) {
         personList.push(woman);
         var thisWomansChildren = children.filter(function(obj) {
-            return obj.REGID == woman.REGID
+            return obj.REGID == woman.REGID;
         });
         thisWomansChildren.forEach(function(child) {
             personList.push(child);
             children.splice(children.findIndex(function(obj) {
-                return obj.REGID == woman.REGID
+                return obj.REGID == woman.REGID;
             }), 1);
         });
     });
@@ -218,19 +242,23 @@ function populateView() {
     $.each(personList, function() {
         console.log(this);
         var that = this;
-        var visited = this.visited ? 'visited' : '';
+        var visited = '';
+        if (this.CONT == date) {
+            visited = "visited";
+        };
+        
         
         // Assigning diffrent buttons
         if (this.type == "mif") {
-            if (this.gr == "1") {
-                ul.append($("<li />").append($("<button />").attr('id',this.REGID + '_' + this.REGIDC).attr('class',visited + ' btn ' + this.type + 'gr').text(this.NOME)));
+            if (this.GR == "1") {
+                ul.append($("<li />").append($("<button />").attr('id',this.REGID + '_' + this.REGIDC).attr('class',visited + this.type + 'gr' + ' btn ' + this.type + 'gr').text(this.NOME)));
             } else {
-                ul.append($("<li />").append($("<button />").attr('id',this.REGID + '_' + this.REGIDC).attr('class',visited + ' btn ' + this.type).text(this.NOME)));
+                ul.append($("<li />").append($("<button />").attr('id',this.REGID + '_' + this.REGIDC).attr('class',visited + this.type + ' btn ' + this.type).text(this.NOME)));
             }
         } else if (this.type == "crianca" & (this.SEX == "1" | this.SEX == "2")) {
-            ul.append($("<li />").append($("<button />").attr('id',this.REGID + '_' + this.REGIDC).attr('class',visited + ' btn ' + this.type + this.SEX).text(this.NOME)));
+            ul.append($("<li />").append($("<button />").attr('id',this.REGID + '_' + this.REGIDC).attr('class',visited + this.type + ' btn ' + this.type + this.SEX).text(this.NOME)));
         } else {
-            ul.append($("<li />").append($("<button />").attr('id',this.REGID + '_' + this.REGIDC).attr('class',visited + ' btn ' + this.type).text(this.NOME)));
+            ul.append($("<li />").append($("<button />").attr('id',this.REGID + '_' + this.REGIDC).attr('class',visited + this.type + ' btn ' + this.type).text(this.NOME)));
         }
                 
         var btn = ul.find('#' + this.REGID + '_' + this.REGIDC);
@@ -281,11 +309,11 @@ function getDefaultsMIF(person) {
     defaults['CONT'] = date; // today's date
     defaults['REGID'] = person.REGID;
     defaults['NOME'] = person.NOME;
-    defaults['gr'] = person.gr;
+    defaults['gr'] = person.GR;
     
-    defaults['lastvisitestado'] = person.estadovis;
+    defaults['lastvisitestado'] = person.ESTADOVIS;
     defaults['CART'] = person.CART;
-    defaults['lastvisitdate'] = person.cont; // date of last visit
+    defaults['lastvisitdate'] = person.CONT; // date of last visit
     defaults['MIFDNASC'] = person.MIFDNASC;
     defaults['CASA'] = person.CASA;
     defaults['FOGAO'] = person.FOGAO;
