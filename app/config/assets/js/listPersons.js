@@ -140,7 +140,7 @@ function loadPersons() {
 
 function loadChildren() {
     // SQL to load children
-    var varNames = "REGIDC, NOME, REGID, PRES, CARTVAC, CONT, OUTDATE, SEX, NOMEMAE, CASA, ONEYEAR, FOGAO, BCG, POLIONAS, POLIO1, PENTA1, PCV1, ROX1, POLIO2, PENTA2, PCV2, ROX2, POLIO3, PENTA3, PCV3, VPI, SARAMPO1, FEBAMAREL";
+    var varNames = "REGIDC, NOME, REGID, PRES, CARTVAC, CONT, OUTDATE, SEX, NOMEMAE, CASA, ONEYEAR, FOGAO, BCG, POLIONAS, POLIO1, PENTA1, PCV1, ROX1, POLIO2, PENTA2, PCV2, ROX2, POLIO3, PENTA3, PCV3, VPI, SARAMPO1, FEBAMAREL, VACOU1, VACOU1TIPO, VACOU2, VACOU2TIPO, VACOU3, VACOU3TIPO, VACOU4, VACOU4TIPO, VACOU5, VACOU5TIPO";
     var sql = "SELECT " + varNames + 
         " FROM (" +
         " SELECT " + varNames + ", REG, TAB, MOR, ESTADO" +
@@ -188,8 +188,18 @@ function loadChildren() {
             var VPI = result.getData(row,"VPI");
             var SARAMPO1 = result.getData(row,"SARAMPO1");
             var FEBAMAREL = result.getData(row,"FEBAMAREL");
+            var VACOU1 = result.getData(row,"VACOU1");
+            var VACOU1TIPO = result.getData(row,"VACOU1TIPO");
+            var VACOU2 = result.getData(row,"VACOU2");
+            var VACOU2TIPO = result.getData(row,"VACOU2TIPO");
+            var VACOU3 = result.getData(row,"VACOU3");
+            var VACOU3TIPO = result.getData(row,"VACOU3TIPO");
+            var VACOU4 = result.getData(row,"VACOU4");
+            var VACOU4TIPO = result.getData(row,"VACOU4TIPO");
+            var VACOU5 = result.getData(row,"VACOU5");
+            var VACOU5TIPO = result.getData(row,"VACOU5TIPO");
 
-            var p = { type: 'crianca', REGIDC, NOME, REGID, pres, CARTVAC, CONT, OUTDATE, SEX, NOMEMAE, CASA, FOGAO, ONEYEAR, BCG, POLIONAS, POLIO1, PENTA1, PCV1, ROX1, POLIO2, PENTA2, PCV2, ROX2, POLIO3, PENTA3, PCV3, VPI, SARAMPO1, FEBAMAREL };
+            var p = { type: 'crianca', REGIDC, NOME, REGID, pres, CARTVAC, CONT, OUTDATE, SEX, NOMEMAE, CASA, FOGAO, ONEYEAR, BCG, POLIONAS, POLIO1, PENTA1, PCV1, ROX1, POLIO2, PENTA2, PCV2, ROX2, POLIO3, PENTA3, PCV3, VPI, SARAMPO1, FEBAMAREL, VACOU1, VACOU1TIPO, VACOU2, VACOU2TIPO, VACOU3, VACOU3TIPO, VACOU4, VACOU4TIPO, VACOU5, VACOU5TIPO};
             console.log(p);
             // If control visit: list children <12m at last visit (variable ONEYEAR !=1)
             if (visitType == "control" & ONEYEAR != 1) {
@@ -421,6 +431,16 @@ function getDefaultsChild(person) {
     defaults['SARAMPO1'] = person.SARAMPO1;
     defaults['FEBAMAREL'] = person.FEBAMAREL;
     defaults['VISITTYPE'] = visitType;
+    defaults['VACOU1'] = person.VACOU1;
+    defaults['VACOU1TIPO'] = person.VACOU1TIPO;
+    defaults['VACOU2'] = person.VACOU2;
+    defaults['VACOU2TIPO'] = person.VACOU2TIPO;
+    defaults['VACOU3'] = person.VACOU3;
+    defaults['VACOU3TIPO'] = person.VACOU3TIPO;
+    defaults['VACOU4'] = person.VACOU4;
+    defaults['VACOU4TIPO'] = person.VACOU4TIPO;
+    defaults['VACOU5'] = person.VACOU5;
+    defaults['VACOU5TIPO'] = person.VACOU5TIPO;
     return defaults;
 }
 
