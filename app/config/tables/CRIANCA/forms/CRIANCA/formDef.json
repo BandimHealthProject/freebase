@@ -3213,8 +3213,123 @@
         "_row_num": 112
       },
       {
-        "clause": "begin screen",
+        "clause": "if",
+        "condition": "data('lastvisitdate') == null && data('PREGID') == null",
         "_row_num": 113
+      },
+      {
+        "clause": "begin screen",
+        "_row_num": 114
+      },
+      {
+        "display": {
+          "prompt": {
+            "text": {
+              "english": "<b>Child visit: {{data.NOME}} - Dob: {{calculates.displayOUTDATE}}<b>",
+              "default": "<b>Visita da crianca: {{data.NOME}} - Nas: {{calculates.displayOUTDATE}}<b>"
+            }
+          }
+        },
+        "_row_num": 115
+      },
+      {
+        "type": "adate",
+        "name": "DATAINTREG",
+        "display": {
+          "prompt": {
+            "text": {
+              "english": "Date of latest hospitalization",
+              "default": "Data de último internamento"
+            }
+          }
+        },
+        "_row_num": 116
+      },
+      {
+        "type": "select_multiple",
+        "values_list": "dontknowdate",
+        "name": "dataintregns",
+        "_row_num": 117
+      },
+      {
+        "clause": "if",
+        "condition": "data('dataintregns') != null",
+        "_row_num": 118
+      },
+      {
+        "type": "assign",
+        "name": "DATAINTREG",
+        "calculation": "data('dataintregns')",
+        "_row_num": 119
+      },
+      {
+        "type": "integer",
+        "name": "DATAINTREGA",
+        "display": {
+          "prompt": {
+            "text": {
+              "english": "Age in years",
+              "default": "Idade em anos"
+            }
+          }
+        },
+        "_row_num": 120
+      },
+      {
+        "type": "integer",
+        "name": "DATAINTREGM",
+        "display": {
+          "prompt": {
+            "text": {
+              "english": "Age in months",
+              "default": "Idade em meses"
+            }
+          }
+        },
+        "_row_num": 121
+      },
+      {
+        "type": "select_multiple",
+        "values_list": "dontknowage",
+        "name": "dataintregamns",
+        "_row_num": 122
+      },
+      {
+        "clause": "if",
+        "condition": "data('dataintregamns') != null",
+        "_row_num": 123
+      },
+      {
+        "type": "assign",
+        "name": "DATAINTREGA",
+        "calculation": 99,
+        "_row_num": 124
+      },
+      {
+        "type": "assign",
+        "name": "DATAINTREGM",
+        "calculation": 99,
+        "_row_num": 125
+      },
+      {
+        "clause": "end if",
+        "_row_num": 126
+      },
+      {
+        "clause": "end if",
+        "_row_num": 127
+      },
+      {
+        "clause": "end screen",
+        "_row_num": 128
+      },
+      {
+        "clause": "else",
+        "_row_num": 129
+      },
+      {
+        "clause": "begin screen",
+        "_row_num": 130
       },
       {
         "type": "note",
@@ -3226,7 +3341,7 @@
             }
           }
         },
-        "_row_num": 114
+        "_row_num": 131
       },
       {
         "type": "note",
@@ -3238,7 +3353,7 @@
             }
           }
         },
-        "_row_num": 115
+        "_row_num": 132
       },
       {
         "type": "linked_table",
@@ -3246,50 +3361,54 @@
         "display": {
           "hide_delete_button": true
         },
-        "_row_num": 116
+        "_row_num": 133
       },
       {
         "clause": "end screen",
-        "_row_num": 117
+        "_row_num": 134
       },
       {
         "clause": "end if",
-        "_row_num": 118
+        "_row_num": 135
+      },
+      {
+        "clause": "end if",
+        "_row_num": 136
       },
       {
         "clause": "if",
         "condition": "data('PRES') =='3'",
-        "_row_num": 119
+        "_row_num": 137
       },
       {
         "clause": "do section fal",
-        "_row_num": 120
+        "_row_num": 138
       },
       {
         "clause": "end if",
-        "_row_num": 121
+        "_row_num": 139
       },
       {
         "clause": "if",
         "condition": "data('VISITTYPE') == 'control'",
-        "_row_num": 122
+        "_row_num": 140
       },
       {
         "clause": "do section control",
-        "_row_num": 123
+        "_row_num": 141
       },
       {
         "clause": "end if",
-        "_row_num": 124
+        "_row_num": 142
       },
       {
         "clause": "if",
         "condition": "data('PRES') ==  '1'",
-        "_row_num": 125
+        "_row_num": 143
       },
       {
         "clause": "begin screen",
-        "_row_num": 126
+        "_row_num": 144
       },
       {
         "type": "note",
@@ -3301,7 +3420,7 @@
             }
           }
         },
-        "_row_num": 127
+        "_row_num": 145
       },
       {
         "type": "integer",
@@ -3321,20 +3440,20 @@
           }
         },
         "constraint": "(data('BRACOCRI')>49 && data('BRACOCRI')<343 && data('BRACOCRI')%2 == 0) ||data('PRES') != '1'",
-        "_row_num": 128
+        "_row_num": 146
       },
       {
         "clause": "end screen",
-        "_row_num": 129
+        "_row_num": 147
       },
       {
         "clause": "if",
         "condition": "data('ONEYEAR') != '1'",
-        "_row_num": 130
+        "_row_num": 148
       },
       {
         "clause": "begin screen",
-        "_row_num": 131
+        "_row_num": 149
       },
       {
         "type": "note",
@@ -3346,7 +3465,7 @@
             }
           }
         },
-        "_row_num": 132
+        "_row_num": 150
       },
       {
         "type": "select_one",
@@ -3360,20 +3479,20 @@
             }
           }
         },
-        "_row_num": 133
+        "_row_num": 151
       },
       {
         "clause": "end screen",
-        "_row_num": 134
+        "_row_num": 152
       },
       {
         "clause": "if",
         "condition": "data('CICBCGN') ==  '1'",
-        "_row_num": 135
+        "_row_num": 153
       },
       {
         "clause": "begin screen",
-        "_row_num": 136
+        "_row_num": 154
       },
       {
         "type": "note",
@@ -3385,7 +3504,7 @@
             }
           }
         },
-        "_row_num": 137
+        "_row_num": 155
       },
       {
         "type": "integer",
@@ -3398,7 +3517,7 @@
             }
           }
         },
-        "_row_num": 138
+        "_row_num": 156
       },
       {
         "type": "integer",
@@ -3411,19 +3530,19 @@
             }
           }
         },
-        "_row_num": 139
+        "_row_num": 157
       },
       {
         "clause": "end screen",
-        "_row_num": 140
+        "_row_num": 158
       },
       {
         "clause": "end if",
-        "_row_num": 141
+        "_row_num": 159
       },
       {
         "clause": "begin screen",
-        "_row_num": 142
+        "_row_num": 160
       },
       {
         "type": "note",
@@ -3435,7 +3554,7 @@
             }
           }
         },
-        "_row_num": 143
+        "_row_num": 161
       },
       {
         "type": "select_one",
@@ -3449,12 +3568,12 @@
             }
           }
         },
-        "_row_num": 144
+        "_row_num": 162
       },
       {
         "clause": "if",
         "condition": "data('LINFADENOP') == '1'",
-        "_row_num": 145
+        "_row_num": 163
       },
       {
         "type": "select_one",
@@ -3468,32 +3587,32 @@
             }
           }
         },
-        "_row_num": 146
+        "_row_num": 164
       },
       {
         "clause": "end if",
-        "_row_num": 147
+        "_row_num": 165
       },
       {
         "clause": "end screen",
-        "_row_num": 148
+        "_row_num": 166
       },
       {
         "clause": "end if",
-        "_row_num": 149
+        "_row_num": 167
       },
       {
         "clause": "end if",
-        "_row_num": 150
+        "_row_num": 168
       },
       {
         "clause": "if",
         "condition": "data('PRES') !='2' && data('PRES') !='3'",
-        "_row_num": 151
+        "_row_num": 169
       },
       {
         "clause": "begin screen",
-        "_row_num": 152
+        "_row_num": 170
       },
       {
         "type": "note",
@@ -3505,7 +3624,7 @@
             }
           }
         },
-        "_row_num": 153
+        "_row_num": 171
       },
       {
         "type": "select_one",
@@ -3519,15 +3638,20 @@
             }
           }
         },
-        "_row_num": 154
+        "_row_num": 172
       },
       {
         "clause": "end screen",
-        "_row_num": 155
+        "_row_num": 173
+      },
+      {
+        "clause": "if",
+        "condition": "(data('lastvisitdate') == null && data('PREGID') != null) || data('lastvisitdate') != null",
+        "_row_num": 174
       },
       {
         "clause": "begin screen",
-        "_row_num": 156
+        "_row_num": 175
       },
       {
         "type": "note",
@@ -3539,7 +3663,128 @@
             }
           }
         },
-        "_row_num": 157
+        "_row_num": 176
+      },
+      {
+        "type": "note",
+        "display": {
+          "prompt": {
+            "text": {
+              "english": "Last visit: <b>{{calculates.displayLastvisitdate}}<b>",
+              "default": "Ultima visita: <b>{{calculates.displayLastvisitdate}}<b>"
+            }
+          }
+        },
+        "_row_num": 177
+      },
+      {
+        "type": "select_one",
+        "values_list": "YesNo",
+        "name": "CAMPNOVO",
+        "display": {
+          "prompt": {
+            "text": {
+              "english": "Any campaign since last visit?",
+              "default": "Alguma campanha desde a última visita?"
+            }
+          }
+        },
+        "_row_num": 178
+      },
+      {
+        "clause": "end screen",
+        "_row_num": 179
+      },
+      {
+        "clause": "if",
+        "condition": "data('CAMPNOVO') == '1'",
+        "_row_num": 180
+      },
+      {
+        "clause": "begin screen",
+        "_row_num": 181
+      },
+      {
+        "type": "note",
+        "display": {
+          "prompt": {
+            "text": {
+              "english": "<b>Child visit: {{data.NOME}} - Dob: {{calculates.displayOUTDATE}}<b>",
+              "default": "<b>Visita da crianca: {{data.NOME}} - Nas: {{calculates.displayOUTDATE}}<b>"
+            }
+          }
+        },
+        "_row_num": 182
+      },
+      {
+        "type": "select_one_dropdown",
+        "values_list": "YesNoU",
+        "name": "CAMPCODE",
+        "display": {
+          "prompt": {
+            "text": {
+              "english": "Choose which campaign",
+              "default": "Escolha qual campanha"
+            }
+          }
+        },
+        "_row_num": 183
+      },
+      {
+        "type": "select_one_dropdown",
+        "values_list": "YesNoU",
+        "name": "CAMPEST",
+        "display": {
+          "prompt": {
+            "text": {
+              "english": "Did the child participate?",
+              "default": "A criança participou?"
+            }
+          }
+        },
+        "_row_num": 184
+      },
+      {
+        "type": "select_one_dropdown",
+        "values_list": "campinf",
+        "name": "CAMPINF",
+        "display": {
+          "prompt": {
+            "text": {
+              "english": "Informant",
+              "default": "Infrmador"
+            }
+          }
+        },
+        "_row_num": 185
+      },
+      {
+        "clause": "end screen",
+        "_row_num": 186
+      },
+      {
+        "clause": "end if",
+        "_row_num": 187
+      },
+      {
+        "clause": "end if",
+        "_row_num": 188
+      },
+      {
+        "clause": "begin screen",
+        "_row_num": 189
+      },
+      {
+        "type": "note",
+        "display": {
+          "prompt": {
+            "text": {
+              "english": "<b>Child visit: {{data.NOME}} - Dob: {{calculates.displayOUTDATE}}<b>",
+              "default": "<b>Visita da crianca: {{data.NOME}} - Nas: {{calculates.displayOUTDATE}}<b>"
+            }
+          }
+        },
+        "_row_num": 190
       },
       {
         "type": "text",
@@ -3552,45 +3797,45 @@
             }
           }
         },
-        "_row_num": 158
+        "_row_num": 191
       },
       {
         "clause": "if",
         "condition": "adate.diffInYears(data('OUTDATE'),data('CONT'))>0",
-        "_row_num": 159
+        "_row_num": 192
       },
       {
         "type": "assign",
         "name": "ONEYEAR",
         "calculation": 1,
-        "_row_num": 160
+        "_row_num": 193
       },
       {
         "clause": "end if",
-        "_row_num": 161
+        "_row_num": 194
       },
       {
         "clause": "if",
         "condition": "adate.ageInYears(data('OUTDATE'))>4",
-        "_row_num": 162
+        "_row_num": 195
       },
       {
         "type": "assign",
         "name": "ESTADO",
         "calculation": 5,
-        "_row_num": 163
+        "_row_num": 196
       },
       {
         "clause": "end if",
-        "_row_num": 164
+        "_row_num": 197
       },
       {
         "clause": "end screen",
-        "_row_num": 165
+        "_row_num": 198
       },
       {
         "clause": "end if",
-        "_row_num": 166
+        "_row_num": 199
       }
     ],
     "control": [
@@ -11177,8 +11422,8 @@
         "display": {
           "title": {
             "text": {
-              "english": "Don't know",
-              "default": "Não sabe"
+              "english": "Don't know the date",
+              "default": "Não sabe a data"
             }
           }
         },
@@ -11237,6 +11482,19 @@
         "_row_num": 90
       },
       {
+        "choice_list_name": "dontknowage",
+        "data_value": "99",
+        "display": {
+          "title": {
+            "text": {
+              "english": "Don't know the age",
+              "default": "Não sabe a idade"
+            }
+          }
+        },
+        "_row_num": 91
+      },
+      {
         "choice_list_name": "tecto",
         "data_value": "1",
         "display": {
@@ -11247,7 +11505,7 @@
             }
           }
         },
-        "_row_num": 91
+        "_row_num": 92
       },
       {
         "choice_list_name": "tecto",
@@ -11260,7 +11518,7 @@
             }
           }
         },
-        "_row_num": 92
+        "_row_num": 93
       },
       {
         "choice_list_name": "tecto",
@@ -11273,7 +11531,7 @@
             }
           }
         },
-        "_row_num": 93
+        "_row_num": 94
       },
       {
         "choice_list_name": "tecto",
@@ -11286,7 +11544,7 @@
             }
           }
         },
-        "_row_num": 94
+        "_row_num": 95
       },
       {
         "choice_list_name": "tecto",
@@ -11299,7 +11557,7 @@
             }
           }
         },
-        "_row_num": 95
+        "_row_num": 96
       },
       {
         "choice_list_name": "toilet",
@@ -11312,7 +11570,7 @@
             }
           }
         },
-        "_row_num": 96
+        "_row_num": 97
       },
       {
         "choice_list_name": "toilet",
@@ -11325,7 +11583,7 @@
             }
           }
         },
-        "_row_num": 97
+        "_row_num": 98
       },
       {
         "choice_list_name": "toilet",
@@ -11338,7 +11596,7 @@
             }
           }
         },
-        "_row_num": 98
+        "_row_num": 99
       },
       {
         "choice_list_name": "toilet",
@@ -11351,7 +11609,46 @@
             }
           }
         },
-        "_row_num": 99
+        "_row_num": 100
+      },
+      {
+        "choice_list_name": "campinf",
+        "data_value": "1",
+        "display": {
+          "title": {
+            "text": {
+              "english": "Mother",
+              "default": "Mãe"
+            }
+          }
+        },
+        "_row_num": 101
+      },
+      {
+        "choice_list_name": "campinf",
+        "data_value": "2",
+        "display": {
+          "title": {
+            "text": {
+              "english": "Card",
+              "default": "Cartão"
+            }
+          }
+        },
+        "_row_num": 102
+      },
+      {
+        "choice_list_name": "campinf",
+        "data_value": "3",
+        "display": {
+          "title": {
+            "text": {
+              "english": "Other",
+              "default": "Outra"
+            }
+          }
+        },
+        "_row_num": 103
       }
     ],
     "queries": [
@@ -11821,1197 +12118,1251 @@
         "_row_num": 69
       },
       {
-        "name": "CARTVAC",
-        "type": "select_one",
+        "name": "CAMPCODE",
+        "type": "select_one_dropdown",
         "isSessionVariable": false,
         "_row_num": 70
       },
       {
-        "name": "CAUSASEP",
-        "type": "text",
+        "name": "CAMPEST",
+        "type": "select_one_dropdown",
         "isSessionVariable": false,
         "_row_num": 71
       },
       {
-        "name": "CICBCGH",
-        "type": "integer",
+        "name": "CAMPINF",
+        "type": "select_one_dropdown",
         "isSessionVariable": false,
         "_row_num": 72
       },
       {
-        "name": "CICBCGN",
+        "name": "CAMPNOVO",
         "type": "select_one",
         "isSessionVariable": false,
         "_row_num": 73
       },
       {
+        "name": "CARTVAC",
+        "type": "select_one",
+        "isSessionVariable": false,
+        "_row_num": 74
+      },
+      {
+        "name": "CAUSASEP",
+        "type": "text",
+        "isSessionVariable": false,
+        "_row_num": 75
+      },
+      {
+        "name": "CICBCGH",
+        "type": "integer",
+        "isSessionVariable": false,
+        "_row_num": 76
+      },
+      {
+        "name": "CICBCGN",
+        "type": "select_one",
+        "isSessionVariable": false,
+        "_row_num": 77
+      },
+      {
         "name": "CICBCGV",
         "type": "integer",
         "isSessionVariable": false,
-        "_row_num": 74
+        "_row_num": 78
       },
       {
         "name": "COMSUP",
         "type": "select_one",
         "isSessionVariable": false,
-        "_row_num": 75
+        "_row_num": 79
       },
       {
         "name": "DACOMSUP",
         "type": "adate",
         "isSessionVariable": false,
-        "_row_num": 76
+        "_row_num": 80
       },
       {
         "name": "dacomsupns",
         "type": "select_multiple",
         "isSessionVariable": true,
-        "_row_num": 77
+        "_row_num": 81
       },
       {
         "name": "DAPAMA",
         "type": "adate",
         "isSessionVariable": false,
-        "_row_num": 78
+        "_row_num": 82
       },
       {
         "name": "dapamans",
         "type": "select_multiple",
         "isSessionVariable": true,
-        "_row_num": 79
+        "_row_num": 83
       },
       {
         "name": "DASEP",
         "type": "adate",
         "isSessionVariable": false,
-        "_row_num": 80
+        "_row_num": 84
       },
       {
         "name": "dasepns",
         "type": "select_multiple",
         "isSessionVariable": true,
-        "_row_num": 81
-      },
-      {
-        "name": "EXITDATA",
-        "type": "adate",
-        "isSessionVariable": false,
-        "_row_num": 82
-      },
-      {
-        "name": "EXITMUDO",
-        "type": "text",
-        "isSessionVariable": false,
-        "_row_num": 83
-      },
-      {
-        "name": "HOSP",
-        "type": "select_one",
-        "isSessionVariable": false,
-        "_row_num": 84
-      },
-      {
-        "name": "IDCOMSUP",
-        "type": "integer",
-        "isSessionVariable": false,
         "_row_num": 85
       },
       {
-        "name": "IDPAMA",
-        "type": "integer",
+        "name": "DATAINTREG",
+        "type": "adate",
         "isSessionVariable": false,
         "_row_num": 86
       },
       {
-        "name": "IDSEP",
+        "name": "DATAINTREGA",
         "type": "integer",
         "isSessionVariable": false,
         "_row_num": 87
       },
       {
-        "name": "LINFADENOP",
-        "type": "select_one",
-        "isSessionVariable": false,
+        "name": "dataintregamns",
+        "type": "select_multiple",
+        "isSessionVariable": true,
         "_row_num": 88
       },
       {
-        "name": "LINFADESUP",
-        "type": "select_one",
+        "name": "DATAINTREGM",
+        "type": "integer",
         "isSessionVariable": false,
         "_row_num": 89
       },
       {
-        "name": "MOMA",
-        "type": "select_one",
-        "isSessionVariable": false,
+        "name": "dataintregns",
+        "type": "select_multiple",
+        "isSessionVariable": true,
         "_row_num": 90
       },
       {
-        "name": "OBSVIS",
-        "type": "text",
+        "name": "EXITDATA",
+        "type": "adate",
         "isSessionVariable": false,
         "_row_num": 91
       },
       {
-        "name": "ONEYEAR",
-        "type": "integer",
+        "name": "EXITMUDO",
+        "type": "text",
         "isSessionVariable": false,
         "_row_num": 92
       },
       {
-        "name": "PAMA",
+        "name": "HOSP",
         "type": "select_one",
         "isSessionVariable": false,
         "_row_num": 93
       },
       {
-        "name": "PASSARAMPO",
-        "type": "select_one",
+        "name": "IDCOMSUP",
+        "type": "integer",
         "isSessionVariable": false,
         "_row_num": 94
       },
       {
-        "name": "PORCA",
-        "type": "select_one",
+        "name": "IDPAMA",
+        "type": "integer",
         "isSessionVariable": false,
         "_row_num": 95
       },
       {
-        "name": "PORMO",
-        "type": "select_one",
+        "name": "IDSEP",
+        "type": "integer",
         "isSessionVariable": false,
         "_row_num": 96
       },
       {
-        "name": "PRES",
+        "name": "LINFADENOP",
         "type": "select_one",
         "isSessionVariable": false,
         "_row_num": 97
       },
       {
-        "name": "PRESMAE",
+        "name": "LINFADESUP",
         "type": "select_one",
         "isSessionVariable": false,
         "_row_num": 98
       },
       {
-        "name": "TENDA",
+        "name": "MOMA",
         "type": "select_one",
         "isSessionVariable": false,
         "_row_num": 99
       },
       {
+        "name": "OBSVIS",
+        "type": "text",
+        "isSessionVariable": false,
+        "_row_num": 100
+      },
+      {
+        "name": "ONEYEAR",
+        "type": "integer",
+        "isSessionVariable": false,
+        "_row_num": 101
+      },
+      {
+        "name": "PAMA",
+        "type": "select_one",
+        "isSessionVariable": false,
+        "_row_num": 102
+      },
+      {
+        "name": "PASSARAMPO",
+        "type": "select_one",
+        "isSessionVariable": false,
+        "_row_num": 103
+      },
+      {
+        "name": "PORCA",
+        "type": "select_one",
+        "isSessionVariable": false,
+        "_row_num": 104
+      },
+      {
+        "name": "PORMO",
+        "type": "select_one",
+        "isSessionVariable": false,
+        "_row_num": 105
+      },
+      {
+        "name": "PRES",
+        "type": "select_one",
+        "isSessionVariable": false,
+        "_row_num": 106
+      },
+      {
+        "name": "PRESMAE",
+        "type": "select_one",
+        "isSessionVariable": false,
+        "_row_num": 107
+      },
+      {
+        "name": "TENDA",
+        "type": "select_one",
+        "isSessionVariable": false,
+        "_row_num": 108
+      },
+      {
         "name": "TENDATIPO",
         "type": "select_one",
         "isSessionVariable": false,
-        "_row_num": 100
+        "_row_num": 109
       },
       {
         "name": "TENDAYN",
         "type": "select_one",
         "isSessionVariable": false,
-        "_row_num": 101
+        "_row_num": 110
       },
       {
         "name": "C_CDATA",
         "type": "adate",
         "isSessionVariable": false,
         "comment": "control",
-        "_row_num": 103
+        "_row_num": 112
       },
       {
         "name": "C_CDATA2",
         "type": "adate",
         "isSessionVariable": false,
-        "_row_num": 104
+        "_row_num": 113
       },
       {
         "name": "C_CONDE",
         "type": "text",
         "isSessionVariable": false,
-        "_row_num": 105
+        "_row_num": 114
       },
       {
         "name": "C_CONDE2",
         "type": "text",
         "isSessionVariable": false,
-        "_row_num": 106
+        "_row_num": 115
       },
       {
         "name": "C_CONDECOD",
         "type": "select_one",
         "isSessionVariable": false,
-        "_row_num": 107
+        "_row_num": 116
       },
       {
         "name": "C_CONDECOD2",
         "type": "select_one",
         "isSessionVariable": false,
-        "_row_num": 108
+        "_row_num": 117
       },
       {
         "name": "C_CONS",
         "type": "select_one",
         "isSessionVariable": false,
-        "_row_num": 109
+        "_row_num": 118
       },
       {
         "name": "C_CONS2",
         "type": "select_one",
         "isSessionVariable": false,
-        "_row_num": 110
+        "_row_num": 119
       },
       {
         "name": "C_DIAGNOSE",
         "type": "select_one",
         "isSessionVariable": false,
-        "_row_num": 111
+        "_row_num": 120
       },
       {
         "name": "C_DIAGNOSE2",
         "type": "select_one",
         "isSessionVariable": false,
-        "_row_num": 112
+        "_row_num": 121
       },
       {
         "name": "C_DIAGNOST",
         "type": "text",
         "isSessionVariable": false,
-        "_row_num": 113
+        "_row_num": 122
       },
       {
         "name": "C_DIAGNOST2",
         "type": "text",
         "isSessionVariable": false,
-        "_row_num": 114
+        "_row_num": 123
       },
       {
         "name": "C_DOENTE",
         "type": "select_one",
         "isSessionVariable": false,
-        "_row_num": 115
+        "_row_num": 124
       },
       {
         "name": "C_LCRT",
         "type": "select_one",
         "isSessionVariable": false,
-        "_row_num": 116
+        "_row_num": 125
       },
       {
         "name": "C_LCRT2",
         "type": "select_one",
         "isSessionVariable": false,
-        "_row_num": 117
+        "_row_num": 126
       },
       {
         "name": "C_SIMPTOMA",
         "type": "select_multiple",
         "isSessionVariable": false,
-        "_row_num": 118
+        "_row_num": 127
       },
       {
         "name": "C_TESTE",
         "type": "select_one",
         "isSessionVariable": false,
-        "_row_num": 119
+        "_row_num": 128
       },
       {
         "name": "C_TESTE2",
         "type": "select_one",
         "isSessionVariable": false,
-        "_row_num": 120
+        "_row_num": 129
       },
       {
         "name": "C_TESTERES",
         "type": "text",
         "isSessionVariable": false,
-        "_row_num": 121
+        "_row_num": 130
       },
       {
         "name": "C_TESTERES2",
         "type": "text",
         "isSessionVariable": false,
-        "_row_num": 122
+        "_row_num": 131
       },
       {
         "name": "C_VIDOC",
         "type": "select_one",
         "isSessionVariable": false,
-        "_row_num": 123
+        "_row_num": 132
       },
       {
         "name": "C_VIDOC2",
         "type": "select_one",
         "isSessionVariable": false,
-        "_row_num": 124
+        "_row_num": 133
       },
       {
         "name": "addvac1",
         "type": "select_one",
         "isSessionVariable": true,
         "comment": "vac",
-        "_row_num": 126
+        "_row_num": 135
       },
       {
         "name": "addvac2",
         "type": "select_one",
         "isSessionVariable": true,
-        "_row_num": 127
+        "_row_num": 136
       },
       {
         "name": "addvac3",
         "type": "select_one",
         "isSessionVariable": true,
-        "_row_num": 128
+        "_row_num": 137
       },
       {
         "name": "addvac4",
         "type": "select_one",
         "isSessionVariable": true,
-        "_row_num": 129
+        "_row_num": 138
       },
       {
         "name": "addvac5",
         "type": "select_one",
         "isSessionVariable": true,
-        "_row_num": 130
+        "_row_num": 139
       },
       {
         "name": "BCG",
         "type": "adate",
         "isSessionVariable": false,
-        "_row_num": 131
+        "_row_num": 140
       },
       {
         "name": "BCGCHECK",
         "type": "select_one",
         "isSessionVariable": false,
-        "_row_num": 132
+        "_row_num": 141
       },
       {
         "name": "bcgng",
         "type": "select_multiple",
         "isSessionVariable": true,
-        "_row_num": 133
+        "_row_num": 142
       },
       {
         "name": "FEBAMAREL",
         "type": "adate",
         "isSessionVariable": false,
-        "_row_num": 134
+        "_row_num": 143
       },
       {
         "name": "FEBAMARELCHECK",
         "type": "select_one",
         "isSessionVariable": false,
-        "_row_num": 135
+        "_row_num": 144
       },
       {
         "name": "febamarelng",
         "type": "select_multiple",
         "isSessionVariable": true,
-        "_row_num": 136
+        "_row_num": 145
       },
       {
         "name": "obsbcg",
         "type": "assign",
         "isSessionVariable": true,
-        "_row_num": 137
+        "_row_num": 146
       },
       {
         "name": "obsfebamarel",
         "type": "assign",
         "isSessionVariable": true,
-        "_row_num": 138
+        "_row_num": 147
       },
       {
         "name": "obspcv1",
         "type": "assign",
         "isSessionVariable": true,
-        "_row_num": 139
+        "_row_num": 148
       },
       {
         "name": "obspcv2",
         "type": "assign",
         "isSessionVariable": true,
-        "_row_num": 140
+        "_row_num": 149
       },
       {
         "name": "obspcv3",
         "type": "assign",
         "isSessionVariable": true,
-        "_row_num": 141
+        "_row_num": 150
       },
       {
         "name": "obspenta1",
         "type": "assign",
         "isSessionVariable": true,
-        "_row_num": 142
+        "_row_num": 151
       },
       {
         "name": "obspenta2",
         "type": "assign",
         "isSessionVariable": true,
-        "_row_num": 143
+        "_row_num": 152
       },
       {
         "name": "obspenta3",
         "type": "assign",
         "isSessionVariable": true,
-        "_row_num": 144
+        "_row_num": 153
       },
       {
         "name": "obspolio1",
         "type": "assign",
         "isSessionVariable": true,
-        "_row_num": 145
+        "_row_num": 154
       },
       {
         "name": "obspolio2",
         "type": "assign",
         "isSessionVariable": true,
-        "_row_num": 146
+        "_row_num": 155
       },
       {
         "name": "obspolio3",
         "type": "assign",
         "isSessionVariable": true,
-        "_row_num": 147
+        "_row_num": 156
       },
       {
         "name": "obspolionas",
         "type": "assign",
         "isSessionVariable": true,
-        "_row_num": 148
+        "_row_num": 157
       },
       {
         "name": "obsrox1",
         "type": "assign",
         "isSessionVariable": true,
-        "_row_num": 149
+        "_row_num": 158
       },
       {
         "name": "obsrox2",
         "type": "assign",
         "isSessionVariable": true,
-        "_row_num": 150
+        "_row_num": 159
       },
       {
         "name": "obssarampo1",
         "type": "assign",
         "isSessionVariable": true,
-        "_row_num": 151
+        "_row_num": 160
       },
       {
         "name": "OBSVAC",
         "type": "text",
         "isSessionVariable": false,
-        "_row_num": 152
+        "_row_num": 161
       },
       {
         "name": "obsvpi",
         "type": "assign",
         "isSessionVariable": true,
-        "_row_num": 153
+        "_row_num": 162
       },
       {
         "name": "PCV1",
         "type": "adate",
         "isSessionVariable": false,
-        "_row_num": 154
+        "_row_num": 163
       },
       {
         "name": "PCV1CHECK",
         "type": "select_one",
         "isSessionVariable": false,
-        "_row_num": 155
+        "_row_num": 164
       },
       {
         "name": "pcv1ng",
         "type": "select_multiple",
         "isSessionVariable": true,
-        "_row_num": 156
+        "_row_num": 165
       },
       {
         "name": "PCV2",
         "type": "adate",
         "isSessionVariable": false,
-        "_row_num": 157
+        "_row_num": 166
       },
       {
         "name": "PCV2CHECK",
         "type": "select_one",
         "isSessionVariable": false,
-        "_row_num": 158
+        "_row_num": 167
       },
       {
         "name": "pcv2ng",
         "type": "select_multiple",
         "isSessionVariable": true,
-        "_row_num": 159
+        "_row_num": 168
       },
       {
         "name": "PCV3",
         "type": "adate",
         "isSessionVariable": false,
-        "_row_num": 160
+        "_row_num": 169
       },
       {
         "name": "PCV3CHECK",
         "type": "select_one",
         "isSessionVariable": false,
-        "_row_num": 161
+        "_row_num": 170
       },
       {
         "name": "pcv3ng",
         "type": "select_multiple",
         "isSessionVariable": true,
-        "_row_num": 162
+        "_row_num": 171
       },
       {
         "name": "PENTA1",
         "type": "adate",
         "isSessionVariable": false,
-        "_row_num": 163
+        "_row_num": 172
       },
       {
         "name": "PENTA1CHECK",
         "type": "select_one",
         "isSessionVariable": false,
-        "_row_num": 164
+        "_row_num": 173
       },
       {
         "name": "penta1ng",
         "type": "select_multiple",
         "isSessionVariable": true,
-        "_row_num": 165
+        "_row_num": 174
       },
       {
         "name": "PENTA2",
         "type": "adate",
         "isSessionVariable": false,
-        "_row_num": 166
+        "_row_num": 175
       },
       {
         "name": "PENTA2CHECK",
         "type": "select_one",
         "isSessionVariable": false,
-        "_row_num": 167
+        "_row_num": 176
       },
       {
         "name": "penta2ng",
         "type": "select_multiple",
         "isSessionVariable": true,
-        "_row_num": 168
+        "_row_num": 177
       },
       {
         "name": "PENTA3",
         "type": "adate",
         "isSessionVariable": false,
-        "_row_num": 169
+        "_row_num": 178
       },
       {
         "name": "PENTA3CHECK",
         "type": "select_one",
         "isSessionVariable": false,
-        "_row_num": 170
+        "_row_num": 179
       },
       {
         "name": "penta3ng",
         "type": "select_multiple",
         "isSessionVariable": true,
-        "_row_num": 171
+        "_row_num": 180
       },
       {
         "name": "POLIO1",
         "type": "adate",
         "isSessionVariable": false,
-        "_row_num": 172
+        "_row_num": 181
       },
       {
         "name": "POLIO1CHECK",
         "type": "select_one",
         "isSessionVariable": false,
-        "_row_num": 173
+        "_row_num": 182
       },
       {
         "name": "polio1ng",
         "type": "select_multiple",
         "isSessionVariable": true,
-        "_row_num": 174
+        "_row_num": 183
       },
       {
         "name": "POLIO2",
         "type": "adate",
         "isSessionVariable": false,
-        "_row_num": 175
+        "_row_num": 184
       },
       {
         "name": "POLIO2CHECK",
         "type": "select_one",
         "isSessionVariable": false,
-        "_row_num": 176
+        "_row_num": 185
       },
       {
         "name": "polio2ng",
         "type": "select_multiple",
         "isSessionVariable": true,
-        "_row_num": 177
+        "_row_num": 186
       },
       {
         "name": "POLIO3",
         "type": "adate",
         "isSessionVariable": false,
-        "_row_num": 178
+        "_row_num": 187
       },
       {
         "name": "POLIO3CHECK",
         "type": "select_one",
         "isSessionVariable": false,
-        "_row_num": 179
+        "_row_num": 188
       },
       {
         "name": "polio3ng",
         "type": "select_multiple",
         "isSessionVariable": true,
-        "_row_num": 180
+        "_row_num": 189
       },
       {
         "name": "POLIONAS",
         "type": "adate",
         "isSessionVariable": false,
-        "_row_num": 181
+        "_row_num": 190
       },
       {
         "name": "POLIONASCHECK",
         "type": "select_one",
         "isSessionVariable": false,
-        "_row_num": 182
+        "_row_num": 191
       },
       {
         "name": "polionasng",
         "type": "select_multiple",
         "isSessionVariable": true,
-        "_row_num": 183
+        "_row_num": 192
       },
       {
         "name": "ROX1",
         "type": "adate",
         "isSessionVariable": false,
-        "_row_num": 184
+        "_row_num": 193
       },
       {
         "name": "ROX1CHECK",
         "type": "select_one",
         "isSessionVariable": false,
-        "_row_num": 185
+        "_row_num": 194
       },
       {
         "name": "rox1ng",
         "type": "select_multiple",
         "isSessionVariable": true,
-        "_row_num": 186
+        "_row_num": 195
       },
       {
         "name": "ROX2",
         "type": "adate",
         "isSessionVariable": false,
-        "_row_num": 187
+        "_row_num": 196
       },
       {
         "name": "ROX2CHECK",
         "type": "select_one",
         "isSessionVariable": false,
-        "_row_num": 188
+        "_row_num": 197
       },
       {
         "name": "rox2ng",
         "type": "select_multiple",
         "isSessionVariable": true,
-        "_row_num": 189
+        "_row_num": 198
       },
       {
         "name": "SARAMPO1",
         "type": "adate",
         "isSessionVariable": false,
-        "_row_num": 190
+        "_row_num": 199
       },
       {
         "name": "SARAMPO1CHECK",
         "type": "select_one",
         "isSessionVariable": false,
-        "_row_num": 191
+        "_row_num": 200
       },
       {
         "name": "sarampo1ng",
         "type": "select_multiple",
         "isSessionVariable": true,
-        "_row_num": 192
+        "_row_num": 201
       },
       {
         "name": "VACOU1",
         "type": "adate",
         "isSessionVariable": false,
-        "_row_num": 193
+        "_row_num": 202
       },
       {
         "name": "VACOU1TIPO",
         "type": "text",
         "isSessionVariable": false,
-        "_row_num": 194
+        "_row_num": 203
       },
       {
         "name": "VACOU2",
         "type": "adate",
         "isSessionVariable": false,
-        "_row_num": 195
+        "_row_num": 204
       },
       {
         "name": "VACOU2TIPO",
         "type": "text",
         "isSessionVariable": false,
-        "_row_num": 196
+        "_row_num": 205
       },
       {
         "name": "VACOU3",
         "type": "adate",
         "isSessionVariable": false,
-        "_row_num": 197
+        "_row_num": 206
       },
       {
         "name": "VACOU3TIPO",
         "type": "text",
         "isSessionVariable": false,
-        "_row_num": 198
+        "_row_num": 207
       },
       {
         "name": "VACOU4",
         "type": "adate",
         "isSessionVariable": false,
-        "_row_num": 199
+        "_row_num": 208
       },
       {
         "name": "VACOU4TIPO",
         "type": "text",
         "isSessionVariable": false,
-        "_row_num": 200
+        "_row_num": 209
       },
       {
         "name": "VACOU5",
         "type": "adate",
         "isSessionVariable": false,
-        "_row_num": 201
+        "_row_num": 210
       },
       {
         "name": "VACOU5TIPO",
         "type": "text",
         "isSessionVariable": false,
-        "_row_num": 202
+        "_row_num": 211
       },
       {
         "name": "VPI",
         "type": "adate",
         "isSessionVariable": false,
-        "_row_num": 203
+        "_row_num": 212
       },
       {
         "name": "VPICHECK",
         "type": "select_one",
         "isSessionVariable": false,
-        "_row_num": 204
+        "_row_num": 213
       },
       {
         "name": "vping",
         "type": "select_multiple",
         "isSessionVariable": true,
-        "_row_num": 205
+        "_row_num": 214
       },
       {
         "name": "ACCID",
         "type": "select_one",
         "isSessionVariable": false,
         "comment": "fal",
-        "_row_num": 207
+        "_row_num": 216
       },
       {
         "name": "ACCIDQUAL",
         "type": "text",
         "isSessionVariable": false,
-        "_row_num": 208
+        "_row_num": 217
       },
       {
         "name": "AMARELO",
         "type": "select_one",
         "isSessionVariable": false,
-        "_row_num": 209
+        "_row_num": 218
       },
       {
         "name": "AMARELODUR",
         "type": "integer",
         "isSessionVariable": false,
-        "_row_num": 210
+        "_row_num": 219
       },
       {
         "name": "AMERELOINI",
         "type": "text",
         "isSessionVariable": false,
-        "_row_num": 211
+        "_row_num": 220
       },
       {
         "name": "ANTIPALUD",
         "type": "select_one",
         "isSessionVariable": false,
-        "_row_num": 212
+        "_row_num": 221
       },
       {
         "name": "BCG_FAL",
         "type": "select_one",
         "isSessionVariable": false,
-        "_row_num": 213
+        "_row_num": 222
       },
       {
         "name": "BICO_MATER",
         "type": "select_one",
         "isSessionVariable": false,
-        "_row_num": 214
+        "_row_num": 223
       },
       {
         "name": "BICO_ONDE",
         "type": "text",
         "isSessionVariable": false,
-        "_row_num": 215
+        "_row_num": 224
       },
       {
         "name": "BOCA_RIJA",
         "type": "select_one",
         "isSessionVariable": false,
-        "_row_num": 216
+        "_row_num": 225
       },
       {
         "name": "CHOROU",
         "type": "select_one",
         "isSessionVariable": false,
-        "_row_num": 217
+        "_row_num": 226
       },
       {
         "name": "CONVUL",
         "type": "select_one",
         "isSessionVariable": false,
-        "_row_num": 218
+        "_row_num": 227
       },
       {
         "name": "CONVULTE",
         "type": "text",
         "isSessionVariable": false,
-        "_row_num": 219
+        "_row_num": 228
       },
       {
         "name": "CORPO_TESO",
         "type": "select_one",
         "isSessionVariable": false,
-        "_row_num": 220
+        "_row_num": 229
       },
       {
         "name": "CRES",
         "type": "select_one",
         "isSessionVariable": false,
-        "_row_num": 221
+        "_row_num": 230
       },
       {
         "name": "CRESTE",
         "type": "text",
         "isSessionVariable": false,
-        "_row_num": 222
+        "_row_num": 231
       },
       {
         "name": "DEFEITO",
         "type": "select_one",
         "isSessionVariable": false,
-        "_row_num": 223
+        "_row_num": 232
       },
       {
         "name": "DEFEITOQUA",
         "type": "text",
         "isSessionVariable": false,
-        "_row_num": 224
+        "_row_num": 233
       },
       {
         "name": "DIAGNOST",
         "type": "select_one",
         "isSessionVariable": false,
-        "_row_num": 225
+        "_row_num": 234
       },
       {
         "name": "DIAGNOUTRO",
         "type": "text",
         "isSessionVariable": false,
-        "_row_num": 226
+        "_row_num": 235
       },
       {
         "name": "DIAGNQUEM",
         "type": "select_one",
         "isSessionVariable": false,
-        "_row_num": 227
+        "_row_num": 236
       },
       {
         "name": "DIARREIA",
         "type": "select_one",
         "isSessionVariable": false,
-        "_row_num": 228
+        "_row_num": 237
       },
       {
         "name": "DIARREIATE",
         "type": "text",
         "isSessionVariable": false,
-        "_row_num": 229
+        "_row_num": 238
       },
       {
         "name": "DIARREIATI",
         "type": "text",
         "isSessionVariable": false,
-        "_row_num": 230
+        "_row_num": 239
       },
       {
         "name": "DIASDEVIDA",
         "type": "integer",
         "isSessionVariable": false,
-        "_row_num": 231
+        "_row_num": 240
       },
       {
         "name": "DORMTENDA",
         "type": "select_one",
         "isSessionVariable": false,
-        "_row_num": 232
+        "_row_num": 241
       },
       {
         "name": "DORMTENTI",
         "type": "select_one",
         "isSessionVariable": false,
-        "_row_num": 233
+        "_row_num": 242
       },
       {
         "name": "FEBAMAREL_FAL",
         "type": "select_one",
         "isSessionVariable": false,
-        "_row_num": 234
+        "_row_num": 243
       },
       {
         "name": "FEBRE",
         "type": "select_one",
         "isSessionVariable": false,
-        "_row_num": 235
+        "_row_num": 244
       },
       {
         "name": "FEBRETE",
         "type": "text",
         "isSessionVariable": false,
-        "_row_num": 236
+        "_row_num": 245
       },
       {
         "name": "HISTORIA1",
         "type": "text",
         "isSessionVariable": false,
-        "_row_num": 237
+        "_row_num": 246
       },
       {
         "name": "HISTORIA2",
         "type": "text",
         "isSessionVariable": false,
-        "_row_num": 238
+        "_row_num": 247
       },
       {
         "name": "MAMAVA",
         "type": "select_one",
         "isSessionVariable": false,
-        "_row_num": 239
+        "_row_num": 248
       },
       {
         "name": "MORT_ANTE",
         "type": "select_one",
         "isSessionVariable": false,
-        "_row_num": 240
+        "_row_num": 249
       },
       {
         "name": "NASCVIVA",
         "type": "select_one",
         "isSessionVariable": false,
-        "_row_num": 241
+        "_row_num": 250
       },
       {
         "name": "OBSFAL",
         "type": "text",
         "isSessionVariable": false,
-        "_row_num": 242
+        "_row_num": 251
       },
       {
         "name": "ONDEFALEC",
         "type": "select_one",
         "isSessionVariable": false,
-        "_row_num": 243
+        "_row_num": 252
       },
       {
         "name": "ONDEFALO",
         "type": "text",
         "isSessionVariable": false,
-        "_row_num": 244
+        "_row_num": 253
       },
       {
         "name": "OUTRO1DATA",
         "type": "adate",
         "isSessionVariable": false,
-        "_row_num": 245
+        "_row_num": 254
       },
       {
         "name": "OUTRO1TIPO",
         "type": "text",
         "isSessionVariable": false,
-        "_row_num": 246
+        "_row_num": 255
       },
       {
         "name": "OUTRO2DATA",
         "type": "adate",
         "isSessionVariable": false,
-        "_row_num": 247
+        "_row_num": 256
       },
       {
         "name": "OUTRO2TIPO",
         "type": "text",
         "isSessionVariable": false,
-        "_row_num": 248
+        "_row_num": 257
       },
       {
         "name": "PALIDEZ",
         "type": "select_one",
         "isSessionVariable": false,
-        "_row_num": 249
+        "_row_num": 258
       },
       {
         "name": "PALIDEZTE",
         "type": "text",
         "isSessionVariable": false,
-        "_row_num": 250
+        "_row_num": 259
       },
       {
         "name": "PENQUANTO",
         "type": "integer",
         "isSessionVariable": false,
-        "_row_num": 251
+        "_row_num": 260
       },
       {
         "name": "PENTA_FAL",
         "type": "select_one",
         "isSessionVariable": false,
-        "_row_num": 252
+        "_row_num": 261
       },
       {
         "name": "POLIO_FAL",
         "type": "select_one",
         "isSessionVariable": false,
-        "_row_num": 253
+        "_row_num": 262
       },
       {
         "name": "POLIONAS_FAL",
         "type": "select_one",
         "isSessionVariable": false,
-        "_row_num": 254
+        "_row_num": 263
       },
       {
         "name": "POLQUANTO",
         "type": "integer",
         "isSessionVariable": false,
-        "_row_num": 255
+        "_row_num": 264
       },
       {
         "name": "QUALDIAGN",
         "type": "text",
         "isSessionVariable": false,
-        "_row_num": 256
+        "_row_num": 265
       },
       {
         "name": "RESP",
         "type": "select_one",
         "isSessionVariable": false,
-        "_row_num": 257
+        "_row_num": 266
       },
       {
         "name": "RESPTE",
         "type": "text",
         "isSessionVariable": false,
-        "_row_num": 258
+        "_row_num": 267
       },
       {
         "name": "SARAMPO_FAL",
         "type": "select_one",
         "isSessionVariable": false,
-        "_row_num": 259
+        "_row_num": 268
       },
       {
         "name": "SARQUANTO",
         "type": "integer",
         "isSessionVariable": false,
-        "_row_num": 260
+        "_row_num": 269
       },
       {
         "name": "TEVSAR",
         "type": "select_one",
         "isSessionVariable": false,
-        "_row_num": 261
+        "_row_num": 270
       },
       {
         "name": "TEVSARTE",
         "type": "text",
         "isSessionVariable": false,
-        "_row_num": 262
+        "_row_num": 271
       },
       {
         "name": "PREGID",
         "type": "text",
         "isSessionVariable": false,
         "comment": "GRAVIDA",
-        "_row_num": 264
+        "_row_num": 273
       },
       {
         "name": "REGID",
         "type": "text",
         "isSessionVariable": false,
-        "_row_num": 265
+        "_row_num": 274
       },
       {
         "name": "REGDIA",
         "type": "adate",
         "isSessionVariable": false,
-        "_row_num": 266
+        "_row_num": 275
       },
       {
         "name": "ASSISTENTE",
         "type": "text",
         "isSessionVariable": false,
         "comment": "tablet",
-        "_row_num": 268
+        "_row_num": 277
       },
       {
         "name": "CONT",
         "type": "adate",
         "isSessionVariable": false,
-        "_row_num": 269
+        "_row_num": 278
       },
       {
         "name": "lastvisitdate",
         "type": "adate",
         "isSessionVariable": true,
-        "_row_num": 270
+        "_row_num": 279
       },
       {
         "name": "pres",
         "type": "integer",
         "isSessionVariable": true,
-        "_row_num": 271
+        "_row_num": 280
       },
       {
         "name": "VISITTYPE",
         "type": "text",
         "isSessionVariable": false,
-        "_row_num": 272
+        "_row_num": 281
       }
     ]
   },
@@ -14365,8 +14716,8 @@
           "display": {
             "title": {
               "text": {
-                "english": "Don't know",
-                "default": "Não sabe"
+                "english": "Don't know the date",
+                "default": "Não sabe a data"
               }
             }
           },
@@ -14429,6 +14780,21 @@
           "_row_num": 90
         }
       ],
+      "dontknowage": [
+        {
+          "choice_list_name": "dontknowage",
+          "data_value": "99",
+          "display": {
+            "title": {
+              "text": {
+                "english": "Don't know the age",
+                "default": "Não sabe a idade"
+              }
+            }
+          },
+          "_row_num": 91
+        }
+      ],
       "tecto": [
         {
           "choice_list_name": "tecto",
@@ -14441,7 +14807,7 @@
               }
             }
           },
-          "_row_num": 91
+          "_row_num": 92
         },
         {
           "choice_list_name": "tecto",
@@ -14454,7 +14820,7 @@
               }
             }
           },
-          "_row_num": 92
+          "_row_num": 93
         },
         {
           "choice_list_name": "tecto",
@@ -14467,7 +14833,7 @@
               }
             }
           },
-          "_row_num": 93
+          "_row_num": 94
         },
         {
           "choice_list_name": "tecto",
@@ -14480,7 +14846,7 @@
               }
             }
           },
-          "_row_num": 94
+          "_row_num": 95
         },
         {
           "choice_list_name": "tecto",
@@ -14493,7 +14859,7 @@
               }
             }
           },
-          "_row_num": 95
+          "_row_num": 96
         }
       ],
       "toilet": [
@@ -14508,7 +14874,7 @@
               }
             }
           },
-          "_row_num": 96
+          "_row_num": 97
         },
         {
           "choice_list_name": "toilet",
@@ -14521,7 +14887,7 @@
               }
             }
           },
-          "_row_num": 97
+          "_row_num": 98
         },
         {
           "choice_list_name": "toilet",
@@ -14534,7 +14900,7 @@
               }
             }
           },
-          "_row_num": 98
+          "_row_num": 99
         },
         {
           "choice_list_name": "toilet",
@@ -14547,7 +14913,48 @@
               }
             }
           },
-          "_row_num": 99
+          "_row_num": 100
+        }
+      ],
+      "campinf": [
+        {
+          "choice_list_name": "campinf",
+          "data_value": "1",
+          "display": {
+            "title": {
+              "text": {
+                "english": "Mother",
+                "default": "Mãe"
+              }
+            }
+          },
+          "_row_num": 101
+        },
+        {
+          "choice_list_name": "campinf",
+          "data_value": "2",
+          "display": {
+            "title": {
+              "text": {
+                "english": "Card",
+                "default": "Cartão"
+              }
+            }
+          },
+          "_row_num": 102
+        },
+        {
+          "choice_list_name": "campinf",
+          "data_value": "3",
+          "display": {
+            "title": {
+              "text": {
+                "english": "Other",
+                "default": "Outra"
+              }
+            }
+          },
+          "_row_num": 103
         }
       ]
     },
@@ -16056,7 +16463,7 @@
         "type": "integer",
         "_defn": [
           {
-            "_row_num": 128,
+            "_row_num": 146,
             "section_name": "visit"
           },
           {
@@ -16068,6 +16475,70 @@
         "comment": "visit",
         "elementKey": "BRACOCRI"
       },
+      "CAMPCODE": {
+        "type": "string",
+        "valuesList": "YesNoU",
+        "_defn": [
+          {
+            "_row_num": 183,
+            "section_name": "visit"
+          },
+          {
+            "_row_num": 70,
+            "section_name": "model"
+          }
+        ],
+        "isSessionVariable": false,
+        "elementKey": "CAMPCODE"
+      },
+      "CAMPEST": {
+        "type": "string",
+        "valuesList": "YesNoU",
+        "_defn": [
+          {
+            "_row_num": 184,
+            "section_name": "visit"
+          },
+          {
+            "_row_num": 71,
+            "section_name": "model"
+          }
+        ],
+        "isSessionVariable": false,
+        "elementKey": "CAMPEST"
+      },
+      "CAMPINF": {
+        "type": "string",
+        "valuesList": "campinf",
+        "_defn": [
+          {
+            "_row_num": 185,
+            "section_name": "visit"
+          },
+          {
+            "_row_num": 72,
+            "section_name": "model"
+          }
+        ],
+        "isSessionVariable": false,
+        "elementKey": "CAMPINF"
+      },
+      "CAMPNOVO": {
+        "type": "string",
+        "valuesList": "YesNo",
+        "_defn": [
+          {
+            "_row_num": 178,
+            "section_name": "visit"
+          },
+          {
+            "_row_num": 73,
+            "section_name": "model"
+          }
+        ],
+        "isSessionVariable": false,
+        "elementKey": "CAMPNOVO"
+      },
       "CARTVAC": {
         "type": "string",
         "valuesList": "vcard",
@@ -16077,7 +16548,7 @@
             "section_name": "visit"
           },
           {
-            "_row_num": 70,
+            "_row_num": 74,
             "section_name": "model"
           }
         ],
@@ -16092,7 +16563,7 @@
             "section_name": "visit"
           },
           {
-            "_row_num": 71,
+            "_row_num": 75,
             "section_name": "model"
           }
         ],
@@ -16103,11 +16574,11 @@
         "type": "integer",
         "_defn": [
           {
-            "_row_num": 139,
+            "_row_num": 157,
             "section_name": "visit"
           },
           {
-            "_row_num": 72,
+            "_row_num": 76,
             "section_name": "model"
           }
         ],
@@ -16119,11 +16590,11 @@
         "valuesList": "Scar",
         "_defn": [
           {
-            "_row_num": 133,
+            "_row_num": 151,
             "section_name": "visit"
           },
           {
-            "_row_num": 73,
+            "_row_num": 77,
             "section_name": "model"
           }
         ],
@@ -16134,11 +16605,11 @@
         "type": "integer",
         "_defn": [
           {
-            "_row_num": 138,
+            "_row_num": 156,
             "section_name": "visit"
           },
           {
-            "_row_num": 74,
+            "_row_num": 78,
             "section_name": "model"
           }
         ],
@@ -16154,7 +16625,7 @@
             "section_name": "visit"
           },
           {
-            "_row_num": 75,
+            "_row_num": 79,
             "section_name": "model"
           }
         ],
@@ -16174,7 +16645,7 @@
             "section_name": "visit"
           },
           {
-            "_row_num": 76,
+            "_row_num": 80,
             "section_name": "model"
           }
         ],
@@ -16194,7 +16665,7 @@
             "section_name": "visit"
           },
           {
-            "_row_num": 77,
+            "_row_num": 81,
             "section_name": "model"
           }
         ],
@@ -16214,7 +16685,7 @@
             "section_name": "visit"
           },
           {
-            "_row_num": 78,
+            "_row_num": 82,
             "section_name": "model"
           }
         ],
@@ -16234,7 +16705,7 @@
             "section_name": "visit"
           },
           {
-            "_row_num": 79,
+            "_row_num": 83,
             "section_name": "model"
           }
         ],
@@ -16254,7 +16725,7 @@
             "section_name": "visit"
           },
           {
-            "_row_num": 80,
+            "_row_num": 84,
             "section_name": "model"
           }
         ],
@@ -16274,12 +16745,102 @@
             "section_name": "visit"
           },
           {
-            "_row_num": 81,
+            "_row_num": 85,
             "section_name": "model"
           }
         ],
         "isSessionVariable": true,
         "elementKey": "dasepns"
+      },
+      "DATAINTREG": {
+        "prompt_type_name": "adate",
+        "type": "string",
+        "elementType": "string",
+        "comment": "Save only mm.dd.yyyy with support for ?? at all positions",
+        "_row_num": 2,
+        "__rowNum__": 1,
+        "_defn": [
+          {
+            "_row_num": 116,
+            "section_name": "visit"
+          },
+          {
+            "_row_num": 86,
+            "section_name": "model"
+          }
+        ],
+        "isSessionVariable": false,
+        "elementKey": "DATAINTREG"
+      },
+      "DATAINTREGA": {
+        "type": "integer",
+        "_defn": [
+          {
+            "_row_num": 120,
+            "section_name": "visit"
+          },
+          {
+            "_row_num": 87,
+            "section_name": "model"
+          }
+        ],
+        "isSessionVariable": false,
+        "elementKey": "DATAINTREGA"
+      },
+      "dataintregamns": {
+        "type": "array",
+        "items": {
+          "type": "string",
+          "elementKey": "dataintregamns_items"
+        },
+        "valuesList": "dontknowage",
+        "_defn": [
+          {
+            "_row_num": 122,
+            "section_name": "visit"
+          },
+          {
+            "_row_num": 88,
+            "section_name": "model"
+          }
+        ],
+        "isSessionVariable": true,
+        "elementKey": "dataintregamns"
+      },
+      "DATAINTREGM": {
+        "type": "integer",
+        "_defn": [
+          {
+            "_row_num": 121,
+            "section_name": "visit"
+          },
+          {
+            "_row_num": 89,
+            "section_name": "model"
+          }
+        ],
+        "isSessionVariable": false,
+        "elementKey": "DATAINTREGM"
+      },
+      "dataintregns": {
+        "type": "array",
+        "items": {
+          "type": "string",
+          "elementKey": "dataintregns_items"
+        },
+        "valuesList": "dontknowdate",
+        "_defn": [
+          {
+            "_row_num": 117,
+            "section_name": "visit"
+          },
+          {
+            "_row_num": 90,
+            "section_name": "model"
+          }
+        ],
+        "isSessionVariable": true,
+        "elementKey": "dataintregns"
       },
       "EXITDATA": {
         "prompt_type_name": "adate",
@@ -16294,7 +16855,7 @@
             "section_name": "visit"
           },
           {
-            "_row_num": 82,
+            "_row_num": 91,
             "section_name": "model"
           }
         ],
@@ -16309,7 +16870,7 @@
             "section_name": "visit"
           },
           {
-            "_row_num": 83,
+            "_row_num": 92,
             "section_name": "model"
           }
         ],
@@ -16325,7 +16886,7 @@
             "section_name": "visit"
           },
           {
-            "_row_num": 84,
+            "_row_num": 93,
             "section_name": "model"
           }
         ],
@@ -16340,7 +16901,7 @@
             "section_name": "visit"
           },
           {
-            "_row_num": 85,
+            "_row_num": 94,
             "section_name": "model"
           }
         ],
@@ -16355,7 +16916,7 @@
             "section_name": "visit"
           },
           {
-            "_row_num": 86,
+            "_row_num": 95,
             "section_name": "model"
           }
         ],
@@ -16370,7 +16931,7 @@
             "section_name": "visit"
           },
           {
-            "_row_num": 87,
+            "_row_num": 96,
             "section_name": "model"
           }
         ],
@@ -16382,11 +16943,11 @@
         "valuesList": "YesNoU",
         "_defn": [
           {
-            "_row_num": 144,
+            "_row_num": 162,
             "section_name": "visit"
           },
           {
-            "_row_num": 88,
+            "_row_num": 97,
             "section_name": "model"
           }
         ],
@@ -16398,11 +16959,11 @@
         "valuesList": "YesNoU",
         "_defn": [
           {
-            "_row_num": 146,
+            "_row_num": 164,
             "section_name": "visit"
           },
           {
-            "_row_num": 89,
+            "_row_num": 98,
             "section_name": "model"
           }
         ],
@@ -16418,7 +16979,7 @@
             "section_name": "visit"
           },
           {
-            "_row_num": 90,
+            "_row_num": 99,
             "section_name": "model"
           }
         ],
@@ -16429,11 +16990,11 @@
         "type": "string",
         "_defn": [
           {
-            "_row_num": 158,
+            "_row_num": 191,
             "section_name": "visit"
           },
           {
-            "_row_num": 91,
+            "_row_num": 100,
             "section_name": "model"
           }
         ],
@@ -16444,7 +17005,7 @@
         "type": "integer",
         "_defn": [
           {
-            "_row_num": 92,
+            "_row_num": 101,
             "section_name": "model"
           }
         ],
@@ -16460,7 +17021,7 @@
             "section_name": "visit"
           },
           {
-            "_row_num": 93,
+            "_row_num": 102,
             "section_name": "model"
           }
         ],
@@ -16472,11 +17033,11 @@
         "valuesList": "YesNoU",
         "_defn": [
           {
-            "_row_num": 154,
+            "_row_num": 172,
             "section_name": "visit"
           },
           {
-            "_row_num": 94,
+            "_row_num": 103,
             "section_name": "model"
           }
         ],
@@ -16492,7 +17053,7 @@
             "section_name": "visit"
           },
           {
-            "_row_num": 95,
+            "_row_num": 104,
             "section_name": "model"
           }
         ],
@@ -16508,7 +17069,7 @@
             "section_name": "visit"
           },
           {
-            "_row_num": 96,
+            "_row_num": 105,
             "section_name": "model"
           }
         ],
@@ -16524,7 +17085,7 @@
             "section_name": "visit"
           },
           {
-            "_row_num": 97,
+            "_row_num": 106,
             "section_name": "model"
           }
         ],
@@ -16540,7 +17101,7 @@
             "section_name": "visit"
           },
           {
-            "_row_num": 98,
+            "_row_num": 107,
             "section_name": "model"
           }
         ],
@@ -16556,7 +17117,7 @@
             "section_name": "visit"
           },
           {
-            "_row_num": 99,
+            "_row_num": 108,
             "section_name": "model"
           }
         ],
@@ -16572,7 +17133,7 @@
             "section_name": "visit"
           },
           {
-            "_row_num": 100,
+            "_row_num": 109,
             "section_name": "model"
           }
         ],
@@ -16588,7 +17149,7 @@
             "section_name": "visit"
           },
           {
-            "_row_num": 101,
+            "_row_num": 110,
             "section_name": "model"
           }
         ],
@@ -16608,7 +17169,7 @@
             "section_name": "control"
           },
           {
-            "_row_num": 103,
+            "_row_num": 112,
             "section_name": "model"
           }
         ],
@@ -16628,7 +17189,7 @@
             "section_name": "control"
           },
           {
-            "_row_num": 104,
+            "_row_num": 113,
             "section_name": "model"
           }
         ],
@@ -16643,7 +17204,7 @@
             "section_name": "control"
           },
           {
-            "_row_num": 105,
+            "_row_num": 114,
             "section_name": "model"
           }
         ],
@@ -16658,7 +17219,7 @@
             "section_name": "control"
           },
           {
-            "_row_num": 106,
+            "_row_num": 115,
             "section_name": "model"
           }
         ],
@@ -16674,7 +17235,7 @@
             "section_name": "control"
           },
           {
-            "_row_num": 107,
+            "_row_num": 116,
             "section_name": "model"
           }
         ],
@@ -16690,7 +17251,7 @@
             "section_name": "control"
           },
           {
-            "_row_num": 108,
+            "_row_num": 117,
             "section_name": "model"
           }
         ],
@@ -16706,7 +17267,7 @@
             "section_name": "control"
           },
           {
-            "_row_num": 109,
+            "_row_num": 118,
             "section_name": "model"
           }
         ],
@@ -16722,7 +17283,7 @@
             "section_name": "control"
           },
           {
-            "_row_num": 110,
+            "_row_num": 119,
             "section_name": "model"
           }
         ],
@@ -16738,7 +17299,7 @@
             "section_name": "control"
           },
           {
-            "_row_num": 111,
+            "_row_num": 120,
             "section_name": "model"
           }
         ],
@@ -16754,7 +17315,7 @@
             "section_name": "control"
           },
           {
-            "_row_num": 112,
+            "_row_num": 121,
             "section_name": "model"
           }
         ],
@@ -16769,7 +17330,7 @@
             "section_name": "control"
           },
           {
-            "_row_num": 113,
+            "_row_num": 122,
             "section_name": "model"
           }
         ],
@@ -16784,7 +17345,7 @@
             "section_name": "control"
           },
           {
-            "_row_num": 114,
+            "_row_num": 123,
             "section_name": "model"
           }
         ],
@@ -16800,7 +17361,7 @@
             "section_name": "control"
           },
           {
-            "_row_num": 115,
+            "_row_num": 124,
             "section_name": "model"
           }
         ],
@@ -16816,7 +17377,7 @@
             "section_name": "control"
           },
           {
-            "_row_num": 116,
+            "_row_num": 125,
             "section_name": "model"
           }
         ],
@@ -16832,7 +17393,7 @@
             "section_name": "control"
           },
           {
-            "_row_num": 117,
+            "_row_num": 126,
             "section_name": "model"
           }
         ],
@@ -16852,7 +17413,7 @@
             "section_name": "control"
           },
           {
-            "_row_num": 118,
+            "_row_num": 127,
             "section_name": "model"
           }
         ],
@@ -16868,7 +17429,7 @@
             "section_name": "control"
           },
           {
-            "_row_num": 119,
+            "_row_num": 128,
             "section_name": "model"
           }
         ],
@@ -16884,7 +17445,7 @@
             "section_name": "control"
           },
           {
-            "_row_num": 120,
+            "_row_num": 129,
             "section_name": "model"
           }
         ],
@@ -16899,7 +17460,7 @@
             "section_name": "control"
           },
           {
-            "_row_num": 121,
+            "_row_num": 130,
             "section_name": "model"
           }
         ],
@@ -16914,7 +17475,7 @@
             "section_name": "control"
           },
           {
-            "_row_num": 122,
+            "_row_num": 131,
             "section_name": "model"
           }
         ],
@@ -16930,7 +17491,7 @@
             "section_name": "control"
           },
           {
-            "_row_num": 123,
+            "_row_num": 132,
             "section_name": "model"
           }
         ],
@@ -16946,7 +17507,7 @@
             "section_name": "control"
           },
           {
-            "_row_num": 124,
+            "_row_num": 133,
             "section_name": "model"
           }
         ],
@@ -16962,7 +17523,7 @@
             "section_name": "vac"
           },
           {
-            "_row_num": 126,
+            "_row_num": 135,
             "section_name": "model"
           }
         ],
@@ -16979,7 +17540,7 @@
             "section_name": "vac"
           },
           {
-            "_row_num": 127,
+            "_row_num": 136,
             "section_name": "model"
           }
         ],
@@ -16995,7 +17556,7 @@
             "section_name": "vac"
           },
           {
-            "_row_num": 128,
+            "_row_num": 137,
             "section_name": "model"
           }
         ],
@@ -17011,7 +17572,7 @@
             "section_name": "vac"
           },
           {
-            "_row_num": 129,
+            "_row_num": 138,
             "section_name": "model"
           }
         ],
@@ -17027,7 +17588,7 @@
             "section_name": "vac"
           },
           {
-            "_row_num": 130,
+            "_row_num": 139,
             "section_name": "model"
           }
         ],
@@ -17051,7 +17612,7 @@
             "section_name": "vac"
           },
           {
-            "_row_num": 131,
+            "_row_num": 140,
             "section_name": "model"
           }
         ],
@@ -17067,7 +17628,7 @@
             "section_name": "vac"
           },
           {
-            "_row_num": 132,
+            "_row_num": 141,
             "section_name": "model"
           }
         ],
@@ -17091,7 +17652,7 @@
             "section_name": "vac"
           },
           {
-            "_row_num": 133,
+            "_row_num": 142,
             "section_name": "model"
           }
         ],
@@ -17115,7 +17676,7 @@
             "section_name": "vac"
           },
           {
-            "_row_num": 134,
+            "_row_num": 143,
             "section_name": "model"
           }
         ],
@@ -17131,7 +17692,7 @@
             "section_name": "vac"
           },
           {
-            "_row_num": 135,
+            "_row_num": 144,
             "section_name": "model"
           }
         ],
@@ -17155,7 +17716,7 @@
             "section_name": "vac"
           },
           {
-            "_row_num": 136,
+            "_row_num": 145,
             "section_name": "model"
           }
         ],
@@ -17169,7 +17730,7 @@
             "section_name": "vac"
           },
           {
-            "_row_num": 137,
+            "_row_num": 146,
             "section_name": "model"
           }
         ],
@@ -17188,7 +17749,7 @@
             "section_name": "vac"
           },
           {
-            "_row_num": 138,
+            "_row_num": 147,
             "section_name": "model"
           }
         ],
@@ -17203,7 +17764,7 @@
             "section_name": "vac"
           },
           {
-            "_row_num": 139,
+            "_row_num": 148,
             "section_name": "model"
           }
         ],
@@ -17222,7 +17783,7 @@
             "section_name": "vac"
           },
           {
-            "_row_num": 140,
+            "_row_num": 149,
             "section_name": "model"
           }
         ],
@@ -17245,7 +17806,7 @@
             "section_name": "vac"
           },
           {
-            "_row_num": 141,
+            "_row_num": 150,
             "section_name": "model"
           }
         ],
@@ -17260,7 +17821,7 @@
             "section_name": "vac"
           },
           {
-            "_row_num": 142,
+            "_row_num": 151,
             "section_name": "model"
           }
         ],
@@ -17279,7 +17840,7 @@
             "section_name": "vac"
           },
           {
-            "_row_num": 143,
+            "_row_num": 152,
             "section_name": "model"
           }
         ],
@@ -17302,7 +17863,7 @@
             "section_name": "vac"
           },
           {
-            "_row_num": 144,
+            "_row_num": 153,
             "section_name": "model"
           }
         ],
@@ -17317,7 +17878,7 @@
             "section_name": "vac"
           },
           {
-            "_row_num": 145,
+            "_row_num": 154,
             "section_name": "model"
           }
         ],
@@ -17336,7 +17897,7 @@
             "section_name": "vac"
           },
           {
-            "_row_num": 146,
+            "_row_num": 155,
             "section_name": "model"
           }
         ],
@@ -17359,7 +17920,7 @@
             "section_name": "vac"
           },
           {
-            "_row_num": 147,
+            "_row_num": 156,
             "section_name": "model"
           }
         ],
@@ -17374,7 +17935,7 @@
             "section_name": "vac"
           },
           {
-            "_row_num": 148,
+            "_row_num": 157,
             "section_name": "model"
           }
         ],
@@ -17389,7 +17950,7 @@
             "section_name": "vac"
           },
           {
-            "_row_num": 149,
+            "_row_num": 158,
             "section_name": "model"
           }
         ],
@@ -17408,7 +17969,7 @@
             "section_name": "vac"
           },
           {
-            "_row_num": 150,
+            "_row_num": 159,
             "section_name": "model"
           }
         ],
@@ -17427,7 +17988,7 @@
             "section_name": "vac"
           },
           {
-            "_row_num": 151,
+            "_row_num": 160,
             "section_name": "model"
           }
         ],
@@ -17443,7 +18004,7 @@
             "section_name": "vac"
           },
           {
-            "_row_num": 152,
+            "_row_num": 161,
             "section_name": "model"
           }
         ],
@@ -17457,7 +18018,7 @@
             "section_name": "vac"
           },
           {
-            "_row_num": 153,
+            "_row_num": 162,
             "section_name": "model"
           }
         ],
@@ -17482,7 +18043,7 @@
             "section_name": "vac"
           },
           {
-            "_row_num": 154,
+            "_row_num": 163,
             "section_name": "model"
           }
         ],
@@ -17498,7 +18059,7 @@
             "section_name": "vac"
           },
           {
-            "_row_num": 155,
+            "_row_num": 164,
             "section_name": "model"
           }
         ],
@@ -17522,7 +18083,7 @@
             "section_name": "vac"
           },
           {
-            "_row_num": 156,
+            "_row_num": 165,
             "section_name": "model"
           }
         ],
@@ -17546,7 +18107,7 @@
             "section_name": "vac"
           },
           {
-            "_row_num": 157,
+            "_row_num": 166,
             "section_name": "model"
           }
         ],
@@ -17562,7 +18123,7 @@
             "section_name": "vac"
           },
           {
-            "_row_num": 158,
+            "_row_num": 167,
             "section_name": "model"
           }
         ],
@@ -17586,7 +18147,7 @@
             "section_name": "vac"
           },
           {
-            "_row_num": 159,
+            "_row_num": 168,
             "section_name": "model"
           }
         ],
@@ -17610,7 +18171,7 @@
             "section_name": "vac"
           },
           {
-            "_row_num": 160,
+            "_row_num": 169,
             "section_name": "model"
           }
         ],
@@ -17626,7 +18187,7 @@
             "section_name": "vac"
           },
           {
-            "_row_num": 161,
+            "_row_num": 170,
             "section_name": "model"
           }
         ],
@@ -17650,7 +18211,7 @@
             "section_name": "vac"
           },
           {
-            "_row_num": 162,
+            "_row_num": 171,
             "section_name": "model"
           }
         ],
@@ -17674,7 +18235,7 @@
             "section_name": "vac"
           },
           {
-            "_row_num": 163,
+            "_row_num": 172,
             "section_name": "model"
           }
         ],
@@ -17690,7 +18251,7 @@
             "section_name": "vac"
           },
           {
-            "_row_num": 164,
+            "_row_num": 173,
             "section_name": "model"
           }
         ],
@@ -17714,7 +18275,7 @@
             "section_name": "vac"
           },
           {
-            "_row_num": 165,
+            "_row_num": 174,
             "section_name": "model"
           }
         ],
@@ -17738,7 +18299,7 @@
             "section_name": "vac"
           },
           {
-            "_row_num": 166,
+            "_row_num": 175,
             "section_name": "model"
           }
         ],
@@ -17754,7 +18315,7 @@
             "section_name": "vac"
           },
           {
-            "_row_num": 167,
+            "_row_num": 176,
             "section_name": "model"
           }
         ],
@@ -17778,7 +18339,7 @@
             "section_name": "vac"
           },
           {
-            "_row_num": 168,
+            "_row_num": 177,
             "section_name": "model"
           }
         ],
@@ -17802,7 +18363,7 @@
             "section_name": "vac"
           },
           {
-            "_row_num": 169,
+            "_row_num": 178,
             "section_name": "model"
           }
         ],
@@ -17818,7 +18379,7 @@
             "section_name": "vac"
           },
           {
-            "_row_num": 170,
+            "_row_num": 179,
             "section_name": "model"
           }
         ],
@@ -17842,7 +18403,7 @@
             "section_name": "vac"
           },
           {
-            "_row_num": 171,
+            "_row_num": 180,
             "section_name": "model"
           }
         ],
@@ -17866,7 +18427,7 @@
             "section_name": "vac"
           },
           {
-            "_row_num": 172,
+            "_row_num": 181,
             "section_name": "model"
           }
         ],
@@ -17882,7 +18443,7 @@
             "section_name": "vac"
           },
           {
-            "_row_num": 173,
+            "_row_num": 182,
             "section_name": "model"
           }
         ],
@@ -17906,7 +18467,7 @@
             "section_name": "vac"
           },
           {
-            "_row_num": 174,
+            "_row_num": 183,
             "section_name": "model"
           }
         ],
@@ -17930,7 +18491,7 @@
             "section_name": "vac"
           },
           {
-            "_row_num": 175,
+            "_row_num": 184,
             "section_name": "model"
           }
         ],
@@ -17946,7 +18507,7 @@
             "section_name": "vac"
           },
           {
-            "_row_num": 176,
+            "_row_num": 185,
             "section_name": "model"
           }
         ],
@@ -17970,7 +18531,7 @@
             "section_name": "vac"
           },
           {
-            "_row_num": 177,
+            "_row_num": 186,
             "section_name": "model"
           }
         ],
@@ -17994,7 +18555,7 @@
             "section_name": "vac"
           },
           {
-            "_row_num": 178,
+            "_row_num": 187,
             "section_name": "model"
           }
         ],
@@ -18010,7 +18571,7 @@
             "section_name": "vac"
           },
           {
-            "_row_num": 179,
+            "_row_num": 188,
             "section_name": "model"
           }
         ],
@@ -18034,7 +18595,7 @@
             "section_name": "vac"
           },
           {
-            "_row_num": 180,
+            "_row_num": 189,
             "section_name": "model"
           }
         ],
@@ -18058,7 +18619,7 @@
             "section_name": "vac"
           },
           {
-            "_row_num": 181,
+            "_row_num": 190,
             "section_name": "model"
           }
         ],
@@ -18074,7 +18635,7 @@
             "section_name": "vac"
           },
           {
-            "_row_num": 182,
+            "_row_num": 191,
             "section_name": "model"
           }
         ],
@@ -18098,7 +18659,7 @@
             "section_name": "vac"
           },
           {
-            "_row_num": 183,
+            "_row_num": 192,
             "section_name": "model"
           }
         ],
@@ -18122,7 +18683,7 @@
             "section_name": "vac"
           },
           {
-            "_row_num": 184,
+            "_row_num": 193,
             "section_name": "model"
           }
         ],
@@ -18138,7 +18699,7 @@
             "section_name": "vac"
           },
           {
-            "_row_num": 185,
+            "_row_num": 194,
             "section_name": "model"
           }
         ],
@@ -18162,7 +18723,7 @@
             "section_name": "vac"
           },
           {
-            "_row_num": 186,
+            "_row_num": 195,
             "section_name": "model"
           }
         ],
@@ -18186,7 +18747,7 @@
             "section_name": "vac"
           },
           {
-            "_row_num": 187,
+            "_row_num": 196,
             "section_name": "model"
           }
         ],
@@ -18202,7 +18763,7 @@
             "section_name": "vac"
           },
           {
-            "_row_num": 188,
+            "_row_num": 197,
             "section_name": "model"
           }
         ],
@@ -18226,7 +18787,7 @@
             "section_name": "vac"
           },
           {
-            "_row_num": 189,
+            "_row_num": 198,
             "section_name": "model"
           }
         ],
@@ -18250,7 +18811,7 @@
             "section_name": "vac"
           },
           {
-            "_row_num": 190,
+            "_row_num": 199,
             "section_name": "model"
           }
         ],
@@ -18266,7 +18827,7 @@
             "section_name": "vac"
           },
           {
-            "_row_num": 191,
+            "_row_num": 200,
             "section_name": "model"
           }
         ],
@@ -18290,7 +18851,7 @@
             "section_name": "vac"
           },
           {
-            "_row_num": 192,
+            "_row_num": 201,
             "section_name": "model"
           }
         ],
@@ -18310,7 +18871,7 @@
             "section_name": "vac"
           },
           {
-            "_row_num": 193,
+            "_row_num": 202,
             "section_name": "model"
           }
         ],
@@ -18325,7 +18886,7 @@
             "section_name": "vac"
           },
           {
-            "_row_num": 194,
+            "_row_num": 203,
             "section_name": "model"
           }
         ],
@@ -18345,7 +18906,7 @@
             "section_name": "vac"
           },
           {
-            "_row_num": 195,
+            "_row_num": 204,
             "section_name": "model"
           }
         ],
@@ -18360,7 +18921,7 @@
             "section_name": "vac"
           },
           {
-            "_row_num": 196,
+            "_row_num": 205,
             "section_name": "model"
           }
         ],
@@ -18380,7 +18941,7 @@
             "section_name": "vac"
           },
           {
-            "_row_num": 197,
+            "_row_num": 206,
             "section_name": "model"
           }
         ],
@@ -18395,7 +18956,7 @@
             "section_name": "vac"
           },
           {
-            "_row_num": 198,
+            "_row_num": 207,
             "section_name": "model"
           }
         ],
@@ -18415,7 +18976,7 @@
             "section_name": "vac"
           },
           {
-            "_row_num": 199,
+            "_row_num": 208,
             "section_name": "model"
           }
         ],
@@ -18430,7 +18991,7 @@
             "section_name": "vac"
           },
           {
-            "_row_num": 200,
+            "_row_num": 209,
             "section_name": "model"
           }
         ],
@@ -18450,7 +19011,7 @@
             "section_name": "vac"
           },
           {
-            "_row_num": 201,
+            "_row_num": 210,
             "section_name": "model"
           }
         ],
@@ -18465,7 +19026,7 @@
             "section_name": "vac"
           },
           {
-            "_row_num": 202,
+            "_row_num": 211,
             "section_name": "model"
           }
         ],
@@ -18489,7 +19050,7 @@
             "section_name": "vac"
           },
           {
-            "_row_num": 203,
+            "_row_num": 212,
             "section_name": "model"
           }
         ],
@@ -18505,7 +19066,7 @@
             "section_name": "vac"
           },
           {
-            "_row_num": 204,
+            "_row_num": 213,
             "section_name": "model"
           }
         ],
@@ -18529,7 +19090,7 @@
             "section_name": "vac"
           },
           {
-            "_row_num": 205,
+            "_row_num": 214,
             "section_name": "model"
           }
         ],
@@ -18545,7 +19106,7 @@
             "section_name": "fal"
           },
           {
-            "_row_num": 207,
+            "_row_num": 216,
             "section_name": "model"
           }
         ],
@@ -18561,7 +19122,7 @@
             "section_name": "fal"
           },
           {
-            "_row_num": 208,
+            "_row_num": 217,
             "section_name": "model"
           }
         ],
@@ -18577,7 +19138,7 @@
             "section_name": "fal"
           },
           {
-            "_row_num": 209,
+            "_row_num": 218,
             "section_name": "model"
           }
         ],
@@ -18592,7 +19153,7 @@
             "section_name": "fal"
           },
           {
-            "_row_num": 210,
+            "_row_num": 219,
             "section_name": "model"
           }
         ],
@@ -18607,7 +19168,7 @@
             "section_name": "fal"
           },
           {
-            "_row_num": 211,
+            "_row_num": 220,
             "section_name": "model"
           }
         ],
@@ -18623,7 +19184,7 @@
             "section_name": "fal"
           },
           {
-            "_row_num": 212,
+            "_row_num": 221,
             "section_name": "model"
           }
         ],
@@ -18639,7 +19200,7 @@
             "section_name": "fal"
           },
           {
-            "_row_num": 213,
+            "_row_num": 222,
             "section_name": "model"
           }
         ],
@@ -18655,7 +19216,7 @@
             "section_name": "fal"
           },
           {
-            "_row_num": 214,
+            "_row_num": 223,
             "section_name": "model"
           }
         ],
@@ -18670,7 +19231,7 @@
             "section_name": "fal"
           },
           {
-            "_row_num": 215,
+            "_row_num": 224,
             "section_name": "model"
           }
         ],
@@ -18686,7 +19247,7 @@
             "section_name": "fal"
           },
           {
-            "_row_num": 216,
+            "_row_num": 225,
             "section_name": "model"
           }
         ],
@@ -18702,7 +19263,7 @@
             "section_name": "fal"
           },
           {
-            "_row_num": 217,
+            "_row_num": 226,
             "section_name": "model"
           }
         ],
@@ -18718,7 +19279,7 @@
             "section_name": "fal"
           },
           {
-            "_row_num": 218,
+            "_row_num": 227,
             "section_name": "model"
           }
         ],
@@ -18733,7 +19294,7 @@
             "section_name": "fal"
           },
           {
-            "_row_num": 219,
+            "_row_num": 228,
             "section_name": "model"
           }
         ],
@@ -18749,7 +19310,7 @@
             "section_name": "fal"
           },
           {
-            "_row_num": 220,
+            "_row_num": 229,
             "section_name": "model"
           }
         ],
@@ -18765,7 +19326,7 @@
             "section_name": "fal"
           },
           {
-            "_row_num": 221,
+            "_row_num": 230,
             "section_name": "model"
           }
         ],
@@ -18780,7 +19341,7 @@
             "section_name": "fal"
           },
           {
-            "_row_num": 222,
+            "_row_num": 231,
             "section_name": "model"
           }
         ],
@@ -18796,7 +19357,7 @@
             "section_name": "fal"
           },
           {
-            "_row_num": 223,
+            "_row_num": 232,
             "section_name": "model"
           }
         ],
@@ -18811,7 +19372,7 @@
             "section_name": "fal"
           },
           {
-            "_row_num": 224,
+            "_row_num": 233,
             "section_name": "model"
           }
         ],
@@ -18827,7 +19388,7 @@
             "section_name": "fal"
           },
           {
-            "_row_num": 225,
+            "_row_num": 234,
             "section_name": "model"
           }
         ],
@@ -18842,7 +19403,7 @@
             "section_name": "fal"
           },
           {
-            "_row_num": 226,
+            "_row_num": 235,
             "section_name": "model"
           }
         ],
@@ -18858,7 +19419,7 @@
             "section_name": "fal"
           },
           {
-            "_row_num": 227,
+            "_row_num": 236,
             "section_name": "model"
           }
         ],
@@ -18874,7 +19435,7 @@
             "section_name": "fal"
           },
           {
-            "_row_num": 228,
+            "_row_num": 237,
             "section_name": "model"
           }
         ],
@@ -18889,7 +19450,7 @@
             "section_name": "fal"
           },
           {
-            "_row_num": 229,
+            "_row_num": 238,
             "section_name": "model"
           }
         ],
@@ -18904,7 +19465,7 @@
             "section_name": "fal"
           },
           {
-            "_row_num": 230,
+            "_row_num": 239,
             "section_name": "model"
           }
         ],
@@ -18919,7 +19480,7 @@
             "section_name": "fal"
           },
           {
-            "_row_num": 231,
+            "_row_num": 240,
             "section_name": "model"
           }
         ],
@@ -18935,7 +19496,7 @@
             "section_name": "fal"
           },
           {
-            "_row_num": 232,
+            "_row_num": 241,
             "section_name": "model"
           }
         ],
@@ -18951,7 +19512,7 @@
             "section_name": "fal"
           },
           {
-            "_row_num": 233,
+            "_row_num": 242,
             "section_name": "model"
           }
         ],
@@ -18967,7 +19528,7 @@
             "section_name": "fal"
           },
           {
-            "_row_num": 234,
+            "_row_num": 243,
             "section_name": "model"
           }
         ],
@@ -18983,7 +19544,7 @@
             "section_name": "fal"
           },
           {
-            "_row_num": 235,
+            "_row_num": 244,
             "section_name": "model"
           }
         ],
@@ -18998,7 +19559,7 @@
             "section_name": "fal"
           },
           {
-            "_row_num": 236,
+            "_row_num": 245,
             "section_name": "model"
           }
         ],
@@ -19013,7 +19574,7 @@
             "section_name": "fal"
           },
           {
-            "_row_num": 237,
+            "_row_num": 246,
             "section_name": "model"
           }
         ],
@@ -19028,7 +19589,7 @@
             "section_name": "fal"
           },
           {
-            "_row_num": 238,
+            "_row_num": 247,
             "section_name": "model"
           }
         ],
@@ -19044,7 +19605,7 @@
             "section_name": "fal"
           },
           {
-            "_row_num": 239,
+            "_row_num": 248,
             "section_name": "model"
           }
         ],
@@ -19060,7 +19621,7 @@
             "section_name": "fal"
           },
           {
-            "_row_num": 240,
+            "_row_num": 249,
             "section_name": "model"
           }
         ],
@@ -19076,7 +19637,7 @@
             "section_name": "fal"
           },
           {
-            "_row_num": 241,
+            "_row_num": 250,
             "section_name": "model"
           }
         ],
@@ -19091,7 +19652,7 @@
             "section_name": "fal"
           },
           {
-            "_row_num": 242,
+            "_row_num": 251,
             "section_name": "model"
           }
         ],
@@ -19107,7 +19668,7 @@
             "section_name": "fal"
           },
           {
-            "_row_num": 243,
+            "_row_num": 252,
             "section_name": "model"
           }
         ],
@@ -19122,7 +19683,7 @@
             "section_name": "fal"
           },
           {
-            "_row_num": 244,
+            "_row_num": 253,
             "section_name": "model"
           }
         ],
@@ -19142,7 +19703,7 @@
             "section_name": "fal"
           },
           {
-            "_row_num": 245,
+            "_row_num": 254,
             "section_name": "model"
           }
         ],
@@ -19157,7 +19718,7 @@
             "section_name": "fal"
           },
           {
-            "_row_num": 246,
+            "_row_num": 255,
             "section_name": "model"
           }
         ],
@@ -19177,7 +19738,7 @@
             "section_name": "fal"
           },
           {
-            "_row_num": 247,
+            "_row_num": 256,
             "section_name": "model"
           }
         ],
@@ -19192,7 +19753,7 @@
             "section_name": "fal"
           },
           {
-            "_row_num": 248,
+            "_row_num": 257,
             "section_name": "model"
           }
         ],
@@ -19208,7 +19769,7 @@
             "section_name": "fal"
           },
           {
-            "_row_num": 249,
+            "_row_num": 258,
             "section_name": "model"
           }
         ],
@@ -19223,7 +19784,7 @@
             "section_name": "fal"
           },
           {
-            "_row_num": 250,
+            "_row_num": 259,
             "section_name": "model"
           }
         ],
@@ -19238,7 +19799,7 @@
             "section_name": "fal"
           },
           {
-            "_row_num": 251,
+            "_row_num": 260,
             "section_name": "model"
           }
         ],
@@ -19254,7 +19815,7 @@
             "section_name": "fal"
           },
           {
-            "_row_num": 252,
+            "_row_num": 261,
             "section_name": "model"
           }
         ],
@@ -19270,7 +19831,7 @@
             "section_name": "fal"
           },
           {
-            "_row_num": 253,
+            "_row_num": 262,
             "section_name": "model"
           }
         ],
@@ -19286,7 +19847,7 @@
             "section_name": "fal"
           },
           {
-            "_row_num": 254,
+            "_row_num": 263,
             "section_name": "model"
           }
         ],
@@ -19301,7 +19862,7 @@
             "section_name": "fal"
           },
           {
-            "_row_num": 255,
+            "_row_num": 264,
             "section_name": "model"
           }
         ],
@@ -19316,7 +19877,7 @@
             "section_name": "fal"
           },
           {
-            "_row_num": 256,
+            "_row_num": 265,
             "section_name": "model"
           }
         ],
@@ -19332,7 +19893,7 @@
             "section_name": "fal"
           },
           {
-            "_row_num": 257,
+            "_row_num": 266,
             "section_name": "model"
           }
         ],
@@ -19347,7 +19908,7 @@
             "section_name": "fal"
           },
           {
-            "_row_num": 258,
+            "_row_num": 267,
             "section_name": "model"
           }
         ],
@@ -19363,7 +19924,7 @@
             "section_name": "fal"
           },
           {
-            "_row_num": 259,
+            "_row_num": 268,
             "section_name": "model"
           }
         ],
@@ -19378,7 +19939,7 @@
             "section_name": "fal"
           },
           {
-            "_row_num": 260,
+            "_row_num": 269,
             "section_name": "model"
           }
         ],
@@ -19394,7 +19955,7 @@
             "section_name": "fal"
           },
           {
-            "_row_num": 261,
+            "_row_num": 270,
             "section_name": "model"
           }
         ],
@@ -19409,7 +19970,7 @@
             "section_name": "fal"
           },
           {
-            "_row_num": 262,
+            "_row_num": 271,
             "section_name": "model"
           }
         ],
@@ -19420,7 +19981,7 @@
         "type": "string",
         "_defn": [
           {
-            "_row_num": 264,
+            "_row_num": 273,
             "section_name": "model"
           }
         ],
@@ -19432,7 +19993,7 @@
         "type": "string",
         "_defn": [
           {
-            "_row_num": 265,
+            "_row_num": 274,
             "section_name": "model"
           }
         ],
@@ -19448,7 +20009,7 @@
         "__rowNum__": 1,
         "_defn": [
           {
-            "_row_num": 266,
+            "_row_num": 275,
             "section_name": "model"
           }
         ],
@@ -19459,7 +20020,7 @@
         "type": "string",
         "_defn": [
           {
-            "_row_num": 268,
+            "_row_num": 277,
             "section_name": "model"
           }
         ],
@@ -19476,7 +20037,7 @@
         "__rowNum__": 1,
         "_defn": [
           {
-            "_row_num": 269,
+            "_row_num": 278,
             "section_name": "model"
           }
         ],
@@ -19492,7 +20053,7 @@
         "__rowNum__": 1,
         "_defn": [
           {
-            "_row_num": 270,
+            "_row_num": 279,
             "section_name": "model"
           }
         ],
@@ -19503,7 +20064,7 @@
         "type": "integer",
         "_defn": [
           {
-            "_row_num": 271,
+            "_row_num": 280,
             "section_name": "model"
           }
         ],
@@ -19514,7 +20075,7 @@
         "type": "string",
         "_defn": [
           {
-            "_row_num": 272,
+            "_row_num": 281,
             "section_name": "model"
           }
         ],
@@ -23698,6 +24259,82 @@
             "promptIdx": 42
           },
           {
+            "type": "adate",
+            "name": "DATAINTREG",
+            "display": {
+              "prompt": {
+                "text": {
+                  "english": "Date of latest hospitalization",
+                  "default": "Data de último internamento"
+                }
+              }
+            },
+            "_row_num": 116,
+            "__rowNum__": 115,
+            "_token_type": "prompt",
+            "_type": "adate",
+            "_branch_label_enclosing_screen": "visit/_screen114",
+            "promptIdx": 43
+          },
+          {
+            "type": "select_multiple",
+            "values_list": "dontknowdate",
+            "name": "dataintregns",
+            "_row_num": 117,
+            "__rowNum__": 116,
+            "_token_type": "prompt",
+            "_type": "select_multiple",
+            "_branch_label_enclosing_screen": "visit/_screen114",
+            "promptIdx": 44
+          },
+          {
+            "type": "integer",
+            "name": "DATAINTREGA",
+            "display": {
+              "prompt": {
+                "text": {
+                  "english": "Age in years",
+                  "default": "Idade em anos"
+                }
+              }
+            },
+            "_row_num": 120,
+            "__rowNum__": 119,
+            "_token_type": "prompt",
+            "_type": "integer",
+            "_branch_label_enclosing_screen": "visit/_screen114",
+            "promptIdx": 45
+          },
+          {
+            "type": "integer",
+            "name": "DATAINTREGM",
+            "display": {
+              "prompt": {
+                "text": {
+                  "english": "Age in months",
+                  "default": "Idade em meses"
+                }
+              }
+            },
+            "_row_num": 121,
+            "__rowNum__": 120,
+            "_token_type": "prompt",
+            "_type": "integer",
+            "_branch_label_enclosing_screen": "visit/_screen114",
+            "promptIdx": 46
+          },
+          {
+            "type": "select_multiple",
+            "values_list": "dontknowage",
+            "name": "dataintregamns",
+            "_row_num": 122,
+            "__rowNum__": 121,
+            "_token_type": "prompt",
+            "_type": "select_multiple",
+            "_branch_label_enclosing_screen": "visit/_screen114",
+            "promptIdx": 47
+          },
+          {
             "type": "note",
             "display": {
               "prompt": {
@@ -23707,12 +24344,12 @@
                 }
               }
             },
-            "_row_num": 114,
-            "__rowNum__": 113,
+            "_row_num": 131,
+            "__rowNum__": 130,
             "_token_type": "prompt",
             "_type": "note",
-            "_branch_label_enclosing_screen": "visit/_screen113",
-            "promptIdx": 43
+            "_branch_label_enclosing_screen": "visit/_screen130",
+            "promptIdx": 48
           },
           {
             "type": "note",
@@ -23724,12 +24361,12 @@
                 }
               }
             },
-            "_row_num": 115,
-            "__rowNum__": 114,
+            "_row_num": 132,
+            "__rowNum__": 131,
             "_token_type": "prompt",
             "_type": "note",
-            "_branch_label_enclosing_screen": "visit/_screen113",
-            "promptIdx": 44
+            "_branch_label_enclosing_screen": "visit/_screen130",
+            "promptIdx": 49
           },
           {
             "type": "linked_table",
@@ -23737,21 +24374,21 @@
             "display": {
               "hide_delete_button": true
             },
-            "_row_num": 116,
-            "__rowNum__": 115,
+            "_row_num": 133,
+            "__rowNum__": 132,
             "_token_type": "prompt",
             "_type": "linked_table",
-            "_branch_label_enclosing_screen": "visit/_screen113",
-            "promptIdx": 45
+            "_branch_label_enclosing_screen": "visit/_screen130",
+            "promptIdx": 50
           },
           {
             "clause": "do section fal",
-            "_row_num": 120,
-            "__rowNum__": 119,
+            "_row_num": 138,
+            "__rowNum__": 137,
             "_token_type": "prompt",
             "_do_section_name": "fal",
             "_type": "_section",
-            "promptIdx": 46,
+            "promptIdx": 51,
             "display": {
               "title": {
                 "text": {
@@ -23764,12 +24401,12 @@
           },
           {
             "clause": "do section control",
-            "_row_num": 123,
-            "__rowNum__": 122,
+            "_row_num": 141,
+            "__rowNum__": 140,
             "_token_type": "prompt",
             "_do_section_name": "control",
             "_type": "_section",
-            "promptIdx": 47,
+            "promptIdx": 52,
             "display": {
               "title": {
                 "text": {
@@ -23790,12 +24427,12 @@
                 }
               }
             },
-            "_row_num": 127,
-            "__rowNum__": 126,
+            "_row_num": 145,
+            "__rowNum__": 144,
             "_token_type": "prompt",
             "_type": "note",
-            "_branch_label_enclosing_screen": "visit/_screen126",
-            "promptIdx": 48
+            "_branch_label_enclosing_screen": "visit/_screen144",
+            "promptIdx": 53
           },
           {
             "type": "integer",
@@ -23815,12 +24452,12 @@
               }
             },
             "constraint": "(data('BRACOCRI')>49 && data('BRACOCRI')<343 && data('BRACOCRI')%2 == 0) ||data('PRES') != '1'",
-            "_row_num": 128,
-            "__rowNum__": 127,
+            "_row_num": 146,
+            "__rowNum__": 145,
             "_token_type": "prompt",
             "_type": "integer",
-            "_branch_label_enclosing_screen": "visit/_screen126",
-            "promptIdx": 49
+            "_branch_label_enclosing_screen": "visit/_screen144",
+            "promptIdx": 54
           },
           {
             "type": "note",
@@ -23832,12 +24469,12 @@
                 }
               }
             },
-            "_row_num": 132,
-            "__rowNum__": 131,
+            "_row_num": 150,
+            "__rowNum__": 149,
             "_token_type": "prompt",
             "_type": "note",
-            "_branch_label_enclosing_screen": "visit/_screen131",
-            "promptIdx": 50
+            "_branch_label_enclosing_screen": "visit/_screen149",
+            "promptIdx": 55
           },
           {
             "type": "select_one",
@@ -23851,12 +24488,12 @@
                 }
               }
             },
-            "_row_num": 133,
-            "__rowNum__": 132,
+            "_row_num": 151,
+            "__rowNum__": 150,
             "_token_type": "prompt",
             "_type": "select_one",
-            "_branch_label_enclosing_screen": "visit/_screen131",
-            "promptIdx": 51
+            "_branch_label_enclosing_screen": "visit/_screen149",
+            "promptIdx": 56
           },
           {
             "type": "note",
@@ -23868,12 +24505,12 @@
                 }
               }
             },
-            "_row_num": 137,
-            "__rowNum__": 136,
+            "_row_num": 155,
+            "__rowNum__": 154,
             "_token_type": "prompt",
             "_type": "note",
-            "_branch_label_enclosing_screen": "visit/_screen136",
-            "promptIdx": 52
+            "_branch_label_enclosing_screen": "visit/_screen154",
+            "promptIdx": 57
           },
           {
             "type": "integer",
@@ -23886,12 +24523,12 @@
                 }
               }
             },
-            "_row_num": 138,
-            "__rowNum__": 137,
+            "_row_num": 156,
+            "__rowNum__": 155,
             "_token_type": "prompt",
             "_type": "integer",
-            "_branch_label_enclosing_screen": "visit/_screen136",
-            "promptIdx": 53
+            "_branch_label_enclosing_screen": "visit/_screen154",
+            "promptIdx": 58
           },
           {
             "type": "integer",
@@ -23904,12 +24541,12 @@
                 }
               }
             },
-            "_row_num": 139,
-            "__rowNum__": 138,
+            "_row_num": 157,
+            "__rowNum__": 156,
             "_token_type": "prompt",
             "_type": "integer",
-            "_branch_label_enclosing_screen": "visit/_screen136",
-            "promptIdx": 54
+            "_branch_label_enclosing_screen": "visit/_screen154",
+            "promptIdx": 59
           },
           {
             "type": "note",
@@ -23921,12 +24558,12 @@
                 }
               }
             },
-            "_row_num": 143,
-            "__rowNum__": 142,
+            "_row_num": 161,
+            "__rowNum__": 160,
             "_token_type": "prompt",
             "_type": "note",
-            "_branch_label_enclosing_screen": "visit/_screen142",
-            "promptIdx": 55
+            "_branch_label_enclosing_screen": "visit/_screen160",
+            "promptIdx": 60
           },
           {
             "type": "select_one",
@@ -23940,12 +24577,12 @@
                 }
               }
             },
-            "_row_num": 144,
-            "__rowNum__": 143,
+            "_row_num": 162,
+            "__rowNum__": 161,
             "_token_type": "prompt",
             "_type": "select_one",
-            "_branch_label_enclosing_screen": "visit/_screen142",
-            "promptIdx": 56
+            "_branch_label_enclosing_screen": "visit/_screen160",
+            "promptIdx": 61
           },
           {
             "type": "select_one",
@@ -23959,12 +24596,12 @@
                 }
               }
             },
-            "_row_num": 146,
-            "__rowNum__": 145,
+            "_row_num": 164,
+            "__rowNum__": 163,
             "_token_type": "prompt",
             "_type": "select_one",
-            "_branch_label_enclosing_screen": "visit/_screen142",
-            "promptIdx": 57
+            "_branch_label_enclosing_screen": "visit/_screen160",
+            "promptIdx": 62
           },
           {
             "type": "note",
@@ -23976,12 +24613,12 @@
                 }
               }
             },
-            "_row_num": 153,
-            "__rowNum__": 152,
+            "_row_num": 171,
+            "__rowNum__": 170,
             "_token_type": "prompt",
             "_type": "note",
-            "_branch_label_enclosing_screen": "visit/_screen152",
-            "promptIdx": 58
+            "_branch_label_enclosing_screen": "visit/_screen170",
+            "promptIdx": 63
           },
           {
             "type": "select_one",
@@ -23995,12 +24632,12 @@
                 }
               }
             },
-            "_row_num": 154,
-            "__rowNum__": 153,
+            "_row_num": 172,
+            "__rowNum__": 171,
             "_token_type": "prompt",
             "_type": "select_one",
-            "_branch_label_enclosing_screen": "visit/_screen152",
-            "promptIdx": 59
+            "_branch_label_enclosing_screen": "visit/_screen170",
+            "promptIdx": 64
           },
           {
             "type": "note",
@@ -24012,12 +24649,139 @@
                 }
               }
             },
-            "_row_num": 157,
-            "__rowNum__": 156,
+            "_row_num": 176,
+            "__rowNum__": 175,
             "_token_type": "prompt",
             "_type": "note",
-            "_branch_label_enclosing_screen": "visit/_screen156",
-            "promptIdx": 60
+            "_branch_label_enclosing_screen": "visit/_screen175",
+            "promptIdx": 65
+          },
+          {
+            "type": "note",
+            "display": {
+              "prompt": {
+                "text": {
+                  "english": "Last visit: <b>{{calculates.displayLastvisitdate}}<b>",
+                  "default": "Ultima visita: <b>{{calculates.displayLastvisitdate}}<b>"
+                }
+              }
+            },
+            "_row_num": 177,
+            "__rowNum__": 176,
+            "_token_type": "prompt",
+            "_type": "note",
+            "_branch_label_enclosing_screen": "visit/_screen175",
+            "promptIdx": 66
+          },
+          {
+            "type": "select_one",
+            "values_list": "YesNo",
+            "name": "CAMPNOVO",
+            "display": {
+              "prompt": {
+                "text": {
+                  "english": "Any campaign since last visit?",
+                  "default": "Alguma campanha desde a última visita?"
+                }
+              }
+            },
+            "_row_num": 178,
+            "__rowNum__": 177,
+            "_token_type": "prompt",
+            "_type": "select_one",
+            "_branch_label_enclosing_screen": "visit/_screen175",
+            "promptIdx": 67
+          },
+          {
+            "type": "note",
+            "display": {
+              "prompt": {
+                "text": {
+                  "english": "<b>Child visit: {{data.NOME}} - Dob: {{calculates.displayOUTDATE}}<b>",
+                  "default": "<b>Visita da crianca: {{data.NOME}} - Nas: {{calculates.displayOUTDATE}}<b>"
+                }
+              }
+            },
+            "_row_num": 182,
+            "__rowNum__": 181,
+            "_token_type": "prompt",
+            "_type": "note",
+            "_branch_label_enclosing_screen": "visit/_screen181",
+            "promptIdx": 68
+          },
+          {
+            "type": "select_one_dropdown",
+            "values_list": "YesNoU",
+            "name": "CAMPCODE",
+            "display": {
+              "prompt": {
+                "text": {
+                  "english": "Choose which campaign",
+                  "default": "Escolha qual campanha"
+                }
+              }
+            },
+            "_row_num": 183,
+            "__rowNum__": 182,
+            "_token_type": "prompt",
+            "_type": "select_one_dropdown",
+            "_branch_label_enclosing_screen": "visit/_screen181",
+            "promptIdx": 69
+          },
+          {
+            "type": "select_one_dropdown",
+            "values_list": "YesNoU",
+            "name": "CAMPEST",
+            "display": {
+              "prompt": {
+                "text": {
+                  "english": "Did the child participate?",
+                  "default": "A criança participou?"
+                }
+              }
+            },
+            "_row_num": 184,
+            "__rowNum__": 183,
+            "_token_type": "prompt",
+            "_type": "select_one_dropdown",
+            "_branch_label_enclosing_screen": "visit/_screen181",
+            "promptIdx": 70
+          },
+          {
+            "type": "select_one_dropdown",
+            "values_list": "campinf",
+            "name": "CAMPINF",
+            "display": {
+              "prompt": {
+                "text": {
+                  "english": "Informant",
+                  "default": "Infrmador"
+                }
+              }
+            },
+            "_row_num": 185,
+            "__rowNum__": 184,
+            "_token_type": "prompt",
+            "_type": "select_one_dropdown",
+            "_branch_label_enclosing_screen": "visit/_screen181",
+            "promptIdx": 71
+          },
+          {
+            "type": "note",
+            "display": {
+              "prompt": {
+                "text": {
+                  "english": "<b>Child visit: {{data.NOME}} - Dob: {{calculates.displayOUTDATE}}<b>",
+                  "default": "<b>Visita da crianca: {{data.NOME}} - Nas: {{calculates.displayOUTDATE}}<b>"
+                }
+              }
+            },
+            "_row_num": 190,
+            "__rowNum__": 189,
+            "_token_type": "prompt",
+            "_type": "note",
+            "_branch_label_enclosing_screen": "visit/_screen189",
+            "promptIdx": 72
           },
           {
             "type": "text",
@@ -24030,20 +24794,20 @@
                 }
               }
             },
-            "_row_num": 158,
-            "__rowNum__": 157,
+            "_row_num": 191,
+            "__rowNum__": 190,
             "_token_type": "prompt",
             "_type": "text",
-            "_branch_label_enclosing_screen": "visit/_screen156",
-            "promptIdx": 61
+            "_branch_label_enclosing_screen": "visit/_screen189",
+            "promptIdx": 73
           },
           {
             "_token_type": "prompt",
             "type": "contents",
             "_type": "contents",
-            "_row_num": 167,
-            "_branch_label_enclosing_screen": "visit/_screen167",
-            "promptIdx": 62
+            "_row_num": 200,
+            "_branch_label_enclosing_screen": "visit/_screen200",
+            "promptIdx": 74
           }
         ],
         "validation_tag_map": {
@@ -24052,7 +24816,7 @@
             19,
             24,
             37,
-            49
+            54
           ]
         },
         "operations": [
@@ -24317,143 +25081,51 @@
           {
             "clause": "end if",
             "_token_type": "goto_label",
-            "_branch_label": "_else118",
-            "_row_num": 118,
+            "_branch_label": "_else136",
+            "_row_num": 136,
             "operationIdx": 26
           },
           {
-            "clause": "begin screen",
+            "clause": "if",
+            "condition": "data('lastvisitdate') == null && data('PREGID') == null",
             "_row_num": 113,
             "__rowNum__": 112,
-            "_token_type": "begin_screen",
-            "_end_screen_clause": {
-              "clause": "end screen",
-              "_row_num": 117,
-              "__rowNum__": 116,
-              "_token_type": "end_screen"
-            },
-            "_screen_block": "function() {var activePromptIndicies = [];\nactivePromptIndicies.push(43);\nactivePromptIndicies.push(44);\nactivePromptIndicies.push(45);\n\nreturn activePromptIndicies;\n}\n",
+            "_token_type": "goto_label",
+            "_branch_label": "_then113",
             "operationIdx": 27
           },
           {
-            "clause": "end if",
+            "clause": "else",
             "_token_type": "goto_label",
-            "_branch_label": "_endif118",
-            "_row_num": 118,
+            "_branch_label": "_else129",
+            "_row_num": 129,
             "operationIdx": 28
           },
           {
-            "clause": "if",
-            "condition": "data('PRES') =='3'",
-            "_row_num": 119,
-            "__rowNum__": 118,
-            "_token_type": "goto_label",
-            "_branch_label": "_then119",
+            "clause": "begin screen",
+            "_row_num": 114,
+            "__rowNum__": 113,
+            "_token_type": "begin_screen",
+            "_end_screen_clause": {
+              "clause": "end screen",
+              "_row_num": 128,
+              "__rowNum__": 127,
+              "_token_type": "end_screen"
+            },
+            "_screen_block": "function() {var activePromptIndicies = [];\nactivePromptIndicies.push(43);\nactivePromptIndicies.push(44);\nif (data('dataintregns') != null) {\nassign('DATAINTREG', data('dataintregns'));\nactivePromptIndicies.push(45);\nactivePromptIndicies.push(46);\nactivePromptIndicies.push(47);\nif (data('dataintregamns') != null) {\nassign('DATAINTREGA', 99);\nassign('DATAINTREGM', 99);\n}\n}\n\nreturn activePromptIndicies;\n}\n",
             "operationIdx": 29
           },
           {
             "clause": "end if",
             "_token_type": "goto_label",
-            "_branch_label": "_else121",
-            "_row_num": 121,
+            "_branch_label": "_endif135",
+            "_row_num": 135,
             "operationIdx": 30
           },
           {
-            "clause": "do section fal",
-            "_row_num": 120,
-            "__rowNum__": 119,
-            "_token_type": "do_section",
-            "_do_section_name": "fal",
-            "operationIdx": 31
-          },
-          {
-            "clause": "end if",
-            "_token_type": "goto_label",
-            "_branch_label": "_endif121",
-            "_row_num": 121,
-            "operationIdx": 32
-          },
-          {
-            "clause": "if",
-            "condition": "data('VISITTYPE') == 'control'",
-            "_row_num": 122,
-            "__rowNum__": 121,
-            "_token_type": "goto_label",
-            "_branch_label": "_then122",
-            "operationIdx": 33
-          },
-          {
-            "clause": "end if",
-            "_token_type": "goto_label",
-            "_branch_label": "_else124",
-            "_row_num": 124,
-            "operationIdx": 34
-          },
-          {
-            "clause": "do section control",
-            "_row_num": 123,
-            "__rowNum__": 122,
-            "_token_type": "do_section",
-            "_do_section_name": "control",
-            "operationIdx": 35
-          },
-          {
-            "clause": "end if",
-            "_token_type": "goto_label",
-            "_branch_label": "_endif124",
-            "_row_num": 124,
-            "operationIdx": 36
-          },
-          {
-            "clause": "if",
-            "condition": "data('PRES') ==  '1'",
-            "_row_num": 125,
-            "__rowNum__": 124,
-            "_token_type": "goto_label",
-            "_branch_label": "_then125",
-            "operationIdx": 37
-          },
-          {
-            "clause": "end if",
-            "_token_type": "goto_label",
-            "_branch_label": "_else150",
-            "_row_num": 150,
-            "operationIdx": 38
-          },
-          {
             "clause": "begin screen",
-            "_row_num": 126,
-            "__rowNum__": 125,
-            "_token_type": "begin_screen",
-            "_end_screen_clause": {
-              "clause": "end screen",
-              "_row_num": 129,
-              "__rowNum__": 128,
-              "_token_type": "end_screen"
-            },
-            "_screen_block": "function() {var activePromptIndicies = [];\nactivePromptIndicies.push(48);\nactivePromptIndicies.push(49);\n\nreturn activePromptIndicies;\n}\n",
-            "operationIdx": 39
-          },
-          {
-            "clause": "if",
-            "condition": "data('ONEYEAR') != '1'",
             "_row_num": 130,
             "__rowNum__": 129,
-            "_token_type": "goto_label",
-            "_branch_label": "_then130",
-            "operationIdx": 40
-          },
-          {
-            "clause": "end if",
-            "_token_type": "goto_label",
-            "_branch_label": "_else149",
-            "_row_num": 149,
-            "operationIdx": 41
-          },
-          {
-            "clause": "begin screen",
-            "_row_num": 131,
-            "__rowNum__": 130,
             "_token_type": "begin_screen",
             "_end_screen_clause": {
               "clause": "end screen",
@@ -24461,145 +25133,348 @@
               "__rowNum__": 133,
               "_token_type": "end_screen"
             },
-            "_screen_block": "function() {var activePromptIndicies = [];\nactivePromptIndicies.push(50);\nactivePromptIndicies.push(51);\n\nreturn activePromptIndicies;\n}\n",
+            "_screen_block": "function() {var activePromptIndicies = [];\nactivePromptIndicies.push(48);\nactivePromptIndicies.push(49);\nactivePromptIndicies.push(50);\n\nreturn activePromptIndicies;\n}\n",
+            "operationIdx": 31
+          },
+          {
+            "clause": "end if",
+            "_token_type": "goto_label",
+            "_branch_label": "_endif136",
+            "_row_num": 136,
+            "operationIdx": 32
+          },
+          {
+            "clause": "if",
+            "condition": "data('PRES') =='3'",
+            "_row_num": 137,
+            "__rowNum__": 136,
+            "_token_type": "goto_label",
+            "_branch_label": "_then137",
+            "operationIdx": 33
+          },
+          {
+            "clause": "end if",
+            "_token_type": "goto_label",
+            "_branch_label": "_else139",
+            "_row_num": 139,
+            "operationIdx": 34
+          },
+          {
+            "clause": "do section fal",
+            "_row_num": 138,
+            "__rowNum__": 137,
+            "_token_type": "do_section",
+            "_do_section_name": "fal",
+            "operationIdx": 35
+          },
+          {
+            "clause": "end if",
+            "_token_type": "goto_label",
+            "_branch_label": "_endif139",
+            "_row_num": 139,
+            "operationIdx": 36
+          },
+          {
+            "clause": "if",
+            "condition": "data('VISITTYPE') == 'control'",
+            "_row_num": 140,
+            "__rowNum__": 139,
+            "_token_type": "goto_label",
+            "_branch_label": "_then140",
+            "operationIdx": 37
+          },
+          {
+            "clause": "end if",
+            "_token_type": "goto_label",
+            "_branch_label": "_else142",
+            "_row_num": 142,
+            "operationIdx": 38
+          },
+          {
+            "clause": "do section control",
+            "_row_num": 141,
+            "__rowNum__": 140,
+            "_token_type": "do_section",
+            "_do_section_name": "control",
+            "operationIdx": 39
+          },
+          {
+            "clause": "end if",
+            "_token_type": "goto_label",
+            "_branch_label": "_endif142",
+            "_row_num": 142,
+            "operationIdx": 40
+          },
+          {
+            "clause": "if",
+            "condition": "data('PRES') ==  '1'",
+            "_row_num": 143,
+            "__rowNum__": 142,
+            "_token_type": "goto_label",
+            "_branch_label": "_then143",
+            "operationIdx": 41
+          },
+          {
+            "clause": "end if",
+            "_token_type": "goto_label",
+            "_branch_label": "_else168",
+            "_row_num": 168,
             "operationIdx": 42
+          },
+          {
+            "clause": "begin screen",
+            "_row_num": 144,
+            "__rowNum__": 143,
+            "_token_type": "begin_screen",
+            "_end_screen_clause": {
+              "clause": "end screen",
+              "_row_num": 147,
+              "__rowNum__": 146,
+              "_token_type": "end_screen"
+            },
+            "_screen_block": "function() {var activePromptIndicies = [];\nactivePromptIndicies.push(53);\nactivePromptIndicies.push(54);\n\nreturn activePromptIndicies;\n}\n",
+            "operationIdx": 43
+          },
+          {
+            "clause": "if",
+            "condition": "data('ONEYEAR') != '1'",
+            "_row_num": 148,
+            "__rowNum__": 147,
+            "_token_type": "goto_label",
+            "_branch_label": "_then148",
+            "operationIdx": 44
+          },
+          {
+            "clause": "end if",
+            "_token_type": "goto_label",
+            "_branch_label": "_else167",
+            "_row_num": 167,
+            "operationIdx": 45
+          },
+          {
+            "clause": "begin screen",
+            "_row_num": 149,
+            "__rowNum__": 148,
+            "_token_type": "begin_screen",
+            "_end_screen_clause": {
+              "clause": "end screen",
+              "_row_num": 152,
+              "__rowNum__": 151,
+              "_token_type": "end_screen"
+            },
+            "_screen_block": "function() {var activePromptIndicies = [];\nactivePromptIndicies.push(55);\nactivePromptIndicies.push(56);\n\nreturn activePromptIndicies;\n}\n",
+            "operationIdx": 46
           },
           {
             "clause": "if",
             "condition": "data('CICBCGN') ==  '1'",
-            "_row_num": 135,
-            "__rowNum__": 134,
+            "_row_num": 153,
+            "__rowNum__": 152,
             "_token_type": "goto_label",
-            "_branch_label": "_then135",
-            "operationIdx": 43
-          },
-          {
-            "clause": "end if",
-            "_token_type": "goto_label",
-            "_branch_label": "_else141",
-            "_row_num": 141,
-            "operationIdx": 44
-          },
-          {
-            "clause": "begin screen",
-            "_row_num": 136,
-            "__rowNum__": 135,
-            "_token_type": "begin_screen",
-            "_end_screen_clause": {
-              "clause": "end screen",
-              "_row_num": 140,
-              "__rowNum__": 139,
-              "_token_type": "end_screen"
-            },
-            "_screen_block": "function() {var activePromptIndicies = [];\nactivePromptIndicies.push(52);\nactivePromptIndicies.push(53);\nactivePromptIndicies.push(54);\n\nreturn activePromptIndicies;\n}\n",
-            "operationIdx": 45
-          },
-          {
-            "clause": "end if",
-            "_token_type": "goto_label",
-            "_branch_label": "_endif141",
-            "_row_num": 141,
-            "operationIdx": 46
-          },
-          {
-            "clause": "begin screen",
-            "_row_num": 142,
-            "__rowNum__": 141,
-            "_token_type": "begin_screen",
-            "_end_screen_clause": {
-              "clause": "end screen",
-              "_row_num": 148,
-              "__rowNum__": 147,
-              "_token_type": "end_screen"
-            },
-            "_screen_block": "function() {var activePromptIndicies = [];\nactivePromptIndicies.push(55);\nactivePromptIndicies.push(56);\nif (data('LINFADENOP') == '1') {\nactivePromptIndicies.push(57);\n}\n\nreturn activePromptIndicies;\n}\n",
+            "_branch_label": "_then153",
             "operationIdx": 47
           },
           {
             "clause": "end if",
             "_token_type": "goto_label",
-            "_branch_label": "_endif149",
-            "_row_num": 149,
+            "_branch_label": "_else159",
+            "_row_num": 159,
             "operationIdx": 48
+          },
+          {
+            "clause": "begin screen",
+            "_row_num": 154,
+            "__rowNum__": 153,
+            "_token_type": "begin_screen",
+            "_end_screen_clause": {
+              "clause": "end screen",
+              "_row_num": 158,
+              "__rowNum__": 157,
+              "_token_type": "end_screen"
+            },
+            "_screen_block": "function() {var activePromptIndicies = [];\nactivePromptIndicies.push(57);\nactivePromptIndicies.push(58);\nactivePromptIndicies.push(59);\n\nreturn activePromptIndicies;\n}\n",
+            "operationIdx": 49
           },
           {
             "clause": "end if",
             "_token_type": "goto_label",
-            "_branch_label": "_endif150",
-            "_row_num": 150,
-            "operationIdx": 49
+            "_branch_label": "_endif159",
+            "_row_num": 159,
+            "operationIdx": 50
+          },
+          {
+            "clause": "begin screen",
+            "_row_num": 160,
+            "__rowNum__": 159,
+            "_token_type": "begin_screen",
+            "_end_screen_clause": {
+              "clause": "end screen",
+              "_row_num": 166,
+              "__rowNum__": 165,
+              "_token_type": "end_screen"
+            },
+            "_screen_block": "function() {var activePromptIndicies = [];\nactivePromptIndicies.push(60);\nactivePromptIndicies.push(61);\nif (data('LINFADENOP') == '1') {\nactivePromptIndicies.push(62);\n}\n\nreturn activePromptIndicies;\n}\n",
+            "operationIdx": 51
+          },
+          {
+            "clause": "end if",
+            "_token_type": "goto_label",
+            "_branch_label": "_endif167",
+            "_row_num": 167,
+            "operationIdx": 52
+          },
+          {
+            "clause": "end if",
+            "_token_type": "goto_label",
+            "_branch_label": "_endif168",
+            "_row_num": 168,
+            "operationIdx": 53
           },
           {
             "clause": "if",
             "condition": "data('PRES') !='2' && data('PRES') !='3'",
-            "_row_num": 151,
-            "__rowNum__": 150,
+            "_row_num": 169,
+            "__rowNum__": 168,
             "_token_type": "goto_label",
-            "_branch_label": "_then151",
-            "operationIdx": 50
-          },
-          {
-            "clause": "end if",
-            "_token_type": "goto_label",
-            "_branch_label": "_else166",
-            "_row_num": 166,
-            "operationIdx": 51
-          },
-          {
-            "clause": "begin screen",
-            "_row_num": 152,
-            "__rowNum__": 151,
-            "_token_type": "begin_screen",
-            "_end_screen_clause": {
-              "clause": "end screen",
-              "_row_num": 155,
-              "__rowNum__": 154,
-              "_token_type": "end_screen"
-            },
-            "_screen_block": "function() {var activePromptIndicies = [];\nactivePromptIndicies.push(58);\nactivePromptIndicies.push(59);\n\nreturn activePromptIndicies;\n}\n",
-            "operationIdx": 52
-          },
-          {
-            "clause": "begin screen",
-            "_row_num": 156,
-            "__rowNum__": 155,
-            "_token_type": "begin_screen",
-            "_end_screen_clause": {
-              "clause": "end screen",
-              "_row_num": 165,
-              "__rowNum__": 164,
-              "_token_type": "end_screen"
-            },
-            "_screen_block": "function() {var activePromptIndicies = [];\nactivePromptIndicies.push(60);\nactivePromptIndicies.push(61);\nif (adate.diffInYears(data('OUTDATE'),data('CONT'))>0) {\nassign('ONEYEAR', 1);\n}\nif (adate.ageInYears(data('OUTDATE'))>4) {\nassign('ESTADO', 5);\n}\n\nreturn activePromptIndicies;\n}\n",
-            "operationIdx": 53
-          },
-          {
-            "clause": "end if",
-            "_token_type": "goto_label",
-            "_branch_label": "_endif166",
-            "_row_num": 166,
+            "_branch_label": "_then169",
             "operationIdx": 54
+          },
+          {
+            "clause": "end if",
+            "_token_type": "goto_label",
+            "_branch_label": "_else199",
+            "_row_num": 199,
+            "operationIdx": 55
+          },
+          {
+            "clause": "begin screen",
+            "_row_num": 170,
+            "__rowNum__": 169,
+            "_token_type": "begin_screen",
+            "_end_screen_clause": {
+              "clause": "end screen",
+              "_row_num": 173,
+              "__rowNum__": 172,
+              "_token_type": "end_screen"
+            },
+            "_screen_block": "function() {var activePromptIndicies = [];\nactivePromptIndicies.push(63);\nactivePromptIndicies.push(64);\n\nreturn activePromptIndicies;\n}\n",
+            "operationIdx": 56
+          },
+          {
+            "clause": "if",
+            "condition": "(data('lastvisitdate') == null && data('PREGID') != null) || data('lastvisitdate') != null",
+            "_row_num": 174,
+            "__rowNum__": 173,
+            "_token_type": "goto_label",
+            "_branch_label": "_then174",
+            "operationIdx": 57
+          },
+          {
+            "clause": "end if",
+            "_token_type": "goto_label",
+            "_branch_label": "_else188",
+            "_row_num": 188,
+            "operationIdx": 58
+          },
+          {
+            "clause": "begin screen",
+            "_row_num": 175,
+            "__rowNum__": 174,
+            "_token_type": "begin_screen",
+            "_end_screen_clause": {
+              "clause": "end screen",
+              "_row_num": 179,
+              "__rowNum__": 178,
+              "_token_type": "end_screen"
+            },
+            "_screen_block": "function() {var activePromptIndicies = [];\nactivePromptIndicies.push(65);\nactivePromptIndicies.push(66);\nactivePromptIndicies.push(67);\n\nreturn activePromptIndicies;\n}\n",
+            "operationIdx": 59
+          },
+          {
+            "clause": "if",
+            "condition": "data('CAMPNOVO') == '1'",
+            "_row_num": 180,
+            "__rowNum__": 179,
+            "_token_type": "goto_label",
+            "_branch_label": "_then180",
+            "operationIdx": 60
+          },
+          {
+            "clause": "end if",
+            "_token_type": "goto_label",
+            "_branch_label": "_else187",
+            "_row_num": 187,
+            "operationIdx": 61
+          },
+          {
+            "clause": "begin screen",
+            "_row_num": 181,
+            "__rowNum__": 180,
+            "_token_type": "begin_screen",
+            "_end_screen_clause": {
+              "clause": "end screen",
+              "_row_num": 186,
+              "__rowNum__": 185,
+              "_token_type": "end_screen"
+            },
+            "_screen_block": "function() {var activePromptIndicies = [];\nactivePromptIndicies.push(68);\nactivePromptIndicies.push(69);\nactivePromptIndicies.push(70);\nactivePromptIndicies.push(71);\n\nreturn activePromptIndicies;\n}\n",
+            "operationIdx": 62
+          },
+          {
+            "clause": "end if",
+            "_token_type": "goto_label",
+            "_branch_label": "_endif187",
+            "_row_num": 187,
+            "operationIdx": 63
+          },
+          {
+            "clause": "end if",
+            "_token_type": "goto_label",
+            "_branch_label": "_endif188",
+            "_row_num": 188,
+            "operationIdx": 64
+          },
+          {
+            "clause": "begin screen",
+            "_row_num": 189,
+            "__rowNum__": 188,
+            "_token_type": "begin_screen",
+            "_end_screen_clause": {
+              "clause": "end screen",
+              "_row_num": 198,
+              "__rowNum__": 197,
+              "_token_type": "end_screen"
+            },
+            "_screen_block": "function() {var activePromptIndicies = [];\nactivePromptIndicies.push(72);\nactivePromptIndicies.push(73);\nif (adate.diffInYears(data('OUTDATE'),data('CONT'))>0) {\nassign('ONEYEAR', 1);\n}\nif (adate.ageInYears(data('OUTDATE'))>4) {\nassign('ESTADO', 5);\n}\n\nreturn activePromptIndicies;\n}\n",
+            "operationIdx": 65
+          },
+          {
+            "clause": "end if",
+            "_token_type": "goto_label",
+            "_branch_label": "_endif199",
+            "_row_num": 199,
+            "operationIdx": 66
           },
           {
             "_token_type": "exit_section",
             "clause": "exit section",
-            "_row_num": 167,
-            "operationIdx": 55
+            "_row_num": 200,
+            "operationIdx": 67
           },
           {
-            "_row_num": 167,
+            "_row_num": 200,
             "_token_type": "begin_screen",
-            "_screen_block": "function() {var activePromptIndicies = [];\nactivePromptIndicies.push(62);\n\nreturn activePromptIndicies;\n}\n",
+            "_screen_block": "function() {var activePromptIndicies = [];\nactivePromptIndicies.push(74);\n\nreturn activePromptIndicies;\n}\n",
             "screen": {
               "hideInBackHistory": true
             },
-            "operationIdx": 56
+            "operationIdx": 68
           },
           {
             "_token_type": "resume",
             "clause": "resume",
-            "_row_num": 167,
-            "operationIdx": 57
+            "_row_num": 200,
+            "operationIdx": 69
           }
         ],
         "branch_label_map": {
@@ -24628,35 +25503,47 @@
           "_endif106": 24,
           "_screen107": 24,
           "_then112": 27,
-          "_screen113": 27,
-          "_else118": 29,
-          "_endif118": 29,
-          "_then119": 31,
-          "_else121": 33,
-          "_endif121": 33,
-          "_then122": 35,
-          "_else124": 37,
-          "_endif124": 37,
-          "_then125": 39,
-          "_screen126": 39,
-          "_then130": 42,
-          "_screen131": 42,
-          "_then135": 45,
-          "_screen136": 45,
-          "_else141": 47,
-          "_endif141": 47,
-          "_screen142": 47,
-          "_else149": 49,
-          "_endif149": 49,
-          "_else150": 50,
-          "_endif150": 50,
-          "_then151": 52,
-          "_screen152": 52,
-          "_screen156": 53,
-          "_else166": 55,
-          "_endif166": 55,
-          "_contents": 56,
-          "_screen167": 56
+          "_then113": 29,
+          "_screen114": 29,
+          "_else129": 31,
+          "_screen130": 31,
+          "_endif135": 32,
+          "_else136": 33,
+          "_endif136": 33,
+          "_then137": 35,
+          "_else139": 37,
+          "_endif139": 37,
+          "_then140": 39,
+          "_else142": 41,
+          "_endif142": 41,
+          "_then143": 43,
+          "_screen144": 43,
+          "_then148": 46,
+          "_screen149": 46,
+          "_then153": 49,
+          "_screen154": 49,
+          "_else159": 51,
+          "_endif159": 51,
+          "_screen160": 51,
+          "_else167": 53,
+          "_endif167": 53,
+          "_else168": 54,
+          "_endif168": 54,
+          "_then169": 56,
+          "_screen170": 56,
+          "_then174": 59,
+          "_screen175": 59,
+          "_then180": 62,
+          "_screen181": 62,
+          "_else187": 64,
+          "_endif187": 64,
+          "_else188": 65,
+          "_endif188": 65,
+          "_screen189": 65,
+          "_else199": 67,
+          "_endif199": 67,
+          "_contents": 68,
+          "_screen200": 68
         }
       },
       "control": {
@@ -33767,7 +34654,7 @@
         "type": "integer",
         "_defn": [
           {
-            "_row_num": 128,
+            "_row_num": 146,
             "section_name": "visit"
           },
           {
@@ -33782,6 +34669,82 @@
         "elementSet": "data",
         "elementPath": "BRACOCRI"
       },
+      "CAMPCODE": {
+        "type": "string",
+        "valuesList": "YesNoU",
+        "_defn": [
+          {
+            "_row_num": 183,
+            "section_name": "visit"
+          },
+          {
+            "_row_num": 70,
+            "section_name": "model"
+          }
+        ],
+        "isSessionVariable": false,
+        "elementKey": "CAMPCODE",
+        "elementName": "CAMPCODE",
+        "elementSet": "data",
+        "elementPath": "CAMPCODE"
+      },
+      "CAMPEST": {
+        "type": "string",
+        "valuesList": "YesNoU",
+        "_defn": [
+          {
+            "_row_num": 184,
+            "section_name": "visit"
+          },
+          {
+            "_row_num": 71,
+            "section_name": "model"
+          }
+        ],
+        "isSessionVariable": false,
+        "elementKey": "CAMPEST",
+        "elementName": "CAMPEST",
+        "elementSet": "data",
+        "elementPath": "CAMPEST"
+      },
+      "CAMPINF": {
+        "type": "string",
+        "valuesList": "campinf",
+        "_defn": [
+          {
+            "_row_num": 185,
+            "section_name": "visit"
+          },
+          {
+            "_row_num": 72,
+            "section_name": "model"
+          }
+        ],
+        "isSessionVariable": false,
+        "elementKey": "CAMPINF",
+        "elementName": "CAMPINF",
+        "elementSet": "data",
+        "elementPath": "CAMPINF"
+      },
+      "CAMPNOVO": {
+        "type": "string",
+        "valuesList": "YesNo",
+        "_defn": [
+          {
+            "_row_num": 178,
+            "section_name": "visit"
+          },
+          {
+            "_row_num": 73,
+            "section_name": "model"
+          }
+        ],
+        "isSessionVariable": false,
+        "elementKey": "CAMPNOVO",
+        "elementName": "CAMPNOVO",
+        "elementSet": "data",
+        "elementPath": "CAMPNOVO"
+      },
       "CARTVAC": {
         "type": "string",
         "valuesList": "vcard",
@@ -33791,7 +34754,7 @@
             "section_name": "visit"
           },
           {
-            "_row_num": 70,
+            "_row_num": 74,
             "section_name": "model"
           }
         ],
@@ -33809,7 +34772,7 @@
             "section_name": "visit"
           },
           {
-            "_row_num": 71,
+            "_row_num": 75,
             "section_name": "model"
           }
         ],
@@ -33823,11 +34786,11 @@
         "type": "integer",
         "_defn": [
           {
-            "_row_num": 139,
+            "_row_num": 157,
             "section_name": "visit"
           },
           {
-            "_row_num": 72,
+            "_row_num": 76,
             "section_name": "model"
           }
         ],
@@ -33842,11 +34805,11 @@
         "valuesList": "Scar",
         "_defn": [
           {
-            "_row_num": 133,
+            "_row_num": 151,
             "section_name": "visit"
           },
           {
-            "_row_num": 73,
+            "_row_num": 77,
             "section_name": "model"
           }
         ],
@@ -33860,11 +34823,11 @@
         "type": "integer",
         "_defn": [
           {
-            "_row_num": 138,
+            "_row_num": 156,
             "section_name": "visit"
           },
           {
-            "_row_num": 74,
+            "_row_num": 78,
             "section_name": "model"
           }
         ],
@@ -33883,7 +34846,7 @@
             "section_name": "visit"
           },
           {
-            "_row_num": 75,
+            "_row_num": 79,
             "section_name": "model"
           }
         ],
@@ -33906,7 +34869,7 @@
             "section_name": "visit"
           },
           {
-            "_row_num": 76,
+            "_row_num": 80,
             "section_name": "model"
           }
         ],
@@ -33934,7 +34897,7 @@
             "section_name": "visit"
           },
           {
-            "_row_num": 77,
+            "_row_num": 81,
             "section_name": "model"
           }
         ],
@@ -33960,7 +34923,7 @@
             "section_name": "visit"
           },
           {
-            "_row_num": 78,
+            "_row_num": 82,
             "section_name": "model"
           }
         ],
@@ -33988,7 +34951,7 @@
             "section_name": "visit"
           },
           {
-            "_row_num": 79,
+            "_row_num": 83,
             "section_name": "model"
           }
         ],
@@ -34014,7 +34977,7 @@
             "section_name": "visit"
           },
           {
-            "_row_num": 80,
+            "_row_num": 84,
             "section_name": "model"
           }
         ],
@@ -34042,7 +35005,7 @@
             "section_name": "visit"
           },
           {
-            "_row_num": 81,
+            "_row_num": 85,
             "section_name": "model"
           }
         ],
@@ -34053,6 +35016,127 @@
         "elementPath": "dasepns",
         "listChildElementKeys": [
           "dasepns_items"
+        ]
+      },
+      "DATAINTREG": {
+        "prompt_type_name": "adate",
+        "type": "string",
+        "elementType": "string",
+        "comment": "Save only mm.dd.yyyy with support for ?? at all positions",
+        "_row_num": 2,
+        "__rowNum__": 1,
+        "_defn": [
+          {
+            "_row_num": 116,
+            "section_name": "visit"
+          },
+          {
+            "_row_num": 86,
+            "section_name": "model"
+          }
+        ],
+        "isSessionVariable": false,
+        "elementKey": "DATAINTREG",
+        "elementName": "DATAINTREG",
+        "elementSet": "data",
+        "elementPath": "DATAINTREG"
+      },
+      "DATAINTREGA": {
+        "type": "integer",
+        "_defn": [
+          {
+            "_row_num": 120,
+            "section_name": "visit"
+          },
+          {
+            "_row_num": 87,
+            "section_name": "model"
+          }
+        ],
+        "isSessionVariable": false,
+        "elementKey": "DATAINTREGA",
+        "elementName": "DATAINTREGA",
+        "elementSet": "data",
+        "elementPath": "DATAINTREGA"
+      },
+      "dataintregamns": {
+        "type": "array",
+        "items": {
+          "type": "string",
+          "elementKey": "dataintregamns_items",
+          "elementName": "items",
+          "elementSet": "data",
+          "elementPath": "dataintregamns.items",
+          "isSessionVariable": true,
+          "notUnitOfRetention": true
+        },
+        "valuesList": "dontknowage",
+        "_defn": [
+          {
+            "_row_num": 122,
+            "section_name": "visit"
+          },
+          {
+            "_row_num": 88,
+            "section_name": "model"
+          }
+        ],
+        "isSessionVariable": true,
+        "elementKey": "dataintregamns",
+        "elementName": "dataintregamns",
+        "elementSet": "data",
+        "elementPath": "dataintregamns",
+        "listChildElementKeys": [
+          "dataintregamns_items"
+        ]
+      },
+      "DATAINTREGM": {
+        "type": "integer",
+        "_defn": [
+          {
+            "_row_num": 121,
+            "section_name": "visit"
+          },
+          {
+            "_row_num": 89,
+            "section_name": "model"
+          }
+        ],
+        "isSessionVariable": false,
+        "elementKey": "DATAINTREGM",
+        "elementName": "DATAINTREGM",
+        "elementSet": "data",
+        "elementPath": "DATAINTREGM"
+      },
+      "dataintregns": {
+        "type": "array",
+        "items": {
+          "type": "string",
+          "elementKey": "dataintregns_items",
+          "elementName": "items",
+          "elementSet": "data",
+          "elementPath": "dataintregns.items",
+          "isSessionVariable": true,
+          "notUnitOfRetention": true
+        },
+        "valuesList": "dontknowdate",
+        "_defn": [
+          {
+            "_row_num": 117,
+            "section_name": "visit"
+          },
+          {
+            "_row_num": 90,
+            "section_name": "model"
+          }
+        ],
+        "isSessionVariable": true,
+        "elementKey": "dataintregns",
+        "elementName": "dataintregns",
+        "elementSet": "data",
+        "elementPath": "dataintregns",
+        "listChildElementKeys": [
+          "dataintregns_items"
         ]
       },
       "EXITDATA": {
@@ -34068,7 +35152,7 @@
             "section_name": "visit"
           },
           {
-            "_row_num": 82,
+            "_row_num": 91,
             "section_name": "model"
           }
         ],
@@ -34086,7 +35170,7 @@
             "section_name": "visit"
           },
           {
-            "_row_num": 83,
+            "_row_num": 92,
             "section_name": "model"
           }
         ],
@@ -34105,7 +35189,7 @@
             "section_name": "visit"
           },
           {
-            "_row_num": 84,
+            "_row_num": 93,
             "section_name": "model"
           }
         ],
@@ -34123,7 +35207,7 @@
             "section_name": "visit"
           },
           {
-            "_row_num": 85,
+            "_row_num": 94,
             "section_name": "model"
           }
         ],
@@ -34141,7 +35225,7 @@
             "section_name": "visit"
           },
           {
-            "_row_num": 86,
+            "_row_num": 95,
             "section_name": "model"
           }
         ],
@@ -34159,7 +35243,7 @@
             "section_name": "visit"
           },
           {
-            "_row_num": 87,
+            "_row_num": 96,
             "section_name": "model"
           }
         ],
@@ -34174,11 +35258,11 @@
         "valuesList": "YesNoU",
         "_defn": [
           {
-            "_row_num": 144,
+            "_row_num": 162,
             "section_name": "visit"
           },
           {
-            "_row_num": 88,
+            "_row_num": 97,
             "section_name": "model"
           }
         ],
@@ -34193,11 +35277,11 @@
         "valuesList": "YesNoU",
         "_defn": [
           {
-            "_row_num": 146,
+            "_row_num": 164,
             "section_name": "visit"
           },
           {
-            "_row_num": 89,
+            "_row_num": 98,
             "section_name": "model"
           }
         ],
@@ -34216,7 +35300,7 @@
             "section_name": "visit"
           },
           {
-            "_row_num": 90,
+            "_row_num": 99,
             "section_name": "model"
           }
         ],
@@ -34230,11 +35314,11 @@
         "type": "string",
         "_defn": [
           {
-            "_row_num": 158,
+            "_row_num": 191,
             "section_name": "visit"
           },
           {
-            "_row_num": 91,
+            "_row_num": 100,
             "section_name": "model"
           }
         ],
@@ -34248,7 +35332,7 @@
         "type": "integer",
         "_defn": [
           {
-            "_row_num": 92,
+            "_row_num": 101,
             "section_name": "model"
           }
         ],
@@ -34267,7 +35351,7 @@
             "section_name": "visit"
           },
           {
-            "_row_num": 93,
+            "_row_num": 102,
             "section_name": "model"
           }
         ],
@@ -34282,11 +35366,11 @@
         "valuesList": "YesNoU",
         "_defn": [
           {
-            "_row_num": 154,
+            "_row_num": 172,
             "section_name": "visit"
           },
           {
-            "_row_num": 94,
+            "_row_num": 103,
             "section_name": "model"
           }
         ],
@@ -34305,7 +35389,7 @@
             "section_name": "visit"
           },
           {
-            "_row_num": 95,
+            "_row_num": 104,
             "section_name": "model"
           }
         ],
@@ -34324,7 +35408,7 @@
             "section_name": "visit"
           },
           {
-            "_row_num": 96,
+            "_row_num": 105,
             "section_name": "model"
           }
         ],
@@ -34343,7 +35427,7 @@
             "section_name": "visit"
           },
           {
-            "_row_num": 97,
+            "_row_num": 106,
             "section_name": "model"
           }
         ],
@@ -34362,7 +35446,7 @@
             "section_name": "visit"
           },
           {
-            "_row_num": 98,
+            "_row_num": 107,
             "section_name": "model"
           }
         ],
@@ -34381,7 +35465,7 @@
             "section_name": "visit"
           },
           {
-            "_row_num": 99,
+            "_row_num": 108,
             "section_name": "model"
           }
         ],
@@ -34400,7 +35484,7 @@
             "section_name": "visit"
           },
           {
-            "_row_num": 100,
+            "_row_num": 109,
             "section_name": "model"
           }
         ],
@@ -34419,7 +35503,7 @@
             "section_name": "visit"
           },
           {
-            "_row_num": 101,
+            "_row_num": 110,
             "section_name": "model"
           }
         ],
@@ -34442,7 +35526,7 @@
             "section_name": "control"
           },
           {
-            "_row_num": 103,
+            "_row_num": 112,
             "section_name": "model"
           }
         ],
@@ -34465,7 +35549,7 @@
             "section_name": "control"
           },
           {
-            "_row_num": 104,
+            "_row_num": 113,
             "section_name": "model"
           }
         ],
@@ -34483,7 +35567,7 @@
             "section_name": "control"
           },
           {
-            "_row_num": 105,
+            "_row_num": 114,
             "section_name": "model"
           }
         ],
@@ -34501,7 +35585,7 @@
             "section_name": "control"
           },
           {
-            "_row_num": 106,
+            "_row_num": 115,
             "section_name": "model"
           }
         ],
@@ -34520,7 +35604,7 @@
             "section_name": "control"
           },
           {
-            "_row_num": 107,
+            "_row_num": 116,
             "section_name": "model"
           }
         ],
@@ -34539,7 +35623,7 @@
             "section_name": "control"
           },
           {
-            "_row_num": 108,
+            "_row_num": 117,
             "section_name": "model"
           }
         ],
@@ -34558,7 +35642,7 @@
             "section_name": "control"
           },
           {
-            "_row_num": 109,
+            "_row_num": 118,
             "section_name": "model"
           }
         ],
@@ -34577,7 +35661,7 @@
             "section_name": "control"
           },
           {
-            "_row_num": 110,
+            "_row_num": 119,
             "section_name": "model"
           }
         ],
@@ -34596,7 +35680,7 @@
             "section_name": "control"
           },
           {
-            "_row_num": 111,
+            "_row_num": 120,
             "section_name": "model"
           }
         ],
@@ -34615,7 +35699,7 @@
             "section_name": "control"
           },
           {
-            "_row_num": 112,
+            "_row_num": 121,
             "section_name": "model"
           }
         ],
@@ -34633,7 +35717,7 @@
             "section_name": "control"
           },
           {
-            "_row_num": 113,
+            "_row_num": 122,
             "section_name": "model"
           }
         ],
@@ -34651,7 +35735,7 @@
             "section_name": "control"
           },
           {
-            "_row_num": 114,
+            "_row_num": 123,
             "section_name": "model"
           }
         ],
@@ -34670,7 +35754,7 @@
             "section_name": "control"
           },
           {
-            "_row_num": 115,
+            "_row_num": 124,
             "section_name": "model"
           }
         ],
@@ -34689,7 +35773,7 @@
             "section_name": "control"
           },
           {
-            "_row_num": 116,
+            "_row_num": 125,
             "section_name": "model"
           }
         ],
@@ -34708,7 +35792,7 @@
             "section_name": "control"
           },
           {
-            "_row_num": 117,
+            "_row_num": 126,
             "section_name": "model"
           }
         ],
@@ -34735,7 +35819,7 @@
             "section_name": "control"
           },
           {
-            "_row_num": 118,
+            "_row_num": 127,
             "section_name": "model"
           }
         ],
@@ -34757,7 +35841,7 @@
             "section_name": "control"
           },
           {
-            "_row_num": 119,
+            "_row_num": 128,
             "section_name": "model"
           }
         ],
@@ -34776,7 +35860,7 @@
             "section_name": "control"
           },
           {
-            "_row_num": 120,
+            "_row_num": 129,
             "section_name": "model"
           }
         ],
@@ -34794,7 +35878,7 @@
             "section_name": "control"
           },
           {
-            "_row_num": 121,
+            "_row_num": 130,
             "section_name": "model"
           }
         ],
@@ -34812,7 +35896,7 @@
             "section_name": "control"
           },
           {
-            "_row_num": 122,
+            "_row_num": 131,
             "section_name": "model"
           }
         ],
@@ -34831,7 +35915,7 @@
             "section_name": "control"
           },
           {
-            "_row_num": 123,
+            "_row_num": 132,
             "section_name": "model"
           }
         ],
@@ -34850,7 +35934,7 @@
             "section_name": "control"
           },
           {
-            "_row_num": 124,
+            "_row_num": 133,
             "section_name": "model"
           }
         ],
@@ -34869,7 +35953,7 @@
             "section_name": "vac"
           },
           {
-            "_row_num": 126,
+            "_row_num": 135,
             "section_name": "model"
           }
         ],
@@ -34889,7 +35973,7 @@
             "section_name": "vac"
           },
           {
-            "_row_num": 127,
+            "_row_num": 136,
             "section_name": "model"
           }
         ],
@@ -34908,7 +35992,7 @@
             "section_name": "vac"
           },
           {
-            "_row_num": 128,
+            "_row_num": 137,
             "section_name": "model"
           }
         ],
@@ -34927,7 +36011,7 @@
             "section_name": "vac"
           },
           {
-            "_row_num": 129,
+            "_row_num": 138,
             "section_name": "model"
           }
         ],
@@ -34946,7 +36030,7 @@
             "section_name": "vac"
           },
           {
-            "_row_num": 130,
+            "_row_num": 139,
             "section_name": "model"
           }
         ],
@@ -34973,7 +36057,7 @@
             "section_name": "vac"
           },
           {
-            "_row_num": 131,
+            "_row_num": 140,
             "section_name": "model"
           }
         ],
@@ -34992,7 +36076,7 @@
             "section_name": "vac"
           },
           {
-            "_row_num": 132,
+            "_row_num": 141,
             "section_name": "model"
           }
         ],
@@ -35024,7 +36108,7 @@
             "section_name": "vac"
           },
           {
-            "_row_num": 133,
+            "_row_num": 142,
             "section_name": "model"
           }
         ],
@@ -35054,7 +36138,7 @@
             "section_name": "vac"
           },
           {
-            "_row_num": 134,
+            "_row_num": 143,
             "section_name": "model"
           }
         ],
@@ -35073,7 +36157,7 @@
             "section_name": "vac"
           },
           {
-            "_row_num": 135,
+            "_row_num": 144,
             "section_name": "model"
           }
         ],
@@ -35105,7 +36189,7 @@
             "section_name": "vac"
           },
           {
-            "_row_num": 136,
+            "_row_num": 145,
             "section_name": "model"
           }
         ],
@@ -35125,7 +36209,7 @@
             "section_name": "vac"
           },
           {
-            "_row_num": 137,
+            "_row_num": 146,
             "section_name": "model"
           }
         ],
@@ -35147,7 +36231,7 @@
             "section_name": "vac"
           },
           {
-            "_row_num": 138,
+            "_row_num": 147,
             "section_name": "model"
           }
         ],
@@ -35165,7 +36249,7 @@
             "section_name": "vac"
           },
           {
-            "_row_num": 139,
+            "_row_num": 148,
             "section_name": "model"
           }
         ],
@@ -35187,7 +36271,7 @@
             "section_name": "vac"
           },
           {
-            "_row_num": 140,
+            "_row_num": 149,
             "section_name": "model"
           }
         ],
@@ -35213,7 +36297,7 @@
             "section_name": "vac"
           },
           {
-            "_row_num": 141,
+            "_row_num": 150,
             "section_name": "model"
           }
         ],
@@ -35231,7 +36315,7 @@
             "section_name": "vac"
           },
           {
-            "_row_num": 142,
+            "_row_num": 151,
             "section_name": "model"
           }
         ],
@@ -35253,7 +36337,7 @@
             "section_name": "vac"
           },
           {
-            "_row_num": 143,
+            "_row_num": 152,
             "section_name": "model"
           }
         ],
@@ -35279,7 +36363,7 @@
             "section_name": "vac"
           },
           {
-            "_row_num": 144,
+            "_row_num": 153,
             "section_name": "model"
           }
         ],
@@ -35297,7 +36381,7 @@
             "section_name": "vac"
           },
           {
-            "_row_num": 145,
+            "_row_num": 154,
             "section_name": "model"
           }
         ],
@@ -35319,7 +36403,7 @@
             "section_name": "vac"
           },
           {
-            "_row_num": 146,
+            "_row_num": 155,
             "section_name": "model"
           }
         ],
@@ -35345,7 +36429,7 @@
             "section_name": "vac"
           },
           {
-            "_row_num": 147,
+            "_row_num": 156,
             "section_name": "model"
           }
         ],
@@ -35363,7 +36447,7 @@
             "section_name": "vac"
           },
           {
-            "_row_num": 148,
+            "_row_num": 157,
             "section_name": "model"
           }
         ],
@@ -35381,7 +36465,7 @@
             "section_name": "vac"
           },
           {
-            "_row_num": 149,
+            "_row_num": 158,
             "section_name": "model"
           }
         ],
@@ -35403,7 +36487,7 @@
             "section_name": "vac"
           },
           {
-            "_row_num": 150,
+            "_row_num": 159,
             "section_name": "model"
           }
         ],
@@ -35425,7 +36509,7 @@
             "section_name": "vac"
           },
           {
-            "_row_num": 151,
+            "_row_num": 160,
             "section_name": "model"
           }
         ],
@@ -35444,7 +36528,7 @@
             "section_name": "vac"
           },
           {
-            "_row_num": 152,
+            "_row_num": 161,
             "section_name": "model"
           }
         ],
@@ -35461,7 +36545,7 @@
             "section_name": "vac"
           },
           {
-            "_row_num": 153,
+            "_row_num": 162,
             "section_name": "model"
           }
         ],
@@ -35489,7 +36573,7 @@
             "section_name": "vac"
           },
           {
-            "_row_num": 154,
+            "_row_num": 163,
             "section_name": "model"
           }
         ],
@@ -35508,7 +36592,7 @@
             "section_name": "vac"
           },
           {
-            "_row_num": 155,
+            "_row_num": 164,
             "section_name": "model"
           }
         ],
@@ -35540,7 +36624,7 @@
             "section_name": "vac"
           },
           {
-            "_row_num": 156,
+            "_row_num": 165,
             "section_name": "model"
           }
         ],
@@ -35570,7 +36654,7 @@
             "section_name": "vac"
           },
           {
-            "_row_num": 157,
+            "_row_num": 166,
             "section_name": "model"
           }
         ],
@@ -35589,7 +36673,7 @@
             "section_name": "vac"
           },
           {
-            "_row_num": 158,
+            "_row_num": 167,
             "section_name": "model"
           }
         ],
@@ -35621,7 +36705,7 @@
             "section_name": "vac"
           },
           {
-            "_row_num": 159,
+            "_row_num": 168,
             "section_name": "model"
           }
         ],
@@ -35651,7 +36735,7 @@
             "section_name": "vac"
           },
           {
-            "_row_num": 160,
+            "_row_num": 169,
             "section_name": "model"
           }
         ],
@@ -35670,7 +36754,7 @@
             "section_name": "vac"
           },
           {
-            "_row_num": 161,
+            "_row_num": 170,
             "section_name": "model"
           }
         ],
@@ -35702,7 +36786,7 @@
             "section_name": "vac"
           },
           {
-            "_row_num": 162,
+            "_row_num": 171,
             "section_name": "model"
           }
         ],
@@ -35732,7 +36816,7 @@
             "section_name": "vac"
           },
           {
-            "_row_num": 163,
+            "_row_num": 172,
             "section_name": "model"
           }
         ],
@@ -35751,7 +36835,7 @@
             "section_name": "vac"
           },
           {
-            "_row_num": 164,
+            "_row_num": 173,
             "section_name": "model"
           }
         ],
@@ -35783,7 +36867,7 @@
             "section_name": "vac"
           },
           {
-            "_row_num": 165,
+            "_row_num": 174,
             "section_name": "model"
           }
         ],
@@ -35813,7 +36897,7 @@
             "section_name": "vac"
           },
           {
-            "_row_num": 166,
+            "_row_num": 175,
             "section_name": "model"
           }
         ],
@@ -35832,7 +36916,7 @@
             "section_name": "vac"
           },
           {
-            "_row_num": 167,
+            "_row_num": 176,
             "section_name": "model"
           }
         ],
@@ -35864,7 +36948,7 @@
             "section_name": "vac"
           },
           {
-            "_row_num": 168,
+            "_row_num": 177,
             "section_name": "model"
           }
         ],
@@ -35894,7 +36978,7 @@
             "section_name": "vac"
           },
           {
-            "_row_num": 169,
+            "_row_num": 178,
             "section_name": "model"
           }
         ],
@@ -35913,7 +36997,7 @@
             "section_name": "vac"
           },
           {
-            "_row_num": 170,
+            "_row_num": 179,
             "section_name": "model"
           }
         ],
@@ -35945,7 +37029,7 @@
             "section_name": "vac"
           },
           {
-            "_row_num": 171,
+            "_row_num": 180,
             "section_name": "model"
           }
         ],
@@ -35975,7 +37059,7 @@
             "section_name": "vac"
           },
           {
-            "_row_num": 172,
+            "_row_num": 181,
             "section_name": "model"
           }
         ],
@@ -35994,7 +37078,7 @@
             "section_name": "vac"
           },
           {
-            "_row_num": 173,
+            "_row_num": 182,
             "section_name": "model"
           }
         ],
@@ -36026,7 +37110,7 @@
             "section_name": "vac"
           },
           {
-            "_row_num": 174,
+            "_row_num": 183,
             "section_name": "model"
           }
         ],
@@ -36056,7 +37140,7 @@
             "section_name": "vac"
           },
           {
-            "_row_num": 175,
+            "_row_num": 184,
             "section_name": "model"
           }
         ],
@@ -36075,7 +37159,7 @@
             "section_name": "vac"
           },
           {
-            "_row_num": 176,
+            "_row_num": 185,
             "section_name": "model"
           }
         ],
@@ -36107,7 +37191,7 @@
             "section_name": "vac"
           },
           {
-            "_row_num": 177,
+            "_row_num": 186,
             "section_name": "model"
           }
         ],
@@ -36137,7 +37221,7 @@
             "section_name": "vac"
           },
           {
-            "_row_num": 178,
+            "_row_num": 187,
             "section_name": "model"
           }
         ],
@@ -36156,7 +37240,7 @@
             "section_name": "vac"
           },
           {
-            "_row_num": 179,
+            "_row_num": 188,
             "section_name": "model"
           }
         ],
@@ -36188,7 +37272,7 @@
             "section_name": "vac"
           },
           {
-            "_row_num": 180,
+            "_row_num": 189,
             "section_name": "model"
           }
         ],
@@ -36218,7 +37302,7 @@
             "section_name": "vac"
           },
           {
-            "_row_num": 181,
+            "_row_num": 190,
             "section_name": "model"
           }
         ],
@@ -36237,7 +37321,7 @@
             "section_name": "vac"
           },
           {
-            "_row_num": 182,
+            "_row_num": 191,
             "section_name": "model"
           }
         ],
@@ -36269,7 +37353,7 @@
             "section_name": "vac"
           },
           {
-            "_row_num": 183,
+            "_row_num": 192,
             "section_name": "model"
           }
         ],
@@ -36299,7 +37383,7 @@
             "section_name": "vac"
           },
           {
-            "_row_num": 184,
+            "_row_num": 193,
             "section_name": "model"
           }
         ],
@@ -36318,7 +37402,7 @@
             "section_name": "vac"
           },
           {
-            "_row_num": 185,
+            "_row_num": 194,
             "section_name": "model"
           }
         ],
@@ -36350,7 +37434,7 @@
             "section_name": "vac"
           },
           {
-            "_row_num": 186,
+            "_row_num": 195,
             "section_name": "model"
           }
         ],
@@ -36380,7 +37464,7 @@
             "section_name": "vac"
           },
           {
-            "_row_num": 187,
+            "_row_num": 196,
             "section_name": "model"
           }
         ],
@@ -36399,7 +37483,7 @@
             "section_name": "vac"
           },
           {
-            "_row_num": 188,
+            "_row_num": 197,
             "section_name": "model"
           }
         ],
@@ -36431,7 +37515,7 @@
             "section_name": "vac"
           },
           {
-            "_row_num": 189,
+            "_row_num": 198,
             "section_name": "model"
           }
         ],
@@ -36461,7 +37545,7 @@
             "section_name": "vac"
           },
           {
-            "_row_num": 190,
+            "_row_num": 199,
             "section_name": "model"
           }
         ],
@@ -36480,7 +37564,7 @@
             "section_name": "vac"
           },
           {
-            "_row_num": 191,
+            "_row_num": 200,
             "section_name": "model"
           }
         ],
@@ -36512,7 +37596,7 @@
             "section_name": "vac"
           },
           {
-            "_row_num": 192,
+            "_row_num": 201,
             "section_name": "model"
           }
         ],
@@ -36538,7 +37622,7 @@
             "section_name": "vac"
           },
           {
-            "_row_num": 193,
+            "_row_num": 202,
             "section_name": "model"
           }
         ],
@@ -36556,7 +37640,7 @@
             "section_name": "vac"
           },
           {
-            "_row_num": 194,
+            "_row_num": 203,
             "section_name": "model"
           }
         ],
@@ -36579,7 +37663,7 @@
             "section_name": "vac"
           },
           {
-            "_row_num": 195,
+            "_row_num": 204,
             "section_name": "model"
           }
         ],
@@ -36597,7 +37681,7 @@
             "section_name": "vac"
           },
           {
-            "_row_num": 196,
+            "_row_num": 205,
             "section_name": "model"
           }
         ],
@@ -36620,7 +37704,7 @@
             "section_name": "vac"
           },
           {
-            "_row_num": 197,
+            "_row_num": 206,
             "section_name": "model"
           }
         ],
@@ -36638,7 +37722,7 @@
             "section_name": "vac"
           },
           {
-            "_row_num": 198,
+            "_row_num": 207,
             "section_name": "model"
           }
         ],
@@ -36661,7 +37745,7 @@
             "section_name": "vac"
           },
           {
-            "_row_num": 199,
+            "_row_num": 208,
             "section_name": "model"
           }
         ],
@@ -36679,7 +37763,7 @@
             "section_name": "vac"
           },
           {
-            "_row_num": 200,
+            "_row_num": 209,
             "section_name": "model"
           }
         ],
@@ -36702,7 +37786,7 @@
             "section_name": "vac"
           },
           {
-            "_row_num": 201,
+            "_row_num": 210,
             "section_name": "model"
           }
         ],
@@ -36720,7 +37804,7 @@
             "section_name": "vac"
           },
           {
-            "_row_num": 202,
+            "_row_num": 211,
             "section_name": "model"
           }
         ],
@@ -36747,7 +37831,7 @@
             "section_name": "vac"
           },
           {
-            "_row_num": 203,
+            "_row_num": 212,
             "section_name": "model"
           }
         ],
@@ -36766,7 +37850,7 @@
             "section_name": "vac"
           },
           {
-            "_row_num": 204,
+            "_row_num": 213,
             "section_name": "model"
           }
         ],
@@ -36798,7 +37882,7 @@
             "section_name": "vac"
           },
           {
-            "_row_num": 205,
+            "_row_num": 214,
             "section_name": "model"
           }
         ],
@@ -36820,7 +37904,7 @@
             "section_name": "fal"
           },
           {
-            "_row_num": 207,
+            "_row_num": 216,
             "section_name": "model"
           }
         ],
@@ -36839,7 +37923,7 @@
             "section_name": "fal"
           },
           {
-            "_row_num": 208,
+            "_row_num": 217,
             "section_name": "model"
           }
         ],
@@ -36858,7 +37942,7 @@
             "section_name": "fal"
           },
           {
-            "_row_num": 209,
+            "_row_num": 218,
             "section_name": "model"
           }
         ],
@@ -36876,7 +37960,7 @@
             "section_name": "fal"
           },
           {
-            "_row_num": 210,
+            "_row_num": 219,
             "section_name": "model"
           }
         ],
@@ -36894,7 +37978,7 @@
             "section_name": "fal"
           },
           {
-            "_row_num": 211,
+            "_row_num": 220,
             "section_name": "model"
           }
         ],
@@ -36913,7 +37997,7 @@
             "section_name": "fal"
           },
           {
-            "_row_num": 212,
+            "_row_num": 221,
             "section_name": "model"
           }
         ],
@@ -36932,7 +38016,7 @@
             "section_name": "fal"
           },
           {
-            "_row_num": 213,
+            "_row_num": 222,
             "section_name": "model"
           }
         ],
@@ -36951,7 +38035,7 @@
             "section_name": "fal"
           },
           {
-            "_row_num": 214,
+            "_row_num": 223,
             "section_name": "model"
           }
         ],
@@ -36969,7 +38053,7 @@
             "section_name": "fal"
           },
           {
-            "_row_num": 215,
+            "_row_num": 224,
             "section_name": "model"
           }
         ],
@@ -36988,7 +38072,7 @@
             "section_name": "fal"
           },
           {
-            "_row_num": 216,
+            "_row_num": 225,
             "section_name": "model"
           }
         ],
@@ -37007,7 +38091,7 @@
             "section_name": "fal"
           },
           {
-            "_row_num": 217,
+            "_row_num": 226,
             "section_name": "model"
           }
         ],
@@ -37026,7 +38110,7 @@
             "section_name": "fal"
           },
           {
-            "_row_num": 218,
+            "_row_num": 227,
             "section_name": "model"
           }
         ],
@@ -37044,7 +38128,7 @@
             "section_name": "fal"
           },
           {
-            "_row_num": 219,
+            "_row_num": 228,
             "section_name": "model"
           }
         ],
@@ -37063,7 +38147,7 @@
             "section_name": "fal"
           },
           {
-            "_row_num": 220,
+            "_row_num": 229,
             "section_name": "model"
           }
         ],
@@ -37082,7 +38166,7 @@
             "section_name": "fal"
           },
           {
-            "_row_num": 221,
+            "_row_num": 230,
             "section_name": "model"
           }
         ],
@@ -37100,7 +38184,7 @@
             "section_name": "fal"
           },
           {
-            "_row_num": 222,
+            "_row_num": 231,
             "section_name": "model"
           }
         ],
@@ -37119,7 +38203,7 @@
             "section_name": "fal"
           },
           {
-            "_row_num": 223,
+            "_row_num": 232,
             "section_name": "model"
           }
         ],
@@ -37137,7 +38221,7 @@
             "section_name": "fal"
           },
           {
-            "_row_num": 224,
+            "_row_num": 233,
             "section_name": "model"
           }
         ],
@@ -37156,7 +38240,7 @@
             "section_name": "fal"
           },
           {
-            "_row_num": 225,
+            "_row_num": 234,
             "section_name": "model"
           }
         ],
@@ -37174,7 +38258,7 @@
             "section_name": "fal"
           },
           {
-            "_row_num": 226,
+            "_row_num": 235,
             "section_name": "model"
           }
         ],
@@ -37193,7 +38277,7 @@
             "section_name": "fal"
           },
           {
-            "_row_num": 227,
+            "_row_num": 236,
             "section_name": "model"
           }
         ],
@@ -37212,7 +38296,7 @@
             "section_name": "fal"
           },
           {
-            "_row_num": 228,
+            "_row_num": 237,
             "section_name": "model"
           }
         ],
@@ -37230,7 +38314,7 @@
             "section_name": "fal"
           },
           {
-            "_row_num": 229,
+            "_row_num": 238,
             "section_name": "model"
           }
         ],
@@ -37248,7 +38332,7 @@
             "section_name": "fal"
           },
           {
-            "_row_num": 230,
+            "_row_num": 239,
             "section_name": "model"
           }
         ],
@@ -37266,7 +38350,7 @@
             "section_name": "fal"
           },
           {
-            "_row_num": 231,
+            "_row_num": 240,
             "section_name": "model"
           }
         ],
@@ -37285,7 +38369,7 @@
             "section_name": "fal"
           },
           {
-            "_row_num": 232,
+            "_row_num": 241,
             "section_name": "model"
           }
         ],
@@ -37304,7 +38388,7 @@
             "section_name": "fal"
           },
           {
-            "_row_num": 233,
+            "_row_num": 242,
             "section_name": "model"
           }
         ],
@@ -37323,7 +38407,7 @@
             "section_name": "fal"
           },
           {
-            "_row_num": 234,
+            "_row_num": 243,
             "section_name": "model"
           }
         ],
@@ -37342,7 +38426,7 @@
             "section_name": "fal"
           },
           {
-            "_row_num": 235,
+            "_row_num": 244,
             "section_name": "model"
           }
         ],
@@ -37360,7 +38444,7 @@
             "section_name": "fal"
           },
           {
-            "_row_num": 236,
+            "_row_num": 245,
             "section_name": "model"
           }
         ],
@@ -37378,7 +38462,7 @@
             "section_name": "fal"
           },
           {
-            "_row_num": 237,
+            "_row_num": 246,
             "section_name": "model"
           }
         ],
@@ -37396,7 +38480,7 @@
             "section_name": "fal"
           },
           {
-            "_row_num": 238,
+            "_row_num": 247,
             "section_name": "model"
           }
         ],
@@ -37415,7 +38499,7 @@
             "section_name": "fal"
           },
           {
-            "_row_num": 239,
+            "_row_num": 248,
             "section_name": "model"
           }
         ],
@@ -37434,7 +38518,7 @@
             "section_name": "fal"
           },
           {
-            "_row_num": 240,
+            "_row_num": 249,
             "section_name": "model"
           }
         ],
@@ -37453,7 +38537,7 @@
             "section_name": "fal"
           },
           {
-            "_row_num": 241,
+            "_row_num": 250,
             "section_name": "model"
           }
         ],
@@ -37471,7 +38555,7 @@
             "section_name": "fal"
           },
           {
-            "_row_num": 242,
+            "_row_num": 251,
             "section_name": "model"
           }
         ],
@@ -37490,7 +38574,7 @@
             "section_name": "fal"
           },
           {
-            "_row_num": 243,
+            "_row_num": 252,
             "section_name": "model"
           }
         ],
@@ -37508,7 +38592,7 @@
             "section_name": "fal"
           },
           {
-            "_row_num": 244,
+            "_row_num": 253,
             "section_name": "model"
           }
         ],
@@ -37531,7 +38615,7 @@
             "section_name": "fal"
           },
           {
-            "_row_num": 245,
+            "_row_num": 254,
             "section_name": "model"
           }
         ],
@@ -37549,7 +38633,7 @@
             "section_name": "fal"
           },
           {
-            "_row_num": 246,
+            "_row_num": 255,
             "section_name": "model"
           }
         ],
@@ -37572,7 +38656,7 @@
             "section_name": "fal"
           },
           {
-            "_row_num": 247,
+            "_row_num": 256,
             "section_name": "model"
           }
         ],
@@ -37590,7 +38674,7 @@
             "section_name": "fal"
           },
           {
-            "_row_num": 248,
+            "_row_num": 257,
             "section_name": "model"
           }
         ],
@@ -37609,7 +38693,7 @@
             "section_name": "fal"
           },
           {
-            "_row_num": 249,
+            "_row_num": 258,
             "section_name": "model"
           }
         ],
@@ -37627,7 +38711,7 @@
             "section_name": "fal"
           },
           {
-            "_row_num": 250,
+            "_row_num": 259,
             "section_name": "model"
           }
         ],
@@ -37645,7 +38729,7 @@
             "section_name": "fal"
           },
           {
-            "_row_num": 251,
+            "_row_num": 260,
             "section_name": "model"
           }
         ],
@@ -37664,7 +38748,7 @@
             "section_name": "fal"
           },
           {
-            "_row_num": 252,
+            "_row_num": 261,
             "section_name": "model"
           }
         ],
@@ -37683,7 +38767,7 @@
             "section_name": "fal"
           },
           {
-            "_row_num": 253,
+            "_row_num": 262,
             "section_name": "model"
           }
         ],
@@ -37702,7 +38786,7 @@
             "section_name": "fal"
           },
           {
-            "_row_num": 254,
+            "_row_num": 263,
             "section_name": "model"
           }
         ],
@@ -37720,7 +38804,7 @@
             "section_name": "fal"
           },
           {
-            "_row_num": 255,
+            "_row_num": 264,
             "section_name": "model"
           }
         ],
@@ -37738,7 +38822,7 @@
             "section_name": "fal"
           },
           {
-            "_row_num": 256,
+            "_row_num": 265,
             "section_name": "model"
           }
         ],
@@ -37757,7 +38841,7 @@
             "section_name": "fal"
           },
           {
-            "_row_num": 257,
+            "_row_num": 266,
             "section_name": "model"
           }
         ],
@@ -37775,7 +38859,7 @@
             "section_name": "fal"
           },
           {
-            "_row_num": 258,
+            "_row_num": 267,
             "section_name": "model"
           }
         ],
@@ -37794,7 +38878,7 @@
             "section_name": "fal"
           },
           {
-            "_row_num": 259,
+            "_row_num": 268,
             "section_name": "model"
           }
         ],
@@ -37812,7 +38896,7 @@
             "section_name": "fal"
           },
           {
-            "_row_num": 260,
+            "_row_num": 269,
             "section_name": "model"
           }
         ],
@@ -37831,7 +38915,7 @@
             "section_name": "fal"
           },
           {
-            "_row_num": 261,
+            "_row_num": 270,
             "section_name": "model"
           }
         ],
@@ -37849,7 +38933,7 @@
             "section_name": "fal"
           },
           {
-            "_row_num": 262,
+            "_row_num": 271,
             "section_name": "model"
           }
         ],
@@ -37863,7 +38947,7 @@
         "type": "string",
         "_defn": [
           {
-            "_row_num": 264,
+            "_row_num": 273,
             "section_name": "model"
           }
         ],
@@ -37878,7 +38962,7 @@
         "type": "string",
         "_defn": [
           {
-            "_row_num": 265,
+            "_row_num": 274,
             "section_name": "model"
           }
         ],
@@ -37897,7 +38981,7 @@
         "__rowNum__": 1,
         "_defn": [
           {
-            "_row_num": 266,
+            "_row_num": 275,
             "section_name": "model"
           }
         ],
@@ -37911,7 +38995,7 @@
         "type": "string",
         "_defn": [
           {
-            "_row_num": 268,
+            "_row_num": 277,
             "section_name": "model"
           }
         ],
@@ -37931,7 +39015,7 @@
         "__rowNum__": 1,
         "_defn": [
           {
-            "_row_num": 269,
+            "_row_num": 278,
             "section_name": "model"
           }
         ],
@@ -37950,7 +39034,7 @@
         "__rowNum__": 1,
         "_defn": [
           {
-            "_row_num": 270,
+            "_row_num": 279,
             "section_name": "model"
           }
         ],
@@ -37964,7 +39048,7 @@
         "type": "integer",
         "_defn": [
           {
-            "_row_num": 271,
+            "_row_num": 280,
             "section_name": "model"
           }
         ],
@@ -37978,7 +39062,7 @@
         "type": "string",
         "_defn": [
           {
-            "_row_num": 272,
+            "_row_num": 281,
             "section_name": "model"
           }
         ],
@@ -38084,6 +39168,24 @@
         "elementName": "items",
         "elementSet": "data",
         "elementPath": "dasepns.items",
+        "isSessionVariable": true,
+        "notUnitOfRetention": true
+      },
+      "dataintregamns_items": {
+        "type": "string",
+        "elementKey": "dataintregamns_items",
+        "elementName": "items",
+        "elementSet": "data",
+        "elementPath": "dataintregamns.items",
+        "isSessionVariable": true,
+        "notUnitOfRetention": true
+      },
+      "dataintregns_items": {
+        "type": "string",
+        "elementKey": "dataintregns_items",
+        "elementName": "items",
+        "elementSet": "data",
+        "elementPath": "dataintregns.items",
         "isSessionVariable": true,
         "notUnitOfRetention": true
       },
@@ -38414,7 +39516,35 @@
         "_aspect": "CABA",
         "_key": "displayChoicesList",
         "_type": "object",
-        "_value": "[{\"choice_list_name\":\"toilet\",\"data_value\":\"1\",\"display\":{\"title\":{\"text\":{\"english\":\"None\",\"default\":\"Nada\"}}},\"_row_num\":96},{\"choice_list_name\":\"toilet\",\"data_value\":\"2\",\"display\":{\"title\":{\"text\":{\"english\":\"Latrina\",\"default\":\"Latrina\"}}},\"_row_num\":97},{\"choice_list_name\":\"toilet\",\"data_value\":\"3\",\"display\":{\"title\":{\"text\":{\"english\":\"Inside\",\"default\":\"Dentro\"}}},\"_row_num\":98},{\"choice_list_name\":\"toilet\",\"data_value\":\"9\",\"display\":{\"title\":{\"text\":{\"english\":\"Don't know\",\"default\":\"Não sabe\"}}},\"_row_num\":99}]"
+        "_value": "[{\"choice_list_name\":\"toilet\",\"data_value\":\"1\",\"display\":{\"title\":{\"text\":{\"english\":\"None\",\"default\":\"Nada\"}}},\"_row_num\":97},{\"choice_list_name\":\"toilet\",\"data_value\":\"2\",\"display\":{\"title\":{\"text\":{\"english\":\"Latrina\",\"default\":\"Latrina\"}}},\"_row_num\":98},{\"choice_list_name\":\"toilet\",\"data_value\":\"3\",\"display\":{\"title\":{\"text\":{\"english\":\"Inside\",\"default\":\"Dentro\"}}},\"_row_num\":99},{\"choice_list_name\":\"toilet\",\"data_value\":\"9\",\"display\":{\"title\":{\"text\":{\"english\":\"Don't know\",\"default\":\"Não sabe\"}}},\"_row_num\":100}]"
+      },
+      {
+        "_partition": "Column",
+        "_aspect": "CAMPCODE",
+        "_key": "displayChoicesList",
+        "_type": "object",
+        "_value": "[{\"choice_list_name\":\"YesNoU\",\"data_value\":\"1\",\"display\":{\"title\":{\"text\":{\"english\":\"Yes\",\"default\":\"Sim\"}}},\"_row_num\":2},{\"choice_list_name\":\"YesNoU\",\"data_value\":\"2\",\"display\":{\"title\":{\"text\":{\"english\":\"No\",\"default\":\"Não\"}}},\"_row_num\":3},{\"choice_list_name\":\"YesNoU\",\"data_value\":\"3\",\"display\":{\"title\":{\"text\":{\"english\":\"Don't know\",\"default\":\"Não sabe\"}}},\"_row_num\":4}]"
+      },
+      {
+        "_partition": "Column",
+        "_aspect": "CAMPEST",
+        "_key": "displayChoicesList",
+        "_type": "object",
+        "_value": "[{\"choice_list_name\":\"YesNoU\",\"data_value\":\"1\",\"display\":{\"title\":{\"text\":{\"english\":\"Yes\",\"default\":\"Sim\"}}},\"_row_num\":2},{\"choice_list_name\":\"YesNoU\",\"data_value\":\"2\",\"display\":{\"title\":{\"text\":{\"english\":\"No\",\"default\":\"Não\"}}},\"_row_num\":3},{\"choice_list_name\":\"YesNoU\",\"data_value\":\"3\",\"display\":{\"title\":{\"text\":{\"english\":\"Don't know\",\"default\":\"Não sabe\"}}},\"_row_num\":4}]"
+      },
+      {
+        "_partition": "Column",
+        "_aspect": "CAMPINF",
+        "_key": "displayChoicesList",
+        "_type": "object",
+        "_value": "[{\"choice_list_name\":\"campinf\",\"data_value\":\"1\",\"display\":{\"title\":{\"text\":{\"english\":\"Mother\",\"default\":\"Mãe\"}}},\"_row_num\":101},{\"choice_list_name\":\"campinf\",\"data_value\":\"2\",\"display\":{\"title\":{\"text\":{\"english\":\"Card\",\"default\":\"Cartão\"}}},\"_row_num\":102},{\"choice_list_name\":\"campinf\",\"data_value\":\"3\",\"display\":{\"title\":{\"text\":{\"english\":\"Other\",\"default\":\"Outra\"}}},\"_row_num\":103}]"
+      },
+      {
+        "_partition": "Column",
+        "_aspect": "CAMPNOVO",
+        "_key": "displayChoicesList",
+        "_type": "object",
+        "_value": "[{\"choice_list_name\":\"YesNo\",\"data_value\":\"1\",\"display\":{\"title\":{\"text\":{\"english\":\"Yes\",\"default\":\"Sim\"}}},\"_row_num\":53},{\"choice_list_name\":\"YesNo\",\"data_value\":\"2\",\"display\":{\"title\":{\"text\":{\"english\":\"No\",\"default\":\"Não\"}}},\"_row_num\":54}]"
       },
       {
         "_partition": "Column",
@@ -38960,7 +40090,7 @@
         "_aspect": "TECTO",
         "_key": "displayChoicesList",
         "_type": "object",
-        "_value": "[{\"choice_list_name\":\"tecto\",\"data_value\":\"1\",\"display\":{\"title\":{\"text\":{\"english\":\"Straw\",\"default\":\"Palha\"}}},\"_row_num\":91},{\"choice_list_name\":\"tecto\",\"data_value\":\"2\",\"display\":{\"title\":{\"text\":{\"english\":\"Zinc\",\"default\":\"Zinco\"}}},\"_row_num\":92},{\"choice_list_name\":\"tecto\",\"data_value\":\"3\",\"display\":{\"title\":{\"text\":{\"english\":\"Tiles\",\"default\":\"Telha\"}}},\"_row_num\":93},{\"choice_list_name\":\"tecto\",\"data_value\":\"4\",\"display\":{\"title\":{\"text\":{\"english\":\"Concrete\",\"default\":\"Fibra cimento\"}}},\"_row_num\":94},{\"choice_list_name\":\"tecto\",\"data_value\":\"9\",\"display\":{\"title\":{\"text\":{\"english\":\"Don't know\",\"default\":\"Não sabe\"}}},\"_row_num\":95}]"
+        "_value": "[{\"choice_list_name\":\"tecto\",\"data_value\":\"1\",\"display\":{\"title\":{\"text\":{\"english\":\"Straw\",\"default\":\"Palha\"}}},\"_row_num\":92},{\"choice_list_name\":\"tecto\",\"data_value\":\"2\",\"display\":{\"title\":{\"text\":{\"english\":\"Zinc\",\"default\":\"Zinco\"}}},\"_row_num\":93},{\"choice_list_name\":\"tecto\",\"data_value\":\"3\",\"display\":{\"title\":{\"text\":{\"english\":\"Tiles\",\"default\":\"Telha\"}}},\"_row_num\":94},{\"choice_list_name\":\"tecto\",\"data_value\":\"4\",\"display\":{\"title\":{\"text\":{\"english\":\"Concrete\",\"default\":\"Fibra cimento\"}}},\"_row_num\":95},{\"choice_list_name\":\"tecto\",\"data_value\":\"9\",\"display\":{\"title\":{\"text\":{\"english\":\"Don't know\",\"default\":\"Não sabe\"}}},\"_row_num\":96}]"
       },
       {
         "_partition": "Column",
