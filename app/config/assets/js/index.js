@@ -136,12 +136,10 @@ function initDrops() {
     var months = [1,2,3,4,5,6,7,8,9,10,11,12];
     var years = [defaultYea-1, defaultYea, defaultYea+1];
 
-    //var selReg = document.getElementById('selRegion');
     $.each(days, function() {
         if (this == defaultDay) {
             selDay.append($("<option />").val(this).text(this).attr("selected",true));
-        }
-        else {
+        } else {
             selDay.append($("<option />").val(this).text(this));
         }
     })
@@ -149,8 +147,7 @@ function initDrops() {
     $.each(months, function() {
         if (this == defaultMon) {
             selMon.append($("<option />").val(this).text(this).attr("selected",true));
-        }
-        else {
+        } else {
             selMon.append($("<option />").val(this).text(this));
         }
     })
@@ -158,8 +155,7 @@ function initDrops() {
     $.each(years, function() {
         if (this == defaultYea) {
             selYea.append($("<option />").val(this).text(this).attr("selected",true));
-        }
-        else {
+        } else {
             selYea.append($("<option />").val(this).text(this));
         }
     })
@@ -169,10 +165,8 @@ function initDrops() {
         selAss.append($("<option />").val(this.no).text(this.name));
     })
 
-    // selReg.append($("<option />").val(-1).text(""));
+    selReg.append($("<option />").val(-1).text(""));
     $.each(regions, function() {
-        // console.log("REGIONS:");
-        // console.log(this);
         selReg.append($("<option />").val(this.REG).text(this.REGNOME));
     });
 
@@ -218,9 +212,20 @@ function getOption(name,valle) {
     return option;
 }
 
-// ********************************** ASSISTANT LIST BELOW **********************************
-// ********************************** ASSISTANT LIST BELOW **********************************
-// ********************************** ASSISTANT LIST BELOW **********************************
+// Get assistants from CSV
 var assistants = [];
-assistants.push({no: 'Andy', name: 'Andy'});
-assistants.push({no: 'Carly', name: 'Carly'});
+$.ajax({
+    url: 'assistants.csv',
+    dataType: 'text',
+  }).done(getAssistants);
+
+  function getAssistants(data) {
+    var allRows = data.split(/\r?\n|\r/);
+    for (var row = 1; row < allRows.length; row++) {  // start at row = 1 to skip header
+        var rowValues = allRows[row].split(",");
+        var p = {no: rowValues[0], name: rowValues[1]};
+        assistants.push(p);
+    }
+    console.log('Rows in CSV', allRows);
+    console.log('Assistants', assistants);
+  }

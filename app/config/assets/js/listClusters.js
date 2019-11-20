@@ -34,7 +34,7 @@ function loadPersons() {
             var GRUPO =  result.getData(row,"GRUPO");
             var AMOSTRA = result.getData(row,"AMOSTRA");
             var VISITED = false;
-            clusters.push({ id: MOR, visited: VISITED, group: GRUPO, amostra: AMOSTRA, name: MOR + " - " + MORNOME + " (" + GRUPO + ")"});
+            clusters.push({ id: MOR, visited: VISITED, group: GRUPO, amostra: AMOSTRA, mor: MORNOME, name: MOR + " - " + MORNOME + " (" + GRUPO + ")"});
         }        
         populateView();
         return;
@@ -56,7 +56,13 @@ function populateView() {
     $.each(clusters, function() {
         console.log(this);
         var visited = this.visited ? 'visited' : '';
-        ul.append($("<li />").append($("<button />").attr('onclick','go(' + this.id + ',' + this.amostra + ');').attr('class',visited + ' btn group' + this.group).text(this.name)));
+        if (this.group == 1 | this.group == 2 | this.group == 3 | this.group == 4 ) {
+            ul.append($("<li />").append($("<button />").attr('onclick','go(' + this.id + ',' + this.amostra + ');').attr('class',visited + ' btn group' + this.group).text(this.name)));
+        } else {
+            this.name = this.id + " - " + this.mor + " (NS)";
+            ul.append($("<li />").append($("<button />").attr('onclick','go(' + this.id + ',' + this.amostra + ');').attr('class',visited + ' btn groupOther').text(this.name)));
+        }
+        
     });
 }
 
