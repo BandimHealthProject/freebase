@@ -1,0 +1,67 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+<html>
+<!--Menu-->
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link href="libs/bootstrap-3.3.7-dist/css/bootstrap.css" type="text/css" rel="stylesheet" />
+    <link href="css/homescreen.css" type="text/css" rel="stylesheet" />
+    <script type="text/javascript" src="commonDefinitions.js"></script>
+    <script type="text/javascript" src="libs/jquery-3.2.1.js"></script>
+    <script type="text/javascript" src="libs/jquery-migrate-3.0.0.js"></script>
+    <script type="text/javascript" src="../../system/js/odkCommon.js"></script>
+    <script type="text/javascript" src="../../system/js/odkData.js"></script>
+    <script type="text/javascript" src="../../system/tables/js/odkTables.js"></script>
+    
+    <script type="text/javascript" src="js/util.js"></script>
+    <script type="text/javascript" src="js/moveToWoman.js"></script>
+    
+    <style>
+        ul#persons > li {
+            list-style:none;
+        }
+        ul#persons > li > button {
+            margin:10px;
+            height:45px;
+            width:100%;
+            background-size: 30px;        
+        }
+        button.mif {
+            background-color: darkcyan;
+            color: white;
+            background-image: url(./img/woman.png);
+            text-align: left;
+            background-position: left;
+            background-repeat: no-repeat;
+            text-indent: 25px;
+        }
+        button.mifnew {
+            background-color: lightyellow;
+            background-image: url(./img/woman.png);
+            text-align: left;
+            background-position: left;
+            background-repeat: no-repeat;
+            text-indent: 25px;
+        }
+        button.visited {
+            opacity:.5;
+            border:solid gray 1px;
+        }
+        
+    </style>
+</head>
+
+<body>
+    <div id="main" class="container" style="height: 100vh;">
+        <h1>Mulheres</h1>
+        <h3>Escolha para qual mulher mudar a criança</h3>
+        <ul id="persons" style="padding:20px;">            
+        </ul>
+    </div>
+    <script>
+    $(function() {
+        display();
+    });
+    </script>
+</body>
+</html>

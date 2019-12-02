@@ -29,7 +29,19 @@ function display() {
 
 function loadPersons() {
     // SQL to get women (MIF)
-    var sql = "SELECT REGID, NOME, CASA, FOGAO FROM MIF WHERE REG = " + region + " AND TAB = " + tabanca + " AND MOR = " + cluster + " GROUP BY REGID HAVING MIN(ROWID) AND ESTADO = 1 ORDER BY substr(CONT, instr(CONT, 'Y:')+2, 4) || substr('00'|| trim(substr(CONT, instr(CONT, 'M:')+2, 2),','), -2, 2) || substr('00'|| trim(substr(CONT, instr(CONT, 'D:')+2, 2),','), -2, 2) DESC, NOME";
+    var varNames = "REGID, NOME, CASA, FOGAO";
+    var sql = "SELECT " + varNames + 
+        " FROM (" +
+        " SELECT " + varNames + ", REG, TAB, MOR, ESTADO" +
+        " FROM MIF " + 
+        " ORDER BY " +
+        " substr(CONT, instr(CONT, 'Y:')+2, 4) || " +
+        " substr('00'|| trim(substr(CONT, instr(CONT, 'M:')+2, 2),','), -2, 2) || " +
+        " substr('00'|| trim(substr(CONT, instr(CONT, 'D:')+2, 2),','), -2, 2) ASC" + // For some reason this shold be ASC, but DESC when putting the code in SQL-database viewer
+        " ) " +
+        " WHERE REG = " + region + " AND TAB = " + tabanca + " AND MOR = " + cluster +
+        " GROUP BY REGID HAVING ESTADO = 1" +
+        " ORDER BY NOME ASC";
     persons = [];
     console.log("Querying database for MIFs...");
     console.log(sql);

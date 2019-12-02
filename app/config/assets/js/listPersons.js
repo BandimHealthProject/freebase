@@ -162,7 +162,7 @@ function loadChildren() {
             var REGIDC = result.getData(row,"REGIDC");
             var NOME = titleCase(result.getData(row,"NOME"));
             var REGID = result.getData(row,"REGID"); // This is now the mother's id (go figure)
-            var pres = result.getData(row,"PRES");
+            var PRES = result.getData(row,"PRES");
             var CARTVAC = result.getData(row,"CARTVAC");
             var CONT = result.getData(row,"CONT");
             var OUTDATE = result.getData(row,"OUTDATE");
@@ -199,7 +199,7 @@ function loadChildren() {
             var VACOU5 = result.getData(row,"VACOU5");
             var VACOU5TIPO = result.getData(row,"VACOU5TIPO");
 
-            var p = { type: 'crianca', REGIDC, NOME, REGID, pres, CARTVAC, CONT, OUTDATE, SEX, NOMEMAE, CASA, FOGAO, ONEYEAR, BCG, POLIONAS, POLIO1, PENTA1, PCV1, ROX1, POLIO2, PENTA2, PCV2, ROX2, POLIO3, PENTA3, PCV3, VPI, SARAMPO1, FEBAMAREL, VACOU1, VACOU1TIPO, VACOU2, VACOU2TIPO, VACOU3, VACOU3TIPO, VACOU4, VACOU4TIPO, VACOU5, VACOU5TIPO};
+            var p = { type: 'crianca', REGIDC, NOME, REGID, PRES, CARTVAC, CONT, OUTDATE, SEX, NOMEMAE, CASA, FOGAO, ONEYEAR, BCG, POLIONAS, POLIO1, PENTA1, PCV1, ROX1, POLIO2, PENTA2, PCV2, ROX2, POLIO3, PENTA3, PCV3, VPI, SARAMPO1, FEBAMAREL, VACOU1, VACOU1TIPO, VACOU2, VACOU2TIPO, VACOU3, VACOU3TIPO, VACOU4, VACOU4TIPO, VACOU5, VACOU5TIPO};
             console.log(p);
             // If control visit: list children <12m at last visit (variable ONEYEAR !=1)
             if (visitType == "control" & ONEYEAR != 1) {
@@ -287,8 +287,8 @@ function populateView() {
     defaults['CONT'] = date; // today's date
     defaults['REGDIA'] = date;
 
-// Adds button for new MIF
-    ul.append($("<li />").append($("<button />").attr('id','new' + '_' + 'mif').attr('class', ' btn ' + 'mifnew').text('Nova Mulher')));
+// Add button for new MIF
+    ul.append($("<li />").append($("<button />").attr('id','new' + '_' + 'mif').attr('class', ' btn ' + 'mifnew').text('Nova mulher')));
     var btn = ul.find('#' + 'new' + '_' + 'mif');
         btn.on("click", function() {
             odkTables.addRowWithSurvey(
@@ -298,12 +298,19 @@ function populateView() {
                 null,
                 defaults);
         })
-// Adds button for new CRIANCA
-    ul.append($("<li />").append($("<button />").attr('id','new' + '_' + 'crianca').attr('class', ' btn ' + 'criancanew').text('Novo Crianca')));
+// Add button for new CRIANCA
+    ul.append($("<li />").append($("<button />").attr('id','new' + '_' + 'crianca').attr('class', ' btn ' + 'criancanew').text('Novo criança')));
     var btn = ul.find('#' + 'new' + '_' + 'crianca');
         btn.on("click", function() {
             var queryParams = util.setQuerystringParams(region, tabanca, assistant, visitType, date, amostra, cluster);
-            odkTables.launchHTML(null,  'config/assets/listWomen.html' + queryParams);
+            odkTables.launchHTML(null, 'config/assets/listWomen.html' + queryParams);
+        })
+// Add button for moving CRIANCA to other woman
+    ul.append($("<li />").append($("<button />").attr('id','move' + '_' + 'crianca').attr('class', ' btn ' + 'criancanew').text('Mudar criança para outra mulher')));
+    var btn = ul.find('#' + 'move' + '_' + 'crianca');
+        btn.on("click", function() {
+            var queryParams = util.setQuerystringParams(region, tabanca, assistant, visitType, date, amostra, cluster);
+            odkTables.launchHTML(null, 'config/assets/moveChild.html' + queryParams);
         })
 }
 
@@ -405,7 +412,7 @@ function getDefaultsChild(person) {
     defaults['NOME'] = person.NOME;
     defaults['REGID'] = person.REGID;
     
-    defaults['pres'] = person.pres;
+    defaults['pres'] = person.PRES;
     defaults['CARTVAC'] = person.CARTVAC;
     defaults['lastvisitdate'] = person.CONT; // date of last visit
     defaults['OUTDATE'] = person.OUTDATE;
