@@ -28,7 +28,7 @@ function display() {
 
 function loadPersons() {
     // SQL to get women (MIF)
-    var varNames = "REGID, NOME, GR, ESTADOVIS, CART, CONT, MIFDNASC, CASA, FOGAO, RELA1, RELA1NOME, VAC1TIPO, VAC1DATA, VAC1INF, VAC2TIPO, VAC2DATA, VAC2INF, VAC3TIPO, VAC3DATA, VAC3INF, VAC4TIPO, VAC4DATA, VAC4INF, VAC5TIPO, VAC5DATA, VAC5INF, VAC6TIPO, VAC6DATA, VAC6INF, VAC7TIPO, VAC7DATA, VAC7INF, VAC8TIPO, VAC8DATA, VAC8INF, VAC9TIPO, VAC9DATA, VAC9INF, VAC10TIPO, VAC10DATA, VAC10INF, VAC11TIPO, VAC11DATA, VAC11INF, VAC12TIPO, VAC12DATA, VAC12INF, VAC13TIPO, VAC13DATA, VAC13INF, VAC14TIPO, VAC14DATA, VAC14INF, VAC15TIPO, VAC15DATA, VAC15INF, VAC16TIPO, VAC16DATA, VAC16INF, VAC17TIPO, VAC17DATA, VAC17INF, VAC18TIPO, VAC18DATA, VAC18INF, VAC19TIPO, VAC19DATA, VAC19INF, VAC20TIPO, VAC20DATA, VAC20INF";
+    var varNames = "_id, REGID, NOME, GR, ESTADOVIS, CART, CONT, MIFDNASC, CASA, FOGAO, RELA1, RELA1NOME, CONSENTSIG, CICA, VAC1TIPO, VAC1DATA, VAC1INF, VAC2TIPO, VAC2DATA, VAC2INF, VAC3TIPO, VAC3DATA, VAC3INF, VAC4TIPO, VAC4DATA, VAC4INF, VAC5TIPO, VAC5DATA, VAC5INF, VAC6TIPO, VAC6DATA, VAC6INF, VAC7TIPO, VAC7DATA, VAC7INF, VAC8TIPO, VAC8DATA, VAC8INF, VAC9TIPO, VAC9DATA, VAC9INF, VAC10TIPO, VAC10DATA, VAC10INF, VAC11TIPO, VAC11DATA, VAC11INF, VAC12TIPO, VAC12DATA, VAC12INF, VAC13TIPO, VAC13DATA, VAC13INF, VAC14TIPO, VAC14DATA, VAC14INF, VAC15TIPO, VAC15DATA, VAC15INF, VAC16TIPO, VAC16DATA, VAC16INF, VAC17TIPO, VAC17DATA, VAC17INF, VAC18TIPO, VAC18DATA, VAC18INF, VAC19TIPO, VAC19DATA, VAC19INF, VAC20TIPO, VAC20DATA, VAC20INF";
     var sql = "SELECT " + varNames + 
         " FROM (" +
         " SELECT " + varNames + ", REG, TAB, MOR, ESTADO" +
@@ -48,6 +48,7 @@ function loadPersons() {
     var successFn = function( result ) {
         console.log("Found " + result.getCount() + " persons");
         for (var row = 0; row < result.getCount(); row++) {
+            var rowId = result.getData(row,"_id").slice(5); // rowId from sql table
             var REGID = result.getData(row,"REGID"); // Despite obviously bad naming, this is actually the Person ID
             var NOME = titleCase(result.getData(row,"NOME"));
             var ESTADOVIS = result.getData(row,"ESTADOVIS");
@@ -59,6 +60,8 @@ function loadPersons() {
             var RELA1 = result.getData(row,"RELA1");
             var RELA1NOME = result.getData(row,"RELA1NOME");
             var GR = result.getData(row,"GR");
+            var CONSENTSIG = result.getData(row,"CONSENTSIG");
+            var CICA = result.getData(row,"CICA");
             
             var VAC1TIPO = result.getData(row,"VAC1TIPO");
             var VAC1DATA = result.getData(row,"VAC1DATA");
@@ -121,7 +124,7 @@ function loadPersons() {
             var VAC20DATA = result.getData(row,"VAC20DATA");
             var VAC20INF = result.getData(row,"VAC20INF");
 
-            var p = { type: 'mif', REGID, NOME, GR, ESTADOVIS, CART, CONT, MIFDNASC, CASA, FOGAO, RELA1, RELA1NOME, VAC1TIPO, VAC1DATA, VAC1INF, VAC2TIPO, VAC2DATA, VAC2INF, VAC3TIPO, VAC3DATA, VAC3INF, VAC4TIPO, VAC4DATA, VAC4INF, VAC5TIPO, VAC5DATA, VAC5INF, VAC6TIPO, VAC6DATA, VAC6INF, VAC7TIPO, VAC7DATA, VAC7INF, VAC8TIPO, VAC8DATA, VAC8INF, VAC9TIPO, VAC9DATA, VAC9INF, VAC10TIPO, VAC10DATA, VAC10INF, VAC11TIPO, VAC11DATA, VAC11INF, VAC12TIPO, VAC12DATA, VAC12INF, VAC13TIPO, VAC13DATA, VAC13INF, VAC14TIPO, VAC14DATA, VAC14INF, VAC15TIPO, VAC15DATA, VAC15INF, VAC16TIPO, VAC16DATA, VAC16INF, VAC17TIPO, VAC17DATA, VAC17INF, VAC18TIPO, VAC18DATA, VAC18INF, VAC19TIPO, VAC19DATA, VAC19INF, VAC20TIPO, VAC20DATA, VAC20INF };
+            var p = { type: 'mif', rowId, REGID, NOME, GR, ESTADOVIS, CART, CONT, MIFDNASC, CASA, FOGAO, RELA1, RELA1NOME, CONSENTSIG, CICA, VAC1TIPO, VAC1DATA, VAC1INF, VAC2TIPO, VAC2DATA, VAC2INF, VAC3TIPO, VAC3DATA, VAC3INF, VAC4TIPO, VAC4DATA, VAC4INF, VAC5TIPO, VAC5DATA, VAC5INF, VAC6TIPO, VAC6DATA, VAC6INF, VAC7TIPO, VAC7DATA, VAC7INF, VAC8TIPO, VAC8DATA, VAC8INF, VAC9TIPO, VAC9DATA, VAC9INF, VAC10TIPO, VAC10DATA, VAC10INF, VAC11TIPO, VAC11DATA, VAC11INF, VAC12TIPO, VAC12DATA, VAC12INF, VAC13TIPO, VAC13DATA, VAC13INF, VAC14TIPO, VAC14DATA, VAC14INF, VAC15TIPO, VAC15DATA, VAC15INF, VAC16TIPO, VAC16DATA, VAC16INF, VAC17TIPO, VAC17DATA, VAC17INF, VAC18TIPO, VAC18DATA, VAC18INF, VAC19TIPO, VAC19DATA, VAC19INF, VAC20TIPO, VAC20DATA, VAC20INF };
             console.log(p);
             persons.push(p);
         }
@@ -140,7 +143,7 @@ function loadPersons() {
 
 function loadChildren() {
     // SQL to load children
-    var varNames = "REGIDC, NOME, REGID, PRES, CARTVAC, CONT, OUTDATE, SEX, NOMEMAE, CASA, ONEYEAR, FOGAO, BCG, POLIONAS, POLIO1, PENTA1, PCV1, ROX1, POLIO2, PENTA2, PCV2, ROX2, POLIO3, PENTA3, PCV3, VPI, SARAMPO1, FEBAMAREL, VACOU1, VACOU1TIPO, VACOU2, VACOU2TIPO, VACOU3, VACOU3TIPO, VACOU4, VACOU4TIPO, VACOU5, VACOU5TIPO";
+    var varNames = "_id, REGIDC, NOME, REGID, PRES, CARTVAC, CONT, OUTDATE, SEX, NOMEMAE, CASA, ONEYEAR, FOGAO, COMSUP, PAMA, MOMA, BCG, POLIONAS, POLIO1, PENTA1, PCV1, ROX1, POLIO2, PENTA2, PCV2, ROX2, POLIO3, PENTA3, PCV3, VPI, SARAMPO1, FEBAMAREL, VACOU1, VACOU1TIPO, VACOU2, VACOU2TIPO, VACOU3, VACOU3TIPO, VACOU4, VACOU4TIPO, VACOU5, VACOU5TIPO";
     var sql = "SELECT " + varNames + 
         " FROM (" +
         " SELECT " + varNames + ", REG, TAB, MOR, ESTADO" +
@@ -159,6 +162,7 @@ function loadChildren() {
     var successFn = function( result ) {
         console.log("Found " + result.getCount() + " children");
         for (var row = 0; row < result.getCount(); row++) {
+            var rowId = result.getData(row,"_id").slice(5); // rowId from sql table
             var REGIDC = result.getData(row,"REGIDC");
             var NOME = titleCase(result.getData(row,"NOME"));
             var REGID = result.getData(row,"REGID"); // This is now the mother's id (go figure)
@@ -171,6 +175,9 @@ function loadChildren() {
             var CASA = result.getData(row,"CASA");
             var FOGAO = result.getData(row,"FOGAO");
             var ONEYEAR = result.getData(row,"ONEYEAR");
+            var COMSUP = result.getData(row,"COMSUP");
+            var PAMA = result.getData(row,"PAMA");
+            var MOMA = result.getData(row,"MOMA");
            
             var BCG = result.getData(row,"BCG");
             var POLIONAS = result.getData(row,"POLIONAS");
@@ -199,7 +206,7 @@ function loadChildren() {
             var VACOU5 = result.getData(row,"VACOU5");
             var VACOU5TIPO = result.getData(row,"VACOU5TIPO");
 
-            var p = { type: 'crianca', REGIDC, NOME, REGID, PRES, CARTVAC, CONT, OUTDATE, SEX, NOMEMAE, CASA, FOGAO, ONEYEAR, BCG, POLIONAS, POLIO1, PENTA1, PCV1, ROX1, POLIO2, PENTA2, PCV2, ROX2, POLIO3, PENTA3, PCV3, VPI, SARAMPO1, FEBAMAREL, VACOU1, VACOU1TIPO, VACOU2, VACOU2TIPO, VACOU3, VACOU3TIPO, VACOU4, VACOU4TIPO, VACOU5, VACOU5TIPO};
+            var p = { type: 'crianca', rowId, REGIDC, NOME, REGID, PRES, CARTVAC, CONT, OUTDATE, SEX, NOMEMAE, CASA, FOGAO, ONEYEAR, COMSUP, PAMA, MOMA, BCG, POLIONAS, POLIO1, PENTA1, PCV1, ROX1, POLIO2, PENTA2, PCV2, ROX2, POLIO3, PENTA3, PCV3, VPI, SARAMPO1, FEBAMAREL, VACOU1, VACOU1TIPO, VACOU2, VACOU2TIPO, VACOU3, VACOU3TIPO, VACOU4, VACOU4TIPO, VACOU5, VACOU5TIPO};
             console.log(p);
             // If control visit: list children <12m at last visit (variable ONEYEAR !=1)
             if (visitType == "control" & ONEYEAR != 1) {
@@ -336,6 +343,8 @@ function getDefaultsMIF(person) {
     defaults['FOGAO'] = person.FOGAO;
     defaults['RELA1'] = person.RELA1;
     defaults['RELA1NOME'] = person.RELA1NOME;
+    defaults['CONSENTSIG'] = person.CONSENTSIG;
+    defaults['CICA'] = person.CICA;
     defaults['VAC1TIPO'] = person.VAC1TIPO;
     defaults['VAC1DATA'] = person.VAC1DATA;
     defaults['VAC1INF'] = person.VAC1INF;
@@ -399,6 +408,29 @@ function getDefaultsMIF(person) {
     return defaults;
 }
 
+function oneYear(person) {
+    var oneYear = null;
+    var diffInDays;
+    if (person.ONEYEAR == 1) {
+        oneYear = 1
+    } else if (person.CONT != "D:NS,M:NS,Y:NS") {
+        var contD = Number(person.CONT.slice(2, person.CONT.search("M")-1));
+        var contM = person.CONT.slice(person.CONT.search("M")+2, person.CONT.search("Y")-1);
+        var contY = person.CONT.slice(person.CONT.search("Y")+2);  
+        var dateCont = new Date(contY, contM-1, contD);
+        var dobD = Number(person.CONT.slice(2, person.CONT.search("M")-1));
+        var dobM = person.OUTDATE.slice(person.OUTDATE.search("M")+2, person.OUTDATE.search("Y")-1);
+        var dobY = person.OUTDATE.slice(person.OUTDATE.search("Y")+2);  
+        var dateDob = new Date(dobY, dobM-1, dobD);
+        var diffInDays = (dateCont.getTime() - dateDob.getTime())/(1000*3600*24);
+        console.log(dateDob, dateCont, diffInDays);
+        if (diffInDays > 365) {
+            oneYear = 1;
+        }
+    }
+    return oneYear;
+}
+
 function getDefaultsChild(person) {
     var defaults = {};
     defaults['MOR'] = cluster;
@@ -420,7 +452,11 @@ function getDefaultsChild(person) {
     defaults['NOMEMAE'] = person.NOMEMAE;
     defaults['CASA'] = person.CASA;
     defaults['FOGAO'] = person.FOGAO;
-    defaults['ONEYEAR'] = person.ONEYEAR;
+    defaults['ONEYEAR'] = oneYear(person);
+    defaults['comsup'] = person.COMSUP;
+    defaults['pama'] = person.PAMA;
+    defaults['moma'] = person.MOMA;
+
     defaults['BCG'] = person.BCG;
     defaults['POLIONAS'] = person.POLIONAS;
     defaults['POLIO1'] = person.POLIO1;
@@ -459,6 +495,7 @@ function openForm(type, person) {
     var defaults = {};
     var tableId = "mif" == type ? "MIF" : "CRIANCA";
     var formId = "mif" == type ? "MIF" : "CRIANCA";
+    var rowId = "uuid:" + person.rowId;
     if ("mif" == type) {
         // It's a MIF
         defaults = getDefaultsMIF(person);
@@ -467,12 +504,21 @@ function openForm(type, person) {
         defaults = getDefaultsChild(person);
     }
     console.log("Opening form with:", defaults);
-    odkTables.addRowWithSurvey(
+    if (person.CONT == date) {
+        odkTables.editRowWithSurvey(
+            null,
+            tableId,
+            rowId,
+            formId,
+            null,);
+    } else {
+        odkTables.addRowWithSurvey(
             null,
             tableId,
             formId,
             null,
             defaults);
+    }
 }
 
 function titleCase(str) {
