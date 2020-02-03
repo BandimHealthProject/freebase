@@ -17,6 +17,7 @@ function display() {
     // Set the background to be a picture.
     //var body = $('#main');
     $('body').first().css('background', 'url(img/bafata.jpg) fixed');
+    $('body').css('background-size', 'cover');
 
     loadPersons();
 }

@@ -23,6 +23,30 @@ return {
             number = "0" + number
         };
         return letters + number;
+    },
+    getNoc: function(reg, tab) {
+    noc = [];   
+    var sql = "select MAX(NOC) AS NOC FROM CRIANCA WHERE REG == " + reg + " AND TAB == "+ tab;
+    console.log("Querying database for getNoc...");
+    console.log(sql);
+    var successFn = function(result) {
+        var maxNoc = Number(result.getData(0,"NOC")) + 1;
+        console.log("maxNoc:", maxNoc);
+        noc[0] = maxNoc
+        console.log("test:", noc);
+        console.log("noc:", noc[0]);
+        return;
+    }
+    var failureFn = function( errorMsg ) {
+        console.error('Failed to get mul from database: ' + errorMsg);
+        console.error('Trying to execute the following SQL:');
+        console.error(sql);
+        alert("Program error Unable to look up getNoc.");
+    }
+    odkData.arbitraryQuery('CRIANCA', sql, null, null, null, successFn, failureFn);
+    console.log("test2:", noc);
+    console.log("noc2:", noc[0]);
+    return;
     }
 }
 });

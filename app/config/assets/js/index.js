@@ -21,6 +21,7 @@ function display() {
     // var body = $('#main');
     // body.css('background-image', 'url(img/bafata.jpg)');
     $('body').first().css('background', 'url(img/bafata.jpg) fixed');
+    $('body').css('background-size', 'cover');
     
     console.log("We got:" + ass + ", " + tab + ", " + reg + ", " + day + ", " + mon + ", " + yea);
     var ass = window.localStorage.getItem('ass');

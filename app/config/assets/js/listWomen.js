@@ -4,7 +4,7 @@
 'use strict';
 /* global odkTables, util, odkCommon, odkData */
 
-var persons, visitType, cluster, assistant, region, tabanca, date, amostra;
+var persons, visitType, noc, cluster, assistant, region, tabanca, date, amostra;
 // note that persons are the MIFs
 
 function display() {
@@ -20,6 +20,8 @@ function display() {
     // Set the background to be a picture.
     var body = $('body').first();
     body.css('background', 'url(img/bafata.jpg) fixed');
+    body.css('background-size', 'cover');
+    getNoc();
     loadPersons();
 }
 
@@ -29,7 +31,7 @@ function display() {
 
 function loadPersons() {
     // SQL to get women (MIF)
-    var varNames = "REGID, NOME, CASA, FOGAO";
+    var varNames = "REGID, NOME, CASA, FOGAO, CONT, ESTADO";
     var sql = "SELECT " + varNames + 
         " FROM (" +
         " SELECT " + varNames + ", REG, TAB, MOR, ESTADO" +
@@ -40,7 +42,7 @@ function loadPersons() {
         " substr('00'|| trim(substr(CONT, instr(CONT, 'D:')+2, 2),','), -2, 2) ASC" + // For some reason this shold be ASC, but DESC when putting the code in SQL-database viewer
         " ) " +
         " WHERE REG = " + region + " AND TAB = " + tabanca + " AND MOR = " + cluster +
-        " GROUP BY REGID HAVING ESTADO = 1" +
+        " GROUP BY REGID" +
         " ORDER BY NOME ASC";
     persons = [];
     console.log("Querying database for MIFs...");
@@ -52,10 +54,14 @@ function loadPersons() {
             var NOME = titleCase(result.getData(row,"NOME"));
             var CASA = result.getData(row,"CASA");
             var FOGAO = result.getData(row,"FOGAO");
-            
-            var p = { type: 'mif', REGID, NOME, CASA, FOGAO };
+            var CONT = result.getData(row,"CONT");
+            var ESTADO = result.getData(row,"ESTADO");
+
+            var p = { type: 'mif', REGID, NOME, CASA, FOGAO, CONT, ESTADO};
             console.log(p);
-            persons.push(p);
+            if (ESTADO == 1 | CONT == date) {
+                persons.push(p);
+            }
         }
         populateView();
         return;
@@ -99,11 +105,13 @@ function populateView() {
     defaults['CONT'] = date; // today's date
     defaults['REGDIA'] = date;
     defaults['REGID'] = "Outro"; // regid på "anden" mor ???
+    defaults['NOC'] = noc;
 
     // Adds button for "anoter MIF"
     ul.append($("<li />").append($("<button />").attr('id','new' + '_' + 'mif').attr('class', ' btn ' + 'mifnew').text('Outro')));
     var btn = ul.find('#' + 'new' + '_' + 'mif');
         btn.on("click", function() {
+            console.log("Opening form with:", defaults);
             odkTables.addRowWithSurvey(
                 null,
                 'CRIANCA',
@@ -111,6 +119,26 @@ function populateView() {
                 null,
                 defaults);
         })
+}
+
+function getNoc() {
+    var sql = "select MAX(NOC) AS NOC FROM CRIANCA WHERE REG==" + region + " AND TAB == "+ tabanca;
+    console.log("Querying database for getNoc...");
+    console.log(sql);
+    var successFn = function(result) {
+        var maxNoc = Number(result.getData(0,"NOC")) + 1;
+        noc = maxNoc;
+        console.log("maxNoc:", maxNoc);
+        return;
+    }
+    var failureFn = function( errorMsg ) {
+        console.error('Failed to get mul from database: ' + errorMsg);
+        console.error('Trying to execute the following SQL:');
+        console.error(sql);
+        alert("Program error Unable to look up getNoc.");
+    }
+    odkData.arbitraryQuery('CRIANCA', sql, null, null, null, successFn, failureFn);
+    return;
 }
 
 function getDefaultsMIF(person) {
@@ -127,6 +155,7 @@ function getDefaultsMIF(person) {
     defaults['CASA'] = person.CASA;
     defaults['FOGAO'] = person.FOGAO;
     defaults['REGDIA'] = date;
+    defaults['NOC'] = noc;
     return defaults;
 }
 

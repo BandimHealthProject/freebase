@@ -4,7 +4,7 @@
 'use strict';
 /* global odkTables, util, odkCommon, odkData */
 
-var persons, children, visitType, cluster, assistant, region, tabanca, date, amostra;
+var persons, children, mul, visitType, cluster, assistant, region, tabanca, date, amostra;
 // note that persons are the MIFs
 function display() {
     console.log("Persons list loading");
@@ -19,6 +19,8 @@ function display() {
     // Set the background to be a picture.
     var body = $('body').first();
     body.css('background', 'url(img/bafata.jpg) fixed');
+    body.css('background-size', 'cover');
+    getMul();
     loadPersons();
 }
 
@@ -293,7 +295,8 @@ function populateView() {
             openForm(that.type, that);
         })
     });
-// Set values for new child/mif
+    
+    // Set values for new child/mif
     var defaults = {};
     defaults['MOR'] = cluster;
     defaults['REG'] = region;
@@ -303,11 +306,13 @@ function populateView() {
     defaults['ASSISTENTE'] = assistant;
     defaults['CONT'] = date; // today's date
     defaults['REGDIA'] = date;
+    defaults['MUL'] = mul;
 
 // Add button for new MIF
     ul.append($("<li />").append($("<button />").attr('id','new' + '_' + 'mif').attr('class', ' btn ' + 'mifnew').text('Nova mulher')));
     var btn = ul.find('#' + 'new' + '_' + 'mif');
         btn.on("click", function() {
+            console.log("Opening form with:", defaults);
             odkTables.addRowWithSurvey(
                 null,
                 'MIF',
@@ -331,6 +336,26 @@ function populateView() {
         })
 }
 
+function getMul() {
+    var sql = "select MAX(MUL) AS MUL FROM MIF WHERE REG==" + region + 
+        " AND TAB == "+ tabanca +" AND MOR ==" + cluster;
+    console.log("Querying database for getMul...");
+    console.log(sql);
+    var successFn = function(result) {
+        var maxMul = Number(result.getData(0,"MUL")) + 1;
+        mul = maxMul;
+        console.log("maxMul:", maxMul);
+        return;
+    }
+    var failureFn = function( errorMsg ) {
+        console.error('Failed to get mul from database: ' + errorMsg);
+        console.error('Trying to execute the following SQL:');
+        console.error(sql);
+        alert("Program error Unable to look up getMul.");
+    }
+    odkData.arbitraryQuery('MIF', sql, null, null, null, successFn, failureFn);
+    return;
+}
 
 function getDefaultsMIF(person) {
     var defaults = {};
@@ -350,7 +375,7 @@ function getDefaultsMIF(person) {
     defaults['CONSENTSIG'] = person.CONSENTSIG;
     defaults['FOGAO'] = person.FOGAO;
     defaults['gr'] = person.GR;
-    defaults['lastvisitdate'] = person.CONT; // date of last visit
+    defaults['LASTVISITDATE'] = person.CONT; // date of last visit
     defaults['lastvisitestado'] = person.ESTADOVIS;
     defaults['MIFDNASC'] = person.MIFDNASC;
     defaults['NOME'] = person.NOME;
@@ -447,7 +472,7 @@ function getDefaultsChild(person) {
     defaults['CASA'] = person.CASA;
     defaults['comsup'] = person.COMSUP;
     defaults['FOGAO'] = person.FOGAO;
-    defaults['lastvisitdate'] = person.CONT; // date of last visit
+    defaults['LASTVISITDATE'] = person.CONT; // date of last visit
     defaults['moma'] = person.MOMA;
     defaults['NOME'] = person.NOME;
     defaults['NOMEMAE'] = person.NOMEMAE;

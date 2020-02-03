@@ -21,6 +21,7 @@ function display() {
     // Set the background to be a picture.
     var body = $('body').first();
     body.css('background', 'url(img/bafata.jpg) fixed');
+    body.css('background-size', 'cover');
     loadChildren();
 }
 
@@ -30,7 +31,7 @@ function display() {
 
 function loadChildren() {
     // SQL to load children
-    var varNames = "REGIDC, NOME, SEX";
+    var varNames = "REGIDC, NOME, SEX, CONT, ESTADO";
     var sql = "SELECT " + varNames + 
         " FROM (" +
         " SELECT " + varNames + ", REG, TAB, MOR, ESTADO" +
@@ -41,8 +42,8 @@ function loadChildren() {
         " substr('00'|| trim(substr(CONT, instr(CONT, 'D:')+2, 2),','), -2, 2) ASC " + // For some reason this shold be ASC, but DESC when putting the code in SQL-database viewer
         " ) " +
         " WHERE REG = " + region + " AND TAB = " + tabanca + " AND MOR = " + cluster +
-        " GROUP BY REGIDC HAVING ESTADO = 11" + 
-        " ORDER BY NOME ASC";
+        " GROUP BY REGIDC" + 
+        " ORDER BY NOME DESC";
     children = [];
     console.log("Querying database for CRIANCAs...");
     console.log(sql);
@@ -52,10 +53,14 @@ function loadChildren() {
             var REGIDC = result.getData(row,"REGIDC");
             var NOME = titleCase(result.getData(row,"NOME"));
             var SEX = result.getData(row,"SEX");
+            var CONT = result.getData(row,"CONT");
+            var ESTADO = result.getData(row,"ESTADO");
 
-            var p = { type: 'crianca', REGIDC, NOME, SEX};
+            var p = { type: 'crianca', REGIDC, NOME, SEX, CONT, ESTADO};
             console.log(p);
-            children.push(p);
+            if (ESTADO == 11 | CONT == date) {
+                children.push(p);
+            }
         }
         console.log("loadChildren:", children);
         populateView();

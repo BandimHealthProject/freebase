@@ -395,6 +395,12 @@
               "english": "Date of last period",
               "default": "Data de ultimo período"
             }
+          },
+          "hint": {
+            "text": {
+              "english": "First day of last period",
+              "default": "Primeiro dia do último período"
+            }
           }
         },
         "_row_num": 45
@@ -527,6 +533,12 @@
             "text": {
               "english": "Date of last period",
               "default": "Data de ultimo período"
+            }
+          },
+          "hint": {
+            "text": {
+              "english": "First day of last period",
+              "default": "Primeiro dia do último período"
             }
           }
         },
@@ -1429,6 +1441,12 @@
               "english": "Date of last period",
               "default": "Data de ultimo período"
             }
+          },
+          "hint": {
+            "text": {
+              "english": "First day of last period",
+              "default": "Primeiro dia do último período"
+            }
           }
         },
         "_row_num": 55
@@ -1561,6 +1579,12 @@
             "text": {
               "english": "Date of last period",
               "default": "Data de ultimo período"
+            }
+          },
+          "hint": {
+            "text": {
+              "english": "First day of last period",
+              "default": "Primeiro dia do último período"
             }
           }
         },
@@ -2377,7 +2401,7 @@
           "prompt": {
             "text": {
               "english": "Number of children born",
-              "default": "Número do nascimento da criança"
+              "default": "Quantas crianças estavam na barriga"
             }
           }
         },
@@ -2410,8 +2434,8 @@
         "display": {
           "prompt": {
             "text": {
-              "english": "Have vaccination  card?",
-              "default": "Tem cartão de vacinas da mulher?"
+              "english": "Vaccination card",
+              "default": "Vartão de vacinas da mulher"
             }
           }
         },
@@ -3803,7 +3827,7 @@
         "linked_table_id": "CRIANCA",
         "selection": "PREGID = ?",
         "selectionArgs": "[opendatakit.getCurrentInstanceId()]",
-        "newRowInitialElementKeyToValueMap": "{PREGID: opendatakit.getCurrentInstanceId(), REGID: data('REGID'), REGDIA: data('PREGDIA'), REG: data('REG'), TAB: data('TAB'), MOR: data('MOR'), CASA: data('CASA'), FOGAO: data('FOGAO'), AMO: data('AMO'), CABA: data('CABA'), GERADOR: data('GERADOR'), OBSSES: data('OBSSES'), RADIO: data('RADIO'), SESDATA: data('SESDATA'), TECTO: data('TECTO'), TELEMOVEL: data('TELEMOVEL'), TELENUMERO: data('TELENUMERO'), OBSPART: data('OBSPART'), OUTDATE: data('OUTDATE'), ASSISTPART: data('ASSISTPART'), CARTON: data('CARTON'), CART_ANC: data('CART_ANC'), CDG_C: data('CDG_C'), CDG_M: data('CDG_M'), FEDEP_C: data('FEDEP_C'), FEDEP_M: data('FEDEP_M'), GRCONS: data('GRCONS'), GRINFOS: data('GRINFOS'), GRVAC: data('GRVAC'), LITTERSIZE: data('LITTERSIZE'), LOCPAR: data('LOCPAR'), QVFANSI_C: data('QVFANSI_C'), QVFANSI_M: data('QVFANSI_M'), TABPART: data('TABPART'), VACTT1: data('VACTT1'), VACTT2: data('VACTT2'), VACTT3: data('VACTT3'), VACTT4: data('VACTT4'), VACTTHI: data('VACTTHI')}",
+        "newRowInitialElementKeyToValueMap": "{PREGID: opendatakit.getCurrentInstanceId(), REGID: data('REGID'), REGDIA: data('PREGDIA'), REG: data('REG'), TAB: data('TAB'), MOR: data('MOR'), CASA: data('CASA'), FOGAO: data('FOGAO'), AMO: data('AMO'), NOMEMAE: data('NOME'), CABA: data('CABA'), GERADOR: data('GERADOR'), OBSSES: data('OBSSES'), RADIO: data('RADIO'), SESDATA: data('SESDATA'), TECTO: data('TECTO'), TELEMOVEL: data('TELEMOVEL'), TELENUMERO: data('TELENUMERO'), OBSPART: data('OBSPART'), OUTDATE: data('OUTDATE'), ASSISTPART: data('ASSISTPART'), CARTON: data('CARTON'), CART_ANC: data('CART_ANC'), CDG_C: data('CDG_C'), CDG_M: data('CDG_M'), FEDEP_C: data('FEDEP_C'), FEDEP_M: data('FEDEP_M'), GRCONS: data('GRCONS'), GRINFOS: data('GRINFOS'), GRVAC: data('GRVAC'), LITTERSIZE: data('LITTERSIZE'), LOCPAR: data('LOCPAR'), QVFANSI_C: data('QVFANSI_C'), QVFANSI_M: data('QVFANSI_M'), TABPART: data('TABPART'), VACTT1: data('VACTT1'), VACTT2: data('VACTT2'), VACTT3: data('VACTT3'), VACTT4: data('VACTT4'), VACTTHI: data('VACTTHI')}",
         "openRowInitialElementKeyToValueMap": "{}",
         "_row_num": 2
       },
@@ -5323,9 +5347,9 @@
         "_row_num": 112
       },
       {
-        "name": "nome",
+        "name": "NOME",
         "type": "text",
-        "isSessionVariable": true,
+        "isSessionVariable": false,
         "_row_num": 113
       },
       {
@@ -6395,7 +6419,7 @@
         "linked_table_id": "CRIANCA",
         "selection": "PREGID = ?",
         "selectionArgs": "[opendatakit.getCurrentInstanceId()]",
-        "newRowInitialElementKeyToValueMap": "{PREGID: opendatakit.getCurrentInstanceId(), REGID: data('REGID'), REGDIA: data('PREGDIA'), REG: data('REG'), TAB: data('TAB'), MOR: data('MOR'), CASA: data('CASA'), FOGAO: data('FOGAO'), AMO: data('AMO'), CABA: data('CABA'), GERADOR: data('GERADOR'), OBSSES: data('OBSSES'), RADIO: data('RADIO'), SESDATA: data('SESDATA'), TECTO: data('TECTO'), TELEMOVEL: data('TELEMOVEL'), TELENUMERO: data('TELENUMERO'), OBSPART: data('OBSPART'), OUTDATE: data('OUTDATE'), ASSISTPART: data('ASSISTPART'), CARTON: data('CARTON'), CART_ANC: data('CART_ANC'), CDG_C: data('CDG_C'), CDG_M: data('CDG_M'), FEDEP_C: data('FEDEP_C'), FEDEP_M: data('FEDEP_M'), GRCONS: data('GRCONS'), GRINFOS: data('GRINFOS'), GRVAC: data('GRVAC'), LITTERSIZE: data('LITTERSIZE'), LOCPAR: data('LOCPAR'), QVFANSI_C: data('QVFANSI_C'), QVFANSI_M: data('QVFANSI_M'), TABPART: data('TABPART'), VACTT1: data('VACTT1'), VACTT2: data('VACTT2'), VACTT3: data('VACTT3'), VACTT4: data('VACTT4'), VACTTHI: data('VACTTHI')}",
+        "newRowInitialElementKeyToValueMap": "{PREGID: opendatakit.getCurrentInstanceId(), REGID: data('REGID'), REGDIA: data('PREGDIA'), REG: data('REG'), TAB: data('TAB'), MOR: data('MOR'), CASA: data('CASA'), FOGAO: data('FOGAO'), AMO: data('AMO'), NOMEMAE: data('NOME'), CABA: data('CABA'), GERADOR: data('GERADOR'), OBSSES: data('OBSSES'), RADIO: data('RADIO'), SESDATA: data('SESDATA'), TECTO: data('TECTO'), TELEMOVEL: data('TELEMOVEL'), TELENUMERO: data('TELENUMERO'), OBSPART: data('OBSPART'), OUTDATE: data('OUTDATE'), ASSISTPART: data('ASSISTPART'), CARTON: data('CARTON'), CART_ANC: data('CART_ANC'), CDG_C: data('CDG_C'), CDG_M: data('CDG_M'), FEDEP_C: data('FEDEP_C'), FEDEP_M: data('FEDEP_M'), GRCONS: data('GRCONS'), GRINFOS: data('GRINFOS'), GRVAC: data('GRVAC'), LITTERSIZE: data('LITTERSIZE'), LOCPAR: data('LOCPAR'), QVFANSI_C: data('QVFANSI_C'), QVFANSI_M: data('QVFANSI_M'), TABPART: data('TABPART'), VACTT1: data('VACTT1'), VACTT2: data('VACTT2'), VACTT3: data('VACTT3'), VACTT4: data('VACTT4'), VACTTHI: data('VACTTHI')}",
         "openRowInitialElementKeyToValueMap": "{}",
         "_row_num": 2
       },
@@ -8281,7 +8305,7 @@
         "isSessionVariable": false,
         "elementKey": "MULPRESA1"
       },
-      "nome": {
+      "NOME": {
         "type": "string",
         "_defn": [
           {
@@ -8289,8 +8313,8 @@
             "section_name": "model"
           }
         ],
-        "isSessionVariable": true,
-        "elementKey": "nome"
+        "isSessionVariable": false,
+        "elementKey": "NOME"
       },
       "REG": {
         "type": "integer",
@@ -8744,6 +8768,12 @@
                   "english": "Date of last period",
                   "default": "Data de ultimo período"
                 }
+              },
+              "hint": {
+                "text": {
+                  "english": "First day of last period",
+                  "default": "Primeiro dia do último período"
+                }
               }
             },
             "_row_num": 45,
@@ -8859,6 +8889,12 @@
                 "text": {
                   "english": "Date of last period",
                   "default": "Data de ultimo período"
+                }
+              },
+              "hint": {
+                "text": {
+                  "english": "First day of last period",
+                  "default": "Primeiro dia do último período"
                 }
               }
             },
@@ -9983,6 +10019,12 @@
                   "english": "Date of last period",
                   "default": "Data de ultimo período"
                 }
+              },
+              "hint": {
+                "text": {
+                  "english": "First day of last period",
+                  "default": "Primeiro dia do último período"
+                }
               }
             },
             "_row_num": 55,
@@ -10098,6 +10140,12 @@
                 "text": {
                   "english": "Date of last period",
                   "default": "Data de ultimo período"
+                }
+              },
+              "hint": {
+                "text": {
+                  "english": "First day of last period",
+                  "default": "Primeiro dia do último período"
                 }
               }
             },
@@ -11213,7 +11261,7 @@
               "prompt": {
                 "text": {
                   "english": "Number of children born",
-                  "default": "Número do nascimento da criança"
+                  "default": "Quantas crianças estavam na barriga"
                 }
               }
             },
@@ -11248,8 +11296,8 @@
             "display": {
               "prompt": {
                 "text": {
-                  "english": "Have vaccination  card?",
-                  "default": "Tem cartão de vacinas da mulher?"
+                  "english": "Vaccination card",
+                  "default": "Vartão de vacinas da mulher"
                 }
               }
             },
@@ -15783,7 +15831,7 @@
         "elementSet": "data",
         "elementPath": "MULPRESA1"
       },
-      "nome": {
+      "NOME": {
         "type": "string",
         "_defn": [
           {
@@ -15791,11 +15839,11 @@
             "section_name": "model"
           }
         ],
-        "isSessionVariable": true,
-        "elementKey": "nome",
-        "elementName": "nome",
+        "isSessionVariable": false,
+        "elementKey": "NOME",
+        "elementName": "NOME",
         "elementSet": "data",
-        "elementPath": "nome"
+        "elementPath": "NOME"
       },
       "REG": {
         "type": "integer",
