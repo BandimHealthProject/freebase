@@ -30,7 +30,7 @@ function display() {
 
 function loadPersons() {
     // SQL to get women (MIF)
-    var varNames = "_id, REGID, CART, CASA, CICA, CONSENTSIG, CONT, ESTADO, ESTADOVIS, FOGAO, GR, MIFDNASC, NOME, RELA1, RELA1NOME, VAC1TIPO, VAC1DATA, VAC1INF, VAC2TIPO, VAC2DATA, VAC2INF, VAC3TIPO, VAC3DATA, VAC3INF, VAC4TIPO, VAC4DATA, VAC4INF, VAC5TIPO, VAC5DATA, VAC5INF, VAC6TIPO, VAC6DATA, VAC6INF, VAC7TIPO, VAC7DATA, VAC7INF, VAC8TIPO, VAC8DATA, VAC8INF, VAC9TIPO, VAC9DATA, VAC9INF, VAC10TIPO, VAC10DATA, VAC10INF, VAC11TIPO, VAC11DATA, VAC11INF, VAC12TIPO, VAC12DATA, VAC12INF, VAC13TIPO, VAC13DATA, VAC13INF, VAC14TIPO, VAC14DATA, VAC14INF, VAC15TIPO, VAC15DATA, VAC15INF, VAC16TIPO, VAC16DATA, VAC16INF, VAC17TIPO, VAC17DATA, VAC17INF, VAC18TIPO, VAC18DATA, VAC18INF, VAC19TIPO, VAC19DATA, VAC19INF, VAC20TIPO, VAC20DATA, VAC20INF";
+    var varNames = "_savepoint_type, _id, REGID, CART, CASA, CICA, CONSENTSIG, CONT, ESTADO, ESTADOVIS, FOGAO, GR, MIFDNASC, MUL, NOME, RELA1, RELA1NOME, VAC1TIPO, VAC1DATA, VAC1INF, VAC2TIPO, VAC2DATA, VAC2INF, VAC3TIPO, VAC3DATA, VAC3INF, VAC4TIPO, VAC4DATA, VAC4INF, VAC5TIPO, VAC5DATA, VAC5INF, VAC6TIPO, VAC6DATA, VAC6INF, VAC7TIPO, VAC7DATA, VAC7INF, VAC8TIPO, VAC8DATA, VAC8INF, VAC9TIPO, VAC9DATA, VAC9INF, VAC10TIPO, VAC10DATA, VAC10INF, VAC11TIPO, VAC11DATA, VAC11INF, VAC12TIPO, VAC12DATA, VAC12INF, VAC13TIPO, VAC13DATA, VAC13INF, VAC14TIPO, VAC14DATA, VAC14INF, VAC15TIPO, VAC15DATA, VAC15INF, VAC16TIPO, VAC16DATA, VAC16INF, VAC17TIPO, VAC17DATA, VAC17INF, VAC18TIPO, VAC18DATA, VAC18INF, VAC19TIPO, VAC19DATA, VAC19INF, VAC20TIPO, VAC20DATA, VAC20INF";
     var sql = "SELECT " + varNames + 
         " FROM (" +
         " SELECT " + varNames + ", REG, TAB, MOR, ESTADO" +
@@ -42,7 +42,7 @@ function loadPersons() {
         " ) " +
         " WHERE REG = " + region + " AND TAB = " + tabanca + " AND MOR = " + cluster +
         " GROUP BY REGID" +
-        " ORDER BY NOME ASC";
+        " ORDER BY CASA, FOGAO, MUL ASC";
     // Todo - look up in db => callback: populateView;
     persons = [];
     console.log("Querying database for MIFs...");
@@ -50,6 +50,8 @@ function loadPersons() {
     var successFn = function( result ) {
         console.log("Found " + result.getCount() + " persons");
         for (var row = 0; row < result.getCount(); row++) {
+            var savePoint = result.getData(row,"_savepoint_type");
+
             var rowId = result.getData(row,"_id").slice(5); // rowId from sql table
             var REGID = result.getData(row,"REGID"); // Despite obviously bad naming, this is actually the Person ID
             
@@ -63,9 +65,10 @@ function loadPersons() {
             var FOGAO = result.getData(row,"FOGAO");
             var GR = result.getData(row,"GR");
             var MIFDNASC = result.getData(row,"MIFDNASC");
+            var MUL = result.getData(row,"MUL");
             var NOME = titleCase(result.getData(row,"NOME"));
             var RELA1 = result.getData(row,"RELA1");
-            var RELA1NOME = result.getData(row,"RELA1NOME");
+            var RELA1NOME = titleCase(result.getData(row,"RELA1NOME"));
             
             var VAC1TIPO = result.getData(row,"VAC1TIPO");
             var VAC1DATA = result.getData(row,"VAC1DATA");
@@ -128,7 +131,7 @@ function loadPersons() {
             var VAC20DATA = result.getData(row,"VAC20DATA");
             var VAC20INF = result.getData(row,"VAC20INF");
             
-            var p = {type: 'mif', rowId, REGID, CART, CASA, CICA, CONSENTSIG, CONT, ESTADO, ESTADOVIS, FOGAO, GR, MIFDNASC, NOME, RELA1, RELA1NOME, VAC1TIPO, VAC1DATA, VAC1INF, VAC2TIPO, VAC2DATA, VAC2INF, VAC3TIPO, VAC3DATA, VAC3INF, VAC4TIPO, VAC4DATA, VAC4INF, VAC5TIPO, VAC5DATA, VAC5INF, VAC6TIPO, VAC6DATA, VAC6INF, VAC7TIPO, VAC7DATA, VAC7INF, VAC8TIPO, VAC8DATA, VAC8INF, VAC9TIPO, VAC9DATA, VAC9INF, VAC10TIPO, VAC10DATA, VAC10INF, VAC11TIPO, VAC11DATA, VAC11INF, VAC12TIPO, VAC12DATA, VAC12INF, VAC13TIPO, VAC13DATA, VAC13INF, VAC14TIPO, VAC14DATA, VAC14INF, VAC15TIPO, VAC15DATA, VAC15INF, VAC16TIPO, VAC16DATA, VAC16INF, VAC17TIPO, VAC17DATA, VAC17INF, VAC18TIPO, VAC18DATA, VAC18INF, VAC19TIPO, VAC19DATA, VAC19INF, VAC20TIPO, VAC20DATA, VAC20INF };
+            var p = {type: 'mif', savePoint, rowId, REGID, CART, CASA, CICA, CONSENTSIG, CONT, ESTADO, ESTADOVIS, FOGAO, GR, MIFDNASC, MUL, NOME, RELA1, RELA1NOME, VAC1TIPO, VAC1DATA, VAC1INF, VAC2TIPO, VAC2DATA, VAC2INF, VAC3TIPO, VAC3DATA, VAC3INF, VAC4TIPO, VAC4DATA, VAC4INF, VAC5TIPO, VAC5DATA, VAC5INF, VAC6TIPO, VAC6DATA, VAC6INF, VAC7TIPO, VAC7DATA, VAC7INF, VAC8TIPO, VAC8DATA, VAC8INF, VAC9TIPO, VAC9DATA, VAC9INF, VAC10TIPO, VAC10DATA, VAC10INF, VAC11TIPO, VAC11DATA, VAC11INF, VAC12TIPO, VAC12DATA, VAC12INF, VAC13TIPO, VAC13DATA, VAC13INF, VAC14TIPO, VAC14DATA, VAC14INF, VAC15TIPO, VAC15DATA, VAC15INF, VAC16TIPO, VAC16DATA, VAC16INF, VAC17TIPO, VAC17DATA, VAC17INF, VAC18TIPO, VAC18DATA, VAC18INF, VAC19TIPO, VAC19DATA, VAC19INF, VAC20TIPO, VAC20DATA, VAC20INF };
             
             if (ESTADO == 1 | CONT == date) {
                 persons.push(p);
@@ -151,7 +154,7 @@ function loadPersons() {
 
 function loadChildren() {
     // SQL to load children
-    var varNames = "_id, REGID, REGIDC, CARTVAC, CASA, COMSUP, CONT, ESTADO, FOGAO, MOMA, NOME, NOMEMAE, ONEYEAR, OUTDATE, PAMA, PRES, SEX, BCG, POLIONAS, POLIO1, PENTA1, PCV1, ROX1, POLIO2, PENTA2, PCV2, ROX2, POLIO3, PENTA3, PCV3, VPI, SARAMPO1, FEBAMAREL, VACOU1, VACOU1TIPO, VACOU2, VACOU2TIPO, VACOU3, VACOU3TIPO, VACOU4, VACOU4TIPO, VACOU5, VACOU5TIPO";
+    var varNames = "_savepoint_type, _id, REGID, REGIDC, CARTVAC, CASA, COMSUP, CONT, ESTADO, FOGAO, MOMA, NOC, NOME, NOMEMAE, ONEYEAR, OUTDATE, PAMA, PRES, SEX, BCG, POLIONAS, POLIO1, PENTA1, PCV1, ROX1, POLIO2, PENTA2, PCV2, ROX2, POLIO3, PENTA3, PCV3, VPI, SARAMPO1, FEBAMAREL, VACOU1, VACOU1TIPO, VACOU2, VACOU2TIPO, VACOU3, VACOU3TIPO, VACOU4, VACOU4TIPO, VACOU5, VACOU5TIPO";
     var sql = "SELECT " + varNames + 
         " FROM (" +
         " SELECT " + varNames + ", REG, TAB, MOR, ESTADO" +
@@ -170,6 +173,8 @@ function loadChildren() {
     var successFn = function( result ) {
         console.log("Found " + result.getCount() + " children");
         for (var row = 0; row < result.getCount(); row++) {
+            var savePoint = result.getData(row,"_savepoint_type");
+            
             var rowId = result.getData(row,"_id").slice(5); // rowId from sql table
             var REGID = result.getData(row,"REGID"); // This is now the mother's id (go figure)
             var REGIDC = result.getData(row,"REGIDC");
@@ -181,8 +186,9 @@ function loadChildren() {
             var ESTADO = result.getData(row,"ESTADO");
             var FOGAO = result.getData(row,"FOGAO");
             var MOMA = result.getData(row,"MOMA");
+            var NOC = result.getData(row,"NOC");
             var NOME = titleCase(result.getData(row,"NOME"));
-            var NOMEMAE = result.getData(row,"NOMEMAE");
+            var NOMEMAE = titleCase(result.getData(row,"NOMEMAE"));
             var ONEYEAR = result.getData(row,"ONEYEAR");
             var OUTDATE = result.getData(row,"OUTDATE");
             var PAMA = result.getData(row,"PAMA");
@@ -216,7 +222,7 @@ function loadChildren() {
             var VACOU5 = result.getData(row,"VACOU5");
             var VACOU5TIPO = result.getData(row,"VACOU5TIPO");
 
-            var p = {type: 'crianca', rowId, REGID, REGIDC, CARTVAC, CASA, COMSUP, CONT, ESTADO, FOGAO, MOMA, NOME, NOMEMAE, ONEYEAR, OUTDATE, PAMA, PRES, SEX, BCG, POLIONAS, POLIO1, PENTA1, PCV1, ROX1, POLIO2, PENTA2, PCV2, ROX2, POLIO3, PENTA3, PCV3, VPI, SARAMPO1, FEBAMAREL, VACOU1, VACOU1TIPO, VACOU2, VACOU2TIPO, VACOU3, VACOU3TIPO, VACOU4, VACOU4TIPO, VACOU5, VACOU5TIPO};
+            var p = {type: 'crianca', savePoint, rowId, REGID, REGIDC, CARTVAC, CASA, COMSUP, CONT, ESTADO, FOGAO, MOMA, NOC, NOME, NOMEMAE, ONEYEAR, OUTDATE, PAMA, PRES, SEX, BCG, POLIONAS, POLIO1, PENTA1, PCV1, ROX1, POLIO2, PENTA2, PCV2, ROX2, POLIO3, PENTA3, PCV3, VPI, SARAMPO1, FEBAMAREL, VACOU1, VACOU1TIPO, VACOU2, VACOU2TIPO, VACOU3, VACOU3TIPO, VACOU4, VACOU4TIPO, VACOU5, VACOU5TIPO};
             console.log(p);
             // If control visit: list children <12m at last visit (variable ONEYEAR !=1)
             if (ESTADO == 11 | CONT == date) {
@@ -272,22 +278,25 @@ function populateView() {
         console.log(this);
         var that = this;
         var visited = '';
-        if (this.CONT == date) {
+        if (this.CONT == date & this.savePoint === "COMPLETE") {
             visited = "visited";
         };
+
+        // set text to display
+        var displayText = setDisplayText(this);
         
         
         // Assigning diffrent buttons
         if (this.type == "mif") {
             if (this.GR == "1") {
-                ul.append($("<li />").append($("<button />").attr('id',this.REGID + '_' + this.REGIDC).attr('class',visited + this.type + 'gr' + ' btn ' + this.type + 'gr').text(this.NOME)));
+                ul.append($("<li />").append($("<button />").attr('id',this.REGID + '_' + this.REGIDC).attr('class',visited + this.type + 'gr' + ' btn ' + this.type + 'gr').append(displayText)));
             } else {
-                ul.append($("<li />").append($("<button />").attr('id',this.REGID + '_' + this.REGIDC).attr('class',visited + this.type + ' btn ' + this.type).text(this.NOME)));
+                ul.append($("<li />").append($("<button />").attr('id',this.REGID + '_' + this.REGIDC).attr('class',visited + this.type + ' btn ' + this.type).append(displayText)));
             }
         } else if (this.type == "crianca" & (this.SEX == "1" | this.SEX == "2")) {
-            ul.append($("<li />").append($("<button />").attr('id',this.REGID + '_' + this.REGIDC).attr('class',visited + this.type + ' btn ' + this.type + this.SEX).text(this.NOME)));
+            ul.append($("<li />").append($("<button />").attr('id',this.REGID + '_' + this.REGIDC).attr('class',visited + this.type + ' btn ' + this.type + this.SEX).append(displayText)));
         } else {
-            ul.append($("<li />").append($("<button />").attr('id',this.REGID + '_' + this.REGIDC).attr('class',visited + this.type + ' btn ' + this.type).text(this.NOME)));
+            ul.append($("<li />").append($("<button />").attr('id',this.REGID + '_' + this.REGIDC).attr('class',visited + this.type + ' btn ' + this.type).append(displayText)));
         }
                 
         var btn = ul.find('#' + this.REGID + '_' + this.REGIDC);
@@ -339,22 +348,70 @@ function populateView() {
 function getMul() {
     var sql = "select MAX(MUL) AS MUL FROM MIF WHERE REG==" + region + 
         " AND TAB == "+ tabanca +" AND MOR ==" + cluster;
-    console.log("Querying database for getMul...");
-    console.log(sql);
+    //console.log("Querying database for getMul...");
+    //console.log(sql);
     var successFn = function(result) {
         var maxMul = Number(result.getData(0,"MUL")) + 1;
         mul = maxMul;
-        console.log("maxMul:", maxMul);
+        //console.log("maxMul:", maxMul);
         return;
     }
     var failureFn = function( errorMsg ) {
-        console.error('Failed to get mul from database: ' + errorMsg);
-        console.error('Trying to execute the following SQL:');
-        console.error(sql);
-        alert("Program error Unable to look up getMul.");
+        //console.error('Failed to get mul from database: ' + errorMsg);
+        //console.error('Trying to execute the following SQL:');
+        //console.error(sql);
+        //alert("Program error Unable to look up getMul.");
     }
     odkData.arbitraryQuery('MIF', sql, null, null, null, successFn, failureFn);
     return;
+}
+
+function setDisplayText(person) {
+    var displayText;
+    if (person.type == 'mif') {
+        var nome = person.NOME === null ? "Não sabe" : person.NOME;
+        var casa = person.CASA === null ? "??" : person.CASA;
+        var fogao = person.FOGAO === null ? "??" : person.FOGAO;
+        var mul = person.MUL === null ? "??" : person.MUL;
+        var relanome = person.RELA1NOME === null ? "????" : person.RELA1NOME;
+        var rela;
+        if (person.RELA1 == 1) {
+            rela = "Mãe";
+        } else if (person.RELA1 == 2) {
+            rela = "Pai";
+        } else if (person.RELA1 == 3) {
+            rela = "Marido";
+        } else if (person.RELA1 == 4) {
+            rela = "Irmã/irmão";
+        } else if (person.RELA1 == 5) {
+            rela = "Tia/tio";
+        } else if (person.RELA1 == 6) {
+            rela = "Outra/o";
+        } else {
+            rela = "??";
+        };
+       
+        displayText = "Nome: <b>" + nome + "</b> [" + mul + "] | Casa: " + casa + ", Fogao: " + fogao + "<br />" +
+            "Relação: " + rela + ": " + relanome;
+            
+    }
+    if (person.type == 'crianca') {
+        var nome = person.NOME === null ? "Não sabe" : person.NOME; 
+        var noc = person.NOC === null ? "??" : person.NOC;
+        var nasc;
+        if (person.OUTDATE == "D:NS,M:NS,Y:NS" | person.OUTDATE == null) {
+            nasc = "Não sabe";
+        } else {
+            var d = person.OUTDATE.slice(2, person.OUTDATE.search("M")-1);
+            var m = person.OUTDATE.slice(person.OUTDATE.search("M")+2, person.OUTDATE.search("Y")-1);
+            var y = person.OUTDATE.slice(person.OUTDATE.search("Y")+2);   
+            nasc = d + "/" + m + "/" + y;
+        };
+    
+        displayText = "Nome: <b>" + nome + "</b> [" + noc + "]" + "<br />" +  
+            "Nascimento: " + nasc + "<br />";
+    }    
+    return displayText;
 }
 
 function getDefaultsMIF(person) {
@@ -378,6 +435,7 @@ function getDefaultsMIF(person) {
     defaults['LASTVISITDATE'] = person.CONT; // date of last visit
     defaults['lastvisitestado'] = person.ESTADOVIS;
     defaults['MIFDNASC'] = person.MIFDNASC;
+    defaults['MUL'] = person.MUL;
     defaults['NOME'] = person.NOME;
     defaults['RELA1'] = person.RELA1;
     defaults['RELA1NOME'] = person.RELA1NOME;
@@ -474,6 +532,7 @@ function getDefaultsChild(person) {
     defaults['FOGAO'] = person.FOGAO;
     defaults['LASTVISITDATE'] = person.CONT; // date of last visit
     defaults['moma'] = person.MOMA;
+    defaults['NOC'] = person.NOC;
     defaults['NOME'] = person.NOME;
     defaults['NOMEMAE'] = person.NOMEMAE;
     defaults['ONEYEAR'] = person.ONEYEAR;

@@ -90,12 +90,6 @@
         "_row_num": 4
       },
       {
-        "type": "assign",
-        "name": "test2",
-        "calculation": "freebase.getNoc(1,1)",
-        "_row_num": 5
-      },
-      {
         "type": "integer",
         "name": "test2",
         "display": {
@@ -347,38 +341,6 @@
         },
         "_row_num": 4
       }
-    ],
-    "model": [
-      {
-        "name": "ADA",
-        "type": "string",
-        "isSessionVariable": true,
-        "_row_num": 2
-      },
-      {
-        "name": "ADA2",
-        "type": "string",
-        "isSessionVariable": true,
-        "_row_num": 3
-      },
-      {
-        "name": "ADA3",
-        "type": "adate",
-        "isSessionVariable": true,
-        "_row_num": 4
-      },
-      {
-        "name": "test",
-        "type": "text",
-        "isSessionVariable": true,
-        "_row_num": 5
-      },
-      {
-        "name": "test2",
-        "type": "integer",
-        "isSessionVariable": true,
-        "_row_num": 6
-      }
     ]
   },
   "specification": {
@@ -598,89 +560,53 @@
     },
     "model": {
       "ADA": {
-        "prompt_type_name": "adate",
-        "type": "string",
-        "elementType": "string",
-        "comment": "Save only mm.dd.yyyy with support for ?? at all positions",
         "_defn": [
           {
             "_row_num": 3,
             "section_name": "survey"
-          },
-          {
-            "_row_num": 2,
-            "section_name": "model"
           }
         ],
-        "isSessionVariable": true,
+        "prompt_type_name": "adate",
+        "type": "string",
+        "elementType": "string",
+        "comment": "Save only mm.dd.yyyy with support for ?? at all positions",
         "elementKey": "ADA"
       },
       "ADA2": {
-        "prompt_type_name": "adate",
-        "type": "string",
-        "elementType": "string",
-        "comment": "Save only mm.dd.yyyy with support for ?? at all positions",
         "_defn": [
           {
             "_row_num": 4,
             "section_name": "survey"
-          },
-          {
-            "_row_num": 3,
-            "section_name": "model"
           }
         ],
-        "isSessionVariable": true,
+        "prompt_type_name": "adate",
+        "type": "string",
+        "elementType": "string",
+        "comment": "Save only mm.dd.yyyy with support for ?? at all positions",
         "elementKey": "ADA2"
       },
-      "ADA3": {
-        "prompt_type_name": "adate",
-        "type": "string",
-        "elementType": "string",
-        "comment": "Save only mm.dd.yyyy with support for ?? at all positions",
-        "_row_num": 3,
-        "__rowNum__": 2,
+      "test2": {
         "_defn": [
           {
-            "_row_num": 4,
-            "section_name": "model"
+            "_row_num": 6,
+            "section_name": "survey"
           }
         ],
-        "isSessionVariable": true,
-        "elementKey": "ADA3"
+        "type": "integer",
+        "elementKey": "test2"
       },
       "test": {
-        "prompt_type_name": "adate",
-        "type": "string",
-        "elementType": "string",
-        "comment": "Save only mm.dd.yyyy with support for ?? at all positions",
         "_defn": [
           {
             "_row_num": 17,
             "section_name": "survey"
-          },
-          {
-            "_row_num": 5,
-            "section_name": "model"
           }
         ],
-        "isSessionVariable": true,
+        "prompt_type_name": "adate",
+        "type": "string",
+        "elementType": "string",
+        "comment": "Save only mm.dd.yyyy with support for ?? at all positions",
         "elementKey": "test"
-      },
-      "test2": {
-        "type": "integer",
-        "_defn": [
-          {
-            "_row_num": 6,
-            "section_name": "survey"
-          },
-          {
-            "_row_num": 6,
-            "section_name": "model"
-          }
-        ],
-        "isSessionVariable": true,
-        "elementKey": "test2"
       }
     },
     "section_names": [
@@ -925,7 +851,7 @@
               "__rowNum__": 6,
               "_token_type": "end_screen"
             },
-            "_screen_block": "function() {var activePromptIndicies = [];\nactivePromptIndicies.push(0);\nactivePromptIndicies.push(1);\nassign('test2', freebase.getNoc(1,1));\nactivePromptIndicies.push(2);\n\nreturn activePromptIndicies;\n}\n",
+            "_screen_block": "function() {var activePromptIndicies = [];\nactivePromptIndicies.push(0);\nactivePromptIndicies.push(1);\nactivePromptIndicies.push(2);\n\nreturn activePromptIndicies;\n}\n",
             "operationIdx": 0
           },
           {
@@ -1169,104 +1095,65 @@
     },
     "dataTableModel": {
       "ADA": {
-        "prompt_type_name": "adate",
-        "type": "string",
-        "elementType": "string",
-        "comment": "Save only mm.dd.yyyy with support for ?? at all positions",
         "_defn": [
           {
             "_row_num": 3,
             "section_name": "survey"
-          },
-          {
-            "_row_num": 2,
-            "section_name": "model"
           }
         ],
-        "isSessionVariable": true,
+        "prompt_type_name": "adate",
+        "type": "string",
+        "elementType": "string",
+        "comment": "Save only mm.dd.yyyy with support for ?? at all positions",
         "elementKey": "ADA",
         "elementName": "ADA",
         "elementSet": "data",
         "elementPath": "ADA"
       },
       "ADA2": {
-        "prompt_type_name": "adate",
-        "type": "string",
-        "elementType": "string",
-        "comment": "Save only mm.dd.yyyy with support for ?? at all positions",
         "_defn": [
           {
             "_row_num": 4,
             "section_name": "survey"
-          },
-          {
-            "_row_num": 3,
-            "section_name": "model"
           }
         ],
-        "isSessionVariable": true,
+        "prompt_type_name": "adate",
+        "type": "string",
+        "elementType": "string",
+        "comment": "Save only mm.dd.yyyy with support for ?? at all positions",
         "elementKey": "ADA2",
         "elementName": "ADA2",
         "elementSet": "data",
         "elementPath": "ADA2"
       },
-      "ADA3": {
-        "prompt_type_name": "adate",
-        "type": "string",
-        "elementType": "string",
-        "comment": "Save only mm.dd.yyyy with support for ?? at all positions",
-        "_row_num": 3,
-        "__rowNum__": 2,
-        "_defn": [
-          {
-            "_row_num": 4,
-            "section_name": "model"
-          }
-        ],
-        "isSessionVariable": true,
-        "elementKey": "ADA3",
-        "elementName": "ADA3",
-        "elementSet": "data",
-        "elementPath": "ADA3"
-      },
-      "test": {
-        "prompt_type_name": "adate",
-        "type": "string",
-        "elementType": "string",
-        "comment": "Save only mm.dd.yyyy with support for ?? at all positions",
-        "_defn": [
-          {
-            "_row_num": 17,
-            "section_name": "survey"
-          },
-          {
-            "_row_num": 5,
-            "section_name": "model"
-          }
-        ],
-        "isSessionVariable": true,
-        "elementKey": "test",
-        "elementName": "test",
-        "elementSet": "data",
-        "elementPath": "test"
-      },
       "test2": {
-        "type": "integer",
         "_defn": [
           {
             "_row_num": 6,
             "section_name": "survey"
-          },
-          {
-            "_row_num": 6,
-            "section_name": "model"
           }
         ],
-        "isSessionVariable": true,
+        "type": "integer",
         "elementKey": "test2",
         "elementName": "test2",
         "elementSet": "data",
         "elementPath": "test2"
+      },
+      "test": {
+        "_defn": [
+          {
+            "_row_num": 17,
+            "section_name": "survey"
+          }
+        ],
+        "prompt_type_name": "adate",
+        "type": "string",
+        "elementType": "string",
+        "comment": "Save only mm.dd.yyyy with support for ?? at all positions",
+        "elementKey": "test",
+        "elementName": "test",
+        "elementSet": "data",
+        "elementPath": "test"
       },
       "_id": {
         "type": "string",
