@@ -3593,8 +3593,8 @@
         "display": {
           "prompt": {
             "text": {
-              "english": "Has the child been amitted to the hostpital since last visist?",
-              "default": "A criança foi internada no Hostpital desde a última visita?"
+              "english": "Has the child been amitted to the hospital since last visist?",
+              "default": "A criança foi internada no hospital desde a última visita?"
             }
           }
         },
@@ -30048,8 +30048,8 @@
             "display": {
               "prompt": {
                 "text": {
-                  "english": "Has the child been amitted to the hostpital since last visist?",
-                  "default": "A criança foi internada no Hostpital desde a última visita?"
+                  "english": "Has the child been amitted to the hospital since last visist?",
+                  "default": "A criança foi internada no hospital desde a última visita?"
                 }
               }
             },
