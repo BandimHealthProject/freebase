@@ -21,8 +21,8 @@
         "display": {
           "title": {
             "text": {
-              "english": "Hospital Children",
-              "default": "Hospitalizacão de Criancas"
+              "english": "Children's Hospitalization",
+              "default": "Hospitalizacão de Crianças"
             }
           }
         },
@@ -34,7 +34,7 @@
           "locale": {
             "text": {
               "english": "Portuguese",
-              "default": "Portugues"
+              "default": "Português"
             }
           }
         },
@@ -63,13 +63,6 @@
         "_row_num": 9
       }
     ],
-    "calculates": [
-      {
-        "calculation_name": "displayOutdate",
-        "calculation": "adate.display(data('outdate'))",
-        "_row_num": 2
-      }
-    ],
     "survey": [
       {
         "clause": "begin screen",
@@ -81,7 +74,7 @@
           "prompt": {
             "text": {
               "english": "<b>Hospitalization: {{data.nome}} - Dob: {{calculates.displayOutdate}}<b>",
-              "default": "<b>Hospitalizcao: {{data.nome}} - Nas: {{calculates.displayOutdate}}<b>"
+              "default": "<b>Hospitalização: {{data.nome}} - Nas: {{calculates.displayOutdate}}<b>"
             }
           }
         },
@@ -164,7 +157,7 @@
           "prompt": {
             "text": {
               "english": "<b>Hospitalization: {{data.nome}} - Dob: {{calculates.displayOutdate}}<b>",
-              "default": "<b>Hospitalizcao: {{data.nome}} - Nas: {{calculates.displayOutdate}}<b>"
+              "default": "<b>Hospitalização: {{data.nome}} - Nas: {{calculates.displayOutdate}}<b>"
             }
           }
         },
@@ -204,7 +197,7 @@
           "prompt": {
             "text": {
               "english": "<b>Hospitalization: {{data.nome}} - Dob: {{calculates.displayOutdate}}<b>",
-              "default": "<b>Hospitalizcao: {{data.nome}} - Nas: {{calculates.displayOutdate}}<b>"
+              "default": "<b>Hospitalização: {{data.nome}} - Nas: {{calculates.displayOutdate}}<b>"
             }
           }
         },
@@ -291,7 +284,7 @@
           "prompt": {
             "text": {
               "english": "<b>Hospitalization: {{data.nome}} - Dob: {{calculates.displayOutdate}}<b>",
-              "default": "<b>Hospitalizcao: {{data.nome}} - Nas: {{calculates.displayOutdate}}<b>"
+              "default": "<b>Hospitalização: {{data.nome}} - Nas: {{calculates.displayOutdate}}<b>"
             }
           }
         },
@@ -328,7 +321,7 @@
           "prompt": {
             "text": {
               "english": "<b>Hospitalization: {{data.nome}} - Dob: {{calculates.displayOutdate}}<b>",
-              "default": "<b>Hospitalizcao: {{data.nome}} - Nas: {{calculates.displayOutdate}}<b>"
+              "default": "<b>Hospitalização: {{data.nome}} - Nas: {{calculates.displayOutdate}}<b>"
             }
           }
         },
@@ -360,7 +353,7 @@
           "prompt": {
             "text": {
               "english": "Why not use the closest hospital?",
-              "default": "Porque internou aqui?"
+              "default": "Porquê é que não foi ao hospital mais perto?"
             }
           }
         },
@@ -384,7 +377,7 @@
           "prompt": {
             "text": {
               "english": "<b>Hospitalization: {{data.nome}} - Dob: {{calculates.displayOutdate}}<b>",
-              "default": "<b>Hospitalizcao: {{data.nome}} - Nas: {{calculates.displayOutdate}}<b>"
+              "default": "<b>Hospitalização: {{data.nome}} - Nas: {{calculates.displayOutdate}}<b>"
             }
           }
         },
@@ -440,7 +433,7 @@
           "prompt": {
             "text": {
               "english": "<b>Hospitalization: {{data.nome}} - Dob: {{calculates.displayOutdate}}<b>",
-              "default": "<b>Hospitalizcao: {{data.nome}} - Nas: {{calculates.displayOutdate}}<b>"
+              "default": "<b>Hospitalização: {{data.nome}} - Nas: {{calculates.displayOutdate}}<b>"
             }
           }
         },
@@ -454,7 +447,7 @@
           "prompt": {
             "text": {
               "english": "Is the child still hospitalized?",
-              "default": "A crianca ainda está internado?"
+              "default": "A criança ainda está hospitalizada?"
             }
           }
         },
@@ -472,7 +465,7 @@
           "prompt": {
             "text": {
               "english": "Duration of hospitalisation",
-              "default": "Duracão de internamento"
+              "default": "Duração de hospitalização"
             }
           }
         },
@@ -496,7 +489,7 @@
           "prompt": {
             "text": {
               "english": "<b>Hospitalization: {{data.nome}} - Dob: {{calculates.displayOutdate}}<b>",
-              "default": "<b>Hospitalizcao: {{data.nome}} - Nas: {{calculates.displayOutdate}}<b>"
+              "default": "<b>Hospitalização: {{data.nome}} - Nas: {{calculates.displayOutdate}}<b>"
             }
           }
         },
@@ -510,7 +503,7 @@
           "prompt": {
             "text": {
               "english": "Did the mother decide to take the child to the hospital?",
-              "default": "A mãe decidiu levar a crianca ao hospital?"
+              "default": "A mãe decidiu levar a criança ao hospital?"
             }
           }
         },
@@ -524,7 +517,7 @@
           "prompt": {
             "text": {
               "english": "Did the father decide to take the child to the hospital?",
-              "default": "O pai decidiu levar a crianca ao hospital?"
+              "default": "O pai decidiu levar a criança ao hospital?"
             }
           }
         },
@@ -544,7 +537,7 @@
           "prompt": {
             "text": {
               "english": "<b>Hospitalization: {{data.nome}} - Dob: {{calculates.displayOutdate}}<b>",
-              "default": "<b>Hospitalizcao: {{data.nome}} - Nas: {{calculates.displayOutdate}}<b>"
+              "default": "<b>Hospitalização: {{data.nome}} - Nas: {{calculates.displayOutdate}}<b>"
             }
           }
         },
@@ -558,7 +551,7 @@
           "prompt": {
             "text": {
               "english": "Did someone else decide to take the child to the hospital?",
-              "default": "Outra pessoa decidiu levar a crianca ao hospital?"
+              "default": "Outra pessoa decidiu levar a criança ao hospital?"
             }
           }
         },
@@ -576,7 +569,7 @@
           "prompt": {
             "text": {
               "english": "Who decided taking the child to hospital",
-              "default": "Quem decidiu levar a crianca ao hospital?"
+              "default": "Quem decidiu levar a criança ao hospital?"
             }
           }
         },
@@ -600,7 +593,7 @@
           "prompt": {
             "text": {
               "english": "<b>Hospitalization: {{data.nome}} - Dob: {{calculates.displayOutdate}}<b>",
-              "default": "<b>Hospitalizcao: {{data.nome}} - Nas: {{calculates.displayOutdate}}<b>"
+              "default": "<b>Hospitalização: {{data.nome}} - Nas: {{calculates.displayOutdate}}<b>"
             }
           }
         },
@@ -613,7 +606,7 @@
           "prompt": {
             "text": {
               "english": "Reason for admission",
-              "default": "Causa de hospitalisacão"
+              "default": "Razão de hospitalisacão"
             }
           }
         },
@@ -647,7 +640,7 @@
           "prompt": {
             "text": {
               "english": "<b>Hospitalization: {{data.nome}} - Dob: {{calculates.displayOutdate}}<b>",
-              "default": "<b>Hospitalizcao: {{data.nome}} - Nas: {{calculates.displayOutdate}}<b>"
+              "default": "<b>Hospitalização: {{data.nome}} - Nas: {{calculates.displayOutdate}}<b>"
             }
           }
         },
@@ -673,38 +666,6 @@
       {
         "clause": "end if",
         "_row_num": 75
-      }
-    ],
-    "queries": [
-      {
-        "query_name": "reg_csv",
-        "query_type": "csv",
-        "uri": "\"HEALTHCENTRES.csv\"",
-        "callback": "_.chain(context)\n.uniq(function(x) {\nreturn x.reg\n})\n.map(function(place){\nreturn {\ndata_value:place.reg,\ndisplay:{title: {text: place.regname} } };\n}).value()",
-        "_row_num": 2
-      },
-      {
-        "query_name": "hc_csv",
-        "query_type": "csv",
-        "uri": "\"HEALTHCENTRES.csv\"",
-        "callback": "_.map(context, function(place){place.data_value = place.cscode;\nplace.display = {title: {text: place.csname} };\nreturn place;\n})",
-        "_row_num": 3
-      }
-    ],
-    "prompt_types": [
-      {
-        "prompt_type_name": "custom_date",
-        "type": "string",
-        "elementType": "date",
-        "comment": "Makes the date widget DD/MM/YYYY",
-        "_row_num": 2
-      },
-      {
-        "prompt_type_name": "adate",
-        "type": "string",
-        "elementType": "string",
-        "comment": "Save only mm.dd.yyyy with support for ?? at all positions",
-        "_row_num": 3
       }
     ],
     "choices": [
@@ -767,7 +728,7 @@
           "title": {
             "text": {
               "english": "Otro de casa",
-              "default": "Otro de casa"
+              "default": "Outro de casa"
             }
           }
         },
@@ -824,6 +785,45 @@
           }
         },
         "_row_num": 10
+      }
+    ],
+    "queries": [
+      {
+        "query_name": "reg_csv",
+        "query_type": "csv",
+        "uri": "\"HEALTHCENTRES.csv\"",
+        "callback": "_.chain(context)\n.uniq(function(x) {\nreturn x.reg\n})\n.map(function(place){\nreturn {\ndata_value:place.reg,\ndisplay:{title: {text: place.regname} } };\n}).value()",
+        "_row_num": 2
+      },
+      {
+        "query_name": "hc_csv",
+        "query_type": "csv",
+        "uri": "\"HEALTHCENTRES.csv\"",
+        "callback": "_.map(context, function(place){place.data_value = place.cscode;\nplace.display = {title: {text: place.csname} };\nreturn place;\n})",
+        "_row_num": 3
+      }
+    ],
+    "calculates": [
+      {
+        "calculation_name": "displayOutdate",
+        "calculation": "adate.display(data('outdate'))",
+        "_row_num": 2
+      }
+    ],
+    "prompt_types": [
+      {
+        "prompt_type_name": "custom_date",
+        "type": "string",
+        "elementType": "date",
+        "comment": "Makes the date widget DD/MM/YYYY",
+        "_row_num": 2
+      },
+      {
+        "prompt_type_name": "adate",
+        "type": "string",
+        "elementType": "string",
+        "comment": "Save only mm.dd.yyyy with support for ?? at all positions",
+        "_row_num": 3
       }
     ],
     "model": [
@@ -1024,8 +1024,8 @@
         "display": {
           "title": {
             "text": {
-              "english": "Hospital Children",
-              "default": "Hospitalizacão de Criancas"
+              "english": "Children's Hospitalization",
+              "default": "Hospitalizacão de Crianças"
             }
           }
         },
@@ -1037,7 +1037,7 @@
           "locale": {
             "text": {
               "english": "Portuguese",
-              "default": "Portugues"
+              "default": "Português"
             }
           }
         },
@@ -1074,7 +1074,7 @@
               "locale": {
                 "text": {
                   "english": "Portuguese",
-                  "default": "Portugues"
+                  "default": "Português"
                 }
               }
             },
@@ -1105,8 +1105,8 @@
         "display": {
           "title": {
             "text": {
-              "english": "Hospital Children",
-              "default": "Hospitalizacão de Criancas"
+              "english": "Children's Hospitalization",
+              "default": "Hospitalizacão de Crianças"
             }
           }
         },
@@ -1176,7 +1176,7 @@
             "title": {
               "text": {
                 "english": "Otro de casa",
-                "default": "Otro de casa"
+                "default": "Outro de casa"
               }
             }
           },
@@ -1683,7 +1683,7 @@
               "prompt": {
                 "text": {
                   "english": "<b>Hospitalization: {{data.nome}} - Dob: {{calculates.displayOutdate}}<b>",
-                  "default": "<b>Hospitalizcao: {{data.nome}} - Nas: {{calculates.displayOutdate}}<b>"
+                  "default": "<b>Hospitalização: {{data.nome}} - Nas: {{calculates.displayOutdate}}<b>"
                 }
               }
             },
@@ -1755,7 +1755,7 @@
               "prompt": {
                 "text": {
                   "english": "<b>Hospitalization: {{data.nome}} - Dob: {{calculates.displayOutdate}}<b>",
-                  "default": "<b>Hospitalizcao: {{data.nome}} - Nas: {{calculates.displayOutdate}}<b>"
+                  "default": "<b>Hospitalização: {{data.nome}} - Nas: {{calculates.displayOutdate}}<b>"
                 }
               }
             },
@@ -1797,7 +1797,7 @@
               "prompt": {
                 "text": {
                   "english": "<b>Hospitalization: {{data.nome}} - Dob: {{calculates.displayOutdate}}<b>",
-                  "default": "<b>Hospitalizcao: {{data.nome}} - Nas: {{calculates.displayOutdate}}<b>"
+                  "default": "<b>Hospitalização: {{data.nome}} - Nas: {{calculates.displayOutdate}}<b>"
                 }
               }
             },
@@ -1881,7 +1881,7 @@
               "prompt": {
                 "text": {
                   "english": "<b>Hospitalization: {{data.nome}} - Dob: {{calculates.displayOutdate}}<b>",
-                  "default": "<b>Hospitalizcao: {{data.nome}} - Nas: {{calculates.displayOutdate}}<b>"
+                  "default": "<b>Hospitalização: {{data.nome}} - Nas: {{calculates.displayOutdate}}<b>"
                 }
               }
             },
@@ -1916,7 +1916,7 @@
               "prompt": {
                 "text": {
                   "english": "<b>Hospitalization: {{data.nome}} - Dob: {{calculates.displayOutdate}}<b>",
-                  "default": "<b>Hospitalizcao: {{data.nome}} - Nas: {{calculates.displayOutdate}}<b>"
+                  "default": "<b>Hospitalização: {{data.nome}} - Nas: {{calculates.displayOutdate}}<b>"
                 }
               }
             },
@@ -1953,7 +1953,7 @@
               "prompt": {
                 "text": {
                   "english": "Why not use the closest hospital?",
-                  "default": "Porque internou aqui?"
+                  "default": "Porquê é que não foi ao hospital mais perto?"
                 }
               }
             },
@@ -1970,7 +1970,7 @@
               "prompt": {
                 "text": {
                   "english": "<b>Hospitalization: {{data.nome}} - Dob: {{calculates.displayOutdate}}<b>",
-                  "default": "<b>Hospitalizcao: {{data.nome}} - Nas: {{calculates.displayOutdate}}<b>"
+                  "default": "<b>Hospitalização: {{data.nome}} - Nas: {{calculates.displayOutdate}}<b>"
                 }
               }
             },
@@ -2024,7 +2024,7 @@
               "prompt": {
                 "text": {
                   "english": "<b>Hospitalization: {{data.nome}} - Dob: {{calculates.displayOutdate}}<b>",
-                  "default": "<b>Hospitalizcao: {{data.nome}} - Nas: {{calculates.displayOutdate}}<b>"
+                  "default": "<b>Hospitalização: {{data.nome}} - Nas: {{calculates.displayOutdate}}<b>"
                 }
               }
             },
@@ -2043,7 +2043,7 @@
               "prompt": {
                 "text": {
                   "english": "Is the child still hospitalized?",
-                  "default": "A crianca ainda está internado?"
+                  "default": "A criança ainda está hospitalizada?"
                 }
               }
             },
@@ -2061,7 +2061,7 @@
               "prompt": {
                 "text": {
                   "english": "Duration of hospitalisation",
-                  "default": "Duracão de internamento"
+                  "default": "Duração de hospitalização"
                 }
               }
             },
@@ -2078,7 +2078,7 @@
               "prompt": {
                 "text": {
                   "english": "<b>Hospitalization: {{data.nome}} - Dob: {{calculates.displayOutdate}}<b>",
-                  "default": "<b>Hospitalizcao: {{data.nome}} - Nas: {{calculates.displayOutdate}}<b>"
+                  "default": "<b>Hospitalização: {{data.nome}} - Nas: {{calculates.displayOutdate}}<b>"
                 }
               }
             },
@@ -2097,7 +2097,7 @@
               "prompt": {
                 "text": {
                   "english": "Did the mother decide to take the child to the hospital?",
-                  "default": "A mãe decidiu levar a crianca ao hospital?"
+                  "default": "A mãe decidiu levar a criança ao hospital?"
                 }
               }
             },
@@ -2116,7 +2116,7 @@
               "prompt": {
                 "text": {
                   "english": "Did the father decide to take the child to the hospital?",
-                  "default": "O pai decidiu levar a crianca ao hospital?"
+                  "default": "O pai decidiu levar a criança ao hospital?"
                 }
               }
             },
@@ -2133,7 +2133,7 @@
               "prompt": {
                 "text": {
                   "english": "<b>Hospitalization: {{data.nome}} - Dob: {{calculates.displayOutdate}}<b>",
-                  "default": "<b>Hospitalizcao: {{data.nome}} - Nas: {{calculates.displayOutdate}}<b>"
+                  "default": "<b>Hospitalização: {{data.nome}} - Nas: {{calculates.displayOutdate}}<b>"
                 }
               }
             },
@@ -2152,7 +2152,7 @@
               "prompt": {
                 "text": {
                   "english": "Did someone else decide to take the child to the hospital?",
-                  "default": "Outra pessoa decidiu levar a crianca ao hospital?"
+                  "default": "Outra pessoa decidiu levar a criança ao hospital?"
                 }
               }
             },
@@ -2170,7 +2170,7 @@
               "prompt": {
                 "text": {
                   "english": "Who decided taking the child to hospital",
-                  "default": "Quem decidiu levar a crianca ao hospital?"
+                  "default": "Quem decidiu levar a criança ao hospital?"
                 }
               }
             },
@@ -2187,7 +2187,7 @@
               "prompt": {
                 "text": {
                   "english": "<b>Hospitalization: {{data.nome}} - Dob: {{calculates.displayOutdate}}<b>",
-                  "default": "<b>Hospitalizcao: {{data.nome}} - Nas: {{calculates.displayOutdate}}<b>"
+                  "default": "<b>Hospitalização: {{data.nome}} - Nas: {{calculates.displayOutdate}}<b>"
                 }
               }
             },
@@ -2205,7 +2205,7 @@
               "prompt": {
                 "text": {
                   "english": "Reason for admission",
-                  "default": "Causa de hospitalisacão"
+                  "default": "Razão de hospitalisacão"
                 }
               }
             },
@@ -2241,7 +2241,7 @@
               "prompt": {
                 "text": {
                   "english": "<b>Hospitalization: {{data.nome}} - Dob: {{calculates.displayOutdate}}<b>",
-                  "default": "<b>Hospitalizcao: {{data.nome}} - Nas: {{calculates.displayOutdate}}<b>"
+                  "default": "<b>Hospitalização: {{data.nome}} - Nas: {{calculates.displayOutdate}}<b>"
                 }
               }
             },
@@ -2559,8 +2559,8 @@
             "display": {
               "title": {
                 "text": {
-                  "english": "Hospital Children",
-                  "default": "Hospitalizacão de Criancas"
+                  "english": "Children's Hospitalization",
+                  "default": "Hospitalizacão de Crianças"
                 }
               }
             },
@@ -3368,7 +3368,7 @@
         "_aspect": "INFORMADOR",
         "_key": "displayChoicesList",
         "_type": "object",
-        "_value": "[{\"choice_list_name\":\"Inf\",\"data_value\":\"1\",\"display\":{\"title\":{\"text\":{\"english\":\"Mãe\",\"default\":\"Mãe\"}}},\"_row_num\":5},{\"choice_list_name\":\"Inf\",\"data_value\":\"2\",\"display\":{\"title\":{\"text\":{\"english\":\"Otro de casa\",\"default\":\"Otro de casa\"}}},\"_row_num\":6},{\"choice_list_name\":\"Inf\",\"data_value\":\"3\",\"display\":{\"title\":{\"text\":{\"english\":\"Outro fora de casa\",\"default\":\"Outro fora de casa\"}}},\"_row_num\":7},{\"choice_list_name\":\"Inf\",\"data_value\":\"4\",\"display\":{\"title\":{\"text\":{\"english\":\"Entrevista não possivel\",\"default\":\"Entrevista não possivel\"}}},\"_row_num\":8}]"
+        "_value": "[{\"choice_list_name\":\"Inf\",\"data_value\":\"1\",\"display\":{\"title\":{\"text\":{\"english\":\"Mãe\",\"default\":\"Mãe\"}}},\"_row_num\":5},{\"choice_list_name\":\"Inf\",\"data_value\":\"2\",\"display\":{\"title\":{\"text\":{\"english\":\"Otro de casa\",\"default\":\"Outro de casa\"}}},\"_row_num\":6},{\"choice_list_name\":\"Inf\",\"data_value\":\"3\",\"display\":{\"title\":{\"text\":{\"english\":\"Outro fora de casa\",\"default\":\"Outro fora de casa\"}}},\"_row_num\":7},{\"choice_list_name\":\"Inf\",\"data_value\":\"4\",\"display\":{\"title\":{\"text\":{\"english\":\"Entrevista não possivel\",\"default\":\"Entrevista não possivel\"}}},\"_row_num\":8}]"
       },
       {
         "_partition": "Column",
@@ -3403,7 +3403,7 @@
         "_aspect": "default",
         "_key": "displayName",
         "_type": "object",
-        "_value": "{\"text\":{\"english\":\"Hospital Children\",\"default\":\"Hospitalizacão de Criancas\"}}"
+        "_value": "{\"text\":{\"english\":\"Children's Hospitalization\",\"default\":\"Hospitalizacão de Crianças\"}}"
       }
     ]
   }

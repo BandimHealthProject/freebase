@@ -34,7 +34,7 @@
           "locale": {
             "text": {
               "english": "Portuguese",
-              "default": "Portugues"
+              "default": "Português"
             }
           }
         },
@@ -96,8 +96,8 @@
         "display": {
           "prompt": {
             "text": {
-              "english": "<b>Registration of pregnancy: {{data.nome}} - Dob: {{calculates.displayMifdnasc}}<b>",
-              "default": "<b>Registro de gravidez: {{data.nome}} - Nas: {{calculates.displayMifdnasc}}<b>"
+              "english": "<b>Registration of pregnancy: {{data.NOME}} - Dob: {{calculates.displayMifdnasc}}<b>",
+              "default": "<b>Registro de gravidez: {{data.NOME}} - Nas: {{calculates.displayMifdnasc}}<b>"
             }
           }
         },
@@ -122,7 +122,7 @@
           "prompt": {
             "text": {
               "english": "Day of registration of pregnancy",
-              "default": "Dato do registo come gravida"
+              "default": "Dato do registro da gravidez"
             }
           }
         },
@@ -146,8 +146,8 @@
         "display": {
           "prompt": {
             "text": {
-              "english": "<b>Registration of pregnancy: {{data.nome}} - Dob: {{calculates.displayMifdnasc}}<b>",
-              "default": "<b>Registro de gravidez: {{data.nome}} - Nas: {{calculates.displayMifdnasc}}<b>"
+              "english": "<b>Registration of pregnancy: {{data.NOME}} - Dob: {{calculates.displayMifdnasc}}<b>",
+              "default": "<b>Registro de gravidez: {{data.NOME}} - Nas: {{calculates.displayMifdnasc}}<b>"
             }
           }
         },
@@ -211,8 +211,8 @@
         "display": {
           "prompt": {
             "text": {
-              "english": "<b>Registration of pregnancy: {{data.nome}} - Dob: {{calculates.displayMifdnasc}}<b>",
-              "default": "<b>Registro de gravidez: {{data.nome}} - Nas: {{calculates.displayMifdnasc}}<b>"
+              "english": "<b>Registration of pregnancy: {{data.NOME}} - Dob: {{calculates.displayMifdnasc}}<b>",
+              "default": "<b>Registro de gravidez: {{data.NOME}} - Nas: {{calculates.displayMifdnasc}}<b>"
             }
           }
         },
@@ -245,8 +245,8 @@
         "display": {
           "prompt": {
             "text": {
-              "english": "<b>Registration of pregnancy: {{data.nome}} - Dob: {{calculates.displayMifdnasc}}<b>",
-              "default": "<b>Registro de gravidez: {{data.nome}} - Nas: {{calculates.displayMifdnasc}}<b>"
+              "english": "<b>Registration of pregnancy: {{data.NOME}} - Dob: {{calculates.displayMifdnasc}}<b>",
+              "default": "<b>Registro de gravidez: {{data.NOME}} - Nas: {{calculates.displayMifdnasc}}<b>"
             }
           }
         },
@@ -259,7 +259,7 @@
           "prompt": {
             "text": {
               "english": "Gestation month",
-              "default": "Mes de gestação"
+              "default": "Mês de gestação"
             }
           }
         },
@@ -316,8 +316,8 @@
         "display": {
           "prompt": {
             "text": {
-              "english": "<b>Registration of pregnancy: {{data.nome}} - Dob: {{calculates.displayMifdnasc}}<b>",
-              "default": "<b>Registro de gravidez: {{data.nome}} - Nas: {{calculates.displayMifdnasc}}<b>"
+              "english": "<b>Registration of pregnancy: {{data.NOME}} - Dob: {{calculates.displayMifdnasc}}<b>",
+              "default": "<b>Registro de gravidez: {{data.NOME}} - Nas: {{calculates.displayMifdnasc}}<b>"
             }
           }
         },
@@ -330,7 +330,7 @@
           "prompt": {
             "text": {
               "english": "<font color = \"red\">Gestation month</font>",
-              "default": "<font color = \"red\">Mes de gestação</font>"
+              "default": "<font color = \"red\">Mês de gestação</font>"
             }
           }
         },
@@ -380,8 +380,8 @@
         "display": {
           "prompt": {
             "text": {
-              "english": "<b>Registration of pregnancy: {{data.nome}} - Dob: {{calculates.displayMifdnasc}}<b>",
-              "default": "<b>Registro de gravidez: {{data.nome}} - Nas: {{calculates.displayMifdnasc}}<b>"
+              "english": "<b>Registration of pregnancy: {{data.NOME}} - Dob: {{calculates.displayMifdnasc}}<b>",
+              "default": "<b>Registro de gravidez: {{data.NOME}} - Nas: {{calculates.displayMifdnasc}}<b>"
             }
           }
         },
@@ -393,13 +393,13 @@
           "prompt": {
             "text": {
               "english": "Date of last period",
-              "default": "Data de ultimo período"
+              "default": "Data de último período ### rather \"data da última menstruação\"?"
             }
           },
           "hint": {
             "text": {
               "english": "First day of last period",
-              "default": "Primeiro dia do último período"
+              "default": "Primeiro dia do último período ###Primeiro dia da última menstruação?"
             }
           }
         },
@@ -418,7 +418,7 @@
           "constraint_message": {
             "text": {
               "english": "The date of last period cannot be in the future",
-              "default": "A data do último período não pode estar no futuro"
+              "default": "A data do último período não pode estar no futuro  ###A data da última menstruação não pode estar no futuro?"
             }
           }
         },
@@ -519,8 +519,8 @@
         "display": {
           "prompt": {
             "text": {
-              "english": "<b>Registration of pregnancy: {{data.nome}} - Dob: {{calculates.displayMifdnasc}}<b>",
-              "default": "<b>Registro de gravidez: {{data.nome}} - Nas: {{calculates.displayMifdnasc}}<b>"
+              "english": "<b>Registration of pregnancy: {{data.NOME}} - Dob: {{calculates.displayMifdnasc}}<b>",
+              "default": "<b>Registro de gravidez: {{data.NOME}} - Nas: {{calculates.displayMifdnasc}}<b>"
             }
           }
         },
@@ -532,13 +532,13 @@
           "prompt": {
             "text": {
               "english": "Date of last period",
-              "default": "Data de ultimo período"
+              "default": "Data de último período ### rather \"menstruação\"?"
             }
           },
           "hint": {
             "text": {
               "english": "First day of last period",
-              "default": "Primeiro dia do último período"
+              "default": "Primeiro dia do último período ###Primeiro dia da última menstruação?"
             }
           }
         },
@@ -557,7 +557,7 @@
           "constraint_message": {
             "text": {
               "english": "The date of last period cannot be in the future",
-              "default": "A data do último período não pode estar no futuro"
+              "default": "A data do último período não pode estar no futuro  ###A data da última menstruação não pode estar no futuro?"
             }
           }
         },
@@ -651,8 +651,8 @@
         "display": {
           "prompt": {
             "text": {
-              "english": "<b>Registration of pregnancy: {{data.nome}} - Dob: {{calculates.displayMifdnasc}}<b>",
-              "default": "<b>Registro de gravidez: {{data.nome}} - Nas: {{calculates.displayMifdnasc}}<b>"
+              "english": "<b>Registration of pregnancy: {{data.NOME}} - Dob: {{calculates.displayMifdnasc}}<b>",
+              "default": "<b>Registro de gravidez: {{data.NOME}} - Nas: {{calculates.displayMifdnasc}}<b>"
             }
           }
         },
@@ -754,8 +754,8 @@
         "display": {
           "prompt": {
             "text": {
-              "english": "<b>Registration of pregnancy: {{data.nome}} - Dob: {{calculates.displayMifdnasc}}<b>",
-              "default": "<b>Registro de gravidez: {{data.nome}} - Nas: {{calculates.displayMifdnasc}}<b>"
+              "english": "<b>Registration of pregnancy: {{data.NOME}} - Dob: {{calculates.displayMifdnasc}}<b>",
+              "default": "<b>Registro de gravidez: {{data.NOME}} - Nas: {{calculates.displayMifdnasc}}<b>"
             }
           }
         },
@@ -767,7 +767,7 @@
           "prompt": {
             "text": {
               "english": "How many times did the pregnant woman receive iron tablets?",
-              "default": "A grávida recebeu comprimidos com ferro quantas vezes?"
+              "default": "A grávida recebeu comprimidos de ferro quantas vezes?"
             }
           }
         },
@@ -857,8 +857,8 @@
         "display": {
           "prompt": {
             "text": {
-              "english": "<b>Registration of pregnancy: {{data.nome}} - Dob: {{calculates.displayMifdnasc}}<b>",
-              "default": "<b>Registro de gravidez: {{data.nome}} - Nas: {{calculates.displayMifdnasc}}<b>"
+              "english": "<b>Registration of pregnancy: {{data.NOME}} - Dob: {{calculates.displayMifdnasc}}<b>",
+              "default": "<b>Registro de gravidez: {{data.NOME}} - Nas: {{calculates.displayMifdnasc}}<b>"
             }
           }
         },
@@ -965,8 +965,8 @@
         "display": {
           "prompt": {
             "text": {
-              "english": "<b>Registration of pregnancy: {{data.nome}} - Dob: {{calculates.displayMifdnasc}}<b>",
-              "default": "<b>Registro de gravidez: {{data.nome}} - Nas: {{calculates.displayMifdnasc}}<b>"
+              "english": "<b>Registration of pregnancy: {{data.NOME}} - Dob: {{calculates.displayMifdnasc}}<b>",
+              "default": "<b>Registro de gravidez: {{data.NOME}} - Nas: {{calculates.displayMifdnasc}}<b>"
             }
           }
         },
@@ -979,7 +979,7 @@
           "prompt": {
             "text": {
               "english": "Probable date of delivery indicated on the card?",
-              "default": "Data provavel do parto indicado no cartão?"
+              "default": "Data provável do parto indicada no cartão?"
             }
           },
           "adate": {
@@ -1039,8 +1039,8 @@
         "display": {
           "prompt": {
             "text": {
-              "english": "<b>Registration of pregnancy: {{data.nome}} - Dob: {{calculates.displayMifdnasc}}<b>",
-              "default": "<b>Registro de gravidez: {{data.nome}} - Nas: {{calculates.displayMifdnasc}}<b>"
+              "english": "<b>Registration of pregnancy: {{data.NOME}} - Dob: {{calculates.displayMifdnasc}}<b>",
+              "default": "<b>Registro de gravidez: {{data.NOME}} - Nas: {{calculates.displayMifdnasc}}<b>"
             }
           }
         },
@@ -1074,8 +1074,8 @@
         "display": {
           "prompt": {
             "text": {
-              "english": "<b>Pregnancy visit: {{data.nome}} - Dob: {{calculates.displayREGDIA}}<b>",
-              "default": "<b>Visita de gravidez: {{data.nome}} - Nas: {{calculates.displayREGDIA}}<b>"
+              "english": "<b>Pregnancy visit: {{data.NOME}} - Dob: {{calculates.displayREGDIA}}<b>",
+              "default": "<b>Visita de gravidez: {{data.NOME}} - Nas: {{calculates.displayREGDIA}}<b>"
             }
           }
         },
@@ -1126,8 +1126,8 @@
         "display": {
           "prompt": {
             "text": {
-              "english": "<b>2nd pregnancy visit: {{data.nome}} - Dob: {{calculates.displayREGDIA}}<b>",
-              "default": "<b>2ª visita de gravidez: {{data.nome}} - Nas: {{calculates.displayREGDIA}}<b>"
+              "english": "<b>2nd pregnancy visit: {{data.NOME}} - Dob: {{calculates.displayREGDIA}}<b>",
+              "default": "<b>2ª visita de gravidez: {{data.NOME}} - Nas: {{calculates.displayREGDIA}}<b>"
             }
           }
         },
@@ -1192,8 +1192,8 @@
         "display": {
           "prompt": {
             "text": {
-              "english": "<b>2nd pregnancy visit: {{data.nome}} - Dob: {{calculates.displayREGDIA}}<b>",
-              "default": "<b>2ª visita de gravidez: {{data.nome}} - Nas: {{calculates.displayREGDIA}}<b>"
+              "english": "<b>2nd pregnancy visit: {{data.NOME}} - Dob: {{calculates.displayREGDIA}}<b>",
+              "default": "<b>2ª visita de gravidez: {{data.NOME}} - Nas: {{calculates.displayREGDIA}}<b>"
             }
           }
         },
@@ -1257,8 +1257,8 @@
         "display": {
           "prompt": {
             "text": {
-              "english": "<b>2nd pregnancy visit: {{data.nome}} - Dob: {{calculates.displayREGDIA}}<b>",
-              "default": "<b>2ª visita de gravidez: {{data.nome}} - Nas: {{calculates.displayREGDIA}}<b>"
+              "english": "<b>2nd pregnancy visit: {{data.NOME}} - Dob: {{calculates.displayREGDIA}}<b>",
+              "default": "<b>2ª visita de gravidez: {{data.NOME}} - Nas: {{calculates.displayREGDIA}}<b>"
             }
           }
         },
@@ -1291,8 +1291,8 @@
         "display": {
           "prompt": {
             "text": {
-              "english": "<b>2nd pregnancy visit: {{data.nome}} - Dob: {{calculates.displayREGDIA}}<b>",
-              "default": "<b>2ª visita de gravidez: {{data.nome}} - Nas: {{calculates.displayREGDIA}}<b>"
+              "english": "<b>2nd pregnancy visit: {{data.NOME}} - Dob: {{calculates.displayREGDIA}}<b>",
+              "default": "<b>2ª visita de gravidez: {{data.NOME}} - Nas: {{calculates.displayREGDIA}}<b>"
             }
           }
         },
@@ -1305,7 +1305,7 @@
           "prompt": {
             "text": {
               "english": "Gestation month",
-              "default": "Mes de gestação"
+              "default": "Mês de gestação"
             }
           }
         },
@@ -1362,8 +1362,8 @@
         "display": {
           "prompt": {
             "text": {
-              "english": "<b>2nd pregnancy visit: {{data.nome}} - Dob: {{calculates.displayREGDIA}}<b>",
-              "default": "<b>2ª visita de gravidez: {{data.nome}} - Nas: {{calculates.displayREGDIA}}<b>"
+              "english": "<b>2nd pregnancy visit: {{data.NOME}} - Dob: {{calculates.displayREGDIA}}<b>",
+              "default": "<b>2ª visita de gravidez: {{data.NOME}} - Nas: {{calculates.displayREGDIA}}<b>"
             }
           }
         },
@@ -1376,7 +1376,7 @@
           "prompt": {
             "text": {
               "english": "<font color = \"red\">Gestation month</font>",
-              "default": "<font color = \"red\">Mes de gestação</font>"
+              "default": "<font color = \"red\">Mês de gestação</font>"
             }
           }
         },
@@ -1426,8 +1426,8 @@
         "display": {
           "prompt": {
             "text": {
-              "english": "<b>2nd pregnancy visit: {{data.nome}} - Dob: {{calculates.displayREGDIA}}<b>",
-              "default": "<b>2ª visita de gravidez: {{data.nome}} - Nas: {{calculates.displayREGDIA}}<b>"
+              "english": "<b>2nd pregnancy visit: {{data.NOME}} - Dob: {{calculates.displayREGDIA}}<b>",
+              "default": "<b>2ª visita de gravidez: {{data.NOME}} - Nas: {{calculates.displayREGDIA}}<b>"
             }
           }
         },
@@ -1439,13 +1439,13 @@
           "prompt": {
             "text": {
               "english": "Date of last period",
-              "default": "Data de ultimo período"
+              "default": "Data de último período ### rather \"data da última menstruação\"?"
             }
           },
           "hint": {
             "text": {
               "english": "First day of last period",
-              "default": "Primeiro dia do último período"
+              "default": "Primeiro dia do último período ###Primeiro dia da última menstruação?"
             }
           }
         },
@@ -1464,7 +1464,7 @@
           "constraint_message": {
             "text": {
               "english": "The date of last period cannot be in the future",
-              "default": "A data do último período não pode estar no futuro"
+              "default": "A data do último período não pode estar no futuro  ###A data da última menstruação não pode estar no futuro?"
             }
           }
         },
@@ -1565,8 +1565,8 @@
         "display": {
           "prompt": {
             "text": {
-              "english": "<b>2nd pregnancy visit: {{data.nome}} - Dob: {{calculates.displayREGDIA}}<b>",
-              "default": "<b>2ª visita de gravidez: {{data.nome}} - Nas: {{calculates.displayREGDIA}}<b>"
+              "english": "<b>2nd pregnancy visit: {{data.NOME}} - Dob: {{calculates.displayREGDIA}}<b>",
+              "default": "<b>2ª visita de gravidez: {{data.NOME}} - Nas: {{calculates.displayREGDIA}}<b>"
             }
           }
         },
@@ -1578,13 +1578,13 @@
           "prompt": {
             "text": {
               "english": "Date of last period",
-              "default": "Data de ultimo período"
+              "default": "Data de último período ### rather \"data da última menstruação\"?"
             }
           },
           "hint": {
             "text": {
               "english": "First day of last period",
-              "default": "Primeiro dia do último período"
+              "default": "Primeiro dia do último período ###Primeiro dia da última menstruação?"
             }
           }
         },
@@ -1603,7 +1603,7 @@
           "constraint_message": {
             "text": {
               "english": "The date of last period cannot be in the future",
-              "default": "A data do último período não pode estar no futuro"
+              "default": "A data do último período não pode estar no futuro  ###A data da última menstruação não pode estar no futuro?"
             }
           }
         },
@@ -1697,8 +1697,8 @@
         "display": {
           "prompt": {
             "text": {
-              "english": "<b>2nd pregnancy visit: {{data.nome}} - Dob: {{calculates.displayREGDIA}}<b>",
-              "default": "<b>2ª visita de gravidez: {{data.nome}} - Nas: {{calculates.displayREGDIA}}<b>"
+              "english": "<b>2nd pregnancy visit: {{data.NOME}} - Dob: {{calculates.displayREGDIA}}<b>",
+              "default": "<b>2ª visita de gravidez: {{data.NOME}} - Nas: {{calculates.displayREGDIA}}<b>"
             }
           }
         },
@@ -1800,8 +1800,8 @@
         "display": {
           "prompt": {
             "text": {
-              "english": "<b>2nd pregnancy visit: {{data.nome}} - Dob: {{calculates.displayREGDIA}}<b>",
-              "default": "<b>2ª visita de gravidez: {{data.nome}} - Nas: {{calculates.displayREGDIA}}<b>"
+              "english": "<b>2nd pregnancy visit: {{data.NOME}} - Dob: {{calculates.displayREGDIA}}<b>",
+              "default": "<b>2ª visita de gravidez: {{data.NOME}} - Nas: {{calculates.displayREGDIA}}<b>"
             }
           }
         },
@@ -1813,7 +1813,7 @@
           "prompt": {
             "text": {
               "english": "How many times did the pregnant woman receive iron tablets?",
-              "default": "A grávida recebeu comprimidos com ferro quantas vezes?"
+              "default": "A grávida recebeu comprimidos de ferro quantas vezes?"
             }
           }
         },
@@ -1903,8 +1903,8 @@
         "display": {
           "prompt": {
             "text": {
-              "english": "<b>2nd pregnancy visit: {{data.nome}} - Dob: {{calculates.displayREGDIA}}<b>",
-              "default": "<b>2ª visita de gravidez: {{data.nome}} - Nas: {{calculates.displayREGDIA}}<b>"
+              "english": "<b>2nd pregnancy visit: {{data.NOME}} - Dob: {{calculates.displayREGDIA}}<b>",
+              "default": "<b>2ª visita de gravidez: {{data.NOME}} - Nas: {{calculates.displayREGDIA}}<b>"
             }
           }
         },
@@ -2011,8 +2011,8 @@
         "display": {
           "prompt": {
             "text": {
-              "english": "<b>2nd pregnancy visit: {{data.nome}} - Dob: {{calculates.displayREGDIA}}<b>",
-              "default": "<b>2ª visita de gravidez: {{data.nome}} - Nas: {{calculates.displayREGDIA}}<b>"
+              "english": "<b>2nd pregnancy visit: {{data.NOME}} - Dob: {{calculates.displayREGDIA}}<b>",
+              "default": "<b>2ª visita de gravidez: {{data.NOME}} - Nas: {{calculates.displayREGDIA}}<b>"
             }
           }
         },
@@ -2025,7 +2025,7 @@
           "prompt": {
             "text": {
               "english": "Probable date of delivery indicated on the card?",
-              "default": "Data provavel do parto indicado no cartão?"
+              "default": "Data provável do parto indicado no cartão?"
             }
           },
           "adate": {
@@ -2085,8 +2085,8 @@
         "display": {
           "prompt": {
             "text": {
-              "english": "<b>2nd pregnancy visit: {{data.nome}} - Dob: {{calculates.displayREGDIA}}<b>",
-              "default": "<b>2ª visita de gravidez: {{data.nome}} - Nas: {{calculates.displayREGDIA}}<b>"
+              "english": "<b>2nd pregnancy visit: {{data.NOME}} - Dob: {{calculates.displayREGDIA}}<b>",
+              "default": "<b>2ª visita de gravidez: {{data.NOME}} - Nas: {{calculates.displayREGDIA}}<b>"
             }
           }
         },
@@ -2124,8 +2124,8 @@
         "display": {
           "prompt": {
             "text": {
-              "english": "<b>After childbirth: {{data.nome}} - Dob: {{calculates.displayREGDIA}}<b>",
-              "default": "<b>Depois de parto: {{data.nome}} - Nas: {{calculates.displayREGDIA}}<b>"
+              "english": "<b>After childbirth: {{data.NOME}} - Dob: {{calculates.displayREGDIA}}<b>",
+              "default": "<b>Depois de parto: {{data.NOME}} - Nas: {{calculates.displayREGDIA}}<b>"
             }
           }
         },
@@ -2163,8 +2163,8 @@
         "display": {
           "prompt": {
             "text": {
-              "english": "<b>After childbirth: {{data.nome}} - Dob: {{calculates.displayREGDIA}}<b>",
-              "default": "<b>Depois de parto: {{data.nome}} - Nas: {{calculates.displayREGDIA}}<b>"
+              "english": "<b>After childbirth: {{data.NOME}} - Dob: {{calculates.displayREGDIA}}<b>",
+              "default": "<b>Depois de parto: {{data.NOME}} - Nas: {{calculates.displayREGDIA}}<b>"
             }
           }
         },
@@ -2245,8 +2245,8 @@
         "display": {
           "prompt": {
             "text": {
-              "english": "<b>After childbirth: {{data.nome}} - Dob: {{calculates.displayREGDIA}}<b>",
-              "default": "<b>Depois de parto: {{data.nome}} - Nas: {{calculates.displayREGDIA}}<b>"
+              "english": "<b>After childbirth: {{data.NOME}} - Dob: {{calculates.displayREGDIA}}<b>",
+              "default": "<b>Depois de parto: {{data.NOME}} - Nas: {{calculates.displayREGDIA}}<b>"
             }
           }
         },
@@ -2279,8 +2279,8 @@
         "display": {
           "prompt": {
             "text": {
-              "english": "<b>After childbirth: {{data.nome}} - Dob: {{calculates.displayREGDIA}}<b>",
-              "default": "<b>Depois de parto: {{data.nome}} - Nas: {{calculates.displayREGDIA}}<b>"
+              "english": "<b>After childbirth: {{data.NOME}} - Dob: {{calculates.displayREGDIA}}<b>",
+              "default": "<b>Depois de parto: {{data.NOME}} - Nas: {{calculates.displayREGDIA}}<b>"
             }
           }
         },
@@ -2299,7 +2299,7 @@
           "constraint_message": {
             "text": {
               "english": "The date of pregnancy end cannot be in the future",
-              "default": "A data de término da gravidez não pode estar no futuro"
+              "default": "A data do fim da gravidez não pode estar no futuro"
             }
           }
         },
@@ -2324,8 +2324,8 @@
         "display": {
           "prompt": {
             "text": {
-              "english": "<b>After childbirth: {{data.nome}} - Dob: {{calculates.displayREGDIA}}<b>",
-              "default": "<b>Depois de parto: {{data.nome}} - Nas: {{calculates.displayREGDIA}}<b>"
+              "english": "<b>After childbirth: {{data.NOME}} - Dob: {{calculates.displayREGDIA}}<b>",
+              "default": "<b>Depois de parto: {{data.NOME}} - Nas: {{calculates.displayREGDIA}}<b>"
             }
           }
         },
@@ -2387,8 +2387,8 @@
         "display": {
           "prompt": {
             "text": {
-              "english": "<b>After childbirth: {{data.nome}} - Dob: {{calculates.displayREGDIA}}<b>",
-              "default": "<b>Depois de parto: {{data.nome}} - Nas: {{calculates.displayREGDIA}}<b>"
+              "english": "<b>After childbirth: {{data.NOME}} - Dob: {{calculates.displayREGDIA}}<b>",
+              "default": "<b>Depois de parto: {{data.NOME}} - Nas: {{calculates.displayREGDIA}}<b>"
             }
           }
         },
@@ -2420,8 +2420,8 @@
         "display": {
           "prompt": {
             "text": {
-              "english": "<b>After childbirth: {{data.nome}} - Dob: {{calculates.displayREGDIA}}<b>",
-              "default": "<b>Depois de parto: {{data.nome}} - Nas: {{calculates.displayREGDIA}}<b>"
+              "english": "<b>After childbirth: {{data.NOME}} - Dob: {{calculates.displayREGDIA}}<b>",
+              "default": "<b>Depois de parto: {{data.NOME}} - Nas: {{calculates.displayREGDIA}}<b>"
             }
           }
         },
@@ -2435,7 +2435,7 @@
           "prompt": {
             "text": {
               "english": "Vaccination card",
-              "default": "Vartão de vacinas da mulher"
+              "default": "Cartão de vacinas da mulher"
             }
           }
         },
@@ -2454,8 +2454,8 @@
         "display": {
           "prompt": {
             "text": {
-              "english": "<b>After childbirth: {{data.nome}} - Dob: {{calculates.displayREGDIA}}<b>",
-              "default": "<b>Depois de parto: {{data.nome}} - Nas: {{calculates.displayREGDIA}}<b>"
+              "english": "<b>After childbirth: {{data.NOME}} - Dob: {{calculates.displayREGDIA}}<b>",
+              "default": "<b>Depois de parto: {{data.NOME}} - Nas: {{calculates.displayREGDIA}}<b>"
             }
           }
         },
@@ -2469,7 +2469,7 @@
           "prompt": {
             "text": {
               "english": "Did the woman get any Tetanus vaccine during pregnancy?",
-              "default": "A mulher recebeu alguma vacina anti-tetánica durante a gravidez?"
+              "default": "A mulher recebeu alguma vacina antitetânica durante a gravidez?  ###durante esta gravidez?"
             }
           }
         },
@@ -2515,8 +2515,8 @@
         "display": {
           "prompt": {
             "text": {
-              "english": "<b>After childbirth: {{data.nome}} - Dob: {{calculates.displayREGDIA}}<b>",
-              "default": "<b>Depois de parto: {{data.nome}} - Nas: {{calculates.displayREGDIA}}<b>"
+              "english": "<b>After childbirth: {{data.NOME}} - Dob: {{calculates.displayREGDIA}}<b>",
+              "default": "<b>Depois de parto: {{data.NOME}} - Nas: {{calculates.displayREGDIA}}<b>"
             }
           }
         },
@@ -2687,8 +2687,8 @@
         "display": {
           "prompt": {
             "text": {
-              "english": "<b>After childbirth: {{data.nome}} - Dob: {{calculates.displayREGDIA}}<b>",
-              "default": "<b>Depois de parto: {{data.nome}} - Nas: {{calculates.displayREGDIA}}<b>"
+              "english": "<b>After childbirth: {{data.NOME}} - Dob: {{calculates.displayREGDIA}}<b>",
+              "default": "<b>Depois de parto: {{data.NOME}} - Nas: {{calculates.displayREGDIA}}<b>"
             }
           }
         },
@@ -2702,7 +2702,7 @@
           "prompt": {
             "text": {
               "english": "Have prenatal consultation card?",
-              "default": "Tem cartão do consulta pré-natal?"
+              "default": "Tem cartão de consulta pré-natal?"
             }
           }
         },
@@ -2721,8 +2721,8 @@
         "display": {
           "prompt": {
             "text": {
-              "english": "<b>After childbirth: {{data.nome}} - Dob: {{calculates.displayREGDIA}}<b>",
-              "default": "<b>Depois de parto: {{data.nome}} - Nas: {{calculates.displayREGDIA}}<b>"
+              "english": "<b>After childbirth: {{data.NOME}} - Dob: {{calculates.displayREGDIA}}<b>",
+              "default": "<b>Depois de parto: {{data.NOME}} - Nas: {{calculates.displayREGDIA}}<b>"
             }
           }
         },
@@ -2736,7 +2736,7 @@
           "prompt": {
             "text": {
               "english": "Did the woman seek prenatal consultations during pregnancy?",
-              "default": "A mulher procurou consultas pré-natal durante a gravidez?"
+              "default": "A mulher procurou consultas pré-natais durante a gravidez? ###durante esta gravidez?"
             }
           }
         },
@@ -2755,8 +2755,8 @@
         "display": {
           "prompt": {
             "text": {
-              "english": "<b>After childbirth: {{data.nome}} - Dob: {{calculates.displayREGDIA}}<b>",
-              "default": "<b>Depois de parto: {{data.nome}} - Nas: {{calculates.displayREGDIA}}<b>"
+              "english": "<b>After childbirth: {{data.NOME}} - Dob: {{calculates.displayREGDIA}}<b>",
+              "default": "<b>Depois de parto: {{data.NOME}} - Nas: {{calculates.displayREGDIA}}<b>"
             }
           }
         },
@@ -2858,8 +2858,8 @@
         "display": {
           "prompt": {
             "text": {
-              "english": "<b>After childbirth: {{data.nome}} - Dob: {{calculates.displayREGDIA}}<b>",
-              "default": "<b>Depois de parto: {{data.nome}} - Nas: {{calculates.displayREGDIA}}<b>"
+              "english": "<b>After childbirth: {{data.NOME}} - Dob: {{calculates.displayREGDIA}}<b>",
+              "default": "<b>Depois de parto: {{data.NOME}} - Nas: {{calculates.displayREGDIA}}<b>"
             }
           }
         },
@@ -2871,7 +2871,7 @@
           "prompt": {
             "text": {
               "english": "How many times did the pregnant woman receive iron tablets?",
-              "default": "A grávida recebeu comprimidos com ferro quantas vezes?"
+              "default": "A grávida recebeu comprimidos de ferro quantas vezes?"
             }
           }
         },
@@ -2961,8 +2961,8 @@
         "display": {
           "prompt": {
             "text": {
-              "english": "<b>After childbirth: {{data.nome}} - Dob: {{calculates.displayREGDIA}}<b>",
-              "default": "<b>Depois de parto: {{data.nome}} - Nas: {{calculates.displayREGDIA}}<b>"
+              "english": "<b>After childbirth: {{data.NOME}} - Dob: {{calculates.displayREGDIA}}<b>",
+              "default": "<b>Depois de parto: {{data.NOME}} - Nas: {{calculates.displayREGDIA}}<b>"
             }
           }
         },
@@ -3064,8 +3064,8 @@
         "display": {
           "prompt": {
             "text": {
-              "english": "<b>After childbirth: {{data.nome}} - Dob: {{calculates.displayREGDIA}}<b>",
-              "default": "<b>Depois de parto: {{data.nome}} - Nas: {{calculates.displayREGDIA}}<b>"
+              "english": "<b>After childbirth: {{data.NOME}} - Dob: {{calculates.displayREGDIA}}<b>",
+              "default": "<b>Depois de parto: {{data.NOME}} - Nas: {{calculates.displayREGDIA}}<b>"
             }
           }
         },
@@ -3098,8 +3098,8 @@
         "display": {
           "prompt": {
             "text": {
-              "english": "<b>After childbirth: {{data.nome}} - Dob: {{calculates.displayREGDIA}}<b>",
-              "default": "<b>Depois de parto: {{data.nome}} - Nas: {{calculates.displayREGDIA}}<b>"
+              "english": "<b>After childbirth: {{data.NOME}} - Dob: {{calculates.displayREGDIA}}<b>",
+              "default": "<b>Depois de parto: {{data.NOME}} - Nas: {{calculates.displayREGDIA}}<b>"
             }
           }
         },
@@ -3138,8 +3138,8 @@
         "display": {
           "prompt": {
             "text": {
-              "english": "<b>After childbirth: {{data.nome}} - Dob: {{calculates.displayREGDIA}}<b>",
-              "default": "<b>Depois de parto: {{data.nome}} - Nas: {{calculates.displayREGDIA}}<b>"
+              "english": "<b>After childbirth: {{data.NOME}} - Dob: {{calculates.displayREGDIA}}<b>",
+              "default": "<b>Depois de parto: {{data.NOME}} - Nas: {{calculates.displayREGDIA}}<b>"
             }
           }
         },
@@ -3151,7 +3151,7 @@
           "prompt": {
             "text": {
               "english": "Place of hospital / health center",
-              "default": "Local do hospital / centro de saude"
+              "default": "Local do hospital / centro de saúde"
             }
           }
         },
@@ -3225,8 +3225,8 @@
         "display": {
           "prompt": {
             "text": {
-              "english": "<b>After childbirth: {{data.nome}} - Dob: {{calculates.displayREGDIA}}<b>",
-              "default": "<b>Depois de parto: {{data.nome}} - Nas: {{calculates.displayREGDIA}}<b>"
+              "english": "<b>After childbirth: {{data.NOME}} - Dob: {{calculates.displayREGDIA}}<b>",
+              "default": "<b>Depois de parto: {{data.NOME}} - Nas: {{calculates.displayREGDIA}}<b>"
             }
           }
         },
@@ -3239,7 +3239,7 @@
           "prompt": {
             "text": {
               "english": "Place of hospital / health center",
-              "default": "Local do hospital / centro de saude"
+              "default": "Local do hospital / centro de saúde"
             }
           }
         },
@@ -3262,8 +3262,8 @@
         "display": {
           "prompt": {
             "text": {
-              "english": "<b>After childbirth: {{data.nome}} - Dob: {{calculates.displayREGDIA}}<b>",
-              "default": "<b>Depois de parto: {{data.nome}} - Nas: {{calculates.displayREGDIA}}<b>"
+              "english": "<b>After childbirth: {{data.NOME}} - Dob: {{calculates.displayREGDIA}}<b>",
+              "default": "<b>Depois de parto: {{data.NOME}} - Nas: {{calculates.displayREGDIA}}<b>"
             }
           }
         },
@@ -3294,8 +3294,8 @@
         "display": {
           "prompt": {
             "text": {
-              "english": "Why not use the closest hospital?",
-              "default": "Porque internou aqui?"
+              "english": "Why not attending closest hospital",
+              "default": "Porquê é que não foi ao hospital mais perto?"
             }
           }
         },
@@ -3322,8 +3322,8 @@
         "display": {
           "prompt": {
             "text": {
-              "english": "<b>After childbirth: {{data.nome}} - Dob: {{calculates.displayREGDIA}}<b>",
-              "default": "<b>Depois de parto: {{data.nome}} - Nas: {{calculates.displayREGDIA}}<b>"
+              "english": "<b>After childbirth: {{data.NOME}} - Dob: {{calculates.displayREGDIA}}<b>",
+              "default": "<b>Depois de parto: {{data.NOME}} - Nas: {{calculates.displayREGDIA}}<b>"
             }
           }
         },
@@ -3337,7 +3337,7 @@
           "prompt": {
             "text": {
               "english": "Who assisted the birth?",
-              "default": "Quem ajudou o parto?"
+              "default": "Quem ajudou no parto?"
             }
           }
         },
@@ -3361,8 +3361,8 @@
         "display": {
           "prompt": {
             "text": {
-              "english": "<b>After childbirth: {{data.nome}} - Dob: {{calculates.displayREGDIA}}<b>",
-              "default": "<b>Depois de parto: {{data.nome}} - Nas: {{calculates.displayREGDIA}}<b>"
+              "english": "<b>After childbirth: {{data.NOME}} - Dob: {{calculates.displayREGDIA}}<b>",
+              "default": "<b>Depois de parto: {{data.NOME}} - Nas: {{calculates.displayREGDIA}}<b>"
             }
           }
         },
@@ -3406,8 +3406,8 @@
         "display": {
           "prompt": {
             "text": {
-              "english": "<b>After childbirth: {{data.nome}} - Dob: {{calculates.displayREGDIA}}<b>",
-              "default": "<b>Depois de parto: {{data.nome}} - Nas: {{calculates.displayREGDIA}}<b>"
+              "english": "<b>After childbirth: {{data.NOME}} - Dob: {{calculates.displayREGDIA}}<b>",
+              "default": "<b>Depois de parto: {{data.NOME}} - Nas: {{calculates.displayREGDIA}}<b>"
             }
           }
         },
@@ -3451,8 +3451,8 @@
         "display": {
           "prompt": {
             "text": {
-              "english": "<b>After childbirth: {{data.nome}} - Dob: {{calculates.displayREGDIA}}<b>",
-              "default": "<b>Depois de parto: {{data.nome}} - Nas: {{calculates.displayREGDIA}}<b>"
+              "english": "<b>After childbirth: {{data.NOME}} - Dob: {{calculates.displayREGDIA}}<b>",
+              "default": "<b>Depois de parto: {{data.NOME}} - Nas: {{calculates.displayREGDIA}}<b>"
             }
           }
         },
@@ -3496,8 +3496,8 @@
         "display": {
           "prompt": {
             "text": {
-              "english": "<b>After childbirth: {{data.nome}} - Dob: {{calculates.displayREGDIA}}<b>",
-              "default": "<b>Depois de parto: {{data.nome}} - Nas: {{calculates.displayREGDIA}}<b>"
+              "english": "<b>After childbirth: {{data.NOME}} - Dob: {{calculates.displayREGDIA}}<b>",
+              "default": "<b>Depois de parto: {{data.NOME}} - Nas: {{calculates.displayREGDIA}}<b>"
             }
           }
         },
@@ -3556,8 +3556,8 @@
         "display": {
           "prompt": {
             "text": {
-              "english": "<b>After childbirth: {{data.nome}} - Dob: {{calculates.displayREGDIA}}<b>",
-              "default": "<b>Depois de parto: {{data.nome}} - Nas: {{calculates.displayREGDIA}}<b>"
+              "english": "<b>After childbirth: {{data.NOME}} - Dob: {{calculates.displayREGDIA}}<b>",
+              "default": "<b>Depois de parto: {{data.NOME}} - Nas: {{calculates.displayREGDIA}}<b>"
             }
           }
         },
@@ -3592,7 +3592,7 @@
           "prompt": {
             "text": {
               "english": "<b>Socioeconomic status<b>",
-              "default": "<b>Status socioeconomico<b>"
+              "default": "<b>Estatuto socioeconómico<b>"
             }
           }
         },
@@ -3640,7 +3640,7 @@
           "prompt": {
             "text": {
               "english": "<b>Socioeconomic status<b>",
-              "default": "<b>Status socioeconomico<b>"
+              "default": "<b>Estatuto socioeconómico<b>"
             }
           }
         },
@@ -3688,7 +3688,7 @@
           "prompt": {
             "text": {
               "english": "<b>Socioeconomic status<b>",
-              "default": "<b>Status socioeconomico<b>"
+              "default": "<b>Estatuto socioeconómico<b>"
             }
           }
         },
@@ -3702,7 +3702,7 @@
           "prompt": {
             "text": {
               "english": "Does the mother or father own a telephone",
-              "default": "A mãe ou o pai tem telemovel?"
+              "default": "A mãe ou o pai tem um telemóvel?"
             }
           }
         },
@@ -3715,7 +3715,7 @@
           "prompt": {
             "text": {
               "english": "Phone number of mother or other",
-              "default": "Número de telemovel da mãe ou outro"
+              "default": "Número de telemóvel da mãe ou outra pessoa"
             }
           }
         },
@@ -3738,7 +3738,7 @@
           "prompt": {
             "text": {
               "english": "<b>Socioeconomic status<b>",
-              "default": "<b>Status socioeconomico<b>"
+              "default": "<b>Estatuto socioeconómico<b>"
             }
           }
         },
@@ -3751,7 +3751,7 @@
           "prompt": {
             "text": {
               "english": "Comments to socioeconomic status",
-              "default": "Comentários ao status socioeconômico"
+              "default": "Comentários ao estatuto socioeconómico"
             }
           }
         },
@@ -3817,64 +3817,6 @@
         "calculation_name": "lmp_cpup",
         "calculation": "freebase.echo('A data do último período está no futuro')",
         "_row_num": 7
-      }
-    ],
-    "queries": [
-      {
-        "query_name": "child",
-        "query_type": "linked_table",
-        "linked_form_id": "CRIANCA",
-        "linked_table_id": "CRIANCA",
-        "selection": "PREGID = ?",
-        "selectionArgs": "[opendatakit.getCurrentInstanceId()]",
-        "newRowInitialElementKeyToValueMap": "{PREGID: opendatakit.getCurrentInstanceId(), REGID: data('REGID'), REGDIA: data('PREGDIA'), REG: data('REG'), TAB: data('TAB'), MOR: data('MOR'), CASA: data('CASA'), FOGAO: data('FOGAO'), AMO: data('AMO'), NOMEMAE: data('NOME'), CABA: data('CABA'), GERADOR: data('GERADOR'), OBSSES: data('OBSSES'), RADIO: data('RADIO'), SESDATA: data('SESDATA'), TECTO: data('TECTO'), TELEMOVEL: data('TELEMOVEL'), TELENUMERO: data('TELENUMERO'), OBSPART: data('OBSPART'), OUTDATE: data('OUTDATE'), ASSISTPART: data('ASSISTPART'), CARTON: data('CARTON'), CART_ANC: data('CART_ANC'), CDG_C: data('CDG_C'), CDG_M: data('CDG_M'), FEDEP_C: data('FEDEP_C'), FEDEP_M: data('FEDEP_M'), GRCONS: data('GRCONS'), GRINFOS: data('GRINFOS'), GRVAC: data('GRVAC'), LITTERSIZE: data('LITTERSIZE'), LOCPAR: data('LOCPAR'), QVFANSI_C: data('QVFANSI_C'), QVFANSI_M: data('QVFANSI_M'), TABPART: data('TABPART'), VACTT1: data('VACTT1'), VACTT2: data('VACTT2'), VACTT3: data('VACTT3'), VACTT4: data('VACTT4'), VACTTHI: data('VACTTHI')}",
-        "openRowInitialElementKeyToValueMap": "{}",
-        "_row_num": 2
-      },
-      {
-        "query_name": "reg_csv",
-        "query_type": "csv",
-        "uri": "\"HEALTHCENTRES.csv\"",
-        "callback": "_.chain(context)\n.uniq(function(x) {\nreturn x.reg\n})\n.map(function(place){\nreturn {\ndata_value:place.reg,\ndisplay:{title: {text: place.regname} } };\n}).value()",
-        "_row_num": 4
-      },
-      {
-        "query_name": "hc_csv",
-        "query_type": "csv",
-        "uri": "\"HEALTHCENTRES.csv\"",
-        "callback": "_.map(context, function(place){place.data_value = place.cscode;\nplace.display = {title: {text: place.csname} };\nreturn place;\n})",
-        "_row_num": 5
-      }
-    ],
-    "prompt_types": [
-      {
-        "prompt_type_name": "custom_date",
-        "type": "string",
-        "elementType": "date",
-        "comment": "Makes the date widget DD/MM/YYYY",
-        "_row_num": 2
-      },
-      {
-        "prompt_type_name": "async_assign_date",
-        "type": "date",
-        "_row_num": 3
-      },
-      {
-        "prompt_type_name": "adate",
-        "type": "string",
-        "elementType": "string",
-        "comment": "Save only mm.dd.yyyy with support for ?? at all positions",
-        "_row_num": 4
-      }
-    ],
-    "table_specific_translations": [
-      {
-        "string_token": "linked_table_new_instance_label",
-        "text": {
-          "english": "New registration",
-          "default": "Novo registro"
-        },
-        "_row_num": 2
       }
     ],
     "choices": [
@@ -4015,7 +3957,7 @@
           "title": {
             "text": {
               "english": "Has no card and no ANC",
-              "default": "Não tem cartão e não tem consultas"
+              "default": "Não tem cartão e não procurou consultas pré-natais"
             }
           }
         },
@@ -4028,7 +3970,7 @@
           "title": {
             "text": {
               "english": "Has no card, some ANC",
-              "default": "Não tem cartão, mas tem consultas"
+              "default": "Não tem cartão, mas procurou algumas consultas pré-natais"
             }
           }
         },
@@ -4067,7 +4009,7 @@
           "title": {
             "text": {
               "english": "Card seen and no ANCs",
-              "default": "Cartão visto, mas sem consultas registadas"
+              "default": "Cartão visto, mas sem consultas pré-natais registadas"
             }
           }
         },
@@ -4136,6 +4078,7 @@
             }
           }
         },
+        "__EMPTY": "Nado ###Nascimento/Parto?",
         "_row_num": 21
       },
       {
@@ -4214,6 +4157,7 @@
             }
           }
         },
+        "__EMPTY": "Mulher ###Avó???",
         "_row_num": 27
       },
       {
@@ -4223,7 +4167,7 @@
           "title": {
             "text": {
               "english": "Other family member",
-              "default": "Outra mebro da familia"
+              "default": "Outro mebro da família"
             }
           }
         },
@@ -4275,7 +4219,7 @@
           "title": {
             "text": {
               "english": "Missing",
-              "default": "Falta informacao"
+              "default": "Falta informação"
             }
           }
         },
@@ -4301,7 +4245,7 @@
           "title": {
             "text": {
               "english": "Health Center",
-              "default": "Centro de Saude"
+              "default": "Centro de Saúde"
             }
           }
         },
@@ -4314,7 +4258,7 @@
           "title": {
             "text": {
               "english": "Health Unit",
-              "default": "Unidade de Saude Base"
+              "default": "Unidade de Saúde Base"
             }
           }
         },
@@ -4409,6 +4353,7 @@
             }
           }
         },
+        "__EMPTY": "###is Matrona commonly used? \"parteiras tradicionais\" better?",
         "_row_num": 42
       },
       {
@@ -4422,6 +4367,7 @@
             }
           }
         },
+        "__EMPTY": "###is Matrona commonly used? \"parteiras tradicionais\" better?",
         "_row_num": 43
       },
       {
@@ -4431,7 +4377,7 @@
           "title": {
             "text": {
               "english": "Family member",
-              "default": "Familia"
+              "default": "Família"
             }
           }
         },
@@ -4457,7 +4403,7 @@
           "title": {
             "text": {
               "english": "No one",
-              "default": "Ninguem"
+              "default": "Ninguém"
             }
           }
         },
@@ -4604,6 +4550,7 @@
             }
           }
         },
+        "__EMPTY": "\"concreto\"?",
         "_row_num": 57
       },
       {
@@ -4696,6 +4643,64 @@
           }
         },
         "_row_num": 64
+      }
+    ],
+    "queries": [
+      {
+        "query_name": "child",
+        "query_type": "linked_table",
+        "linked_form_id": "CRIANCA",
+        "linked_table_id": "CRIANCA",
+        "selection": "PREGID = ?",
+        "selectionArgs": "[opendatakit.getCurrentInstanceId()]",
+        "newRowInitialElementKeyToValueMap": "{PREGID: opendatakit.getCurrentInstanceId(), REGID: data('REGID'), REGDIA: data('PREGDIA'), REG: data('REG'), TAB: data('TAB'), MOR: data('MOR'), CASA: data('CASA'), FOGAO: data('FOGAO'), AMO: data('AMO'), NOMEMAE: data('NOME'), CABA: data('CABA'), GERADOR: data('GERADOR'), OBSSES: data('OBSSES'), RADIO: data('RADIO'), SESDATA: data('SESDATA'), TECTO: data('TECTO'), TELEMOVEL: data('TELEMOVEL'), TELENUMERO: data('TELENUMERO'), OBSPART: data('OBSPART'), OUTDATE: data('OUTDATE'), ASSISTPART: data('ASSISTPART'), CARTON: data('CARTON'), CART_ANC: data('CART_ANC'), CDG_C: data('CDG_C'), CDG_M: data('CDG_M'), FEDEP_C: data('FEDEP_C'), FEDEP_M: data('FEDEP_M'), GRCONS: data('GRCONS'), GRINFOS: data('GRINFOS'), GRVAC: data('GRVAC'), LITTERSIZE: data('LITTERSIZE'), LOCPAR: data('LOCPAR'), QVFANSI_C: data('QVFANSI_C'), QVFANSI_M: data('QVFANSI_M'), TABPART: data('TABPART'), VACTT1: data('VACTT1'), VACTT2: data('VACTT2'), VACTT3: data('VACTT3'), VACTT4: data('VACTT4'), VACTTHI: data('VACTTHI')}",
+        "openRowInitialElementKeyToValueMap": "{}",
+        "_row_num": 2
+      },
+      {
+        "query_name": "reg_csv",
+        "query_type": "csv",
+        "uri": "\"HEALTHCENTRES.csv\"",
+        "callback": "_.chain(context)\n.uniq(function(x) {\nreturn x.reg\n})\n.map(function(place){\nreturn {\ndata_value:place.reg,\ndisplay:{title: {text: place.regname} } };\n}).value()",
+        "_row_num": 4
+      },
+      {
+        "query_name": "hc_csv",
+        "query_type": "csv",
+        "uri": "\"HEALTHCENTRES.csv\"",
+        "callback": "_.map(context, function(place){place.data_value = place.cscode;\nplace.display = {title: {text: place.csname} };\nreturn place;\n})",
+        "_row_num": 5
+      }
+    ],
+    "prompt_types": [
+      {
+        "prompt_type_name": "custom_date",
+        "type": "string",
+        "elementType": "date",
+        "comment": "Makes the date widget DD/MM/YYYY",
+        "_row_num": 2
+      },
+      {
+        "prompt_type_name": "async_assign_date",
+        "type": "date",
+        "_row_num": 3
+      },
+      {
+        "prompt_type_name": "adate",
+        "type": "string",
+        "elementType": "string",
+        "comment": "Save only mm.dd.yyyy with support for ?? at all positions",
+        "_row_num": 4
+      }
+    ],
+    "table_specific_translations": [
+      {
+        "string_token": "linked_table_new_instance_label",
+        "text": {
+          "english": "New registration",
+          "default": "Novo registro"
+        },
+        "_row_num": 2
       }
     ],
     "model": [
@@ -5428,7 +5433,7 @@
           "locale": {
             "text": {
               "english": "Portuguese",
-              "default": "Portugues"
+              "default": "Português"
             }
           }
         },
@@ -5465,7 +5470,7 @@
               "locale": {
                 "text": {
                   "english": "Portuguese",
-                  "default": "Portugues"
+                  "default": "Português"
                 }
               }
             },
@@ -5687,7 +5692,7 @@
             "title": {
               "text": {
                 "english": "Has no card and no ANC",
-                "default": "Não tem cartão e não tem consultas"
+                "default": "Não tem cartão e não procurou consultas pré-natais"
               }
             }
           },
@@ -5700,7 +5705,7 @@
             "title": {
               "text": {
                 "english": "Has no card, some ANC",
-                "default": "Não tem cartão, mas tem consultas"
+                "default": "Não tem cartão, mas procurou algumas consultas pré-natais"
               }
             }
           },
@@ -5739,7 +5744,7 @@
             "title": {
               "text": {
                 "english": "Card seen and no ANCs",
-                "default": "Cartão visto, mas sem consultas registadas"
+                "default": "Cartão visto, mas sem consultas pré-natais registadas"
               }
             }
           },
@@ -5812,6 +5817,7 @@
               }
             }
           },
+          "__EMPTY": "Nado ###Nascimento/Parto?",
           "_row_num": 21
         },
         {
@@ -5894,6 +5900,7 @@
               }
             }
           },
+          "__EMPTY": "Mulher ###Avó???",
           "_row_num": 27
         },
         {
@@ -5903,7 +5910,7 @@
             "title": {
               "text": {
                 "english": "Other family member",
-                "default": "Outra mebro da familia"
+                "default": "Outro mebro da família"
               }
             }
           },
@@ -5955,7 +5962,7 @@
             "title": {
               "text": {
                 "english": "Missing",
-                "default": "Falta informacao"
+                "default": "Falta informação"
               }
             }
           },
@@ -5983,7 +5990,7 @@
             "title": {
               "text": {
                 "english": "Health Center",
-                "default": "Centro de Saude"
+                "default": "Centro de Saúde"
               }
             }
           },
@@ -5996,7 +6003,7 @@
             "title": {
               "text": {
                 "english": "Health Unit",
-                "default": "Unidade de Saude Base"
+                "default": "Unidade de Saúde Base"
               }
             }
           },
@@ -6093,6 +6100,7 @@
               }
             }
           },
+          "__EMPTY": "###is Matrona commonly used? \"parteiras tradicionais\" better?",
           "_row_num": 42
         },
         {
@@ -6106,6 +6114,7 @@
               }
             }
           },
+          "__EMPTY": "###is Matrona commonly used? \"parteiras tradicionais\" better?",
           "_row_num": 43
         },
         {
@@ -6115,7 +6124,7 @@
             "title": {
               "text": {
                 "english": "Family member",
-                "default": "Familia"
+                "default": "Família"
               }
             }
           },
@@ -6141,7 +6150,7 @@
             "title": {
               "text": {
                 "english": "No one",
-                "default": "Ninguem"
+                "default": "Ninguém"
               }
             }
           },
@@ -6298,6 +6307,7 @@
               }
             }
           },
+          "__EMPTY": "\"concreto\"?",
           "_row_num": 57
         },
         {
@@ -8515,8 +8525,8 @@
             "display": {
               "prompt": {
                 "text": {
-                  "english": "<b>Registration of pregnancy: {{data.nome}} - Dob: {{calculates.displayMifdnasc}}<b>",
-                  "default": "<b>Registro de gravidez: {{data.nome}} - Nas: {{calculates.displayMifdnasc}}<b>"
+                  "english": "<b>Registration of pregnancy: {{data.NOME}} - Dob: {{calculates.displayMifdnasc}}<b>",
+                  "default": "<b>Registro de gravidez: {{data.NOME}} - Nas: {{calculates.displayMifdnasc}}<b>"
                 }
               }
             },
@@ -8534,7 +8544,7 @@
               "prompt": {
                 "text": {
                   "english": "Day of registration of pregnancy",
-                  "default": "Dato do registo come gravida"
+                  "default": "Dato do registro da gravidez"
                 }
               }
             },
@@ -8550,8 +8560,8 @@
             "display": {
               "prompt": {
                 "text": {
-                  "english": "<b>Registration of pregnancy: {{data.nome}} - Dob: {{calculates.displayMifdnasc}}<b>",
-                  "default": "<b>Registro de gravidez: {{data.nome}} - Nas: {{calculates.displayMifdnasc}}<b>"
+                  "english": "<b>Registration of pregnancy: {{data.NOME}} - Dob: {{calculates.displayMifdnasc}}<b>",
+                  "default": "<b>Registro de gravidez: {{data.NOME}} - Nas: {{calculates.displayMifdnasc}}<b>"
                 }
               }
             },
@@ -8603,8 +8613,8 @@
             "display": {
               "prompt": {
                 "text": {
-                  "english": "<b>Registration of pregnancy: {{data.nome}} - Dob: {{calculates.displayMifdnasc}}<b>",
-                  "default": "<b>Registro de gravidez: {{data.nome}} - Nas: {{calculates.displayMifdnasc}}<b>"
+                  "english": "<b>Registration of pregnancy: {{data.NOME}} - Dob: {{calculates.displayMifdnasc}}<b>",
+                  "default": "<b>Registro de gravidez: {{data.NOME}} - Nas: {{calculates.displayMifdnasc}}<b>"
                 }
               }
             },
@@ -8639,8 +8649,8 @@
             "display": {
               "prompt": {
                 "text": {
-                  "english": "<b>Registration of pregnancy: {{data.nome}} - Dob: {{calculates.displayMifdnasc}}<b>",
-                  "default": "<b>Registro de gravidez: {{data.nome}} - Nas: {{calculates.displayMifdnasc}}<b>"
+                  "english": "<b>Registration of pregnancy: {{data.NOME}} - Dob: {{calculates.displayMifdnasc}}<b>",
+                  "default": "<b>Registro de gravidez: {{data.NOME}} - Nas: {{calculates.displayMifdnasc}}<b>"
                 }
               }
             },
@@ -8658,7 +8668,7 @@
               "prompt": {
                 "text": {
                   "english": "Gestation month",
-                  "default": "Mes de gestação"
+                  "default": "Mês de gestação"
                 }
               }
             },
@@ -8702,8 +8712,8 @@
             "display": {
               "prompt": {
                 "text": {
-                  "english": "<b>Registration of pregnancy: {{data.nome}} - Dob: {{calculates.displayMifdnasc}}<b>",
-                  "default": "<b>Registro de gravidez: {{data.nome}} - Nas: {{calculates.displayMifdnasc}}<b>"
+                  "english": "<b>Registration of pregnancy: {{data.NOME}} - Dob: {{calculates.displayMifdnasc}}<b>",
+                  "default": "<b>Registro de gravidez: {{data.NOME}} - Nas: {{calculates.displayMifdnasc}}<b>"
                 }
               }
             },
@@ -8721,7 +8731,7 @@
               "prompt": {
                 "text": {
                   "english": "<font color = \"red\">Gestation month</font>",
-                  "default": "<font color = \"red\">Mes de gestação</font>"
+                  "default": "<font color = \"red\">Mês de gestação</font>"
                 }
               }
             },
@@ -8748,8 +8758,8 @@
             "display": {
               "prompt": {
                 "text": {
-                  "english": "<b>Registration of pregnancy: {{data.nome}} - Dob: {{calculates.displayMifdnasc}}<b>",
-                  "default": "<b>Registro de gravidez: {{data.nome}} - Nas: {{calculates.displayMifdnasc}}<b>"
+                  "english": "<b>Registration of pregnancy: {{data.NOME}} - Dob: {{calculates.displayMifdnasc}}<b>",
+                  "default": "<b>Registro de gravidez: {{data.NOME}} - Nas: {{calculates.displayMifdnasc}}<b>"
                 }
               }
             },
@@ -8766,13 +8776,13 @@
               "prompt": {
                 "text": {
                   "english": "Date of last period",
-                  "default": "Data de ultimo período"
+                  "default": "Data de último período ### rather \"data da última menstruação\"?"
                 }
               },
               "hint": {
                 "text": {
                   "english": "First day of last period",
-                  "default": "Primeiro dia do último período"
+                  "default": "Primeiro dia do último período ###Primeiro dia da última menstruação?"
                 }
               }
             },
@@ -8796,7 +8806,7 @@
               "constraint_message": {
                 "text": {
                   "english": "The date of last period cannot be in the future",
-                  "default": "A data do último período não pode estar no futuro"
+                  "default": "A data do último período não pode estar no futuro  ###A data da última menstruação não pode estar no futuro?"
                 }
               }
             },
@@ -8870,8 +8880,8 @@
             "display": {
               "prompt": {
                 "text": {
-                  "english": "<b>Registration of pregnancy: {{data.nome}} - Dob: {{calculates.displayMifdnasc}}<b>",
-                  "default": "<b>Registro de gravidez: {{data.nome}} - Nas: {{calculates.displayMifdnasc}}<b>"
+                  "english": "<b>Registration of pregnancy: {{data.NOME}} - Dob: {{calculates.displayMifdnasc}}<b>",
+                  "default": "<b>Registro de gravidez: {{data.NOME}} - Nas: {{calculates.displayMifdnasc}}<b>"
                 }
               }
             },
@@ -8888,13 +8898,13 @@
               "prompt": {
                 "text": {
                   "english": "Date of last period",
-                  "default": "Data de ultimo período"
+                  "default": "Data de último período ### rather \"menstruação\"?"
                 }
               },
               "hint": {
                 "text": {
                   "english": "First day of last period",
-                  "default": "Primeiro dia do último período"
+                  "default": "Primeiro dia do último período ###Primeiro dia da última menstruação?"
                 }
               }
             },
@@ -8918,7 +8928,7 @@
               "constraint_message": {
                 "text": {
                   "english": "The date of last period cannot be in the future",
-                  "default": "A data do último período não pode estar no futuro"
+                  "default": "A data do último período não pode estar no futuro  ###A data da última menstruação não pode estar no futuro?"
                 }
               }
             },
@@ -8975,8 +8985,8 @@
             "display": {
               "prompt": {
                 "text": {
-                  "english": "<b>Registration of pregnancy: {{data.nome}} - Dob: {{calculates.displayMifdnasc}}<b>",
-                  "default": "<b>Registro de gravidez: {{data.nome}} - Nas: {{calculates.displayMifdnasc}}<b>"
+                  "english": "<b>Registration of pregnancy: {{data.NOME}} - Dob: {{calculates.displayMifdnasc}}<b>",
+                  "default": "<b>Registro de gravidez: {{data.NOME}} - Nas: {{calculates.displayMifdnasc}}<b>"
                 }
               }
             },
@@ -9056,8 +9066,8 @@
             "display": {
               "prompt": {
                 "text": {
-                  "english": "<b>Registration of pregnancy: {{data.nome}} - Dob: {{calculates.displayMifdnasc}}<b>",
-                  "default": "<b>Registro de gravidez: {{data.nome}} - Nas: {{calculates.displayMifdnasc}}<b>"
+                  "english": "<b>Registration of pregnancy: {{data.NOME}} - Dob: {{calculates.displayMifdnasc}}<b>",
+                  "default": "<b>Registro de gravidez: {{data.NOME}} - Nas: {{calculates.displayMifdnasc}}<b>"
                 }
               }
             },
@@ -9074,7 +9084,7 @@
               "prompt": {
                 "text": {
                   "english": "How many times did the pregnant woman receive iron tablets?",
-                  "default": "A grávida recebeu comprimidos com ferro quantas vezes?"
+                  "default": "A grávida recebeu comprimidos de ferro quantas vezes?"
                 }
               }
             },
@@ -9137,8 +9147,8 @@
             "display": {
               "prompt": {
                 "text": {
-                  "english": "<b>Registration of pregnancy: {{data.nome}} - Dob: {{calculates.displayMifdnasc}}<b>",
-                  "default": "<b>Registro de gravidez: {{data.nome}} - Nas: {{calculates.displayMifdnasc}}<b>"
+                  "english": "<b>Registration of pregnancy: {{data.NOME}} - Dob: {{calculates.displayMifdnasc}}<b>",
+                  "default": "<b>Registro de gravidez: {{data.NOME}} - Nas: {{calculates.displayMifdnasc}}<b>"
                 }
               }
             },
@@ -9218,8 +9228,8 @@
             "display": {
               "prompt": {
                 "text": {
-                  "english": "<b>Registration of pregnancy: {{data.nome}} - Dob: {{calculates.displayMifdnasc}}<b>",
-                  "default": "<b>Registro de gravidez: {{data.nome}} - Nas: {{calculates.displayMifdnasc}}<b>"
+                  "english": "<b>Registration of pregnancy: {{data.NOME}} - Dob: {{calculates.displayMifdnasc}}<b>",
+                  "default": "<b>Registro de gravidez: {{data.NOME}} - Nas: {{calculates.displayMifdnasc}}<b>"
                 }
               }
             },
@@ -9237,7 +9247,7 @@
               "prompt": {
                 "text": {
                   "english": "Probable date of delivery indicated on the card?",
-                  "default": "Data provavel do parto indicado no cartão?"
+                  "default": "Data provável do parto indicada no cartão?"
                 }
               },
               "adate": {
@@ -9285,8 +9295,8 @@
             "display": {
               "prompt": {
                 "text": {
-                  "english": "<b>Registration of pregnancy: {{data.nome}} - Dob: {{calculates.displayMifdnasc}}<b>",
-                  "default": "<b>Registro de gravidez: {{data.nome}} - Nas: {{calculates.displayMifdnasc}}<b>"
+                  "english": "<b>Registration of pregnancy: {{data.NOME}} - Dob: {{calculates.displayMifdnasc}}<b>",
+                  "default": "<b>Registro de gravidez: {{data.NOME}} - Nas: {{calculates.displayMifdnasc}}<b>"
                 }
               }
             },
@@ -9693,8 +9703,8 @@
             "display": {
               "prompt": {
                 "text": {
-                  "english": "<b>Pregnancy visit: {{data.nome}} - Dob: {{calculates.displayREGDIA}}<b>",
-                  "default": "<b>Visita de gravidez: {{data.nome}} - Nas: {{calculates.displayREGDIA}}<b>"
+                  "english": "<b>Pregnancy visit: {{data.NOME}} - Dob: {{calculates.displayREGDIA}}<b>",
+                  "default": "<b>Visita de gravidez: {{data.NOME}} - Nas: {{calculates.displayREGDIA}}<b>"
                 }
               }
             },
@@ -9747,8 +9757,8 @@
             "display": {
               "prompt": {
                 "text": {
-                  "english": "<b>2nd pregnancy visit: {{data.nome}} - Dob: {{calculates.displayREGDIA}}<b>",
-                  "default": "<b>2ª visita de gravidez: {{data.nome}} - Nas: {{calculates.displayREGDIA}}<b>"
+                  "english": "<b>2nd pregnancy visit: {{data.NOME}} - Dob: {{calculates.displayREGDIA}}<b>",
+                  "default": "<b>2ª visita de gravidez: {{data.NOME}} - Nas: {{calculates.displayREGDIA}}<b>"
                 }
               }
             },
@@ -9801,8 +9811,8 @@
             "display": {
               "prompt": {
                 "text": {
-                  "english": "<b>2nd pregnancy visit: {{data.nome}} - Dob: {{calculates.displayREGDIA}}<b>",
-                  "default": "<b>2ª visita de gravidez: {{data.nome}} - Nas: {{calculates.displayREGDIA}}<b>"
+                  "english": "<b>2nd pregnancy visit: {{data.NOME}} - Dob: {{calculates.displayREGDIA}}<b>",
+                  "default": "<b>2ª visita de gravidez: {{data.NOME}} - Nas: {{calculates.displayREGDIA}}<b>"
                 }
               }
             },
@@ -9854,8 +9864,8 @@
             "display": {
               "prompt": {
                 "text": {
-                  "english": "<b>2nd pregnancy visit: {{data.nome}} - Dob: {{calculates.displayREGDIA}}<b>",
-                  "default": "<b>2ª visita de gravidez: {{data.nome}} - Nas: {{calculates.displayREGDIA}}<b>"
+                  "english": "<b>2nd pregnancy visit: {{data.NOME}} - Dob: {{calculates.displayREGDIA}}<b>",
+                  "default": "<b>2ª visita de gravidez: {{data.NOME}} - Nas: {{calculates.displayREGDIA}}<b>"
                 }
               }
             },
@@ -9890,8 +9900,8 @@
             "display": {
               "prompt": {
                 "text": {
-                  "english": "<b>2nd pregnancy visit: {{data.nome}} - Dob: {{calculates.displayREGDIA}}<b>",
-                  "default": "<b>2ª visita de gravidez: {{data.nome}} - Nas: {{calculates.displayREGDIA}}<b>"
+                  "english": "<b>2nd pregnancy visit: {{data.NOME}} - Dob: {{calculates.displayREGDIA}}<b>",
+                  "default": "<b>2ª visita de gravidez: {{data.NOME}} - Nas: {{calculates.displayREGDIA}}<b>"
                 }
               }
             },
@@ -9909,7 +9919,7 @@
               "prompt": {
                 "text": {
                   "english": "Gestation month",
-                  "default": "Mes de gestação"
+                  "default": "Mês de gestação"
                 }
               }
             },
@@ -9953,8 +9963,8 @@
             "display": {
               "prompt": {
                 "text": {
-                  "english": "<b>2nd pregnancy visit: {{data.nome}} - Dob: {{calculates.displayREGDIA}}<b>",
-                  "default": "<b>2ª visita de gravidez: {{data.nome}} - Nas: {{calculates.displayREGDIA}}<b>"
+                  "english": "<b>2nd pregnancy visit: {{data.NOME}} - Dob: {{calculates.displayREGDIA}}<b>",
+                  "default": "<b>2ª visita de gravidez: {{data.NOME}} - Nas: {{calculates.displayREGDIA}}<b>"
                 }
               }
             },
@@ -9972,7 +9982,7 @@
               "prompt": {
                 "text": {
                   "english": "<font color = \"red\">Gestation month</font>",
-                  "default": "<font color = \"red\">Mes de gestação</font>"
+                  "default": "<font color = \"red\">Mês de gestação</font>"
                 }
               }
             },
@@ -9999,8 +10009,8 @@
             "display": {
               "prompt": {
                 "text": {
-                  "english": "<b>2nd pregnancy visit: {{data.nome}} - Dob: {{calculates.displayREGDIA}}<b>",
-                  "default": "<b>2ª visita de gravidez: {{data.nome}} - Nas: {{calculates.displayREGDIA}}<b>"
+                  "english": "<b>2nd pregnancy visit: {{data.NOME}} - Dob: {{calculates.displayREGDIA}}<b>",
+                  "default": "<b>2ª visita de gravidez: {{data.NOME}} - Nas: {{calculates.displayREGDIA}}<b>"
                 }
               }
             },
@@ -10017,13 +10027,13 @@
               "prompt": {
                 "text": {
                   "english": "Date of last period",
-                  "default": "Data de ultimo período"
+                  "default": "Data de último período ### rather \"data da última menstruação\"?"
                 }
               },
               "hint": {
                 "text": {
                   "english": "First day of last period",
-                  "default": "Primeiro dia do último período"
+                  "default": "Primeiro dia do último período ###Primeiro dia da última menstruação?"
                 }
               }
             },
@@ -10047,7 +10057,7 @@
               "constraint_message": {
                 "text": {
                   "english": "The date of last period cannot be in the future",
-                  "default": "A data do último período não pode estar no futuro"
+                  "default": "A data do último período não pode estar no futuro  ###A data da última menstruação não pode estar no futuro?"
                 }
               }
             },
@@ -10121,8 +10131,8 @@
             "display": {
               "prompt": {
                 "text": {
-                  "english": "<b>2nd pregnancy visit: {{data.nome}} - Dob: {{calculates.displayREGDIA}}<b>",
-                  "default": "<b>2ª visita de gravidez: {{data.nome}} - Nas: {{calculates.displayREGDIA}}<b>"
+                  "english": "<b>2nd pregnancy visit: {{data.NOME}} - Dob: {{calculates.displayREGDIA}}<b>",
+                  "default": "<b>2ª visita de gravidez: {{data.NOME}} - Nas: {{calculates.displayREGDIA}}<b>"
                 }
               }
             },
@@ -10139,13 +10149,13 @@
               "prompt": {
                 "text": {
                   "english": "Date of last period",
-                  "default": "Data de ultimo período"
+                  "default": "Data de último período ### rather \"data da última menstruação\"?"
                 }
               },
               "hint": {
                 "text": {
                   "english": "First day of last period",
-                  "default": "Primeiro dia do último período"
+                  "default": "Primeiro dia do último período ###Primeiro dia da última menstruação?"
                 }
               }
             },
@@ -10169,7 +10179,7 @@
               "constraint_message": {
                 "text": {
                   "english": "The date of last period cannot be in the future",
-                  "default": "A data do último período não pode estar no futuro"
+                  "default": "A data do último período não pode estar no futuro  ###A data da última menstruação não pode estar no futuro?"
                 }
               }
             },
@@ -10226,8 +10236,8 @@
             "display": {
               "prompt": {
                 "text": {
-                  "english": "<b>2nd pregnancy visit: {{data.nome}} - Dob: {{calculates.displayREGDIA}}<b>",
-                  "default": "<b>2ª visita de gravidez: {{data.nome}} - Nas: {{calculates.displayREGDIA}}<b>"
+                  "english": "<b>2nd pregnancy visit: {{data.NOME}} - Dob: {{calculates.displayREGDIA}}<b>",
+                  "default": "<b>2ª visita de gravidez: {{data.NOME}} - Nas: {{calculates.displayREGDIA}}<b>"
                 }
               }
             },
@@ -10307,8 +10317,8 @@
             "display": {
               "prompt": {
                 "text": {
-                  "english": "<b>2nd pregnancy visit: {{data.nome}} - Dob: {{calculates.displayREGDIA}}<b>",
-                  "default": "<b>2ª visita de gravidez: {{data.nome}} - Nas: {{calculates.displayREGDIA}}<b>"
+                  "english": "<b>2nd pregnancy visit: {{data.NOME}} - Dob: {{calculates.displayREGDIA}}<b>",
+                  "default": "<b>2ª visita de gravidez: {{data.NOME}} - Nas: {{calculates.displayREGDIA}}<b>"
                 }
               }
             },
@@ -10325,7 +10335,7 @@
               "prompt": {
                 "text": {
                   "english": "How many times did the pregnant woman receive iron tablets?",
-                  "default": "A grávida recebeu comprimidos com ferro quantas vezes?"
+                  "default": "A grávida recebeu comprimidos de ferro quantas vezes?"
                 }
               }
             },
@@ -10388,8 +10398,8 @@
             "display": {
               "prompt": {
                 "text": {
-                  "english": "<b>2nd pregnancy visit: {{data.nome}} - Dob: {{calculates.displayREGDIA}}<b>",
-                  "default": "<b>2ª visita de gravidez: {{data.nome}} - Nas: {{calculates.displayREGDIA}}<b>"
+                  "english": "<b>2nd pregnancy visit: {{data.NOME}} - Dob: {{calculates.displayREGDIA}}<b>",
+                  "default": "<b>2ª visita de gravidez: {{data.NOME}} - Nas: {{calculates.displayREGDIA}}<b>"
                 }
               }
             },
@@ -10469,8 +10479,8 @@
             "display": {
               "prompt": {
                 "text": {
-                  "english": "<b>2nd pregnancy visit: {{data.nome}} - Dob: {{calculates.displayREGDIA}}<b>",
-                  "default": "<b>2ª visita de gravidez: {{data.nome}} - Nas: {{calculates.displayREGDIA}}<b>"
+                  "english": "<b>2nd pregnancy visit: {{data.NOME}} - Dob: {{calculates.displayREGDIA}}<b>",
+                  "default": "<b>2ª visita de gravidez: {{data.NOME}} - Nas: {{calculates.displayREGDIA}}<b>"
                 }
               }
             },
@@ -10488,7 +10498,7 @@
               "prompt": {
                 "text": {
                   "english": "Probable date of delivery indicated on the card?",
-                  "default": "Data provavel do parto indicado no cartão?"
+                  "default": "Data provável do parto indicado no cartão?"
                 }
               },
               "adate": {
@@ -10536,8 +10546,8 @@
             "display": {
               "prompt": {
                 "text": {
-                  "english": "<b>2nd pregnancy visit: {{data.nome}} - Dob: {{calculates.displayREGDIA}}<b>",
-                  "default": "<b>2ª visita de gravidez: {{data.nome}} - Nas: {{calculates.displayREGDIA}}<b>"
+                  "english": "<b>2nd pregnancy visit: {{data.NOME}} - Dob: {{calculates.displayREGDIA}}<b>",
+                  "default": "<b>2ª visita de gravidez: {{data.NOME}} - Nas: {{calculates.displayREGDIA}}<b>"
                 }
               }
             },
@@ -11028,8 +11038,8 @@
             "display": {
               "prompt": {
                 "text": {
-                  "english": "<b>After childbirth: {{data.nome}} - Dob: {{calculates.displayREGDIA}}<b>",
-                  "default": "<b>Depois de parto: {{data.nome}} - Nas: {{calculates.displayREGDIA}}<b>"
+                  "english": "<b>After childbirth: {{data.NOME}} - Dob: {{calculates.displayREGDIA}}<b>",
+                  "default": "<b>Depois de parto: {{data.NOME}} - Nas: {{calculates.displayREGDIA}}<b>"
                 }
               }
             },
@@ -11063,8 +11073,8 @@
             "display": {
               "prompt": {
                 "text": {
-                  "english": "<b>After childbirth: {{data.nome}} - Dob: {{calculates.displayREGDIA}}<b>",
-                  "default": "<b>Depois de parto: {{data.nome}} - Nas: {{calculates.displayREGDIA}}<b>"
+                  "english": "<b>After childbirth: {{data.NOME}} - Dob: {{calculates.displayREGDIA}}<b>",
+                  "default": "<b>Depois de parto: {{data.NOME}} - Nas: {{calculates.displayREGDIA}}<b>"
                 }
               }
             },
@@ -11118,8 +11128,8 @@
             "display": {
               "prompt": {
                 "text": {
-                  "english": "<b>After childbirth: {{data.nome}} - Dob: {{calculates.displayREGDIA}}<b>",
-                  "default": "<b>Depois de parto: {{data.nome}} - Nas: {{calculates.displayREGDIA}}<b>"
+                  "english": "<b>After childbirth: {{data.NOME}} - Dob: {{calculates.displayREGDIA}}<b>",
+                  "default": "<b>Depois de parto: {{data.NOME}} - Nas: {{calculates.displayREGDIA}}<b>"
                 }
               }
             },
@@ -11154,8 +11164,8 @@
             "display": {
               "prompt": {
                 "text": {
-                  "english": "<b>After childbirth: {{data.nome}} - Dob: {{calculates.displayREGDIA}}<b>",
-                  "default": "<b>Depois de parto: {{data.nome}} - Nas: {{calculates.displayREGDIA}}<b>"
+                  "english": "<b>After childbirth: {{data.NOME}} - Dob: {{calculates.displayREGDIA}}<b>",
+                  "default": "<b>Depois de parto: {{data.NOME}} - Nas: {{calculates.displayREGDIA}}<b>"
                 }
               }
             },
@@ -11179,7 +11189,7 @@
               "constraint_message": {
                 "text": {
                   "english": "The date of pregnancy end cannot be in the future",
-                  "default": "A data de término da gravidez não pode estar no futuro"
+                  "default": "A data do fim da gravidez não pode estar no futuro"
                 }
               }
             },
@@ -11196,8 +11206,8 @@
             "display": {
               "prompt": {
                 "text": {
-                  "english": "<b>After childbirth: {{data.nome}} - Dob: {{calculates.displayREGDIA}}<b>",
-                  "default": "<b>Depois de parto: {{data.nome}} - Nas: {{calculates.displayREGDIA}}<b>"
+                  "english": "<b>After childbirth: {{data.NOME}} - Dob: {{calculates.displayREGDIA}}<b>",
+                  "default": "<b>Depois de parto: {{data.NOME}} - Nas: {{calculates.displayREGDIA}}<b>"
                 }
               }
             },
@@ -11242,8 +11252,8 @@
             "display": {
               "prompt": {
                 "text": {
-                  "english": "<b>After childbirth: {{data.nome}} - Dob: {{calculates.displayREGDIA}}<b>",
-                  "default": "<b>Depois de parto: {{data.nome}} - Nas: {{calculates.displayREGDIA}}<b>"
+                  "english": "<b>After childbirth: {{data.NOME}} - Dob: {{calculates.displayREGDIA}}<b>",
+                  "default": "<b>Depois de parto: {{data.NOME}} - Nas: {{calculates.displayREGDIA}}<b>"
                 }
               }
             },
@@ -11277,8 +11287,8 @@
             "display": {
               "prompt": {
                 "text": {
-                  "english": "<b>After childbirth: {{data.nome}} - Dob: {{calculates.displayREGDIA}}<b>",
-                  "default": "<b>Depois de parto: {{data.nome}} - Nas: {{calculates.displayREGDIA}}<b>"
+                  "english": "<b>After childbirth: {{data.NOME}} - Dob: {{calculates.displayREGDIA}}<b>",
+                  "default": "<b>Depois de parto: {{data.NOME}} - Nas: {{calculates.displayREGDIA}}<b>"
                 }
               }
             },
@@ -11297,7 +11307,7 @@
               "prompt": {
                 "text": {
                   "english": "Vaccination card",
-                  "default": "Vartão de vacinas da mulher"
+                  "default": "Cartão de vacinas da mulher"
                 }
               }
             },
@@ -11313,8 +11323,8 @@
             "display": {
               "prompt": {
                 "text": {
-                  "english": "<b>After childbirth: {{data.nome}} - Dob: {{calculates.displayREGDIA}}<b>",
-                  "default": "<b>Depois de parto: {{data.nome}} - Nas: {{calculates.displayREGDIA}}<b>"
+                  "english": "<b>After childbirth: {{data.NOME}} - Dob: {{calculates.displayREGDIA}}<b>",
+                  "default": "<b>Depois de parto: {{data.NOME}} - Nas: {{calculates.displayREGDIA}}<b>"
                 }
               }
             },
@@ -11333,7 +11343,7 @@
               "prompt": {
                 "text": {
                   "english": "Did the woman get any Tetanus vaccine during pregnancy?",
-                  "default": "A mulher recebeu alguma vacina anti-tetánica durante a gravidez?"
+                  "default": "A mulher recebeu alguma vacina antitetânica durante a gravidez?  ###durante esta gravidez?"
                 }
               }
             },
@@ -11367,8 +11377,8 @@
             "display": {
               "prompt": {
                 "text": {
-                  "english": "<b>After childbirth: {{data.nome}} - Dob: {{calculates.displayREGDIA}}<b>",
-                  "default": "<b>Depois de parto: {{data.nome}} - Nas: {{calculates.displayREGDIA}}<b>"
+                  "english": "<b>After childbirth: {{data.NOME}} - Dob: {{calculates.displayREGDIA}}<b>",
+                  "default": "<b>Depois de parto: {{data.NOME}} - Nas: {{calculates.displayREGDIA}}<b>"
                 }
               }
             },
@@ -11517,8 +11527,8 @@
             "display": {
               "prompt": {
                 "text": {
-                  "english": "<b>After childbirth: {{data.nome}} - Dob: {{calculates.displayREGDIA}}<b>",
-                  "default": "<b>Depois de parto: {{data.nome}} - Nas: {{calculates.displayREGDIA}}<b>"
+                  "english": "<b>After childbirth: {{data.NOME}} - Dob: {{calculates.displayREGDIA}}<b>",
+                  "default": "<b>Depois de parto: {{data.NOME}} - Nas: {{calculates.displayREGDIA}}<b>"
                 }
               }
             },
@@ -11537,7 +11547,7 @@
               "prompt": {
                 "text": {
                   "english": "Have prenatal consultation card?",
-                  "default": "Tem cartão do consulta pré-natal?"
+                  "default": "Tem cartão de consulta pré-natal?"
                 }
               }
             },
@@ -11553,8 +11563,8 @@
             "display": {
               "prompt": {
                 "text": {
-                  "english": "<b>After childbirth: {{data.nome}} - Dob: {{calculates.displayREGDIA}}<b>",
-                  "default": "<b>Depois de parto: {{data.nome}} - Nas: {{calculates.displayREGDIA}}<b>"
+                  "english": "<b>After childbirth: {{data.NOME}} - Dob: {{calculates.displayREGDIA}}<b>",
+                  "default": "<b>Depois de parto: {{data.NOME}} - Nas: {{calculates.displayREGDIA}}<b>"
                 }
               }
             },
@@ -11573,7 +11583,7 @@
               "prompt": {
                 "text": {
                   "english": "Did the woman seek prenatal consultations during pregnancy?",
-                  "default": "A mulher procurou consultas pré-natal durante a gravidez?"
+                  "default": "A mulher procurou consultas pré-natais durante a gravidez? ###durante esta gravidez?"
                 }
               }
             },
@@ -11589,8 +11599,8 @@
             "display": {
               "prompt": {
                 "text": {
-                  "english": "<b>After childbirth: {{data.nome}} - Dob: {{calculates.displayREGDIA}}<b>",
-                  "default": "<b>Depois de parto: {{data.nome}} - Nas: {{calculates.displayREGDIA}}<b>"
+                  "english": "<b>After childbirth: {{data.NOME}} - Dob: {{calculates.displayREGDIA}}<b>",
+                  "default": "<b>Depois de parto: {{data.NOME}} - Nas: {{calculates.displayREGDIA}}<b>"
                 }
               }
             },
@@ -11670,8 +11680,8 @@
             "display": {
               "prompt": {
                 "text": {
-                  "english": "<b>After childbirth: {{data.nome}} - Dob: {{calculates.displayREGDIA}}<b>",
-                  "default": "<b>Depois de parto: {{data.nome}} - Nas: {{calculates.displayREGDIA}}<b>"
+                  "english": "<b>After childbirth: {{data.NOME}} - Dob: {{calculates.displayREGDIA}}<b>",
+                  "default": "<b>Depois de parto: {{data.NOME}} - Nas: {{calculates.displayREGDIA}}<b>"
                 }
               }
             },
@@ -11688,7 +11698,7 @@
               "prompt": {
                 "text": {
                   "english": "How many times did the pregnant woman receive iron tablets?",
-                  "default": "A grávida recebeu comprimidos com ferro quantas vezes?"
+                  "default": "A grávida recebeu comprimidos de ferro quantas vezes?"
                 }
               }
             },
@@ -11751,8 +11761,8 @@
             "display": {
               "prompt": {
                 "text": {
-                  "english": "<b>After childbirth: {{data.nome}} - Dob: {{calculates.displayREGDIA}}<b>",
-                  "default": "<b>Depois de parto: {{data.nome}} - Nas: {{calculates.displayREGDIA}}<b>"
+                  "english": "<b>After childbirth: {{data.NOME}} - Dob: {{calculates.displayREGDIA}}<b>",
+                  "default": "<b>Depois de parto: {{data.NOME}} - Nas: {{calculates.displayREGDIA}}<b>"
                 }
               }
             },
@@ -11832,8 +11842,8 @@
             "display": {
               "prompt": {
                 "text": {
-                  "english": "<b>After childbirth: {{data.nome}} - Dob: {{calculates.displayREGDIA}}<b>",
-                  "default": "<b>Depois de parto: {{data.nome}} - Nas: {{calculates.displayREGDIA}}<b>"
+                  "english": "<b>After childbirth: {{data.NOME}} - Dob: {{calculates.displayREGDIA}}<b>",
+                  "default": "<b>Depois de parto: {{data.NOME}} - Nas: {{calculates.displayREGDIA}}<b>"
                 }
               }
             },
@@ -11868,8 +11878,8 @@
             "display": {
               "prompt": {
                 "text": {
-                  "english": "<b>After childbirth: {{data.nome}} - Dob: {{calculates.displayREGDIA}}<b>",
-                  "default": "<b>Depois de parto: {{data.nome}} - Nas: {{calculates.displayREGDIA}}<b>"
+                  "english": "<b>After childbirth: {{data.NOME}} - Dob: {{calculates.displayREGDIA}}<b>",
+                  "default": "<b>Depois de parto: {{data.NOME}} - Nas: {{calculates.displayREGDIA}}<b>"
                 }
               }
             },
@@ -11904,8 +11914,8 @@
             "display": {
               "prompt": {
                 "text": {
-                  "english": "<b>After childbirth: {{data.nome}} - Dob: {{calculates.displayREGDIA}}<b>",
-                  "default": "<b>Depois de parto: {{data.nome}} - Nas: {{calculates.displayREGDIA}}<b>"
+                  "english": "<b>After childbirth: {{data.NOME}} - Dob: {{calculates.displayREGDIA}}<b>",
+                  "default": "<b>Depois de parto: {{data.NOME}} - Nas: {{calculates.displayREGDIA}}<b>"
                 }
               }
             },
@@ -11922,7 +11932,7 @@
               "prompt": {
                 "text": {
                   "english": "Place of hospital / health center",
-                  "default": "Local do hospital / centro de saude"
+                  "default": "Local do hospital / centro de saúde"
                 }
               }
             },
@@ -11988,8 +11998,8 @@
             "display": {
               "prompt": {
                 "text": {
-                  "english": "<b>After childbirth: {{data.nome}} - Dob: {{calculates.displayREGDIA}}<b>",
-                  "default": "<b>Depois de parto: {{data.nome}} - Nas: {{calculates.displayREGDIA}}<b>"
+                  "english": "<b>After childbirth: {{data.NOME}} - Dob: {{calculates.displayREGDIA}}<b>",
+                  "default": "<b>Depois de parto: {{data.NOME}} - Nas: {{calculates.displayREGDIA}}<b>"
                 }
               }
             },
@@ -12007,7 +12017,7 @@
               "prompt": {
                 "text": {
                   "english": "Place of hospital / health center",
-                  "default": "Local do hospital / centro de saude"
+                  "default": "Local do hospital / centro de saúde"
                 }
               }
             },
@@ -12023,8 +12033,8 @@
             "display": {
               "prompt": {
                 "text": {
-                  "english": "<b>After childbirth: {{data.nome}} - Dob: {{calculates.displayREGDIA}}<b>",
-                  "default": "<b>Depois de parto: {{data.nome}} - Nas: {{calculates.displayREGDIA}}<b>"
+                  "english": "<b>After childbirth: {{data.NOME}} - Dob: {{calculates.displayREGDIA}}<b>",
+                  "default": "<b>Depois de parto: {{data.NOME}} - Nas: {{calculates.displayREGDIA}}<b>"
                 }
               }
             },
@@ -12060,8 +12070,8 @@
             "display": {
               "prompt": {
                 "text": {
-                  "english": "Why not use the closest hospital?",
-                  "default": "Porque internou aqui?"
+                  "english": "Why not attending closest hospital",
+                  "default": "Porquê é que não foi ao hospital mais perto?"
                 }
               }
             },
@@ -12077,8 +12087,8 @@
             "display": {
               "prompt": {
                 "text": {
-                  "english": "<b>After childbirth: {{data.nome}} - Dob: {{calculates.displayREGDIA}}<b>",
-                  "default": "<b>Depois de parto: {{data.nome}} - Nas: {{calculates.displayREGDIA}}<b>"
+                  "english": "<b>After childbirth: {{data.NOME}} - Dob: {{calculates.displayREGDIA}}<b>",
+                  "default": "<b>Depois de parto: {{data.NOME}} - Nas: {{calculates.displayREGDIA}}<b>"
                 }
               }
             },
@@ -12097,7 +12107,7 @@
               "prompt": {
                 "text": {
                   "english": "Who assisted the birth?",
-                  "default": "Quem ajudou o parto?"
+                  "default": "Quem ajudou no parto?"
                 }
               }
             },
@@ -12113,8 +12123,8 @@
             "display": {
               "prompt": {
                 "text": {
-                  "english": "<b>After childbirth: {{data.nome}} - Dob: {{calculates.displayREGDIA}}<b>",
-                  "default": "<b>Depois de parto: {{data.nome}} - Nas: {{calculates.displayREGDIA}}<b>"
+                  "english": "<b>After childbirth: {{data.NOME}} - Dob: {{calculates.displayREGDIA}}<b>",
+                  "default": "<b>Depois de parto: {{data.NOME}} - Nas: {{calculates.displayREGDIA}}<b>"
                 }
               }
             },
@@ -12160,8 +12170,8 @@
             "display": {
               "prompt": {
                 "text": {
-                  "english": "<b>After childbirth: {{data.nome}} - Dob: {{calculates.displayREGDIA}}<b>",
-                  "default": "<b>Depois de parto: {{data.nome}} - Nas: {{calculates.displayREGDIA}}<b>"
+                  "english": "<b>After childbirth: {{data.NOME}} - Dob: {{calculates.displayREGDIA}}<b>",
+                  "default": "<b>Depois de parto: {{data.NOME}} - Nas: {{calculates.displayREGDIA}}<b>"
                 }
               }
             },
@@ -12207,8 +12217,8 @@
             "display": {
               "prompt": {
                 "text": {
-                  "english": "<b>After childbirth: {{data.nome}} - Dob: {{calculates.displayREGDIA}}<b>",
-                  "default": "<b>Depois de parto: {{data.nome}} - Nas: {{calculates.displayREGDIA}}<b>"
+                  "english": "<b>After childbirth: {{data.NOME}} - Dob: {{calculates.displayREGDIA}}<b>",
+                  "default": "<b>Depois de parto: {{data.NOME}} - Nas: {{calculates.displayREGDIA}}<b>"
                 }
               }
             },
@@ -12254,8 +12264,8 @@
             "display": {
               "prompt": {
                 "text": {
-                  "english": "<b>After childbirth: {{data.nome}} - Dob: {{calculates.displayREGDIA}}<b>",
-                  "default": "<b>Depois de parto: {{data.nome}} - Nas: {{calculates.displayREGDIA}}<b>"
+                  "english": "<b>After childbirth: {{data.NOME}} - Dob: {{calculates.displayREGDIA}}<b>",
+                  "default": "<b>Depois de parto: {{data.NOME}} - Nas: {{calculates.displayREGDIA}}<b>"
                 }
               }
             },
@@ -12301,8 +12311,8 @@
             "display": {
               "prompt": {
                 "text": {
-                  "english": "<b>After childbirth: {{data.nome}} - Dob: {{calculates.displayREGDIA}}<b>",
-                  "default": "<b>Depois de parto: {{data.nome}} - Nas: {{calculates.displayREGDIA}}<b>"
+                  "english": "<b>After childbirth: {{data.NOME}} - Dob: {{calculates.displayREGDIA}}<b>",
+                  "default": "<b>Depois de parto: {{data.NOME}} - Nas: {{calculates.displayREGDIA}}<b>"
                 }
               }
             },
@@ -12994,7 +13004,7 @@
               "prompt": {
                 "text": {
                   "english": "<b>Socioeconomic status<b>",
-                  "default": "<b>Status socioeconomico<b>"
+                  "default": "<b>Estatuto socioeconómico<b>"
                 }
               }
             },
@@ -13049,7 +13059,7 @@
               "prompt": {
                 "text": {
                   "english": "<b>Socioeconomic status<b>",
-                  "default": "<b>Status socioeconomico<b>"
+                  "default": "<b>Estatuto socioeconómico<b>"
                 }
               }
             },
@@ -13104,7 +13114,7 @@
               "prompt": {
                 "text": {
                   "english": "<b>Socioeconomic status<b>",
-                  "default": "<b>Status socioeconomico<b>"
+                  "default": "<b>Estatuto socioeconómico<b>"
                 }
               }
             },
@@ -13123,7 +13133,7 @@
               "prompt": {
                 "text": {
                   "english": "Does the mother or father own a telephone",
-                  "default": "A mãe ou o pai tem telemovel?"
+                  "default": "A mãe ou o pai tem um telemóvel?"
                 }
               }
             },
@@ -13141,7 +13151,7 @@
               "prompt": {
                 "text": {
                   "english": "Phone number of mother or other",
-                  "default": "Número de telemovel da mãe ou outro"
+                  "default": "Número de telemóvel da mãe ou outra pessoa"
                 }
               }
             },
@@ -13161,7 +13171,7 @@
               "prompt": {
                 "text": {
                   "english": "<b>Socioeconomic status<b>",
-                  "default": "<b>Status socioeconomico<b>"
+                  "default": "<b>Estatuto socioeconómico<b>"
                 }
               }
             },
@@ -13179,7 +13189,7 @@
               "prompt": {
                 "text": {
                   "english": "Comments to socioeconomic status",
-                  "default": "Comentários ao status socioeconômico"
+                  "default": "Comentários ao estatuto socioeconómico"
                 }
               }
             },
@@ -16245,7 +16255,7 @@
         "_aspect": "ASSISTPART",
         "_key": "displayChoicesList",
         "_type": "object",
-        "_value": "[{\"choice_list_name\":\"healthstaff\",\"data_value\":\"DR\",\"display\":{\"title\":{\"text\":{\"english\":\"Doctor\",\"default\":\"Medico\"}}},\"_row_num\":39},{\"choice_list_name\":\"healthstaff\",\"data_value\":\"PA\",\"display\":{\"title\":{\"text\":{\"english\":\"Midwife\",\"default\":\"Parteira\"}}},\"_row_num\":40},{\"choice_list_name\":\"healthstaff\",\"data_value\":\"EN\",\"display\":{\"title\":{\"text\":{\"english\":\"Nurse\",\"default\":\"Enfermeira/o\"}}},\"_row_num\":41},{\"choice_list_name\":\"healthstaff\",\"data_value\":\"MA-N\",\"display\":{\"title\":{\"text\":{\"english\":\"Traditional birth attendant - no course\",\"default\":\"Matrona - sem curso\"}}},\"_row_num\":42},{\"choice_list_name\":\"healthstaff\",\"data_value\":\"MA-F\",\"display\":{\"title\":{\"text\":{\"english\":\"Traditional birth attendant - course\",\"default\":\"Matrona - formado\"}}},\"_row_num\":43},{\"choice_list_name\":\"healthstaff\",\"data_value\":\"FA\",\"display\":{\"title\":{\"text\":{\"english\":\"Family member\",\"default\":\"Familia\"}}},\"_row_num\":44},{\"choice_list_name\":\"healthstaff\",\"data_value\":\"VI\",\"display\":{\"title\":{\"text\":{\"english\":\"Neighbour\",\"default\":\"Vizinho\"}}},\"_row_num\":45},{\"choice_list_name\":\"healthstaff\",\"data_value\":\"NO\",\"display\":{\"title\":{\"text\":{\"english\":\"No one\",\"default\":\"Ninguem\"}}},\"_row_num\":46},{\"choice_list_name\":\"healthstaff\",\"data_value\":\"NS\",\"display\":{\"title\":{\"text\":{\"english\":\"Dont know\",\"default\":\"Não sabe\"}}},\"_row_num\":47}]"
+        "_value": "[{\"choice_list_name\":\"healthstaff\",\"data_value\":\"DR\",\"display\":{\"title\":{\"text\":{\"english\":\"Doctor\",\"default\":\"Medico\"}}},\"_row_num\":39},{\"choice_list_name\":\"healthstaff\",\"data_value\":\"PA\",\"display\":{\"title\":{\"text\":{\"english\":\"Midwife\",\"default\":\"Parteira\"}}},\"_row_num\":40},{\"choice_list_name\":\"healthstaff\",\"data_value\":\"EN\",\"display\":{\"title\":{\"text\":{\"english\":\"Nurse\",\"default\":\"Enfermeira/o\"}}},\"_row_num\":41},{\"choice_list_name\":\"healthstaff\",\"data_value\":\"MA-N\",\"display\":{\"title\":{\"text\":{\"english\":\"Traditional birth attendant - no course\",\"default\":\"Matrona - sem curso\"}}},\"__EMPTY\":\"###is Matrona commonly used? \\\"parteiras tradicionais\\\" better?\",\"_row_num\":42},{\"choice_list_name\":\"healthstaff\",\"data_value\":\"MA-F\",\"display\":{\"title\":{\"text\":{\"english\":\"Traditional birth attendant - course\",\"default\":\"Matrona - formado\"}}},\"__EMPTY\":\"###is Matrona commonly used? \\\"parteiras tradicionais\\\" better?\",\"_row_num\":43},{\"choice_list_name\":\"healthstaff\",\"data_value\":\"FA\",\"display\":{\"title\":{\"text\":{\"english\":\"Family member\",\"default\":\"Família\"}}},\"_row_num\":44},{\"choice_list_name\":\"healthstaff\",\"data_value\":\"VI\",\"display\":{\"title\":{\"text\":{\"english\":\"Neighbour\",\"default\":\"Vizinho\"}}},\"_row_num\":45},{\"choice_list_name\":\"healthstaff\",\"data_value\":\"NO\",\"display\":{\"title\":{\"text\":{\"english\":\"No one\",\"default\":\"Ninguém\"}}},\"_row_num\":46},{\"choice_list_name\":\"healthstaff\",\"data_value\":\"NS\",\"display\":{\"title\":{\"text\":{\"english\":\"Dont know\",\"default\":\"Não sabe\"}}},\"_row_num\":47}]"
       },
       {
         "_partition": "Column",
@@ -16266,21 +16276,21 @@
         "_aspect": "CARTONA1",
         "_key": "displayChoicesList",
         "_type": "object",
-        "_value": "[{\"choice_list_name\":\"vpcard\",\"data_value\":\"VIC\",\"display\":{\"title\":{\"text\":{\"english\":\"Card seen\",\"default\":\"Cartão visto\"}}},\"_row_num\":11},{\"choice_list_name\":\"vpcard\",\"data_value\":\"NTN\",\"display\":{\"title\":{\"text\":{\"english\":\"Has no card and no ANC\",\"default\":\"Não tem cartão e não tem consultas\"}}},\"_row_num\":12},{\"choice_list_name\":\"vpcard\",\"data_value\":\"NTS\",\"display\":{\"title\":{\"text\":{\"english\":\"Has no card, some ANC\",\"default\":\"Não tem cartão, mas tem consultas\"}}},\"_row_num\":13},{\"choice_list_name\":\"vpcard\",\"data_value\":\"NVC\",\"display\":{\"title\":{\"text\":{\"english\":\"Card not seen\",\"default\":\"Não vi cartão\"}}},\"_row_num\":14},{\"choice_list_name\":\"vpcard\",\"data_value\":\"PC\",\"display\":{\"title\":{\"text\":{\"english\":\"Lost card\",\"default\":\"Perdeu o cartão\"}}},\"_row_num\":15},{\"choice_list_name\":\"vpcard\",\"data_value\":\"VCN\",\"display\":{\"title\":{\"text\":{\"english\":\"Card seen and no ANCs\",\"default\":\"Cartão visto, mas sem consultas registadas\"}}},\"_row_num\":16},{\"choice_list_name\":\"vpcard\",\"data_value\":\"NA\",\"display\":{\"title\":{\"text\":{\"english\":\"Don't know\",\"default\":\"Não sabe\"}}},\"_row_num\":17}]"
+        "_value": "[{\"choice_list_name\":\"vpcard\",\"data_value\":\"VIC\",\"display\":{\"title\":{\"text\":{\"english\":\"Card seen\",\"default\":\"Cartão visto\"}}},\"_row_num\":11},{\"choice_list_name\":\"vpcard\",\"data_value\":\"NTN\",\"display\":{\"title\":{\"text\":{\"english\":\"Has no card and no ANC\",\"default\":\"Não tem cartão e não procurou consultas pré-natais\"}}},\"_row_num\":12},{\"choice_list_name\":\"vpcard\",\"data_value\":\"NTS\",\"display\":{\"title\":{\"text\":{\"english\":\"Has no card, some ANC\",\"default\":\"Não tem cartão, mas procurou algumas consultas pré-natais\"}}},\"_row_num\":13},{\"choice_list_name\":\"vpcard\",\"data_value\":\"NVC\",\"display\":{\"title\":{\"text\":{\"english\":\"Card not seen\",\"default\":\"Não vi cartão\"}}},\"_row_num\":14},{\"choice_list_name\":\"vpcard\",\"data_value\":\"PC\",\"display\":{\"title\":{\"text\":{\"english\":\"Lost card\",\"default\":\"Perdeu o cartão\"}}},\"_row_num\":15},{\"choice_list_name\":\"vpcard\",\"data_value\":\"VCN\",\"display\":{\"title\":{\"text\":{\"english\":\"Card seen and no ANCs\",\"default\":\"Cartão visto, mas sem consultas pré-natais registadas\"}}},\"_row_num\":16},{\"choice_list_name\":\"vpcard\",\"data_value\":\"NA\",\"display\":{\"title\":{\"text\":{\"english\":\"Don't know\",\"default\":\"Não sabe\"}}},\"_row_num\":17}]"
       },
       {
         "_partition": "Column",
         "_aspect": "CARTONA2",
         "_key": "displayChoicesList",
         "_type": "object",
-        "_value": "[{\"choice_list_name\":\"vpcard\",\"data_value\":\"VIC\",\"display\":{\"title\":{\"text\":{\"english\":\"Card seen\",\"default\":\"Cartão visto\"}}},\"_row_num\":11},{\"choice_list_name\":\"vpcard\",\"data_value\":\"NTN\",\"display\":{\"title\":{\"text\":{\"english\":\"Has no card and no ANC\",\"default\":\"Não tem cartão e não tem consultas\"}}},\"_row_num\":12},{\"choice_list_name\":\"vpcard\",\"data_value\":\"NTS\",\"display\":{\"title\":{\"text\":{\"english\":\"Has no card, some ANC\",\"default\":\"Não tem cartão, mas tem consultas\"}}},\"_row_num\":13},{\"choice_list_name\":\"vpcard\",\"data_value\":\"NVC\",\"display\":{\"title\":{\"text\":{\"english\":\"Card not seen\",\"default\":\"Não vi cartão\"}}},\"_row_num\":14},{\"choice_list_name\":\"vpcard\",\"data_value\":\"PC\",\"display\":{\"title\":{\"text\":{\"english\":\"Lost card\",\"default\":\"Perdeu o cartão\"}}},\"_row_num\":15},{\"choice_list_name\":\"vpcard\",\"data_value\":\"VCN\",\"display\":{\"title\":{\"text\":{\"english\":\"Card seen and no ANCs\",\"default\":\"Cartão visto, mas sem consultas registadas\"}}},\"_row_num\":16},{\"choice_list_name\":\"vpcard\",\"data_value\":\"NA\",\"display\":{\"title\":{\"text\":{\"english\":\"Don't know\",\"default\":\"Não sabe\"}}},\"_row_num\":17}]"
+        "_value": "[{\"choice_list_name\":\"vpcard\",\"data_value\":\"VIC\",\"display\":{\"title\":{\"text\":{\"english\":\"Card seen\",\"default\":\"Cartão visto\"}}},\"_row_num\":11},{\"choice_list_name\":\"vpcard\",\"data_value\":\"NTN\",\"display\":{\"title\":{\"text\":{\"english\":\"Has no card and no ANC\",\"default\":\"Não tem cartão e não procurou consultas pré-natais\"}}},\"_row_num\":12},{\"choice_list_name\":\"vpcard\",\"data_value\":\"NTS\",\"display\":{\"title\":{\"text\":{\"english\":\"Has no card, some ANC\",\"default\":\"Não tem cartão, mas procurou algumas consultas pré-natais\"}}},\"_row_num\":13},{\"choice_list_name\":\"vpcard\",\"data_value\":\"NVC\",\"display\":{\"title\":{\"text\":{\"english\":\"Card not seen\",\"default\":\"Não vi cartão\"}}},\"_row_num\":14},{\"choice_list_name\":\"vpcard\",\"data_value\":\"PC\",\"display\":{\"title\":{\"text\":{\"english\":\"Lost card\",\"default\":\"Perdeu o cartão\"}}},\"_row_num\":15},{\"choice_list_name\":\"vpcard\",\"data_value\":\"VCN\",\"display\":{\"title\":{\"text\":{\"english\":\"Card seen and no ANCs\",\"default\":\"Cartão visto, mas sem consultas pré-natais registadas\"}}},\"_row_num\":16},{\"choice_list_name\":\"vpcard\",\"data_value\":\"NA\",\"display\":{\"title\":{\"text\":{\"english\":\"Don't know\",\"default\":\"Não sabe\"}}},\"_row_num\":17}]"
       },
       {
         "_partition": "Column",
         "_aspect": "CART_ANC",
         "_key": "displayChoicesList",
         "_type": "object",
-        "_value": "[{\"choice_list_name\":\"vpcard\",\"data_value\":\"VIC\",\"display\":{\"title\":{\"text\":{\"english\":\"Card seen\",\"default\":\"Cartão visto\"}}},\"_row_num\":11},{\"choice_list_name\":\"vpcard\",\"data_value\":\"NTN\",\"display\":{\"title\":{\"text\":{\"english\":\"Has no card and no ANC\",\"default\":\"Não tem cartão e não tem consultas\"}}},\"_row_num\":12},{\"choice_list_name\":\"vpcard\",\"data_value\":\"NTS\",\"display\":{\"title\":{\"text\":{\"english\":\"Has no card, some ANC\",\"default\":\"Não tem cartão, mas tem consultas\"}}},\"_row_num\":13},{\"choice_list_name\":\"vpcard\",\"data_value\":\"NVC\",\"display\":{\"title\":{\"text\":{\"english\":\"Card not seen\",\"default\":\"Não vi cartão\"}}},\"_row_num\":14},{\"choice_list_name\":\"vpcard\",\"data_value\":\"PC\",\"display\":{\"title\":{\"text\":{\"english\":\"Lost card\",\"default\":\"Perdeu o cartão\"}}},\"_row_num\":15},{\"choice_list_name\":\"vpcard\",\"data_value\":\"VCN\",\"display\":{\"title\":{\"text\":{\"english\":\"Card seen and no ANCs\",\"default\":\"Cartão visto, mas sem consultas registadas\"}}},\"_row_num\":16},{\"choice_list_name\":\"vpcard\",\"data_value\":\"NA\",\"display\":{\"title\":{\"text\":{\"english\":\"Don't know\",\"default\":\"Não sabe\"}}},\"_row_num\":17}]"
+        "_value": "[{\"choice_list_name\":\"vpcard\",\"data_value\":\"VIC\",\"display\":{\"title\":{\"text\":{\"english\":\"Card seen\",\"default\":\"Cartão visto\"}}},\"_row_num\":11},{\"choice_list_name\":\"vpcard\",\"data_value\":\"NTN\",\"display\":{\"title\":{\"text\":{\"english\":\"Has no card and no ANC\",\"default\":\"Não tem cartão e não procurou consultas pré-natais\"}}},\"_row_num\":12},{\"choice_list_name\":\"vpcard\",\"data_value\":\"NTS\",\"display\":{\"title\":{\"text\":{\"english\":\"Has no card, some ANC\",\"default\":\"Não tem cartão, mas procurou algumas consultas pré-natais\"}}},\"_row_num\":13},{\"choice_list_name\":\"vpcard\",\"data_value\":\"NVC\",\"display\":{\"title\":{\"text\":{\"english\":\"Card not seen\",\"default\":\"Não vi cartão\"}}},\"_row_num\":14},{\"choice_list_name\":\"vpcard\",\"data_value\":\"PC\",\"display\":{\"title\":{\"text\":{\"english\":\"Lost card\",\"default\":\"Perdeu o cartão\"}}},\"_row_num\":15},{\"choice_list_name\":\"vpcard\",\"data_value\":\"VCN\",\"display\":{\"title\":{\"text\":{\"english\":\"Card seen and no ANCs\",\"default\":\"Cartão visto, mas sem consultas pré-natais registadas\"}}},\"_row_num\":16},{\"choice_list_name\":\"vpcard\",\"data_value\":\"NA\",\"display\":{\"title\":{\"text\":{\"english\":\"Don't know\",\"default\":\"Não sabe\"}}},\"_row_num\":17}]"
       },
       {
         "_partition": "Column",
@@ -16315,7 +16325,7 @@
         "_aspect": "LOCPAR",
         "_key": "displayChoicesList",
         "_type": "object",
-        "_value": "[{\"choice_list_name\":\"facility\",\"data_value\":\"HO\",\"display\":{\"title\":{\"text\":{\"english\":\"Hospital\",\"default\":\"Hospital\"}}},\"_row_num\":33},{\"choice_list_name\":\"facility\",\"data_value\":\"CS\",\"display\":{\"title\":{\"text\":{\"english\":\"Health Center\",\"default\":\"Centro de Saude\"}}},\"_row_num\":34},{\"choice_list_name\":\"facility\",\"data_value\":\"US\",\"display\":{\"title\":{\"text\":{\"english\":\"Health Unit\",\"default\":\"Unidade de Saude Base\"}}},\"_row_num\":35},{\"choice_list_name\":\"facility\",\"data_value\":\"CA\",\"display\":{\"title\":{\"text\":{\"english\":\"Home\",\"default\":\"Casa\"}}},\"_row_num\":36},{\"choice_list_name\":\"facility\",\"data_value\":\"OU\",\"display\":{\"title\":{\"text\":{\"english\":\"Elsewhere\",\"default\":\"Outro lugar\"}}},\"_row_num\":37},{\"choice_list_name\":\"facility\",\"data_value\":\"NS\",\"display\":{\"title\":{\"text\":{\"english\":\"Don't know\",\"default\":\"Não sabe\"}}},\"_row_num\":38}]"
+        "_value": "[{\"choice_list_name\":\"facility\",\"data_value\":\"HO\",\"display\":{\"title\":{\"text\":{\"english\":\"Hospital\",\"default\":\"Hospital\"}}},\"_row_num\":33},{\"choice_list_name\":\"facility\",\"data_value\":\"CS\",\"display\":{\"title\":{\"text\":{\"english\":\"Health Center\",\"default\":\"Centro de Saúde\"}}},\"_row_num\":34},{\"choice_list_name\":\"facility\",\"data_value\":\"US\",\"display\":{\"title\":{\"text\":{\"english\":\"Health Unit\",\"default\":\"Unidade de Saúde Base\"}}},\"_row_num\":35},{\"choice_list_name\":\"facility\",\"data_value\":\"CA\",\"display\":{\"title\":{\"text\":{\"english\":\"Home\",\"default\":\"Casa\"}}},\"_row_num\":36},{\"choice_list_name\":\"facility\",\"data_value\":\"OU\",\"display\":{\"title\":{\"text\":{\"english\":\"Elsewhere\",\"default\":\"Outro lugar\"}}},\"_row_num\":37},{\"choice_list_name\":\"facility\",\"data_value\":\"NS\",\"display\":{\"title\":{\"text\":{\"english\":\"Don't know\",\"default\":\"Não sabe\"}}},\"_row_num\":38}]"
       },
       {
         "_partition": "Column",
@@ -16329,7 +16339,7 @@
         "_aspect": "OUTSTATUS",
         "_key": "displayChoicesList",
         "_type": "object",
-        "_value": "[{\"choice_list_name\":\"pregstat\",\"data_value\":\"1\",\"display\":{\"title\":{\"text\":{\"english\":\"Birth\",\"default\":\"Nado\"}}},\"_row_num\":21},{\"choice_list_name\":\"pregstat\",\"data_value\":\"2\",\"display\":{\"title\":{\"text\":{\"english\":\"Miscarriage\",\"default\":\"Aborto\"}}},\"_row_num\":22},{\"choice_list_name\":\"pregstat\",\"data_value\":\"3\",\"display\":{\"title\":{\"text\":{\"english\":\"Never pregnant\",\"default\":\"Enganou\"}}},\"_row_num\":23}]"
+        "_value": "[{\"choice_list_name\":\"pregstat\",\"data_value\":\"1\",\"display\":{\"title\":{\"text\":{\"english\":\"Birth\",\"default\":\"Nado\"}}},\"__EMPTY\":\"Nado ###Nascimento/Parto?\",\"_row_num\":21},{\"choice_list_name\":\"pregstat\",\"data_value\":\"2\",\"display\":{\"title\":{\"text\":{\"english\":\"Miscarriage\",\"default\":\"Aborto\"}}},\"_row_num\":22},{\"choice_list_name\":\"pregstat\",\"data_value\":\"3\",\"display\":{\"title\":{\"text\":{\"english\":\"Never pregnant\",\"default\":\"Enganou\"}}},\"_row_num\":23}]"
       },
       {
         "_partition": "Column",
@@ -16357,7 +16367,7 @@
         "_aspect": "TECTO",
         "_key": "displayChoicesList",
         "_type": "object",
-        "_value": "[{\"choice_list_name\":\"tecto\",\"data_value\":\"1\",\"display\":{\"title\":{\"text\":{\"english\":\"Straw\",\"default\":\"Palha\"}}},\"_row_num\":54},{\"choice_list_name\":\"tecto\",\"data_value\":\"2\",\"display\":{\"title\":{\"text\":{\"english\":\"Zinc\",\"default\":\"Zinco\"}}},\"_row_num\":55},{\"choice_list_name\":\"tecto\",\"data_value\":\"3\",\"display\":{\"title\":{\"text\":{\"english\":\"Tiles\",\"default\":\"Telha\"}}},\"_row_num\":56},{\"choice_list_name\":\"tecto\",\"data_value\":\"4\",\"display\":{\"title\":{\"text\":{\"english\":\"Concrete\",\"default\":\"Fibra cimento\"}}},\"_row_num\":57},{\"choice_list_name\":\"tecto\",\"data_value\":\"9\",\"display\":{\"title\":{\"text\":{\"english\":\"Don't know\",\"default\":\"Não sabe\"}}},\"_row_num\":58}]"
+        "_value": "[{\"choice_list_name\":\"tecto\",\"data_value\":\"1\",\"display\":{\"title\":{\"text\":{\"english\":\"Straw\",\"default\":\"Palha\"}}},\"_row_num\":54},{\"choice_list_name\":\"tecto\",\"data_value\":\"2\",\"display\":{\"title\":{\"text\":{\"english\":\"Zinc\",\"default\":\"Zinco\"}}},\"_row_num\":55},{\"choice_list_name\":\"tecto\",\"data_value\":\"3\",\"display\":{\"title\":{\"text\":{\"english\":\"Tiles\",\"default\":\"Telha\"}}},\"_row_num\":56},{\"choice_list_name\":\"tecto\",\"data_value\":\"4\",\"display\":{\"title\":{\"text\":{\"english\":\"Concrete\",\"default\":\"Fibra cimento\"}}},\"__EMPTY\":\"\\\"concreto\\\"?\",\"_row_num\":57},{\"choice_list_name\":\"tecto\",\"data_value\":\"9\",\"display\":{\"title\":{\"text\":{\"english\":\"Don't know\",\"default\":\"Não sabe\"}}},\"_row_num\":58}]"
       },
       {
         "_partition": "Column",

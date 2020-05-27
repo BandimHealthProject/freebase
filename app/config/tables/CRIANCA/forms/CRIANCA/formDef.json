@@ -22,7 +22,7 @@
           "title": {
             "text": {
               "english": "Children",
-              "default": "Criancas"
+              "default": "Crianças"
             }
           }
         },
@@ -34,7 +34,7 @@
           "locale": {
             "text": {
               "english": "Portuguese",
-              "default": "Portugues"
+              "default": "Português"
             }
           }
         },
@@ -362,7 +362,7 @@
           "prompt": {
             "text": {
               "english": "Fogao",
-              "default": "Fogao"
+              "default": "Fogão"
             }
           }
         },
@@ -375,7 +375,7 @@
           "prompt": {
             "text": {
               "english": "Comments to changes",
-              "default": "Comentários a alterações"
+              "default": "Comentários às alterações"
             }
           }
         },
@@ -553,7 +553,7 @@
           "prompt": {
             "text": {
               "english": "<b>Registration of child<b>",
-              "default": "<b>Registro de crianca<b>"
+              "default": "<b>Registro de criança<b>"
             }
           }
         },
@@ -616,7 +616,7 @@
           "prompt": {
             "text": {
               "english": "<b>Registration of child<b>",
-              "default": "<b>Registro de crianca<b>"
+              "default": "<b>Registro de criança<b>"
             }
           }
         },
@@ -694,7 +694,7 @@
           "prompt": {
             "text": {
               "english": "<b>Registration of child: {{data.NOME}} - Dob: {{calculates.displayOUTDATE}}<b>",
-              "default": "<b>Registro de crianca: {{data.NOME}} - Nas: {{calculates.displayOUTDATE}}<b>"
+              "default": "<b>Registro de criança: {{data.NOME}} - Nas: {{calculates.displayOUTDATE}}<b>"
             }
           }
         },
@@ -765,7 +765,7 @@
           "prompt": {
             "text": {
               "english": "<b>Registration of child: {{data.NOME}} - Dob: {{calculates.displayOUTDATE}}<b>",
-              "default": "<b>Registro de crianca: {{data.NOME}} - Nas: {{calculates.displayOUTDATE}}<b>"
+              "default": "<b>Registro de criança: {{data.NOME}} - Nas: {{calculates.displayOUTDATE}}<b>"
             }
           }
         },
@@ -803,7 +803,7 @@
           "prompt": {
             "text": {
               "english": "<b>Registration of child: {{data.NOME}} - Dob: {{calculates.displayOUTDATE}}<b>",
-              "default": "<b>Registro de crianca: {{data.NOME}} - Nas: {{calculates.displayOUTDATE}}<b>"
+              "default": "<b>Registro de criança: {{data.NOME}} - Nas: {{calculates.displayOUTDATE}}<b>"
             }
           }
         },
@@ -862,7 +862,7 @@
           "prompt": {
             "text": {
               "english": "<b>Registration of child: {{data.NOME}} - Dob: {{calculates.displayOUTDATE}}<b>",
-              "default": "<b>Registro de crianca: {{data.NOME}} - Nas: {{calculates.displayOUTDATE}}<b>"
+              "default": "<b>Registro de criança: {{data.NOME}} - Nas: {{calculates.displayOUTDATE}}<b>"
             }
           }
         },
@@ -908,7 +908,7 @@
           "prompt": {
             "text": {
               "english": "<b>Registration of child: {{data.NOME}} - Dob: {{calculates.displayOUTDATE}}<b>",
-              "default": "<b>Registro de crianca: {{data.NOME}} - Nas: {{calculates.displayOUTDATE}}<b>"
+              "default": "<b>Registro de criança: {{data.NOME}} - Nas: {{calculates.displayOUTDATE}}<b>"
             }
           }
         },
@@ -964,7 +964,7 @@
           "prompt": {
             "text": {
               "english": "<b>Registration of child: {{data.NOME}} - Dob: {{calculates.displayOUTDATE}}<b>",
-              "default": "<b>Registro de crianca: {{data.NOME}} - Nas: {{calculates.displayOUTDATE}}<b>"
+              "default": "<b>Registro de criança: {{data.NOME}} - Nas: {{calculates.displayOUTDATE}}<b>"
             }
           }
         },
@@ -1166,7 +1166,7 @@
         "display": {
           "prompt": {
             "text": {
-              "english": "Have vaccination  card?",
+              "english": "Does the mother have a vaccination card?",
               "default": "Tem cartão de vacinas da mulher?"
             }
           }
@@ -1200,8 +1200,8 @@
         "display": {
           "prompt": {
             "text": {
-              "english": "Did the woman get any Tetanus vaccine during pregnancy?",
-              "default": "A mulher recebeu alguma vacina anti-tetánica durante a gravidez?"
+              "english": "Did the woman get any Tetanus vaccine during this pregnancy?",
+              "default": "A mulher recebeu alguma vacina antitetânica durante esta gravidez?"
             }
           }
         },
@@ -1468,7 +1468,7 @@
           "prompt": {
             "text": {
               "english": "Did the woman seek prenatal consultations during pregnancy?",
-              "default": "A mulher procurou consultas pré-natal durante a gravidez?"
+              "default": "A mulher procurou consultas pré-natais durante esta gravidez?"
             }
           }
         },
@@ -1603,7 +1603,7 @@
           "prompt": {
             "text": {
               "english": "How many times did the pregnant woman receive iron tablets?",
-              "default": "A grávida recebeu comprimidos com ferro quantas vezes?"
+              "default": "A grávida recebeu comprimidos de ferro quantas vezes?"
             }
           }
         },
@@ -1883,7 +1883,7 @@
           "prompt": {
             "text": {
               "english": "Place of hospital / health center",
-              "default": "Local do hospital / centro de saude"
+              "default": "Local do hospital / centro de saúde"
             }
           }
         },
@@ -2027,7 +2027,7 @@
           "prompt": {
             "text": {
               "english": "Why not attending closest hospital",
-              "default": "Porque internou aqui?"
+              "default": "Porquê é que não foi ao hospital mais perto?"
             }
           }
         },
@@ -2069,7 +2069,7 @@
           "prompt": {
             "text": {
               "english": "Who assisted the birth?",
-              "default": "Quem ajudou o parto?"
+              "default": "Quem ajudou ao parto?"
             }
           }
         },
@@ -2102,7 +2102,7 @@
           "prompt": {
             "text": {
               "english": "Comment to the birth",
-              "default": "Comentários ao de parto"
+              "default": "Comentários ao parto"
             }
           }
         },
@@ -2141,7 +2141,7 @@
           "prompt": {
             "text": {
               "english": "<b>Socioeconomic status<b>",
-              "default": "<b>Status socioeconomico<b>"
+              "default": "<b>Estatuto socioeconómico<b>"
             }
           }
         },
@@ -2189,7 +2189,7 @@
           "prompt": {
             "text": {
               "english": "<b>Socioeconomic status<b>",
-              "default": "<b>Status socioeconomico<b>"
+              "default": "<b>Estatuto socioeconómico<b>"
             }
           }
         },
@@ -2237,7 +2237,7 @@
           "prompt": {
             "text": {
               "english": "<b>Socioeconomic status<b>",
-              "default": "<b>Status socioeconomico<b>"
+              "default": "<b>Estatuto socioeconómico<b>"
             }
           }
         },
@@ -2251,7 +2251,7 @@
           "prompt": {
             "text": {
               "english": "Does the mother or father own a telephone",
-              "default": "A mãe ou o pai tem telemovel?"
+              "default": "A mãe ou o pai tem um telemóvel?"
             }
           }
         },
@@ -2264,7 +2264,7 @@
           "prompt": {
             "text": {
               "english": "Phone number of mother or other",
-              "default": "Número de telemovel da mãe ou outro"
+              "default": "Número de telemóvel da mãe ou outra pessoa"
             }
           }
         },
@@ -2287,7 +2287,7 @@
           "prompt": {
             "text": {
               "english": "<b>Socioeconomic status<b>",
-              "default": "<b>Status socioeconomico<b>"
+              "default": "<b>Estatuto socioeconómico<b>"
             }
           }
         },
@@ -2688,7 +2688,7 @@
           "prompt": {
             "text": {
               "english": "<b>Child visit: {{data.NOME}} -  Dob: {{calculates.displayOUTDATE}}<b>",
-              "default": "<b>Visita da crianca: {{data.NOME}} - Nas: {{calculates.displayOUTDATE}}<b>"
+              "default": "<b>Visita da criança: {{data.NOME}} - Nas: {{calculates.displayOUTDATE}}<b>"
             }
           }
         },
@@ -2717,7 +2717,7 @@
           "prompt": {
             "text": {
               "english": "Last visit: <b>{{calculates.displayLASTVISITDATE}}<b>",
-              "default": "Ultima visita: <b>{{calculates.displayLASTVISITDATE}}<b>"
+              "default": "Última visita: <b>{{calculates.displayLASTVISITDATE}}<b>"
             }
           }
         },
@@ -2861,7 +2861,7 @@
           "prompt": {
             "text": {
               "english": "Status of the child",
-              "default": "Estado da crianca"
+              "default": "Estado da criança"
             }
           }
         },
@@ -2885,7 +2885,7 @@
           "constraint_message": {
             "text": {
               "english": "The exit date cannot be before before last visit and cannot be in the future",
-              "default": "A data de saída não pode ser anterior à última visita e não pode ser no futuro"
+              "default": "A data de saída não pode ser antes da última visita e não pode ser no futuro"
             }
           }
         },
@@ -2953,7 +2953,7 @@
           "prompt": {
             "text": {
               "english": "<b>Child visit: {{data.NOME}} - Dob: {{calculates.displayOUTDATE}}<b>",
-              "default": "<b>Visita da crianca: {{data.NOME}} - Nas: {{calculates.displayOUTDATE}}<b>"
+              "default": "<b>Visita da criança: {{data.NOME}} - Nas: {{calculates.displayOUTDATE}}<b>"
             }
           }
         },
@@ -2966,8 +2966,8 @@
         "display": {
           "prompt": {
             "text": {
-              "english": "Status of the mother",
-              "default": "Estado da mãe"
+              "english": "Status of the mother or responsible",
+              "default": "Estado da mãe ou tutor"
             }
           }
         },
@@ -2987,7 +2987,7 @@
           "prompt": {
             "text": {
               "english": "<b>Child visit: {{data.NOME}} - Dob: {{calculates.displayOUTDATE}}<b>",
-              "default": "<b>Visita da crianca: {{data.NOME}} - Nas: {{calculates.displayOUTDATE}}<b>"
+              "default": "<b>Visita da criança: {{data.NOME}} - Nas: {{calculates.displayOUTDATE}}<b>"
             }
           }
         },
@@ -3001,7 +3001,7 @@
           "prompt": {
             "text": {
               "english": "Does the child have a vaccination cart",
-              "default": "Tem cartão de vacina?"
+              "default": "Tem cartão de vacina da criança?"
             }
           }
         },
@@ -3026,7 +3026,7 @@
           "prompt": {
             "text": {
               "english": "<b>Child visit: {{data.NOME}} - Dob: {{calculates.displayOUTDATE}}<b>",
-              "default": "<b>Visita da crianca: {{data.NOME}} - Nas: {{calculates.displayOUTDATE}}<b>"
+              "default": "<b>Visita da criança: {{data.NOME}} - Nas: {{calculates.displayOUTDATE}}<b>"
             }
           }
         },
@@ -3106,7 +3106,7 @@
       },
       {
         "clause": "if",
-        "condition": "data('comsup') != '1'",
+        "condition": "data('pama') != '1'",
         "_row_num": 61
       },
       {
@@ -3119,117 +3119,11 @@
           "prompt": {
             "text": {
               "english": "<b>Child visit: {{data.NOME}} - Dob: {{calculates.displayOUTDATE}}<b>",
-              "default": "<b>Visita da crianca: {{data.NOME}} - Nas: {{calculates.displayOUTDATE}}<b>"
+              "default": "<b>Visita da criança: {{data.NOME}} - Nas: {{calculates.displayOUTDATE}}<b>"
             }
           }
         },
         "_row_num": 63
-      },
-      {
-        "type": "select_one",
-        "values_list": "YesNoU",
-        "name": "COMSUP",
-        "display": {
-          "prompt": {
-            "text": {
-              "english": "Does the child recieve supplementary foods?",
-              "default": "A criança recebeu alimentos complementares?"
-            }
-          }
-        },
-        "_row_num": 64
-      },
-      {
-        "clause": "if",
-        "condition": "data('COMSUP') == '1'",
-        "_row_num": 65
-      },
-      {
-        "type": "adate",
-        "name": "DACOMSUP",
-        "display": {
-          "prompt": {
-            "text": {
-              "english": "Date of starting supplementary feeding",
-              "default": "Data de início da alimentação suplementar"
-            }
-          },
-          "constraint_message": {
-            "text": {
-              "english": "The date of starting supplementary feeding cannot be in the future",
-              "default": "A data de início da alimentação suplementar não pode ser no futuro"
-            }
-          }
-        },
-        "constraint": "adate.diffInDays(data('CONT'), data('DACOMSUP'))<1 || adate.hasUncertainty(data('DACOMSUP'))",
-        "_row_num": 66
-      },
-      {
-        "type": "select_multiple",
-        "values_list": "dontknowdate",
-        "name": "dacomsupns",
-        "_row_num": 67
-      },
-      {
-        "clause": "if",
-        "condition": "data('dacomsupns') != null",
-        "_row_num": 68
-      },
-      {
-        "type": "integer",
-        "name": "IDCOMSUP",
-        "display": {
-          "prompt": {
-            "text": {
-              "english": "Age of starting supplementary feeding in months",
-              "default": "Idade de início da alimentação suplementar em meses"
-            }
-          }
-        },
-        "_row_num": 69
-      },
-      {
-        "type": "assign",
-        "name": "DACOMSUP",
-        "calculation": "data('dacomsupns')",
-        "_row_num": 70
-      },
-      {
-        "clause": "end if",
-        "_row_num": 71
-      },
-      {
-        "clause": "end if",
-        "_row_num": 72
-      },
-      {
-        "clause": "end screen",
-        "_row_num": 73
-      },
-      {
-        "clause": "end if",
-        "_row_num": 74
-      },
-      {
-        "clause": "if",
-        "condition": "data('pama') != '1'",
-        "_row_num": 75
-      },
-      {
-        "clause": "begin screen",
-        "_row_num": 76
-      },
-      {
-        "type": "note",
-        "display": {
-          "prompt": {
-            "text": {
-              "english": "<b>Child visit: {{data.NOME}} - Dob: {{calculates.displayOUTDATE}}<b>",
-              "default": "<b>Visita da crianca: {{data.NOME}} - Nas: {{calculates.displayOUTDATE}}<b>"
-            }
-          }
-        },
-        "_row_num": 77
       },
       {
         "type": "select_one",
@@ -3243,12 +3137,12 @@
             }
           }
         },
-        "_row_num": 78
+        "_row_num": 64
       },
       {
         "clause": "if",
         "condition": "data('PAMA') == '1'",
-        "_row_num": 79
+        "_row_num": 65
       },
       {
         "type": "adate",
@@ -3268,18 +3162,18 @@
           }
         },
         "constraint": "adate.diffInDays(data('CONT'), data('DAPAMA'))<1 || adate.hasUncertainty(data('DAPAMA'))",
-        "_row_num": 80
+        "_row_num": 66
       },
       {
         "type": "select_multiple",
         "values_list": "dontknowdate",
         "name": "dapamans",
-        "_row_num": 81
+        "_row_num": 67
       },
       {
         "clause": "if",
         "condition": "data('dapamans') != null",
-        "_row_num": 82
+        "_row_num": 68
       },
       {
         "type": "integer",
@@ -3288,16 +3182,122 @@
           "prompt": {
             "text": {
               "english": "Age of stopping breastfeeding in months",
-              "default": "Idade de interrupção da amamentação em meses"
+              "default": "Idade da criança à interrupção da amamentação em meses"
             }
           }
         },
-        "_row_num": 83
+        "_row_num": 69
       },
       {
         "type": "assign",
         "name": "DAPAMA",
         "calculation": "data('dapamans')",
+        "_row_num": 70
+      },
+      {
+        "clause": "end if",
+        "_row_num": 71
+      },
+      {
+        "clause": "end if",
+        "_row_num": 72
+      },
+      {
+        "clause": "end screen",
+        "_row_num": 73
+      },
+      {
+        "clause": "if",
+        "condition": "data('comsup') != '1' || data('PAMA') != '1'",
+        "_row_num": 74
+      },
+      {
+        "clause": "begin screen",
+        "_row_num": 75
+      },
+      {
+        "type": "note",
+        "display": {
+          "prompt": {
+            "text": {
+              "english": "<b>Child visit: {{data.NOME}} - Dob: {{calculates.displayOUTDATE}}<b>",
+              "default": "<b>Visita da criança: {{data.NOME}} - Nas: {{calculates.displayOUTDATE}}<b>"
+            }
+          }
+        },
+        "_row_num": 76
+      },
+      {
+        "type": "select_one",
+        "values_list": "YesNoU",
+        "name": "COMSUP",
+        "display": {
+          "prompt": {
+            "text": {
+              "english": "Does the child recieve supplementary foods?",
+              "default": "A criança recebeu alimentos suplementares?"
+            }
+          }
+        },
+        "_row_num": 77
+      },
+      {
+        "clause": "if",
+        "condition": "data('COMSUP') == '1'",
+        "_row_num": 78
+      },
+      {
+        "type": "adate",
+        "name": "DACOMSUP",
+        "display": {
+          "prompt": {
+            "text": {
+              "english": "Date of starting supplementary feeding",
+              "default": "Data de início da alimentação suplementar"
+            }
+          },
+          "constraint_message": {
+            "text": {
+              "english": "The date of starting supplementary feeding cannot be in the future",
+              "default": "A data de início da alimentação suplementar não pode ser no futuro"
+            }
+          }
+        },
+        "constraint": "adate.diffInDays(data('CONT'), data('DACOMSUP'))<1 || adate.hasUncertainty(data('DACOMSUP'))",
+        "_row_num": 79
+      },
+      {
+        "type": "select_multiple",
+        "values_list": "dontknowdate",
+        "name": "dacomsupns",
+        "_row_num": 80
+      },
+      {
+        "clause": "if",
+        "condition": "data('dacomsupns') != null",
+        "_row_num": 81
+      },
+      {
+        "type": "integer",
+        "name": "IDCOMSUP",
+        "display": {
+          "prompt": {
+            "text": {
+              "english": "Age of starting supplementary feeding in months",
+              "default": "Idade de início da alimentação suplementar em meses"
+            }
+          }
+        },
+        "_row_num": 82
+      },
+      {
+        "type": "assign",
+        "name": "DACOMSUP",
+        "calculation": "data('dacomsupns')",
+        "_row_num": 83
+      },
+      {
+        "clause": "end if",
         "_row_num": 84
       },
       {
@@ -3305,11 +3305,11 @@
         "_row_num": 85
       },
       {
-        "clause": "end if",
+        "clause": "end screen",
         "_row_num": 86
       },
       {
-        "clause": "end screen",
+        "clause": "end if",
         "_row_num": 87
       },
       {
@@ -3326,7 +3326,7 @@
           "prompt": {
             "text": {
               "english": "<b>Child visit: {{data.NOME}} - Dob: {{calculates.displayOUTDATE}}<b>",
-              "default": "<b>Visita da crianca: {{data.NOME}} - Nas: {{calculates.displayOUTDATE}}<b>"
+              "default": "<b>Visita da criança: {{data.NOME}} - Nas: {{calculates.displayOUTDATE}}<b>"
             }
           }
         },
@@ -3354,7 +3354,7 @@
           "prompt": {
             "text": {
               "english": "Period using bednet",
-              "default": "Tempo do uso da tenda"
+              "default": "Tempo da utilização da tenda"
             }
           }
         },
@@ -3397,7 +3397,7 @@
           "prompt": {
             "text": {
               "english": "<b>Child visit: {{data.NOME}} - Dob: {{calculates.displayOUTDATE}}<b>",
-              "default": "<b>Visita da crianca: {{data.NOME}} - Nas: {{calculates.displayOUTDATE}}<b>"
+              "default": "<b>Visita da criança: {{data.NOME}} - Nas: {{calculates.displayOUTDATE}}<b>"
             }
           }
         },
@@ -3410,8 +3410,8 @@
         "display": {
           "prompt": {
             "text": {
-              "english": "Are there pigs living in the compound?",
-              "default": "Há porcos morando no complexo?"
+              "english": "Are there pigs living in the morança?",
+              "default": "Há porcos morando na morança?"
             }
           }
         },
@@ -3450,7 +3450,7 @@
           "prompt": {
             "text": {
               "english": "<b>Child visit: {{data.NOME}} - Dob: {{calculates.displayOUTDATE}}<b>",
-              "default": "<b>Visita da crianca: {{data.NOME}} - Nas: {{calculates.displayOUTDATE}}<b>"
+              "default": "<b>Visita da criança: {{data.NOME}} - Nas: {{calculates.displayOUTDATE}}<b>"
             }
           }
         },
@@ -3464,7 +3464,7 @@
           "prompt": {
             "text": {
               "english": "Is the child living with their mother?",
-              "default": "A criança vivia com a sua mãe?"
+              "default": "A criança mora com a sua mãe?"
             }
           }
         },
@@ -3482,7 +3482,7 @@
           "prompt": {
             "text": {
               "english": "Cause of separation from the mother",
-              "default": "Causa de separação da mãe"
+              "default": "Razão da separação da mãe"
             }
           }
         },
@@ -3495,7 +3495,7 @@
           "prompt": {
             "text": {
               "english": "Date of separation from mother",
-              "default": "Data de separação da mãe"
+              "default": "Data da separação da mãe"
             }
           },
           "constraint_message": {
@@ -3525,8 +3525,8 @@
         "display": {
           "prompt": {
             "text": {
-              "english": "Age of separation from mother",
-              "default": "Idade da separação da mãe"
+              "english": "Age of separation from mother in months",
+              "default": "Idade de separação da mãe em meses"
             }
           }
         },
@@ -3568,7 +3568,7 @@
           "prompt": {
             "text": {
               "english": "<b>Child visit: {{data.NOME}} - Dob: {{calculates.displayOUTDATE}}<b>",
-              "default": "<b>Visita da crianca: {{data.NOME}} - Nas: {{calculates.displayOUTDATE}}<b>"
+              "default": "<b>Visita da criança: {{data.NOME}} - Nas: {{calculates.displayOUTDATE}}<b>"
             }
           }
         },
@@ -3623,7 +3623,7 @@
           "prompt": {
             "text": {
               "english": "<b>Child visit: {{data.NOME}} - Dob: {{calculates.displayOUTDATE}}<b>",
-              "default": "<b>Visita da crianca: {{data.NOME}} - Nas: {{calculates.displayOUTDATE}}<b>"
+              "default": "<b>Visita da criança: {{data.NOME}} - Nas: {{calculates.displayOUTDATE}}<b>"
             }
           }
         },
@@ -3636,7 +3636,7 @@
           "prompt": {
             "text": {
               "english": "Date of latest hospitalization",
-              "default": "Data de último internamento"
+              "default": "Data do último internamento"
             }
           }
         },
@@ -3734,7 +3734,7 @@
           "prompt": {
             "text": {
               "english": "<b>Child visit: {{data.NOME}} - Dob: {{calculates.displayOUTDATE}}<b>",
-              "default": "<b>Visita da crianca: {{data.NOME}} - Nas: {{calculates.displayOUTDATE}}<b>"
+              "default": "<b>Visita da criança: {{data.NOME}} - Nas: {{calculates.displayOUTDATE}}<b>"
             }
           }
         },
@@ -3746,7 +3746,7 @@
           "prompt": {
             "text": {
               "english": "Hospitalization",
-              "default": "Hospitalização"
+              "default": "Internação"
             }
           }
         },
@@ -3813,7 +3813,7 @@
           "prompt": {
             "text": {
               "english": "<b>Child visit: {{data.NOME}} - Dob: {{calculates.displayOUTDATE}}<b>",
-              "default": "<b>Visita da crianca: {{data.NOME}} - Nas: {{calculates.displayOUTDATE}}<b>"
+              "default": "<b>Visita da criança: {{data.NOME}} - Nas: {{calculates.displayOUTDATE}}<b>"
             }
           }
         },
@@ -3858,7 +3858,7 @@
           "prompt": {
             "text": {
               "english": "<b>Child visit: {{data.NOME}} - Dob: {{calculates.displayOUTDATE}}<b>",
-              "default": "<b>Visita da crianca: {{data.NOME}} - Nas: {{calculates.displayOUTDATE}}<b>"
+              "default": "<b>Visita da criança: {{data.NOME}} - Nas: {{calculates.displayOUTDATE}}<b>"
             }
           }
         },
@@ -3897,7 +3897,7 @@
           "prompt": {
             "text": {
               "english": "<b>Child visit: {{data.NOME}} - Dob: {{calculates.displayOUTDATE}}<b>",
-              "default": "<b>Visita da crianca: {{data.NOME}} - Nas: {{calculates.displayOUTDATE}}<b>"
+              "default": "<b>Visita da criança: {{data.NOME}} - Nas: {{calculates.displayOUTDATE}}<b>"
             }
           }
         },
@@ -3947,7 +3947,7 @@
           "prompt": {
             "text": {
               "english": "<b>Child visit: {{data.NOME}} - Dob: {{calculates.displayOUTDATE}}<b>",
-              "default": "<b>Visita da crianca: {{data.NOME}} - Nas: {{calculates.displayOUTDATE}}<b>"
+              "default": "<b>Visita da criança: {{data.NOME}} - Nas: {{calculates.displayOUTDATE}}<b>"
             }
           }
         },
@@ -4017,7 +4017,7 @@
           "prompt": {
             "text": {
               "english": "<b>Child visit: {{data.NOME}} - Dob: {{calculates.displayOUTDATE}}<b>",
-              "default": "<b>Visita da crianca: {{data.NOME}} - Nas: {{calculates.displayOUTDATE}}<b>"
+              "default": "<b>Visita da criança: {{data.NOME}} - Nas: {{calculates.displayOUTDATE}}<b>"
             }
           }
         },
@@ -4056,7 +4056,7 @@
           "prompt": {
             "text": {
               "english": "<b>Child visit: {{data.NOME}} - Dob: {{calculates.displayOUTDATE}}<b>",
-              "default": "<b>Visita da crianca: {{data.NOME}} - Nas: {{calculates.displayOUTDATE}}<b>"
+              "default": "<b>Visita da criança: {{data.NOME}} - Nas: {{calculates.displayOUTDATE}}<b>"
             }
           }
         },
@@ -4107,7 +4107,7 @@
           "prompt": {
             "text": {
               "english": "<b>Child visit: {{data.NOME}} - Dob: {{calculates.displayOUTDATE}}<b>",
-              "default": "<b>Visita da crianca: {{data.NOME}} - Nas: {{calculates.displayOUTDATE}}<b>"
+              "default": "<b>Visita da criança: {{data.NOME}} - Nas: {{calculates.displayOUTDATE}}<b>"
             }
           }
         },
@@ -4177,7 +4177,7 @@
           "prompt": {
             "text": {
               "english": "<b>Child visit: {{data.NOME}} - Dob: {{calculates.displayOUTDATE}}<b>",
-              "default": "<b>Visita da crianca: {{data.NOME}} - Nas: {{calculates.displayOUTDATE}}<b>"
+              "default": "<b>Visita da criança: {{data.NOME}} - Nas: {{calculates.displayOUTDATE}}<b>"
             }
           }
         },
@@ -4246,7 +4246,7 @@
           "prompt": {
             "text": {
               "english": "<b>Child visit: {{data.NOME}} - Dob: {{calculates.displayOUTDATE}}<b>",
-              "default": "<b>Visita da crianca: {{data.NOME}} - Nas: {{calculates.displayOUTDATE}}<b>"
+              "default": "<b>Visita da criança: {{data.NOME}} - Nas: {{calculates.displayOUTDATE}}<b>"
             }
           }
         },
@@ -4297,7 +4297,7 @@
           "prompt": {
             "text": {
               "english": "<b>Child visit: {{data.NOME}} - Dob: {{calculates.displayOUTDATE}}<b>",
-              "default": "<b>Visita da crianca: {{data.NOME}} - Nas: {{calculates.displayOUTDATE}}<b>"
+              "default": "<b>Visita da criança: {{data.NOME}} - Nas: {{calculates.displayOUTDATE}}<b>"
             }
           }
         },
@@ -4331,7 +4331,7 @@
           "prompt": {
             "text": {
               "english": "<b>Child visit: {{data.NOME}} - Dob: {{calculates.displayOUTDATE}}<b>",
-              "default": "<b>Visita da crianca: {{data.NOME}} - Nas: {{calculates.displayOUTDATE}}<b>"
+              "default": "<b>Visita da criança: {{data.NOME}} - Nas: {{calculates.displayOUTDATE}}<b>"
             }
           }
         },
@@ -4345,7 +4345,7 @@
           "prompt": {
             "text": {
               "english": "Was consultation sought?",
-              "default": "Foi solicitada consulta?"
+              "default": "Procurou consulta?"
             }
           }
         },
@@ -4369,7 +4369,7 @@
           "constraint_message": {
             "text": {
               "english": "The date of consultation cannot be before the date of birth and in the future",
-              "default": "A data da consulta não pode ser anterior à data de nascimento e no futuro"
+              "default": "A data da consulta não pode ser antes da data de nascimento e não pode ser no futuro"
             }
           }
         },
@@ -4413,7 +4413,7 @@
           "prompt": {
             "text": {
               "english": "<b>Child visit: {{data.NOME}} - Dob: {{calculates.displayOUTDATE}}<b>",
-              "default": "<b>Visita da crianca: {{data.NOME}} - Nas: {{calculates.displayOUTDATE}}<b>"
+              "default": "<b>Visita da criança: {{data.NOME}} - Nas: {{calculates.displayOUTDATE}}<b>"
             }
           }
         },
@@ -4427,7 +4427,7 @@
           "prompt": {
             "text": {
               "english": "Where was consultation sought?",
-              "default": "Onde foi procurada a consulta?"
+              "default": "Onde foi a consulta procurada?"
             }
           }
         },
@@ -4469,7 +4469,7 @@
           "prompt": {
             "text": {
               "english": "<b>Child visit: {{data.NOME}} - Dob: {{calculates.displayOUTDATE}}<b>",
-              "default": "<b>Visita da crianca: {{data.NOME}} - Nas: {{calculates.displayOUTDATE}}<b>"
+              "default": "<b>Visita da criança: {{data.NOME}} - Nas: {{calculates.displayOUTDATE}}<b>"
             }
           }
         },
@@ -4483,7 +4483,7 @@
           "prompt": {
             "text": {
               "english": "Brought vaccination card",
-              "default": "Trouxe cartão de vacinação"
+              "default": "Trouxe cartão de vacinas"
             }
           }
         },
@@ -4503,7 +4503,7 @@
           "prompt": {
             "text": {
               "english": "<b>Child visit: {{data.NOME}} - Dob: {{calculates.displayOUTDATE}}<b>",
-              "default": "<b>Visita da crianca: {{data.NOME}} - Nas: {{calculates.displayOUTDATE}}<b>"
+              "default": "<b>Visita da criança: {{data.NOME}} - Nas: {{calculates.displayOUTDATE}}<b>"
             }
           }
         },
@@ -4564,7 +4564,7 @@
           "prompt": {
             "text": {
               "english": "<b>Child visit: {{data.NOME}} - Dob: {{calculates.displayOUTDATE}}<b>",
-              "default": "<b>Visita da crianca: {{data.NOME}} - Nas: {{calculates.displayOUTDATE}}<b>"
+              "default": "<b>Visita da criança: {{data.NOME}} - Nas: {{calculates.displayOUTDATE}}<b>"
             }
           }
         },
@@ -4624,7 +4624,7 @@
           "prompt": {
             "text": {
               "english": "<b>Child visit: {{data.NOME}} - Dob: {{calculates.displayOUTDATE}}<b>",
-              "default": "<b>Visita da crianca: {{data.NOME}} - Nas: {{calculates.displayOUTDATE}}<b>"
+              "default": "<b>Visita da criança: {{data.NOME}} - Nas: {{calculates.displayOUTDATE}}<b>"
             }
           }
         },
@@ -4662,7 +4662,7 @@
           "constraint_message": {
             "text": {
               "english": "The date of consultation cannot be before the date of birth and in the future",
-              "default": "A data da consulta não pode ser anterior à data de nascimento e no futuro"
+              "default": "A data da consulta não pode ser antes da data de nascimento e não pode ser no futuro"
             }
           }
         },
@@ -4706,7 +4706,7 @@
           "prompt": {
             "text": {
               "english": "<b>Child visit: {{data.NOME}} - Dob: {{calculates.displayOUTDATE}}<b>",
-              "default": "<b>Visita da crianca: {{data.NOME}} - Nas: {{calculates.displayOUTDATE}}<b>"
+              "default": "<b>Visita da criança: {{data.NOME}} - Nas: {{calculates.displayOUTDATE}}<b>"
             }
           }
         },
@@ -4762,7 +4762,7 @@
           "prompt": {
             "text": {
               "english": "<b>Child visit: {{data.NOME}} - Dob: {{calculates.displayOUTDATE}}<b>",
-              "default": "<b>Visita da crianca: {{data.NOME}} - Nas: {{calculates.displayOUTDATE}}<b>"
+              "default": "<b>Visita da criança: {{data.NOME}} - Nas: {{calculates.displayOUTDATE}}<b>"
             }
           }
         },
@@ -4776,7 +4776,7 @@
           "prompt": {
             "text": {
               "english": "Brought vaccination card",
-              "default": "Trouxe cartão de vacinação"
+              "default": "Trouxe cartão de vacinas"
             }
           }
         },
@@ -4796,7 +4796,7 @@
           "prompt": {
             "text": {
               "english": "<b>Child visit: {{data.NOME}} - Dob: {{calculates.displayOUTDATE}}<b>",
-              "default": "<b>Visita da crianca: {{data.NOME}} - Nas: {{calculates.displayOUTDATE}}<b>"
+              "default": "<b>Visita da criança: {{data.NOME}} - Nas: {{calculates.displayOUTDATE}}<b>"
             }
           }
         },
@@ -4810,7 +4810,7 @@
           "prompt": {
             "text": {
               "english": "Received diagnosis",
-              "default": "Diagnostico recebido"
+              "default": "Diagnóstico recebido"
             }
           }
         },
@@ -4828,7 +4828,7 @@
           "prompt": {
             "text": {
               "english": "Diagnosis",
-              "default": "Diagnostico"
+              "default": "Diagnóstico"
             }
           }
         },
@@ -4857,7 +4857,7 @@
           "prompt": {
             "text": {
               "english": "<b>Child visit: {{data.NOME}} - Dob: {{calculates.displayOUTDATE}}<b>",
-              "default": "<b>Visita da crianca: {{data.NOME}} - Nas: {{calculates.displayOUTDATE}}<b>"
+              "default": "<b>Visita da criança: {{data.NOME}} - Nas: {{calculates.displayOUTDATE}}<b>"
             }
           }
         },
@@ -4932,7 +4932,7 @@
           "prompt": {
             "text": {
               "english": "<b>Child vaccines: {{data.NOME}} - Dob: {{calculates.displayOUTDATE}}<b>",
-              "default": "<b>Vacinas da crianca: {{data.NOME}} - Nas: {{calculates.displayOUTDATE}}<b>"
+              "default": "<b>Vacinas da criança: {{data.NOME}} - Nas: {{calculates.displayOUTDATE}}<b>"
             }
           }
         },
@@ -5336,7 +5336,7 @@
           "prompt": {
             "text": {
               "english": "<b>Child vaccines: {{data.NOME}} - Dob: {{calculates.displayOUTDATE}}<b>",
-              "default": "<b>Vacinas da crianca: {{data.NOME}} - Nas: {{calculates.displayOUTDATE}}<b>"
+              "default": "<b>Vacinas da criança: {{data.NOME}} - Nas: {{calculates.displayOUTDATE}}<b>"
             }
           }
         },
@@ -5735,7 +5735,7 @@
           "prompt": {
             "text": {
               "english": "<b>Child vaccines: {{data.NOME}} - Dob: {{calculates.displayOUTDATE}}<b>",
-              "default": "<b>Vacinas da crianca: {{data.NOME}} - Nas: {{calculates.displayOUTDATE}}<b>"
+              "default": "<b>Vacinas da criança: {{data.NOME}} - Nas: {{calculates.displayOUTDATE}}<b>"
             }
           }
         },
@@ -6547,7 +6547,7 @@
           "prompt": {
             "text": {
               "english": "<b>Child vaccines: {{data.NOME}} - Dob: {{calculates.displayOUTDATE}}<b>",
-              "default": "<b>Vacinas da crianca: {{data.NOME}} - Nas: {{calculates.displayOUTDATE}}<b>"
+              "default": "<b>Vacinas da criança: {{data.NOME}} - Nas: {{calculates.displayOUTDATE}}<b>"
             }
           }
         },
@@ -7350,7 +7350,7 @@
           "prompt": {
             "text": {
               "english": "<b>Child vaccines: {{data.NOME}} - Dob: {{calculates.displayOUTDATE}}<b>",
-              "default": "<b>Vacinas da crianca: {{data.NOME}} - Nas: {{calculates.displayOUTDATE}}<b>"
+              "default": "<b>Vacinas da criança: {{data.NOME}} - Nas: {{calculates.displayOUTDATE}}<b>"
             }
           }
         },
@@ -8270,7 +8270,7 @@
           "prompt": {
             "text": {
               "english": "<b>Child vaccines: {{data.NOME}} - Dob: {{calculates.displayOUTDATE}}<b>",
-              "default": "<b>Vacinas da crianca: {{data.NOME}} - Nas: {{calculates.displayOUTDATE}}<b>"
+              "default": "<b>Vacinas da criança: {{data.NOME}} - Nas: {{calculates.displayOUTDATE}}<b>"
             }
           }
         },
@@ -9073,7 +9073,7 @@
           "prompt": {
             "text": {
               "english": "<b>Child vaccines: {{data.NOME}} - Dob: {{calculates.displayOUTDATE}}<b>",
-              "default": "<b>Vacinas da crianca: {{data.NOME}} - Nas: {{calculates.displayOUTDATE}}<b>"
+              "default": "<b>Vacinas da criança: {{data.NOME}} - Nas: {{calculates.displayOUTDATE}}<b>"
             }
           }
         },
@@ -10047,7 +10047,7 @@
           "prompt": {
             "text": {
               "english": "<b>Child vaccines: {{data.NOME}} - Dob: {{calculates.displayOUTDATE}}<b>",
-              "default": "<b>Vacinas da crianca: {{data.NOME}} - Nas: {{calculates.displayOUTDATE}}<b>"
+              "default": "<b>Vacinas da criança: {{data.NOME}} - Nas: {{calculates.displayOUTDATE}}<b>"
             }
           }
         },
@@ -10850,7 +10850,7 @@
           "prompt": {
             "text": {
               "english": "<b>Child vaccines: {{data.NOME}} - Dob: {{calculates.displayOUTDATE}}<b>",
-              "default": "<b>Vacinas da crianca: {{data.NOME}} - Nas: {{calculates.displayOUTDATE}}<b>"
+              "default": "<b>Vacinas da criança: {{data.NOME}} - Nas: {{calculates.displayOUTDATE}}<b>"
             }
           }
         },
@@ -11308,7 +11308,7 @@
           "prompt": {
             "text": {
               "english": "<b>Child vaccines: {{data.NOME}} - Dob: {{calculates.displayOUTDATE}}<b>",
-              "default": "<b>Vacinas da crianca: {{data.NOME}} - Nas: {{calculates.displayOUTDATE}}<b>"
+              "default": "<b>Vacinas da criança: {{data.NOME}} - Nas: {{calculates.displayOUTDATE}}<b>"
             }
           }
         },
@@ -11712,7 +11712,7 @@
           "prompt": {
             "text": {
               "english": "<b>Child vaccines: {{data.NOME}} - Dob: {{calculates.displayOUTDATE}}<b>",
-              "default": "<b>Vacinas da crianca: {{data.NOME}} - Nas: {{calculates.displayOUTDATE}}<b>"
+              "default": "<b>Vacinas da criança: {{data.NOME}} - Nas: {{calculates.displayOUTDATE}}<b>"
             }
           }
         },
@@ -11751,7 +11751,7 @@
           "prompt": {
             "text": {
               "english": "<b>Child vaccines: {{data.NOME}} - Dob: {{calculates.displayOUTDATE}}<b>",
-              "default": "<b>Vacinas da crianca: {{data.NOME}} - Nas: {{calculates.displayOUTDATE}}<b>"
+              "default": "<b>Vacinas da criança: {{data.NOME}} - Nas: {{calculates.displayOUTDATE}}<b>"
             }
           }
         },
@@ -11823,7 +11823,7 @@
           "prompt": {
             "text": {
               "english": "<b>Child vaccines: {{data.NOME}} - Dob: {{calculates.displayOUTDATE}}<b>",
-              "default": "<b>Vacinas da crianca: {{data.NOME}} - Nas: {{calculates.displayOUTDATE}}<b>"
+              "default": "<b>Vacinas da criança: {{data.NOME}} - Nas: {{calculates.displayOUTDATE}}<b>"
             }
           }
         },
@@ -11910,7 +11910,7 @@
           "prompt": {
             "text": {
               "english": "<b>Child vaccines: {{data.NOME}} - Dob: {{calculates.displayOUTDATE}}<b>",
-              "default": "<b>Vacinas da crianca: {{data.NOME}} - Nas: {{calculates.displayOUTDATE}}<b>"
+              "default": "<b>Vacinas da criança: {{data.NOME}} - Nas: {{calculates.displayOUTDATE}}<b>"
             }
           }
         },
@@ -11949,7 +11949,7 @@
           "prompt": {
             "text": {
               "english": "<b>Child vaccines: {{data.NOME}} - Dob: {{calculates.displayOUTDATE}}<b>",
-              "default": "<b>Vacinas da crianca: {{data.NOME}} - Nas: {{calculates.displayOUTDATE}}<b>"
+              "default": "<b>Vacinas da criança: {{data.NOME}} - Nas: {{calculates.displayOUTDATE}}<b>"
             }
           }
         },
@@ -12021,7 +12021,7 @@
           "prompt": {
             "text": {
               "english": "<b>Child vaccines: {{data.NOME}} - Dob: {{calculates.displayOUTDATE}}<b>",
-              "default": "<b>Vacinas da crianca: {{data.NOME}} - Nas: {{calculates.displayOUTDATE}}<b>"
+              "default": "<b>Vacinas da criança: {{data.NOME}} - Nas: {{calculates.displayOUTDATE}}<b>"
             }
           }
         },
@@ -12108,7 +12108,7 @@
           "prompt": {
             "text": {
               "english": "<b>Child vaccines: {{data.NOME}} - Dob: {{calculates.displayOUTDATE}}<b>",
-              "default": "<b>Vacinas da crianca: {{data.NOME}} - Nas: {{calculates.displayOUTDATE}}<b>"
+              "default": "<b>Vacinas da criança: {{data.NOME}} - Nas: {{calculates.displayOUTDATE}}<b>"
             }
           }
         },
@@ -12147,7 +12147,7 @@
           "prompt": {
             "text": {
               "english": "<b>Child vaccines: {{data.NOME}} - Dob: {{calculates.displayOUTDATE}}<b>",
-              "default": "<b>Vacinas da crianca: {{data.NOME}} - Nas: {{calculates.displayOUTDATE}}<b>"
+              "default": "<b>Vacinas da criança: {{data.NOME}} - Nas: {{calculates.displayOUTDATE}}<b>"
             }
           }
         },
@@ -12219,7 +12219,7 @@
           "prompt": {
             "text": {
               "english": "<b>Child vaccines: {{data.NOME}} - Dob: {{calculates.displayOUTDATE}}<b>",
-              "default": "<b>Vacinas da crianca: {{data.NOME}} - Nas: {{calculates.displayOUTDATE}}<b>"
+              "default": "<b>Vacinas da criança: {{data.NOME}} - Nas: {{calculates.displayOUTDATE}}<b>"
             }
           }
         },
@@ -12306,7 +12306,7 @@
           "prompt": {
             "text": {
               "english": "<b>Child vaccines: {{data.NOME}} - Dob: {{calculates.displayOUTDATE}}<b>",
-              "default": "<b>Vacinas da crianca: {{data.NOME}} - Nas: {{calculates.displayOUTDATE}}<b>"
+              "default": "<b>Vacinas da criança: {{data.NOME}} - Nas: {{calculates.displayOUTDATE}}<b>"
             }
           }
         },
@@ -12345,7 +12345,7 @@
           "prompt": {
             "text": {
               "english": "<b>Child vaccines: {{data.NOME}} - Dob: {{calculates.displayOUTDATE}}<b>",
-              "default": "<b>Vacinas da crianca: {{data.NOME}} - Nas: {{calculates.displayOUTDATE}}<b>"
+              "default": "<b>Vacinas da criança: {{data.NOME}} - Nas: {{calculates.displayOUTDATE}}<b>"
             }
           }
         },
@@ -12417,7 +12417,7 @@
           "prompt": {
             "text": {
               "english": "<b>Child vaccines: {{data.NOME}} - Dob: {{calculates.displayOUTDATE}}<b>",
-              "default": "<b>Vacinas da crianca: {{data.NOME}} - Nas: {{calculates.displayOUTDATE}}<b>"
+              "default": "<b>Vacinas da criança: {{data.NOME}} - Nas: {{calculates.displayOUTDATE}}<b>"
             }
           }
         },
@@ -12504,7 +12504,7 @@
           "prompt": {
             "text": {
               "english": "<b>Child vaccines: {{data.NOME}} - Dob: {{calculates.displayOUTDATE}}<b>",
-              "default": "<b>Vacinas da crianca: {{data.NOME}} - Nas: {{calculates.displayOUTDATE}}<b>"
+              "default": "<b>Vacinas da criança: {{data.NOME}} - Nas: {{calculates.displayOUTDATE}}<b>"
             }
           }
         },
@@ -12543,7 +12543,7 @@
           "prompt": {
             "text": {
               "english": "<b>Child vaccines: {{data.NOME}} - Dob: {{calculates.displayOUTDATE}}<b>",
-              "default": "<b>Vacinas da crianca: {{data.NOME}} - Nas: {{calculates.displayOUTDATE}}<b>"
+              "default": "<b>Vacinas da criança: {{data.NOME}} - Nas: {{calculates.displayOUTDATE}}<b>"
             }
           }
         },
@@ -12615,7 +12615,7 @@
           "prompt": {
             "text": {
               "english": "<b>Child vaccines: {{data.NOME}} - Dob: {{calculates.displayOUTDATE}}<b>",
-              "default": "<b>Vacinas da crianca: {{data.NOME}} - Nas: {{calculates.displayOUTDATE}}<b>"
+              "default": "<b>Vacinas da criança: {{data.NOME}} - Nas: {{calculates.displayOUTDATE}}<b>"
             }
           }
         },
@@ -12697,7 +12697,7 @@
           "prompt": {
             "text": {
               "english": "<b>Child vaccines: {{data.NOME}} - Dob: {{calculates.displayOUTDATE}}<b>",
-              "default": "<b>Vacinas da crianca: {{data.NOME}} - Nas: {{calculates.displayOUTDATE}}<b>"
+              "default": "<b>Vacinas da criança: {{data.NOME}} - Nas: {{calculates.displayOUTDATE}}<b>"
             }
           }
         },
@@ -12732,7 +12732,7 @@
           "prompt": {
             "text": {
               "english": "<b>Child death: {{data.NOME}} - Dob: {{calculates.displayOUTDATE}}<b>",
-              "default": "<b>Falecimento de crianca: {{data.NOME}} - Nas: {{calculates.displayOUTDATE}}<b>"
+              "default": "<b>Falecimento de criança: {{data.NOME}} - Nas: {{calculates.displayOUTDATE}}<b>"
             }
           }
         },
@@ -12793,7 +12793,7 @@
           "prompt": {
             "text": {
               "english": "<b>Child death: {{data.NOME}} - Dob: {{calculates.displayOUTDATE}}<b>",
-              "default": "<b>Falecimento de crianca: {{data.NOME}} - Nas: {{calculates.displayOUTDATE}}<b>"
+              "default": "<b>Falecimento de criança: {{data.NOME}} - Nas: {{calculates.displayOUTDATE}}<b>"
             }
           }
         },
@@ -12868,7 +12868,7 @@
           "prompt": {
             "text": {
               "english": "<b>Child death: {{data.NOME}} - Dob: {{calculates.displayOUTDATE}}<b>",
-              "default": "<b>Falecimento de crianca: {{data.NOME}} - Nas: {{calculates.displayOUTDATE}}<b>"
+              "default": "<b>Falecimento de criança: {{data.NOME}} - Nas: {{calculates.displayOUTDATE}}<b>"
             }
           }
         },
@@ -12895,7 +12895,7 @@
           "prompt": {
             "text": {
               "english": "Number of pentavalent vaccines",
-              "default": "Numero de vacina Pentavalente"
+              "default": "Número de vacina Pentavalente"
             }
           }
         },
@@ -12936,7 +12936,7 @@
           "prompt": {
             "text": {
               "english": "Number of measles vaccines",
-              "default": "Numero de vacina de Sarampo"
+              "default": "Número de vacina de Sarampo"
             }
           }
         },
@@ -12960,7 +12960,7 @@
           "prompt": {
             "text": {
               "english": "<b>Child death: {{data.NOME}} - Dob: {{calculates.displayOUTDATE}}<b>",
-              "default": "<b>Falecimento de crianca: {{data.NOME}} - Nas: {{calculates.displayOUTDATE}}<b>"
+              "default": "<b>Falecimento de criança: {{data.NOME}} - Nas: {{calculates.displayOUTDATE}}<b>"
             }
           }
         },
@@ -13013,7 +13013,7 @@
           "prompt": {
             "text": {
               "english": "<b>Child death: {{data.NOME}} - Dob: {{calculates.displayOUTDATE}}<b>",
-              "default": "<b>Falecimento de crianca: {{data.NOME}} - Nas: {{calculates.displayOUTDATE}}<b>"
+              "default": "<b>Falecimento de criança: {{data.NOME}} - Nas: {{calculates.displayOUTDATE}}<b>"
             }
           }
         },
@@ -13066,7 +13066,7 @@
           "prompt": {
             "text": {
               "english": "<b>Child death: {{data.NOME}} - Dob: {{calculates.displayOUTDATE}}<b>",
-              "default": "<b>Falecimento de crianca: {{data.NOME}} - Nas: {{calculates.displayOUTDATE}}<b>"
+              "default": "<b>Falecimento de criança: {{data.NOME}} - Nas: {{calculates.displayOUTDATE}}<b>"
             }
           }
         },
@@ -13100,7 +13100,7 @@
           "prompt": {
             "text": {
               "english": "<b>Child death: {{data.NOME}} - Dob: {{calculates.displayOUTDATE}}<b>",
-              "default": "<b>Falecimento de crianca: {{data.NOME}} - Nas: {{calculates.displayOUTDATE}}<b>"
+              "default": "<b>Falecimento de criança: {{data.NOME}} - Nas: {{calculates.displayOUTDATE}}<b>"
             }
           }
         },
@@ -13157,7 +13157,7 @@
           "prompt": {
             "text": {
               "english": "<b>Child death: {{data.NOME}} - Dob: {{calculates.displayOUTDATE}}<b>",
-              "default": "<b>Falecimento de crianca: {{data.NOME}} - Nas: {{calculates.displayOUTDATE}}<b>"
+              "default": "<b>Falecimento de criança: {{data.NOME}} - Nas: {{calculates.displayOUTDATE}}<b>"
             }
           }
         },
@@ -13191,7 +13191,7 @@
           "prompt": {
             "text": {
               "english": "<b>Child death: {{data.NOME}} - Dob: {{calculates.displayOUTDATE}}<b>",
-              "default": "<b>Falecimento de crianca: {{data.NOME}} - Nas: {{calculates.displayOUTDATE}}<b>"
+              "default": "<b>Falecimento de criança: {{data.NOME}} - Nas: {{calculates.displayOUTDATE}}<b>"
             }
           }
         },
@@ -13247,7 +13247,7 @@
           "prompt": {
             "text": {
               "english": "<b>Child death: {{data.NOME}} - Dob: {{calculates.displayOUTDATE}}<b>",
-              "default": "<b>Falecimento de crianca: {{data.NOME}} - Nas: {{calculates.displayOUTDATE}}<b>"
+              "default": "<b>Falecimento de criança: {{data.NOME}} - Nas: {{calculates.displayOUTDATE}}<b>"
             }
           }
         },
@@ -13303,7 +13303,7 @@
           "prompt": {
             "text": {
               "english": "<b>Child death: {{data.NOME}} - Dob: {{calculates.displayOUTDATE}}<b>",
-              "default": "<b>Falecimento de crianca: {{data.NOME}} - Nas: {{calculates.displayOUTDATE}}<b>"
+              "default": "<b>Falecimento de criança: {{data.NOME}} - Nas: {{calculates.displayOUTDATE}}<b>"
             }
           }
         },
@@ -13359,7 +13359,7 @@
           "prompt": {
             "text": {
               "english": "<b>Child death: {{data.NOME}} - Dob: {{calculates.displayOUTDATE}}<b>",
-              "default": "<b>Falecimento de crianca: {{data.NOME}} - Nas: {{calculates.displayOUTDATE}}<b>"
+              "default": "<b>Falecimento de criança: {{data.NOME}} - Nas: {{calculates.displayOUTDATE}}<b>"
             }
           }
         },
@@ -13428,7 +13428,7 @@
           "prompt": {
             "text": {
               "english": "<b>Child death: {{data.NOME}} - Dob: {{calculates.displayOUTDATE}}<b>",
-              "default": "<b>Falecimento de crianca: {{data.NOME}} - Nas: {{calculates.displayOUTDATE}}<b>"
+              "default": "<b>Falecimento de criança: {{data.NOME}} - Nas: {{calculates.displayOUTDATE}}<b>"
             }
           }
         },
@@ -13484,7 +13484,7 @@
           "prompt": {
             "text": {
               "english": "<b>Child death: {{data.NOME}} - Dob: {{calculates.displayOUTDATE}}<b>",
-              "default": "<b>Falecimento de crianca: {{data.NOME}} - Nas: {{calculates.displayOUTDATE}}<b>"
+              "default": "<b>Falecimento de criança: {{data.NOME}} - Nas: {{calculates.displayOUTDATE}}<b>"
             }
           }
         },
@@ -13540,7 +13540,7 @@
           "prompt": {
             "text": {
               "english": "<b>Child death: {{data.NOME}} - Dob: {{calculates.displayOUTDATE}}<b>",
-              "default": "<b>Falecimento de crianca: {{data.NOME}} - Nas: {{calculates.displayOUTDATE}}<b>"
+              "default": "<b>Falecimento de criança: {{data.NOME}} - Nas: {{calculates.displayOUTDATE}}<b>"
             }
           }
         },
@@ -13596,7 +13596,7 @@
           "prompt": {
             "text": {
               "english": "<b>Child death: {{data.NOME}} - Dob: {{calculates.displayOUTDATE}}<b>",
-              "default": "<b>Falecimento de crianca: {{data.NOME}} - Nas: {{calculates.displayOUTDATE}}<b>"
+              "default": "<b>Falecimento de criança: {{data.NOME}} - Nas: {{calculates.displayOUTDATE}}<b>"
             }
           }
         },
@@ -13652,7 +13652,7 @@
           "prompt": {
             "text": {
               "english": "<b>Child death: {{data.NOME}} - Dob: {{calculates.displayOUTDATE}}<b>",
-              "default": "<b>Falecimento de crianca: {{data.NOME}} - Nas: {{calculates.displayOUTDATE}}<b>"
+              "default": "<b>Falecimento de criança: {{data.NOME}} - Nas: {{calculates.displayOUTDATE}}<b>"
             }
           }
         },
@@ -13666,7 +13666,7 @@
           "prompt": {
             "text": {
               "english": "Was a diagnosis given by health personel?",
-              "default": "Diagnostico dado pelo pessoal de saúde"
+              "default": "Diagnóstico dado pelo pessoal de saúde"
             }
           }
         },
@@ -13713,7 +13713,7 @@
           "prompt": {
             "text": {
               "english": "<b>Child death: {{data.NOME}} - Dob: {{calculates.displayOUTDATE}}<b>",
-              "default": "<b>Falecimento de crianca: {{data.NOME}} - Nas: {{calculates.displayOUTDATE}}<b>"
+              "default": "<b>Falecimento de criança: {{data.NOME}} - Nas: {{calculates.displayOUTDATE}}<b>"
             }
           }
         },
@@ -13773,7 +13773,7 @@
           "prompt": {
             "text": {
               "english": "<b>Child death: {{data.NOME}} - Dob: {{calculates.displayOUTDATE}}<b>",
-              "default": "<b>Falecimento de crianca: {{data.NOME}} - Nas: {{calculates.displayOUTDATE}}<b>"
+              "default": "<b>Falecimento de criança: {{data.NOME}} - Nas: {{calculates.displayOUTDATE}}<b>"
             }
           }
         },
@@ -13819,7 +13819,7 @@
           "prompt": {
             "text": {
               "english": "<b>Child death: {{data.NOME}} - Dob: {{calculates.displayOUTDATE}}<b>",
-              "default": "<b>Falecimento de crianca: {{data.NOME}} - Nas: {{calculates.displayOUTDATE}}<b>"
+              "default": "<b>Falecimento de criança: {{data.NOME}} - Nas: {{calculates.displayOUTDATE}}<b>"
             }
           }
         },
@@ -13858,7 +13858,7 @@
           "prompt": {
             "text": {
               "english": "<b>Child death: {{data.NOME}} - Dob: {{calculates.displayOUTDATE}}<b>",
-              "default": "<b>Falecimento de crianca: {{data.NOME}} - Nas: {{calculates.displayOUTDATE}}<b>"
+              "default": "<b>Falecimento de criança: {{data.NOME}} - Nas: {{calculates.displayOUTDATE}}<b>"
             }
           }
         },
@@ -13901,7 +13901,7 @@
           "prompt": {
             "text": {
               "english": "<b>Child death: {{data.NOME}} - Dob: {{calculates.displayOUTDATE}}<b>",
-              "default": "<b>Falecimento de crianca: {{data.NOME}} - Nas: {{calculates.displayOUTDATE}}<b>"
+              "default": "<b>Falecimento de criança: {{data.NOME}} - Nas: {{calculates.displayOUTDATE}}<b>"
             }
           }
         },
@@ -13957,7 +13957,7 @@
           "prompt": {
             "text": {
               "english": "<b>Child death: {{data.NOME}} - Dob: {{calculates.displayOUTDATE}}<b>",
-              "default": "<b>Falecimento de crianca: {{data.NOME}} - Nas: {{calculates.displayOUTDATE}}<b>"
+              "default": "<b>Falecimento de criança: {{data.NOME}} - Nas: {{calculates.displayOUTDATE}}<b>"
             }
           }
         },
@@ -14004,7 +14004,7 @@
           "prompt": {
             "text": {
               "english": "<b>Child death: {{data.NOME}} - Dob: {{calculates.displayOUTDATE}}<b>",
-              "default": "<b>Falecimento de crianca: {{data.NOME}} - Nas: {{calculates.displayOUTDATE}}<b>"
+              "default": "<b>Falecimento de criança: {{data.NOME}} - Nas: {{calculates.displayOUTDATE}}<b>"
             }
           }
         },
@@ -14056,7 +14056,7 @@
           "prompt": {
             "text": {
               "english": "<b>Child death: {{data.NOME}} - Dob: {{calculates.displayOUTDATE}}<b>",
-              "default": "<b>Falecimento de crianca: {{data.NOME}} - Nas: {{calculates.displayOUTDATE}}<b>"
+              "default": "<b>Falecimento de criança: {{data.NOME}} - Nas: {{calculates.displayOUTDATE}}<b>"
             }
           }
         },
@@ -14112,7 +14112,7 @@
           "prompt": {
             "text": {
               "english": "<b>Child death: {{data.NOME}} - Dob: {{calculates.displayOUTDATE}}<b>",
-              "default": "<b>Falecimento de crianca: {{data.NOME}} - Nas: {{calculates.displayOUTDATE}}<b>"
+              "default": "<b>Falecimento de criança: {{data.NOME}} - Nas: {{calculates.displayOUTDATE}}<b>"
             }
           }
         },
@@ -14181,7 +14181,7 @@
           "prompt": {
             "text": {
               "english": "<b>Child death: {{data.NOME}} - Dob: {{calculates.displayOUTDATE}}<b>",
-              "default": "<b>Falecimento de crianca: {{data.NOME}} - Nas: {{calculates.displayOUTDATE}}<b>"
+              "default": "<b>Falecimento de criança: {{data.NOME}} - Nas: {{calculates.displayOUTDATE}}<b>"
             }
           }
         },
@@ -14745,7 +14745,7 @@
           "title": {
             "text": {
               "english": "Other family member",
-              "default": "Outra mebro da familia"
+              "default": "Outro mebro da família"
             }
           }
         },
@@ -14797,7 +14797,7 @@
           "title": {
             "text": {
               "english": "Missing",
-              "default": "Falta informacao"
+              "default": "Falta informacão"
             }
           }
         },
@@ -14823,7 +14823,7 @@
           "title": {
             "text": {
               "english": "Has no card and no ANC",
-              "default": "Não tem cartão e não tem consultas"
+              "default": "Não tem cartão e não procurou consultas pré-natais"
             }
           }
         },
@@ -14836,7 +14836,7 @@
           "title": {
             "text": {
               "english": "Has no card, some ANC",
-              "default": "Não tem cartão, mas tem consultas"
+              "default": "Não tem cartão, mas procurou algumas consultas pré-natais"
             }
           }
         },
@@ -14879,6 +14879,7 @@
             }
           }
         },
+        "__EMPTY": "###translations do not match",
         "_row_num": 22
       },
       {
@@ -15174,7 +15175,7 @@
           "title": {
             "text": {
               "english": "Yes, but it's still evolving",
-              "default": "Sim, mas ainda está evoluir"
+              "default": "Sim, mas ainda está evoluindo"
             }
           }
         },
@@ -15486,7 +15487,7 @@
           "title": {
             "text": {
               "english": "Doctor",
-              "default": "Medico"
+              "default": "Médico"
             }
           }
         },
@@ -15594,6 +15595,7 @@
             }
           }
         },
+        "__EMPTY": "is Matrona commonly used? \"parteiras tradicionais\" better?",
         "_row_num": 77
       },
       {
@@ -15607,6 +15609,7 @@
             }
           }
         },
+        "__EMPTY": "is Matrona commonly used? \"parteiras tradicionais\" better?",
         "_row_num": 78
       },
       {
@@ -15616,7 +15619,7 @@
           "title": {
             "text": {
               "english": "Family member",
-              "default": "Familia"
+              "default": "Família"
             }
           }
         },
@@ -15681,7 +15684,7 @@
           "title": {
             "text": {
               "english": "Health Center",
-              "default": "Centro de Saude"
+              "default": "Centro de Saúde"
             }
           }
         },
@@ -15694,7 +15697,7 @@
           "title": {
             "text": {
               "english": "Health Unit",
-              "default": "Unidade de Saude Base"
+              "default": "Unidade de Saúde Base"
             }
           }
         },
@@ -15880,6 +15883,7 @@
             }
           }
         },
+        "__EMPTY": "\"concreto\"?",
         "_row_num": 99
       },
       {
@@ -17888,7 +17892,7 @@
           "title": {
             "text": {
               "english": "Children",
-              "default": "Criancas"
+              "default": "Crianças"
             }
           }
         },
@@ -17900,7 +17904,7 @@
           "locale": {
             "text": {
               "english": "Portuguese",
-              "default": "Portugues"
+              "default": "Português"
             }
           }
         },
@@ -17937,7 +17941,7 @@
               "locale": {
                 "text": {
                   "english": "Portuguese",
-                  "default": "Portugues"
+                  "default": "Português"
                 }
               }
             },
@@ -17969,7 +17973,7 @@
           "title": {
             "text": {
               "english": "Children",
-              "default": "Criancas"
+              "default": "Crianças"
             }
           }
         },
@@ -17980,7 +17984,7 @@
           "title": {
             "text": {
               "english": "Children",
-              "default": "Criancas"
+              "default": "Crianças"
             }
           }
         }
@@ -17990,7 +17994,7 @@
           "title": {
             "text": {
               "english": "Children",
-              "default": "Criancas"
+              "default": "Crianças"
             }
           }
         }
@@ -18000,7 +18004,7 @@
           "title": {
             "text": {
               "english": "Children",
-              "default": "Criancas"
+              "default": "Crianças"
             }
           }
         }
@@ -18010,7 +18014,7 @@
           "title": {
             "text": {
               "english": "Children",
-              "default": "Criancas"
+              "default": "Crianças"
             }
           }
         }
@@ -18020,7 +18024,7 @@
           "title": {
             "text": {
               "english": "Children",
-              "default": "Criancas"
+              "default": "Crianças"
             }
           }
         }
@@ -18030,7 +18034,7 @@
           "title": {
             "text": {
               "english": "Children",
-              "default": "Criancas"
+              "default": "Crianças"
             }
           }
         }
@@ -18040,7 +18044,7 @@
           "title": {
             "text": {
               "english": "Children",
-              "default": "Criancas"
+              "default": "Crianças"
             }
           }
         }
@@ -18050,7 +18054,7 @@
           "title": {
             "text": {
               "english": "Children",
-              "default": "Criancas"
+              "default": "Crianças"
             }
           }
         }
@@ -18060,7 +18064,7 @@
           "title": {
             "text": {
               "english": "Children",
-              "default": "Criancas"
+              "default": "Crianças"
             }
           }
         }
@@ -18211,7 +18215,7 @@
             "title": {
               "text": {
                 "english": "Other family member",
-                "default": "Outra mebro da familia"
+                "default": "Outro mebro da família"
               }
             }
           },
@@ -18263,7 +18267,7 @@
             "title": {
               "text": {
                 "english": "Missing",
-                "default": "Falta informacao"
+                "default": "Falta informacão"
               }
             }
           },
@@ -18291,7 +18295,7 @@
             "title": {
               "text": {
                 "english": "Has no card and no ANC",
-                "default": "Não tem cartão e não tem consultas"
+                "default": "Não tem cartão e não procurou consultas pré-natais"
               }
             }
           },
@@ -18304,7 +18308,7 @@
             "title": {
               "text": {
                 "english": "Has no card, some ANC",
-                "default": "Não tem cartão, mas tem consultas"
+                "default": "Não tem cartão, mas procurou algumas consultas pré-natais"
               }
             }
           },
@@ -18347,6 +18351,7 @@
               }
             }
           },
+          "__EMPTY": "###translations do not match",
           "_row_num": 22
         },
         {
@@ -18654,7 +18659,7 @@
             "title": {
               "text": {
                 "english": "Yes, but it's still evolving",
-                "default": "Sim, mas ainda está evoluir"
+                "default": "Sim, mas ainda está evoluindo"
               }
             }
           },
@@ -18986,7 +18991,7 @@
             "title": {
               "text": {
                 "english": "Doctor",
-                "default": "Medico"
+                "default": "Médico"
               }
             }
           },
@@ -19096,6 +19101,7 @@
               }
             }
           },
+          "__EMPTY": "is Matrona commonly used? \"parteiras tradicionais\" better?",
           "_row_num": 77
         },
         {
@@ -19109,6 +19115,7 @@
               }
             }
           },
+          "__EMPTY": "is Matrona commonly used? \"parteiras tradicionais\" better?",
           "_row_num": 78
         },
         {
@@ -19118,7 +19125,7 @@
             "title": {
               "text": {
                 "english": "Family member",
-                "default": "Familia"
+                "default": "Família"
               }
             }
           },
@@ -19185,7 +19192,7 @@
             "title": {
               "text": {
                 "english": "Health Center",
-                "default": "Centro de Saude"
+                "default": "Centro de Saúde"
               }
             }
           },
@@ -19198,7 +19205,7 @@
             "title": {
               "text": {
                 "english": "Health Unit",
-                "default": "Unidade de Saude Base"
+                "default": "Unidade de Saúde Base"
               }
             }
           },
@@ -19396,6 +19403,7 @@
               }
             }
           },
+          "__EMPTY": "\"concreto\"?",
           "_row_num": 99
         },
         {
@@ -21360,7 +21368,7 @@
         "valuesList": "YesNoU",
         "_defn": [
           {
-            "_row_num": 64,
+            "_row_num": 77,
             "section_name": "visit"
           },
           {
@@ -21380,7 +21388,7 @@
         "__rowNum__": 1,
         "_defn": [
           {
-            "_row_num": 66,
+            "_row_num": 79,
             "section_name": "visit"
           },
           {
@@ -21400,7 +21408,7 @@
         "valuesList": "dontknowdate",
         "_defn": [
           {
-            "_row_num": 67,
+            "_row_num": 80,
             "section_name": "visit"
           },
           {
@@ -21420,7 +21428,7 @@
         "__rowNum__": 1,
         "_defn": [
           {
-            "_row_num": 80,
+            "_row_num": 66,
             "section_name": "visit"
           },
           {
@@ -21440,7 +21448,7 @@
         "valuesList": "dontknowdate",
         "_defn": [
           {
-            "_row_num": 81,
+            "_row_num": 67,
             "section_name": "visit"
           },
           {
@@ -21636,7 +21644,7 @@
         "type": "integer",
         "_defn": [
           {
-            "_row_num": 69,
+            "_row_num": 82,
             "section_name": "visit"
           },
           {
@@ -21651,7 +21659,7 @@
         "type": "integer",
         "_defn": [
           {
-            "_row_num": 83,
+            "_row_num": 69,
             "section_name": "visit"
           },
           {
@@ -21756,7 +21764,7 @@
         "valuesList": "YesNoU",
         "_defn": [
           {
-            "_row_num": 78,
+            "_row_num": 64,
             "section_name": "visit"
           },
           {
@@ -25259,7 +25267,7 @@
               "title": {
                 "text": {
                   "english": "Children",
-                  "default": "Criancas"
+                  "default": "Crianças"
                 }
               }
             },
@@ -25277,7 +25285,7 @@
               "title": {
                 "text": {
                   "english": "Children",
-                  "default": "Criancas"
+                  "default": "Crianças"
                 }
               }
             },
@@ -25295,7 +25303,7 @@
               "title": {
                 "text": {
                   "english": "Children",
-                  "default": "Criancas"
+                  "default": "Crianças"
                 }
               }
             },
@@ -25717,7 +25725,7 @@
               "prompt": {
                 "text": {
                   "english": "Fogao",
-                  "default": "Fogao"
+                  "default": "Fogão"
                 }
               }
             },
@@ -25735,7 +25743,7 @@
               "prompt": {
                 "text": {
                   "english": "Comments to changes",
-                  "default": "Comentários a alterações"
+                  "default": "Comentários às alterações"
                 }
               }
             },
@@ -25911,7 +25919,7 @@
               "title": {
                 "text": {
                   "english": "Children",
-                  "default": "Criancas"
+                  "default": "Crianças"
                 }
               }
             },
@@ -26059,7 +26067,7 @@
               "prompt": {
                 "text": {
                   "english": "<b>Registration of child<b>",
-                  "default": "<b>Registro de crianca<b>"
+                  "default": "<b>Registro de criança<b>"
                 }
               }
             },
@@ -26095,7 +26103,7 @@
               "prompt": {
                 "text": {
                   "english": "<b>Registration of child<b>",
-                  "default": "<b>Registro de crianca<b>"
+                  "default": "<b>Registro de criança<b>"
                 }
               }
             },
@@ -26174,7 +26182,7 @@
               "prompt": {
                 "text": {
                   "english": "<b>Registration of child: {{data.NOME}} - Dob: {{calculates.displayOUTDATE}}<b>",
-                  "default": "<b>Registro de crianca: {{data.NOME}} - Nas: {{calculates.displayOUTDATE}}<b>"
+                  "default": "<b>Registro de criança: {{data.NOME}} - Nas: {{calculates.displayOUTDATE}}<b>"
                 }
               }
             },
@@ -26248,7 +26256,7 @@
               "prompt": {
                 "text": {
                   "english": "<b>Registration of child: {{data.NOME}} - Dob: {{calculates.displayOUTDATE}}<b>",
-                  "default": "<b>Registro de crianca: {{data.NOME}} - Nas: {{calculates.displayOUTDATE}}<b>"
+                  "default": "<b>Registro de criança: {{data.NOME}} - Nas: {{calculates.displayOUTDATE}}<b>"
                 }
               }
             },
@@ -26284,7 +26292,7 @@
               "prompt": {
                 "text": {
                   "english": "<b>Registration of child: {{data.NOME}} - Dob: {{calculates.displayOUTDATE}}<b>",
-                  "default": "<b>Registro de crianca: {{data.NOME}} - Nas: {{calculates.displayOUTDATE}}<b>"
+                  "default": "<b>Registro de criança: {{data.NOME}} - Nas: {{calculates.displayOUTDATE}}<b>"
                 }
               }
             },
@@ -26355,7 +26363,7 @@
               "prompt": {
                 "text": {
                   "english": "<b>Registration of child: {{data.NOME}} - Dob: {{calculates.displayOUTDATE}}<b>",
-                  "default": "<b>Registro de crianca: {{data.NOME}} - Nas: {{calculates.displayOUTDATE}}<b>"
+                  "default": "<b>Registro de criança: {{data.NOME}} - Nas: {{calculates.displayOUTDATE}}<b>"
                 }
               }
             },
@@ -26408,7 +26416,7 @@
               "prompt": {
                 "text": {
                   "english": "<b>Registration of child: {{data.NOME}} - Dob: {{calculates.displayOUTDATE}}<b>",
-                  "default": "<b>Registro de crianca: {{data.NOME}} - Nas: {{calculates.displayOUTDATE}}<b>"
+                  "default": "<b>Registro de criança: {{data.NOME}} - Nas: {{calculates.displayOUTDATE}}<b>"
                 }
               }
             },
@@ -26462,7 +26470,7 @@
               "prompt": {
                 "text": {
                   "english": "<b>Registration of child: {{data.NOME}} - Dob: {{calculates.displayOUTDATE}}<b>",
-                  "default": "<b>Registro de crianca: {{data.NOME}} - Nas: {{calculates.displayOUTDATE}}<b>"
+                  "default": "<b>Registro de criança: {{data.NOME}} - Nas: {{calculates.displayOUTDATE}}<b>"
                 }
               }
             },
@@ -26503,7 +26511,7 @@
               "title": {
                 "text": {
                   "english": "Children",
-                  "default": "Criancas"
+                  "default": "Crianças"
                 }
               }
             },
@@ -26521,7 +26529,7 @@
               "title": {
                 "text": {
                   "english": "Children",
-                  "default": "Criancas"
+                  "default": "Crianças"
                 }
               }
             },
@@ -26539,7 +26547,7 @@
               "title": {
                 "text": {
                   "english": "Children",
-                  "default": "Criancas"
+                  "default": "Crianças"
                 }
               }
             },
@@ -27016,7 +27024,7 @@
             "display": {
               "prompt": {
                 "text": {
-                  "english": "Have vaccination  card?",
+                  "english": "Does the mother have a vaccination card?",
                   "default": "Tem cartão de vacinas da mulher?"
                 }
               }
@@ -27052,8 +27060,8 @@
             "display": {
               "prompt": {
                 "text": {
-                  "english": "Did the woman get any Tetanus vaccine during pregnancy?",
-                  "default": "A mulher recebeu alguma vacina anti-tetánica durante a gravidez?"
+                  "english": "Did the woman get any Tetanus vaccine during this pregnancy?",
+                  "default": "A mulher recebeu alguma vacina antitetânica durante esta gravidez?"
                 }
               }
             },
@@ -27293,7 +27301,7 @@
               "prompt": {
                 "text": {
                   "english": "Did the woman seek prenatal consultations during pregnancy?",
-                  "default": "A mulher procurou consultas pré-natal durante a gravidez?"
+                  "default": "A mulher procurou consultas pré-natais durante esta gravidez?"
                 }
               }
             },
@@ -27408,7 +27416,7 @@
               "prompt": {
                 "text": {
                   "english": "How many times did the pregnant woman receive iron tablets?",
-                  "default": "A grávida recebeu comprimidos com ferro quantas vezes?"
+                  "default": "A grávida recebeu comprimidos de ferro quantas vezes?"
                 }
               }
             },
@@ -27642,7 +27650,7 @@
               "prompt": {
                 "text": {
                   "english": "Place of hospital / health center",
-                  "default": "Local do hospital / centro de saude"
+                  "default": "Local do hospital / centro de saúde"
                 }
               }
             },
@@ -27781,7 +27789,7 @@
               "prompt": {
                 "text": {
                   "english": "Why not attending closest hospital",
-                  "default": "Porque internou aqui?"
+                  "default": "Porquê é que não foi ao hospital mais perto?"
                 }
               }
             },
@@ -27817,7 +27825,7 @@
               "prompt": {
                 "text": {
                   "english": "Who assisted the birth?",
-                  "default": "Quem ajudou o parto?"
+                  "default": "Quem ajudou ao parto?"
                 }
               }
             },
@@ -27852,7 +27860,7 @@
               "prompt": {
                 "text": {
                   "english": "Comment to the birth",
-                  "default": "Comentários ao de parto"
+                  "default": "Comentários ao parto"
                 }
               }
             },
@@ -27875,7 +27883,7 @@
               "title": {
                 "text": {
                   "english": "Children",
-                  "default": "Criancas"
+                  "default": "Crianças"
                 }
               }
             },
@@ -27893,7 +27901,7 @@
               "title": {
                 "text": {
                   "english": "Children",
-                  "default": "Criancas"
+                  "default": "Crianças"
                 }
               }
             },
@@ -28334,7 +28342,7 @@
               "prompt": {
                 "text": {
                   "english": "<b>Socioeconomic status<b>",
-                  "default": "<b>Status socioeconomico<b>"
+                  "default": "<b>Estatuto socioeconómico<b>"
                 }
               }
             },
@@ -28389,7 +28397,7 @@
               "prompt": {
                 "text": {
                   "english": "<b>Socioeconomic status<b>",
-                  "default": "<b>Status socioeconomico<b>"
+                  "default": "<b>Estatuto socioeconómico<b>"
                 }
               }
             },
@@ -28444,7 +28452,7 @@
               "prompt": {
                 "text": {
                   "english": "<b>Socioeconomic status<b>",
-                  "default": "<b>Status socioeconomico<b>"
+                  "default": "<b>Estatuto socioeconómico<b>"
                 }
               }
             },
@@ -28463,7 +28471,7 @@
               "prompt": {
                 "text": {
                   "english": "Does the mother or father own a telephone",
-                  "default": "A mãe ou o pai tem telemovel?"
+                  "default": "A mãe ou o pai tem um telemóvel?"
                 }
               }
             },
@@ -28481,7 +28489,7 @@
               "prompt": {
                 "text": {
                   "english": "Phone number of mother or other",
-                  "default": "Número de telemovel da mãe ou outro"
+                  "default": "Número de telemóvel da mãe ou outra pessoa"
                 }
               }
             },
@@ -28501,7 +28509,7 @@
               "prompt": {
                 "text": {
                   "english": "<b>Socioeconomic status<b>",
-                  "default": "<b>Status socioeconomico<b>"
+                  "default": "<b>Estatuto socioeconómico<b>"
                 }
               }
             },
@@ -28542,7 +28550,7 @@
               "title": {
                 "text": {
                   "english": "Children",
-                  "default": "Criancas"
+                  "default": "Crianças"
                 }
               }
             },
@@ -29226,7 +29234,7 @@
               "prompt": {
                 "text": {
                   "english": "<b>Child visit: {{data.NOME}} -  Dob: {{calculates.displayOUTDATE}}<b>",
-                  "default": "<b>Visita da crianca: {{data.NOME}} - Nas: {{calculates.displayOUTDATE}}<b>"
+                  "default": "<b>Visita da criança: {{data.NOME}} - Nas: {{calculates.displayOUTDATE}}<b>"
                 }
               }
             },
@@ -29260,7 +29268,7 @@
               "prompt": {
                 "text": {
                   "english": "Last visit: <b>{{calculates.displayLASTVISITDATE}}<b>",
-                  "default": "Ultima visita: <b>{{calculates.displayLASTVISITDATE}}<b>"
+                  "default": "Última visita: <b>{{calculates.displayLASTVISITDATE}}<b>"
                 }
               }
             },
@@ -29381,7 +29389,7 @@
               "prompt": {
                 "text": {
                   "english": "Status of the child",
-                  "default": "Estado da crianca"
+                  "default": "Estado da criança"
                 }
               }
             },
@@ -29405,7 +29413,7 @@
               "constraint_message": {
                 "text": {
                   "english": "The exit date cannot be before before last visit and cannot be in the future",
-                  "default": "A data de saída não pode ser anterior à última visita e não pode ser no futuro"
+                  "default": "A data de saída não pode ser antes da última visita e não pode ser no futuro"
                 }
               }
             },
@@ -29441,7 +29449,7 @@
               "prompt": {
                 "text": {
                   "english": "<b>Child visit: {{data.NOME}} - Dob: {{calculates.displayOUTDATE}}<b>",
-                  "default": "<b>Visita da crianca: {{data.NOME}} - Nas: {{calculates.displayOUTDATE}}<b>"
+                  "default": "<b>Visita da criança: {{data.NOME}} - Nas: {{calculates.displayOUTDATE}}<b>"
                 }
               }
             },
@@ -29459,8 +29467,8 @@
             "display": {
               "prompt": {
                 "text": {
-                  "english": "Status of the mother",
-                  "default": "Estado da mãe"
+                  "english": "Status of the mother or responsible",
+                  "default": "Estado da mãe ou tutor"
                 }
               }
             },
@@ -29477,7 +29485,7 @@
               "prompt": {
                 "text": {
                   "english": "<b>Child visit: {{data.NOME}} - Dob: {{calculates.displayOUTDATE}}<b>",
-                  "default": "<b>Visita da crianca: {{data.NOME}} - Nas: {{calculates.displayOUTDATE}}<b>"
+                  "default": "<b>Visita da criança: {{data.NOME}} - Nas: {{calculates.displayOUTDATE}}<b>"
                 }
               }
             },
@@ -29496,7 +29504,7 @@
               "prompt": {
                 "text": {
                   "english": "Does the child have a vaccination cart",
-                  "default": "Tem cartão de vacina?"
+                  "default": "Tem cartão de vacina da criança?"
                 }
               }
             },
@@ -29513,7 +29521,7 @@
               "prompt": {
                 "text": {
                   "english": "<b>Child visit: {{data.NOME}} - Dob: {{calculates.displayOUTDATE}}<b>",
-                  "default": "<b>Visita da crianca: {{data.NOME}} - Nas: {{calculates.displayOUTDATE}}<b>"
+                  "default": "<b>Visita da criança: {{data.NOME}} - Nas: {{calculates.displayOUTDATE}}<b>"
                 }
               }
             },
@@ -29584,7 +29592,7 @@
               "title": {
                 "text": {
                   "english": "Children",
-                  "default": "Criancas"
+                  "default": "Crianças"
                 }
               }
             },
@@ -29596,7 +29604,7 @@
               "prompt": {
                 "text": {
                   "english": "<b>Child visit: {{data.NOME}} - Dob: {{calculates.displayOUTDATE}}<b>",
-                  "default": "<b>Visita da crianca: {{data.NOME}} - Nas: {{calculates.displayOUTDATE}}<b>"
+                  "default": "<b>Visita da criança: {{data.NOME}} - Nas: {{calculates.displayOUTDATE}}<b>"
                 }
               }
             },
@@ -29610,96 +29618,6 @@
           {
             "type": "select_one",
             "values_list": "YesNoU",
-            "name": "COMSUP",
-            "display": {
-              "prompt": {
-                "text": {
-                  "english": "Does the child recieve supplementary foods?",
-                  "default": "A criança recebeu alimentos complementares?"
-                }
-              }
-            },
-            "_row_num": 64,
-            "__rowNum__": 63,
-            "_token_type": "prompt",
-            "_type": "select_one",
-            "_branch_label_enclosing_screen": "visit/_screen62",
-            "promptIdx": 22
-          },
-          {
-            "type": "adate",
-            "name": "DACOMSUP",
-            "display": {
-              "prompt": {
-                "text": {
-                  "english": "Date of starting supplementary feeding",
-                  "default": "Data de início da alimentação suplementar"
-                }
-              },
-              "constraint_message": {
-                "text": {
-                  "english": "The date of starting supplementary feeding cannot be in the future",
-                  "default": "A data de início da alimentação suplementar não pode ser no futuro"
-                }
-              }
-            },
-            "constraint": "adate.diffInDays(data('CONT'), data('DACOMSUP'))<1 || adate.hasUncertainty(data('DACOMSUP'))",
-            "_row_num": 66,
-            "__rowNum__": 65,
-            "_token_type": "prompt",
-            "_type": "adate",
-            "_branch_label_enclosing_screen": "visit/_screen62",
-            "promptIdx": 23
-          },
-          {
-            "type": "select_multiple",
-            "values_list": "dontknowdate",
-            "name": "dacomsupns",
-            "_row_num": 67,
-            "__rowNum__": 66,
-            "_token_type": "prompt",
-            "_type": "select_multiple",
-            "_branch_label_enclosing_screen": "visit/_screen62",
-            "promptIdx": 24
-          },
-          {
-            "type": "integer",
-            "name": "IDCOMSUP",
-            "display": {
-              "prompt": {
-                "text": {
-                  "english": "Age of starting supplementary feeding in months",
-                  "default": "Idade de início da alimentação suplementar em meses"
-                }
-              }
-            },
-            "_row_num": 69,
-            "__rowNum__": 68,
-            "_token_type": "prompt",
-            "_type": "integer",
-            "_branch_label_enclosing_screen": "visit/_screen62",
-            "promptIdx": 25
-          },
-          {
-            "type": "note",
-            "display": {
-              "prompt": {
-                "text": {
-                  "english": "<b>Child visit: {{data.NOME}} - Dob: {{calculates.displayOUTDATE}}<b>",
-                  "default": "<b>Visita da crianca: {{data.NOME}} - Nas: {{calculates.displayOUTDATE}}<b>"
-                }
-              }
-            },
-            "_row_num": 77,
-            "__rowNum__": 76,
-            "_token_type": "prompt",
-            "_type": "note",
-            "_branch_label_enclosing_screen": "visit/_screen76",
-            "promptIdx": 26
-          },
-          {
-            "type": "select_one",
-            "values_list": "YesNoU",
             "name": "PAMA",
             "display": {
               "prompt": {
@@ -29709,12 +29627,12 @@
                 }
               }
             },
-            "_row_num": 78,
-            "__rowNum__": 77,
+            "_row_num": 64,
+            "__rowNum__": 63,
             "_token_type": "prompt",
             "_type": "select_one",
-            "_branch_label_enclosing_screen": "visit/_screen76",
-            "promptIdx": 27
+            "_branch_label_enclosing_screen": "visit/_screen62",
+            "promptIdx": 22
           },
           {
             "type": "adate",
@@ -29734,23 +29652,23 @@
               }
             },
             "constraint": "adate.diffInDays(data('CONT'), data('DAPAMA'))<1 || adate.hasUncertainty(data('DAPAMA'))",
-            "_row_num": 80,
-            "__rowNum__": 79,
+            "_row_num": 66,
+            "__rowNum__": 65,
             "_token_type": "prompt",
             "_type": "adate",
-            "_branch_label_enclosing_screen": "visit/_screen76",
-            "promptIdx": 28
+            "_branch_label_enclosing_screen": "visit/_screen62",
+            "promptIdx": 23
           },
           {
             "type": "select_multiple",
             "values_list": "dontknowdate",
             "name": "dapamans",
-            "_row_num": 81,
-            "__rowNum__": 80,
+            "_row_num": 67,
+            "__rowNum__": 66,
             "_token_type": "prompt",
             "_type": "select_multiple",
-            "_branch_label_enclosing_screen": "visit/_screen76",
-            "promptIdx": 29
+            "_branch_label_enclosing_screen": "visit/_screen62",
+            "promptIdx": 24
           },
           {
             "type": "integer",
@@ -29759,15 +29677,105 @@
               "prompt": {
                 "text": {
                   "english": "Age of stopping breastfeeding in months",
-                  "default": "Idade de interrupção da amamentação em meses"
+                  "default": "Idade da criança à interrupção da amamentação em meses"
                 }
               }
             },
-            "_row_num": 83,
-            "__rowNum__": 82,
+            "_row_num": 69,
+            "__rowNum__": 68,
             "_token_type": "prompt",
             "_type": "integer",
-            "_branch_label_enclosing_screen": "visit/_screen76",
+            "_branch_label_enclosing_screen": "visit/_screen62",
+            "promptIdx": 25
+          },
+          {
+            "type": "note",
+            "display": {
+              "prompt": {
+                "text": {
+                  "english": "<b>Child visit: {{data.NOME}} - Dob: {{calculates.displayOUTDATE}}<b>",
+                  "default": "<b>Visita da criança: {{data.NOME}} - Nas: {{calculates.displayOUTDATE}}<b>"
+                }
+              }
+            },
+            "_row_num": 76,
+            "__rowNum__": 75,
+            "_token_type": "prompt",
+            "_type": "note",
+            "_branch_label_enclosing_screen": "visit/_screen75",
+            "promptIdx": 26
+          },
+          {
+            "type": "select_one",
+            "values_list": "YesNoU",
+            "name": "COMSUP",
+            "display": {
+              "prompt": {
+                "text": {
+                  "english": "Does the child recieve supplementary foods?",
+                  "default": "A criança recebeu alimentos suplementares?"
+                }
+              }
+            },
+            "_row_num": 77,
+            "__rowNum__": 76,
+            "_token_type": "prompt",
+            "_type": "select_one",
+            "_branch_label_enclosing_screen": "visit/_screen75",
+            "promptIdx": 27
+          },
+          {
+            "type": "adate",
+            "name": "DACOMSUP",
+            "display": {
+              "prompt": {
+                "text": {
+                  "english": "Date of starting supplementary feeding",
+                  "default": "Data de início da alimentação suplementar"
+                }
+              },
+              "constraint_message": {
+                "text": {
+                  "english": "The date of starting supplementary feeding cannot be in the future",
+                  "default": "A data de início da alimentação suplementar não pode ser no futuro"
+                }
+              }
+            },
+            "constraint": "adate.diffInDays(data('CONT'), data('DACOMSUP'))<1 || adate.hasUncertainty(data('DACOMSUP'))",
+            "_row_num": 79,
+            "__rowNum__": 78,
+            "_token_type": "prompt",
+            "_type": "adate",
+            "_branch_label_enclosing_screen": "visit/_screen75",
+            "promptIdx": 28
+          },
+          {
+            "type": "select_multiple",
+            "values_list": "dontknowdate",
+            "name": "dacomsupns",
+            "_row_num": 80,
+            "__rowNum__": 79,
+            "_token_type": "prompt",
+            "_type": "select_multiple",
+            "_branch_label_enclosing_screen": "visit/_screen75",
+            "promptIdx": 29
+          },
+          {
+            "type": "integer",
+            "name": "IDCOMSUP",
+            "display": {
+              "prompt": {
+                "text": {
+                  "english": "Age of starting supplementary feeding in months",
+                  "default": "Idade de início da alimentação suplementar em meses"
+                }
+              }
+            },
+            "_row_num": 82,
+            "__rowNum__": 81,
+            "_token_type": "prompt",
+            "_type": "integer",
+            "_branch_label_enclosing_screen": "visit/_screen75",
             "promptIdx": 30
           },
           {
@@ -29776,7 +29784,7 @@
               "prompt": {
                 "text": {
                   "english": "<b>Child visit: {{data.NOME}} - Dob: {{calculates.displayOUTDATE}}<b>",
-                  "default": "<b>Visita da crianca: {{data.NOME}} - Nas: {{calculates.displayOUTDATE}}<b>"
+                  "default": "<b>Visita da criança: {{data.NOME}} - Nas: {{calculates.displayOUTDATE}}<b>"
                 }
               }
             },
@@ -29814,7 +29822,7 @@
               "prompt": {
                 "text": {
                   "english": "Period using bednet",
-                  "default": "Tempo do uso da tenda"
+                  "default": "Tempo da utilização da tenda"
                 }
               }
             },
@@ -29850,7 +29858,7 @@
               "prompt": {
                 "text": {
                   "english": "<b>Child visit: {{data.NOME}} - Dob: {{calculates.displayOUTDATE}}<b>",
-                  "default": "<b>Visita da crianca: {{data.NOME}} - Nas: {{calculates.displayOUTDATE}}<b>"
+                  "default": "<b>Visita da criança: {{data.NOME}} - Nas: {{calculates.displayOUTDATE}}<b>"
                 }
               }
             },
@@ -29868,8 +29876,8 @@
             "display": {
               "prompt": {
                 "text": {
-                  "english": "Are there pigs living in the compound?",
-                  "default": "Há porcos morando no complexo?"
+                  "english": "Are there pigs living in the morança?",
+                  "default": "Há porcos morando na morança?"
                 }
               }
             },
@@ -29905,7 +29913,7 @@
               "prompt": {
                 "text": {
                   "english": "<b>Child visit: {{data.NOME}} - Dob: {{calculates.displayOUTDATE}}<b>",
-                  "default": "<b>Visita da crianca: {{data.NOME}} - Nas: {{calculates.displayOUTDATE}}<b>"
+                  "default": "<b>Visita da criança: {{data.NOME}} - Nas: {{calculates.displayOUTDATE}}<b>"
                 }
               }
             },
@@ -29924,7 +29932,7 @@
               "prompt": {
                 "text": {
                   "english": "Is the child living with their mother?",
-                  "default": "A criança vivia com a sua mãe?"
+                  "default": "A criança mora com a sua mãe?"
                 }
               }
             },
@@ -29942,7 +29950,7 @@
               "prompt": {
                 "text": {
                   "english": "Cause of separation from the mother",
-                  "default": "Causa de separação da mãe"
+                  "default": "Razão da separação da mãe"
                 }
               }
             },
@@ -29960,7 +29968,7 @@
               "prompt": {
                 "text": {
                   "english": "Date of separation from mother",
-                  "default": "Data de separação da mãe"
+                  "default": "Data da separação da mãe"
                 }
               },
               "constraint_message": {
@@ -29995,8 +30003,8 @@
             "display": {
               "prompt": {
                 "text": {
-                  "english": "Age of separation from mother",
-                  "default": "Idade da separação da mãe"
+                  "english": "Age of separation from mother in months",
+                  "default": "Idade de separação da mãe em meses"
                 }
               }
             },
@@ -30013,7 +30021,7 @@
               "prompt": {
                 "text": {
                   "english": "<b>Child visit: {{data.NOME}} - Dob: {{calculates.displayOUTDATE}}<b>",
-                  "default": "<b>Visita da crianca: {{data.NOME}} - Nas: {{calculates.displayOUTDATE}}<b>"
+                  "default": "<b>Visita da criança: {{data.NOME}} - Nas: {{calculates.displayOUTDATE}}<b>"
                 }
               }
             },
@@ -30067,7 +30075,7 @@
               "prompt": {
                 "text": {
                   "english": "Date of latest hospitalization",
-                  "default": "Data de último internamento"
+                  "default": "Data do último internamento"
                 }
               }
             },
@@ -30142,7 +30150,7 @@
               "prompt": {
                 "text": {
                   "english": "<b>Child visit: {{data.NOME}} - Dob: {{calculates.displayOUTDATE}}<b>",
-                  "default": "<b>Visita da crianca: {{data.NOME}} - Nas: {{calculates.displayOUTDATE}}<b>"
+                  "default": "<b>Visita da criança: {{data.NOME}} - Nas: {{calculates.displayOUTDATE}}<b>"
                 }
               }
             },
@@ -30159,7 +30167,7 @@
               "prompt": {
                 "text": {
                   "english": "Hospitalization",
-                  "default": "Hospitalização"
+                  "default": "Internação"
                 }
               }
             },
@@ -30195,7 +30203,7 @@
               "title": {
                 "text": {
                   "english": "Children",
-                  "default": "Criancas"
+                  "default": "Crianças"
                 }
               }
             },
@@ -30213,7 +30221,7 @@
               "title": {
                 "text": {
                   "english": "Children",
-                  "default": "Criancas"
+                  "default": "Crianças"
                 }
               }
             },
@@ -30225,7 +30233,7 @@
               "prompt": {
                 "text": {
                   "english": "<b>Child visit: {{data.NOME}} - Dob: {{calculates.displayOUTDATE}}<b>",
-                  "default": "<b>Visita da crianca: {{data.NOME}} - Nas: {{calculates.displayOUTDATE}}<b>"
+                  "default": "<b>Visita da criança: {{data.NOME}} - Nas: {{calculates.displayOUTDATE}}<b>"
                 }
               }
             },
@@ -30267,7 +30275,7 @@
               "prompt": {
                 "text": {
                   "english": "<b>Child visit: {{data.NOME}} - Dob: {{calculates.displayOUTDATE}}<b>",
-                  "default": "<b>Visita da crianca: {{data.NOME}} - Nas: {{calculates.displayOUTDATE}}<b>"
+                  "default": "<b>Visita da criança: {{data.NOME}} - Nas: {{calculates.displayOUTDATE}}<b>"
                 }
               }
             },
@@ -30303,7 +30311,7 @@
               "prompt": {
                 "text": {
                   "english": "<b>Child visit: {{data.NOME}} - Dob: {{calculates.displayOUTDATE}}<b>",
-                  "default": "<b>Visita da crianca: {{data.NOME}} - Nas: {{calculates.displayOUTDATE}}<b>"
+                  "default": "<b>Visita da criança: {{data.NOME}} - Nas: {{calculates.displayOUTDATE}}<b>"
                 }
               }
             },
@@ -30356,7 +30364,7 @@
               "prompt": {
                 "text": {
                   "english": "<b>Child visit: {{data.NOME}} - Dob: {{calculates.displayOUTDATE}}<b>",
-                  "default": "<b>Visita da crianca: {{data.NOME}} - Nas: {{calculates.displayOUTDATE}}<b>"
+                  "default": "<b>Visita da criança: {{data.NOME}} - Nas: {{calculates.displayOUTDATE}}<b>"
                 }
               }
             },
@@ -30411,7 +30419,7 @@
               "prompt": {
                 "text": {
                   "english": "<b>Child visit: {{data.NOME}} - Dob: {{calculates.displayOUTDATE}}<b>",
-                  "default": "<b>Visita da crianca: {{data.NOME}} - Nas: {{calculates.displayOUTDATE}}<b>"
+                  "default": "<b>Visita da criança: {{data.NOME}} - Nas: {{calculates.displayOUTDATE}}<b>"
                 }
               }
             },
@@ -30447,7 +30455,7 @@
               "prompt": {
                 "text": {
                   "english": "<b>Child visit: {{data.NOME}} - Dob: {{calculates.displayOUTDATE}}<b>",
-                  "default": "<b>Visita da crianca: {{data.NOME}} - Nas: {{calculates.displayOUTDATE}}<b>"
+                  "default": "<b>Visita da criança: {{data.NOME}} - Nas: {{calculates.displayOUTDATE}}<b>"
                 }
               }
             },
@@ -30500,7 +30508,7 @@
               "prompt": {
                 "text": {
                   "english": "<b>Child visit: {{data.NOME}} - Dob: {{calculates.displayOUTDATE}}<b>",
-                  "default": "<b>Visita da crianca: {{data.NOME}} - Nas: {{calculates.displayOUTDATE}}<b>"
+                  "default": "<b>Visita da criança: {{data.NOME}} - Nas: {{calculates.displayOUTDATE}}<b>"
                 }
               }
             },
@@ -30574,7 +30582,7 @@
               "prompt": {
                 "text": {
                   "english": "<b>Child visit: {{data.NOME}} - Dob: {{calculates.displayOUTDATE}}<b>",
-                  "default": "<b>Visita da crianca: {{data.NOME}} - Nas: {{calculates.displayOUTDATE}}<b>"
+                  "default": "<b>Visita da criança: {{data.NOME}} - Nas: {{calculates.displayOUTDATE}}<b>"
                 }
               }
             },
@@ -30727,7 +30735,7 @@
           },
           {
             "clause": "if",
-            "condition": "data('comsup') != '1'",
+            "condition": "data('pama') != '1'",
             "_row_num": 61,
             "__rowNum__": 60,
             "_token_type": "goto_label",
@@ -30737,8 +30745,8 @@
           {
             "clause": "end if",
             "_token_type": "goto_label",
-            "_branch_label": "_else74",
-            "_row_num": 74,
+            "_branch_label": "_else88",
+            "_row_num": 88,
             "operationIdx": 11
           },
           {
@@ -30752,44 +30760,44 @@
               "__rowNum__": 72,
               "_token_type": "end_screen"
             },
-            "_screen_block": "function() {var activePromptIndicies = [];\nactivePromptIndicies.push(21);\nactivePromptIndicies.push(22);\nif (data('COMSUP') == '1') {\nactivePromptIndicies.push(23);\nactivePromptIndicies.push(24);\nif (data('dacomsupns') != null) {\nactivePromptIndicies.push(25);\nassign('DACOMSUP', data('dacomsupns'));\n}\n}\n\nreturn activePromptIndicies;\n}\n",
+            "_screen_block": "function() {var activePromptIndicies = [];\nactivePromptIndicies.push(21);\nactivePromptIndicies.push(22);\nif (data('PAMA') == '1') {\nactivePromptIndicies.push(23);\nactivePromptIndicies.push(24);\nif (data('dapamans') != null) {\nactivePromptIndicies.push(25);\nassign('DAPAMA', data('dapamans'));\n}\n}\n\nreturn activePromptIndicies;\n}\n",
             "operationIdx": 12
           },
           {
-            "clause": "end if",
-            "_token_type": "goto_label",
-            "_branch_label": "_endif74",
+            "clause": "if",
+            "condition": "data('comsup') != '1' || data('PAMA') != '1'",
             "_row_num": 74,
+            "__rowNum__": 73,
+            "_token_type": "goto_label",
+            "_branch_label": "_then74",
             "operationIdx": 13
           },
           {
-            "clause": "if",
-            "condition": "data('pama') != '1'",
+            "clause": "end if",
+            "_token_type": "goto_label",
+            "_branch_label": "_else87",
+            "_row_num": 87,
+            "operationIdx": 14
+          },
+          {
+            "clause": "begin screen",
             "_row_num": 75,
             "__rowNum__": 74,
-            "_token_type": "goto_label",
-            "_branch_label": "_then75",
-            "operationIdx": 14
+            "_token_type": "begin_screen",
+            "_end_screen_clause": {
+              "clause": "end screen",
+              "_row_num": 86,
+              "__rowNum__": 85,
+              "_token_type": "end_screen"
+            },
+            "_screen_block": "function() {var activePromptIndicies = [];\nactivePromptIndicies.push(26);\nactivePromptIndicies.push(27);\nif (data('COMSUP') == '1') {\nactivePromptIndicies.push(28);\nactivePromptIndicies.push(29);\nif (data('dacomsupns') != null) {\nactivePromptIndicies.push(30);\nassign('DACOMSUP', data('dacomsupns'));\n}\n}\n\nreturn activePromptIndicies;\n}\n",
+            "operationIdx": 15
           },
           {
             "clause": "end if",
             "_token_type": "goto_label",
-            "_branch_label": "_else88",
-            "_row_num": 88,
-            "operationIdx": 15
-          },
-          {
-            "clause": "begin screen",
-            "_row_num": 76,
-            "__rowNum__": 75,
-            "_token_type": "begin_screen",
-            "_end_screen_clause": {
-              "clause": "end screen",
-              "_row_num": 87,
-              "__rowNum__": 86,
-              "_token_type": "end_screen"
-            },
-            "_screen_block": "function() {var activePromptIndicies = [];\nactivePromptIndicies.push(26);\nactivePromptIndicies.push(27);\nif (data('PAMA') == '1') {\nactivePromptIndicies.push(28);\nactivePromptIndicies.push(29);\nif (data('dapamans') != null) {\nactivePromptIndicies.push(30);\nassign('DAPAMA', data('dapamans'));\n}\n}\n\nreturn activePromptIndicies;\n}\n",
+            "_branch_label": "_endif87",
+            "_row_num": 87,
             "operationIdx": 16
           },
           {
@@ -31304,10 +31312,10 @@
           "_then60": 10,
           "_then61": 12,
           "_screen62": 12,
-          "_else74": 14,
-          "_endif74": 14,
-          "_then75": 16,
-          "_screen76": 16,
+          "_then74": 15,
+          "_screen75": 15,
+          "_else87": 17,
+          "_endif87": 17,
           "_else88": 18,
           "_endif88": 18,
           "_screen89": 18,
@@ -31374,7 +31382,7 @@
               "prompt": {
                 "text": {
                   "english": "<b>Child visit: {{data.NOME}} - Dob: {{calculates.displayOUTDATE}}<b>",
-                  "default": "<b>Visita da crianca: {{data.NOME}} - Nas: {{calculates.displayOUTDATE}}<b>"
+                  "default": "<b>Visita da criança: {{data.NOME}} - Nas: {{calculates.displayOUTDATE}}<b>"
                 }
               }
             },
@@ -31427,7 +31435,7 @@
               "prompt": {
                 "text": {
                   "english": "<b>Child visit: {{data.NOME}} - Dob: {{calculates.displayOUTDATE}}<b>",
-                  "default": "<b>Visita da crianca: {{data.NOME}} - Nas: {{calculates.displayOUTDATE}}<b>"
+                  "default": "<b>Visita da criança: {{data.NOME}} - Nas: {{calculates.displayOUTDATE}}<b>"
                 }
               }
             },
@@ -31463,7 +31471,7 @@
               "prompt": {
                 "text": {
                   "english": "<b>Child visit: {{data.NOME}} - Dob: {{calculates.displayOUTDATE}}<b>",
-                  "default": "<b>Visita da crianca: {{data.NOME}} - Nas: {{calculates.displayOUTDATE}}<b>"
+                  "default": "<b>Visita da criança: {{data.NOME}} - Nas: {{calculates.displayOUTDATE}}<b>"
                 }
               }
             },
@@ -31482,7 +31490,7 @@
               "prompt": {
                 "text": {
                   "english": "Was consultation sought?",
-                  "default": "Foi solicitada consulta?"
+                  "default": "Procurou consulta?"
                 }
               }
             },
@@ -31506,7 +31514,7 @@
               "constraint_message": {
                 "text": {
                   "english": "The date of consultation cannot be before the date of birth and in the future",
-                  "default": "A data da consulta não pode ser anterior à data de nascimento e no futuro"
+                  "default": "A data da consulta não pode ser antes da data de nascimento e não pode ser no futuro"
                 }
               }
             },
@@ -31543,7 +31551,7 @@
               "prompt": {
                 "text": {
                   "english": "<b>Child visit: {{data.NOME}} - Dob: {{calculates.displayOUTDATE}}<b>",
-                  "default": "<b>Visita da crianca: {{data.NOME}} - Nas: {{calculates.displayOUTDATE}}<b>"
+                  "default": "<b>Visita da criança: {{data.NOME}} - Nas: {{calculates.displayOUTDATE}}<b>"
                 }
               }
             },
@@ -31562,7 +31570,7 @@
               "prompt": {
                 "text": {
                   "english": "Where was consultation sought?",
-                  "default": "Onde foi procurada a consulta?"
+                  "default": "Onde foi a consulta procurada?"
                 }
               }
             },
@@ -31597,7 +31605,7 @@
               "prompt": {
                 "text": {
                   "english": "<b>Child visit: {{data.NOME}} - Dob: {{calculates.displayOUTDATE}}<b>",
-                  "default": "<b>Visita da crianca: {{data.NOME}} - Nas: {{calculates.displayOUTDATE}}<b>"
+                  "default": "<b>Visita da criança: {{data.NOME}} - Nas: {{calculates.displayOUTDATE}}<b>"
                 }
               }
             },
@@ -31616,7 +31624,7 @@
               "prompt": {
                 "text": {
                   "english": "Brought vaccination card",
-                  "default": "Trouxe cartão de vacinação"
+                  "default": "Trouxe cartão de vacinas"
                 }
               }
             },
@@ -31633,7 +31641,7 @@
               "prompt": {
                 "text": {
                   "english": "<b>Child visit: {{data.NOME}} - Dob: {{calculates.displayOUTDATE}}<b>",
-                  "default": "<b>Visita da crianca: {{data.NOME}} - Nas: {{calculates.displayOUTDATE}}<b>"
+                  "default": "<b>Visita da criança: {{data.NOME}} - Nas: {{calculates.displayOUTDATE}}<b>"
                 }
               }
             },
@@ -31687,7 +31695,7 @@
               "prompt": {
                 "text": {
                   "english": "<b>Child visit: {{data.NOME}} - Dob: {{calculates.displayOUTDATE}}<b>",
-                  "default": "<b>Visita da crianca: {{data.NOME}} - Nas: {{calculates.displayOUTDATE}}<b>"
+                  "default": "<b>Visita da criança: {{data.NOME}} - Nas: {{calculates.displayOUTDATE}}<b>"
                 }
               }
             },
@@ -31741,7 +31749,7 @@
               "prompt": {
                 "text": {
                   "english": "<b>Child visit: {{data.NOME}} - Dob: {{calculates.displayOUTDATE}}<b>",
-                  "default": "<b>Visita da crianca: {{data.NOME}} - Nas: {{calculates.displayOUTDATE}}<b>"
+                  "default": "<b>Visita da criança: {{data.NOME}} - Nas: {{calculates.displayOUTDATE}}<b>"
                 }
               }
             },
@@ -31784,7 +31792,7 @@
               "constraint_message": {
                 "text": {
                   "english": "The date of consultation cannot be before the date of birth and in the future",
-                  "default": "A data da consulta não pode ser anterior à data de nascimento e no futuro"
+                  "default": "A data da consulta não pode ser antes da data de nascimento e não pode ser no futuro"
                 }
               }
             },
@@ -31821,7 +31829,7 @@
               "prompt": {
                 "text": {
                   "english": "<b>Child visit: {{data.NOME}} - Dob: {{calculates.displayOUTDATE}}<b>",
-                  "default": "<b>Visita da crianca: {{data.NOME}} - Nas: {{calculates.displayOUTDATE}}<b>"
+                  "default": "<b>Visita da criança: {{data.NOME}} - Nas: {{calculates.displayOUTDATE}}<b>"
                 }
               }
             },
@@ -31875,7 +31883,7 @@
               "prompt": {
                 "text": {
                   "english": "<b>Child visit: {{data.NOME}} - Dob: {{calculates.displayOUTDATE}}<b>",
-                  "default": "<b>Visita da crianca: {{data.NOME}} - Nas: {{calculates.displayOUTDATE}}<b>"
+                  "default": "<b>Visita da criança: {{data.NOME}} - Nas: {{calculates.displayOUTDATE}}<b>"
                 }
               }
             },
@@ -31894,7 +31902,7 @@
               "prompt": {
                 "text": {
                   "english": "Brought vaccination card",
-                  "default": "Trouxe cartão de vacinação"
+                  "default": "Trouxe cartão de vacinas"
                 }
               }
             },
@@ -31911,7 +31919,7 @@
               "prompt": {
                 "text": {
                   "english": "<b>Child visit: {{data.NOME}} - Dob: {{calculates.displayOUTDATE}}<b>",
-                  "default": "<b>Visita da crianca: {{data.NOME}} - Nas: {{calculates.displayOUTDATE}}<b>"
+                  "default": "<b>Visita da criança: {{data.NOME}} - Nas: {{calculates.displayOUTDATE}}<b>"
                 }
               }
             },
@@ -31930,7 +31938,7 @@
               "prompt": {
                 "text": {
                   "english": "Received diagnosis",
-                  "default": "Diagnostico recebido"
+                  "default": "Diagnóstico recebido"
                 }
               }
             },
@@ -31948,7 +31956,7 @@
               "prompt": {
                 "text": {
                   "english": "Diagnosis",
-                  "default": "Diagnostico"
+                  "default": "Diagnóstico"
                 }
               }
             },
@@ -31965,7 +31973,7 @@
               "prompt": {
                 "text": {
                   "english": "<b>Child visit: {{data.NOME}} - Dob: {{calculates.displayOUTDATE}}<b>",
-                  "default": "<b>Visita da crianca: {{data.NOME}} - Nas: {{calculates.displayOUTDATE}}<b>"
+                  "default": "<b>Visita da criança: {{data.NOME}} - Nas: {{calculates.displayOUTDATE}}<b>"
                 }
               }
             },
@@ -32377,7 +32385,7 @@
               "prompt": {
                 "text": {
                   "english": "<b>Child vaccines: {{data.NOME}} - Dob: {{calculates.displayOUTDATE}}<b>",
-                  "default": "<b>Vacinas da crianca: {{data.NOME}} - Nas: {{calculates.displayOUTDATE}}<b>"
+                  "default": "<b>Vacinas da criança: {{data.NOME}} - Nas: {{calculates.displayOUTDATE}}<b>"
                 }
               }
             },
@@ -32662,7 +32670,7 @@
               "prompt": {
                 "text": {
                   "english": "<b>Child vaccines: {{data.NOME}} - Dob: {{calculates.displayOUTDATE}}<b>",
-                  "default": "<b>Vacinas da crianca: {{data.NOME}} - Nas: {{calculates.displayOUTDATE}}<b>"
+                  "default": "<b>Vacinas da criança: {{data.NOME}} - Nas: {{calculates.displayOUTDATE}}<b>"
                 }
               }
             },
@@ -32947,7 +32955,7 @@
               "prompt": {
                 "text": {
                   "english": "<b>Child vaccines: {{data.NOME}} - Dob: {{calculates.displayOUTDATE}}<b>",
-                  "default": "<b>Vacinas da crianca: {{data.NOME}} - Nas: {{calculates.displayOUTDATE}}<b>"
+                  "default": "<b>Vacinas da criança: {{data.NOME}} - Nas: {{calculates.displayOUTDATE}}<b>"
                 }
               }
             },
@@ -33500,7 +33508,7 @@
               "prompt": {
                 "text": {
                   "english": "<b>Child vaccines: {{data.NOME}} - Dob: {{calculates.displayOUTDATE}}<b>",
-                  "default": "<b>Vacinas da crianca: {{data.NOME}} - Nas: {{calculates.displayOUTDATE}}<b>"
+                  "default": "<b>Vacinas da criança: {{data.NOME}} - Nas: {{calculates.displayOUTDATE}}<b>"
                 }
               }
             },
@@ -34053,7 +34061,7 @@
               "prompt": {
                 "text": {
                   "english": "<b>Child vaccines: {{data.NOME}} - Dob: {{calculates.displayOUTDATE}}<b>",
-                  "default": "<b>Vacinas da crianca: {{data.NOME}} - Nas: {{calculates.displayOUTDATE}}<b>"
+                  "default": "<b>Vacinas da criança: {{data.NOME}} - Nas: {{calculates.displayOUTDATE}}<b>"
                 }
               }
             },
@@ -34674,7 +34682,7 @@
               "prompt": {
                 "text": {
                   "english": "<b>Child vaccines: {{data.NOME}} - Dob: {{calculates.displayOUTDATE}}<b>",
-                  "default": "<b>Vacinas da crianca: {{data.NOME}} - Nas: {{calculates.displayOUTDATE}}<b>"
+                  "default": "<b>Vacinas da criança: {{data.NOME}} - Nas: {{calculates.displayOUTDATE}}<b>"
                 }
               }
             },
@@ -35227,7 +35235,7 @@
               "prompt": {
                 "text": {
                   "english": "<b>Child vaccines: {{data.NOME}} - Dob: {{calculates.displayOUTDATE}}<b>",
-                  "default": "<b>Vacinas da crianca: {{data.NOME}} - Nas: {{calculates.displayOUTDATE}}<b>"
+                  "default": "<b>Vacinas da criança: {{data.NOME}} - Nas: {{calculates.displayOUTDATE}}<b>"
                 }
               }
             },
@@ -35882,7 +35890,7 @@
               "prompt": {
                 "text": {
                   "english": "<b>Child vaccines: {{data.NOME}} - Dob: {{calculates.displayOUTDATE}}<b>",
-                  "default": "<b>Vacinas da crianca: {{data.NOME}} - Nas: {{calculates.displayOUTDATE}}<b>"
+                  "default": "<b>Vacinas da criança: {{data.NOME}} - Nas: {{calculates.displayOUTDATE}}<b>"
                 }
               }
             },
@@ -36435,7 +36443,7 @@
               "prompt": {
                 "text": {
                   "english": "<b>Child vaccines: {{data.NOME}} - Dob: {{calculates.displayOUTDATE}}<b>",
-                  "default": "<b>Vacinas da crianca: {{data.NOME}} - Nas: {{calculates.displayOUTDATE}}<b>"
+                  "default": "<b>Vacinas da criança: {{data.NOME}} - Nas: {{calculates.displayOUTDATE}}<b>"
                 }
               }
             },
@@ -36754,7 +36762,7 @@
               "prompt": {
                 "text": {
                   "english": "<b>Child vaccines: {{data.NOME}} - Dob: {{calculates.displayOUTDATE}}<b>",
-                  "default": "<b>Vacinas da crianca: {{data.NOME}} - Nas: {{calculates.displayOUTDATE}}<b>"
+                  "default": "<b>Vacinas da criança: {{data.NOME}} - Nas: {{calculates.displayOUTDATE}}<b>"
                 }
               }
             },
@@ -37039,7 +37047,7 @@
               "prompt": {
                 "text": {
                   "english": "<b>Child vaccines: {{data.NOME}} - Dob: {{calculates.displayOUTDATE}}<b>",
-                  "default": "<b>Vacinas da crianca: {{data.NOME}} - Nas: {{calculates.displayOUTDATE}}<b>"
+                  "default": "<b>Vacinas da criança: {{data.NOME}} - Nas: {{calculates.displayOUTDATE}}<b>"
                 }
               }
             },
@@ -37075,7 +37083,7 @@
               "prompt": {
                 "text": {
                   "english": "<b>Child vaccines: {{data.NOME}} - Dob: {{calculates.displayOUTDATE}}<b>",
-                  "default": "<b>Vacinas da crianca: {{data.NOME}} - Nas: {{calculates.displayOUTDATE}}<b>"
+                  "default": "<b>Vacinas da criança: {{data.NOME}} - Nas: {{calculates.displayOUTDATE}}<b>"
                 }
               }
             },
@@ -37138,7 +37146,7 @@
               "prompt": {
                 "text": {
                   "english": "<b>Child vaccines: {{data.NOME}} - Dob: {{calculates.displayOUTDATE}}<b>",
-                  "default": "<b>Vacinas da crianca: {{data.NOME}} - Nas: {{calculates.displayOUTDATE}}<b>"
+                  "default": "<b>Vacinas da criança: {{data.NOME}} - Nas: {{calculates.displayOUTDATE}}<b>"
                 }
               }
             },
@@ -37223,7 +37231,7 @@
               "prompt": {
                 "text": {
                   "english": "<b>Child vaccines: {{data.NOME}} - Dob: {{calculates.displayOUTDATE}}<b>",
-                  "default": "<b>Vacinas da crianca: {{data.NOME}} - Nas: {{calculates.displayOUTDATE}}<b>"
+                  "default": "<b>Vacinas da criança: {{data.NOME}} - Nas: {{calculates.displayOUTDATE}}<b>"
                 }
               }
             },
@@ -37259,7 +37267,7 @@
               "prompt": {
                 "text": {
                   "english": "<b>Child vaccines: {{data.NOME}} - Dob: {{calculates.displayOUTDATE}}<b>",
-                  "default": "<b>Vacinas da crianca: {{data.NOME}} - Nas: {{calculates.displayOUTDATE}}<b>"
+                  "default": "<b>Vacinas da criança: {{data.NOME}} - Nas: {{calculates.displayOUTDATE}}<b>"
                 }
               }
             },
@@ -37322,7 +37330,7 @@
               "prompt": {
                 "text": {
                   "english": "<b>Child vaccines: {{data.NOME}} - Dob: {{calculates.displayOUTDATE}}<b>",
-                  "default": "<b>Vacinas da crianca: {{data.NOME}} - Nas: {{calculates.displayOUTDATE}}<b>"
+                  "default": "<b>Vacinas da criança: {{data.NOME}} - Nas: {{calculates.displayOUTDATE}}<b>"
                 }
               }
             },
@@ -37407,7 +37415,7 @@
               "prompt": {
                 "text": {
                   "english": "<b>Child vaccines: {{data.NOME}} - Dob: {{calculates.displayOUTDATE}}<b>",
-                  "default": "<b>Vacinas da crianca: {{data.NOME}} - Nas: {{calculates.displayOUTDATE}}<b>"
+                  "default": "<b>Vacinas da criança: {{data.NOME}} - Nas: {{calculates.displayOUTDATE}}<b>"
                 }
               }
             },
@@ -37443,7 +37451,7 @@
               "prompt": {
                 "text": {
                   "english": "<b>Child vaccines: {{data.NOME}} - Dob: {{calculates.displayOUTDATE}}<b>",
-                  "default": "<b>Vacinas da crianca: {{data.NOME}} - Nas: {{calculates.displayOUTDATE}}<b>"
+                  "default": "<b>Vacinas da criança: {{data.NOME}} - Nas: {{calculates.displayOUTDATE}}<b>"
                 }
               }
             },
@@ -37506,7 +37514,7 @@
               "prompt": {
                 "text": {
                   "english": "<b>Child vaccines: {{data.NOME}} - Dob: {{calculates.displayOUTDATE}}<b>",
-                  "default": "<b>Vacinas da crianca: {{data.NOME}} - Nas: {{calculates.displayOUTDATE}}<b>"
+                  "default": "<b>Vacinas da criança: {{data.NOME}} - Nas: {{calculates.displayOUTDATE}}<b>"
                 }
               }
             },
@@ -37591,7 +37599,7 @@
               "prompt": {
                 "text": {
                   "english": "<b>Child vaccines: {{data.NOME}} - Dob: {{calculates.displayOUTDATE}}<b>",
-                  "default": "<b>Vacinas da crianca: {{data.NOME}} - Nas: {{calculates.displayOUTDATE}}<b>"
+                  "default": "<b>Vacinas da criança: {{data.NOME}} - Nas: {{calculates.displayOUTDATE}}<b>"
                 }
               }
             },
@@ -37627,7 +37635,7 @@
               "prompt": {
                 "text": {
                   "english": "<b>Child vaccines: {{data.NOME}} - Dob: {{calculates.displayOUTDATE}}<b>",
-                  "default": "<b>Vacinas da crianca: {{data.NOME}} - Nas: {{calculates.displayOUTDATE}}<b>"
+                  "default": "<b>Vacinas da criança: {{data.NOME}} - Nas: {{calculates.displayOUTDATE}}<b>"
                 }
               }
             },
@@ -37690,7 +37698,7 @@
               "prompt": {
                 "text": {
                   "english": "<b>Child vaccines: {{data.NOME}} - Dob: {{calculates.displayOUTDATE}}<b>",
-                  "default": "<b>Vacinas da crianca: {{data.NOME}} - Nas: {{calculates.displayOUTDATE}}<b>"
+                  "default": "<b>Vacinas da criança: {{data.NOME}} - Nas: {{calculates.displayOUTDATE}}<b>"
                 }
               }
             },
@@ -37775,7 +37783,7 @@
               "prompt": {
                 "text": {
                   "english": "<b>Child vaccines: {{data.NOME}} - Dob: {{calculates.displayOUTDATE}}<b>",
-                  "default": "<b>Vacinas da crianca: {{data.NOME}} - Nas: {{calculates.displayOUTDATE}}<b>"
+                  "default": "<b>Vacinas da criança: {{data.NOME}} - Nas: {{calculates.displayOUTDATE}}<b>"
                 }
               }
             },
@@ -37811,7 +37819,7 @@
               "prompt": {
                 "text": {
                   "english": "<b>Child vaccines: {{data.NOME}} - Dob: {{calculates.displayOUTDATE}}<b>",
-                  "default": "<b>Vacinas da crianca: {{data.NOME}} - Nas: {{calculates.displayOUTDATE}}<b>"
+                  "default": "<b>Vacinas da criança: {{data.NOME}} - Nas: {{calculates.displayOUTDATE}}<b>"
                 }
               }
             },
@@ -37874,7 +37882,7 @@
               "prompt": {
                 "text": {
                   "english": "<b>Child vaccines: {{data.NOME}} - Dob: {{calculates.displayOUTDATE}}<b>",
-                  "default": "<b>Vacinas da crianca: {{data.NOME}} - Nas: {{calculates.displayOUTDATE}}<b>"
+                  "default": "<b>Vacinas da criança: {{data.NOME}} - Nas: {{calculates.displayOUTDATE}}<b>"
                 }
               }
             },
@@ -37959,7 +37967,7 @@
               "prompt": {
                 "text": {
                   "english": "<b>Child vaccines: {{data.NOME}} - Dob: {{calculates.displayOUTDATE}}<b>",
-                  "default": "<b>Vacinas da crianca: {{data.NOME}} - Nas: {{calculates.displayOUTDATE}}<b>"
+                  "default": "<b>Vacinas da criança: {{data.NOME}} - Nas: {{calculates.displayOUTDATE}}<b>"
                 }
               }
             },
@@ -38946,7 +38954,7 @@
               "prompt": {
                 "text": {
                   "english": "<b>Child death: {{data.NOME}} - Dob: {{calculates.displayOUTDATE}}<b>",
-                  "default": "<b>Falecimento de crianca: {{data.NOME}} - Nas: {{calculates.displayOUTDATE}}<b>"
+                  "default": "<b>Falecimento de criança: {{data.NOME}} - Nas: {{calculates.displayOUTDATE}}<b>"
                 }
               }
             },
@@ -39000,7 +39008,7 @@
               "prompt": {
                 "text": {
                   "english": "<b>Child death: {{data.NOME}} - Dob: {{calculates.displayOUTDATE}}<b>",
-                  "default": "<b>Falecimento de crianca: {{data.NOME}} - Nas: {{calculates.displayOUTDATE}}<b>"
+                  "default": "<b>Falecimento de criança: {{data.NOME}} - Nas: {{calculates.displayOUTDATE}}<b>"
                 }
               }
             },
@@ -39092,7 +39100,7 @@
               "prompt": {
                 "text": {
                   "english": "<b>Child death: {{data.NOME}} - Dob: {{calculates.displayOUTDATE}}<b>",
-                  "default": "<b>Falecimento de crianca: {{data.NOME}} - Nas: {{calculates.displayOUTDATE}}<b>"
+                  "default": "<b>Falecimento de criança: {{data.NOME}} - Nas: {{calculates.displayOUTDATE}}<b>"
                 }
               }
             },
@@ -39129,7 +39137,7 @@
               "prompt": {
                 "text": {
                   "english": "Number of pentavalent vaccines",
-                  "default": "Numero de vacina Pentavalente"
+                  "default": "Número de vacina Pentavalente"
                 }
               }
             },
@@ -39185,7 +39193,7 @@
               "prompt": {
                 "text": {
                   "english": "Number of measles vaccines",
-                  "default": "Numero de vacina de Sarampo"
+                  "default": "Número de vacina de Sarampo"
                 }
               }
             },
@@ -39202,7 +39210,7 @@
               "prompt": {
                 "text": {
                   "english": "<b>Child death: {{data.NOME}} - Dob: {{calculates.displayOUTDATE}}<b>",
-                  "default": "<b>Falecimento de crianca: {{data.NOME}} - Nas: {{calculates.displayOUTDATE}}<b>"
+                  "default": "<b>Falecimento de criança: {{data.NOME}} - Nas: {{calculates.displayOUTDATE}}<b>"
                 }
               }
             },
@@ -39262,7 +39270,7 @@
               "prompt": {
                 "text": {
                   "english": "<b>Child death: {{data.NOME}} - Dob: {{calculates.displayOUTDATE}}<b>",
-                  "default": "<b>Falecimento de crianca: {{data.NOME}} - Nas: {{calculates.displayOUTDATE}}<b>"
+                  "default": "<b>Falecimento de criança: {{data.NOME}} - Nas: {{calculates.displayOUTDATE}}<b>"
                 }
               }
             },
@@ -39322,7 +39330,7 @@
               "prompt": {
                 "text": {
                   "english": "<b>Child death: {{data.NOME}} - Dob: {{calculates.displayOUTDATE}}<b>",
-                  "default": "<b>Falecimento de crianca: {{data.NOME}} - Nas: {{calculates.displayOUTDATE}}<b>"
+                  "default": "<b>Falecimento de criança: {{data.NOME}} - Nas: {{calculates.displayOUTDATE}}<b>"
                 }
               }
             },
@@ -39358,7 +39366,7 @@
               "prompt": {
                 "text": {
                   "english": "<b>Child death: {{data.NOME}} - Dob: {{calculates.displayOUTDATE}}<b>",
-                  "default": "<b>Falecimento de crianca: {{data.NOME}} - Nas: {{calculates.displayOUTDATE}}<b>"
+                  "default": "<b>Falecimento de criança: {{data.NOME}} - Nas: {{calculates.displayOUTDATE}}<b>"
                 }
               }
             },
@@ -39413,7 +39421,7 @@
               "prompt": {
                 "text": {
                   "english": "<b>Child death: {{data.NOME}} - Dob: {{calculates.displayOUTDATE}}<b>",
-                  "default": "<b>Falecimento de crianca: {{data.NOME}} - Nas: {{calculates.displayOUTDATE}}<b>"
+                  "default": "<b>Falecimento de criança: {{data.NOME}} - Nas: {{calculates.displayOUTDATE}}<b>"
                 }
               }
             },
@@ -39449,7 +39457,7 @@
               "prompt": {
                 "text": {
                   "english": "<b>Child death: {{data.NOME}} - Dob: {{calculates.displayOUTDATE}}<b>",
-                  "default": "<b>Falecimento de crianca: {{data.NOME}} - Nas: {{calculates.displayOUTDATE}}<b>"
+                  "default": "<b>Falecimento de criança: {{data.NOME}} - Nas: {{calculates.displayOUTDATE}}<b>"
                 }
               }
             },
@@ -39503,7 +39511,7 @@
               "prompt": {
                 "text": {
                   "english": "<b>Child death: {{data.NOME}} - Dob: {{calculates.displayOUTDATE}}<b>",
-                  "default": "<b>Falecimento de crianca: {{data.NOME}} - Nas: {{calculates.displayOUTDATE}}<b>"
+                  "default": "<b>Falecimento de criança: {{data.NOME}} - Nas: {{calculates.displayOUTDATE}}<b>"
                 }
               }
             },
@@ -39557,7 +39565,7 @@
               "prompt": {
                 "text": {
                   "english": "<b>Child death: {{data.NOME}} - Dob: {{calculates.displayOUTDATE}}<b>",
-                  "default": "<b>Falecimento de crianca: {{data.NOME}} - Nas: {{calculates.displayOUTDATE}}<b>"
+                  "default": "<b>Falecimento de criança: {{data.NOME}} - Nas: {{calculates.displayOUTDATE}}<b>"
                 }
               }
             },
@@ -39611,7 +39619,7 @@
               "prompt": {
                 "text": {
                   "english": "<b>Child death: {{data.NOME}} - Dob: {{calculates.displayOUTDATE}}<b>",
-                  "default": "<b>Falecimento de crianca: {{data.NOME}} - Nas: {{calculates.displayOUTDATE}}<b>"
+                  "default": "<b>Falecimento de criança: {{data.NOME}} - Nas: {{calculates.displayOUTDATE}}<b>"
                 }
               }
             },
@@ -39683,7 +39691,7 @@
               "prompt": {
                 "text": {
                   "english": "<b>Child death: {{data.NOME}} - Dob: {{calculates.displayOUTDATE}}<b>",
-                  "default": "<b>Falecimento de crianca: {{data.NOME}} - Nas: {{calculates.displayOUTDATE}}<b>"
+                  "default": "<b>Falecimento de criança: {{data.NOME}} - Nas: {{calculates.displayOUTDATE}}<b>"
                 }
               }
             },
@@ -39737,7 +39745,7 @@
               "prompt": {
                 "text": {
                   "english": "<b>Child death: {{data.NOME}} - Dob: {{calculates.displayOUTDATE}}<b>",
-                  "default": "<b>Falecimento de crianca: {{data.NOME}} - Nas: {{calculates.displayOUTDATE}}<b>"
+                  "default": "<b>Falecimento de criança: {{data.NOME}} - Nas: {{calculates.displayOUTDATE}}<b>"
                 }
               }
             },
@@ -39791,7 +39799,7 @@
               "prompt": {
                 "text": {
                   "english": "<b>Child death: {{data.NOME}} - Dob: {{calculates.displayOUTDATE}}<b>",
-                  "default": "<b>Falecimento de crianca: {{data.NOME}} - Nas: {{calculates.displayOUTDATE}}<b>"
+                  "default": "<b>Falecimento de criança: {{data.NOME}} - Nas: {{calculates.displayOUTDATE}}<b>"
                 }
               }
             },
@@ -39845,7 +39853,7 @@
               "prompt": {
                 "text": {
                   "english": "<b>Child death: {{data.NOME}} - Dob: {{calculates.displayOUTDATE}}<b>",
-                  "default": "<b>Falecimento de crianca: {{data.NOME}} - Nas: {{calculates.displayOUTDATE}}<b>"
+                  "default": "<b>Falecimento de criança: {{data.NOME}} - Nas: {{calculates.displayOUTDATE}}<b>"
                 }
               }
             },
@@ -39899,7 +39907,7 @@
               "prompt": {
                 "text": {
                   "english": "<b>Child death: {{data.NOME}} - Dob: {{calculates.displayOUTDATE}}<b>",
-                  "default": "<b>Falecimento de crianca: {{data.NOME}} - Nas: {{calculates.displayOUTDATE}}<b>"
+                  "default": "<b>Falecimento de criança: {{data.NOME}} - Nas: {{calculates.displayOUTDATE}}<b>"
                 }
               }
             },
@@ -39918,7 +39926,7 @@
               "prompt": {
                 "text": {
                   "english": "Was a diagnosis given by health personel?",
-                  "default": "Diagnostico dado pelo pessoal de saúde"
+                  "default": "Diagnóstico dado pelo pessoal de saúde"
                 }
               }
             },
@@ -39953,7 +39961,7 @@
               "prompt": {
                 "text": {
                   "english": "<b>Child death: {{data.NOME}} - Dob: {{calculates.displayOUTDATE}}<b>",
-                  "default": "<b>Falecimento de crianca: {{data.NOME}} - Nas: {{calculates.displayOUTDATE}}<b>"
+                  "default": "<b>Falecimento de criança: {{data.NOME}} - Nas: {{calculates.displayOUTDATE}}<b>"
                 }
               }
             },
@@ -40007,7 +40015,7 @@
               "prompt": {
                 "text": {
                   "english": "<b>Child death: {{data.NOME}} - Dob: {{calculates.displayOUTDATE}}<b>",
-                  "default": "<b>Falecimento de crianca: {{data.NOME}} - Nas: {{calculates.displayOUTDATE}}<b>"
+                  "default": "<b>Falecimento de criança: {{data.NOME}} - Nas: {{calculates.displayOUTDATE}}<b>"
                 }
               }
             },
@@ -40060,7 +40068,7 @@
               "prompt": {
                 "text": {
                   "english": "<b>Child death: {{data.NOME}} - Dob: {{calculates.displayOUTDATE}}<b>",
-                  "default": "<b>Falecimento de crianca: {{data.NOME}} - Nas: {{calculates.displayOUTDATE}}<b>"
+                  "default": "<b>Falecimento de criança: {{data.NOME}} - Nas: {{calculates.displayOUTDATE}}<b>"
                 }
               }
             },
@@ -40096,7 +40104,7 @@
               "prompt": {
                 "text": {
                   "english": "<b>Child death: {{data.NOME}} - Dob: {{calculates.displayOUTDATE}}<b>",
-                  "default": "<b>Falecimento de crianca: {{data.NOME}} - Nas: {{calculates.displayOUTDATE}}<b>"
+                  "default": "<b>Falecimento de criança: {{data.NOME}} - Nas: {{calculates.displayOUTDATE}}<b>"
                 }
               }
             },
@@ -40132,7 +40140,7 @@
               "prompt": {
                 "text": {
                   "english": "<b>Child death: {{data.NOME}} - Dob: {{calculates.displayOUTDATE}}<b>",
-                  "default": "<b>Falecimento de crianca: {{data.NOME}} - Nas: {{calculates.displayOUTDATE}}<b>"
+                  "default": "<b>Falecimento de criança: {{data.NOME}} - Nas: {{calculates.displayOUTDATE}}<b>"
                 }
               }
             },
@@ -40186,7 +40194,7 @@
               "prompt": {
                 "text": {
                   "english": "<b>Child death: {{data.NOME}} - Dob: {{calculates.displayOUTDATE}}<b>",
-                  "default": "<b>Falecimento de crianca: {{data.NOME}} - Nas: {{calculates.displayOUTDATE}}<b>"
+                  "default": "<b>Falecimento de criança: {{data.NOME}} - Nas: {{calculates.displayOUTDATE}}<b>"
                 }
               }
             },
@@ -40240,7 +40248,7 @@
               "prompt": {
                 "text": {
                   "english": "<b>Child death: {{data.NOME}} - Dob: {{calculates.displayOUTDATE}}<b>",
-                  "default": "<b>Falecimento de crianca: {{data.NOME}} - Nas: {{calculates.displayOUTDATE}}<b>"
+                  "default": "<b>Falecimento de criança: {{data.NOME}} - Nas: {{calculates.displayOUTDATE}}<b>"
                 }
               }
             },
@@ -40295,7 +40303,7 @@
               "prompt": {
                 "text": {
                   "english": "<b>Child death: {{data.NOME}} - Dob: {{calculates.displayOUTDATE}}<b>",
-                  "default": "<b>Falecimento de crianca: {{data.NOME}} - Nas: {{calculates.displayOUTDATE}}<b>"
+                  "default": "<b>Falecimento de criança: {{data.NOME}} - Nas: {{calculates.displayOUTDATE}}<b>"
                 }
               }
             },
@@ -40349,7 +40357,7 @@
               "prompt": {
                 "text": {
                   "english": "<b>Child death: {{data.NOME}} - Dob: {{calculates.displayOUTDATE}}<b>",
-                  "default": "<b>Falecimento de crianca: {{data.NOME}} - Nas: {{calculates.displayOUTDATE}}<b>"
+                  "default": "<b>Falecimento de criança: {{data.NOME}} - Nas: {{calculates.displayOUTDATE}}<b>"
                 }
               }
             },
@@ -40421,7 +40429,7 @@
               "prompt": {
                 "text": {
                   "english": "<b>Child death: {{data.NOME}} - Dob: {{calculates.displayOUTDATE}}<b>",
-                  "default": "<b>Falecimento de crianca: {{data.NOME}} - Nas: {{calculates.displayOUTDATE}}<b>"
+                  "default": "<b>Falecimento de criança: {{data.NOME}} - Nas: {{calculates.displayOUTDATE}}<b>"
                 }
               }
             },
@@ -41042,7 +41050,7 @@
               "title": {
                 "text": {
                   "english": "Children",
-                  "default": "Criancas"
+                  "default": "Crianças"
                 }
               }
             },
@@ -42844,7 +42852,7 @@
         "valuesList": "YesNoU",
         "_defn": [
           {
-            "_row_num": 64,
+            "_row_num": 77,
             "section_name": "visit"
           },
           {
@@ -42867,7 +42875,7 @@
         "__rowNum__": 1,
         "_defn": [
           {
-            "_row_num": 66,
+            "_row_num": 79,
             "section_name": "visit"
           },
           {
@@ -42895,7 +42903,7 @@
         "valuesList": "dontknowdate",
         "_defn": [
           {
-            "_row_num": 67,
+            "_row_num": 80,
             "section_name": "visit"
           },
           {
@@ -42921,7 +42929,7 @@
         "__rowNum__": 1,
         "_defn": [
           {
-            "_row_num": 80,
+            "_row_num": 66,
             "section_name": "visit"
           },
           {
@@ -42949,7 +42957,7 @@
         "valuesList": "dontknowdate",
         "_defn": [
           {
-            "_row_num": 81,
+            "_row_num": 67,
             "section_name": "visit"
           },
           {
@@ -43205,7 +43213,7 @@
         "type": "integer",
         "_defn": [
           {
-            "_row_num": 69,
+            "_row_num": 82,
             "section_name": "visit"
           },
           {
@@ -43223,7 +43231,7 @@
         "type": "integer",
         "_defn": [
           {
-            "_row_num": 83,
+            "_row_num": 69,
             "section_name": "visit"
           },
           {
@@ -43349,7 +43357,7 @@
         "valuesList": "YesNoU",
         "_defn": [
           {
-            "_row_num": 78,
+            "_row_num": 64,
             "section_name": "visit"
           },
           {
@@ -47905,7 +47913,7 @@
         "_aspect": "ASSISTPART",
         "_key": "displayChoicesList",
         "_type": "object",
-        "_value": "[{\"choice_list_name\":\"healthstaff\",\"data_value\":\"DR\",\"display\":{\"title\":{\"text\":{\"english\":\"Doctor\",\"default\":\"Medico\"}}},\"_row_num\":74},{\"choice_list_name\":\"healthstaff\",\"data_value\":\"PA\",\"display\":{\"title\":{\"text\":{\"english\":\"Midwife\",\"default\":\"Parteira\"}}},\"_row_num\":75},{\"choice_list_name\":\"healthstaff\",\"data_value\":\"EN\",\"display\":{\"title\":{\"text\":{\"english\":\"Nurse\",\"default\":\"Enfermeira/o\"}}},\"_row_num\":76},{\"choice_list_name\":\"healthstaff\",\"data_value\":\"MA-N\",\"display\":{\"title\":{\"text\":{\"english\":\"Traditional birth attendant - no course\",\"default\":\"Matrona - sem curso\"}}},\"_row_num\":77},{\"choice_list_name\":\"healthstaff\",\"data_value\":\"MA-F\",\"display\":{\"title\":{\"text\":{\"english\":\"Traditional birth attendant - course\",\"default\":\"Matrona - formado\"}}},\"_row_num\":78},{\"choice_list_name\":\"healthstaff\",\"data_value\":\"FA\",\"display\":{\"title\":{\"text\":{\"english\":\"Family member\",\"default\":\"Familia\"}}},\"_row_num\":79},{\"choice_list_name\":\"healthstaff\",\"data_value\":\"VI\",\"display\":{\"title\":{\"text\":{\"english\":\"Neighbour\",\"default\":\"Vizinho\"}}},\"_row_num\":80},{\"choice_list_name\":\"healthstaff\",\"data_value\":\"NO\",\"display\":{\"title\":{\"text\":{\"english\":\"No one\",\"default\":\"Ninguem\"}}},\"_row_num\":81},{\"choice_list_name\":\"healthstaff\",\"data_value\":\"NS\",\"display\":{\"title\":{\"text\":{\"english\":\"Dont know\",\"default\":\"Não sabe\"}}},\"_row_num\":82}]"
+        "_value": "[{\"choice_list_name\":\"healthstaff\",\"data_value\":\"DR\",\"display\":{\"title\":{\"text\":{\"english\":\"Doctor\",\"default\":\"Medico\"}}},\"_row_num\":74},{\"choice_list_name\":\"healthstaff\",\"data_value\":\"PA\",\"display\":{\"title\":{\"text\":{\"english\":\"Midwife\",\"default\":\"Parteira\"}}},\"_row_num\":75},{\"choice_list_name\":\"healthstaff\",\"data_value\":\"EN\",\"display\":{\"title\":{\"text\":{\"english\":\"Nurse\",\"default\":\"Enfermeira/o\"}}},\"_row_num\":76},{\"choice_list_name\":\"healthstaff\",\"data_value\":\"MA-N\",\"display\":{\"title\":{\"text\":{\"english\":\"Traditional birth attendant - no course\",\"default\":\"Matrona - sem curso\"}}},\"__EMPTY\":\"is Matrona commonly used? \\\"parteiras tradicionais\\\" better?\",\"_row_num\":77},{\"choice_list_name\":\"healthstaff\",\"data_value\":\"MA-F\",\"display\":{\"title\":{\"text\":{\"english\":\"Traditional birth attendant - course\",\"default\":\"Matrona - formado\"}}},\"__EMPTY\":\"is Matrona commonly used? \\\"parteiras tradicionais\\\" better?\",\"_row_num\":78},{\"choice_list_name\":\"healthstaff\",\"data_value\":\"FA\",\"display\":{\"title\":{\"text\":{\"english\":\"Family member\",\"default\":\"Família\"}}},\"_row_num\":79},{\"choice_list_name\":\"healthstaff\",\"data_value\":\"VI\",\"display\":{\"title\":{\"text\":{\"english\":\"Neighbour\",\"default\":\"Vizinho\"}}},\"_row_num\":80},{\"choice_list_name\":\"healthstaff\",\"data_value\":\"NO\",\"display\":{\"title\":{\"text\":{\"english\":\"No one\",\"default\":\"Ninguem\"}}},\"_row_num\":81},{\"choice_list_name\":\"healthstaff\",\"data_value\":\"NS\",\"display\":{\"title\":{\"text\":{\"english\":\"Dont know\",\"default\":\"Não sabe\"}}},\"_row_num\":82}]"
       },
       {
         "_partition": "Column",
@@ -47989,7 +47997,7 @@
         "_aspect": "CART_ANC",
         "_key": "displayChoicesList",
         "_type": "object",
-        "_value": "[{\"choice_list_name\":\"vpcard\",\"data_value\":\"VIC\",\"display\":{\"title\":{\"text\":{\"english\":\"Card seen\",\"default\":\"Cartão visto\"}}},\"_row_num\":17},{\"choice_list_name\":\"vpcard\",\"data_value\":\"NTN\",\"display\":{\"title\":{\"text\":{\"english\":\"Has no card and no ANC\",\"default\":\"Não tem cartão e não tem consultas\"}}},\"_row_num\":18},{\"choice_list_name\":\"vpcard\",\"data_value\":\"NTS\",\"display\":{\"title\":{\"text\":{\"english\":\"Has no card, some ANC\",\"default\":\"Não tem cartão, mas tem consultas\"}}},\"_row_num\":19},{\"choice_list_name\":\"vpcard\",\"data_value\":\"NVC\",\"display\":{\"title\":{\"text\":{\"english\":\"Not brought card\",\"default\":\"Não trouxe o cartão\"}}},\"_row_num\":20},{\"choice_list_name\":\"vpcard\",\"data_value\":\"PC\",\"display\":{\"title\":{\"text\":{\"english\":\"Lost card\",\"default\":\"Perdeu o cartão\"}}},\"_row_num\":21},{\"choice_list_name\":\"vpcard\",\"data_value\":\"VCN\",\"display\":{\"title\":{\"text\":{\"english\":\"Card seen and ANCs\",\"default\":\"Cartão visto, mas sem consultas registadas\"}}},\"_row_num\":22},{\"choice_list_name\":\"vpcard\",\"data_value\":\"NA\",\"display\":{\"title\":{\"text\":{\"english\":\"Don't know\",\"default\":\"Não sabe\"}}},\"_row_num\":23}]"
+        "_value": "[{\"choice_list_name\":\"vpcard\",\"data_value\":\"VIC\",\"display\":{\"title\":{\"text\":{\"english\":\"Card seen\",\"default\":\"Cartão visto\"}}},\"_row_num\":17},{\"choice_list_name\":\"vpcard\",\"data_value\":\"NTN\",\"display\":{\"title\":{\"text\":{\"english\":\"Has no card and no ANC\",\"default\":\"Não tem cartão e não procurou consultas pré-natais\"}}},\"_row_num\":18},{\"choice_list_name\":\"vpcard\",\"data_value\":\"NTS\",\"display\":{\"title\":{\"text\":{\"english\":\"Has no card, some ANC\",\"default\":\"Não tem cartão, mas procurou algumas consultas pré-natais\"}}},\"_row_num\":19},{\"choice_list_name\":\"vpcard\",\"data_value\":\"NVC\",\"display\":{\"title\":{\"text\":{\"english\":\"Not brought card\",\"default\":\"Não trouxe o cartão\"}}},\"_row_num\":20},{\"choice_list_name\":\"vpcard\",\"data_value\":\"PC\",\"display\":{\"title\":{\"text\":{\"english\":\"Lost card\",\"default\":\"Perdeu o cartão\"}}},\"_row_num\":21},{\"choice_list_name\":\"vpcard\",\"data_value\":\"VCN\",\"display\":{\"title\":{\"text\":{\"english\":\"Card seen and ANCs\",\"default\":\"Cartão visto, mas sem consultas registadas\"}}},\"__EMPTY\":\"###translations do not match\",\"_row_num\":22},{\"choice_list_name\":\"vpcard\",\"data_value\":\"NA\",\"display\":{\"title\":{\"text\":{\"english\":\"Don't know\",\"default\":\"Não sabe\"}}},\"_row_num\":23}]"
       },
       {
         "_partition": "Column",
@@ -48003,7 +48011,7 @@
         "_aspect": "CICBCGN",
         "_key": "displayChoicesList",
         "_type": "object",
-        "_value": "[{\"choice_list_name\":\"Scar\",\"data_value\":\"1\",\"display\":{\"title\":{\"text\":{\"english\":\"Yes\",\"default\":\"Sim\"}}},\"_row_num\":44},{\"choice_list_name\":\"Scar\",\"data_value\":\"2\",\"display\":{\"title\":{\"text\":{\"english\":\"Yes, but it's still evolving\",\"default\":\"Sim, mas ainda está evoluir\"}}},\"_row_num\":45},{\"choice_list_name\":\"Scar\",\"data_value\":\"3\",\"display\":{\"title\":{\"text\":{\"english\":\"No\",\"default\":\"Não\"}}},\"_row_num\":46},{\"choice_list_name\":\"Scar\",\"data_value\":\"4\",\"display\":{\"title\":{\"text\":{\"english\":\"Don't Know\",\"default\":\"Não sabe\"}}},\"_row_num\":47}]"
+        "_value": "[{\"choice_list_name\":\"Scar\",\"data_value\":\"1\",\"display\":{\"title\":{\"text\":{\"english\":\"Yes\",\"default\":\"Sim\"}}},\"_row_num\":44},{\"choice_list_name\":\"Scar\",\"data_value\":\"2\",\"display\":{\"title\":{\"text\":{\"english\":\"Yes, but it's still evolving\",\"default\":\"Sim, mas ainda está evoluindo\"}}},\"_row_num\":45},{\"choice_list_name\":\"Scar\",\"data_value\":\"3\",\"display\":{\"title\":{\"text\":{\"english\":\"No\",\"default\":\"Não\"}}},\"_row_num\":46},{\"choice_list_name\":\"Scar\",\"data_value\":\"4\",\"display\":{\"title\":{\"text\":{\"english\":\"Don't Know\",\"default\":\"Não sabe\"}}},\"_row_num\":47}]"
       },
       {
         "_partition": "Column",
@@ -48045,14 +48053,14 @@
         "_aspect": "C_CONDECOD",
         "_key": "displayChoicesList",
         "_type": "object",
-        "_value": "[{\"choice_list_name\":\"facility\",\"data_value\":\"HO\",\"display\":{\"title\":{\"text\":{\"english\":\"Hospital\",\"default\":\"Hospital\"}}},\"_row_num\":83},{\"choice_list_name\":\"facility\",\"data_value\":\"CS\",\"display\":{\"title\":{\"text\":{\"english\":\"Health Center\",\"default\":\"Centro de Saude\"}}},\"_row_num\":84},{\"choice_list_name\":\"facility\",\"data_value\":\"US\",\"display\":{\"title\":{\"text\":{\"english\":\"Health Unit\",\"default\":\"Unidade de Saude Base\"}}},\"_row_num\":85},{\"choice_list_name\":\"facility\",\"data_value\":\"CA\",\"display\":{\"title\":{\"text\":{\"english\":\"Home\",\"default\":\"Casa\"}}},\"_row_num\":86},{\"choice_list_name\":\"facility\",\"data_value\":\"OU\",\"display\":{\"title\":{\"text\":{\"english\":\"Elsewhere\",\"default\":\"Outro\"}}},\"_row_num\":87},{\"choice_list_name\":\"facility\",\"data_value\":\"NS\",\"display\":{\"title\":{\"text\":{\"english\":\"Dont know\",\"default\":\"Não sabe\"}}},\"_row_num\":88}]"
+        "_value": "[{\"choice_list_name\":\"facility\",\"data_value\":\"HO\",\"display\":{\"title\":{\"text\":{\"english\":\"Hospital\",\"default\":\"Hospital\"}}},\"_row_num\":83},{\"choice_list_name\":\"facility\",\"data_value\":\"CS\",\"display\":{\"title\":{\"text\":{\"english\":\"Health Center\",\"default\":\"Centro de Saúde\"}}},\"_row_num\":84},{\"choice_list_name\":\"facility\",\"data_value\":\"US\",\"display\":{\"title\":{\"text\":{\"english\":\"Health Unit\",\"default\":\"Unidade de Saúde Base\"}}},\"_row_num\":85},{\"choice_list_name\":\"facility\",\"data_value\":\"CA\",\"display\":{\"title\":{\"text\":{\"english\":\"Home\",\"default\":\"Casa\"}}},\"_row_num\":86},{\"choice_list_name\":\"facility\",\"data_value\":\"OU\",\"display\":{\"title\":{\"text\":{\"english\":\"Elsewhere\",\"default\":\"Outro\"}}},\"_row_num\":87},{\"choice_list_name\":\"facility\",\"data_value\":\"NS\",\"display\":{\"title\":{\"text\":{\"english\":\"Dont know\",\"default\":\"Não sabe\"}}},\"_row_num\":88}]"
       },
       {
         "_partition": "Column",
         "_aspect": "C_CONDECOD2",
         "_key": "displayChoicesList",
         "_type": "object",
-        "_value": "[{\"choice_list_name\":\"facility\",\"data_value\":\"HO\",\"display\":{\"title\":{\"text\":{\"english\":\"Hospital\",\"default\":\"Hospital\"}}},\"_row_num\":83},{\"choice_list_name\":\"facility\",\"data_value\":\"CS\",\"display\":{\"title\":{\"text\":{\"english\":\"Health Center\",\"default\":\"Centro de Saude\"}}},\"_row_num\":84},{\"choice_list_name\":\"facility\",\"data_value\":\"US\",\"display\":{\"title\":{\"text\":{\"english\":\"Health Unit\",\"default\":\"Unidade de Saude Base\"}}},\"_row_num\":85},{\"choice_list_name\":\"facility\",\"data_value\":\"CA\",\"display\":{\"title\":{\"text\":{\"english\":\"Home\",\"default\":\"Casa\"}}},\"_row_num\":86},{\"choice_list_name\":\"facility\",\"data_value\":\"OU\",\"display\":{\"title\":{\"text\":{\"english\":\"Elsewhere\",\"default\":\"Outro\"}}},\"_row_num\":87},{\"choice_list_name\":\"facility\",\"data_value\":\"NS\",\"display\":{\"title\":{\"text\":{\"english\":\"Dont know\",\"default\":\"Não sabe\"}}},\"_row_num\":88}]"
+        "_value": "[{\"choice_list_name\":\"facility\",\"data_value\":\"HO\",\"display\":{\"title\":{\"text\":{\"english\":\"Hospital\",\"default\":\"Hospital\"}}},\"_row_num\":83},{\"choice_list_name\":\"facility\",\"data_value\":\"CS\",\"display\":{\"title\":{\"text\":{\"english\":\"Health Center\",\"default\":\"Centro de Saúde\"}}},\"_row_num\":84},{\"choice_list_name\":\"facility\",\"data_value\":\"US\",\"display\":{\"title\":{\"text\":{\"english\":\"Health Unit\",\"default\":\"Unidade de Saúde Base\"}}},\"_row_num\":85},{\"choice_list_name\":\"facility\",\"data_value\":\"CA\",\"display\":{\"title\":{\"text\":{\"english\":\"Home\",\"default\":\"Casa\"}}},\"_row_num\":86},{\"choice_list_name\":\"facility\",\"data_value\":\"OU\",\"display\":{\"title\":{\"text\":{\"english\":\"Elsewhere\",\"default\":\"Outro\"}}},\"_row_num\":87},{\"choice_list_name\":\"facility\",\"data_value\":\"NS\",\"display\":{\"title\":{\"text\":{\"english\":\"Dont know\",\"default\":\"Não sabe\"}}},\"_row_num\":88}]"
       },
       {
         "_partition": "Column",
@@ -48157,7 +48165,7 @@
         "_aspect": "DIAGNQUEM",
         "_key": "displayChoicesList",
         "_type": "object",
-        "_value": "[{\"choice_list_name\":\"healthstaff_fal\",\"data_value\":\"DR\",\"display\":{\"title\":{\"text\":{\"english\":\"Doctor\",\"default\":\"Medico\"}}},\"_row_num\":69},{\"choice_list_name\":\"healthstaff_fal\",\"data_value\":\"PA\",\"display\":{\"title\":{\"text\":{\"english\":\"Midwife\",\"default\":\"Parteira\"}}},\"_row_num\":70},{\"choice_list_name\":\"healthstaff_fal\",\"data_value\":\"EN\",\"display\":{\"title\":{\"text\":{\"english\":\"Nurse\",\"default\":\"Enfermeira/o\"}}},\"_row_num\":71},{\"choice_list_name\":\"healthstaff_fal\",\"data_value\":\"OU\",\"display\":{\"title\":{\"text\":{\"english\":\"Other\",\"default\":\"Outro\"}}},\"_row_num\":72},{\"choice_list_name\":\"healthstaff_fal\",\"data_value\":\"NS\",\"display\":{\"title\":{\"text\":{\"english\":\"Dont know\",\"default\":\"Não sabe\"}}},\"_row_num\":73}]"
+        "_value": "[{\"choice_list_name\":\"healthstaff_fal\",\"data_value\":\"DR\",\"display\":{\"title\":{\"text\":{\"english\":\"Doctor\",\"default\":\"Médico\"}}},\"_row_num\":69},{\"choice_list_name\":\"healthstaff_fal\",\"data_value\":\"PA\",\"display\":{\"title\":{\"text\":{\"english\":\"Midwife\",\"default\":\"Parteira\"}}},\"_row_num\":70},{\"choice_list_name\":\"healthstaff_fal\",\"data_value\":\"EN\",\"display\":{\"title\":{\"text\":{\"english\":\"Nurse\",\"default\":\"Enfermeira/o\"}}},\"_row_num\":71},{\"choice_list_name\":\"healthstaff_fal\",\"data_value\":\"OU\",\"display\":{\"title\":{\"text\":{\"english\":\"Other\",\"default\":\"Outro\"}}},\"_row_num\":72},{\"choice_list_name\":\"healthstaff_fal\",\"data_value\":\"NS\",\"display\":{\"title\":{\"text\":{\"english\":\"Dont know\",\"default\":\"Não sabe\"}}},\"_row_num\":73}]"
       },
       {
         "_partition": "Column",
@@ -48248,7 +48256,7 @@
         "_aspect": "LOCPAR",
         "_key": "displayChoicesList",
         "_type": "object",
-        "_value": "[{\"choice_list_name\":\"facility\",\"data_value\":\"HO\",\"display\":{\"title\":{\"text\":{\"english\":\"Hospital\",\"default\":\"Hospital\"}}},\"_row_num\":83},{\"choice_list_name\":\"facility\",\"data_value\":\"CS\",\"display\":{\"title\":{\"text\":{\"english\":\"Health Center\",\"default\":\"Centro de Saude\"}}},\"_row_num\":84},{\"choice_list_name\":\"facility\",\"data_value\":\"US\",\"display\":{\"title\":{\"text\":{\"english\":\"Health Unit\",\"default\":\"Unidade de Saude Base\"}}},\"_row_num\":85},{\"choice_list_name\":\"facility\",\"data_value\":\"CA\",\"display\":{\"title\":{\"text\":{\"english\":\"Home\",\"default\":\"Casa\"}}},\"_row_num\":86},{\"choice_list_name\":\"facility\",\"data_value\":\"OU\",\"display\":{\"title\":{\"text\":{\"english\":\"Elsewhere\",\"default\":\"Outro\"}}},\"_row_num\":87},{\"choice_list_name\":\"facility\",\"data_value\":\"NS\",\"display\":{\"title\":{\"text\":{\"english\":\"Dont know\",\"default\":\"Não sabe\"}}},\"_row_num\":88}]"
+        "_value": "[{\"choice_list_name\":\"facility\",\"data_value\":\"HO\",\"display\":{\"title\":{\"text\":{\"english\":\"Hospital\",\"default\":\"Hospital\"}}},\"_row_num\":83},{\"choice_list_name\":\"facility\",\"data_value\":\"CS\",\"display\":{\"title\":{\"text\":{\"english\":\"Health Center\",\"default\":\"Centro de Saúde\"}}},\"_row_num\":84},{\"choice_list_name\":\"facility\",\"data_value\":\"US\",\"display\":{\"title\":{\"text\":{\"english\":\"Health Unit\",\"default\":\"Unidade de Saúde Base\"}}},\"_row_num\":85},{\"choice_list_name\":\"facility\",\"data_value\":\"CA\",\"display\":{\"title\":{\"text\":{\"english\":\"Home\",\"default\":\"Casa\"}}},\"_row_num\":86},{\"choice_list_name\":\"facility\",\"data_value\":\"OU\",\"display\":{\"title\":{\"text\":{\"english\":\"Elsewhere\",\"default\":\"Outro\"}}},\"_row_num\":87},{\"choice_list_name\":\"facility\",\"data_value\":\"NS\",\"display\":{\"title\":{\"text\":{\"english\":\"Dont know\",\"default\":\"Não sabe\"}}},\"_row_num\":88}]"
       },
       {
         "_partition": "Column",
@@ -48311,7 +48319,7 @@
         "_aspect": "ONDEFALEC",
         "_key": "displayChoicesList",
         "_type": "object",
-        "_value": "[{\"choice_list_name\":\"facility\",\"data_value\":\"HO\",\"display\":{\"title\":{\"text\":{\"english\":\"Hospital\",\"default\":\"Hospital\"}}},\"_row_num\":83},{\"choice_list_name\":\"facility\",\"data_value\":\"CS\",\"display\":{\"title\":{\"text\":{\"english\":\"Health Center\",\"default\":\"Centro de Saude\"}}},\"_row_num\":84},{\"choice_list_name\":\"facility\",\"data_value\":\"US\",\"display\":{\"title\":{\"text\":{\"english\":\"Health Unit\",\"default\":\"Unidade de Saude Base\"}}},\"_row_num\":85},{\"choice_list_name\":\"facility\",\"data_value\":\"CA\",\"display\":{\"title\":{\"text\":{\"english\":\"Home\",\"default\":\"Casa\"}}},\"_row_num\":86},{\"choice_list_name\":\"facility\",\"data_value\":\"OU\",\"display\":{\"title\":{\"text\":{\"english\":\"Elsewhere\",\"default\":\"Outro\"}}},\"_row_num\":87},{\"choice_list_name\":\"facility\",\"data_value\":\"NS\",\"display\":{\"title\":{\"text\":{\"english\":\"Dont know\",\"default\":\"Não sabe\"}}},\"_row_num\":88}]"
+        "_value": "[{\"choice_list_name\":\"facility\",\"data_value\":\"HO\",\"display\":{\"title\":{\"text\":{\"english\":\"Hospital\",\"default\":\"Hospital\"}}},\"_row_num\":83},{\"choice_list_name\":\"facility\",\"data_value\":\"CS\",\"display\":{\"title\":{\"text\":{\"english\":\"Health Center\",\"default\":\"Centro de Saúde\"}}},\"_row_num\":84},{\"choice_list_name\":\"facility\",\"data_value\":\"US\",\"display\":{\"title\":{\"text\":{\"english\":\"Health Unit\",\"default\":\"Unidade de Saúde Base\"}}},\"_row_num\":85},{\"choice_list_name\":\"facility\",\"data_value\":\"CA\",\"display\":{\"title\":{\"text\":{\"english\":\"Home\",\"default\":\"Casa\"}}},\"_row_num\":86},{\"choice_list_name\":\"facility\",\"data_value\":\"OU\",\"display\":{\"title\":{\"text\":{\"english\":\"Elsewhere\",\"default\":\"Outro\"}}},\"_row_num\":87},{\"choice_list_name\":\"facility\",\"data_value\":\"NS\",\"display\":{\"title\":{\"text\":{\"english\":\"Dont know\",\"default\":\"Não sabe\"}}},\"_row_num\":88}]"
       },
       {
         "_partition": "Column",
@@ -48521,7 +48529,7 @@
         "_aspect": "TECTO",
         "_key": "displayChoicesList",
         "_type": "object",
-        "_value": "[{\"choice_list_name\":\"tecto\",\"data_value\":\"1\",\"display\":{\"title\":{\"text\":{\"english\":\"Straw\",\"default\":\"Palha\"}}},\"_row_num\":96},{\"choice_list_name\":\"tecto\",\"data_value\":\"2\",\"display\":{\"title\":{\"text\":{\"english\":\"Zinc\",\"default\":\"Zinco\"}}},\"_row_num\":97},{\"choice_list_name\":\"tecto\",\"data_value\":\"3\",\"display\":{\"title\":{\"text\":{\"english\":\"Tiles\",\"default\":\"Telha\"}}},\"_row_num\":98},{\"choice_list_name\":\"tecto\",\"data_value\":\"4\",\"display\":{\"title\":{\"text\":{\"english\":\"Concrete\",\"default\":\"Fibra cimento\"}}},\"_row_num\":99},{\"choice_list_name\":\"tecto\",\"data_value\":\"9\",\"display\":{\"title\":{\"text\":{\"english\":\"Don't know\",\"default\":\"Não sabe\"}}},\"_row_num\":100}]"
+        "_value": "[{\"choice_list_name\":\"tecto\",\"data_value\":\"1\",\"display\":{\"title\":{\"text\":{\"english\":\"Straw\",\"default\":\"Palha\"}}},\"_row_num\":96},{\"choice_list_name\":\"tecto\",\"data_value\":\"2\",\"display\":{\"title\":{\"text\":{\"english\":\"Zinc\",\"default\":\"Zinco\"}}},\"_row_num\":97},{\"choice_list_name\":\"tecto\",\"data_value\":\"3\",\"display\":{\"title\":{\"text\":{\"english\":\"Tiles\",\"default\":\"Telha\"}}},\"_row_num\":98},{\"choice_list_name\":\"tecto\",\"data_value\":\"4\",\"display\":{\"title\":{\"text\":{\"english\":\"Concrete\",\"default\":\"Fibra cimento\"}}},\"__EMPTY\":\"\\\"concreto\\\"?\",\"_row_num\":99},{\"choice_list_name\":\"tecto\",\"data_value\":\"9\",\"display\":{\"title\":{\"text\":{\"english\":\"Don't know\",\"default\":\"Não sabe\"}}},\"_row_num\":100}]"
       },
       {
         "_partition": "Column",
@@ -48633,7 +48641,7 @@
         "_aspect": "default",
         "_key": "displayName",
         "_type": "object",
-        "_value": "{\"text\":{\"english\":\"Children\",\"default\":\"Criancas\"}}"
+        "_value": "{\"text\":{\"english\":\"Children\",\"default\":\"Crianças\"}}"
       }
     ]
   }
